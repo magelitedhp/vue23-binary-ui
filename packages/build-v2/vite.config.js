@@ -7,6 +7,7 @@ export default defineConfig({
   build: {
     outDir: '../../dist/vue2',
     lib: {
+      formats: ['es', 'cjs'],
       entry: resolve(__dirname, '../../packages/lib/index.js'),
       name: 'MyVueUi',
       fileName: fmt => `ul-question-test-ui.${fmt}.js`

@@ -12,7 +12,7 @@
     },
     "./vue2": {
       "import": "./dist/vue2/ul-question-test-ui.es.js",
-      "require": "./dist/vue2/ul-question-test-ui.umd.js"
+      "require": "./dist/vue2/ul-question-test-ui.cjs.js"
     }
   },
   "peerDependencies": {
