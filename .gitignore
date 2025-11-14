@@ -1,0 +1,34 @@
+# 依赖包
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# 构建产物
+dist/
+lib/
+es/
+build/
+
+# 日志和缓存
+logs/
+*.log
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 环境变量
+.env
+.env.local
+.env.*.local
+
+# 测试相关
+coverage/
+*.test.js
+*.spec.js
+
+# Vue 特定
+*.vue.js
+vue.config.js.*

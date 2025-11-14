@@ -1,0 +1,32 @@
+{
+  "name": "ul-question-test-ui",
+  "version": "1.0.0",
+  "private": false,
+  "files": ["dist"],
+  "exports": {
+    ".": {
+      "import": "./dist/vue3/ul-question-test-ui.es.js",
+      "require": "./dist/vue3/ul-question-test-ui.umd.js"
+    },
+    "./vue2": {
+      "import": "./dist/vue2/ul-question-test-ui.es.js",
+      "require": "./dist/vue2/ul-question-test-ui.umd.js"
+    }
+  },
+  "peerDependencies": {
+    "vue": ">=2.7.16 || >=3.3.0",
+    "@opentiny/vue": ">=2.25.0 || >=3.25.0"
+  },
+  "dependencies": {
+    "vue-demi": "^0.14.10"
+  },
+  "devDependencies": {
+    "vite": "^6.0.1"
+  },
+  "scripts": {
+    "build:v2": "pnpm --filter @my-ui/build-v2 build",
+    "build:v3": "pnpm --filter @my-ui/build-v3 build",
+    "build": "pnpm build:v2 && pnpm build:v3",
+    "pub": "pnpm build && pnpm publish --access public"
+  }
+}

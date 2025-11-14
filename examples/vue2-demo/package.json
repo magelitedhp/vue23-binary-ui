@@ -1,0 +1,18 @@
+{
+  "name": "vue2-demo",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@opentiny/vue": "^2.27.0",
+    "ul-question-test-ui": "workspace:*",
+    "vue": "^2.7.16"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue2": "^2.3.4",
+    "vite": "^6.0.1",
+    "vue-template-compiler": "^2.7.16"
+  }
+}
