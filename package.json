@@ -1,8 +1,10 @@
 {
   "name": "ul-question-test-ui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": false,
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "exports": {
     ".": {
       "import": "./dist/vue3/ul-question-test-ui.es.js",
