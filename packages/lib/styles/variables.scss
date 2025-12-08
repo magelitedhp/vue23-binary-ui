@@ -1,0 +1,85 @@
+$--color-primary:#529FFF;
+$--color-primary--light: #75b2ff;
+$--color-primary--deep: #4a8fe6;
+$--color-primary-secondary: #EA5947;
+$--color-primary-secondary--light: #ee7a6c;
+$--color-primary-secondary--deep: #ca3725;
+$--color-primary-secondary--light--text:#ffd8d8;
+
+
+$--color-text-regular:#444444;
+$--color-text-secondary:#969696;
+$--color-danger: #F60000;
+$--color-success: #69D184;
+$--color-success--light: #87da9d;
+$--color-success--deep: #5fbc77;
+$--color-white: #ffffff;
+$--color-black: #000000;
+
+
+$--color-SidebarSuccess: #CBF6D6;
+$--color-SidebarError: #FFACAC;
+$--color-SidebarBase: #E3E3E9;
+$--color-NoScore: #F7B13D;
+
+
+$--background-color-base:#F5F5F5;
+$--link-default-font-color:#8D77FB;
+$--link-default-active-color:#8D77FB;
+$--disable-text-color: #bbbbbb;
+$--disable--color: #ededed;
+$--background-color-gray: #EFEFF7;
+
+
+$--line-height-base: 1.5;
+$--no-line-height: 1;
+$--small-line-height: 1.3;
+$--large-line-height: 1.7;
+
+
+$--font-size-mini: 10px;
+$--font-size-small: 12px;
+$--font-size-base: 14px;
+$--font-size-large: 16px;
+$--font-size-huge: 18px;
+
+
+$--disabled-background-color-base: #eee;
+$--disabled-color-base: #b1b1b1;
+$--box-shadow-base: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);
+$--box-shadow-light: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+
+
+/* Border
+-------------------------- */
+$--border-color-input-base: #cbcbd1;
+$--border-color-base: #e3e3e9;
+$--border-width-base: 1px;
+$--border-style-base: solid;
+$--border-base: $--border-width-base $--border-style-base $--border-color-base;
+$--border-dashed: $--border-width-base dashed $--border-color-base;
+$--border-input: $--border-width-base $--border-style-base $--border-color-input-base;
+/// borderRadius|1|Radius|0
+$--border-radius-base: 4px;
+/// borderRadius|1|Radius|0
+$--border-radius-small: 2px;
+/// borderRadius|1|Radius|0
+$--border-radius-circle: 100%;
+/// borderRadius|1|Radius|0
+$--border-radius-zero: 0;
+
+$maxWidth: 1216px;
+$minWidth: 660px;
+
+
+$--color-ai-9: #3DCAFC;
+$--color-ai-10: #4090FF;
+$--color-ai-11: #9959FF;
+
+$--color-ai-9-1: #50c5fd;
+$--color-ai-10-1: #539AFF;
+$--color-ai-11-1: #9E6DFF;
+
+$--color-ai-9-2: #38AAE4;
+$--color-ai-10-2: #3A82E6;
+$--color-ai-11-2: #8354E6;

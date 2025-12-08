@@ -1,0 +1,102 @@
+
+
+@mixin clearfix {
+  zoom: 1;
+  &:after {
+    display: block;
+    height: 0;
+    content: ' ';
+    clear: both;
+  }
+}
+@mixin ellipsis-one($maxWidth) {
+  max-width: $maxWidth;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+@mixin ellipsis-two($height) {
+  height: $height;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: box;
+  display: -webkit-box;
+  box-orient: vertical;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+}
+@mixin btn-text{
+  color: $--link-default-font-color;
+  cursor: pointer;
+}
+
+@mixin default-button {
+  display: inline-block;
+  min-width: 56px;
+  height: 32px;
+  padding: 0 10px;
+  line-height: 30px;
+  border-radius: 4px;
+  font-size: 14px;
+  outline: none;
+  color: #fff;
+  background-color: #529FFF;
+  border: 1px solid #529FFF;
+  vertical-align: middle;
+  cursor: pointer;
+  i {
+    font-size: 14px;
+  }
+
+  &:disabled {
+    color: $--disable-text-color !important;
+    background-color: $--disable--color !important;
+    border-color: $--disable--color !important;
+
+    &:hover {
+      box-shadow: none;
+    }
+  }
+
+  &.small {
+    height: 28px;
+    line-height: 26px;
+  }
+
+  &.large {
+    height: 42px;
+    line-height: 40px;
+  }
+}
+
+@mixin button-red-hollow {
+  color: #529FFF;
+  background-color: #fff;
+  border-color: $--background-color-base;
+
+  &:hover,
+  &:focus {
+    border-color: #529FFF;
+  }
+
+  &:active {
+    color: #fff;
+    background-color: #529FFF;
+    border-color: #529FFF;
+  }
+}
+@mixin file-type($height) {
+  float: left;
+  width: $height;
+  height: $height;
+  line-height: $height;
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: auto;
+  }
+  .icon {
+    vertical-align: unset;
+  }
+}

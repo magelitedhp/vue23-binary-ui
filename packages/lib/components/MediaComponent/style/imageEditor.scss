@@ -1,0 +1,80 @@
+.editor-content {
+    position: relative;
+    overflow: auto;
+    .image-editor-wrap {
+        height: 100%;
+        padding: 62px 0;
+        .image-editor {
+            margin: 0 auto;
+            max-width: 877px;
+            max-height: 700px;
+            overflow: auto;
+        }
+    }
+    .wPaint-menu-groups {
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        .wPaint-menu {
+            box-sizing: content-box;
+            word-break: normal;
+            text-align: center;
+        }
+    
+        .wPaint-menu-holder {
+            display: inline-block;
+        }
+    
+        .wPaint-menu-name-main {
+            padding: 12px 26px 11px 28px;
+        }
+        .wPaint-menu-icon-name-fullScreen {
+            display: none;
+        }
+    }
+
+    #wPaint {
+        position: relative;
+        margin: 0 auto;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 50%;
+    }
+
+    .image-editor-wrap-mobile {
+        position: relative;
+        height: 100%;
+        .image-editor {
+            max-width: 100%;
+            max-height: calc(100% - 162px);
+            margin: 0 auto;
+            overflow: auto;
+        }
+        .wPaint-menu-name-main {
+            padding: 10px;
+        }
+        .wPaint-menu-groups .wPaint-menu-icon-name-fullScreen {
+            display: inline-block;
+        }
+        &.fullscreen {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .image-editor {
+                margin: 0 0 0 110px;
+                max-width: calc(100% - 110px);
+                max-height: 100%;
+                padding: 40px 0;
+                #wPaint {
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+            .wPaint-menu-groups {
+                left: calc(-50px - 50%);
+                transform: translateY(-50%) rotate(90deg);
+            }
+        }
+    }
+}
