@@ -27,8 +27,7 @@
      <div v-for="item in 4">
       <div @click="addQuestion(item)">{{ '添加' + item + '题型'}}</div>
      </div>
-    <!-- <Choice :mode="mode" :oriQuestion="question"/> -->
-    <component :is="componentId" :mode="mode" :oriQuestion="question"></component>
+    <component :is="componentId" :mode="mode" :oriQuestion="question" :isSubmitted="isSubmitted" @change="answerChange"></component>
   </div>
 </template>
 
@@ -52,8 +51,8 @@ export default {
         2: 'previe 2',
         3: 'answer 3'
       },
-      components: [Choice, Completion, Judge],
-      componentId: '' // 动态组件ID
+      componentId: '', // 动态组件ID
+      isSubmitted: false
     }
   },
   watch: {
@@ -66,10 +65,10 @@ export default {
             this.componentId = Choice;
             break;
           case 3:
-            this.componentId = Judge;
+            this.componentId = Completion;
             break;
           case 4:
-            this.componentId = Completion;
+            this.componentId = Judge;
             break;
           default:
             this.componentId = '';
@@ -79,6 +78,9 @@ export default {
     }
   },
   methods: {
+    answerChange(val) {
+      console.log(val,'valval');
+    },
     say() {
       alert('Hello Vue3')
     },
@@ -203,56 +205,25 @@ export default {
         "userid": 7449024,
         "orgid": null,
         "aspid": null,
-    
+        "record": {
+          answer: "A,C"
+        }
   
       }
     },
     getQuestion3() {
       this.question = {
-        "questionid": 12496525,
-        "oldQuestionId": null,
-        "title": "<p>123131有附件的判断题呵呵呵呵呵呵呵<img src=\"https://leicloud.ulearning.cn/resources/7449024/202509281042424985.jpg\" /></p>",
-        "type": 3,
-        "iscontent": 1,
-        "hardlevel": 3,
-        "parentid": 0,
-        "score": 1,
-        "correctreply": "",
-        "correctAnswer": [
-            "A"
-        ],
-        "lisCount": null,
-        "createtime": null,
-        "updatetime": 1764209055000,
-        "remark": null,
-        "userid": 7449024,
-        "orgid": null,
-        "aspid": null,
-    
-
+        type: 3,
+        questionId: 19
       }
     },
     getQuestion4() {
       this.question = {
-        "questionid": 12496526,
-        "oldQuestionId": null,
-        "title": "<p>123131有附件的单选题呵呵呵呵呵呵呵<img src=\"https://leicloud.ulearning.cn/resources/7449024/202509281042424985.jpg\" /></p>",
-        "type": 1,
-        "iscontent": 1,
-        "hardlevel": 3,
-        "parentid": 0,
-        "score": 1,
-        "correctreply": "",
-        "correctAnswer": [
-            "B"
-        ],
-        "lisCount": null,
-        "createtime": null,
-        "updatetime": 1764209055000,
-        "remark": null,
-        "userid": 7449024,
-        "orgid": null,
-        "aspid": null,
+        type: 4,
+        questionId: 8,
+        record: {
+          answer: "true"
+        }
       }
     },
     addQuestion(type) {
@@ -262,6 +233,9 @@ export default {
           this.question = {
             type,
             questionId: Math.floor(Math.random() * 1e9),
+            record: {
+              answer: "A"
+            }
           }
           break;
         case 2:
