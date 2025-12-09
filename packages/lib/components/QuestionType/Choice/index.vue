@@ -156,7 +156,7 @@
     </div>  
 
     <!-- 提交后显示答案 -->
-    <div v-if="isSubmitted">
+    <div v-if="isSubmitted && showAnswer">
       <div class="answer-display">
         <span>{{ t('stuAnswer') }}：</span>
         <span>{{ formatAnswer(question.record?.answer) }}</span>
@@ -215,9 +215,13 @@ export default defineComponent({
     isSubmitted: {
       type: Boolean,
       default: false
+    },
+    showAnswer: {
+      type: Boolean,
+      default: false
     }
   },
-  emits: ['save', 'cancel', 'submit', 'change'],
+  emits: ['save', 'cancel', 'change'],
   setup(props, { emit }) {
     const t = useT()
     const activeIndex = ref(null)
@@ -284,8 +288,6 @@ export default defineComponent({
 
       const isUserSelected = userAnswers.includes(currentOption)
       const isCorrect = correctAnswers.includes(currentOption)
-      console.log(isUserSelected, isCorrect,'isCorrect && isUserSelected', isCorrect && isUserSelected);
-      
       // 显示答案时的样式逻辑
       if (isCorrect && isUserSelected) {
         return 'correct'
@@ -379,23 +381,7 @@ export default defineComponent({
       }
     }
 
-    // 删除选项文件
-    const deleteChoiceFile = (choice, file, index) => {
-      if (props.mode !== 1) return // 仅编辑模式可删除文件
 
-      if (choice && choice.attachments && Array.isArray(choice.attachments)) {
-        choice.attachments.splice(index, 1);
-      }
-    }
-
-    // 添加选项文件
-    const addChoiceFile = (choice, file) => {
-      if (props.mode !== 1) return // 仅编辑模式可添加文件
-
-      if (choice && choice.attachments && Array.isArray(choice.attachments)) {
-        choice.attachments.push(file);
-      }
-    }
 
     // 保存问题数据（编辑模式）
     const saveQuestion = () => {
@@ -406,11 +392,8 @@ export default defineComponent({
         console.warn(t('pleaseSetCorrectAnswer') || '请设置正确答案');
         return
       }
-
       // 深拷贝数据以避免直接修改
       const questionData = JSON.parse(JSON.stringify(question.value))
-      console.log('保存的题目数据:', questionData)
-
       // 发出保存事件
       emit('save', questionData)
     }
@@ -612,7 +595,12 @@ export default defineComponent({
 
 .edit-mode {
   .choice-item {
-    margin-right: 12px;
+    margin-right: 2px;
+  }
+  .choice-list {
+    .choice-item {
+      margin-right: 12px;
+    }
   }
   .btn-save {
     margin-top: 12px;
@@ -636,11 +624,6 @@ export default defineComponent({
       position: relative;
       transform: translateY(2px);
     }
-  }
-}
-.answer-mode {
-  .btn-submit {
-    margin-top: 12px;
   }
 }
 :deep(p) {

@@ -206,11 +206,9 @@ export function toolbarOptions2() {
 
 export function handleBlank(title, blanks) {
   const blankregx = /[(（](\s|&nbsp;)+[)）]|_{5,}/gi;
-  let index = 0;
   if (blankregx.test(title)) {
     title = title.replace(blankregx, () => {
-      index++
-      return `&nbsp;<span class="q-space" contenteditable="false" data-index="${(blanks[index - 1] && blanks[index - 1].blankIndex) || index}">(&nbsp;)</span>&nbsp;`
+      return '(&nbsp;)'
     });
   }
   return title
@@ -271,8 +269,6 @@ export function saveQuestionHandleData(question) {
     if (question.type === 3 || question.type === 25) {
       question.title = question.title.replace(/\((\s|&nbsp;)+\)/gi, "()");
       question.title = question.title.replace(/（(\s|&nbsp;)+）/gi, "（）");
-      const regx = /(&nbsp;){0,1}<span class="q-space" .*?>\(\)<\/span>(&nbsp;){0,1}/g;
-      question.title = question.title.replace(regx, "(&nbsp;)");
     }
   }
   const saveQuestionAdapter = (question) => {

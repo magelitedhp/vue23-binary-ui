@@ -1,6 +1,5 @@
 import base from "./base.js"
 import local from "./local.js"
-// console.log(base, local ,'--------')
 let baseVars = base
 // if (process.env.VUE_APP_ENV === 'localprod') {
 //   // 本地部署域名覆盖

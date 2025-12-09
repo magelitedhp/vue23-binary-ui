@@ -90,7 +90,6 @@ export default class Paper {
         if ([3, 25].includes(type)) {
           question.isEdit = record.score === undefined ? 3 : 4
         }
-      // console.log(type, record.answer, question.answerStatus, correctAnswer, question.isEdit, question.checkResult)
       }
       question.remark = (diffGrade) => {
         this.subjective = handleNum(this.subjective + diffGrade)
@@ -443,7 +442,6 @@ export default class Paper {
         }
       });
     });
-    console.log("tabs", tabs)
     return tabs
   }
   checkNotAnswerList() {

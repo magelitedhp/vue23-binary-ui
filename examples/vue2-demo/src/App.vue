@@ -4,6 +4,7 @@
     <MyTinyButton @handleClick1="changeMode(1)">change to edit mode</MyTinyButton>
     <MyTinyButton @handleClick1="changeMode(2)">change to preview mode</MyTinyButton>
     <MyTinyButton @handleClick1="changeMode(3)">change to answer mode</MyTinyButton>
+    <MyTinyButton @handleClick1="isSubmitted = !isSubmitted">change isSubmitted {{ isSubmitted }}</MyTinyButton>
     <!-- <h1>Vue3 沙盒</h1> -->
     <!-- <MyButton @click="say">点我</MyButton> -->
     <!-- <MyTinyButton type="primary" @handleClick1="say">点我</MyTinyButton> -->
@@ -79,7 +80,7 @@ export default {
   },
   methods: {
     answerChange(val) {
-      console.log(val,'valval');
+      // console.log(val,'valval');
     },
     say() {
       alert('Hello Vue3')
@@ -187,7 +188,7 @@ export default {
       this.question = {
         "questionid": 12496524,
         "oldQuestionId": null,
-        "title": "<p>123131有附件的多选题呵呵呵呵呵呵呵<img src=\"https://leicloud.ulearning.cn/resources/7449024/202509281042424985.jpg\" /></p>",
+        "title": `<span class="q-space" contenteditable="false">(&nbsp;)</span><p>123131有附件的多选题呵呵呵呵呵呵呵<img src=\"https://leicloud.ulearning.cn/resources/7449024/202509281042424985.jpg\" /></p>`,
         "type": 2,
         "iscontent": 1,
         "hardlevel": 3,
@@ -213,9 +214,63 @@ export default {
     },
     getQuestion3() {
       this.question = {
-        type: 3,
-        questionId: 19
-      }
+        "allowExchange": 0,
+  "questionid": 12497547,
+  "oldQuestionId": null,
+  "title": "<p>优学院是一个集(&nbsp;)、(&nbsp;)、(&nbsp;)、(&nbsp;)的平台</p>",
+  "type": 3,
+  "iscontent": 1,
+  "hardlevel": 3,
+  "parentid": 0,
+  "score": 1,
+  "correctreply": "",
+  "correctAnswer": [
+    "AI//ai",
+    "智能化",
+    "酌情给分",
+    "酌情给分"
+  ],
+  "lisCount": null,
+  "createtime": null,
+  "updatetime": 1762758218000,
+  "remark": null,
+  "userid": 6546517,
+  "orgid": null,
+  "aspid": null,
+  "desc1": "",
+  "desc4": null,
+  "isShare": 0,
+  "theLatest": null,
+  "blankOrder": 0,
+  "item": null,
+  "subQuestions": null,
+  "link": null,
+  "analyLinkList": null,
+  "answerLinkList": null,
+  "demoLinkList": null,
+  "formulaVar": null,
+  "parentFolders": [],
+  "creater": "魏艺宁老师",
+  "orgName": "文华在线",
+  "shareArray": [],
+  "isUsed": null,
+  "autoscore": null,
+  "linkOptionList": null,
+  "tags": null,
+  "tagIds": null,
+  "compareInfo": null,
+  "originalQuestionId": null,
+  "isShareFolder": 0,
+  "isShareRootDir": null,
+  "shareFolderUse": null,
+  "shareFolderAllowCopy": null,
+  "shareFolderRootDirId": null,
+  "knowledgeDTOS": null,
+  "source": null,
+  "record": {
+    answer: "AI;智能化;的撒大;阿三打撒"
+  }
+}
     },
     getQuestion4() {
       this.question = {

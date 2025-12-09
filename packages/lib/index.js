@@ -4,7 +4,6 @@ import MyTinyRadio from './tiny-radio'
 import Choice from './components/QuestionType/Choice'
 import Completion from './components/QuestionType/Completion'
 import Judge from './components/QuestionType/Judge'
-// 导入样式文件
 export { 
   MyButton, 
   MyTinyButton,

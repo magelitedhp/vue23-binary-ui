@@ -52,7 +52,7 @@
           </div>
           <div v-else class="submit-result">
             <div class="user-answer-display">
-              <span>{{ t("stuAnswer") }}：</span>
+              <span>{{ t("yourAnswer") }}：</span>
               <tiny-radio-group v-model="userAnswer" disabled>
                 <tiny-radio label="true" :class="handleAnswerClass(true)">
                   <img src="@/assets/correct.svg" alt="">
@@ -62,7 +62,7 @@
                 </tiny-radio>
               </tiny-radio-group>
             </div>
-            <div class="correct-answer-hint">
+            <div v-if="showAnswer" class="correct-answer-hint">
               <span>{{ t("correctAnswer") }}：</span>
               <tiny-radio-group v-model="correctAnswer" disabled>
                 <tiny-radio label="true" :class="handleCorrectAnswerClass(true)">
@@ -114,7 +114,7 @@ export default defineComponent({
       default: false
     }
   },
-  emits: ['save', 'submit', 'cancel', 'change'],
+  emits: ['save', 'cancel', 'change'],
   setup(props, { emit }) {
     const t = useT()
     const question = ref({})
@@ -185,8 +185,6 @@ export default defineComponent({
         question.value.correctAnswer = [];
       }
       question.value.correctAnswer[0] = correctAnswer.value;
-      
-      console.log('题目保存成功:', JSON.parse(JSON.stringify(question.value)));
       emit('save', question.value);
     };
     
@@ -208,7 +206,6 @@ export default defineComponent({
     // 用户答案的样式类
     const handleAnswerClass = (isTrue) => {
       if (!props.isSubmitted) return '';
-      console.log(userAnswer.value, isTrue ? 'true' : 'false');
       // 用户选择答案与当前传入选项一致
       const isUserChoice = (isTrue ? 'true' : 'false') == userAnswer.value;
       // 正确答案与当前传入选项一致
