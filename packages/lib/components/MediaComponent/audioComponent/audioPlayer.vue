@@ -5,7 +5,7 @@
         class="icon"
         @click="togglePlayer"
       >
-        <i :class="[paused ? 'icon-bofang1' : 'icon-zanting1', 'iconfont']"></i>
+        <img :src="paused ? require('@/assets/play.svg') : require('@/assets/pause.svg')" class="iconfont" alt="" />
       </div>
       <div class="current-time">{{ currentTimeStr }}</div>
       <div
@@ -32,7 +32,7 @@
           ]"
         ></i>
         <div class="txt">
-          {{ paused ? $t("play") : $t("pause") }}
+          {{ paused ? t("play") : t("pause") }}
         </div>
       </div>
     </div>
@@ -62,11 +62,11 @@
       </div>
       <div class="total-time">{{ totalTimeStr }}</div>
     </div>
-    <div class="error-tip" v-if="error">{{$t('transcodeTip1')}}</div>
-    <div
+    <div class="error-tip" v-if="error">{{t('transcodeTip1')}}</div>
+    <!-- <div
       class="player-tip"
       v-if="times && !isQuestionBank"
-    >*{{$t('numberOfPlaysAllowed')}}：{{ times === -1 ? $t('notLimit1') : times}}</div>
+    >*{{t('numberOfPlaysAllowed')}}：{{ times === -1 ? t('notLimit1') : times}}</div> -->
     <audio
       class="audioTag"
       ref="audio"
@@ -87,7 +87,7 @@
 import "@/components/MediaComponent/style/audioPlayer.scss";
 import { parseDuration } from "@/utils";
 import { getFullPath } from '@/utils/file.js';
-
+import { useT } from "@/locale/index.js"
 export default {
   data() {
     return {
@@ -97,7 +97,8 @@ export default {
       paused: true,
       currentTime: 0,
       error: false,
-      loading: false
+      loading: false,
+      t: useT()
     };
   },
   props: {
@@ -235,6 +236,15 @@ export default {
       font-size: 12px;
       color: #969696;
       white-space: nowrap;
+    }
+  }
+}
+.player-content {
+  .icon {
+    .iconfont {
+      width: 24px;
+      margin-bottom: 6px;
+      cursor: pointer;
     }
   }
 }

@@ -1,10 +1,11 @@
 <template>
-  <div class="ritchtextarea-container">
+  <div class="ritchtextarea-container" :id="containerId">
     <TinyFluentEditor ref="fluentEditorRef" v-model="content" :data-type="false" :data-upgrade="false"
-      :options="options" :before-editor-init="beforeEditorInit"/>
+      :options="options" :before-editor-init="beforeEditorInit" />
     <FileList ref="fileList" mode="edit" type="block" :isPreview="true" :list="list"
       :isShowLimitTimes="isShowLimitTimes" :is-question-bank="isQuestionBank" @deleteFile="deleteFile">
     </FileList>
+    <button id="upload" style="display: none"></button>
   </div>
 </template>
 
@@ -12,8 +13,12 @@
 import { defineComponent, ref, watch, onMounted } from 'vue-demi'
 import { TinyFluentEditor, Message } from '@opentiny/vue'
 import FileList from "../FileList/index.vue";
-import { handlerErrCode } from "../../utils/file.js";
+import { handlerErrCode, formatTypeLimit } from "../../utils/file.js";
+import Obs from "@/plugins/ulearning-obs.js";
+import { uploadOptions } from "@/plugins/upload.js";
+import Attach from "@/model/attach";
 import { getUniqueValue, handleNum } from "@/utils"
+import { formatFileType } from '@/utils/file.js'
 import { useT } from "../../locale/index.js"
 export default defineComponent({
   name: 'RichTextarea',
@@ -41,7 +46,7 @@ export default defineComponent({
       type: Boolean,
       default: true
     },
-    index: {
+    actionIndex: {
       type: Number,
       default: 0
     },
@@ -63,254 +68,96 @@ export default defineComponent({
     const t = useT()
     const content = ref(props.value || '')
     const fluentEditorRef = ref(null)
-    // 暴露给父组件的方法，用于访问TinyFluentEditor的方法
-    const getEditor = () => {
-      return fluentEditorRef.value
-    }
+    const containerId = ref(getUniqueValue())
     onMounted(() => {
       // 初始化编辑器内容
       const fluentEditor = fluentEditorRef.value.state.quill
       const toolbar = fluentEditor.getModule('toolbar')
+      // 创建隐藏的上传按钮
+      const obs = new Obs({ ...uploadOptions });
+      const uploadBtn = document.getElementById('upload');
+      obs.initUpBtn(uploadBtn);
+      obs.onBeforeUpload = (file) => {
+        // if (checkAddFile && !checkAddFile(file)) {
+        //   return 
+        // }
+        let myFile = new Attach({
+          fileName: file.name,
+          fileSize: file.size,
+          fileUrl: file.name,
+          status: 1,
+          lisCount: -1
+        })
+        let fileType = formatFileType(myFile.fileUrl);
+        file.onProgress = (progress) => {
+          myFile.progress = handleNum(progress, 2, "floor")
+        }
+        file.onSuccess = () => {
+          myFile.fileUrl = file.obsHost + '/' + file.key
+          myFile.status = 2
+          if (fileType == 'image') {
+            insertContent(`<img src="${myFile.fileUrl}" devui-editorx-image="true" data-image-id=${myFile.key} />`)
+          }
+        }
+        file.onError = (err) => {
+          myFile.errMessage = handlerErrCode(err.code)
+          myFile.status = 3
+        }
+        myFile.cancel = () => {
+          obs.cancelUpload(file)
+        }
+        // 避免上传相同文件时key值重复
+        myFile.key = getUniqueValue();
+        if (fileType != 'image') {
+          emit('addFile', myFile, props.actionIndex)
+        }
+      }
+      // 每次最多上传个文件检测
+      // const checkAddFile = (file) => {
+      //   if (props.attachments.length >= maxNum.value) {
+      //     Message({
+      //       message: t('codeUploadTip2', { num: maxNum.value }),
+      //       type: "warning"
+      //     })
+      //     return false
+      //   }
+      //   return true
+      // }
       toolbar.addHandler('image1', function (value) {
-        let jsx = `<span class="q-space" contenteditable="false" data-index="${getUniqueValue()}">(&nbsp;)</span>`
-        insertContent(jsx)
-      })
+        // 触发文件选择对话框
+        obs.$el.accept = formatTypeLimit(["image"]);
+        uploadBtn.click();
+      });
       toolbar.addHandler('video1', function (value) {
-        let jsx = `<video src="https://tobs.ulearning.cn/resources/web/17548922973825322.mp4" devui-editorx-video="true" data-video-id=${getUniqueValue()} /></video>`
-        insertContent(jsx)
+        obs.$el.accept = formatTypeLimit(["video"]);
+        uploadBtn.click();
       })
       toolbar.addHandler('audio', function (value) {
+        // obs.$el.accept = formatTypeLimit(["audio"]);
+        // uploadBtn.click();
         let jsx = `<img src="https://tobs.ulearning.cn/resources/web/17548922973825322.png" devui-editorx-image="true" data-image-id=${getUniqueValue()} />`
+        jsx = `&nbsp;<span class="q-space" contenteditable="false" data-index="${getUniqueValue()}">(&nbsp;)</span>&nbsp;`
+        console.log(fluentEditor,'fluentEditoraudio')
         insertContent(jsx)
       })
     })
     // 插入内容到编辑器
     const insertContent = (newContent) => {
-      console.log('插入内容:', newContent);
-      // 检查光标是否在编辑器内的辅助函数
-      const isCursorInEditor = () => {
-        // 查找编辑器容器
-        const editorContainers = document.querySelectorAll('.ritchtextarea-container');
-        if (editorContainers.length === 0) return false;
-
-        const container = editorContainers[0];
-
-        // 获取当前选择
-        let selection;
-        if (window.getSelection) {
-          selection = window.getSelection();
-        } else if (document.getSelection) {
-          selection = document.getSelection();
-        } else {
-          return false;
-        }
-
-        if (!selection || selection.rangeCount === 0) return false;
-
-        const range = selection.getRangeAt(0);
-        const commonAncestor = range.commonAncestorContainer;
-
-        // 检查光标是否在编辑器容器内
-        let currentElement = commonAncestor;
-        while (currentElement && currentElement !== document) {
-          if (currentElement === container || container.contains(currentElement)) {
-            return true;
-          }
-          currentElement = currentElement.parentNode;
-        }
-
-        return false;
-      };
-
-      // 首先判断光标是否在编辑器内
-      if (!isCursorInEditor()) {
-        console.log('光标不在编辑器内，不允许插入');
-        return;
-      }
-      // 使用直接DOM操作作为主要插入方式
-      console.log('使用直接DOM操作插入内容');
+      if (!fluentEditorRef.value) return
       
-      // 获取当前选择和范围
-      const selection = window.getSelection();
-      if (!selection || selection.rangeCount === 0) {
-        console.log('没有选择区域，在末尾追加');
-        content.value += newContent;
-        return;
-      }
-      
-      // 获取当前范围
-      const range = selection.getRangeAt(0);
-      
-      // 创建临时容器解析HTML
-      const tempContainer = document.createElement('div');
-      tempContainer.innerHTML = newContent;
-      
-      // 将所有子节点作为一个整体插入，以保持正确的顺序
-      let insertedNode;
-      
-      if (tempContainer.childNodes.length === 1) {
-        // 只有一个节点时直接插入
-        insertedNode = tempContainer.firstChild;
-        range.insertNode(insertedNode);
-      } else {
-        // 多个节点时，创建文档片段并一次性插入
-        const fragment = document.createDocumentFragment();
-        while (tempContainer.firstChild) {
-          fragment.appendChild(tempContainer.firstChild);
-        }
-        insertedNode = range.insertNode(fragment);
-      }
-      
-      // 确保插入成功
-      let inserted = !!insertedNode;
-      
-      // 直接设置光标位置到所有插入内容的后面
-      if (inserted) {
-        // 创建新的范围
-        const newRange = document.createRange();
-        
-        // 获取所有插入的内容
-        const parentElement = insertedNode.parentNode;
-        let lastInsertedElement = insertedNode;
-        
-        // 如果插入的是文档片段，找到实际插入的最后一个节点
-        if (insertedNode.nodeType === Node.DOCUMENT_FRAGMENT_NODE) {
-          if (parentElement.lastChild) {
-            lastInsertedElement = parentElement.lastChild;
-          }
-        }
-        
-        // 设置光标在插入内容的后面
-        newRange.setStartAfter(lastInsertedElement);
-        newRange.collapse(true);
-        
-        // 更新选择
-        selection.removeAllRanges();
-        selection.addRange(newRange);
-        
-        console.log('直接DOM操作插入成功，光标已设置在所有插入内容的后面');
-      }
-      
-      console.log('插入完成，状态:', inserted ? '成功' : '失败');
-        
-       // 手动触发编辑器的更新事件，确保content变量被正确更新
-       if (inserted) {
-         console.log('手动触发编辑器更新事件');
-         
-         // 查找编辑器容器
-         const editorContainers = document.querySelectorAll('.ritchtextarea-container');
-         if (editorContainers.length > 0) {
-           const container = editorContainers[0];
-           
-           // 查找可编辑元素
-           const editableElements = container.querySelectorAll('[contenteditable="true"], textarea, iframe');
-           if (editableElements.length > 0) {
-             const editableElement = editableElements[0];
-             
-             // 根据不同元素类型触发不同事件
-             if (editableElement.tagName === 'TEXTAREA') {
-               // 对于textarea，触发input事件
-               editableElement.dispatchEvent(new Event('input', { bubbles: true, cancelable: true }));
-               editableElement.dispatchEvent(new Event('change', { bubbles: true, cancelable: true }));
-             } else if (editableElement.hasAttribute('contenteditable')) {
-               // 对于contenteditable元素，触发input事件
-               editableElement.dispatchEvent(new Event('input', { bubbles: true, cancelable: true }));
-               // 不触发selectionchange事件，避免影响光标位置
-             } else if (editableElement.tagName === 'IFRAME') {
-               // 对于iframe内的编辑器，尝试访问内部文档并触发事件
-               try {
-                 const iframeDoc = editableElement.contentDocument || editableElement.contentWindow.document;
-                 const body = iframeDoc.querySelector('body');
-                 if (body) {
-                   body.dispatchEvent(new Event('input', { bubbles: true, cancelable: true }));
-                   body.dispatchEvent(new Event('change', { bubbles: true, cancelable: true }));
-                 }
-               } catch (e) {
-                 console.error('触发iframe内部事件失败:', e);
-               }
-             }
-           }
-         }
-         
-         // 在更新事件后再次确认光标位置（确保编辑器更新后光标位置不变）
-         console.log('在更新事件后确认光标位置');
-         
-         // 重新获取选择对象
-         const currentSelection = window.getSelection();
-         if (currentSelection) {
-           try {
-             // 保存所有插入内容的最后一个节点
-             const parentElement = insertedNode.parentNode;
-             let lastInsertedElement = insertedNode;
-             
-             // 如果插入的是文档片段，找到实际插入的最后一个节点
-             if (insertedNode.nodeType === Node.DOCUMENT_FRAGMENT_NODE) {
-               if (parentElement.lastChild) {
-                 lastInsertedElement = parentElement.lastChild;
-               }
-             }
-             
-             // 创建新的范围，确保光标在所有插入内容的后面
-             const newRange = document.createRange();
-             newRange.setStartAfter(lastInsertedElement);
-             newRange.collapse(true);
-             
-             // 更新选择
-             currentSelection.removeAllRanges();
-             currentSelection.addRange(newRange);
-             
-             console.log('编辑器更新后，光标位置已重新设置在所有插入内容的后面');
-           } catch (e) {
-             console.error('确认光标位置失败:', e);
-           }
-         }
-       }
-      }
-    
-    watch(
-      () => props.value,
-      (val) => {
-        // 只有当内容确实发生变化时才更新，避免不必要的光标跳动
-        if (val !== content.value) {
-          // 保存当前编辑器的光标位置（如果可能）
-          let cursorPos = null
-          const fluentEditor = fluentEditorRef.value?.state?.quill
-          if (fluentEditor) {
-            try {
-              cursorPos = fluentEditor.getSelection()
-            } catch (e) {
-              console.error('获取光标位置失败:', e)
-            }
-          }
-          // 更新内容
-          content.value = val
-          // 尝试恢复光标位置或设置到合理位置
-          if (fluentEditor) {
-            try {
-              if (cursorPos && cursorPos.index <= val.length) {
-                // 如果保存的光标位置有效，则恢复
-                setTimeout(() => {
-                  fluentEditor.setSelection(cursorPos.index, 0)
-                  fluentEditor.focus()
-                }, 0)
-              } else {
-                // 否则将光标设置到内容末尾
-                setTimeout(() => {
-                  fluentEditor.setSelection(val.length, 0)
-                  fluentEditor.focus()
-                }, 0)
-              }
-            } catch (e) {
-              console.error('设置光标位置失败:', e)
-            }
-          }
-        }
-      },
-      { immediate: true }
-    )
-
+      const quill = fluentEditorRef.value.state.quill
+      // 获取当前光标位置
+      const range = quill.getSelection()
+      const index = range ? range.index : 0
+      // 插入内容
+      quill.clipboard.dangerouslyPasteHTML(index, newContent)
+      // 设置光标位置到插入内容之后
+      const contentLength = new DOMParser().parseFromString(newContent, 'text/html').body.textContent.length
+      quill.setSelection(index + contentLength)
+    }
     watch(content, (val, oldVal) => {
-      if(props.type == 3 ) {
+      if (props.type == 3) {
+        // 填空题需要已经经过渲染的空格转为(&nbsp;)
         const reg = /\s*\(\s*\)\s*/g
         // const reg = /（\s*）|\(\s*\)/g
         val = val.replace(reg, '(&nbsp;)')
@@ -409,7 +256,7 @@ export default defineComponent({
             }
           ], [
             "image1",
-            'audio', 'video1', 
+            'audio', 'video1',
             "better-table"
           ]
         ]
@@ -426,49 +273,8 @@ export default defineComponent({
         };
       }
     }
-    const addFile = (up, file) => {
-      if (props.list.length >= props.maxNum) {
-        console.warn(t ? t('uploadFileError1') : 'uploadFileError1: max');
-        return;
-      }
-      if (file.size > 1 * 1024 * 1024 * 1024) {
-        console.warn(t ? t('uploadMediaError') : 'uploadMediaError: 1G');
-        return;
-      }
-      up.startUpload(file)
-      let myFile = {
-        fileName: file.name,
-        fileSize: file.size,
-        fileUrl: file.name,
-        status: 1,
-        lisCount: -1,
-        id: Date.now() + Math.random().toString(36).substr(2, 9)
-      }
-      file.onProgress = (progress) => {
-        myFile.progress = handleNum(progress, 2, "floor")
-      }
-      file.onSuccess = () => {
-        myFile.fileUrl = file.obsHost + '/' + file.key
-        myFile.status = 2
-        // let type = formatFileType(myFile.fileUrl);
-        // if (type === 'audio') {
-        //   this.$nextTick(() => {
-        //     initSrtUploder(`srtBtn${myFile.id}`, myFile)
-        //   })
-        // }
-      }
-      file.onError = (err) => {
-        myFile.errMessage = handlerErrCode(err.code)
-        myFile.status = 3
-      }
-      myFile.cancel = () => {
-        up.cancelUpload(file)
-      }
-      emit("addFile", myFile, props.index)
-    }
-
     const deleteFile = (item, index) => {
-      emit("deleteFile", index, props.index)
+      emit("deleteFile", index, props.actionIndex)
     }
     const beforeEditorInit = (FluentEditor) => {
       const imageIcon = `<svg t="1734490908682" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5918" width="200" height="200"><path d="M1084.416 32c52.288 0 95.296 40.064 99.84 91.136l0.448 9.152v764.288c0 52.288-40.064 95.232-91.136 99.84l-9.152 0.448H132.288a100.288 100.288 0 0 1-99.84-91.2L32 896.64V132.288c0-52.288 40.064-95.296 91.136-99.84L132.288 32h952.128z m-221.568 474.24l-223.808 167.872 87.936 62.336a41.216 41.216 0 0 1 12.992 51.584l-3.392 5.76a41.216 41.216 0 0 1-51.584 12.928l-5.76-3.392-275.2-196.096-290.112 201.856v87.488c0 8.768 5.952 16 14.08 17.92l4.288 0.448h952.128c8.832 0 16-5.952 17.92-14.08l0.448-4.288 3.136-176.448-2.688-1.472a35.2 35.2 0 0 1-4.672-2.944L862.848 506.24z m221.568-392.32H132.288a18.176 18.176 0 0 0-17.92 14.08l-0.448 4.288v579.712l266.368-188.608a40.32 40.32 0 0 1 41.792-3.392l5.376 3.392 141.888 100.928 271.104-203.392a41.28 41.28 0 0 1 46.784-1.792l4.992 3.84 210.56 187.008V132.288a18.176 18.176 0 0 0-14.08-17.92l-4.288-0.448z m-703.296 51.2a144 144 0 1 1-0.128 288.128 144 144 0 0 1 0.128-288.128z m0 69.12c-41.472 0-74.88 33.408-74.88 74.88 0 41.472 33.408 74.88 74.88 74.88 41.472 0 74.88-33.408 74.88-74.88 0-41.472-33.408-74.88-74.88-74.88z" fill-rule="nonzero"></path></svg>`
@@ -496,21 +302,21 @@ export default defineComponent({
     return {
       content,
       initSrtUploder,
-      addFile,
       deleteFile,
       options,
       fluentEditorRef,
-      getEditor,
       insertContent,
-      beforeEditorInit
+      beforeEditorInit,
+      containerId
     }
   }
 });
 </script>
 
 <style lang="scss">
-.ql-image1  {
+.ql-image1 {
   margin-right: 0 !important;
+
   svg {
     width: 32px !important;
     scale: 0.65;

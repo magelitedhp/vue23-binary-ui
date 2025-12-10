@@ -227,19 +227,21 @@ export function handleSubQuestion(title, subQuestions) {
 }
 
 export function titleListener(newValue, regExp, addCallback, deleteCallback) {
-  const reg = new RegExp(regExp);
-  let strs = newValue.match(reg)
-  let indexs = []
+  const reg = new RegExp(regExp, 'g');
+  let strs = newValue.match(reg);
+  let indexs = [];
   for (let i = 0; strs && i < strs.length; i++) {
-    const indexArr = /data-index="([^"]*)"/g.exec(strs[i])
-    let strIndex = 0
-    if (indexArr && indexArr.length > 0) {
-      strIndex = indexArr[1] || 0
+    let strIndex;
+    const dataIndexMatch = /data-index="([^"]*)"/g.exec(strs[i]);
+    if (dataIndexMatch && dataIndexMatch.length > 1) {
+      strIndex = dataIndexMatch[1];
+    } else {
+      strIndex = i + 1;
     }
-    indexs.push(strIndex)
-    addCallback && addCallback(i, strIndex)
+    indexs.push(strIndex);
+    addCallback && addCallback(i, strIndex);
   }
-  deleteCallback && deleteCallback(indexs)
+  deleteCallback && deleteCallback(indexs);
 }
 
 export function editQuestionHandleData(question) {

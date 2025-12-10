@@ -50,7 +50,7 @@
             </div>
           </div>
           <!-- 播放次数限制设置 -->
-          <div class="set-lisCount-wrap" :class="t('langCss')"
+          <!-- <div class="set-lisCount-wrap" :class="t('langCss')"
             v-if="isShowLimitTimes && mode === 'edit' && isAudio(item) && !isQuestionBank">
             <span>
               {{ t('numberOfPlaysAllowed') }}：
@@ -59,7 +59,7 @@
                   :value="times" />
               </tiny-base-select>
             </span>
-          </div>
+          </div> -->
         </div>
       </li>
     </ul>
@@ -100,9 +100,8 @@
 import { defineComponent, ref, reactive } from 'vue-demi'
 import Preview from "./Preview.vue";
 // import showPreview from "./PreviewMask.js";
-import { TinyBaseSelect, TinyOption  } from "@opentiny/vue";
+import { TinyBaseSelect, TinyOption, Modal  } from "@opentiny/vue";
 import { fileIcon, formatSize, formatFileType } from "@/utils/file.js";
-// import { showConfirm } from "@/components/Dialog/dialog.js";
 import Obs from "@/plugins/ulearning-obs.js";
 import { useT } from "../../locale/index.js"
 // import uploadMixins from "@/mixins/upload.js"
@@ -194,16 +193,13 @@ export default defineComponent({
 
     // 删除文件（带确认）
     const deleteFile = (item, index) => {
-      // showConfirm({
-      //   title: props.t('note'),
-      //   content: props.t('confirmDelete'),
-      //   confirmText: props.t('confirm'),
-      //   cancelText: props.t('cancel'),
-      //   onConfirm: () => {
-      //     item.actionIndex = props.actionIndex
-      //     emit("deleteFile", item, index)
-      //   }
-      // })
+      Modal.confirm(t('confirmDelete')).then((res) => {
+        console.log(res,'res');
+        if(res === 'confirm') {
+          item.actionIndex = props.actionIndex
+          emit("deleteFile", item, index)
+        }
+      })
     }
 
     // 下载文件
@@ -253,7 +249,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-@use "../../styles/variables.scss" as *;
+// @use "../../styles/variables.scss" as *;
 .operation {
   .recording {
     display: inline-block;

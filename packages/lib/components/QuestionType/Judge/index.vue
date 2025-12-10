@@ -4,14 +4,14 @@
     <template v-if="mode === 1">
       <div class="correct-answer">
         <span>{{ t("correctAnswer") }}：</span>
-        <tiny-radio-group v-model="correctAnswer">
-          <tiny-radio label="true">
+        <TinyRadioGroup v-model="correctAnswer">
+          <TinyRadio label="true">
             <img src="@/assets/correct.svg" alt="">
-          </tiny-radio>
-          <tiny-radio label="false">
+          </TinyRadio>
+          <TinyRadio label="false">
             <img src="@/assets/error.svg" alt="">
-          </tiny-radio>
-        </tiny-radio-group>
+          </TinyRadio>
+        </TinyRadioGroup>
       </div>
       <div class="action-buttons">
         <TinyButton type="info" @click="saveQuestion">{{ t("save") }}</TinyButton>
@@ -21,17 +21,16 @@
     <!-- 预览模式 -->
     <template v-else-if="mode === 2">
       <div class="preview-mode">
-        <FileList :list="question.link"></FileList>
         <div class="correct-answer-preview">
           <span>{{ t("correctAnswer") }}：</span>
-          <tiny-radio-group v-model="correctAnswer" disabled>
-            <tiny-radio label="true">
+          <TinyRadioGroup v-model="correctAnswer" disabled>
+            <TinyRadio label="true">
               <img src="@/assets/correct.svg" alt="">
-            </tiny-radio>
-            <tiny-radio label="false">
+            </TinyRadio>
+            <TinyRadio label="false">
               <img src="@/assets/error.svg" alt="">
-            </tiny-radio>
-          </tiny-radio-group>
+            </TinyRadio>
+          </TinyRadioGroup>
         </div>
       </div>
     </template>
@@ -41,37 +40,37 @@
       <div class="answer-mode">
         <div class="user-answer">
           <div v-if="!isSubmitted">
-            <tiny-radio-group v-model="userAnswer">
-              <tiny-radio label="true">
+            <TinyRadioGroup v-model="userAnswer">
+              <TinyRadio label="true">
                 <img src="@/assets/correct.svg" alt="">
-              </tiny-radio>
-              <tiny-radio label="false">
+              </TinyRadio>
+              <TinyRadio label="false">
                 <img src="@/assets/error.svg" alt="">
-              </tiny-radio>
-            </tiny-radio-group>
+              </TinyRadio>
+            </TinyRadioGroup>
           </div>
           <div v-else class="submit-result">
             <div class="user-answer-display">
               <span>{{ t("yourAnswer") }}：</span>
-              <tiny-radio-group v-model="userAnswer" disabled>
-                <tiny-radio label="true" :class="handleAnswerClass(true)">
+              <TinyRadioGroup v-model="userAnswer" disabled>
+                <TinyRadio label="true" :class="handleAnswerClass(true)">
                   <img src="@/assets/correct.svg" alt="">
-                </tiny-radio>
-                <tiny-radio label="false" :class="handleAnswerClass(false)">
+                </TinyRadio>
+                <TinyRadio label="false" :class="handleAnswerClass(false)">
                   <img src="@/assets/error.svg" alt="">
-                </tiny-radio>
-              </tiny-radio-group>
+                </TinyRadio>
+              </TinyRadioGroup>
             </div>
             <div v-if="showAnswer" class="correct-answer-hint">
               <span>{{ t("correctAnswer") }}：</span>
-              <tiny-radio-group v-model="correctAnswer" disabled>
-                <tiny-radio label="true" :class="handleCorrectAnswerClass(true)">
+              <TinyRadioGroup v-model="correctAnswer" disabled>
+                <TinyRadio label="true" :class="handleCorrectAnswerClass(true)">
                   <img src="@/assets/correct.svg" alt="">
-                </tiny-radio>
-                <tiny-radio label="false" :class="handleCorrectAnswerClass(false)">
+                </TinyRadio>
+                <TinyRadio label="false" :class="handleCorrectAnswerClass(false)">
                   <img src="@/assets/error.svg" alt="">
-                </tiny-radio>
-              </tiny-radio-group>
+                </TinyRadio>
+              </TinyRadioGroup>
             </div>
           </div>
         </div>

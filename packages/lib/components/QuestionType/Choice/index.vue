@@ -7,7 +7,7 @@
         <div class="choice-item">
           <span class="choice-option">{{ getOption(index) }}</span>
           <RichTextarea class="choice-input-wrap" v-if="activeIndex === index" v-model="choice.text"
-            :placeholder="t('optionContent')" :list="choice.attachments" :isShowLimitTimes="false" :index="index"
+            :placeholder="t('optionContent')" :list="choice.attachments" :isShowLimitTimes="false" :actionIndex="index"
             :placeholderText="t('optionContent')" @addFile="addFile"
             @deleteFile="deleteFile"></RichTextarea>
           <div class="choice-input-wrap" v-else>
@@ -35,27 +35,19 @@
         <span>{{ formatAnswer(question.correctAnswer) }}</span>
       </div>
       <!-- 单选题 -->
-      <tiny-radio-group class="choices" v-if="question.type === 1" v-model="radioAnswer">
-        <tiny-radio class="choice-item" v-for="(choice, index) in question.choices" :key="choice.id"
+      <TinyRadioGroup class="choices" v-if="question.type === 1" v-model="radioAnswer">
+        <TinyRadio class="choice-item" v-for="(choice, index) in question.choices" :key="choice.id"
           :label="getOption(index)">
           <span class="index">{{ getOption(index) }}</span>
-          <div class="choice-content">
-            <FileList class="choice-file-list" mode="preview" type="block" :isPreview="true" :list="choice.attachments"
-              :isShowLimitTimes="false" v-if="choice.attachments?.length"></FileList>
-          </div>
-        </tiny-radio>
-      </tiny-radio-group>
+        </TinyRadio>
+      </TinyRadioGroup>
       <!-- 多选题 -->
-      <tiny-checkbox-group class="choices" v-if="question.type === 2" v-model="checkboxAnswer">
-        <tiny-checkbox class="choice-item" v-for="(choice, index) in question.choices" :key="choice.id"
+      <TinyCheckboxGroup class="choices" v-if="question.type === 2" v-model="checkboxAnswer">
+        <TinyCheckbox class="choice-item" v-for="(choice, index) in question.choices" :key="choice.id"
           :label="getOption(index)">
           <span class="index">{{ getOption(index) }}</span>
-          <div class="choice-content">
-            <FileList class="choice-file-list" mode="preview" type="block" :isPreview="true" :list="choice.attachments"
-              :isShowLimitTimes="false" v-if="choice.attachments?.length"></FileList>
-          </div>
-        </tiny-checkbox>
-      </tiny-checkbox-group>
+        </TinyCheckbox>
+      </TinyCheckboxGroup>
     </div>
     <div class="btn-save">
       <TinyButton type="info" @click="saveQuestion">{{ t("save") }}</TinyButton>
@@ -66,8 +58,8 @@
   <div v-if="mode === 2" class="preview-mode">
     <div class="choice-list">
       <!-- 单选题 -->
-      <tiny-radio-group class="choices" v-if="question.type === 1" v-model="radioAnswer" disabled>
-        <tiny-radio class="choice-item" v-for="(choice, index) in question.choices" :key="choice.id"
+      <TinyRadioGroup class="choices" v-if="question.type === 1" v-model="radioAnswer" disabled>
+        <TinyRadio class="choice-item" v-for="(choice, index) in question.choices" :key="choice.id"
           :label="getOption(index)">
           <span class="index">{{ getOption(index) }}. </span>
           <div class="choice-content">
@@ -75,12 +67,12 @@
             <FileList class="choice-file-list" mode="preview" type="block" :isPreview="true" :list="choice.attachments"
               :isShowLimitTimes="false" v-if="choice.attachments?.length"></FileList>
           </div>
-        </tiny-radio>
-      </tiny-radio-group>
+        </TinyRadio>
+      </TinyRadioGroup>
 
       <!-- 多选题 -->
-      <tiny-checkbox-group class="choices" v-if="question.type === 2" v-model="checkboxAnswer" disabled>
-        <tiny-checkbox class="choice-item" v-for="(choice, index) in question.choices" :key="choice.id"
+      <TinyCheckboxGroup class="choices" v-if="question.type === 2" v-model="checkboxAnswer" disabled>
+        <TinyCheckbox class="choice-item" v-for="(choice, index) in question.choices" :key="choice.id"
           :label="getOption(index)">
           <span class="index">{{ getOption(index) }}. </span>
           <div class="choice-content">
@@ -88,8 +80,8 @@
             <FileList class="choice-file-list" mode="preview" type="block" :isPreview="true" :list="choice.attachments"
               :isShowLimitTimes="false" v-if="choice.attachments?.length"></FileList>
           </div>
-        </tiny-checkbox>
-      </tiny-checkbox-group>
+        </TinyCheckbox>
+      </TinyCheckboxGroup>
     </div>
 
     <!-- 预览模式显示答案 -->
@@ -103,8 +95,8 @@
     <!-- 未提交的时候可以自由选择答案 -->
     <div class="choice-list" v-if="!isSubmitted">
       <!-- 单选题 -->
-      <tiny-radio-group class="choices" v-if="question.type === 1" v-model="radioAnswer">
-        <tiny-radio class="choice-item"
+      <TinyRadioGroup class="choices" v-if="question.type === 1" v-model="radioAnswer">
+        <TinyRadio class="choice-item"
           v-for="(choice, index) in question.choices" :key="choice.id" :label="getOption(index)">
           <span class="index">{{ getOption(index) }}. </span>
           <div class="choice-content">
@@ -112,11 +104,11 @@
             <FileList class="choice-file-list" mode="preview" type="block" :isPreview="true" :list="choice.attachments"
               :isShowLimitTimes="false" :showDownLoad="mode !== 3" v-if="choice.attachments?.length"></FileList>
           </div>
-        </tiny-radio>
-      </tiny-radio-group>
+        </TinyRadio>
+      </TinyRadioGroup>
       <!-- 多选题 -->
-      <tiny-checkbox-group class="choices" v-if="question.type === 2" v-model="checkboxAnswer">
-        <tiny-checkbox class="choice-item"
+      <TinyCheckboxGroup class="choices" v-if="question.type === 2" v-model="checkboxAnswer">
+        <TinyCheckbox class="choice-item"
           v-for="(choice, index) in question.choices" :key="choice.id" :label="getOption(index)">
           <span class="index">{{ getOption(index) }}. </span>
           <div class="choice-content">
@@ -124,14 +116,14 @@
             <FileList class="choice-file-list" mode="preview" type="block" :isPreview="true" :list="choice.attachments"
               :isShowLimitTimes="false" :showDownLoad="mode !== 3" v-if="choice.attachments?.length"></FileList>
           </div>
-        </tiny-checkbox>
-      </tiny-checkbox-group>
+        </TinyCheckbox>
+      </TinyCheckboxGroup>
     </div>
     <!-- 已提交之后只能查看答案，不能再选择， v-model绑定question.record.answer -->
     <div class="choice-list" v-else>
       <!-- 单选题 -->
-      <tiny-radio-group class="choices" v-if="question.type === 1" v-model="question.record.answer" :disabled="true">
-        <tiny-radio class="choice-item" :class="handleAnswerClass(index)"
+      <TinyRadioGroup class="choices" v-if="question.type === 1" v-model="question.record.answer" :disabled="true">
+        <TinyRadio class="choice-item" :class="handleAnswerClass(index)"
           v-for="(choice, index) in question.choices" :key="choice.id" :label="getOption(index)">
           <span class="index">{{ getOption(index) }}. </span>
           <div class="choice-content">
@@ -139,11 +131,11 @@
             <FileList class="choice-file-list" mode="preview" type="block" :isPreview="true" :list="choice.attachments"
               :isShowLimitTimes="false" :showDownLoad="mode !== 3" v-if="choice.attachments?.length"></FileList>
           </div>
-        </tiny-radio>
-      </tiny-radio-group>
+        </TinyRadio>
+      </TinyRadioGroup>
       <!-- 多选题 -->
-      <tiny-checkbox-group class="choices" v-if="question.type === 2" v-model="question.record.answer" :disabled="true">
-        <tiny-checkbox class="choice-item" :class="handleAnswerClass(index)"
+      <TinyCheckboxGroup class="choices" v-if="question.type === 2" v-model="question.record.answer" :disabled="true">
+        <TinyCheckbox class="choice-item" :class="handleAnswerClass(index)"
           v-for="(choice, index) in question.choices" :key="choice.id" :label="getOption(index)">
           <span class="index">{{ getOption(index) }}. </span>
           <div class="choice-content">
@@ -151,8 +143,8 @@
             <FileList class="choice-file-list" mode="preview" type="block" :isPreview="true" :list="choice.attachments"
               :isShowLimitTimes="false" :showDownLoad="mode !== 3" v-if="choice.attachments?.length"></FileList>
           </div>
-        </tiny-checkbox>
-      </tiny-checkbox-group>
+        </TinyCheckbox>
+      </TinyCheckboxGroup>
     </div>  
 
     <!-- 提交后显示答案 -->
@@ -332,34 +324,20 @@ export default defineComponent({
     }
 
     // 删除文件
-    const deleteFile = (item, index) => {
+    const deleteFile = (index, actionIndex) => {
       if (props.mode !== 1) return // 仅编辑模式可删除文件
-
-      if (item && item.actionIndex !== undefined && question.value.choices) {
-        const choice = question.value.choices[item.actionIndex];
-        if (choice && choice.attachments && Array.isArray(choice.attachments)) {
-          choice.attachments.splice(index, 1);
-        }
-      }
+      question.value.choices[actionIndex].attachments.splice(index, 1);
     }
-
     // 添加文件
-    const addFile = (item, file) => {
+    const addFile = (file, actionIndex) => {
+      console.log(file, actionIndex, question.value,'question.valuequestion.value');
       if (props.mode !== 1) return // 仅编辑模式可添加文件
-
-      if (item && item.actionIndex !== undefined && question.value.choices) {
-        const choice = question.value.choices[item.actionIndex];
-        if (!choice.attachments) {
-          choice.attachments = [];
-        }
-        choice.attachments.push(file);
-      }
+      question.value.choices[actionIndex].attachments.push(file);
     }
 
     // 删除选项
     const deleteChoice = (choice, index) => {
       if (props.mode !== 1) return // 仅编辑模式可删除选项
-
       if (question.value.choices && Array.isArray(question.value.choices) && question.value.choices.length > 2) {
         question.value.choices.splice(index, 1);
 
@@ -468,8 +446,6 @@ export default defineComponent({
   .choice-item {
     margin-top: 12px;
     display: flex;
-    align-items: center;
-
     .choice-option {
       margin-right: 20px;
       line-height: $height;

@@ -2,7 +2,6 @@
 * {
   box-sizing: border-box;
   word-break: break-word;
-  white-space: normal;
   &:before,
   &:after {
     box-sizing: border-box;
@@ -10,11 +9,9 @@
     white-space: normal;
   }
 }
-
 html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-
 html,
 body {
   width: 100%;
@@ -28,18 +25,15 @@ body {
   margin: 0;
   background-color: #fff;
 }
-
 ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-
 ::-moz-selection {
   background: #b3d4fc;
   text-shadow: none;
 }
-
 ::selection {
   background: #b3d4fc;
   text-shadow: none;
@@ -57,10 +51,6 @@ textarea {
   resize: vertical;
 }
 
-figure {
-  margin: 0;
-}
-
 .clearfix:after {
   content: ".";
   display: block;
@@ -72,53 +62,6 @@ figure {
 
 .clearfix {
   zoom: 1;
-}
-
-.layout-content {
-  margin: 0 auto;
-  width: 1170px;
-  @media (max-width: 1200px) {
-    width: 980px;
-  }
-}
-.icon-fujianleixingtxt{
-  color: #ae9ae2;
-}
-.icon-fujianleixingexcel{
-  color: #7dccac;
-}
-.icon-fujianleixingpdf{
-  color: #e96565;
-}
-.icon-fujianleixingword{
-  color: #529fff;
-}
-.icon-fujianleixingppt{
-  color: #e96565;
-}
-.icon-fujianleixingqita1{
-  color: #c97943;
-}
-.icon-fujianleixingtupian{
-  color: #d1469c;
-}
-.icon-fujianleixingyasuobao{
-  color: #efce4a;
-}
-.icon-fujianleixingyinpin{
-  color: #859dd5;
-}
-.icon-fujianleixingshipin{
-  color: #efc756;
-}
-.icon-gongxiangwenjianjia {
-  color: #ffca28;
-}
-.icon-fujianleixingwenjianjia {
-  color: #ffca28;
-}
-.icon-jinggao {
-  color: #f7b13d;
 }
 .ul-link {
   font-size: 14px;
@@ -191,33 +134,46 @@ figure {
   white-space: pre-wrap;
 }
 
-// 隐藏qq浏览器的搜索和复制按钮
-#qb-sougou-search,
-#qbTrans-pageTrans-dialog,
-#yiButton {
-  display: none !important;
-}
 
-.batch-tag {
-  display: inline-block;
-  padding: 2px;
-  font-size: 12px;
-  line-height: 1;
-  border-radius: 2px;
-  &.not-start {
-    color: #ffffff;
-    background-color: #B4B4F6;
-  }
-  &.in-progress {
-    color: #ffffff;
-    background-color: #75B37D;
-  }
-  &.ended {
-    color: #ffffff;
-    background-color: #DEDEDE;
-  }
+.icon-fujianleixingtxt{
+  color: #ae9ae2;
 }
-
+.icon-fujianleixingexcel{
+  color: #7dccac;
+}
+.icon-fujianleixingpdf{
+  color: #e96565;
+}
+.icon-fujianleixingword{
+  color: #529fff;
+}
+.icon-fujianleixingppt{
+  color: #e96565;
+}
+.icon-fujianleixingqita1{
+  color: #c97943;
+}
+.icon-fujianleixingtupian{
+  color: #d1469c;
+}
+.icon-fujianleixingyasuobao{
+  color: #efce4a;
+}
+.icon-fujianleixingyinpin{
+  color: #859dd5;
+}
+.icon-fujianleixingshipin{
+  color: #efc756;
+}
+.icon-gongxiangwenjianjia {
+  color: #ffca28;
+}
+.icon-fujianleixingwenjianjia {
+  color: #ffca28;
+}
+.icon-jinggao {
+  color: #f7b13d;
+}
 a[class*="iconfont icon-"]::before, 
 a[class^="iconfont icon-"]::before, 
 i[class*="iconfont icon-"]::before, 

@@ -64,6 +64,8 @@
       :maxNum="5"
       :is-question-bank="isQuestionBank"
       :type="question.type"
+      @addFile="addTitleFile"
+      @deleteFile="deleteTitleFile"
     ></RichTextarea>
     <TinyButton class="insert-blank" v-if="question.type == 3 && mode == 1" @click="insert">
       {{ t("insertQue") }}
@@ -121,13 +123,14 @@ export default defineComponent({
       const parts = []
       let lastIndex = 0
       let match
-      props.question.title = props.question.title.replace(/^<p>|<\/p>$/g, '')
-      while ((match = reg.exec(props.question.title)) !== null) {
+      // 不要直接修改props，创建一个副本进行操作
+      let titleContent = props.question.title.replace(/^<p>|<\/p>$/g, '')
+      while ((match = reg.exec(titleContent)) !== null) {
         // 添加匹配前的文本
         if (match.index > lastIndex) {
           parts.push({
             type: 'text',
-            content: props.question.title.slice(lastIndex, match.index)
+            content: titleContent.slice(lastIndex, match.index)
           })
         }
         
@@ -140,10 +143,10 @@ export default defineComponent({
         lastIndex = reg.lastIndex
       }
       // 添加剩余的文本
-      if (lastIndex < props.question.title.length) {
+      if (lastIndex < titleContent.length) {
         parts.push({
           type: 'text',
-          content: props.question.title.slice(lastIndex)
+          content: titleContent.slice(lastIndex)
         })
       }
       return parts
@@ -174,7 +177,7 @@ export default defineComponent({
     }, { immediate: true, deep: true })
     watch(() => props.mode, (val) => {
       try {
-        if(val == 3) {
+        if(val == 3 && props.question.record?.answer.length > 0) {
           const recordAnswers = props.question.record?.answer.split(";")
           // 更新userAnswers数组
           if (Array.isArray(recordAnswers)) {
@@ -193,7 +196,12 @@ export default defineComponent({
         changeInputWidth(e.target, e.target.value);
       })
     }
-
+    const addTitleFile = (file) => {
+      props.question.link.push(file);
+    }
+    const deleteTitleFile = (index) => {
+      props.question.link.splice(index, 1);
+    }
     
     // 实现insert方法，通过ref调用RichTextarea组件中的方法
     const insert = () => {
@@ -209,8 +217,6 @@ export default defineComponent({
         props.question.record.answer = newVal.join(";")
       }
     }, { deep: true })
-
-    
     // 检查答案是否正确
     const checkAnswerCorrect = (index) => {
       // 获取当前空白的索引
@@ -264,7 +270,9 @@ export default defineComponent({
       userAnswers,
       editWidth,
       checkAnswerCorrect,
-      blankIndex
+      blankIndex,
+      addTitleFile,
+      deleteTitleFile
     }
   }
 })

@@ -7,6 +7,7 @@
       </div>
       <div class="correct-answer">
         <span class="tip">答案：</span><span class="correct-answer-tip">( {{ t('inputAnswerTip2') }} )</span>
+        {{ question.blanks }}
         <div v-for="(blank, index) in question.blanks" :key="blank.id || index">
           <div class="answer-item">
             <span class="answer-option">[{{ index + 1 }}]</span>
@@ -50,6 +51,7 @@ import Base from '../Base.vue'
 import FileList from '../../FileList/index.vue';
 import { titleListener } from '../../../model/questionFactory.js';
 import { t } from '../../../locale/index.js';
+import { getUniqueValue } from "@/utils"
 import { getQuestion } from "../../../model/questionFactory.js"
 
 export default defineComponent({
@@ -135,6 +137,75 @@ export default defineComponent({
       question.value.record.answer = stuAnswer;
       emit('change', question.value);
     }
+    // 删除空格
+    const deleteBlank = (blank, index) => {
+      if (props.mode !== 1) return;
+      // 找到所有(&nbsp;)的匹配及其索引
+      const reg = /\(&nbsp;\)/g;
+      let match;
+      let indices = [];
+      
+      while ((match = reg.exec(question.value.title)) !== null) {
+        indices.push(match.index);
+      }
+      // 检查索引是否有效
+      if (index >= 0 && index < indices.length) {
+        // 获取要删除的空格位置
+        const idx = indices[index];
+        // 删除指定位置的&nbsp;
+        question.value.title = question.value.title.substring(0, idx) + question.value.title.substring(idx + 8);
+        console.log(question.value.title,'-------------------------')
+        // 删除对应的blank
+        question.value.blanks.splice(index, 1);
+      }
+    };
+    // 标题内容变化处理
+    const handleTitleChange = (newValue) => {
+      console.log(newValue,'newennenwnewnn');
+      
+      if (props.mode !== 1) return;
+      
+      // 确保blanks数组存在
+      if (!question.value.blanks) {
+        question.value.blanks = [];
+      }
+      // 使用titleListener处理空格变化
+      titleListener(
+        newValue,
+        /\(&nbsp;\)/g,
+        (i, strIndex) => {
+          if (!question.value.blanks) question.value.blanks = [];
+          const index = question.value.blanks.findIndex(
+            (it) => it.blankIndex == strIndex
+          );
+          if (index === -1) {
+            // 创建新空格
+            const newBlank = {
+              id: getUniqueValue(),
+              blankIndex: strIndex,
+              correctAnswer: ''
+            };
+            question.value.blanks.push(newBlank);
+            userAnswers.value.splice(i, 0, '');
+          }
+        },
+        (indexs) => {
+          if (!question.value.blanks) return;
+          for (let i = question.value.blanks.length - 1; i >= 0; i--) {
+            const index = indexs.findIndex(
+              (it) => question.value.blanks[i].blankIndex == it
+            );
+            if (index === -1) {
+              question.value.blanks.splice(i, 1);
+              userAnswers.value.splice(i, 1);
+            }
+          }
+        }
+      );
+    };
+    // 监听标题变化
+    watch(() => question.value.title, handleTitleChange, { immediate: true });
+    
     return {
       t,
       question,
@@ -142,7 +213,8 @@ export default defineComponent({
       saveQuestion,
       cancel,
       answerChange,
-      blankAnswerChange
+      blankAnswerChange,
+      deleteBlank
     };
   }
 });
@@ -179,6 +251,8 @@ $height: 44px;
 
 .answer-item {
   margin-top: 12px;
+  line-height: $height;
+  font-size: 16px;
   display: flex;
 }
 

@@ -90,98 +90,98 @@ export default {
     },
     getQuestion1() {
       this.question = {
-        "questionid": 12496523,
-        "oldQuestionId": null,
-        "title": "<p>123131有附件的单选题呵呵呵呵呵呵呵<img src=\"https://leicloud.ulearning.cn/resources/7449024/202509281042424985.jpg\" /></p>",
-        "type": 1,
-        "iscontent": 1,
-        "hardlevel": 3,
-        "parentid": 0,
-        "score": 1,
-        "correctreply": "",
-        "correctAnswer": [
-            "B"
-        ],
-        "lisCount": null,
-        "createtime": null,
-        "updatetime": 1764209055000,
-        "remark": null,
-        "userid": 7449024,
-        "orgid": null,
-        "aspid": null,
-        "desc1": "",
-        "desc4": null,
-        "isShare": 0,
-        "theLatest": null,
-        "blankOrder": 0,
-        "item": [
-            {
-                "choiceItemID": 457368601,
-                "questionID": 12496523,
-                "title": "<p>123</p>",
-                "link": "https://tobs.ulearning.cn/resources/web/16601871016762958.mp3"
-            },
-            {
-                "choiceItemID": 457368602,
-                "questionID": 12496523,
-                "title": "<p><img src=\"https://tobs.ulearning.cn/resources/web/16601866903825796.png\" width=\"515\" height=\"213\" /><img src=\"https://tobs.ulearning.cn/resources/web/166018692562230.png\" /></p>",
-                "link": ""
-            },
-            {
-                "choiceItemID": 457368603,
-                "questionID": 12496523,
-                "title": "<p>123</p>",
-                "link": ""
-            },
-            {
-                "choiceItemID": 457368604,
-                "questionID": 12496523,
-                "title": "<p>123</p>",
-                "link": ""
-            }
-        ],
-        "subQuestions": null,
-        "link": [
-            {
-                "fileUrl": "https://leicloud.ulearning.cn/resources/7449024/202509281042488834.mp3",
-                "lisCount": null,
-                "fileName": "16994360136574566.mp3",
-                "fileSize": 0,
-                "srt": null,
-                "avatar": null
-            },
-            {
-                "fileUrl": "https://leicloud.ulearning.cn/resources/7449024/202509281042534031.mp4",
-                "lisCount": null,
-                "fileName": "62c74441fde0d91b474d9a85bd68fd7c.mp4",
-                "fileSize": 0,
-                "srt": null,
-                "avatar": null
-            }
-        ],
-        "analyLinkList": null,
-        "answerLinkList": null,
-        "demoLinkList": null,
-        "formulaVar": null,
-        "parentFolders": [],
-        "creater": "csbm_testtea001@!:+./！",
-        "orgName": "测试部门-测试机构",
-        "shareArray": [],
-        "isUsed": null,
-        "autoscore": 0,
-        "linkOptionList": null,
-        "tags": null,
-        "tagIds": null,
-        "compareInfo": null,
-        "originalQuestionId": null,
-        "isShareFolder": 0,
-        "isShareRootDir": null,
-        "shareFolderUse": null,
-        "shareFolderAllowCopy": null,
-        "shareFolderRootDirId": null,
-        "knowledgeDTOS": null,
-        "source": null
-      }
+  "questionid": 19673995,
+  "oldQuestionId": null,
+  "title": "<p><img src=\"https://obscloud.ulearning.cn/resources/web/17653341516826949.png\" /></p>",
+  "type": 1,
+  "iscontent": 1,
+  "hardlevel": 3,
+  "parentid": 0,
+  "score": 1,
+  "correctreply": "",
+  "correctAnswer": [
+    "B"
+  ],
+  "lisCount": null,
+  "createtime": null,
+  "updatetime": 1765344324000,
+  "remark": null,
+  "userid": 10792509,
+  "orgid": null,
+  "aspid": null,
+  "desc1": "",
+  "desc4": null,
+  "isShare": 0,
+  "theLatest": null,
+  "blankOrder": 0,
+  "item": [
+    {
+      "choiceItemID": 47315155,
+      "questionID": 19673995,
+      "title": "<p>123123<img src=\"https://obscloud.ulearning.cn/resources/web/17653442934763743.png\" /></p>",
+      "link": "https://obscloud.ulearning.cn/resources/web/17653443214724001.mp4"
+    },
+    {
+      "choiceItemID": 47315156,
+      "questionID": 19673995,
+      "title": "<p>123123</p>",
+      "link": ""
+    },
+    {
+      "choiceItemID": 47315157,
+      "questionID": 19673995,
+      "title": "<p>122313</p>",
+      "link": ""
+    },
+    {
+      "choiceItemID": 47315158,
+      "questionID": 19673995,
+      "title": "<p>12312132</p>",
+      "link": ""
+    }
+  ],
+  "subQuestions": null,
+  "link": [
+    {
+      "fileUrl": "https://obscloud.ulearning.cn/resources/web/17653341688477768.mp3",
+      "lisCount": null,
+      "fileName": "16994360136574566.mp3",
+      "fileSize": 0,
+      "srt": null,
+      "avatar": null
+    },
+    {
+      "fileUrl": "https://obscloud.ulearning.cn/resources/web/17653341742454581.mp4",
+      "lisCount": null,
+      "fileName": "17639736759711778.mp4",
+      "fileSize": 0,
+      "srt": null,
+      "avatar": null
+    }
+  ],
+  "analyLinkList": null,
+  "answerLinkList": null,
+  "demoLinkList": null,
+  "formulaVar": null,
+  "parentFolders": [],
+  "creater": "测试教师",
+  "orgName": "文华在线测试部门",
+  "shareArray": [],
+  "isUsed": null,
+  "autoscore": 0,
+  "linkOptionList": null,
+  "tags": null,
+  "tagIds": null,
+  "compareInfo": null,
+  "originalQuestionId": null,
+  "isShareFolder": 0,
+  "isShareRootDir": null,
+  "shareFolderUse": null,
+  "shareFolderAllowCopy": null,
+  "shareFolderRootDirId": null,
+  "knowledgeDTOS": null,
+  "source": null
+}
       // console.log(this.question, '--------Choice--------');
     },
     getQuestion2() {
@@ -228,7 +228,7 @@ export default {
     "AI//ai",
     "智能化",
     "酌情给分",
-    "酌情给分"
+    "酌情给分1"
   ],
   "lisCount": null,
   "createtime": null,
@@ -284,14 +284,14 @@ export default {
     addQuestion(type) {
       switch(type) {
         case 1:
-          // this.getQuestion1();
-          this.question = {
-            type,
-            questionId: Math.floor(Math.random() * 1e9),
-            record: {
-              answer: "A"
-            }
-          }
+          this.getQuestion1();
+          // this.question = {
+          //   type,
+          //   questionId: Math.floor(Math.random() * 1e9),
+          //   record: {
+          //     answer: "A"
+          //   }
+          // }
           break;
         case 2:
           this.getQuestion2();
