@@ -1,5 +1,5 @@
 <template>
-  <Base class="completion-question" :question="question" :mode="mode" @blankAnswerChange="blankAnswerChange" :isSubmitted="isSubmitted">
+  <Base ref="baseComponent" class="completion-question" :question="question" :mode="mode" @blankAnswerChange="blankAnswerChange" :isSubmitted="isSubmitted">
   <!-- 编辑模式 -->
   <template v-if="mode === 1">
     <div class="edit-mode">
@@ -137,6 +137,8 @@ export default defineComponent({
       question.value.record.answer = stuAnswer;
       emit('change', question.value);
     }
+
+    const baseComponent = ref(null)
     // 删除空格
     const deleteBlank = (blank, index) => {
       if (props.mode !== 1) return;
@@ -157,18 +159,37 @@ export default defineComponent({
         console.log(question.value.title,'-------------------------')
         // 删除对应的blank
         question.value.blanks.splice(index, 1);
+        // 删除空格，这里手动更新富文本的内容
+        baseComponent.value.richTextareaRef.content = question.value.title
       }
     };
     // 标题内容变化处理
-    const handleTitleChange = (newValue) => {
-      console.log(newValue,'newennenwnewnn');
-      
+    const handleTitleChange = (newValue, oldValue) => {
+      console.log(newValue, oldValue,'标题内容变化处理');
       if (props.mode !== 1) return;
       
       // 确保blanks数组存在
       if (!question.value.blanks) {
         question.value.blanks = [];
       }
+      
+      // 获取所有(&nbsp;)的匹配位置
+      const reg = /\(&nbsp;\)/g;
+      let match;
+      let newIndices = [];
+      
+      while ((match = reg.exec(newValue)) !== null) {
+        newIndices.push(match.index);
+      }
+      
+      // 创建一个映射，记录现有blank的位置和索引
+      const existingBlanksMap = new Map();
+      question.value.blanks.forEach((blank, index) => {
+        existingBlanksMap.set(blank.blankIndex, index);
+      });
+      
+      // 跟踪需要添加的新blank位置
+      const blanksToAdd = [];
       // 使用titleListener处理空格变化
       titleListener(
         newValue,
@@ -185,8 +206,7 @@ export default defineComponent({
               blankIndex: strIndex,
               correctAnswer: ''
             };
-            question.value.blanks.push(newBlank);
-            userAnswers.value.splice(i, 0, '');
+            blanksToAdd.push({ index: i, blank: newBlank });
           }
         },
         (indexs) => {
@@ -202,6 +222,16 @@ export default defineComponent({
           }
         }
       );
+      
+      // 按照索引位置倒序添加新blank，避免插入顺序影响后续索引
+      blanksToAdd.sort((a, b) => b.index - a.index);
+      
+      blanksToAdd.forEach(item => {
+        // 在正确的位置插入新blank
+        question.value.blanks.splice(item.index, 0, item.blank);
+        // 在对应位置插入新的userAnswer
+        userAnswers.value.splice(item.index, 0, '');
+      });
     };
     // 监听标题变化
     watch(() => question.value.title, handleTitleChange, { immediate: true });
@@ -214,7 +244,8 @@ export default defineComponent({
       cancel,
       answerChange,
       blankAnswerChange,
-      deleteBlank
+      deleteBlank,
+      baseComponent
     };
   }
 });
