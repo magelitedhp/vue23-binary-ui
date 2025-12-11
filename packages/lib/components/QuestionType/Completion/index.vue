@@ -7,7 +7,6 @@
       </div>
       <div class="correct-answer">
         <span class="tip">答案：</span><span class="correct-answer-tip">( {{ t('inputAnswerTip2') }} )</span>
-        {{ question.blanks }}
         <div v-for="(blank, index) in question.blanks" :key="blank.id || index">
           <div class="answer-item">
             <span class="answer-option">[{{ index + 1 }}]</span>

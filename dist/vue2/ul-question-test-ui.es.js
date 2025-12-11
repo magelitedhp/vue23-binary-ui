@@ -66311,7 +66311,7 @@ const wln = Qo({
 });
 var xln = function() {
   var e = this, n = e._self._c;
-  return e._self._setupProxy, n("Base", { ref: "baseComponent", staticClass: "completion-question", attrs: { question: e.question, mode: e.mode, isSubmitted: e.isSubmitted }, on: { blankAnswerChange: e.blankAnswerChange } }, [e.mode === 1 ? [n("div", { staticClass: "edit-mode" }, [n("div", { staticClass: "title" }), n("div", { staticClass: "correct-answer" }, [n("span", { staticClass: "tip" }, [e._v("答案：")]), n("span", { staticClass: "correct-answer-tip" }, [e._v("( " + e._s(e.t("inputAnswerTip2")) + " )")]), e._v(" " + e._s(e.question.blanks) + " "), e._l(e.question.blanks, function(o, r) {
+  return e._self._setupProxy, n("Base", { ref: "baseComponent", staticClass: "completion-question", attrs: { question: e.question, mode: e.mode, isSubmitted: e.isSubmitted }, on: { blankAnswerChange: e.blankAnswerChange } }, [e.mode === 1 ? [n("div", { staticClass: "edit-mode" }, [n("div", { staticClass: "title" }), n("div", { staticClass: "correct-answer" }, [n("span", { staticClass: "tip" }, [e._v("答案：")]), n("span", { staticClass: "correct-answer-tip" }, [e._v("( " + e._s(e.t("inputAnswerTip2")) + " )")]), e._l(e.question.blanks, function(o, r) {
     return n("div", { key: o.id || r }, [n("div", { staticClass: "answer-item" }, [n("span", { staticClass: "answer-option" }, [e._v("[" + e._s(r + 1) + "]")]), n("input", { directives: [{ name: "model", rawName: "v-model", value: o.correctAnswer, expression: "blank.correctAnswer" }], staticClass: "answer-input", attrs: { placeholder: "请输入答案", type: "text" }, domProps: { value: o.correctAnswer }, on: { change: e.answerChange, input: function(a) {
       a.target.composing || e.$set(o, "correctAnswer", a.target.value);
     } } }), n("div", { staticClass: "btn-delete" }, [n("img", { attrs: { src: Zg, alt: "" }, on: { click: function(a) {
@@ -66328,7 +66328,7 @@ var xln = function() {
   Tln,
   !1,
   null,
-  "f2e29a4c"
+  "e0868794"
 );
 const g1 = kln.exports;
 g1.install = (t) => t.component(g1.name, g1);
