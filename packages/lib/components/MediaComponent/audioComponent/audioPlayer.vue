@@ -2,7 +2,7 @@
   <div class="audioplayer stop-swiping">
     <div class="player-content" v-if="mode === 'bar'">
       <div
-        class="icon"
+        class="icon-player"
         @click="togglePlayer"
       >
         <img :src="paused ? require('@/assets/play.svg') : require('@/assets/pause.svg')" class="iconfont" alt="" />
@@ -24,7 +24,7 @@
       <div class="total-time">{{ totalTimeStr }}</div>
     </div>
     <div class="player-content-circle" v-if="mode === 'circle'">
-      <div class="icon" @click="togglePlayer">
+      <div class="icon-player" @click="togglePlayer">
         <i
           :class="[
             paused ? 'icon-yinpin_zanting-01' : 'icon-yinpin_bofang-01',
@@ -38,7 +38,7 @@
     </div>
     <div class="mobile-player-content player-content" v-if="mode === 'mobile-bar'">
       <div
-        class="icon"
+        class="icon-player"
         @click="togglePlayer"
       >
         <i :class="[ iconStatus, 'iconfont']"></i>
@@ -211,7 +211,7 @@ export default {
 .player-content-circle {
   position: relative;
   height: 120px;
-  .icon {
+  .icon-player {
     position: absolute;
     width: 72px;
     height: 72px;
@@ -240,7 +240,7 @@ export default {
   }
 }
 .player-content {
-  .icon {
+  .icon-player {
     .iconfont {
       width: 24px;
       margin-bottom: 6px;
@@ -254,7 +254,7 @@ export default {
   border: 1px solid #F1F3F7;
   box-shadow: 0 2px 4px 0 rgba(216,216,216,0.25);
   border-radius: 24px;
-  .icon {
+  .icon-player {
     margin-right: 6px;
     width: 43px;
     border-right: 1px solid #E3E3E9;
