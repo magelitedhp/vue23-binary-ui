@@ -227,6 +227,7 @@ export function handleSubQuestion(title, subQuestions) {
 }
 
 export function titleListener(newValue, regExp, addCallback, deleteCallback) {
+  if(!newValue) return
   const reg = new RegExp(regExp, 'g');
   let strs = newValue.match(reg);
   let indexs = [];

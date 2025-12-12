@@ -133,11 +133,11 @@ export default defineComponent({
         uploadBtn.click();
       })
       toolbar.addHandler('audio', function (value) {
-        // obs.$el.accept = formatTypeLimit(["audio"]);
-        // uploadBtn.click();
-        let jsx = `<img src="https://tobs.ulearning.cn/resources/web/17548922973825322.png" devui-editorx-image="true" data-image-id=${getUniqueValue()} />`
-        jsx = `&nbsp;<span class="q-space" contenteditable="false" data-index="${getUniqueValue()}">(&nbsp;)</span>&nbsp;`
-        console.log(fluentEditor,'fluentEditoraudio')
+        obs.$el.accept = formatTypeLimit(["audio"]);
+        uploadBtn.click();
+        // let jsx = `<img src="https://tobs.ulearning.cn/resources/web/17548922973825322.png" devui-editorx-image="true" data-image-id=${getUniqueValue()} />`
+        // jsx = `&nbsp;<span class="q-space" contenteditable="false" data-index="${getUniqueValue()}">(&nbsp;)</span>&nbsp;`
+        // console.log(fluentEditor,'fluentEditoraudio')
         insertContent(jsx)
       })
     })

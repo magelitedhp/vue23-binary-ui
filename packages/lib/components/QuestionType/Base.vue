@@ -174,14 +174,23 @@ export default defineComponent({
         // 如果空白数量减少，截断数组
         userAnswers.value = userAnswers.value.slice(0, newBlankCount)
       }
+      if(props.mode == 3) {
+        userAnswers.value = props.question.record.answer
+      }
     }, { immediate: true, deep: true })
     watch(() => props.mode, (val) => {
       try {
-        if(val == 3 && props.question.record?.answer.length > 0) {
-          const recordAnswers = props.question.record?.answer.split(";")
-          // 更新userAnswers数组
-          if (Array.isArray(recordAnswers)) {
-            userAnswers.value = [...recordAnswers]
+        if(props.question.type == 3) {
+          if(val == 3 && props.question.record?.answer.length > 0) {
+            const recordAnswers = props.question.record?.answer
+            // 更新userAnswers数组
+            if (Array.isArray(recordAnswers)) {
+              userAnswers.value = [...recordAnswers]
+            }else {
+              userAnswers.value = recordAnswers.split(";")
+            }
+          }else if(val == 2) {
+            userAnswers.value = []
           }
         }
       } catch (e) {
@@ -214,7 +223,7 @@ export default defineComponent({
       emit('blankAnswerChange', newVal)
       // 更新question.record.answer的值
       if (props.question.record) {
-        props.question.record.answer = newVal.join(";")
+        props.question.record.answer = newVal
       }
     }, { deep: true })
     // 检查答案是否正确

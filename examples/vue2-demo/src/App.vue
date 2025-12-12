@@ -28,7 +28,7 @@
      <div v-for="item in 4">
       <div @click="addQuestion(item)">{{ '添加' + item + '题型'}}</div>
      </div>
-    <component :is="componentId" :mode="mode" :oriQuestion="question" :isSubmitted="isSubmitted" @change="answerChange"></component>
+    <component :is="componentId" :mode="mode" :oriQuestion="question" :isSubmitted="isSubmitted" @save="save" @change="answerChange"></component>
   </div>
 </template>
 
@@ -80,7 +80,10 @@ export default {
   },
   methods: {
     answerChange(val) {
-      // console.log(val,'valval');
+      console.log(val,'valval');
+    },
+    save(val) {
+      console.log(val,'valval');
     },
     say() {
       alert('Hello Vue3')
@@ -182,13 +185,79 @@ export default {
   "knowledgeDTOS": null,
   "source": null
 }
+this.question = {
+    "id": null,
+    "type": 1,
+    "title": "<p>修改答案一次这是单选标题 答案A</p>",
+    "score": 1,
+    "correctAnswer": [
+        "B"
+    ],
+    "choices": [
+        {
+            "choiceItemId": 217,
+            "questionId": 77,
+            "link": "",
+            "title": "选项A的内容"
+        },
+        {
+            "choiceItemId": 218,
+            "questionId": 77,
+            "link": "",
+            "title": "选项B的内容"
+        },
+        {
+            "choiceItemId": 219,
+            "questionId": 77,
+            "link": "",
+            "title": "选项C的内容"
+        },
+        {
+            "choiceItemId": 220,
+            "questionId": 77,
+            "link": "",
+            "title": "选项D的内容"
+        }
+    ],
+    "item": [
+        {
+            "choiceItemId": 217,
+            "questionId": 77,
+            "link": "",
+            "title": "选项A的内容"
+        },
+        {
+            "choiceItemId": 218,
+            "questionId": 77,
+            "link": "",
+            "title": "选项B的内容"
+        },
+        {
+            "choiceItemId": 219,
+            "questionId": 77,
+            "link": "",
+            "title": "选项C的内容"
+        },
+        {
+            "choiceItemId": 220,
+            "questionId": 77,
+            "link": "",
+            "title": "选项D的内容"
+        }
+    ],
+    record: {
+      answer: "A"
+    },
+    "mode": 2
+}
       // console.log(this.question, '--------Choice--------');
     },
     getQuestion2() {
       this.question = {
         "questionid": 12496524,
         "oldQuestionId": null,
-        "title": `<span class="q-space" contenteditable="false">(&nbsp;)</span><p>123131有附件的多选题呵呵呵呵呵呵呵<img src=\"https://leicloud.ulearning.cn/resources/7449024/202509281042424985.jpg\" /></p>`,
+        "title": "13",
+        // "title": `<span class="q-space" contenteditable="false">(&nbsp;)</span><p>123131有附件的多选题呵呵呵呵呵呵呵<img src=\"https://leicloud.ulearning.cn/resources/7449024/202509281042424985.jpg\" /></p>`,
         "type": 2,
         "iscontent": 1,
         "hardlevel": 3,
@@ -207,7 +276,7 @@ export default {
         "orgid": null,
         "aspid": null,
         "record": {
-          answer: "A,C"
+          answer: [ "A", "D" ]
         }
   
       }
@@ -268,8 +337,14 @@ export default {
   "knowledgeDTOS": null,
   "source": null,
   "record": {
-    answer: "AI;智能化;的撒大;阿三打撒"
-  }
+    answer: [
+      "AI",
+      "智能化",
+      "酌情给分21312213",
+      "酌情给分21312312211"
+    ]
+  },
+  mode: 3
 }
     },
     getQuestion4() {

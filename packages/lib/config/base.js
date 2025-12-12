@@ -7,7 +7,7 @@ const host = location.host
 const isDev =
   host.indexOf('192.168') === 0 || host === '127.0.0.1' || host.indexOf('localhost') === 0 
 const protocol = isDev ? 'https://' : location.protocol + '//'
-const hostDomain = baseHost || (isDev ? '.ulearning.cn' : host.substring(host.indexOf('.')))
+const hostDomain = baseHost || (isDev ? '.tongshike.cn' : host.substring(host.indexOf('.')))
 // 是否是测试环境
 const isTest = hostDomain === '.tongshike.cn'
 // cookie写入的域名

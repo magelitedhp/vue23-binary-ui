@@ -122,7 +122,7 @@
     <!-- 已提交之后只能查看答案，不能再选择， v-model绑定question.record.answer -->
     <div class="choice-list" v-else>
       <!-- 单选题 -->
-      <TinyRadioGroup class="choices" v-if="question.type === 1" v-model="question.record.answer" :disabled="true">
+      <TinyRadioGroup class="choices" v-if="question.type === 1" v-model="userAnswer" :disabled="true">
         <TinyRadio class="choice-item" :class="handleAnswerClass(index)"
           v-for="(choice, index) in question.choices" :key="choice.id" :label="getOption(index)">
           <span class="index">{{ getOption(index) }}. </span>
@@ -134,7 +134,7 @@
         </TinyRadio>
       </TinyRadioGroup>
       <!-- 多选题 -->
-      <TinyCheckboxGroup class="choices" v-if="question.type === 2" v-model="question.record.answer" :disabled="true">
+      <TinyCheckboxGroup class="choices" v-if="question.type === 2" v-model="userAnswer" :disabled="true">
         <TinyCheckbox class="choice-item" :class="handleAnswerClass(index)"
           v-for="(choice, index) in question.choices" :key="choice.id" :label="getOption(index)">
           <span class="index">{{ getOption(index) }}. </span>
@@ -221,17 +221,18 @@ export default defineComponent({
     // 初始化答案
     const radioAnswer = ref('')
     const checkboxAnswer = ref([])
-    // 监听oriQuestion变化，初始化问题数据
-    watch(() => props.oriQuestion, (newVal) => {
-      question.value = getQuestion(newVal)
-      // 根据不同模式初始化答案
+    // 答题模式时更新userAnswer
+    const userAnswer = ref()
+    const updateSelectAnswer = () => {
       if (props.mode === 3) {
         // 答题模式：使用record中的answer
         if (question.value.record?.answer) {
           if (question.value.type === 1) {
             radioAnswer.value = question.value.record.answer
+            userAnswer.value = question.value.record.answer
           } else {
             checkboxAnswer.value = Array.isArray(question.value.record.answer) ? question.value.record.answer : question.value.record.answer?.split(',') || []
+            userAnswer.value = Array.isArray(question.value.record.answer) ? question.value.record.answer : question.value.record.answer?.split(',') || []
           }
         } else {
           // 如果没有record.answer，则初始化空值
@@ -242,7 +243,7 @@ export default defineComponent({
         // 其他模式：使用correctAnswer
         if (question.value.correctAnswer) {
           if (question.value.type === 1) {
-            radioAnswer.value = question.value.correctAnswer
+            radioAnswer.value = question.value.correctAnswer[0]
           } else {
             checkboxAnswer.value = Array.isArray(question.value.correctAnswer) ? question.value.correctAnswer : question.value.correctAnswer?.split(',') || []
           }
@@ -252,30 +253,36 @@ export default defineComponent({
           checkboxAnswer.value = []
         }
       }
-      console.log(question.value, '--------Choice--------');
+    }
+    // 监听oriQuestion变化，初始化问题数据
+    watch(() => props.oriQuestion, (newVal) => {
+      question.value = getQuestion(newVal)
+      // 根据不同模式初始化答案
+      updateSelectAnswer()
+      console.log(question.value, '--------Choice--------', newVal);
     }, { immediate: true })
+    watch([() => props.mode, () => props.isSubmitted], () => {
+      updateSelectAnswer()
+    })
     // 获取选项字母(A,B,C,D...)
     const getOption = (index) => {
       return String.fromCharCode(65 + index)
     }
-
     // 格式化答案显示
     const formatAnswer = (answer) => {
       if (!answer) return '-'
       return Array.isArray(answer) ? answer.join(',') : answer
     }
-
     // 处理答案样式类
     const handleAnswerClass = (index) => {
       // 答题模式下提交后才显示对错样式
       if (props.mode !== 3 || !props.isSubmitted) return ''
-
       const currentOption = getOption(index)
-      const userAnswer = question.value.record?.answer || ''
+      const userAnswerValue = question.value.record?.answer || ''
       const correctAnswer = question.value.correctAnswer || ''
 
       // 标准化答案格式
-      const userAnswers = Array.isArray(userAnswer) ? userAnswer : (userAnswer?.split(',') || [])
+      const userAnswers = Array.isArray(userAnswerValue) ? userAnswerValue : (userAnswerValue?.split(',') || [])
       const correctAnswers = Array.isArray(correctAnswer) ? correctAnswer : (correctAnswer?.split(',') || [])
 
       const isUserSelected = userAnswers.includes(currentOption)
@@ -359,8 +366,6 @@ export default defineComponent({
       }
     }
 
-
-
     // 保存问题数据（编辑模式）
     const saveQuestion = () => {
       if (props.mode !== 1) return
@@ -384,7 +389,7 @@ export default defineComponent({
         if (props.mode === 1) {
           // 编辑模式下设置正确答案
           question.value.correctAnswer = newVal
-        } else if (props.mode === 3 && !props.isSubmitted) {
+        } else if (props.mode === 3) {
           // 答题模式下设置用户答案
           if (!question.value.record) {
             question.value.record = {}
@@ -428,7 +433,8 @@ export default defineComponent({
       activeRichText,
       deleteFile,
       addFile,
-      deleteChoice
+      deleteChoice,
+      userAnswer
     }
   }
 })
