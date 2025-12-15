@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import { defineComponent, ref, watch, onMounted } from 'vue-demi'
+import { defineComponent, ref, watch, onMounted, onUnmounted } from 'vue-demi'
 import { TinyFluentEditor, Message } from '@opentiny/vue'
 import FileList from "../FileList/index.vue";
 import { handlerErrCode, formatTypeLimit } from "../../utils/file.js";
@@ -66,6 +66,7 @@ export default defineComponent({
   emits: ['change', 'addFile', 'deleteFile'],
   setup(props, { emit }) {
     const t = useT()
+    const obs = ref(null)
     const content = ref(props.value || '')
     const fluentEditorRef = ref(null)
     const containerId = ref(getUniqueValue())
@@ -74,10 +75,10 @@ export default defineComponent({
       const fluentEditor = fluentEditorRef.value.state.quill
       const toolbar = fluentEditor.getModule('toolbar')
       // 创建隐藏的上传按钮
-      const obs = new Obs({ ...uploadOptions });
+      obs.value = new Obs({ ...uploadOptions });
       const uploadBtn = document.getElementById('upload');
-      obs.initUpBtn(uploadBtn);
-      obs.onBeforeUpload = (file) => {
+      obs.value.initUpBtn(uploadBtn);
+      obs.value.onBeforeUpload = (file) => {
         // if (checkAddFile && !checkAddFile(file)) {
         //   return 
         // }
@@ -104,7 +105,7 @@ export default defineComponent({
           myFile.status = 3
         }
         myFile.cancel = () => {
-          obs.cancelUpload(file)
+          obs.value.cancelUpload(file)
         }
         // 避免上传相同文件时key值重复
         myFile.key = getUniqueValue();
@@ -125,21 +126,26 @@ export default defineComponent({
       // }
       toolbar.addHandler('image1', function (value) {
         // 触发文件选择对话框
-        obs.$el.accept = formatTypeLimit(["image"]);
+        obs.value.$el.accept = formatTypeLimit(["image"]);
         uploadBtn.click();
       });
       toolbar.addHandler('video1', function (value) {
-        obs.$el.accept = formatTypeLimit(["video"]);
+        obs.value.$el.accept = formatTypeLimit(["video"]);
         uploadBtn.click();
       })
       toolbar.addHandler('audio', function (value) {
-        obs.$el.accept = formatTypeLimit(["audio"]);
+        obs.value.$el.accept = formatTypeLimit(["audio"]);
         uploadBtn.click();
         // let jsx = `<img src="https://tobs.ulearning.cn/resources/web/17548922973825322.png" devui-editorx-image="true" data-image-id=${getUniqueValue()} />`
         // jsx = `&nbsp;<span class="q-space" contenteditable="false" data-index="${getUniqueValue()}">(&nbsp;)</span>&nbsp;`
         // console.log(fluentEditor,'fluentEditoraudio')
-        insertContent(jsx)
+        // insertContent(jsx)
       })
+    })
+    onUnmounted(() => {
+      if (obs.value?.$el && obs.value.$el.parentNode) {
+        obs.value.$el.parentNode.removeChild(obs.value.$el)
+      }
     })
     // 插入内容到编辑器
     const insertContent = (newContent) => {
