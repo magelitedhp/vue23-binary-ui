@@ -1,4 +1,7 @@
-// 注入iconfont的字体文件
+:root {
+  // 根文字大小，可被外部项目覆盖
+  // font-size: 6.944444444444445vw;
+}
 * {
   box-sizing: border-box;
   word-break: break-word;

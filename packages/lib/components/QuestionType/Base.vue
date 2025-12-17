@@ -50,6 +50,7 @@
             
           </template>
         </div>
+        <div v-if="question.allowExchange" class="can-exchange">*{{ t('answerCanChangeTip') }}</div>
       </div>
       <!-- 其他题型正常显示 -->
       <div v-else class="preview-title" v-html="question.title || ''"></div>
@@ -79,7 +80,7 @@ import { defineComponent, computed, ref, watch, nextTick } from 'vue-demi'
 import { TinyButton } from '@opentiny/vue'
 import RichTextarea from '../RichTextarea/index.vue'
 import FileList from '../FileList/index.vue'
-import { changeInputWidth } from "@/utils"
+import { changeInputWidth, getUniqueValue } from "@/utils"
 import { useT } from "../../locale/index.js"
 export default defineComponent({
   name: 'Base',
@@ -291,17 +292,22 @@ export default defineComponent({
 .insert-blank {
   margin-top: 12px;
 }
-
+.preview-title {
+  margin-bottom: 16px;
+}
 // 填空题预览和答题样式
 .completion-preview {
   .preview-title {
-    line-height: 1.6;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     .blank-index {
       color: #529FFF;
     }
+  }
+  .can-exchange {
+    color: #969696;
+    font-size: 12px;
   }
   
   .completion-input {

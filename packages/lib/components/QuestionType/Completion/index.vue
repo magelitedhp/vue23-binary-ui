@@ -6,11 +6,11 @@
       <div class="title">
       </div>
       <div class="correct-answer">
-        <span class="tip">答案：</span><span class="correct-answer-tip">( {{ t('inputAnswerTip2') }} )</span>
+        <span class="tip">{{ t('answer') }}：</span><span class="correct-answer-tip">( {{ t('inputAnswerTip2') }} )</span>
         <div v-for="(blank, index) in question.blanks" :key="blank.id || index">
           <div class="answer-item">
             <span class="answer-option">[{{ index + 1 }}]</span>
-            <input class="answer-input" :placeholder="'请输入答案'" v-model="blank.correctAnswer" type="text"
+            <input class="answer-input" :placeholder="t('inputAnswer')" v-model="blank.correctAnswer" type="text"
               @change="answerChange" />
             <div class="btn-delete">
               <img src="@/assets/close.png" alt="" @click="deleteBlank(blank, index)">
@@ -28,15 +28,15 @@
     </div>
   </template>
   <!-- 预览模式 -->
-  <template v-else-if="mode === 2">
+  <template v-else-if="(mode === 2 || mode === 3) && showAnswer">
     <div class="preview-mode">
       <FileList :list="question.link"></FileList>
       <div class="correct-answer-preview">
-        <h3>正确答案：</h3>
-        <div class="answer-item" v-for="(blank, index) in question.blanks" :key="blank.id || index">
+        <div :class="{'title': mode === 3}">{{ t('correctAnswer') }}：</div>
+        <span class="answer-item" v-for="(blank, index) in question.blanks" :key="blank.id || index">
           <span class="answer-option">[{{ index + 1 }}]</span>
-          <span class="answer-value">{{ blank.correctAnswer || '-' }}</span>
-        </div>
+          <span class="answer-value">{{ `${blank.correctAnswer}${index !== question.blanks.length - 1 ? '、' : ''}` || '-' }}</span>
+        </span>
       </div>
     </div>
   </template>
@@ -44,11 +44,10 @@
 </template>
 
 <script>
-import { defineComponent, ref, reactive, computed, watch } from 'vue-demi';
+import { defineComponent, ref, watch } from 'vue-demi';
 import { TinyButton, TinyCheckbox } from '@opentiny/vue'
 import Base from '../Base.vue'
 import FileList from '../../FileList/index.vue';
-import { titleListener } from '../../../model/questionFactory.js';
 import { t } from '../../../locale/index.js';
 import { getUniqueValue } from "@/utils"
 import { getQuestion } from "../../../model/questionFactory.js"
@@ -74,6 +73,10 @@ export default defineComponent({
       type: Boolean,
       default: false
     },
+    showAnswer: {
+      type: Boolean,
+      default: false
+    }
   },
   emits: ['save', 'cancel', 'submit'],
   setup(props, { emit }) {
@@ -82,76 +85,200 @@ export default defineComponent({
 
     // 标题内容变化处理
     const handleTitleChange = (newValue) => {
-      console.log(question.value, newValue,'标题内容变化处理');
       if (props.mode !== 1) return;
-      
-      // 确保blanks数组存在
-      if (!question.value.blanks) {
-        question.value.blanks = [];
-      }
-      
-      // 获取所有(&nbsp;)的匹配位置
+      // 1. 找到新标题中所有占位符的位置
       const reg = /\(&nbsp;\)/g;
       let match;
-      let newIndices = [];
-      
+      const newIndices = [];
+      // 防止newIndices不正确 <p>a阿达(&nbsp;)阿松大(&nbsp;)</p>
+      let count = 0, tempStr = "<p>"
       while ((match = reg.exec(newValue)) !== null) {
-        newIndices.push(match.index);
+        newIndices.push(match.index - 5 * count - tempStr.length  );
+        count ++ 
+      }
+      // 2. 获取光标位置
+      let insertIndex = 0;
+      if (baseComponent.value?.richTextareaRef) {
+        const selection = baseComponent.value.richTextareaRef.$refs.fluentEditorRef.state.quill?.getSelection?.();
+        insertIndex = selection?.index ?? question.value.title?.length ?? 0;
       }
       
-      // 创建一个映射，记录现有blank的位置和索引
-      const existingBlanksMap = new Map();
-      question.value.blanks.forEach((blank, index) => {
-        existingBlanksMap.set(blank.blankIndex, index);
+      // 3. 确定当前光标位置在第几个(&nbsp;)之后
+      let currentBlankPosition = 0;
+      for (let i = 0; i < newIndices.length; i++) {
+        if (insertIndex > newIndices[i]) {
+          currentBlankPosition = i;
+        } else {
+          break;
+        }
+      }
+      // 4. 获取当前blanks的答案，按顺序排序
+      const currentBlanks = [...question.value.blanks || []].sort((a, b) => {
+        return (a.orderIndex || 0) - (b.orderIndex || 0);
       });
+      const currentAnswers = currentBlanks.map(blank => blank.correctAnswer || '');
       
-      // 跟踪需要添加的新blank位置
-      const blanksToAdd = [];
-      // 使用titleListener处理空格变化
-      titleListener(
-        newValue,
-        /\(&nbsp;\)/g,
-        (i, strIndex) => {
-          if (!question.value.blanks) question.value.blanks = [];
-          const index = question.value.blanks.findIndex(
-            (it) => it.blankIndex == strIndex
-          );
-          if (index === -1) {
-            // 创建新空格
-            const newBlank = {
-              id: getUniqueValue(),
-              blankIndex: strIndex,
-              correctAnswer: ''
-            };
-            blanksToAdd.push({ index: i, blank: newBlank });
-          }
-        },
-        (indexs) => {
-          if (!question.value.blanks) return;
-          for (let i = question.value.blanks.length - 1; i >= 0; i--) {
-            const index = indexs.findIndex(
-              (it) => question.value.blanks[i].blankIndex == it
-            );
-            if (index === -1) {
-              question.value.blanks.splice(i, 1);
-              userAnswers.value.splice(i, 1);
+      // 5. 构建新的blank数组，考虑光标位置
+      const newBlanks = [];
+      let orderIndex = 0;
+      
+      // 新占位符数量
+      const newCount = newIndices.length;
+      // 旧占位符数量
+      const oldCount = currentBlanks.length;
+      
+      // 处理答案映射，考虑光标位置
+      const newCorrectAnswers = Array(newCount).fill('');
+      
+      if (oldCount > 0) {
+        // 确定是否插入了新的占位符
+        const hasNewBlank = newCount > oldCount;
+        
+        if (hasNewBlank) {
+          // 新增了占位符，根据光标位置调整答案顺序
+          for (let i = 0; i < newCount; i++) {
+            if (hasNewBlank && i === currentBlankPosition) {
+              // 新插入的占位符，答案为空
+              newCorrectAnswers[i] = '';
+            } else if (i < currentBlankPosition) {
+              // 光标位置之前的占位符，使用原有答案
+              if (i < currentAnswers.length) {
+                newCorrectAnswers[i] = currentAnswers[i];
+              }
+            } else {
+              // 光标位置之后的占位符，使用原有答案的下一个
+              const oldIndex = i - 1;
+              if (oldIndex < currentAnswers.length) {
+                newCorrectAnswers[i] = currentAnswers[oldIndex];
+              }
             }
           }
+        } else {
+          // 减少了占位符，只保留前newCount个答案
+          for (let i = 0; i < newCount; i++) {
+            newCorrectAnswers[i] = currentAnswers[i];
+          }
         }
-      );
+      }
       
-      // 按照索引位置倒序添加新blank，避免插入顺序影响后续索引
-      blanksToAdd.sort((a, b) => b.index - a.index);
+      // 6. 创建新的blank对象
+      for (let i = 0; i < newIndices.length; i++) {
+        newBlanks.push({
+          id: getUniqueValue(),
+          blankIndex: newIndices[i],
+          orderIndex: orderIndex,
+          correctAnswer: newCorrectAnswers[i]
+        });
+        
+        orderIndex++;
+      }
       
-      blanksToAdd.forEach(item => {
-        // 在正确的位置插入新blank
-        question.value.blanks.splice(item.index, 0, item.blank);
-        // 在对应位置插入新的userAnswer
-        userAnswers.value.splice(item.index, 0, '');
-      });
+      // 7. 更新blanks数组
+      question.value.blanks = newBlanks;
+      
+      // 8. 确保userAnswers数组正确
+      userAnswers.value = question.value.blanks.map(() => '');
+      
+      // 9. 更新correctAnswer数组
+      answerChange();
     };
+    // const handleTitleChange = (newValue) => {
+    //   // 获取当前富文本光标位置，用于插入填空题
+    //   const richTextareaRef = baseComponent.value?.richTextareaRef;
+    //   if (!richTextareaRef) return;
+    //   const selection = richTextareaRef.$refs.fluentEditorRef.state.quill?.getSelection?.();
+    //   let insertIndex = selection?.index ?? question.value.title?.length ?? 0;
+    //   if (props.mode !== 1) return;
+    //   // 确保blanks数组存在
+    //   if (!question.value.blanks) {
+    //     question.value.blanks = [];
+    //   }
+    //   // 获取所有(&nbsp;)的匹配位置
+    //   const reg = /\(&nbsp;\)/g;
+    //   let match;
+    //   let newIndices = [];
+      
+    //   while ((match = reg.exec(newValue)) !== null) {
+    //     newIndices.push(match.index);
+    //   }
+    //   // 确定当前光标位置在第几个(&nbsp;)之后
+    //   let currentBlankPosition = 0;
+    //   for (let i = 0; i < newIndices.length; i++) {
+    //     if (insertIndex > newIndices[i]) {
+    //       currentBlankPosition = i + 1;
+    //     } else {
+    //       break;
+    //     }
+    //   }
+    //   // 跟踪需要添加的新blank位置
+    //   const blanksToAdd = [];
+    //   // 使用titleListener处理空格变化
+    //   titleListener(
+    //     newValue,
+    //     /\(&nbsp;\)/g,
+    //     (i, strIndex) => {
+    //       console.log(i, strIndex,'sssssssssssssssssssssssss')
+    //       if (!question.value.blanks) question.value.blanks = [];
+    //       const index = question.value.blanks.findIndex(
+    //         (it) => it.blankIndex == strIndex
+    //       );
+    //       if (index === -1) {
+    //         // 创建新空格
+    //         const newBlank = {
+    //           id: getUniqueValue(),
+    //           blankIndex: strIndex,
+    //           correctAnswer: ''
+    //         };
+    //         blanksToAdd.push({ index: i, blank: newBlank });
+    //       }
+    //     },
+    //     (indexs) => {
+    //       console.log(indexs, '?????????????????')
+    //       if (!question.value.blanks) return;
+    //       for (let i = question.value.blanks.length - 1; i >= 0; i--) {
+    //         const index = indexs.findIndex(
+    //           (it) => question.value.blanks[i].blankIndex == it
+    //         );
+    //         if (index === -1) {
+    //           question.value.blanks.splice(i, 1);
+    //           userAnswers.value.splice(i, 1);
+    //         }
+    //       }
+    //     }
+    //   );
+    //   // 处理新添加的空格
+    //   if (blanksToAdd.length > 0) {
+    //     // 首先确保现有blanks按blankIndex排序
+    //     question.value.blanks.sort((a, b) => a.blankIndex - b.blankIndex);
+    //     // 按位置顺序处理新添加的空格（从后往前）
+    //     blanksToAdd.sort((a, b) => b.index - a.index);
+        
+    //     blanksToAdd.forEach((item) => {
+    //       // 插入新的空格
+    //       question.value.blanks.splice(item.index, 0, item.blank);
+    //       userAnswers.value.splice(item.index, 0, '');
+    //     });
+        
+    //     // 重新获取所有(&nbsp;)的匹配位置
+    //     const finalIndices = [];
+    //     const finalReg = /\(&nbsp;\)/g;
+    //     let finalMatch;
+    //     while ((finalMatch = finalReg.exec(newValue)) !== null) {
+    //       finalIndices.push(finalMatch.index);
+    //     }
+    //     console.log(finalIndices,'-p---------')
+    //   }
+    //   console.log(question.value.blanks, '当前光标在第', currentBlankPosition, '个(&nbsp;)之后');
+      
+    //   // 确保blanks数组始终根据blankIndex排序，保持与(&nbsp;)占位符在标题中的顺序一致
+    //   if (question.value.blanks && question.value.blanks.length > 1) {
+    //     question.value.blanks.sort((a, b) => {
+    //       return a.blankIndex - b.blankIndex;
+    //     });
+    //   }
+    // };
     // 监听标题变化
-    watch(() => question.value.title, handleTitleChange, { immediate: true });
+    watch(() => question.value.title, handleTitleChange);
     // 监听原始题目变化
     watch(() => props.oriQuestion, (newVal) => {
       question.value = getQuestion(newVal);
@@ -180,7 +307,6 @@ export default defineComponent({
         console.warn('请输入题目内容并添加空格');
         return;
       }
-
       // 检查是否所有空格都有答案
       let hasEmptyAnswer = false;
       for (let i = 0; i < question.value.blanks.length; i++) {
@@ -189,7 +315,6 @@ export default defineComponent({
           break;
         }
       }
-
       if (hasEmptyAnswer) {
         console.warn('请为所有空格填写答案');
         return;
@@ -212,26 +337,60 @@ export default defineComponent({
     // 删除空格
     const deleteBlank = (blank, index) => {
       if (props.mode !== 1) return;
-      // 找到所有(&nbsp;)的匹配及其索引
+      
+      // 找到要删除的blank在blanks数组中的位置
+      const blankIndex = question.value.blanks.findIndex(b => b.id === blank.id);
+      if (blankIndex === -1) return;
+      
+      // 从blanks数组中移除
+      question.value.blanks.splice(blankIndex, 1);
+      
+      // 更新富文本内容，重新生成正确的HTML
+      // 首先获取当前标题内容
+      let title = question.value.title;
+      
+      // 查找所有(&nbsp;)的位置
       const reg = /\(&nbsp;\)/g;
       let match;
       let indices = [];
-      
-      while ((match = reg.exec(question.value.title)) !== null) {
+      while ((match = reg.exec(title)) !== null) {
         indices.push(match.index);
       }
-      // 检查索引是否有效
+      
+      // 如果索引有效，删除对应的占位符
       if (index >= 0 && index < indices.length) {
-        // 获取要删除的空格位置
         const idx = indices[index];
-        // 删除指定位置的&nbsp;
-        question.value.title = question.value.title.substring(0, idx) + question.value.title.substring(idx + 8);
-        console.log(question.value.title,'-------------------------')
-        // 删除对应的blank
-        question.value.blanks.splice(index, 1);
-        // 删除空格，这里手动更新富文本的内容
-        baseComponent.value.richTextareaRef.content = question.value.title
+        title = title.substring(0, idx) + title.substring(idx + 8);
+        
+        // 更新标题内容
+        question.value.title = title;
+        
+        // 手动更新富文本内容
+        if (baseComponent.value?.richTextareaRef) {
+          baseComponent.value.richTextareaRef.content = title;
+        }
+        
+        // 更新所有剩余blank的blankIndex
+        const newReg = /\(&nbsp;\)/g;
+        let newMatch;
+        let newIndices = [];
+        while ((newMatch = newReg.exec(title)) !== null) {
+          newIndices.push(newMatch.index);
+        }
+        
+        // 更新blanks数组中每个blank的blankIndex
+        question.value.blanks.forEach((b, idx) => {
+          if (newIndices[idx] !== undefined) {
+            b.blankIndex = newIndices[idx];
+          }
+        });
       }
+      
+      // 更新userAnswers数组
+      userAnswers.value = question.value.blanks.map(() => '');
+      
+      // 更新correctAnswer数组
+      answerChange();
     };
     
     return {
@@ -258,9 +417,12 @@ $height: 44px;
     }
   }
   .preview-mode {
+    .title {
+      color: #17B26A;
+    }
     .answer-item {
-      display: flex;
-      align-items: center;
+      display: unset;
+      line-height: 1;
     }
   }
 }
@@ -274,7 +436,7 @@ $height: 44px;
 
 .correct-answer-tip {
   margin-left: 6px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 20px;
 }
 
@@ -286,7 +448,7 @@ $height: 44px;
 }
 
 .answer-option {
-  margin-right: 20px;
+  margin-right: 4px;
 }
 
 .answer-input {
@@ -310,7 +472,8 @@ $height: 44px;
 }
 
 .can-exchange {
-  margin: 14px 0;
+  margin: 12px 0;
+  font-size: 16px;
   display: block;
 }
 </style>

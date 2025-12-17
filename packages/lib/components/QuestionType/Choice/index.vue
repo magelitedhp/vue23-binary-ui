@@ -507,75 +507,88 @@ export default defineComponent({
 
 .choices {
   width: 100%;
-}
-
-.choice-item {
   display: flex;
-  margin-top: 16px;
-  margin-right: 2px;
-  font-size: 16px;
-  line-height: 1.5;
-  user-select: unset;
-
-  .index {
-    color: #444444;
+  flex-direction: column;
+  gap: 12px;
+  .choice-item {
+    display: flex;
+    margin-right: 2px;
     font-size: 16px;
     line-height: 1.5;
-  }
+    user-select: unset;
 
-  .choice-content {
-    display: inline-block;
-    line-height: 1.5;
-    width: 100%;
-    vertical-align: top;
-  }
+    .index {
+      color: #444444;
+      font-size: 16px;
+      line-height: 1.5;
+    }
 
-  &.wrong {
-    color: #f60000;
-    :deep(.tiny-radio__inner) {
-      border-color: #f60000;
-      &:after {
-        background-color: #f60000;
+    .choice-content {
+      display: inline-block;
+      line-height: 1.5;
+      width: 100%;
+      vertical-align: top;
+    }
+
+    &.wrong {
+      color: #f60000;
+      :deep(.tiny-radio__inner) {
+        border-color: #f60000;
+        &:after {
+          background-color: #f60000;
+        }
+      }
+      :deep(.tiny-checkbox__inner) {
+        .icon-checked-sur path:first-child {
+          fill: #f60000;
+        }
+      }
+      span {
+        color: #f60000;
+      }
+
+      .rich-text {
+        color: #f60000;
       }
     }
-    span {
-      color: #f60000;
-    }
 
-    .rich-text {
-      color: #f60000;
-    }
-  }
-
-  &.correct {
-    color: #69d184;
-    :deep(.tiny-radio__inner) {
-      border-color: #69d184;
-      &:after {
-        background-color: #69d184;
+    &.correct {
+      color: #69d184;
+      :deep(.tiny-radio__inner) {
+        border-color: #69d184;
+        &:after {
+          background-color: #69d184;
+        }
       }
-    }
-    span {
-      color: #69d184;
-    }
+      :deep(.tiny-checkbox__inner) {
+        .icon-checked-sur path:first-child {
+          fill: #69d184;
+        }
+      }
+      span {
+        color: #69d184;
+      }
 
-    .rich-text {
-      color: #69d184;
+      .rich-text {
+        color: #69d184;
+      }
     }
   }
 }
+
 .answer-display,
 .correct-answer {
-  margin-top: 12px;
-  font-size: 14px;
-
-  span:first-child {
-    color: #666;
-    margin-right: 8px;
-  }
+  margin: 12px 0;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .edit-mode {
+  .choices {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+  }
   .choice-item {
     margin-right: 2px;
   }
@@ -589,9 +602,6 @@ export default defineComponent({
   }
 }
 .preview-mode, .answer-mode {
-  :deep(.tiny-radio-group) {
-    display: unset;
-  }
   :deep(.choice-item) {
     align-items: baseline;
     width: 100%;
