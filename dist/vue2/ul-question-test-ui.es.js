@@ -65514,7 +65514,7 @@ var dln = function() {
   pln,
   !1,
   null,
-  "abd23e08"
+  "549bd002"
 );
 const Qf = hln.exports;
 class lo {
@@ -66375,7 +66375,7 @@ var Lln = function() {
   Iln,
   !1,
   null,
-  "aba71d4d"
+  "d0321ce2"
 );
 const vu = Nln.exports;
 vu.install = (t) => t.component(vu.name, vu);
@@ -66458,7 +66458,7 @@ var Dln = function() {
   var e = this, n = e._self._c;
   return e._self._setupProxy, n("Base", { staticClass: "true-or-false-question", attrs: { question: e.question, mode: e.mode } }, [e.mode === 1 ? [n("div", { staticClass: "correct-answer" }, [n("span", [e._v(e._s(e.t("correctAnswer")) + "：")]), n("TinyRadioGroup", { model: { value: e.correctAnswer, callback: function(o) {
     e.correctAnswer = o;
-  }, expression: "correctAnswer" } }, [n("TinyRadio", { attrs: { label: "true" } }, [n("img", { attrs: { src: dl, alt: "" } })]), n("TinyRadio", { attrs: { label: "false" } }, [n("img", { attrs: { src: pl, alt: "" } })])], 1)], 1), n("div", { staticClass: "action-buttons" }, [n("TinyButton", { attrs: { type: "info" }, on: { click: e.saveQuestion } }, [e._v(e._s(e.t("save")))]), n("TinyButton", { on: { click: e.cancel } }, [e._v(e._s(e.t("cancel")))])], 1)] : e.mode === 2 ? [n("div", { staticClass: "preview-mode" }, [n("div", { staticClass: "correct-answer-preview" }, [n("span", [e._v(e._s(e.t("correctAnswer")) + "：")]), n("TinyRadioGroup", { attrs: { disabled: "" }, model: { value: e.correctAnswer, callback: function(o) {
+  }, expression: "correctAnswer" } }, [n("TinyRadio", { attrs: { label: "true" } }, [n("img", { attrs: { src: dl, alt: "" } })]), n("TinyRadio", { attrs: { label: "false" } }, [n("img", { attrs: { src: pl, alt: "" } })])], 1)], 1), n("div", { staticClass: "action-buttons" }, [n("TinyButton", { attrs: { type: "info" }, on: { click: e.saveQuestion } }, [e._v(e._s(e.t("save")))]), n("TinyButton", { on: { click: e.cancel } }, [e._v(e._s(e.t("cancel")))])], 1)] : e.mode === 2 ? [n("div", { staticClass: "preview-mode" }, [n("div", { staticClass: "correct-answer-preview" }, [n("span", [e._v(e._s(e.t("answer")) + "：")]), n("TinyRadioGroup", { attrs: { disabled: "" }, model: { value: e.correctAnswer, callback: function(o) {
     e.correctAnswer = o;
   }, expression: "correctAnswer" } }, [n("TinyRadio", { attrs: { label: "true" } }, [n("img", { attrs: { src: dl, alt: "" } })]), n("TinyRadio", { attrs: { label: "false" } }, [n("img", { attrs: { src: pl, alt: "" } })])], 1)], 1)])] : e.mode === 3 ? [n("div", { staticClass: "answer-mode" }, [n("div", { staticClass: "user-answer" }, [e.isSubmitted ? n("div", { staticClass: "submit-result" }, [n("div", { staticClass: "user-answer-display" }, [n("span", [e._v(e._s(e.t("yourAnswer")) + "：")]), n("TinyRadioGroup", { attrs: { disabled: "" }, model: { value: e.userAnswer, callback: function(o) {
     e.userAnswer = o;
@@ -66473,7 +66473,7 @@ var Dln = function() {
   Bln,
   !1,
   null,
-  "3aa4a60c"
+  "d7bb764d"
 );
 const yu = qln.exports;
 yu.install = (t) => t.component(yu.name, yu);
