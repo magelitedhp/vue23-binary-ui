@@ -205,32 +205,33 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+@import "@/styles/variables.scss";
 .player-content-circle {
   position: relative;
-  height: 120px;
+  height: calc(120 * var(--question-font-size));
   .icon-player {
     position: absolute;
-    width: 72px;
-    height: 72px;
+    width: calc(72 * var(--question-font-size));
+    height: calc(72 * var(--question-font-size));
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 0 calc(12 * var(--question-font-size)) calc(4 * var(--question-font-size)) rgba(0, 0, 0, 0.08);
     border-radius: 50%;
     .iconfont {
       position: absolute;
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
-      font-size: 22px;
+      font-size: calc(22 * var(--question-font-size));
       color: #EA5947;
     }
     .txt {
       position: absolute;
-      bottom: -28px;
+      bottom: calc(-28 * var(--question-font-size));
       left: 50%;
       transform: translate(-50%);
-      font-size: 12px;
+      font-size: calc(12 * var(--question-font-size));
       color: #969696;
       white-space: nowrap;
     }
@@ -239,25 +240,25 @@ export default {
 .player-content {
   .icon-player {
     .iconfont {
-      width: 24px;
-      margin-bottom: 6px;
+      width: calc(24 * var(--question-font-size));
+      margin-bottom: calc(6 * var(--question-font-size));
       cursor: pointer;
     }
   }
 }
 .mobile-player-content {
-  width: 340px;
-  height: 46px;
-  border: 1px solid #F1F3F7;
-  box-shadow: 0 2px 4px 0 rgba(216,216,216,0.25);
-  border-radius: 24px;
+  width: calc(340 * var(--question-font-size));
+  height: calc(46 * var(--question-font-size));
+  border: calc(1 * var(--question-font-size)) solid #F1F3F7;
+  box-shadow: 0 calc(2 * var(--question-font-size)) calc(4 * var(--question-font-size)) 0 rgba(216,216,216,0.25);
+  border-radius: calc(24 * var(--question-font-size));
   .icon-player {
-    margin-right: 6px;
-    width: 43px;
-    border-right: 1px solid #E3E3E9;
+    margin-right: calc(6 * var(--question-font-size));
+    width: calc(43 * var(--question-font-size));
+    border-right: calc(1 * var(--question-font-size)) solid #E3E3E9;
     border-radius: 0;
     .iconfont {
-      font-size: 16px;
+      font-size: calc(16 * var(--question-font-size));
       color: #EA5947;
     }
   }
@@ -273,18 +274,18 @@ export default {
       top: 50%;
       z-index: 1;
       transform: translate(-50%, -50%);
-      width: 15px;
-      height: 15px;
+      width: calc(15 * var(--question-font-size));
+      height: calc(15 * var(--question-font-size));
       background: #FFFFFF;
       border-radius: 50%;
-      border: 1px solid #e3e3e9;
-      box-shadow: 0 2px 4px 0 rgba(216,216,216,0.25);
+      border: calc(1 * var(--question-font-size)) solid #e3e3e9;
+      box-shadow: 0 calc(2 * var(--question-font-size)) calc(4 * var(--question-font-size)) 0 rgba(216,216,216,0.25);
     }
   }
   .total-time {
-    font-size: 12px;
+    font-size: calc(12 * var(--question-font-size));
     color: #969696;
-    line-height: 44px;
+    line-height: calc(44 * var(--question-font-size));
   }
 }
 

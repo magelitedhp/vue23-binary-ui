@@ -441,19 +441,20 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+@import "@/styles/variables.scss";
 .choice-container {
   width: 100%;
 }
 
 .choice-list-base {
 
-  $height: 44px;
+  $height: calc(44 * var(--question-font-size));
 
   .choice-item {
-    margin-top: 12px;
+    margin-top: calc(12 * var(--question-font-size));
     display: flex;
     .choice-option {
-      margin-right: 20px;
+      margin-right: calc(20 * var(--question-font-size));
       line-height: $height;
       font-weight: bold;
     }
@@ -464,44 +465,50 @@ export default defineComponent({
       .choice-input {
         width: 100%;
         min-height: $height;
-        border: 1px solid #e3e3e9;
+        border: calc(1 * var(--question-font-size)) solid #e3e3e9;
         outline: none;
-        font-size: 16px;
+        font-size: calc(16 * var(--question-font-size));
 
         &::placeholder {
-          font-size: 14px;
+          font-size: calc(14 * var(--question-font-size));
           color: #969696;
-          line-height: 44px;
+          line-height: calc(44 * var(--question-font-size));
         }
       }
 
       .rich-text {
-        padding: 9px 10px;
+        padding: calc(9 * var(--question-font-size)) calc(10 * var(--question-font-size));
       }
 
       .no-content-tip {
-        font-size: 14px;
+        font-size: calc(14 * var(--question-font-size));
         color: #969696;
-        margin-left: 10px;
+        margin-left: calc(10 * var(--question-font-size));
         line-height: $height;
       }
     }
 
     .btn-delete {
-      width: 12px;
-      height: 12px;
-      margin-left: 10px;
+      width: calc(12 * var(--question-font-size));
+      height: calc(12 * var(--question-font-size));
+      margin-left: calc(10 * var(--question-font-size));
       cursor: pointer;
+      margin-left: calc(10 * var(--question-font-size));
+      cursor: pointer;
+      align-self: center;
     }
   }
 
   .btn-add {
-      margin: 12px 0 0 30px;
+      margin: calc(12 * var(--question-font-size)) 0 0 calc(30 * var(--question-font-size));
       color: #529FFF;
       display: flex;
       align-items: center;
-      gap: 4px;
+      gap: calc(4 * var(--question-font-size));
       cursor: pointer;
+      img {
+        width: calc(18 * var(--question-font-size));
+      }
     }
 }
 
@@ -509,17 +516,17 @@ export default defineComponent({
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: calc(12 * var(--question-font-size));
   .choice-item {
     display: flex;
-    margin-right: 2px;
-    font-size: 16px;
+    margin-right: calc(2 * var(--question-font-size));
+    font-size: calc(16 * var(--question-font-size));
     line-height: 1.5;
     user-select: unset;
 
     .index {
       color: #444444;
-      font-size: 16px;
+      font-size: calc(16 * var(--question-font-size));
       line-height: 1.5;
     }
 
@@ -578,8 +585,8 @@ export default defineComponent({
 
 .answer-display,
 .correct-answer {
-  margin: 12px 0;
-  font-size: 16px;
+  margin: calc(12 * var(--question-font-size)) 0;
+  font-size: calc(16 * var(--question-font-size));
   font-weight: 600;
 }
 
@@ -590,15 +597,15 @@ export default defineComponent({
     gap: 0;
   }
   .choice-item {
-    margin-right: 2px;
+    margin-right: calc(2 * var(--question-font-size));
   }
   .choice-list {
     .choice-item {
-      margin-right: 12px;
+      margin-right: calc(12 * var(--question-font-size));
     }
   }
   .btn-save {
-    margin-top: 12px;
+    margin-top: calc(12 * var(--question-font-size));
   }
 }
 .preview-mode, .answer-mode {
@@ -610,11 +617,11 @@ export default defineComponent({
     }
     .choice-content {
       display: unset;
-      font-size: 16px;
+      font-size: calc(16 * var(--question-font-size));
     }
     .tiny-radio__input {
       position: relative;
-      transform: translateY(2px);
+      transform: translateY(calc(2 * var(--question-font-size)));
     }
   }
 }

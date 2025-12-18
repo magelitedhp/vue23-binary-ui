@@ -250,41 +250,41 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-// @use "../../styles/variables.scss" as *;
+@import "@/styles/variables.scss";
 .operation {
   .recording {
     display: inline-block;
-    margin-left: 20px;
+    margin-left: calc(20 * var(--question-font-size));
 
     .status {
-      margin-right: 10px;
+      margin-right: calc(10 * var(--question-font-size));
     }
   }
 }
 
 .progress-wrapper {
   float: left;
-  margin-left: 20px;
+  margin-left: calc(20 * var(--question-font-size));
 
   .progress-value {
     color: #969696;
-    margin-left: 10px;
+    margin-left: calc(10 * var(--question-font-size));
   }
 
   .cancel {
-    margin-left: 10px;
+    margin-left: calc(10 * var(--question-font-size));
     cursor: pointer;
   }
 }
 
 .progress-bar {
   position: relative;
-  width: 80px;
-  height: 6px;
+  width: calc(80 * var(--question-font-size));
+  height: calc(6 * var(--question-font-size));
   display: inline-block;
   background-color: #cbcbd1;
-  border-radius: 3px;
-  margin-bottom: 2px;
+  border-radius: calc(3 * var(--question-font-size));
+  margin-bottom: calc(2 * var(--question-font-size));
 
   .bar {
     position: absolute;
@@ -293,33 +293,33 @@ export default defineComponent({
     bottom: 0;
     width: 0;
     background-color: #529FFF;
-    border-radius: 3px;
+    border-radius: calc(3 * var(--question-font-size));
   }
 }
 
 .file-list-block {
-  margin: 8px 0 0 0;
-  padding: 4px 0;
+  margin: calc(8 * var(--question-font-size)) 0 0 0;
+  padding: calc(4 * var(--question-font-size)) 0;
 
   li {
-    padding: 8px 12px;
-    line-height: 20px;
+    padding: calc(8 * var(--question-font-size)) calc(12 * var(--question-font-size));
+    line-height: calc(20 * var(--question-font-size));
   }
 
   .icon-wrapper {
     float: left;
-    padding: 2px 0;
+    padding: calc(2 * var(--question-font-size)) 0;
     i {
-      font-size: 36px;
+      font-size: calc(36 * var(--question-font-size));
       line-height: 1;
     }
   }
 
   .detail {
-    margin-left: 46px;
+    margin-left: calc(46 * var(--question-font-size));
 
     .name {
-      line-height: 20px;
+      line-height: calc(20 * var(--question-font-size));
     }
 
     .info {
@@ -339,21 +339,21 @@ export default defineComponent({
 
     .operations {
       float: left;
-      margin-left: 20px;
+      margin-left: calc(20 * var(--question-font-size));
 
       a {
-        margin-right: 10px;
+        margin-right: calc(10 * var(--question-font-size));
       }
     }
   }
 }
 
 .choice-file-list .file-list-block {
-  margin: 4px 0 8px;
+  margin: calc(4 * var(--question-font-size)) 0 calc(8 * var(--question-font-size));
   padding: 0;
 
   li {
-    padding: 0 0 12px 0;
+    padding: 0 0 calc(12 * var(--question-font-size)) 0;
 
     &:last-child {
       padding: 0;
@@ -366,7 +366,7 @@ export default defineComponent({
   padding: 0;
 
   li {
-    margin-top: 4px;
+    margin-top: calc(4 * var(--question-font-size));
     padding: 0;
   }
 }
@@ -375,7 +375,7 @@ export default defineComponent({
   padding: 0;
 
   li {
-    padding: 8px 0;
+    padding: calc(8 * var(--question-font-size)) 0;
   }
 }
 
@@ -394,13 +394,13 @@ export default defineComponent({
     }
 
     .resource-wrap {
-      margin-right: 16px;
+      margin-right: calc(16 * var(--question-font-size));
       max-width: 100%;
     }
 
     .operations {
       .ul-link+.ul-link {
-        margin-left: 20px;
+        margin-left: calc(20 * var(--question-font-size));
       }
     }
 
@@ -409,31 +409,31 @@ export default defineComponent({
       .resource-wrap,
       .operations {
         vertical-align: top;
-        line-height: 36px;
+        line-height: calc(36 * var(--question-font-size));
       }
     }
   }
 
   .set-lisCount-wrap {
-    margin-top: 10px;
-    font-size: 14px;
+    margin-top: calc(10 * var(--question-font-size));
+    font-size: calc(14 * var(--question-font-size));
     color: #444444;
 
     .ul-select {
-      margin-left: 10px;
-      width: 110px;
+      margin-left: calc(10 * var(--question-font-size));
+      width: calc(110 * var(--question-font-size));
     }
 
     &.idCss {
       .ul-select {
-        width: 140px;
+        width: calc(140 * var(--question-font-size));
       }
     }
   }
 }
 
 .file-list-inline {
-  padding: 5px 0;
+  padding: calc(5 * var(--question-font-size)) 0;
   margin: 0;
 
   li {
@@ -444,20 +444,20 @@ export default defineComponent({
       content: ' ';
       clear: both;
     }
-    padding: 5px 0;
-    font-size: 12px;
-    line-height: 20px;
+    padding: calc(5 * var(--question-font-size)) 0;
+    font-size: calc(12 * var(--question-font-size));
+    line-height: calc(20 * var(--question-font-size));
   }
 
   i {
     float: left;
-    font-size: 18px;
+    font-size: calc(18 * var(--question-font-size));
   }
 
   .name {
     float: left;
-    margin: 0 10px;
-    max-width: 250px;
+    margin: 0 calc(10 * var(--question-font-size));
+    max-width: calc(250 * var(--question-font-size));
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -470,8 +470,8 @@ export default defineComponent({
 
   .ul-link {
     float: left;
-    margin-left: 16px;
-    font-size: 12px;
+    margin-left: calc(16 * var(--question-font-size));
+    font-size: calc(12 * var(--question-font-size));
   }
 
   .progress-wrapper {
@@ -480,10 +480,10 @@ export default defineComponent({
 }
 
 .upload-fail {
-  margin-right: 10px;
+  margin-right: calc(10 * var(--question-font-size));
   color: #F60000;
 }
 .svg-img {
-  width: 36px;
+  width: calc(36 * var(--question-font-size));
 }
 </style>

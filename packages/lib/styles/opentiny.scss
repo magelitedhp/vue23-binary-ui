@@ -1,0 +1,87 @@
+/* prettier-ignore */
+@import "@/styles/variables.scss";
+:root,
+:host {
+  .tiny-button {
+    --tv-border-width: calc(1 * var(--question-font-size));
+    --tv-font-size-default: calc(14 * var(--question-font-size));
+    --tv-Button-min-width: calc(96 * var(--question-font-size));
+    --tv-Button-height: calc(32 * var(--question-font-size));
+    --tv-Button-height-medium: calc(40 * var(--question-font-size));
+    --tv-border-radius-md: calc(6 * var(--question-font-size));
+  }
+  .tiny-radio {
+    --tv-Radio-font-size: calc(14 * var(--question-font-size));
+    --tv-Radio-inner-size: calc(8 * var(--question-font-size));
+    --tv-Radio-inner-width: calc(16 * var(--question-font-size));
+    --tv-Radio-inner-height: calc(16 * var(--question-font-size));
+    .tiny-radio__label {
+      padding-left: calc(8 * var(--question-font-size));
+    }
+  }
+  .tiny-checkbox {
+    --tv-Checkbox-icon-size: calc(16 * var(--question-font-size));
+    .tiny-checkbox__label {
+      padding-left: calc(8 * var(--question-font-size));
+    }
+  }
+  .tiny-editor-wrapper {
+    .ql-toolbar {
+      padding: calc(8 * var(--question-font-size)) calc(16 * var(--question-font-size)) calc(4 * var(--question-font-size));
+      .ql-formats {
+        margin-right: calc(16 * var(--question-font-size));
+        margin-bottom: calc(4 * var(--question-font-size));
+        >button, .ql-better-table {
+          height: calc(24 * var(--question-font-size));
+          margin-right: calc(8 * var(--question-font-size));
+        }
+        .ql-font {
+          width: calc(98 * var(--question-font-size)) !important;
+          font-size: calc(16 * var(--question-font-size)) !important;
+          height: calc(24 * var(--question-font-size)) !important;
+        }
+        .ql-picker {
+          font-size: calc(16 * var(--question-font-size)) !important;
+          height: calc(24 * var(--question-font-size)) !important;
+          &:not(:last-of-type) {
+            margin-right: calc(8 * var(--question-font-size)) !important;
+          }
+          .ql-picker-label {
+            padding: 0 calc(28 * var(--question-font-size)) 0 calc(8 * var(--question-font-size));
+            &::before {
+              width: calc(60 * var(--question-font-size));
+              line-height: calc(22 * var(--question-font-size));
+            }
+          } 
+        }
+        .ql-size {
+          width: calc(98 * var(--question-font-size));
+        }
+        .ql-lineheight {
+          margin-right: calc(24 * var(--question-font-size)) !important;
+          width: calc(45 * var(--question-font-size)) !important;
+          >span {
+            width: calc(60 * var(--question-font-size)) !important;
+          }
+        }
+        .tiny-svg, svg {
+          width: calc(16 * var(--question-font-size)) !important;
+          font-size: calc(16 * var(--question-font-size)) !important;
+        }
+        .ql-image1 svg {
+          width: calc(32 * var(--question-font-size)) !important;
+          scale: 0.65;
+        }
+      }
+    }
+    .ql-container {
+      font-size: calc(13 * var(--question-font-size));
+      .ql-editor {
+        font-size: calc(14 * var(--question-font-size));
+        padding: calc(8 * var(--question-font-size)) 0 calc(86 * var(--question-font-size));
+        margin: 0 calc(16 * var(--question-font-size));
+        border-top: calc(1 * var(--question-font-size)) solid #ddd;
+      }
+    }
+  }
+}

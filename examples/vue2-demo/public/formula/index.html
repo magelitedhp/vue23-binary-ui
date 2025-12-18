@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Formula</title>
+    <link rel="stylesheet" href="css/loaders.min.css" />
+    <link
+      rel="stylesheet"
+      href="libs/perfect-scrollbar-1.5.0/perfect-scrollbar.min.css"
+    />
+    <link rel="stylesheet" href="css/formula.css" />
+  </head>
+
+  <body>
+    <div class="formula-back formula-plugin">
+      <div class="formula-dialog" id="formula-dialog">
+        <div class="dialog-body">
+          <div class="tool-panel">
+            <div class="symbol-type-filter">
+              <label
+                class="type-item first-item i18n"
+                data-index="1"
+                data-i18nkey="symbol"
+              >
+                符号
+              </label>
+              <label
+                class="type-item i18n"
+                data-index="2"
+                data-i18nkey="formula"
+              >
+                公式
+              </label>
+              <label
+                class="type-item last-item i18n"
+                data-index="3"
+                data-i18nkey="subject"
+              >
+                学科
+              </label>
+            </div>
+            <div class="sub-type-filter"></div>
+            <div class="symbol-panel">
+              <div id="symbolArea"></div>
+              <div class="loader-wrapper">
+                <div class="loader-inner line-scale">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="edit-panel">
+            <div class="control-area">
+              <div class="formula-type">
+                <div
+                  class="type-btn inline-type i18n"
+                  data-value="1"
+                  data-i18nkey="inlineFormula"
+                >
+                  行内公式
+                </div>
+                <div
+                  class="type-btn block-type i18n"
+                  data-value="2"
+                  data-i18nkey="formulaBlock"
+                >
+                  公式块
+                </div>
+              </div>
+              <span class="i18n" data-i18nkey="history">历史记录：</span>
+            </div>
+            <div class="edit-area">
+              <textarea
+                class="input-textarea formulaTextarea"
+                id="formulaTextarea"
+              ></textarea>
+            </div>
+            <div class="preview-area">
+              <div class="previewDiv-warpper">
+                <div class="preview-block" id="previewDiv"></div>
+              </div>
+              <div class="loader-wrapper">
+                <div class="loader-inner line-scale">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+            <div class="tip-area">
+              <div>tips:</div>
+              <div class="tip-content"></div>
+              <a
+                class="help-link i18n"
+                href="https://ua.tongshike.cn/components/testEditor/help.html"
+                target="_blank"
+                data-i18nkey="help"
+                >帮助文档</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script src="libs/jquery-1.11.0.min.js"></script>
+      <script src="libs/perfect-scrollbar-1.5.0/perfect-scrollbar.min.js"></script>
+      <script src="js/tools.js?ver=1"></script>
+
+      <script>
+        var currentModel = {};
+        var currentSubIndex = 1;
+        var innerContent = "";
+        // 默认行内展示 1 块展示 2
+        var displayMath = 1;
+        var originContent = "";
+        var recentFormulas = [];
+        var _seps = location.host.split(".");
+        // var baseHost;
+        // if (_seps[_seps.length - 2] !== 'ulearning') {
+        //   baseHost = 'ulearning.cn'
+        // } else {
+        //   baseHost = _seps[_seps.length - 2] + "." + _seps[_seps.length - 1];
+        // }
+
+        var hostname = location.hostname;
+        var baseHost =
+          hostname.startsWith("localhost") ||
+          hostname.startsWith("192") ||
+          hostname == "127.0.0.1"
+            ? ".ulearning.app"
+            : hostname.substring(hostname.indexOf("."));
+
+        var lang = getLocale();
+        if (lang === "ar") {
+          document.documentElement.setAttribute("dir", "rtl");
+        }
+        window.MathJax = {
+          tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']]
+          }
+        };
+        function loadScript(src, success) {
+          var script = $("<script>");
+          $(document.head).append(script);
+          script.on("load", function () {
+            success && success();
+          });
+          script.attr("src", src);
+        }
+        var symbolps, ps;
+        // https://www.ulearning.asia/static/3rdlib/mathjax-2.7.5/MathJax.js?config=TeX-MML-AM_SVG
+        // var src =
+        //   "https://www" +
+        //   baseHost +
+        //   "/static/3rdlib/mathjax-2.7.5/MathJax.js?config=TeX-AMS_SVG";
+        var src =
+          "https://www" +
+          baseHost +
+          "/static/3rdlib/mathjax-3.2.2/tex-mml-svg.js";
+        loadScript(src, function () {
+          getI18nMsg(lang, function (i18nMsg) {
+            init();
+
+            function init() {
+              changeI18nText();
+              $("#formula-dialog").show();
+              setMathConfig();
+              // 设置初始化的最近列表
+              setRecentDom();
+              // 初始化DOm
+              setDom();
+              // 监听Dom
+              bindDom();
+              // 美化滚动条
+              symbolps = new PerfectScrollbar(".symbol-panel");
+              new PerfectScrollbar("#formulaTextarea");
+              ps = new PerfectScrollbar(".previewDiv-warpper");
+            }
+
+            // 国际化语言替换
+            function changeI18nText() {
+              $("body").addClass("lang-" + lang);
+              $("body")
+                .find(".i18n")
+                .each(function () {
+                  var _this = $(this);
+                  var key = _this.attr("data-i18nkey");
+                  _this.text(i18nMsg[key]);
+                });
+              if (lang === "zh") {
+                $(".help-link").attr(
+                  "href",
+                  "https://ua" +
+                    baseHost +
+                    "/components/testEditor/help_" +
+                    lang +
+                    ".html"
+                );
+              } else {
+                $(".help-link").attr(
+                  "href",
+                  "https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference"
+                );
+              }
+            }
+            // 设置公式的配置
+            function setMathConfig() {
+              // MathJax.Hub.Config({
+              //   tex2jax: {
+              //     inlineMath: [["\\(", "\\)"]],
+              //     displayMath: [["\\[", "\\]"]],
+              //     processEscapes: true,
+              //     skipTags: [
+              //       "script",
+              //       "noscript",
+              //       "style",
+              //       "textarea",
+              //       "pre",
+              //       "code",
+              //       "a",
+              //     ],
+              //     ignoreClass: "formulaTextarea",
+              //   },
+              //   TeX: {
+              //     extensions: [
+              //       "mhchem.js",
+              //       "extpfeil.js",
+              //       "mediawiki-texvc.js",
+              //       "autoload-all.js",
+              //     ],
+              //   },
+              //   showMathMenu: false,
+              //   showMathMenuMSIE: false,
+              // });
+            }
+
+            // 设置Dom
+            function setDom() {
+              $(".formula-type .inline-type").addClass("active");
+              currentModel = getConfig(currentSubIndex, i18nMsg);
+              let data = currentModel[0].list;
+              setSubType(currentModel);
+              setsymbol(data);
+              $("#formula-dialog .symbol-type-filter .first-item").addClass(
+                "active"
+              );
+            }
+
+            // 监听Dom
+            function bindDom() {
+              $("#formula-dialog .symbol-type-filter").on(
+                "click",
+                ".type-item",
+                function (e) {
+                  currentSubIndex = $(this).attr("data-index");
+                  currentModel = getConfig(currentSubIndex, i18nMsg);
+                  currentSubIndex = 0;
+                  $(
+                    "#formula-dialog .symbol-type-filter .type-item"
+                  ).removeClass("active");
+                  $(this).addClass("active");
+
+                  let data = currentModel[currentSubIndex].list;
+                  setSubType(currentModel);
+                  setsymbol(data);
+                }
+              );
+
+              $(".control-area").on("click", "button", function () {
+                var content = $(this).attr("data-content");
+                $("#formulaTextarea").insertContent(content);
+                originContent = $("#formulaTextarea").val();
+                setFormatText(originContent);
+              });
+              $("#formula-dialog .sub-type-filter").on(
+                "click",
+                ".sub-type-item",
+                function (e) {
+                  currentSubIndex = e.target.getAttribute("data-index");
+                  let data = currentModel[currentSubIndex].list;
+                  $(
+                    "#formula-dialog .sub-type-filter .sub-type-item"
+                  ).removeClass("active");
+                  $(this).addClass("active");
+
+                  setsymbol(data);
+                }
+              );
+
+              $(".formula-type").on("click", ".type-btn", function (e) {
+                e.preventDefault();
+                $(".formula-type .type-btn").removeClass("active");
+
+                $(e.target).addClass("active");
+                displayMath = $(e.target).attr("data-value");
+                setFormatText(originContent);
+              });
+
+              // 公式区域的输入
+              $("#formulaTextarea").on("input", function (e) {
+                originContent = e.delegateTarget.value;
+                setFormatText(originContent);
+              });
+
+              // 监听按钮的点击
+              $("#symbolArea").on("click", ".symbol-btn", function (e) {
+                e.stopPropagation();
+                var content = $(this).attr("data-name");
+                var tip = $(this).attr("data-tip");
+                $(".tip-area  .tip-content").html(tip);
+
+                $("#formulaTextarea").insertContent(content + " ");
+                originContent = $("#formulaTextarea").val();
+                setFormatText(originContent);
+              });
+            }
+
+            // 设置最近输入
+            function setRecentDom() {
+              var recentstr = getCookie("recentFormulaList");
+              if (recentstr) {
+                recentFormulas = JSON.parse(recentstr);
+              } else {
+                recentFormulas = [];
+              }
+              var str = "";
+              for (var i = 0; i < recentFormulas.length; i++) {
+                str +=
+                  '<button data-content="' +
+                  recentFormulas[i] +
+                  '">' +
+                  (i + 1) +
+                  "</button>";
+              }
+              $(".control-area").append(str);
+            }
+
+            // 设置格式化的数据
+            function setFormatText(content) {
+              var showContent = "";
+              if (displayMath == 2) {
+                showContent = "\\[" + content + "\\]";
+              } else {
+                showContent = "\\(" + content + "\\)";
+              }
+              $("#previewDiv").text(showContent);
+              // innerContent = showContent;
+              if (displayMath == 2) {
+                innerContent = ` <ul-math-block contenteditable="false" data-tex="${showContent}">${showContent}</ul-math-block> `;
+              } else {
+                innerContent = ` <ul-math-inline contenteditable="false" data-tex="${showContent}">${showContent}</ul-math-inline> `;
+              }
+              $(".preview-area .loader-wrapper").show();
+              renderSymbol("previewDiv", ".preview-area .loader-wrapper");
+            }
+
+            // 生成公式上边子选项
+            function setSubType(data) {
+              let str = "";
+              for (var i = 0; i < data.length; i++) {
+                var model = data[i];
+                model.name = model.name;
+                str +=
+                  '<label class="sub-type-item ' +
+                  (i == 0 ? "active" : "") +
+                  '"   data-index="' +
+                  i +
+                  '">' +
+                  model.name +
+                  "</label>";
+              }
+              $("#formula-dialog .sub-type-filter").html(str);
+            }
+
+            // 生成公式选项按钮
+            function setsymbol(data) {
+              $(".symbol-panel .loader-wrapper").show();
+              let str = "";
+
+              for (var i = 0; i < data.length; i++) {
+                var symbolItem = data[i];
+                symbolItem.name = symbolItem.name;
+                symbolItem.tip = symbolItem.tip;
+                str +=
+                  '<span class="symbol-btn ' +
+                  (symbolItem.size
+                    ? " size-type-" + symbolItem.size
+                    : size - type - 1) +
+                  '" data-name="' +
+                  symbolItem.name +
+                  '" data-tip="' +
+                  symbolItem.tip +
+                  '" >\\(' +
+                  symbolItem.name +
+                  "\\)</span>";
+              }
+              $("#formula-dialog #symbolArea").html(str);
+              renderSymbol("symbolArea", ".symbol-panel .loader-wrapper");
+            }
+
+            // MathJax.Hub.Config({
+            //   showProcessingMessages: false,
+            //   messageStyle: "none",
+            // });
+            // 渲染生成公式
+            function renderSymbol(area, loadDom) {
+              // MathJax.Hub.Queue(["Typeset", MathJax.Hub, area], function () {
+              //   $(loadDom).fadeOut();
+              //   setTimeout(function () {
+              //     ps.update();
+              //     symbolps.update();
+              //   }, 200);
+              // });
+              
+              if (window.MathJax && window.MathJax.typesetPromise) {  
+                window.MathJax.typesetPromise([document.getElementById(area)]).then(function() {
+                  $(loadDom).fadeOut();
+                  setTimeout(function() {
+                    ps.update();
+                    symbolps.update();
+                  }, 200);
+                }).catch(function(err) {
+                  $(loadDom).fadeOut();
+                  console.log(err,'err');
+                });
+              }
+            }
+          });
+        });
+
+        /*
+         * 外边关闭弹窗显示
+         * */
+        function onSave() {
+          recentFormulas.unshift(originContent);
+          if (recentFormulas.length > 5) {
+            recentFormulas.pop();
+          }
+          setCookie(
+            "recentFormulaList",
+            JSON.stringify(recentFormulas),
+            9999,
+            "/"
+          );
+          $("#formulaTextarea").val("");
+          $("#previewDiv").html("");
+          $(".tip-content").html("");
+          var str = "";
+          for (var i = 0; i < recentFormulas.length; i++) {
+            str +=
+              '<button data-content="' +
+              recentFormulas[i] +
+              '">' +
+              (i + 1) +
+              "</button>";
+          }
+          $(".control-area button").remove();
+          $(".control-area").append(str);
+        }
+        window.addEventListener("message", function (event) {
+          window.parent.postMessage(
+            {
+              mceAction: "insertContent",
+              content: innerContent,
+            },
+            "*"
+          );
+          window.parent.postMessage(
+            {
+              mceAction: "close",
+            },
+            "*"
+          );
+          onSave();
+        });
+      </script>
+    </div>
+  </body>
+</html>

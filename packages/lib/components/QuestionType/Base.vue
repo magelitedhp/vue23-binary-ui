@@ -22,7 +22,7 @@
                   'answer-correct': mode === 3 && isSubmitted && checkAnswerCorrect(index),
                   'answer-error': mode === 3 && isSubmitted && !checkAnswerCorrect(index)
                 }"
-                style="margin: 0 2px;"
+                style="margin: 0 2px"
               />
             </div>
           </template>
@@ -44,7 +44,7 @@
                   'answer-correct': mode === 3 && isSubmitted && checkAnswerCorrect(index),
                   'answer-error': mode === 3 && isSubmitted && !checkAnswerCorrect(index)
                 }"
-                style="margin: 0 2px;"
+                style="margin: 0 2px"
               />
             </div>
             
@@ -82,6 +82,7 @@ import RichTextarea from '../RichTextarea/index.vue'
 import FileList from '../FileList/index.vue'
 import { changeInputWidth, getUniqueValue } from "@/utils"
 import { useT } from "../../locale/index.js"
+import { renderMath } from "@/utils/mathjax.js"
 export default defineComponent({
   name: 'Base',
   components: {
@@ -162,7 +163,11 @@ export default defineComponent({
     if (!props.question.record) {
       props.question.record = {}
     }
-    
+    if(props.mode != 1) {
+      nextTick(() => {
+        renderMath()
+      })
+    }
     // 监听标题部分变化，初始化和更新用户答案数组
     watch(titleParts, () => {
       const newBlankCount = titleParts.value.filter(part => part.type === 'blank').length
@@ -193,6 +198,11 @@ export default defineComponent({
           }else if(val == 2) {
             userAnswers.value = []
           }
+        }
+        if(val != 1) {
+          nextTick(() => {
+            renderMath()
+          })
         }
       } catch (e) {
         console.error('Failed to parse record answer:', e)
@@ -289,14 +299,15 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+@import "@/styles/variables.scss";
 .base-container {
-  font-size: 16px;
+  font-size: calc(16 * var(--question-font-size));
 }
 .insert-blank {
-  margin-top: 12px;
+  margin-top: calc(12 * var(--question-font-size));
 }
 .preview-title {
-  margin-bottom: 16px;
+  margin-bottom: calc(16 * var(--question-font-size));
 }
 // 填空题预览和答题样式
 .completion-preview {
@@ -310,17 +321,17 @@ export default defineComponent({
   }
   .can-exchange {
     color: #969696;
-    font-size: 12px;
+    font-size: calc(12 * var(--question-font-size));
   }
   
   .completion-input {
-    border: 1px solid #d9d9d9;
-    border-radius: 4px;
-    padding: 2px 6px;
-    margin: 0 2px;
+    border: calc(1 * var(--question-font-size)) solid #d9d9d9;
+    border-radius: calc(4 * var(--question-font-size));
+    padding: calc(2 * var(--question-font-size))  calc(6 * var(--question-font-size));
+    margin: 0 calc(2 * var(--question-font-size));
     font-size: inherit;
     line-height: inherit;
-    width: 80px;
+    width: calc(80 * var(--question-font-size));
     vertical-align: middle;
     
     &:disabled {
@@ -330,7 +341,7 @@ export default defineComponent({
     &:focus {
       outline: none;
       border-color: #1890ff;
-      box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+      box-shadow: 0 0 0 calc(2 * var(--question-font-size)) rgba(24, 144, 255, 0.2);
     }
     
     &.answer-correct {

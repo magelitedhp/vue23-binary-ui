@@ -1,25 +1,26 @@
+@import "@/styles/variables.scss";
 .audioplayerTimes {
 
 
     .player-content {
-        width: 110px;
-        height: 36px;
+        width: calc(110 * var(--question-font-size));
+        height: calc(36 * var(--question-font-size));
         background: #FFFFFF;
-        border: 1px solid #E3E3E9;
-        border-radius: 18px;
+        border: calc(1 * var(--question-font-size)) solid #E3E3E9;
+        border-radius: calc(18 * var(--question-font-size));
         display: flex;
         user-select: none;
 
 
         .icon {
-            margin-left: 7px;
-            width: 24px;
+            margin-left: calc(7 * var(--question-font-size));
+            width: calc(24 * var(--question-font-size));
             border-radius: 50%;
             position: relative;
 
             i {
-                font-size: 24px;
-                line-height: 36px;
+                font-size: calc(24 * var(--question-font-size));
+                line-height: calc(36 * var(--question-font-size));
                 position: absolute;
                 top: 50%;
                 left: 50%;
@@ -33,11 +34,11 @@
 
         .current-time {
             flex: 1;
-            margin-left: 10px;
-            font-size: 14px;
+            margin-left: calc(10 * var(--question-font-size));
+            font-size: calc(14 * var(--question-font-size));
             color: #444444;
-            line-height: 36px;
-            margin-right: 14px;
+            line-height: calc(36 * var(--question-font-size));
+            margin-right: calc(14 * var(--question-font-size));
             text-align: right;
         }
 
@@ -65,16 +66,16 @@
     }
 
     .error-tip {
-        margin-top: 4px;
+        margin-top: calc(4 * var(--question-font-size));
         color: red;
     }
 
     .player-tip {
-        font-size: 12px;
+        font-size: calc(12 * var(--question-font-size));
         color: #969696;
-        line-height: 20px;
+        line-height: calc(20 * var(--question-font-size));
         font-weight: 400;
-        margin-top: 10px;
+        margin-top: calc(10 * var(--question-font-size));
         text-align: left;
     }
 

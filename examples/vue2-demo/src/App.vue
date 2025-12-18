@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <h1>mode: {{ modeObj[mode] }}</h1>
     <MyTinyButton @handleClick1="changeMode(1)">change to edit mode</MyTinyButton>
     <MyTinyButton @handleClick1="changeMode(2)">change to preview mode</MyTinyButton>
@@ -28,7 +28,7 @@
      <div v-for="item in 4">
       <div @click="addQuestion(item)">{{ '添加' + item + '题型'}}</div>
      </div>
-    <component :is="componentId" :mode="mode" :oriQuestion="question" :isSubmitted="isSubmitted" @save="save" @change="answerChange"></component>
+    <component :is="componentId" :mode="question.mode || mode" :oriQuestion="question" :isSubmitted="isSubmitted" @save="save" @change="answerChange"></component>
   </div>
 </template>
 
@@ -95,7 +95,7 @@ export default {
       this.question = {
   "questionid": 19673995,
   "oldQuestionId": null,
-  "title": "<p><img src=\"https://obscloud.ulearning.cn/resources/web/17653341516826949.png\" /></p>",
+  "title": "<p>\\(= = \\div \\times \\times \\times \\)</p>优学院是一个集( )、( )、( )、( )的平台<p><img src=\"https://obscloud.ulearning.cn/resources/web/17653341516826949.png\" /></p>",
   "type": 1,
   "iscontent": 1,
   "hardlevel": 3,
@@ -185,71 +185,72 @@ export default {
   "knowledgeDTOS": null,
   "source": null
 }
-this.question = {
-    "id": null,
-    "type": 1,
-    "title": "<p>修改答案一次这是单选标题 答案A</p>",
-    "score": 1,
-    "correctAnswer": [
-        "B"
-    ],
-    "choices": [
-        {
-            "choiceItemId": 217,
-            "questionId": 77,
-            "link": "",
-            "title": "选项A的内容"
-        },
-        {
-            "choiceItemId": 218,
-            "questionId": 77,
-            "link": "",
-            "title": "选项B的内容"
-        },
-        {
-            "choiceItemId": 219,
-            "questionId": 77,
-            "link": "",
-            "title": "选项C的内容"
-        },
-        {
-            "choiceItemId": 220,
-            "questionId": 77,
-            "link": "",
-            "title": "选项D的内容"
-        }
-    ],
-    "item": [
-        {
-            "choiceItemId": 217,
-            "questionId": 77,
-            "link": "",
-            "title": "选项A的内容"
-        },
-        {
-            "choiceItemId": 218,
-            "questionId": 77,
-            "link": "",
-            "title": "选项B的内容"
-        },
-        {
-            "choiceItemId": 219,
-            "questionId": 77,
-            "link": "",
-            "title": "选项C的内容"
-        },
-        {
-            "choiceItemId": 220,
-            "questionId": 77,
-            "link": "",
-            "title": "选项D的内容"
-        }
-    ],
-    record: {
-      answer: "A"
-    },
-    "mode": 2
-}
+// this.question.mode = 3
+// this.question = {
+//     "id": null,
+//     "type": 1,
+//     "title": "<p>修改答案一次这是单选标题 答案A</p>",
+//     "score": 1,
+//     "correctAnswer": [
+//         "B"
+//     ],
+//     "choices": [
+//         {
+//             "choiceItemId": 217,
+//             "questionId": 77,
+//             "link": "",
+//             "title": "选项A的内容"
+//         },
+//         {
+//             "choiceItemId": 218,
+//             "questionId": 77,
+//             "link": "",
+//             "title": "选项B的内容"
+//         },
+//         {
+//             "choiceItemId": 219,
+//             "questionId": 77,
+//             "link": "",
+//             "title": "选项C的内容"
+//         },
+//         {
+//             "choiceItemId": 220,
+//             "questionId": 77,
+//             "link": "",
+//             "title": "选项D的内容"
+//         }
+//     ],
+//     "item": [
+//         {
+//             "choiceItemId": 217,
+//             "questionId": 77,
+//             "link": "",
+//             "title": "选项A的内容"
+//         },
+//         {
+//             "choiceItemId": 218,
+//             "questionId": 77,
+//             "link": "",
+//             "title": "选项B的内容"
+//         },
+//         {
+//             "choiceItemId": 219,
+//             "questionId": 77,
+//             "link": "",
+//             "title": "选项C的内容"
+//         },
+//         {
+//             "choiceItemId": 220,
+//             "questionId": 77,
+//             "link": "",
+//             "title": "选项D的内容"
+//         }
+//     ],
+//     record: {
+//       answer: "A"
+//     },
+//     "mode": 2
+// }
       // console.log(this.question, '--------Choice--------');
     },
     getQuestion2() {
@@ -384,5 +385,8 @@ this.question = {
   }
 }
 </script>
-<style>
+<style scoped>
+.container {
+  width: 100%;
+}
 </style>

@@ -239,16 +239,22 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+@import "@/styles/variables.scss";
 .true-or-false-question {
-  margin-bottom: 20px;
+  margin-bottom: calc(20 * var(--question-font-size));
 }
 
 .title {
-  margin-bottom: 15px;
+  margin-bottom: calc(15 * var(--question-font-size));
 }
 
 .correct-answer {
-  margin: 15px 0;
+  margin: calc(15 * var(--question-font-size)) 0;
+  display: flex;
+  align-items: center;
+  img {
+    width: calc(18 * var(--question-font-size));
+  }
 }
 
 .answer-option.selected {
@@ -259,45 +265,45 @@ export default defineComponent({
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 20px;
-  height: 20px;
-  margin-right: 6px;
+  width: calc(20 * var(--question-font-size));
+  height: calc(20 * var(--question-font-size));
+  margin-right: calc(6 * var(--question-font-size));
   border-radius: 50%;
 }
 
 .action-buttons {
-  margin-top: 20px;
+  margin-top: calc(20 * var(--question-font-size));
 }
 
 .preview-mode,
 .answer-mode {
   .question-content {
-    margin: 15px 0;
-    padding: 10px;
+    margin: calc(15 * var(--question-font-size)) 0;
+    padding: calc(10 * var(--question-font-size));
     background-color: #f9f9f9;
-    border-radius: 4px;
+    border-radius: calc(4 * var(--question-font-size));
   }
 }
 
 .correct-answer-preview {
-  margin: 12px 0;
-  border-radius: 4px;
-  font-size: 16px;
+  margin: calc(12 * var(--question-font-size)) 0;
+  border-radius: calc(4 * var(--question-font-size));
+  font-size: calc(16 * var(--question-font-size));
   font-weight: 600;
 }
 
 .user-answer {
-  margin-top: 15px;
+  margin-top: calc(15 * var(--question-font-size));
 }
 
 .submit-result {
-  margin-top: 15px;
-  border-radius: 4px;
+  margin-top: calc(15 * var(--question-font-size));
+  border-radius: calc(4 * var(--question-font-size));
 }
 
 .user-answer-display,
 .correct-answer-hint {
-  margin-bottom: 8px;
+  margin-bottom: calc(8 * var(--question-font-size));
 }
 
 .correct {

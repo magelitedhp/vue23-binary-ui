@@ -1,5 +1,4 @@
-
-
+@import "@/styles/variables.scss";
 @mixin clearfix {
   zoom: 1;
   &:after {
@@ -33,20 +32,20 @@
 
 @mixin default-button {
   display: inline-block;
-  min-width: 56px;
-  height: 32px;
-  padding: 0 10px;
-  line-height: 30px;
-  border-radius: 4px;
-  font-size: 14px;
+  min-width: calc(56 * var(--question-font-size));
+  height: calc(32 * var(--question-font-size));
+  padding: 0 calc(10 * var(--question-font-size));
+  line-height: calc(30 * var(--question-font-size));
+  border-radius: calc(4 * var(--question-font-size));
+  font-size: calc(14 * var(--question-font-size));
   outline: none;
   color: #fff;
   background-color: #529FFF;
-  border: 1px solid #529FFF;
+  border: calc(1 * var(--question-font-size)) solid #529FFF;
   vertical-align: middle;
   cursor: pointer;
   i {
-    font-size: 14px;
+    font-size: calc(14 * var(--question-font-size));
   }
 
   &:disabled {
@@ -60,13 +59,13 @@
   }
 
   &.small {
-    height: 28px;
-    line-height: 26px;
+    height: calc(28 * var(--question-font-size));
+    line-height: calc(26 * var(--question-font-size));
   }
 
   &.large {
-    height: 42px;
-    line-height: 40px;
+    height: calc(42 * var(--question-font-size));
+    line-height: calc(40 * var(--question-font-size));
   }
 }
 

@@ -1,0 +1,3233 @@
+{
+  "formulaEditing": "Edit rumus",
+  "symbol": "Simbol",
+  "formula": "Rumus",
+  "subject": "Mata kuliah",
+  "inlineFormula": "Rumus inline",
+  "formulaBlock": "Rumus",
+  "history": "Catatan riwayat: ",
+  "help": "Bantuan",
+  "defaultTip": "Gunakan \\\\ dan \\cr untuk ganti baris, tautan terkait meliputi",
+  "close": "Tutup",
+  "confirm": "OK",
+  "cancel": "Batalkan",
+  "symbols": [
+    {
+      "id": "sym.1",
+      "name": "Simbol dasar",
+      "desc": "",
+      "list": [
+        {
+          "name": "\\pm",
+          "desc": "",
+          "tip": "Tambah atau kurang, tanda tambah di atas. Terkait \\mp",
+          "id": "sym.1.1",
+          "size": 1
+        },
+        {
+          "name": "\\infty",
+          "desc": "",
+          "tip": "[infinity] Singkatan untuk infinity",
+          "id": "sym.1.2",
+          "size": 1
+        },
+        {
+          "name": "=",
+          "desc": "",
+          "tip": "Sama dengan: = Kira-kira sama dengan: \\eqsim Lebih besar sama dengan:  \\ge Lebih kecil sama dengan:  \\le  Setara: \\equiv",
+          "id": "sym.1.3",
+          "size": 1
+        },
+        {
+          "name": "\\not=",
+          "desc": "",
+          "tip": "\\not digunakan untuk karakter di belakang, bisa menggunakan garis coret",
+          "id": "sym.1.4",
+          "size": 1
+        },
+        {
+          "name": "\\sim",
+          "desc": "",
+          "tip": "Mirip, serupa",
+          "id": "sym.1.5",
+          "size": 1
+        },
+        {
+          "name": "\\times",
+          "desc": "",
+          "tip": "Perkalian dapat menggunakan \\times. Tanda * juga dapat mewakili perkalian",
+          "id": "sym.1.6",
+          "size": 1
+        },
+        {
+          "name": "\\div",
+          "desc": "",
+          "tip": "Pembagian",
+          "id": "sym.1.7",
+          "size": 1
+        },
+        {
+          "name": "!",
+          "desc": "",
+          "tip": "Tanda seru dinyatakan dengan sendirinya",
+          "id": "sym.1.8",
+          "size": 1
+        },
+        {
+          "name": "\\propto",
+          "desc": "",
+          "tip": "Simbol distribusi norma asimptotik, bentuk varian ditunjukkan dengan menggunakan \\varpropto",
+          "id": "sym.1.9",
+          "size": 1
+        },
+        {
+          "name": "\\lt",
+          "desc": "",
+          "tip": "Tanda lebih kecil dari, \\lt adalah less-than, di dalam html, dikarenakan tanda <> sudah digunakan, maka disarankan memakai \\lt dan \\gt untuk mewakili lebih besar dari dan lebih kecil dari",
+          "id": "sym.1.10",
+          "size": 1
+        },
+        {
+          "name": "\\ll",
+          "desc": "",
+          "tip": "Menggunakan 2 buah l berarti jauh lebih kecil dari, misalnya: \\lt,  \\lll",
+          "id": "sym.1.11",
+          "size": 1
+        },
+        {
+          "name": "\\gt",
+          "desc": "",
+          "tip": "Tanda lebih besar dari, \\gt adalah greater-than, di dalam html, dikarenakan tanda <> sudah digunakan, maka disarankan memakai \\lt dan \\gt untuk mewakili lebih besar dari dan lebih kecil dari",
+          "id": "sym.1.12",
+          "size": 1
+        },
+        {
+          "name": "\\gg",
+          "desc": "",
+          "tip": "Menggunakan 2 buah g berarti jauh lebih besar dari, misalnya: \\gt \\ggg  \\gggtr",
+          "id": "sym.1.13",
+          "size": 1
+        },
+        {
+          "name": "\\le",
+          "desc": "",
+          "tip": "Lebih kecil sama dengan adalah singkatan dari less&equal, misalnya   \\lt \\ge",
+          "id": "sym.1.14",
+          "size": 1
+        },
+        {
+          "name": "\\ge",
+          "desc": "",
+          "tip": "Lebih besar sama dengan adalah singkatan dari greater&equal, misalnya   \\lt \\ge",
+          "id": "sym.1.15",
+          "size": 1
+        },
+        {
+          "name": "\\mp",
+          "desc": "",
+          "tip": "Tanda kurang tambah, tanda kurang di atas, tanda tambah di bawah. Misalnya:  \\pm",
+          "id": "sym.1.16",
+          "size": 1
+        },
+        {
+          "name": "\\cong",
+          "desc": "",
+          "tip": "Singkatan congruent, mewakili kongruen. Misalnya:  \\ncong",
+          "id": "sym.1.17",
+          "size": 1
+        },
+        {
+          "name": "\\approx",
+          "desc": "",
+          "tip": "Kira-kira. Terkait: \\approxeq",
+          "id": "sym.1.18",
+          "size": 1
+        },
+        {
+          "name": "\\equiv",
+          "desc": "",
+          "tip": "Semua sama dengan",
+          "id": "sym.1.19",
+          "size": 1
+        },
+        {
+          "name": "\\forall",
+          "desc": "",
+          "tip": "Salah satu, semua, setiap",
+          "id": "sym.1.20",
+          "size": 1
+        },
+        {
+          "name": "\\partial",
+          "desc": "",
+          "tip": "Simbol diferensial parsial",
+          "id": "sym.1.21",
+          "size": 1
+        },
+        {
+          "name": "\\sqrt{x}",
+          "desc": "",
+          "tip": "Gunakan \\sqrt [index]{radicand} untuk menunjukkan radical, juga bisa menggunakan \\root untuk menunjukkan index \\of untuk menunjukkan radical",
+          "id": "sym.1.22",
+          "size": 1
+        },
+        {
+          "name": "\\sqrt[3]{x}",
+          "desc": "",
+          "tip": "Gunakan \\sqrt [index]{radicand} untuk menunjukkan radical, juga bisa menggunakan \\root untuk menunjukkan index \\of untuk menunjukkan radical",
+          "id": "sym.1.23",
+          "size": 1
+        },
+        {
+          "name": "\\cup",
+          "desc": "",
+          "tip": "Gabungan, atau. Setara dengan: \\Cup \\bigcup \\cap",
+          "id": "sym.1.25",
+          "size": 1
+        },
+        {
+          "name": "\\cap",
+          "desc": "",
+          "tip": "Irisan, dan. Setara dengan: \\Cap \\bigcap \\cup",
+          "id": "sym.1.26",
+          "size": 1
+        },
+        {
+          "name": "\\emptyset",
+          "desc": "",
+          "tip": "Simbol kosong, setara dengan:  \\Cap \\bigcap \\cup",
+          "id": "sym.1.27",
+          "size": 1
+        },
+        {
+          "name": "\\%",
+          "desc": "",
+          "tip": "Di dalam mathjax, % berarti single-line comments, tanda persen menggunakan \\%",
+          "id": "sym.1.28",
+          "size": 1
+        },
+        {
+          "name": "°",
+          "desc": "",
+          "tip": "Simbol derajat",
+          "id": "sym.1.29",
+          "size": 1
+        },
+        {
+          "name": "^{\\circ}F",
+          "desc": "",
+          "tip": "Suhu fahrenheit, menggunakan \\circ disertai dengan penanda sudut atas dan bawah untuk menampilkan simbol yang berhubungan dengan derajat",
+          "id": "sym.1.30",
+          "size": 1
+        },
+        {
+          "name": "^{\\circ}C",
+          "desc": "",
+          "tip": "Suhu celcius, menggunakan \\circ disertai dengan penanda sudut atas dan bawah untuk menampilkan simbol yang berhubungan dengan derajat",
+          "id": "sym.1.31",
+          "size": 1
+        },
+        {
+          "name": "\\triangledown",
+          "desc": "",
+          "tip": "Segitiga bawah, setara dengan: \\triangle \\vartriangle",
+          "id": "sym.1.32",
+          "size": 1
+        },
+        {
+          "name": "\\vartriangle",
+          "desc": "",
+          "tip": "Varian simbol segitiga, setara dengan:  \\triangle",
+          "id": "sym.1.33",
+          "size": 1
+        },
+        {
+          "name": "\\nabla",
+          "desc": "",
+          "tip": "Simbol operator nabla",
+          "id": "sym.1.34",
+          "size": 1
+        },
+        {
+          "name": "\\exists",
+          "desc": "",
+          "tip": "Ada, setara dengan: \\nexists",
+          "id": "sym.1.35",
+          "size": 1
+        },
+        {
+          "name": "\\nexists",
+          "desc": "",
+          "tip": "Tidak ada, setara dengan: \\nexists",
+          "id": "sym.1.36",
+          "size": 1
+        },
+        {
+          "name": "\\in",
+          "desc": "",
+          "tip": "Milik, setara dengan: \\notin \\ni",
+          "id": "sym.1.37",
+          "size": 1
+        },
+        {
+          "name": "\\ni",
+          "desc": "",
+          "tip": "Termasuk, setara dengan: \\owns \\in",
+          "id": "sym.1.38",
+          "size": 1
+        },
+        {
+          "name": "\\leftarrow",
+          "desc": "",
+          "tip": "Panah kiri, setara dengan: \\rightarrow \\uparrow \\downarrow",
+          "id": "sym.1.39",
+          "size": 1
+        }
+      ]
+    },
+    {
+      "id": "sym.2",
+      "name": "Alfabet Yunani",
+      "desc": "",
+      "list": [
+        {
+          "name": "\\alpha",
+          "desc": "",
+          "tip": "Huruf kecil Alfa, huruf besar menggunakan \\A",
+          "id": "sym.2.1",
+          "size": 1
+        },
+        {
+          "name": "\\beta",
+          "desc": "",
+          "tip": "Huruf kecil Beta, huruf besar menggunakan \\B",
+          "id": "sym.2.2",
+          "size": 1
+        },
+        {
+          "name": "\\gamma",
+          "desc": "",
+          "tip": "Huruf kecil Gamma, huruf besar menggunakan \\Gamma, varian huruf besar menggunakan \\varGamma",
+          "id": "sym.2.3",
+          "size": 1
+        },
+        {
+          "name": "\\delta",
+          "desc": "",
+          "tip": "Huruf kecil Delta, huruf besar menggunakan \\Delta, varian huruf besar menggunakan \\varDelta",
+          "id": "sym.2.4",
+          "size": 1
+        },
+        {
+          "name": "\\epsilon",
+          "desc": "",
+          "tip": "Huruf kecil Epsilon, huruf besar menggunakan \\E, varian huruf kecil menggunakan \\varepsilon",
+          "id": "sym.2.5",
+          "size": 1
+        },
+        {
+          "name": "\\varepsilon",
+          "desc": "",
+          "tip": "Varian huruf kecil Epsilon, huruf kecil menggunakan \\epsilon, huruf besar menggunakan E",
+          "id": "sym.2.6",
+          "size": 1
+        },
+        {
+          "name": "\\zeta",
+          "desc": "",
+          "tip": "Huruf kecil Zeta, huruf besar menggunakan \\Z",
+          "id": "sym.2.7",
+          "size": 1
+        },
+        {
+          "name": "\\eta",
+          "desc": "",
+          "tip": "Huruf kecil Eta, huruf besar menggunakan \\H",
+          "id": "sym.2.8",
+          "size": 1
+        },
+        {
+          "name": "\\theta",
+          "desc": "",
+          "tip": "Theta, huruf besar menggunakan \\Theta, varian huruf kecil menggunakan \\vartheta, varian huruf besar menggunakan \\vartheta",
+          "id": "sym.2.9",
+          "size": 1
+        },
+        {
+          "name": "\\vartheta",
+          "desc": "",
+          "tip": "Varian huruf kecil Theta, huruf kecil menggunakan \\theta, huruf besar menggunakan \\Theta, varian huruf besar menggunakan \\varTheta",
+          "id": "sym.2.10",
+          "size": 1
+        },
+        {
+          "name": "\\iota",
+          "desc": "",
+          "tip": "Huruf kecil Iota, huruf besar menggunakan \\I",
+          "id": "sym.2.11",
+          "size": 1
+        },
+        {
+          "name": "\\kappa",
+          "desc": "",
+          "tip": "Huruf kecil Kappa, huruf besar menggunakan \\K, varian huruf kecil menggunakan \\varkappa",
+          "id": "sym.2.12",
+          "size": 1
+        },
+        {
+          "name": "\\lambda",
+          "desc": "",
+          "tip": "Huruf kecil Lambda, huruf besar menggunakan \\Lambda, varian huruf besar menggunakan \\varLambda",
+          "id": "sym.2.13",
+          "size": 1
+        },
+        {
+          "name": "\\mu",
+          "desc": "",
+          "tip": "Huruf kecil mu, huruf besar menggunakan \\M",
+          "id": "sym.2.14",
+          "size": 1
+        },
+        {
+          "name": "\\nu",
+          "desc": "",
+          "tip": "Huruf kecil nu, huruf besar menggunakan \\N",
+          "id": "sym.2.15",
+          "size": 1
+        },
+        {
+          "name": "\\xi",
+          "desc": "",
+          "tip": "Huruf kecil xi, huruf besar menggunakan \\Xi, varian huruf besar menggunakan \\varXi",
+          "id": "sym.2.16",
+          "size": 1
+        },
+        {
+          "name": "o",
+          "desc": "",
+          "tip": "Huruf kecil omicron, huruf besar menggunakan \\O",
+          "id": "sym.2.17",
+          "size": 1
+        },
+        {
+          "name": "\\pi",
+          "desc": "",
+          "tip": "Huruf kecil pi, huruf besar menggunakan \\Pi, varian huruf kecil menggunakan \\varPi, varian huruf besar menggunakan \\varPi",
+          "id": "sym.2.18",
+          "size": 1
+        },
+        {
+          "name": "\\rho",
+          "desc": "",
+          "tip": "Huruf kecil rho, huruf besar menggunakan \\P, varian huruf kecil menggunakan \\varrho",
+          "id": "sym.2.19",
+          "size": 1
+        },
+        {
+          "name": "\\varrho",
+          "desc": "",
+          "tip": "Varian huruf kecil rho, huruf kecil menggunakan \\rho, huruf besar menggunakan \\P",
+          "id": "sym.2.20",
+          "size": 1
+        },
+        {
+          "name": "\\sigma",
+          "desc": "",
+          "tip": "Huruf kecil sigma, huruf besar menggunakan \\Sigma, sama dengan simbol penjumlahan \\sum. Varian huruf kecil menggunakan \\varsigma, varian huruf besar menggunakan \\varSigma",
+          "id": "sym.2.21",
+          "size": 1
+        },
+        {
+          "name": "\\varsigma",
+          "desc": "",
+          "tip": "Huruf kecil sigma, huruf kecil menggunakan \\sigma, huruf besar menggunakan \\Sigma, sama dengan simbol penjumlahan \\sum. Varian huruf besar menggunakan \\varSigma",
+          "id": "sym.2.22",
+          "size": 1
+        },
+        {
+          "name": "\\tau",
+          "desc": "",
+          "tip": "Huruf kecil tau, huruf besar menggunakan \\T",
+          "id": "sym.2.23",
+          "size": 1
+        },
+        {
+          "name": "\\upsilon",
+          "desc": "",
+          "tip": "Huruf kecil upsilon, huruf besar menggunakan \\Upsilon, varian huruf kecil menggunakan \\varupsilon, varian huruf besar menggunakan \\varUpsilon",
+          "id": "sym.2.24",
+          "size": 1
+        },
+        {
+          "name": "\\phi",
+          "desc": "",
+          "tip": "Huruf kecil phi, huruf besar menggunakan \\Phi, varian huruf kecil menggunakan \\varphi, varian huruf besar menggunakan \\varPhi",
+          "id": "sym.2.25",
+          "size": 1
+        },
+        {
+          "name": "\\varphi",
+          "desc": "",
+          "tip": "Varian huruf kecil phi, huruf kecil menggunakan \\phi, huruf besar menggunakan \\Phi, varian huruf besar menggunakan \\varPhi",
+          "id": "sym.2.26",
+          "size": 1
+        },
+        {
+          "name": "\\chi",
+          "desc": "",
+          "tip": "Huruf kecil chi, huruf besar menggunakan \\X",
+          "id": "sym.2.27",
+          "size": 1
+        },
+        {
+          "name": "\\psi",
+          "desc": "",
+          "tip": "Huruf kecil psi, huruf besar menggunakan \\Psi, varian huruf besar menggunakan \\varPsi",
+          "id": "sym.2.28",
+          "size": 1
+        },
+        {
+          "name": "\\omega",
+          "desc": "",
+          "tip": "Huruf kecil omega, huruf besar menggunakan \\Omega, varian huruf besar menggunakan \\varOmega",
+          "id": "sym.2.29",
+          "size": 1
+        },
+        {
+          "name": "A",
+          "desc": "",
+          "tip": "Huruf besar alpha, huruf kecil menggunakan \\alpha",
+          "id": "sym.2.30",
+          "size": 1
+        },
+        {
+          "name": "B",
+          "desc": "",
+          "tip": "Huruf besar beta, huruf kecil menggunakan \\beta",
+          "id": "sym.2.31",
+          "size": 1
+        },
+        {
+          "name": "\\Gamma",
+          "desc": "",
+          "tip": "Huruf besar gamma, huruf kecil menggunakan \\gamma, varian huruf besar menggunakan \\varGamma",
+          "id": "sym.2.32",
+          "size": 1
+        },
+        {
+          "name": "\\Delta",
+          "desc": "",
+          "tip": "Huruf besar delta, huruf kecil menggunakan \\delta, varian huruf besar menggunakan \\varDelta",
+          "id": "sym.2.33",
+          "size": 1
+        },
+        {
+          "name": "E",
+          "desc": "",
+          "tip": "Huruf besar epsilon, huruf kecil menggunakan \\epsilon, varian huruf kecil menggunakan \\varepsilon",
+          "id": "sym.2.34",
+          "size": 1
+        },
+        {
+          "name": "Z",
+          "desc": "",
+          "tip": "Huruf besar zeta, huruf kecil menggunakan \\zeta",
+          "id": "sym.2.35",
+          "size": 1
+        },
+        {
+          "name": "H",
+          "desc": "",
+          "tip": "Huruf besar eta, huruf kecil menggunakan \\eta",
+          "id": "sym.2.36",
+          "size": 1
+        },
+        {
+          "name": "\\Theta",
+          "desc": "",
+          "tip": "Huruf besar theta, huruf kecil menggunakan \\theta, varian huruf kecil menggunakan \\vartheta, varian huruf besar menggunakan \\varTheta",
+          "id": "sym.2.37",
+          "size": 1
+        },
+        {
+          "name": "I",
+          "desc": "",
+          "tip": "Huruf besar iota, huruf besar menggunakan \\iota",
+          "id": "sym.2.38",
+          "size": 1
+        },
+        {
+          "name": "K",
+          "desc": "",
+          "tip": "Huruf besar kappa, huruf kecil menggunakan \\kappa, varian huruf kecil menggunakan \\varkappa",
+          "id": "sym.2.39",
+          "size": 1
+        },
+        {
+          "name": "\\Lambda",
+          "desc": "",
+          "tip": "Huruf besar lambda, huruf kecil menggunakan \\lambda, varian huruf besar menggunakan \\varLambda",
+          "id": "sym.2.40",
+          "size": 1
+        },
+        {
+          "name": "M",
+          "desc": "",
+          "tip": "Huruf besar mu, huruf kecil menggunakan \\mu",
+          "id": "sym.2.41",
+          "size": 1
+        },
+        {
+          "name": "N",
+          "desc": "",
+          "tip": "Huruf besar nu, huruf kecil menggunakan \\nu",
+          "id": "sym.2.42",
+          "size": 1
+        },
+        {
+          "name": "\\Xi",
+          "desc": "",
+          "tip": "Huruf besar xi, huruf kecil menggunakan \\xi, varian huruf besar menggunakan \\varXi",
+          "id": "sym.2.43",
+          "size": 1
+        },
+        {
+          "name": "O",
+          "desc": "",
+          "tip": "Huruf besar omicron, huruf kecil menggunakan \\omicron",
+          "id": "sym.2.44",
+          "size": 1
+        },
+        {
+          "name": "\\Pi",
+          "desc": "",
+          "tip": "Huruf besar pi, huruf kecil menggunakan \\pi, varian huruf kecil menggunakan \\varPi, varian huruf besar menggunakan \\varPi",
+          "id": "sym.2.45",
+          "size": 1
+        },
+        {
+          "name": "P",
+          "desc": "",
+          "tip": "Huruf besar rho, huruf kecil menggunakan \\P, varian huruf kecil menggunakan \\varrho",
+          "id": "sym.2.46",
+          "size": 1
+        },
+        {
+          "name": "\\Sigma",
+          "desc": "",
+          "tip": "Huruf besar sigma, setara dengan simbol penjumlahan \\sum. Huruf kecil menggunakan \\sigma. Varian huruf kecil menggunakan \\varsigma, varian huruf besar menggunakan \\varSigma",
+          "id": "sym.2.47",
+          "size": 1
+        },
+        {
+          "name": "T",
+          "desc": "",
+          "tip": "Huruf besar tau, huruf kecil menggunakan \\tau",
+          "id": "sym.2.48",
+          "size": 1
+        },
+        {
+          "name": "\\Upsilon",
+          "desc": "",
+          "tip": "Huruf besar upsilon, huruf kecil menggunakan \\upsilon, varian huruf kecil menggunakan \\varupsilon, varian huruf besar menggunakan \\varUpsilon",
+          "id": "sym.2.49",
+          "size": 1
+        },
+        {
+          "name": "\\Phi",
+          "desc": "",
+          "tip": "Huruf besar phi, huruf kecil menggunakan \\phi, varian huruf kecil menggunakan \\varphi, varian huruf besar menggunakan \\varPhi",
+          "id": "sym.2.50",
+          "size": 1
+        },
+        {
+          "name": "\\varPhi",
+          "desc": "",
+          "tip": "Varian huruf besar, huruf kecil menggunakan \\phi, varian huruf kecil menggunakan \\varphi, huruf besar menggunakan \\Phi",
+          "id": "sym.2.51",
+          "size": 1
+        },
+        {
+          "name": "X",
+          "desc": "",
+          "tip": "Huruf besar chi, huruf kecil menggunakan \\chi",
+          "id": "sym.2.52",
+          "size": 1
+        },
+        {
+          "name": "\\Psi",
+          "desc": "",
+          "tip": "Huruf besar psi, huruf kecil menggunakan \\psi, varian huruf besar menggunakan \\varPsi",
+          "id": "sym.2.53",
+          "size": 1
+        },
+        {
+          "name": "\\Omega",
+          "desc": "",
+          "tip": "Huruf besar omega, huruf kecil menggunakan \\omega, varian huruf besar menggunakan \\varOmega",
+          "id": "sym.2.54",
+          "size": 1
+        }
+      ]
+    },
+    {
+      "id": "sym.3",
+      "name": "Simbol alfabet",
+      "desc": "",
+      "list": [
+        {
+          "name": "\\forall",
+          "desc": "",
+          "tip": "Salah satu, semua, setiap",
+          "id": "sym.3.1",
+          "size": 1
+        },
+        {
+          "name": "\\complement",
+          "desc": "",
+          "tip": "Simbol komplemen",
+          "id": "sym.3.2",
+          "size": 1
+        },
+        {
+          "name": "\\mathbb{C}",
+          "desc": "",
+          "tip": "Bilangan kompleks",
+          "id": "sym.3.3",
+          "size": 1
+        },
+        {
+          "name": "\\partial",
+          "desc": "",
+          "tip": "Simbol diferensial parsial",
+          "id": "sym.3.4",
+          "size": 1
+        },
+        {
+          "name": "\\eth",
+          "desc": "",
+          "tip": "Simbol eth",
+          "id": "sym.3.5",
+          "size": 1
+        },
+        {
+          "name": "\\varepsilon",
+          "desc": "",
+          "tip": "Simbol varian epsilon",
+          "id": "sym.3.6",
+          "size": 1
+        },
+        {
+          "name": "\\digamma",
+          "desc": "",
+          "tip": "Simbol fungsi digamma",
+          "id": "sym.3.7",
+          "size": 1
+        },
+        {
+          "name": "\\mathcal{H}",
+          "desc": "",
+          "tip": "Tulisan tangan huruf besar H",
+          "id": "sym.3.8",
+          "size": 1
+        },
+        {
+          "name": "\\mathfrak{H}",
+          "desc": "",
+          "tip": "Ancient German Style H",
+          "id": "sym.3.9",
+          "size": 1
+        },
+        {
+          "name": "h",
+          "desc": "",
+          "tip": "Simbol huruf kecil h",
+          "id": "sym.3.10",
+          "size": 1
+        },
+        {
+          "name": "\\hbar",
+          "desc": "",
+          "tip": "Simbol planck constant",
+          "id": "sym.3.11",
+          "size": 1
+        },
+        {
+          "name": "\\iota",
+          "desc": "",
+          "tip": "Huruf kecil iota, huruf besar menggunakan \\I",
+          "id": "sym.3.12",
+          "size": 1
+        },
+        {
+          "name": "\\Im",
+          "desc": "",
+          "tip": "Tanda kompleks huruf besar",
+          "id": "sym.3.13",
+          "size": 1
+        },
+        {
+          "name": "j",
+          "desc": "",
+          "tip": "Huruf kecil j",
+          "id": "sym.3.14",
+          "size": 1
+        },
+        {
+          "name": "\\kappa",
+          "desc": "",
+          "tip": "Huruf kecil kappa",
+          "id": "sym.3.15",
+          "size": 1
+        },
+        {
+          "name": "\\mathcal{L}",
+          "desc": "",
+          "tip": "Simbol L tulisan tangan",
+          "id": "sym.3.16",
+          "size": 1
+        },
+        {
+          "name": "\\ell",
+          "desc": "",
+          "tip": "Simbol l huruf kecil tulisan tangan",
+          "id": "sym.3.17",
+          "size": 1
+        },
+        {
+          "name": "\\mathbb{N}",
+          "desc": "",
+          "tip": "Simbol N huruf besar, berarti bilangan asli",
+          "id": "sym.3.18",
+          "size": 1
+        },
+        {
+          "name": "\\wp",
+          "desc": "",
+          "tip": "",
+          "id": "sym.3.19",
+          "size": 1
+        },
+        {
+          "name": "\\mathbb{Q}",
+          "desc": "",
+          "tip": "Simbol Q huruf besar, berarti set bilangan rasional",
+          "id": "sym.3.20",
+          "size": 1
+        },
+        {
+          "name": "\\mathcal{R}",
+          "desc": "",
+          "tip": "",
+          "id": "sym.3.21",
+          "size": 1
+        },
+        {
+          "name": "\\mathfrak{R}",
+          "desc": "",
+          "tip": "Simbol R Ancient German Style",
+          "id": "sym.3.22",
+          "size": 1
+        },
+        {
+          "name": "\\mathbb{R}",
+          "desc": "",
+          "tip": "Blackboard body R, set bilangan riil",
+          "id": "sym.3.23",
+          "size": 1
+        },
+        {
+          "name": "\\mathbb{Z}",
+          "desc": "",
+          "tip": "Blackboard body Z, set bilangan bulat",
+          "id": "sym.3.24",
+          "size": 1
+        },
+        {
+          "name": "\\mathcal{e}",
+          "desc": "",
+          "tip": "Tulisan tangan e, simbol eksponensial",
+          "id": "sym.3.25",
+          "size": 1
+        },
+        {
+          "name": "\\exists",
+          "desc": "",
+          "tip": "Simbol ada",
+          "id": "sym.3.26",
+          "size": 1
+        },
+        {
+          "name": "\\nexists",
+          "desc": "",
+          "tip": "Simbol tidak ada",
+          "id": "sym.3.27",
+          "size": 1
+        },
+        {
+          "name": "\\mathcal{F}",
+          "desc": "",
+          "tip": "Simbol F tulisan tangan",
+          "id": "sym.3.28",
+          "size": 1
+        },
+        {
+          "name": "\\mathcal{M}",
+          "desc": "",
+          "tip": "N tulisan tangan",
+          "id": "sym.3.29",
+          "size": 1
+        },
+        {
+          "name": "\\aleph",
+          "desc": "",
+          "tip": "aleph simbol Ibrani kuno",
+          "id": "sym.3.30",
+          "size": 1
+        },
+        {
+          "name": "\\beth",
+          "desc": "",
+          "tip": "Simbol bilangan transfinit",
+          "id": "sym.3.31",
+          "size": 1
+        },
+        {
+          "name": "\\gimel",
+          "desc": "",
+          "tip": "Simbol fungsi Gimel",
+          "id": "sym.3.32",
+          "size": 1
+        },
+        {
+          "name": "\\daleth",
+          "desc": "",
+          "tip": "Sebuah simbol semit kuno",
+          "id": "sym.3.33",
+          "size": 1
+        }
+      ]
+    },
+    {
+      "id": "sym.4",
+      "name": "Simbol operator",
+      "desc": "",
+      "list": [
+        {
+          "name": "+",
+          "desc": "",
+          "tip": "Tanda tambah diwakili sendiri",
+          "id": "sym.4.1",
+          "size": 1
+        },
+        {
+          "name": "-",
+          "desc": "",
+          "tip": "Tanda kurang",
+          "id": "sym.4.2",
+          "size": 1
+        },
+        {
+          "name": "\\times",
+          "desc": "",
+          "tip": "Tanda kali",
+          "id": "sym.4.3",
+          "size": 1
+        },
+        {
+          "name": "\\div",
+          "desc": "",
+          "tip": "Tanda bagi, kaitan: \\times tanda kali",
+          "id": "sym.4.4",
+          "size": 1
+        },
+        {
+          "name": "\\pm",
+          "desc": "",
+          "tip": "Tanda tambah-kurang, tanda tambah di atas. Kaitan: \\mp",
+          "id": "sym.4.5",
+          "size": 1
+        },
+        {
+          "name": "\\mp",
+          "desc": "",
+          "tip": "Tanda kurang-tambah, tanda tambah di atas. Kaitan: \\pm",
+          "id": "sym.4.6",
+          "size": 1
+        },
+        {
+          "name": "\\propto",
+          "desc": "",
+          "tip": "Sebanding dengan",
+          "id": "sym.4.7",
+          "size": 1
+        },
+        {
+          "name": "\\ast",
+          "desc": "",
+          "tip": "Simbol kepingan salju, simbol bintang",
+          "id": "sym.4.8",
+          "size": 1
+        },
+        {
+          "name": "\\circ",
+          "desc": "",
+          "tip": "Simbol lingkaran, simbol fungsi majemuk",
+          "id": "sym.4.9",
+          "size": 1
+        },
+        {
+          "name": "\\cdot",
+          "desc": "",
+          "tip": "Simbol titik hitam",
+          "id": "sym.4.10",
+          "size": 1
+        },
+        {
+          "name": "\\bullet",
+          "desc": "",
+          "tip": "Titik hitam besar",
+          "id": "sym.4.11",
+          "size": 1
+        },
+        {
+          "name": "\\cap",
+          "desc": "",
+          "tip": "Simbol irisan dua himpunan, kaitan: \\cup",
+          "id": "sym.4.12",
+          "size": 1
+        },
+        {
+          "name": "\\cup",
+          "desc": "",
+          "tip": "Simbol gabungan himpunan, kaitan: \\cap",
+          "id": "sym.4.13",
+          "size": 1
+        },
+        {
+          "name": "\\uplus",
+          "desc": "",
+          "tip": "Operator union disjoin",
+          "id": "sym.4.14",
+          "size": 1
+        },
+        {
+          "name": "\\sqcap",
+          "desc": "",
+          "tip": "Menunjukkan greatest lower bound",
+          "id": "sym.4.15",
+          "size": 1
+        },
+        {
+          "name": "\\sqcup",
+          "desc": "",
+          "tip": " least upper bound",
+          "id": "sym.4.16",
+          "size": 1
+        },
+        {
+          "name": "\\wedge",
+          "desc": "",
+          "tip": "Simbol disjungsi",
+          "id": "sym.4.17",
+          "size": 1
+        },
+        {
+          "name": "\\vee",
+          "desc": "",
+          "tip": "Simbol negatif",
+          "id": "sym.4.18",
+          "size": 1
+        },
+        {
+          "name": "=",
+          "desc": "",
+          "tip": "Simbol sama dengan, kaitan: \\not=",
+          "id": "sym.4.19",
+          "size": 1
+        },
+        {
+          "name": "\\not=",
+          "desc": "",
+          "tip": "Simbol tidak sama dengan",
+          "id": "sym.4.20",
+          "size": 1
+        },
+        {
+          "name": "\\lt",
+          "desc": "",
+          "tip": "Simbol lebih kecil dari, kaitan: \\le \\gt \\ll",
+          "id": "sym.4.21",
+          "size": 1
+        },
+        {
+          "name": "\\gt",
+          "desc": "",
+          "tip": "Simbol lebih besar dari, kaitan: \\ge \\lt \\gg",
+          "id": "sym.4.22",
+          "size": 1
+        },
+        {
+          "name": "\\le",
+          "desc": "",
+          "tip": "Simbol lebih kecil dari, kaitan: \\lt \\ge",
+          "id": "sym.4.23",
+          "size": 1
+        },
+        {
+          "name": "\\ge",
+          "desc": "",
+          "tip": "Lebih besar dari atau sama dengan, kaitan: \\gt \\le",
+          "id": "sym.4.24",
+          "size": 1
+        },
+        {
+          "name": "\\not\\lt",
+          "desc": "",
+          "tip": "Tidak lebih kecil dari",
+          "id": "sym.4.25",
+          "size": 1
+        },
+        {
+          "name": "\\not\\le",
+          "desc": "",
+          "tip": "Tidak lebih kecil dari atau sama dengan",
+          "id": "sym.4.26",
+          "size": 1
+        },
+        {
+          "name": "\\not\\gt",
+          "desc": "",
+          "tip": "Tidak lebih besar dari",
+          "id": "sym.4.27",
+          "size": 1
+        },
+        {
+          "name": "\\not\\ge",
+          "desc": "",
+          "tip": "Tidak lebih besar dari atau sama dengan",
+          "id": "sym.4.28",
+          "size": 1
+        },
+        {
+          "name": "\\equiv",
+          "desc": "",
+          "tip": "Simbol identik",
+          "id": "sym.4.29",
+          "size": 1
+        },
+        {
+          "name": "\\sim",
+          "desc": "",
+          "tip": "Simbol cakupan",
+          "id": "sym.4.30",
+          "size": 1
+        },
+        {
+          "name": "\\simeq",
+          "desc": "",
+          "tip": "Kira-kira sama dengan",
+          "id": "sym.4.31",
+          "size": 1
+        },
+        {
+          "name": "\\approx",
+          "desc": "",
+          "tip": "Kira-kira sama dengan",
+          "id": "sym.4.32",
+          "size": 1
+        },
+        {
+          "name": "\\cong",
+          "desc": "",
+          "tip": "Simbol ekuivalen",
+          "id": "sym.4.33",
+          "size": 1
+        },
+        {
+          "name": "\\not \\equiv",
+          "desc": "",
+          "tip": "Tidak ekuivalen",
+          "id": "sym.4.34",
+          "size": 1
+        },
+        {
+          "name": "\\not\\simeq",
+          "desc": "",
+          "tip": "Tidak mendekati",
+          "id": "sym.4.35",
+          "size": 1
+        },
+        {
+          "name": "\\not\\approx",
+          "desc": "",
+          "tip": "Tidak mendekati",
+          "id": "sym.4.36",
+          "size": 1
+        },
+        {
+          "name": "\\not\\cong",
+          "desc": "",
+          "tip": "Tidak ekuivalen",
+          "id": "sym.4.37",
+          "size": 1
+        },
+        {
+          "name": "\\propto",
+          "desc": "",
+          "tip": "Sebanding dengan",
+          "id": "sym.4.38",
+          "size": 1
+        },
+        {
+          "name": "\\ll",
+          "desc": "",
+          "tip": "Jauh lebih kecil dari, kaitan: \\lt",
+          "id": "sym.4.39",
+          "size": 1
+        },
+        {
+          "name": "\\gg",
+          "desc": "",
+          "tip": "Jauh lebih besar dari",
+          "id": "sym.4.40",
+          "size": 1
+        },
+        {
+          "name": "\\in",
+          "desc": "",
+          "tip": "Milik",
+          "id": "sym.4.41",
+          "size": 1
+        },
+        {
+          "name": "\\ni",
+          "desc": "",
+          "tip": "Termasuk",
+          "id": "sym.4.42",
+          "size": 1
+        },
+        {
+          "name": "\\not\\in",
+          "desc": "",
+          "tip": "Bukan milik",
+          "id": "sym.4.43",
+          "size": 1
+        },
+        {
+          "name": "\\not\\ni",
+          "desc": "",
+          "tip": "Tidak termasuk",
+          "id": "sym.4.44",
+          "size": 1
+        },
+        {
+          "name": "\\subset",
+          "desc": "",
+          "tip": "Himpunan bagian",
+          "id": "sym.4.45",
+          "size": 1
+        },
+        {
+          "name": "\\supset",
+          "desc": "",
+          "tip": "Simbol superhimpunan",
+          "id": "sym.4.46",
+          "size": 1
+        },
+        {
+          "name": "\\subseteq",
+          "desc": "",
+          "tip": "Terdiri dari",
+          "id": "sym.4.47",
+          "size": 1
+        },
+        {
+          "name": "\\supseteq",
+          "desc": "",
+          "tip": "Termasuk",
+          "id": "sym.4.48",
+          "size": 1
+        },
+        {
+          "name": "\\prec",
+          "desc": "",
+          "tip": "Pendahulu",
+          "id": "sym.4.49",
+          "size": 1
+        },
+        {
+          "name": "\\succ",
+          "desc": "",
+          "tip": "Penerus",
+          "id": "sym.4.50",
+          "size": 1
+        },
+        {
+          "name": "\\preceq",
+          "desc": "",
+          "tip": "Pendahulu atau aposisi",
+          "id": "sym.4.51",
+          "size": 1
+        },
+        {
+          "name": "\\succeq",
+          "desc": "",
+          "tip": "Penerus atau aposisi",
+          "id": "sym.4.52",
+          "size": 1
+        },
+        {
+          "name": "\\sqsubset",
+          "desc": "",
+          "tip": "",
+          "id": "sym.4.53",
+          "size": 1
+        },
+        {
+          "name": "\\sqsupset",
+          "desc": "",
+          "tip": "",
+          "id": "sym.4.54",
+          "size": 1
+        },
+        {
+          "name": "\\sqsubseteq",
+          "desc": "",
+          "tip": "",
+          "id": "sym.4.55",
+          "size": 1
+        },
+        {
+          "name": "\\sqsupseteq",
+          "desc": "",
+          "tip": "",
+          "id": "sym.4.56",
+          "size": 1
+        },
+        {
+          "name": "\\parallel",
+          "desc": "",
+          "tip": "Paralel dengan",
+          "id": "sym.4.57",
+          "size": 1
+        },
+        {
+          "name": "\\perp",
+          "desc": "",
+          "tip": "Tegak lurus terhadap",
+          "id": "sym.4.58",
+          "size": 1
+        },
+        {
+          "name": "\\vdash",
+          "desc": "",
+          "tip": "Hubungan derivatif",
+          "id": "sym.4.59",
+          "size": 1
+        },
+        {
+          "name": "\\dashv",
+          "desc": "",
+          "tip": "",
+          "id": "sym.4.60",
+          "size": 1
+        },
+        {
+          "name": "\\bowtie",
+          "desc": "",
+          "tip": "",
+          "id": "sym.4.61",
+          "size": 1
+        },
+        {
+          "name": "\\asymp",
+          "desc": "",
+          "tip": "",
+          "id": "sym.4.62",
+          "size": 1
+        },
+        {
+          "name": "\\sum",
+          "desc": "",
+          "tip": "Simbol penjumlahan",
+          "id": "sym.4.63",
+          "size": 1
+        },
+        {
+          "name": "\\int",
+          "desc": "",
+          "tip": "Integral tunggal",
+          "id": "sym.4.64",
+          "size": 1
+        },
+        {
+          "name": "\\iint",
+          "desc": "",
+          "tip": "Integral dua",
+          "id": "sym.4.65",
+          "size": 1
+        },
+        {
+          "name": "\\iiint",
+          "desc": "",
+          "tip": "Integral tiga",
+          "id": "sym.4.66",
+          "size": 1
+        },
+        {
+          "name": "\\oint",
+          "desc": "",
+          "tip": "Simbol integral lingkaran",
+          "id": "sym.4.67",
+          "size": 1
+        },
+        {
+          "name": "\\oiint",
+          "desc": "",
+          "tip": "Simbol integral area",
+          "id": "sym.4.78",
+          "size": 1
+        },
+        {
+          "name": "\\oiiint",
+          "desc": "",
+          "tip": "Simbol integral volume",
+          "id": "sym.4.79",
+          "size": 1
+        },
+        {
+          "name": "\\prod",
+          "desc": "",
+          "tip": "Simbol cumprod",
+          "id": "sym.4.68",
+          "size": 1
+        },
+        {
+          "name": "\\coprod",
+          "desc": "",
+          "tip": "",
+          "id": "sym.4.69",
+          "size": 1
+        },
+        {
+          "name": "\\bigcap",
+          "desc": "",
+          "tip": "Simbol irisan dua himpunan",
+          "id": "sym.4.70",
+          "size": 1
+        },
+        {
+          "name": "\\bigcup",
+          "desc": "",
+          "tip": "Simbol gabungan himpunan",
+          "id": "sym.4.71",
+          "size": 1
+        },
+        {
+          "name": "\\bigwedge",
+          "desc": "",
+          "tip": "Simbol disjungsi",
+          "id": "sym.4.72",
+          "size": 1
+        },
+        {
+          "name": "\\bigvee",
+          "desc": "",
+          "tip": "Simbol konjungsi",
+          "id": "sym.4.73",
+          "size": 1
+        },
+        {
+          "name": "\\bigodot",
+          "desc": "",
+          "tip": "",
+          "id": "sym.4.74",
+          "size": 1
+        },
+        {
+          "name": "\\bigotimes",
+          "desc": "",
+          "tip": "",
+          "id": "sym.4.75",
+          "size": 1
+        },
+        {
+          "name": "\\bigoplus",
+          "desc": "",
+          "tip": "",
+          "id": "sym.4.76",
+          "size": 1
+        },
+        {
+          "name": "\\biguplus",
+          "desc": "",
+          "tip": "",
+          "id": "sym.4.77",
+          "size": 1
+        }
+      ]
+    },
+    {
+      "id": "sym.5",
+      "name": "Panah",
+      "desc": "",
+      "list": [
+        {
+          "name": "\\leftarrow",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.1",
+          "size": 1
+        },
+        {
+          "name": "\\rightarrow",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.2",
+          "size": 1
+        },
+        {
+          "name": "\\uparrow",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.3",
+          "size": 1
+        },
+        {
+          "name": "\\downarrow",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.4",
+          "size": 1
+        },
+        {
+          "name": "\\Leftarrow",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.5",
+          "size": 1
+        },
+        {
+          "name": "\\Rightarrow",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.6",
+          "size": 1
+        },
+        {
+          "name": "\\Uparrow",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.7",
+          "size": 1
+        },
+        {
+          "name": "\\Downarrow",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.8",
+          "size": 1
+        },
+        {
+          "name": "\\rightrightarrows",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.9",
+          "size": 1
+        },
+        {
+          "name": "\\leftleftarrows",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.10",
+          "size": 1
+        },
+        {
+          "name": "\\downdownarrows",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.11",
+          "size": 1
+        },
+        {
+          "name": "\\upuparrows",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.12",
+          "size": 1
+        },
+        {
+          "name": "\\nleftarrow",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.13",
+          "size": 1
+        },
+        {
+          "name": "\\nrightarrow",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.14",
+          "size": 1
+        },
+        {
+          "name": "\\nLeftarrow",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.15",
+          "size": 1
+        },
+        {
+          "name": "\\nRightarrow",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.16",
+          "size": 1
+        },
+        {
+          "name": "\\nleftrightarrow",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.17",
+          "size": 1
+        },
+        {
+          "name": "\\nLeftrightarrow",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.18",
+          "size": 1
+        },
+        {
+          "name": "\\leftrightarrow",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.19",
+          "size": 1
+        },
+        {
+          "name": "\\Leftrightarrow",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.20",
+          "size": 1
+        },
+        {
+          "name": "\\Updownarrow",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.21",
+          "size": 1
+        },
+        {
+          "name": "\\nearrow",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.22",
+          "size": 1
+        },
+        {
+          "name": "\\searrow",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.23",
+          "size": 1
+        },
+        {
+          "name": "\\nwarrow",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.24",
+          "size": 1
+        },
+        {
+          "name": "\\swarrow",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.25",
+          "size": 1
+        },
+        {
+          "name": "\\leftharpoonup",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.26",
+          "size": 1
+        },
+        {
+          "name": "\\rightharpoonup",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.27",
+          "size": 1
+        },
+        {
+          "name": "\\leftharpoondown",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.28",
+          "size": 1
+        },
+        {
+          "name": "\\rightharpoondown",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.29",
+          "size": 1
+        },
+        {
+          "name": "\\rightleftharpoons",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.30",
+          "size": 1
+        },
+        {
+          "name": "\\leftrightharpoons",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.31",
+          "size": 1
+        },
+        {
+          "name": "\\mapsto",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.32",
+          "size": 1
+        },
+        {
+          "name": "\\longmapsto",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.33",
+          "size": 1
+        },
+        {
+          "name": "\\leftarrowtail",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.34",
+          "size": 1
+        },
+        {
+          "name": "\\rightarrowtail",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.35",
+          "size": 1
+        },
+        {
+          "name": "\\rightsquigarrow",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.45",
+          "size": 1
+        },
+        {
+          "name": "\\leadsto",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.46",
+          "size": 1
+        },
+        {
+          "name": "\\leftrightsquigarrow",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.47",
+          "size": 1
+        },
+        {
+          "name": "\\twoheadleftarrow",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.48",
+          "size": 1
+        },
+        {
+          "name": "\\twoheadrightarrow",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.49",
+          "size": 1
+        },
+        {
+          "name": "\\circlearrowleft",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.50",
+          "size": 1
+        },
+        {
+          "name": "\\circlearrowright",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.51",
+          "size": 1
+        },
+        {
+          "name": "\\dashleftarrow",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.52",
+          "size": 1
+        },
+        {
+          "name": "\\dashrightarrow",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.53",
+          "size": 1
+        },
+        {
+          "name": "\\hookleftarrow",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.54",
+          "size": 1
+        },
+        {
+          "name": "\\hookrightarrow",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.55",
+          "size": 1
+        },
+        {
+          "name": "\\looparrowleft",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.56",
+          "size": 1
+        },
+        {
+          "name": "\\looparrowright",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.57",
+          "size": 1
+        },
+        {
+          "name": "\\vec{A}",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.42",
+          "size": 3
+        },
+        {
+          "name": "\\overleftarrow{A}",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.36",
+          "size": 3
+        },
+        {
+          "name": "\\underleftarrow{A}",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.39",
+          "size": 3
+        },
+        {
+          "name": "\\overrightarrow{AB}",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.37",
+          "size": 3
+        },
+        {
+          "name": "\\underrightarrow{AB}",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.40",
+          "size": 3
+        },
+        {
+          "name": "\\overleftrightarrow{AB}",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.38",
+          "size": 3
+        },
+        {
+          "name": "\\underleftrightarrow{AB}",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.41",
+          "size": 3
+        },
+        {
+          "name": "\\xleftarrow[f]{g}",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.43",
+          "size": 3
+        },
+        {
+          "name": "\\xrightarrow[Pemanasan]{Katalisator}",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.44",
+          "size": 3
+        },
+        {
+          "name": "\\xlongequal{Nyalakan}",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.45",
+          "size": 3
+        }
+      ]
+    },
+    {
+      "id": "sym.6",
+      "name": "Tulisan tangan",
+      "desc": "",
+      "list": [
+        {
+          "name": "\\mathcal{abcdefg}",
+          "desc": "",
+          "tip": "Varian huruf kecil, juga bisa menggunakan \\cal",
+          "id": "sym.6.2",
+          "size": 7
+        },
+        {
+          "name": "\\mathcal{ABCDEFG}",
+          "desc": "",
+          "tip": "Varian huruf besar, juga bisa menggunakan \\cal",
+          "id": "sym.6.1",
+          "size": 7
+        },
+        {
+          "name": "\\mathbb{abcdefg}",
+          "desc": "",
+          "tip": "Tulisan papan tulis tebal, juga bisa menggunakan \\Bbb",
+          "id": "sym.6.5",
+          "size": 7
+        },
+        {
+          "name": "\\mathbb{ABCDEFG}",
+          "desc": "",
+          "tip": "Tulisan papan tulis tebal, juga bisa menggunakan \\Bbb",
+          "id": "sym.6.4",
+          "size": 7
+        },
+        {
+          "name": "\\mathfrak{abcdefg}",
+          "desc": "",
+          "tip": "Tulisan Jerman kuno, juga bisa menggunakan \\frak",
+          "id": "sym.6.7",
+          "size": 7
+        },
+        {
+          "name": "\\mathfrak{ABCDEFG}",
+          "desc": "",
+          "tip": "Tulisan Jerman kuno, juga bisa menggunakan \\frak",
+          "id": "sym.6.6",
+          "size": 7
+        }
+      ]
+    }
+  ],
+  "formulas": [
+    {
+      "id": "for.1",
+      "name": "Common formula",
+      "desc": "",
+      "list": [
+        {
+          "name": "\\sqrt{x}",
+          "desc": "",
+          "tip": "Gunakan\\sqrt [index]{radicand} untuk menunjukkan radical, akar kuadrat dapat ditunjukkan dengan cara menggunakan\\sqrt{}. Kaitan:\\root",
+          "id": "for.1.1",
+          "size": 1
+        },
+        {
+          "name": "\\sqrt[2]{x}",
+          "desc": "",
+          "tip": "Gunakan\\sqrt [index]{radicand} untuk menunjukkan radical, akar kuadrat dapat ditunjukkan dengan menggunakan\\sqrt{}. Kaitan:\\root",
+          "id": "for.1.2",
+          "size": 1
+        },
+        {
+          "name": "x_a",
+          "desc": "",
+          "tip": "Gunakan _ untuk menunjukkan subskrip, jika subskrip melebihi 1 simbol, gunakan {} untuk menggabungkan. Kaitan: ^",
+          "id": "for.1.3",
+          "size": 1
+        },
+        {
+          "name": "x^a",
+          "desc": "",
+          "tip": "Gunakan ^ untuk menunjukkan superskrip, jika superskrip melebihi 1 simbol, gunakan {} untuk menggabungkan. Kaitan: _",
+          "id": "for.1.4",
+          "size": 1
+        },
+        {
+          "name": "x_a^b",
+          "desc": "",
+          "tip": "Subskrip dan superskrip ada dalam waktu bersamaan",
+          "id": "for.1.5",
+          "size": 1
+        },
+        {
+          "name": "x^{y^2}",
+          "desc": "",
+          "tip": "Terdapat struktur komposit pada superskrip",
+          "id": "for.1.6",
+          "size": 1
+        },
+        {
+          "name": "\\dfrac {\\pi} {2}",
+          "desc": "",
+          "tip": "Pecahan dapat ditunjukkan dengan cara menggunakan \\frac{pembilang}{penyebut} atau  \\dfrac{pembilang}{penyebut}. Yang pertama dapat diatur sesuai dengan tampilan baris atau rumus, sedangkan yang kedua memiliki tampilan yang sama di baris dan rumus",
+          "id": "for.1.7",
+          "size": 3
+        },
+        {
+          "name": "a / b",
+          "desc": "",
+          "tip": "Bentuk horizontal pada pecahan biasanya digunakan untuk menunjukkan pecahan sederhana",
+          "id": "for.1.8",
+          "size": 3
+        },
+        {
+          "name": "\\frac ab",
+          "desc": "",
+          "tip": "Pecahan dapat ditunjukkan dengan cara menggunakan \\frac{pembilang}{penyebut} atau \\dfrac{pembilang}{penyebut}. Yang pertama dapat diatur sesuai dengan tampilan baris atau rumus, sedangkan yang kedua memiliki tampilan yang sama di baris dan rumus",
+          "id": "for.1.9",
+          "size": 3
+        },
+        {
+          "name": "\\frac{a+1}{b+1}",
+          "desc": "",
+          "tip": "Pecahan dapat ditunjukan dengan cara menggunakan \\frac{pembilang}{penyebut} atau \\dfrac{pembilang}{penyebut}. Yang pertama dapat diatur sesuai dengan tampilan baris atau rumus, sedangkan yang kedua memiliki tampilan yang sama di baris dan rumus",
+          "id": "for.1.10",
+          "size": 3
+        },
+        {
+          "name": "\\frac {dx}{dy}",
+          "desc": "",
+          "tip": "Rasio diferensial",
+          "id": "for.1.11",
+          "size": 3
+        },
+        {
+          "name": "\\frac {\\delta y}{\\delta x}",
+          "desc": "",
+          "tip": "Rasio perbedaan terbatas (finite difference)",
+          "id": "for.1.12",
+          "size": 3
+        },
+        {
+          "name": "\\frac {\\partial x}{\\partial y}",
+          "desc": "",
+          "tip": "Rasio diferensial parsial",
+          "id": "for.1.13",
+          "size": 3
+        },
+        {
+          "name": "\\frac {\\Delta x} {\\Delta y}",
+          "desc": "",
+          "tip": "Rasio perbedaan",
+          "id": "for.1.14",
+          "size": 3
+        },
+        {
+          "name": "e^{-i\\omega t}",
+          "desc": "",
+          "tip": "Fungsi kompleks umum",
+          "id": "for.1.15",
+          "size": 5
+        },
+        {
+          "name": "\\sqrt{a^2 + b^2}",
+          "desc": "",
+          "tip": "Bentuk radikal umum",
+          "id": "for.1.16",
+          "size": 5
+        },
+        {
+          "name": "\\frac {-b \\pm \\sqrt{b^2 -4ac}} {2a}",
+          "desc": "",
+          "tip": "Bentuk radikal umum",
+          "id": "for.1.17",
+          "size": 5
+        },
+        {
+          "name": "\\frac{2}{1+\\frac{2}{1+\\frac{2}{1}}}",
+          "desc": "",
+          "tip": "Bentuk pecahan berlanjut",
+          "id": "for.1.18",
+          "size": 5
+        }
+      ]
+    },
+    {
+      "id": "for.7",
+      "name": "Fungsi",
+      "desc": "",
+      "list": [
+        {
+          "name": "\\log x",
+          "desc": "",
+          "tip": "Fungsi logaritma, kaitan: \\ln",
+          "id": "for.7.1",
+          "size": 2
+        },
+        {
+          "name": "\\log_2 x",
+          "desc": "",
+          "tip": "Fungsi logaritma umum, kaitan: \\ln",
+          "id": "for.7.1",
+          "size": 2
+        },
+        {
+          "name": "\\ln x",
+          "desc": "",
+          "tip": "Fungsi logaritma dengan bilangan alami sebagai dasarnya, kaitan: \\log",
+          "id": "for.7.1",
+          "size": 2
+        },
+        {
+          "name": "\\sin",
+          "desc": "",
+          "tip": "Fungsi sinus, kaitan: \\cos",
+          "id": "for.7.1",
+          "size": 2
+        },
+        {
+          "name": "\\cos",
+          "desc": "",
+          "tip": "Fungsi kosinus, kaitan: \\sin",
+          "id": "for.7.2",
+          "size": 2
+        },
+        {
+          "name": "\\tan",
+          "desc": "",
+          "tip": "Fungsi tangen, kaitan: \\cot",
+          "id": "for.7.3",
+          "size": 2
+        },
+        {
+          "name": "\\cot",
+          "desc": "",
+          "tip": "Fungsi kotangen, kaitan: \\tan",
+          "id": "for.7.4",
+          "size": 2
+        },
+        {
+          "name": "\\sec",
+          "desc": "",
+          "tip": "Fungsi sekan, kaitan: \\csc",
+          "id": "for.7.5",
+          "size": 2
+        },
+        {
+          "name": "\\csc",
+          "desc": "",
+          "tip": "Fungsi kosekan, kaitan: \\sec",
+          "id": "for.7.6",
+          "size": 2
+        },
+        {
+          "name": "\\sinh",
+          "desc": "",
+          "tip": "Fungsi hiperbolik sinus, kaitan: \\cosh",
+          "id": "for.7.13",
+          "size": 2
+        },
+        {
+          "name": "\\cosh",
+          "desc": "",
+          "tip": "Fungsi hiperbolik kosinus, kaitan: \\sinh",
+          "id": "for.7.14",
+          "size": 2
+        },
+        {
+          "name": "\\tanh",
+          "desc": "",
+          "tip": "Fungsi hiperbolik tangen, kaitan: \\coth",
+          "id": "for.7.15",
+          "size": 2
+        },
+        {
+          "name": "\\coth",
+          "desc": "",
+          "tip": "Fungsi hiperbolik kotangen, kaitan: \\tanh",
+          "id": "for.7.16",
+          "size": 2
+        },
+        {
+          "name": "\\arcsin",
+          "desc": "",
+          "tip": "Fungsi arcsin",
+          "id": "for.7.7",
+          "size": 4
+        },
+        {
+          "name": "\\arccos",
+          "desc": "",
+          "tip": "Fungsi arccos",
+          "id": "for.7.8",
+          "size": 4
+        },
+        {
+          "name": "\\arctan",
+          "desc": "",
+          "tip": "Fungsi arctan",
+          "id": "for.7.9",
+          "size": 4
+        },
+        {
+          "name": "\\tan \\theta = \\dfrac {\\sin \\theta} {\\cos \\theta}",
+          "desc": "",
+          "tip": "Rumus trigonometri",
+          "id": "for.7.27",
+          "size": 6
+        }
+      ]
+    },
+    {
+      "id": "for.6",
+      "name": "Tanda kurung",
+      "desc": "",
+      "list": [
+        {
+          "name": "()",
+          "desc": "",
+          "tip": "Tanda kurung lengkung, dapat menggunakan \\left dan \\right untuk menyesuaikan ketinggian",
+          "id": "for.6.1",
+          "size": 2
+        },
+        {
+          "name": "[]",
+          "desc": "",
+          "tip": "Tanda kurung siku, dapat menggunakan \\left dan \\right untuk menyesuaikan ketinggian",
+          "id": "for.6.2",
+          "size": 2
+        },
+        {
+          "name": "||",
+          "desc": "",
+          "tip": "Garis vertikal, dapat menggunakan \\left dan \\right untuk menyesuaikan ketinggian",
+          "id": "for.6.3",
+          "size": 2
+        },
+        {
+          "name": "\\{\\}",
+          "desc": "",
+          "tip": "Tanda kurung kurawal, perlu menggunakan garis miring terbalik untuk menunjukkan peralihan",
+          "id": "for.6.4",
+          "size": 2
+        },
+        {
+          "name": "\\langle\\rangle",
+          "desc": "",
+          "tip": "Tanda kurung sudut, dapat menggunakan \\left dan \\right untuk menyesuaikan ketinggian",
+          "id": "for.6.5",
+          "size": 2
+        },
+        {
+          "name": "\\lbrack\\rbrack",
+          "desc": "",
+          "tip": "Tanda kurung siku, dapat menggunakan \\left dan \\right untuk menyesuaikan ketinggian",
+          "id": "for.6.6",
+          "size": 2
+        },
+        {
+          "name": "\\lceil \\rceil",
+          "desc": "",
+          "tip": "Simbol sudut kiri dan kanan, dapat menggunakan \\left dan \\right untuk mengatur ketinggian",
+          "id": "for.6.7",
+          "size": 2
+        },
+        {
+          "name": "\\lgroup \\rgroup",
+          "desc": "",
+          "tip": "Dapat menggunakan \\left dan \\right untuk mengatur ketinggian",
+          "id": "for.6.8",
+          "size": 2
+        },
+        {
+          "name": "<>",
+          "desc": "",
+          "tip": "Tanda kurung sudut, dapat menggunakan \\left dan \\right untuk mengatur ketinggian",
+          "id": "for.6.9",
+          "size": 2
+        },
+        {
+          "name": "\\lfloor \\rfloor",
+          "desc": "",
+          "tip": "Simbol sudut kiri dann kanan, dapat menggunakan \\left dan \\right untuk mengatur ketinggian",
+          "id": "for.6.10",
+          "size": 2
+        },
+        {
+          "name": "\\lmoustache \\rmoustache",
+          "desc": "",
+          "tip": "Kumis, dapat menggunakan \\left dan \\right untuk mengatur ketinggian",
+          "id": "for.6.11",
+          "size": 2
+        },
+        {
+          "name": "\\Vert \\Vert",
+          "desc": "",
+          "tip": "Tanda norma, dapat menggunakan \\left dan \\right untuk mengatur ketinggian",
+          "id": "for.6.12",
+          "size": 2
+        },
+        {
+          "name": "(x|y)",
+          "desc": "",
+          "tip": "dalam",
+          "id": "for.6.15",
+          "size": 3
+        },
+        {
+          "name": "\\{x |y \\}",
+          "desc": "",
+          "tip": "",
+          "id": "for.6.16",
+          "size": 3
+        },
+        {
+          "name": "\\langle x| y \\rangle",
+          "desc": "",
+          "tip": "Tanda perkalian titik",
+          "id": "for.6.17",
+          "size": 3
+        },
+        {
+          "name": "\\langle x| y| z\\rangle",
+          "desc": "",
+          "tip": "",
+          "id": "for.6.18",
+          "size": 3
+        },
+        {
+          "name": "a \\atop b",
+          "desc": "",
+          "tip": "Kolom vertikal menunjukkan 1",
+          "id": "for.6.21",
+          "size": 3
+        },
+        {
+          "name": "\\left ( a \\atop b \\right )",
+          "desc": "",
+          "tip": "Kolom vertikal menunjukkan 2",
+          "id": "for.6.22",
+          "size": 3
+        },
+        {
+          "name": "\\cases{ a \\cr b}",
+          "desc": "",
+          "tip": "Kolom vertikal menunjukkan 3",
+          "id": "for.6.19",
+          "size": 3
+        },
+        {
+          "name": "\\cases{ a \\cr b \\cr c}",
+          "desc": "",
+          "tip": "Kolom vertikal menunjukkan 4",
+          "id": "for.6.20",
+          "size": 3
+        },
+        {
+          "name": "\\tbinom n k",
+          "desc": "",
+          "tip": "Koefisien distribusi binomial menunjukkan, kaitan: \\binom n k",
+          "id": "for.6.24",
+          "size": 3
+        },
+        {
+          "name": "\\binom n k",
+          "desc": "",
+          "tip": "Koefisien distribusi binomial, referensi \\tbinom n k",
+          "id": "for.6.25",
+          "size": 3
+        },
+        {
+          "name": "\\langle {a \\atop b} \\rangle",
+          "desc": "",
+          "tip": "",
+          "id": "for.6.26",
+          "size": 3
+        },
+        {
+          "name": "\\left ( \\frac{a+1}{b+1} \\right )",
+          "desc": "",
+          "tip": "Bentuk pecahan umum",
+          "id": "for.6.14",
+          "size": 5
+        },
+        {
+          "name": "f(x) = \\begin{cases} -x,  &x<0 \\cr  x,  &x>0 \\end{cases}",
+          "desc": "",
+          "tip": "Fungsi piecewise, gunakan \\begin{cases} rumus \\end{cases} untuk menunjukkan",
+          "id": "for.6.23",
+          "size": 5
+        }
+      ]
+    },
+    {
+      "id": "for.8",
+      "name": "Simbol turunan",
+      "desc": "",
+      "list": [
+        {
+          "name": "\\hat A",
+          "desc": "",
+          "tip": "Tanda topi",
+          "id": "for.8.1",
+          "size": 1
+        },
+        {
+          "name": "\\tilde A",
+          "desc": "",
+          "tip": "Tanda kurva",
+          "id": "for.8.2",
+          "size": 1
+        },
+        {
+          "name": "\\check A",
+          "desc": "",
+          "tip": "",
+          "id": "for.8.3",
+          "size": 1
+        },
+        {
+          "name": "\\dot A",
+          "desc": "",
+          "tip": "Tanda titik, biasanya digunakan pada turunan/derivatif",
+          "id": "for.8.4",
+          "size": 1
+        },
+        {
+          "name": "\\ddot A",
+          "desc": "",
+          "tip": "Tanda titik ganda",
+          "id": "for.8.5",
+          "size": 1
+        },
+        {
+          "name": "\\dddot A",
+          "desc": "",
+          "tip": "Tanda tiga titik",
+          "id": "for.8.6",
+          "size": 1
+        },
+        {
+          "name": "{A}'",
+          "desc": "",
+          "tip": "",
+          "id": "for.8.7",
+          "size": 1
+        },
+        {
+          "name": "{A}''",
+          "desc": "",
+          "tip": "",
+          "id": "for.8.8",
+          "size": 1
+        },
+        {
+          "name": "\\grave{A}",
+          "desc": "",
+          "tip": "",
+          "id": "for.8.9",
+          "size": 1
+        },
+        {
+          "name": "\\acute{A}",
+          "desc": "",
+          "tip": "",
+          "id": "for.8.10",
+          "size": 1
+        },
+        {
+          "name": "\\breve A",
+          "desc": "",
+          "tip": "",
+          "id": "for.8.11",
+          "size": 1
+        },
+        {
+          "name": "\\bar A",
+          "desc": "",
+          "tip": "",
+          "id": "for.8.12",
+          "size": 1
+        },
+        {
+          "name": "\\vec A",
+          "desc": "",
+          "tip": "",
+          "id": "for.8.13",
+          "size": 1
+        },
+        {
+          "name": "\\not A",
+          "desc": "",
+          "tip": "",
+          "id": "for.8.14",
+          "size": 1
+        },
+        {
+          "name": "A^{\\circ}",
+          "desc": "",
+          "tip": "Tanda derajat",
+          "id": "for.8.15",
+          "size": 1
+        },
+        {
+          "name": "\\overleftarrow{AB}",
+          "desc": "",
+          "tip": "Tanda arah 1",
+          "id": "for.8.16",
+          "size": 2
+        },
+        {
+          "name": "\\overrightarrow{AB}",
+          "desc": "",
+          "tip": "Tanda arah 2",
+          "id": "for.8.17",
+          "size": 2
+        },
+        {
+          "name": "\\overleftrightarrow{AB}",
+          "desc": "",
+          "tip": "Tanda arah 3",
+          "id": "for.8.18",
+          "size": 2
+        },
+        {
+          "name": "\\overline{ABC}",
+          "desc": "",
+          "tip": "",
+          "id": "for.8.19",
+          "size": 2
+        },
+        {
+          "name": "\\underline{ABC}",
+          "desc": "",
+          "tip": "",
+          "id": "for.8.20",
+          "size": 2
+        },
+        {
+          "name": "\\overbrace{ABC}",
+          "desc": "",
+          "tip": "",
+          "id": "for.8.21",
+          "size": 2
+        },
+        {
+          "name": "\\underbrace{ABC}",
+          "desc": "",
+          "tip": "",
+          "id": "for.8.22",
+          "size": 2
+        },
+        {
+          "name": "\\overset{a}{ABC}",
+          "desc": "",
+          "tip": "",
+          "id": "for.8.23",
+          "size": 2
+        },
+        {
+          "name": "\\underset{a}{ABC}",
+          "desc": "",
+          "tip": "",
+          "id": "for.8.24",
+          "size": 2
+        },
+        {
+          "name": "\\widetilde{ABC}",
+          "desc": "",
+          "tip": "",
+          "id": "for.8.25",
+          "size": 2
+        }
+      ]
+    },
+    {
+      "id": "for.4",
+      "name": "Kalkulus",
+      "desc": "",
+      "list": [
+        {
+          "name": "dx",
+          "desc": "",
+          "tip": "Tanda diferensial",
+          "id": "for.4.1",
+          "size": 2
+        },
+        {
+          "name": "\\partial x",
+          "desc": "",
+          "tip": "Tanda diferensial parsial",
+          "id": "for.4.1",
+          "size": 2
+        },
+        {
+          "name": "\\delta x",
+          "desc": "",
+          "tip": "Tanda perbedaan terbatas (finite difference)",
+          "id": "for.4.1",
+          "size": 2
+        },
+        {
+          "name": "\\dot A",
+          "desc": "",
+          "tip": "Tanda derivatif",
+          "id": "for.4.1",
+          "size": 2
+        },
+        {
+          "name": "f'(x)",
+          "desc": "",
+          "tip": "Tanda derivatif fungsi pertama",
+          "id": "for.4.1",
+          "size": 3
+        },
+        {
+          "name": "\\int_0^{\\pi}{dx}",
+          "desc": "",
+          "tip": "Tanda integral 1, batas integral di sebelah kanan",
+          "id": "for.4.2",
+          "size": 3
+        },
+        {
+          "name": "\\intop\\limits_{x}^{y} dx",
+          "desc": "",
+          "tip": "Tanda integral 2, batas integral di bagian atas dan bawah",
+          "id": "for.4.3",
+          "size": 3
+        },
+        {
+          "name": "\\iint{dxdy}",
+          "desc": "",
+          "tip": "Tanda integral lipat dua, kaitan: \\int \\iiint",
+          "id": "for.4.4",
+          "size": 3
+        },
+        {
+          "name": "\\iint_0^{\\pi}{dxdy}",
+          "desc": "",
+          "tip": "Tanda integral lipat dua, batas integral di sebelah kanan. Gunakan \\limits_{batas bawah}^{batas atas} untuk menunjukkan tanda batas atas dan bawah",
+          "id": "for.4.5",
+          "size": 3
+        },
+        {
+          "name": "\\iint\\limits_0^{\\pi}{dxdy}",
+          "desc": "",
+          "tip": "Tanda integral lipat dua, batas integral di bagian atas dan bawah",
+          "id": "for.4.6",
+          "size": 3
+        },
+        {
+          "name": "\\iiint",
+          "desc": "",
+          "tip": "Tanda integral lipat tiga",
+          "id": "for.4.7",
+          "size": 3
+        },
+        {
+          "name": "\\iiint_0^{\\pi}dxdydz",
+          "desc": "",
+          "tip": "Integral lipat tiga, batas integral di sebelah kanan, gunakan \\limits_{batas bawah}^{batas atas} untuk menunjukkan tanda batas atas dan bawah",
+          "id": "for.4.8",
+          "size": 3
+        },
+        {
+          "name": "\\iiint\\limits_0^\\pi dxdydz",
+          "desc": "",
+          "tip": "Integral lipat tiga, batas integral di bagian atas dan bawah",
+          "id": "for.4.9",
+          "size": 3
+        },
+        {
+          "name": "\\oint",
+          "desc": "",
+          "tip": "Tanda integral kontur",
+          "id": "for.4.10",
+          "size": 3
+        },
+        {
+          "name": "\\oint\\limits_0^\\pi",
+          "desc": "",
+          "tip": "Integral kontur, batas integral berada di bagian atas dan bawah",
+          "id": "for.4.11",
+          "size": 3
+        },
+        {
+          "name": "\\oint_0^\\pi",
+          "desc": "",
+          "tip": "Integral kontur, batas integral di sebelah kanan",
+          "id": "for.4.12",
+          "size": 3
+        },
+        {
+          "name": "\\oiint",
+          "desc": "",
+          "tip": "Tanda integral area",
+          "id": "for.4.16",
+          "size": 3
+        },
+        {
+          "name": "\\oiint\\limits_0^\\pi",
+          "desc": "",
+          "tip": "Integral area, batas integral berada di bagian atas dan bawah",
+          "id": "for.4.17",
+          "size": 3
+        },
+        {
+          "name": "\\oiint_0^\\pi",
+          "desc": "",
+          "tip": "Integral area, batas integral ada di sebelah kanan",
+          "id": "for.4.18",
+          "size": 3
+        },
+        {
+          "name": "\\oiiint",
+          "desc": "",
+          "tip": "Tanda integral volume",
+          "id": "for.4.19",
+          "size": 3
+        },
+        {
+          "name": "\\oiiint\\limits_0^\\pi",
+          "desc": "",
+          "tip": "Integral volume, batas integral berada di bagian atas dan bawah",
+          "id": "for.4.20",
+          "size": 3
+        },
+        {
+          "name": "\\oiiint_0^\\pi",
+          "desc": "",
+          "tip": "Integral volume, batas integral ada di sebelah kanan",
+          "id": "for.4.21",
+          "size": 3
+        },
+        {
+          "name": "\\lim_{n \\rightarrow\\infty}f(n)",
+          "desc": "",
+          "tip": "Batas, tanda batas ada di sebelah kanan",
+          "id": "for.4.14",
+          "size": 5
+        },
+        {
+          "name": "\\lim\\limits_{n \\rightarrow\\infty}f(n)",
+          "desc": "",
+          "tip": "Batas, gunakan \\limits_{} untuk menampilkan tanda batas di bagian bawah",
+          "id": "for.4.15",
+          "size": 5
+        }
+      ]
+    },
+    {
+      "id": "for.10",
+      "name": "Matriks",
+      "desc": "",
+      "list": [
+        {
+          "name": "\\cdots",
+          "desc": "",
+          "tip": "Elipsis, ditampilkan di pusat horizontal",
+          "id": "for.10.8",
+          "size": 2
+        },
+        {
+          "name": "\\ldots",
+          "desc": "",
+          "tip": "Elipsis, ditampilkan di posisi garis bawah",
+          "id": "for.10.9",
+          "size": 2
+        },
+        {
+          "name": "\\vdots",
+          "desc": "",
+          "tip": "Elipsis vertikal",
+          "id": "for.10.10",
+          "size": 2
+        },
+        {
+          "name": "\\ddots",
+          "desc": "",
+          "tip": "Elipsis diagonal, sering digunakan untuk menunjukkan bagian yang dihilangkan pada matriks",
+          "id": "for.10.11",
+          "size": 2
+        },
+        {
+          "name": "\\matrix {a & b}",
+          "desc": "",
+          "tip": "Matriks baris tunggal, menggunakan tanda & untuk memisahkan kolom-kolom yang berbeda",
+          "id": "for.10.1",
+          "size": 2
+        },
+        {
+          "name": "\\matrix{a \\cr b}",
+          "desc": "",
+          "tip": "Matriks baris tunggal, menggunakan \\\\ atau \\ cr untuk memisahkan kolom-kolom yang berbeda",
+          "id": "for.10.2",
+          "size": 2
+        },
+        {
+          "name": "\\matrix{a & b \\cr c & d}",
+          "desc": "",
+          "tip": "Matriks 2*2 menunjukkan, tanpa tanda kurung",
+          "id": "for.10.5",
+          "size": 3
+        },
+        {
+          "name": "\\left ( \\matrix{a & b \\cr c & d} \\right )",
+          "desc": "",
+          "tip": "Matriks 2*2 yang dikelilingi oleh tanda kurung lengkung, menggunakan \\left \\right supaya ukuran tanda kurung lengkung dapat diatur secara otomatis",
+          "id": "for.10.12",
+          "size": 3
+        },
+        {
+          "name": "\\left \\langle \\matrix{a & b \\cr c & d} \\right \\rangle",
+          "desc": "",
+          "tip": "Matriks 2*2 yang dikelilingi oleh tanda kurung sudut, menggunakan \\left \\right supaya ukuran tanda kurung lengkung dapat diatur secara otomatis",
+          "id": "for.10.13",
+          "size": 3
+        },
+        {
+          "name": "\\left \\lbrace \\matrix{a & b \\cr c & d} \\right \\rbrace",
+          "desc": "",
+          "tip": "Matriks 2*2 yang dikelilingi oleh tanda kurung siku, menggunakan \\left \\right supaya ukuran tanda kurung lengkung dapat diatur secara otomatis",
+          "id": "for.10.14",
+          "size": 3
+        },
+        {
+          "name": "\\left \\lbrack \\matrix{a & b \\cr c & d} \\right \\rbrack",
+          "desc": "",
+          "tip": "Matriks 2*2 yang dikelilingi oleh tanda kurung kurawal, menggunakan \\left \\right supaya ukuran tanda kurung lengkung dapat diatur secara otomatis",
+          "id": "for.10.15",
+          "size": 3
+        },
+        {
+          "name": "\\left | \\matrix{a & b \\cr c & d} \\right |",
+          "desc": "",
+          "tip": "Matriks 2*2 yang dikelilingi oleh garis vertikal, menggunakan \\left \\right supaya ukuran tanda kurung lengkung dapat diatur secara otomatis",
+          "id": "for.10.16",
+          "size": 3
+        },
+        {
+          "name": "\\left \\Vert \\matrix{a & b \\cr c & d} \\right \\Vert",
+          "desc": "",
+          "tip": "Matriks 2*2 yang dikelilingi oleh garis vertikal ganda, menggunakan \\left \\right supaya ukuran tanda kurung lengkung dapat diatur secara otomatis",
+          "id": "for.10.17",
+          "size": 3
+        },
+        {
+          "name": "\\begin{bmatrix} aaa & b \\cr c & ddd \\end {bmatrix}",
+          "desc": "",
+          "tip": "Matriks 2*2 yang dikelilingi oleh tanda kurung siku, menggunakan label lingkungan {bmatrix}",
+          "id": "for.10.19",
+          "size": 3
+        },
+        {
+          "name": "\\matrix {a & b & c}",
+          "desc": "",
+          "tip": "Matriks 1*3, menggunakan tanda & untuk memisahkan kolom-kolom yang berbeda",
+          "id": "for.10.3",
+          "size": 4
+        },
+        {
+          "name": "\\matrix {a \\cr b \\cr c}",
+          "desc": "",
+          "tip": "Matriks 3*1, menggunakan \\\\ atau \\cr untuk memisahkan kolom-kolom yang berbeda",
+          "id": "for.10.4",
+          "size": 4
+        },
+        {
+          "name": "\\matrix{a & b & c \\cr d & e & f}",
+          "desc": "",
+          "tip": "Matriks 2*3",
+          "id": "for.10.6",
+          "size": 4
+        },
+        {
+          "name": "\\left[ \\begin{array}{cc|c} a&b&c \\cr x&y&z \\end{array} \\right]",
+          "desc": "",
+          "tip": "Matriks yang diperbesar (augmented matrix), menggunakan lingkungan \\begin{array} \\end{array}, tambah garis vertikal di tanda yang selaras di belakang \\begin{array}, untuk menunjukkan pemisahan secara vertikal {cc|c}",
+          "id": "for.10.19",
+          "size": 4
+        },
+        {
+          "name": "\\matrix{x_1 & x_2 & x_3 \\cr x_4 & x_5 & x_6 \\cr x_7 & x_8 & x_9}",
+          "desc": "",
+          "tip": "Matriks 3*3 umum",
+          "id": "for.10.7",
+          "size": 5
+        },
+        {
+          "name": "\\begin{array}{lc|r} aaa & bbb & ccc \\cr xx & yy & z \\cr n & n & n \\end{array}",
+          "desc": "",
+          "tip": "Matriks yang diperbesar (augmented matrix) 3*3",
+          "id": "for.10.7",
+          "size": 5
+        },
+        {
+          "name": "\\begin{array}{c|lcr} n & \\text{Rata kiri} & \\text{Rata tengah} & \\text{Rata kanan} \\cr \\hline 1 & 0.24 & 1 & 125 \\cr 2 & -1 & 189 & -8 \\cr 3 & -20 & 2000 & 1+10i \\end{array}",
+          "desc": "",
+          "tip": "Matriks tabel. Menggunakan tanda selaras {c|lcr} untuk menambah garis pemisah vertikal, menggunakan \\hline untuk menunjukkan garis pemisah horizontal",
+          "id": "for.10.7",
+          "size": 6
+        },
+        {
+          "name": "\\pmatrix {a_{11} & a_{12} & \\ldots & a_{1n} \\cr a_{21} & a_{22} & \\ldots & a_{2n} \\cr \\vdots & \\vdots & \\ddots & \\vdots \\cr a_{m1} & a_{m2} & \\ldots & a_{mn} \\cr    }",
+          "desc": "",
+          "tip": "Matriks m*n",
+          "id": "for.10.18",
+          "size": 6
+        }
+      ]
+    },
+    {
+      "id": "for.5",
+      "name": "Operator besar",
+      "desc": "",
+      "list": [
+        {
+          "name": "\\sum",
+          "desc": "",
+          "tip": "Simbol penjumlahan, ukuran simbiol akan diatur secara otomatis sesuai dengan tanda batas atas dan bawah",
+          "id": "for.5.1",
+          "size": 3
+        },
+        {
+          "name": "\\sum_{1}^{100}",
+          "desc": "",
+          "tip": "Simbol penjumlahan, menggunakan tanda pangkat atas untuk menunjukkan batas atas dan bawah penambahan",
+          "id": "for.5.2",
+          "size": 3
+        },
+        {
+          "name": "\\sum\\limits_{i=1}^{i=100}",
+          "desc": "",
+          "tip": "Simbol penjumlahan, menggunakan \\limits_{batas bawah}^{batas atas} untuk menampilkan batas atas dan bawah di bagian atas dan bawah simbol",
+          "id": "for.5.3",
+          "size": 3
+        },
+        {
+          "name": "\\displaystyle \\sum\\nolimits_{i=1}^{i=100}{i^2}",
+          "desc": "",
+          "tip": "Tanda penambahan umum",
+          "id": "for.5.4",
+          "size": 3
+        },
+        {
+          "name": "\\prod",
+          "desc": "",
+          "tip": "Simbol kuadratur, ukuran simbol akan diatur secara otomatis sesuai dengan rumus",
+          "id": "for.5.5",
+          "size": 3
+        },
+        {
+          "name": "\\prod_{1}^{100}",
+          "desc": "",
+          "tip": "Simbol kuadratur, batas atas dan bawah ada di sebelah kanan simbol",
+          "id": "for.5.6",
+          "size": 3
+        },
+        {
+          "name": "\\prod\\limits_{i=1}^{i=100}",
+          "desc": "",
+          "tip": "Simbol kuadratur, batas atas dan bawah berada di bagian atas dan bawah simbol",
+          "id": "for.5.7",
+          "size": 3
+        },
+        {
+          "name": "\\displaystyle \\prod\\nolimits_{i=1}^{i=100}{i^2}",
+          "desc": "",
+          "tip": "Bentuk kuadratur umum",
+          "id": "for.5.8",
+          "size": 3
+        },
+        {
+          "name": "\\coprod",
+          "desc": "",
+          "tip": "",
+          "id": "for.5.9",
+          "size": 3
+        },
+        {
+          "name": "\\coprod_{1}^{100}",
+          "desc": "",
+          "tip": "",
+          "id": "for.5.10",
+          "size": 3
+        },
+        {
+          "name": "\\coprod\\limits_{i=1}^{i=100}",
+          "desc": "",
+          "tip": "",
+          "id": "for.5.11",
+          "size": 3
+        },
+        {
+          "name": "\\displaystyle \\coprod\\nolimits_{i=1}^{i=100}{i^2}",
+          "desc": "",
+          "tip": "",
+          "id": "for.5.12",
+          "size": 3
+        },
+        {
+          "name": "\\bigcap",
+          "desc": "",
+          "tip": "Simbol irisan dua himpunan",
+          "id": "for.5.13",
+          "size": 3
+        },
+        {
+          "name": "\\bigcap_{a}^{b}",
+          "desc": "",
+          "tip": "Simbol irisan dua himpunan, batas atas dan bawah ditampilkan di sebelah kanan",
+          "id": "for.5.14",
+          "size": 3
+        },
+        {
+          "name": "\\bigcap\\limits_a^{b}",
+          "desc": "",
+          "tip": "Simbol irisan dua himpunan, batas atas dan bawah ditampilkan di bagian atas dan bawah",
+          "id": "for.5.15",
+          "size": 3
+        },
+        {
+          "name": "\\displaystyle \\bigcap\\nolimits_{a}^{b}",
+          "desc": "",
+          "tip": "Operasi irisan dua himpunan umum",
+          "id": "for.5.16",
+          "size": 3
+        },
+        {
+          "name": "\\bigcup",
+          "desc": "",
+          "tip": "Simbol gabungan himpunan",
+          "id": "for.5.17",
+          "size": 3
+        },
+        {
+          "name": "\\bigcup_{a}^{b}",
+          "desc": "",
+          "tip": "Simbol gabungan himpunan, batas atas dan bawah ditampilkan di sebelah kanan",
+          "id": "for.5.18",
+          "size": 3
+        },
+        {
+          "name": "\\bigcup\\limits_a^{b}",
+          "desc": "",
+          "tip": "Simbol gabungan himpunan, batas atas dan bawah ditampilkan di bagian atas dan bawah",
+          "id": "for.5.19",
+          "size": 3
+        },
+        {
+          "name": "\\displaystyle \\bigcup\\nolimits_{a}^{b}",
+          "desc": "",
+          "tip": "Operasi gabungan himpunan umum",
+          "id": "for.5.20",
+          "size": 3
+        },
+        {
+          "name": "\\bigvee",
+          "desc": "",
+          "tip": "Simbol disjungsi",
+          "id": "for.5.21",
+          "size": 3
+        },
+        {
+          "name": "\\bigvee_{a}^{b}",
+          "desc": "",
+          "tip": "Simbol disjungsi, batas atas dan bawah ditampilkan di sebelah kanan",
+          "id": "for.5.22",
+          "size": 3
+        },
+        {
+          "name": "\\bigvee\\limits_a^{b}",
+          "desc": "",
+          "tip": "Simbol disjungsi, batas atas dan bawah ditampilkan di bagian atas dan bawah",
+          "id": "for.5.23",
+          "size": 3
+        },
+        {
+          "name": "\\displaystyle \\bigvee\\nolimits_{a}^{b}",
+          "desc": "",
+          "tip": "Operasi disjungsi umum",
+          "id": "for.5.24",
+          "size": 3
+        },
+        {
+          "name": "\\bigwedge",
+          "desc": "",
+          "tip": "Simbol konjungsi",
+          "id": "for.5.25",
+          "size": 3
+        },
+        {
+          "name": "\\bigwedge_{a}^{b}",
+          "desc": "",
+          "tip": "Simbol konjungsi, batas atas dan bawah ditampilkan di sebelah kanan",
+          "id": "for.5.26",
+          "size": 3
+        },
+        {
+          "name": "\\bigwedge\\limits_a^{b}",
+          "desc": "",
+          "tip": "Simbol konjungsi, batas atas dan bawah ditampilkan di bagian atas dan bawah",
+          "id": "for.5.27",
+          "size": 3
+        },
+        {
+          "name": "\\displaystyle \\bigwedge\\nolimits_{a}^{b}",
+          "desc": "",
+          "tip": "Operasi konjungsi umum",
+          "id": "for.5.28",
+          "size": 3
+        },
+        {
+          "name": "\\sum\\limits_{{0 \\le x \\le m} \\atop {0 \\lt j \\lt n}} P(i,j)",
+          "desc": "",
+          "tip": "Rumus umum untuk penjumlahan dua variabel",
+          "id": "for.5.32",
+          "size": 6
+        },
+        {
+          "name": "\\bigcup\\limits_{n=1}^{m} (X_n \\cap Y_n)",
+          "desc": "",
+          "tip": "Rumus operasi set umum",
+          "id": "for.5.33",
+          "size": 6
+        }
+      ]
+    },
+    {
+      "id": "for.17",
+      "name": "Rumus besar",
+      "desc": "",
+      "list": [
+        {
+          "name": "f(n) = \\begin{cases} x + 2y + 3z & \\gt 0 \\cr x + y & \\le 10 \\cr z & \\ge 5 \\end{cases}",
+          "desc": "",
+          "tip": "Menggunakan & untuk menunjukkan posisi selaras",
+          "id": "for.10.8",
+          "size": 7
+        },
+        {
+          "name": "f(n) = \\begin{cases} n/2, & \\text{if $n$ is even} \\cr 3n+1, & \\text{if $n$ is odd} \\end{cases}",
+          "desc": "",
+          "tip": "Catatan teks ditunjukkan dengan menggunakan \\text",
+          "id": "for.10.8",
+          "size": 7
+        },
+        {
+          "name": "\\begin{align} (a+b)^2 &= (a+b)(a+b) \\cr &= a^2 + ab + ba + b^2 \\cr &= a^2 + 2ab + b^2 \\cr \\end{align}",
+          "desc": "",
+          "tip": "Menggunakan \\begin{align} \\end{align} untuk mengelilingi sistem persamaan",
+          "id": "for.10.8",
+          "size": 7
+        },
+        {
+          "name": "\\begin{align*}\\sum_0^\\infty \\frac{f^{(n)}(x_0)}{n!}(x-x_0)^n = &f(x_0)+f^{'}(x_0)(x-x_0)+       \\frac{f^{''}(x0)}{2!}(x-x_0)^2 \\cr &+ \\cdots+ \\frac{f^{(n)}(x0)}{n!}(x-x_0)^n + \\cdots  \\end{align*} ",
+          "desc": "",
+          "tip": "Saat rumus perlu ganti baris, gunakan \\cr atau \\, gunakan & untuk memastikan posisi selaras",
+          "id": "for.10.8",
+          "size": 7
+        }
+      ]
+    }
+  ],
+  "subjects": [
+    {
+      "id": "sub.1",
+      "name": "Matematika",
+      "desc": "",
+      "list": [
+        {
+          "name": "\\int_a^b f(x)dx = F(b) - F(a) = F(x)|_a^b",
+          "desc": "",
+          "tip": "Teorema dasar kalkulus",
+          "id": "sub.1.1",
+          "size": 7
+        },
+        {
+          "name": "\\pmatrix {a_{11} & a_{12} & \\ldots & a_{1n} \\cr a_{21} & a_{22} & \\ldots & a_{2n} \\cr \\vdots & \\vdots & \\ddots & \\vdots \\cr a_{m1} & a_{m2} & \\ldots & a_{mn} \\cr    } \\pmatrix {x_1 \\cr x_2 \\cr \\vdots \\cr x_m} = \\pmatrix {b_1 \\cr b_2 \\cr \\vdots \\cr b_m}",
+          "desc": "",
+          "tip": "Perkalian matriks",
+          "id": "sub.1.1",
+          "size": 7
+        }
+      ]
+    },
+    {
+      "id": "sub.2",
+      "name": "Fisika",
+      "desc": "",
+      "list": [
+        {
+          "name": "\\begin{align}& \\oint_lH\\cdot dl = \\int_s J\\cdot S + \\int_s \\frac {\\partial D}{\\partial t}\\cdot ds \\tag{1} \\cr      &\\oint_lE\\cdot dl = - \\frac{d}{dt}\\int_sB\\cdot ds  \\tag{2} \\cr &\\oint_s B\\cdot ds = - 0  \\tag{3} \\cr       & \\oint_s D \\cdot ds = \\int_s \\rho \\cdot dv \\tag{4} \\end{align}",
+          "desc": "",
+          "tip": "Bentuk integral persamaan Maxwell",
+          "id": "sub.2.1",
+          "size": 7
+        },
+        {
+          "name": "\\begin{align} & \\nabla\\times\\bf H = J+\\frac {\\partial {\\bf{D}}}{\\partial t} \\tag{1} \\cr      & \\nabla \\times \\bf E = - \\frac {\\partial \\bf{B}}{\\partial t} \\tag{2} \\\\[2ex] & \\nabla \\cdot \\bf B = 0 \\tag{3} \\\\[2ex]       & \\nabla \\cdot \\bf E = 0  \\tag{4} \\end{align}",
+          "desc": "",
+          "tip": "Bentuk integral persamaan Maxwell",
+          "id": "sub.2.2",
+          "size": 7
+        }
+      ]
+    },
+    {
+      "id": "sub.3",
+      "name": "Kimia",
+      "desc": "",
+      "list": [
+        {
+          "name": "\\ce{SO4^2- + Ba^2+ -> BaSO4 v}",
+          "desc": "",
+          "tip": "Rumus kimia umum",
+          "id": "sub.3.1",
+          "size": 7
+        },
+        {
+          "name": "\\ce{x Na(NH4)HPO4 ->[\\Delta] (NaPO3)_x + x NH3 ^ + x H2O}",
+          "desc": "",
+          "tip": "Rumus kimia umum",
+          "id": "sub.3.2",
+          "size": 7
+        },
+        {
+          "name": "\\ce{A\\bond{~--}B\\bond{~=}C\\bond{-~-}D}",
+          "desc": "",
+          "tip": "Ikatan kimia menunjukkan",
+          "id": "sub.3.3",
+          "size": 7
+        },
+        {
+          "name": "\\ce{{^{14}_{7}N} + {^{4}_{2}He} -> {^{17}_{8}O} + {^{1}_{1}H}}",
+          "desc": "",
+          "tip": "Transformasi nukleus buatan",
+          "id": "sub.3.4",
+          "size": 7
+        },
+        {
+          "name": "\\ce{5O2 + 4P \\xlongequal{点燃} 2P2O5}",
+          "desc": "",
+          "tip": "Persamaan kimia",
+          "id": "sub.3.5",
+          "size": 7
+        }
+      ]
+    }
+  ]
+}

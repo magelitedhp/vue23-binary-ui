@@ -1,3 +1,6 @@
+:root {
+  --question-font-size: 1px; /* 默认值 */
+}
 $--color-primary:#529FFF;
 $--color-primary--light: #75b2ff;
 $--color-primary--deep: #4a8fe6;
@@ -36,41 +39,40 @@ $--no-line-height: 1;
 $--small-line-height: 1.3;
 $--large-line-height: 1.7;
 
-
-$--font-size-mini: 10px;
-$--font-size-small: 12px;
-$--font-size-base: 14px;
-$--font-size-large: 16px;
-$--font-size-huge: 18px;
+// $myBaseSize已替换为--question-font-size
+$--font-size-mini: calc(10 * var(--question-font-size));
+$--font-size-small: calc(12 * var(--question-font-size));
+$--font-size-base: calc(14 * var(--question-font-size));
+$--font-size-large: calc(16 * var(--question-font-size));
+$--font-size-huge: calc(18 * var(--question-font-size));
 
 
 $--disabled-background-color-base: #eee;
 $--disabled-color-base: #b1b1b1;
-$--box-shadow-base: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);
-$--box-shadow-light: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+$--box-shadow-base: 0 calc(2 * var(--question-font-size)) calc(4 * var(--question-font-size)) rgba(0, 0, 0, .12), 0 0 calc(6 * var(--question-font-size)) rgba(0, 0, 0, .04);
+$--box-shadow-light: 0 calc(2 * var(--question-font-size)) calc(12 * var(--question-font-size)) 0 rgba(0, 0, 0, 0.1);
 
 
 /* Border
 -------------------------- */
 $--border-color-input-base: #cbcbd1;
 $--border-color-base: #e3e3e9;
-$--border-width-base: 1px;
+$--border-width-base: calc(1 * var(--question-font-size));
 $--border-style-base: solid;
 $--border-base: $--border-width-base $--border-style-base $--border-color-base;
 $--border-dashed: $--border-width-base dashed $--border-color-base;
 $--border-input: $--border-width-base $--border-style-base $--border-color-input-base;
 /// borderRadius|1|Radius|0
-$--border-radius-base: 4px;
+$--border-radius-base: calc(4 * var(--question-font-size));
 /// borderRadius|1|Radius|0
-$--border-radius-small: 2px;
+$--border-radius-small: calc(2 * var(--question-font-size));
 /// borderRadius|1|Radius|0
 $--border-radius-circle: 100%;
 /// borderRadius|1|Radius|0
 $--border-radius-zero: 0;
 
-$maxWidth: 1216px;
-$minWidth: 660px;
-$myBaseSize: 0.01rem;
+$maxWidth: calc(1216 * var(--question-font-size));
+$minWidth: calc(660 * var(--question-font-size));
 
 
 $--color-ai-9: #3DCAFC;

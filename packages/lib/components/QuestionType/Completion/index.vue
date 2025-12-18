@@ -409,16 +409,17 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-$height: 44px;
+@import "@/styles/variables.scss";
+$height: calc(44 * var(--question-font-size));
 .completion-question {
   .edit-mode {
     .correct-answer {
-      margin-top: 12px;
+      margin-top: calc(12 * var(--question-font-size));
     }
   }
   .preview-mode {
     .correct-answer-preview {
-      margin-top: 12px;
+      margin-top: calc(12 * var(--question-font-size));
       >div {
         font-weight: 600;
       }
@@ -433,53 +434,53 @@ $height: 44px;
   }
 }
 .title-tip {
-  margin-left: 10px;
-  font-size: 14px;
+  margin-left: calc(10 * var(--question-font-size));
+  font-size: calc(14 * var(--question-font-size));
   color: #606266;
   line-height: 1.2;
   font-weight: normal;
 }
 
 .correct-answer-tip {
-  margin-left: 6px;
-  font-size: 16px;
-  line-height: 20px;
+  margin-left: calc(6 * var(--question-font-size));
+  font-size: calc(16 * var(--question-font-size));
+  line-height: calc(20 * var(--question-font-size));
 }
 
 .answer-item {
-  margin-top: 12px;
+  margin-top: calc(12 * var(--question-font-size));
   line-height: $height;
-  font-size: 16px;
+  font-size: calc(16 * var(--question-font-size));
   display: flex;
 }
 
 .answer-option {
-  margin-right: 4px;
+  margin-right: calc(4 * var(--question-font-size));
 }
 
 .answer-input {
   flex: 1;
   height: $height;
-  padding: 0 10px;
-  border: 1px solid #dcdfe6;
+  padding: 0 calc(10 * var(--question-font-size));
+  border: calc(1 * var(--question-font-size)) solid #dcdfe6;
   outline: none;
-  font-size: 16px;
+  font-size: calc(16 * var(--question-font-size));
 }
 
 .btn-delete {
   img {
-    width: 12px;
-    height: 12px;
+    width: calc(12 * var(--question-font-size));
+    height: calc(12 * var(--question-font-size));
   }
 
-  line-height: 44px;
-  margin-left: 10px;
+  line-height: calc(44 * var(--question-font-size));
+  margin-left: calc(10 * var(--question-font-size));
   cursor: pointer;
 }
 
 .can-exchange {
-  margin: 12px 0;
-  font-size: 16px;
+  margin: calc(12 * var(--question-font-size)) 0;
+  font-size: calc(16 * var(--question-font-size));
   display: block;
 }
 </style>

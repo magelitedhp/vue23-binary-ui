@@ -1,7 +1,4 @@
-:root {
-  // 根文字大小，可被外部项目覆盖
-  // font-size: 6.944444444444445vw;
-}
+@import "@/styles/variables.scss";
 * {
   box-sizing: border-box;
   word-break: break-word;
@@ -54,9 +51,9 @@ textarea {
   zoom: 1;
 }
 .ul-link {
-  font-size: 14px;
+  font-size: calc(14 * var(--question-font-size));
   color: #8d77fb;
-  line-height: 20px;
+  line-height: calc(20 * var(--question-font-size));
   text-decoration: none;
   outline: none;
   cursor: pointer;
@@ -65,7 +62,7 @@ textarea {
   vertical-align: middle;
 }
 .rich-text {
-  font-size: 16px;
+  font-size: calc(16 * var(--question-font-size));
   line-height: 1.5;
   color: #444444;
   img {
@@ -94,7 +91,7 @@ textarea {
     list-style-type: disc;
   }
   table {
-    border-spacing: 1px;
+    border-spacing: calc(1 * var(--question-font-size));
     background-color: #444444; /*边线颜色*/
     border-collapse: separate !important; 
     width: auto !important;
@@ -103,12 +100,12 @@ textarea {
       background-color: #fff;
     }
     td {
-      min-width: 70px;
+      min-width: calc(70 * var(--question-font-size));
     }
     &.stop-swiping {
       tbody {
         display: block;
-        max-width: calc(100vw - 32px);
+        max-width: calc(100vw - calc(32 * var(--question-font-size)));
         overflow-x: auto;
       }
       tr {

@@ -1,0 +1,3233 @@
+{
+  "formulaEditing": "Formula Editor",
+  "symbol": "Symbols",
+  "formula": "Formulas",
+  "subject": "Subjects",
+  "inlineFormula": "Inline formulas",
+  "formulaBlock": "Formulas",
+  "history": "History record:",
+  "help": "Help",
+  "defaultTip": "Use \\\\ and \\ cr to wrap lines. Related links include",
+  "close": "Close",
+  "confirm": "Confirm",
+  "cancel": "Cancel",
+  "symbols": [
+    {
+      "id": "sym.1",
+      "name": "Basic symbols",
+      "desc": "",
+      "list": [
+        {
+          "name": "\\pm",
+          "desc": "",
+          "tip": "Plus or minus, plus is on top. Related\\mp",
+          "id": "sym.1.1",
+          "size": 1
+        },
+        {
+          "name": "\\infty",
+          "desc": "",
+          "tip": "[infinity] Short form of infinity",
+          "id": "sym.1.2",
+          "size": 1
+        },
+        {
+          "name": "=",
+          "desc": "",
+          "tip": "equal :=approximate:\\eqsim greater than or equal to:\\ge less than or equal to:\\le equivalent:\\equiv",
+          "id": "sym.1.3",
+          "size": 1
+        },
+        {
+          "name": "\\not=",
+          "desc": "",
+          "tip": "\\not apply to the following characters, can draw strikeout",
+          "id": "sym.1.4",
+          "size": 1
+        },
+        {
+          "name": "\\sim",
+          "desc": "",
+          "tip": "similarity,approximate",
+          "id": "sym.1.5",
+          "size": 1
+        },
+        {
+          "name": "\\times",
+          "desc": "",
+          "tip": "Multiplication can be denoted by \\times. Symbol * can also be used to denote multiplication ",
+          "id": "sym.1.6",
+          "size": 1
+        },
+        {
+          "name": "\\div",
+          "desc": "",
+          "tip": "Division",
+          "id": "sym.1.7",
+          "size": 1
+        },
+        {
+          "name": "!",
+          "desc": "",
+          "tip": "Exclamation mark denoted by itself",
+          "id": "sym.1.8",
+          "size": 1
+        },
+        {
+          "name": "\\propto",
+          "desc": "",
+          "tip": "Symbol of normal asymptotic distribution, variant form denotes by \\varpropto ",
+          "id": "sym.1.9",
+          "size": 1
+        },
+        {
+          "name": "\\lt",
+          "desc": "",
+          "tip": "Symbol of less than, \\lt denotes less-than, in html, <> has been used, suggest to use \\It and \\gt to denote greater than and less than",
+          "id": "sym.1.10",
+          "size": 1
+        },
+        {
+          "name": "\\ll",
+          "desc": "",
+          "tip": "Use to I to denote far less than, related:\\It,\\lll",
+          "id": "sym.1.11",
+          "size": 1
+        },
+        {
+          "name": "\\gt",
+          "desc": "",
+          "tip": "Symbol of greater than, \\gt denotes greater-than, in html, <>has been used, suggest to use \\lt and \\gt to denote greater than and lesser than",
+          "id": "sym.1.12",
+          "size": 1
+        },
+        {
+          "name": "\\gg",
+          "desc": "",
+          "tip": "Use two g to denote far greater than, related:\\gt\\ggg\\gggtr",
+          "id": "sym.1.13",
+          "size": 1
+        },
+        {
+          "name": "\\le",
+          "desc": "",
+          "tip": " less&equal is the short form of less than or equal to, related \\lt\\ge ",
+          "id": "sym.1.14",
+          "size": 1
+        },
+        {
+          "name": "\\ge",
+          "desc": "",
+          "tip": "greater&equal is the short form of greater and equal to, related\\lt\\ge",
+          "id": "sym.1.15",
+          "size": 1
+        },
+        {
+          "name": "\\mp",
+          "desc": "",
+          "tip": "Minus-plus sign, minus sign is on top, plus sign is below ",
+          "id": "sym.1.16",
+          "size": 1
+        },
+        {
+          "name": "\\cong",
+          "desc": "",
+          "tip": "short form of congruent denotes equivalent. Related:\\ncog",
+          "id": "sym.1.17",
+          "size": 1
+        },
+        {
+          "name": "\\approx",
+          "desc": "",
+          "tip": "Approximate to. Related:\\approxeq",
+          "id": "sym.1.18",
+          "size": 1
+        },
+        {
+          "name": "\\equiv",
+          "desc": "",
+          "tip": "Equivalent to",
+          "id": "sym.1.19",
+          "size": 1
+        },
+        {
+          "name": "\\forall",
+          "desc": "",
+          "tip": "Any one, all, every one",
+          "id": "sym.1.20",
+          "size": 1
+        },
+        {
+          "name": "\\partial",
+          "desc": "",
+          "tip": "Partial derivative symbol",
+          "id": "sym.1.21",
+          "size": 1
+        },
+        {
+          "name": "\\sqrt{x}",
+          "desc": "",
+          "tip": " Use \\sqrt [index]{radicand}to denote radical, or use \\root to denote index \\of to denote radical",
+          "id": "sym.1.22",
+          "size": 1
+        },
+        {
+          "name": "\\sqrt[3]{x}",
+          "desc": "",
+          "tip": " Use \\sqrt [index]{radicand}to denote radical, or use \\root to denote index \\of to denote radical ",
+          "id": "sym.1.23",
+          "size": 1
+        },
+        {
+          "name": "\\cup",
+          "desc": "",
+          "tip": "Union set, and. Related:\\Cup\\bigcup\\cap",
+          "id": "sym.1.25",
+          "size": 1
+        },
+        {
+          "name": "\\cap",
+          "desc": "",
+          "tip": "Intersection, and that. Related:\\Cap\\bigcap\\cup",
+          "id": "sym.1.26",
+          "size": 1
+        },
+        {
+          "name": "\\emptyset",
+          "desc": "",
+          "tip": "Empty set sign,related:\\varnothing",
+          "id": "sym.1.27",
+          "size": 1
+        },
+        {
+          "name": "\\%",
+          "desc": "",
+          "tip": "% denotes single-line comments in mathjax, sign of percentage is denoted by \\%",
+          "id": "sym.1.28",
+          "size": 1
+        },
+        {
+          "name": "°",
+          "desc": "",
+          "tip": "Sign of number of degree",
+          "id": "sym.1.29",
+          "size": 1
+        },
+        {
+          "name": "^{\\circ}F",
+          "desc": "",
+          "tip": "Fahrenheit degree, use \\circ sign to coordinate with the top and bottom’s corner marks to show relative signs",
+          "id": "sym.1.30",
+          "size": 1
+        },
+        {
+          "name": "^{\\circ}C",
+          "desc": "",
+          "tip": "Celsius degree, use \\circ sign to coordinate with the top and bottom’s corner marks to show relative signs ",
+          "id": "sym.1.31",
+          "size": 1
+        },
+        {
+          "name": "\\triangledown",
+          "desc": "",
+          "tip": "Lower triangular, related:\\triangle\\vartriangle",
+          "id": "sym.1.32",
+          "size": 1
+        },
+        {
+          "name": "\\vartriangle",
+          "desc": "",
+          "tip": "Variant of triangle, related:\\triangle",
+          "id": "sym.1.33",
+          "size": 1
+        },
+        {
+          "name": "\\nabla",
+          "desc": "",
+          "tip": "Sign of Nabla operator",
+          "id": "sym.1.34",
+          "size": 1
+        },
+        {
+          "name": "\\exists",
+          "desc": "",
+          "tip": "Exist, related:\\nexists",
+          "id": "sym.1.35",
+          "size": 1
+        },
+        {
+          "name": "\\nexists",
+          "desc": "",
+          "tip": "Not exist,related:\\nexists",
+          "id": "sym.1.36",
+          "size": 1
+        },
+        {
+          "name": "\\in",
+          "desc": "",
+          "tip": "Belong to,related:\\notin\\ni",
+          "id": "sym.1.37",
+          "size": 1
+        },
+        {
+          "name": "\\ni",
+          "desc": "",
+          "tip": "Include, related:\\owns\\in",
+          "id": "sym.1.38",
+          "size": 1
+        },
+        {
+          "name": "\\leftarrow",
+          "desc": "",
+          "tip": "Left arrow, related:\\rightarrow\\uparrow\\downarrow",
+          "id": "sym.1.39",
+          "size": 1
+        }
+      ]
+    },
+    {
+      "id": "sym.2",
+      "name": "Greek letter",
+      "desc": "",
+      "list": [
+        {
+          "name": "\\alpha",
+          "desc": "",
+          "tip": "Lower case of Alpha, use \\A to denote upper case ",
+          "id": "sym.2.1",
+          "size": 1
+        },
+        {
+          "name": "\\beta",
+          "desc": "",
+          "tip": "Lower case of Beta, use  \\B to denote upper case",
+          "id": "sym.2.2",
+          "size": 1
+        },
+        {
+          "name": "\\gamma",
+          "desc": "",
+          "tip": "Lower case of Gamma, use \\Gamma to denote upper case, use \\varGamma to denote variation of upper case",
+          "id": "sym.2.3",
+          "size": 1
+        },
+        {
+          "name": "\\delta",
+          "desc": "",
+          "tip": " Lower case of Delta, use \\Delta to denote upper case, use \\varDelta to denote variation of upper case ",
+          "id": "sym.2.4",
+          "size": 1
+        },
+        {
+          "name": "\\epsilon",
+          "desc": "",
+          "tip": " Lower case of Epsilon, use \\E to denote upper case, use \\varepsilon to denote variation of upper case ",
+          "id": "sym.2.5",
+          "size": 1
+        },
+        {
+          "name": "\\varepsilon",
+          "desc": "",
+          "tip": " Lower case of variation of Epsilon, use \\epsilon to denote variation of lower case, use E to denote upper case ",
+          "id": "sym.2.6",
+          "size": 1
+        },
+        {
+          "name": "\\zeta",
+          "desc": "",
+          "tip": "Lower case of Zeta, use \\Z to denote upper case ",
+          "id": "sym.2.7",
+          "size": 1
+        },
+        {
+          "name": "\\eta",
+          "desc": "",
+          "tip": " Lower case of Eta, use \\H to denote upper case ",
+          "id": "sym.2.8",
+          "size": 1
+        },
+        {
+          "name": "\\theta",
+          "desc": "",
+          "tip": " Theta, use \\Theta to denote upper case, use \\vartheta to denote variation of lower case, use \\varTheta to denote variation of upper case ",
+          "id": "sym.2.9",
+          "size": 1
+        },
+        {
+          "name": "\\vartheta",
+          "desc": "",
+          "tip": " Variation of lower case of Theta, use \\theta to denote proper case, use \\Theta to denote upper case, use \\varTheta to denote variation of upper case ",
+          "id": "sym.2.10",
+          "size": 1
+        },
+        {
+          "name": "\\iota",
+          "desc": "",
+          "tip": "Lower case of Iota, use \\I to denote upper case",
+          "id": "sym.2.11",
+          "size": 1
+        },
+        {
+          "name": "\\kappa",
+          "desc": "",
+          "tip": "Lower case of Kappa, use \\K to denote upper case, use \\varkappa to denote variation of lower case",
+          "id": "sym.2.12",
+          "size": 1
+        },
+        {
+          "name": "\\lambda",
+          "desc": "",
+          "tip": " Lower case of Lambda, use \\Lambda to denote upper case, use \\varlambda to denote variation of upper case ",
+          "id": "sym.2.13",
+          "size": 1
+        },
+        {
+          "name": "\\mu",
+          "desc": "",
+          "tip": "Lower case of Mu, use \\M to denote upper case",
+          "id": "sym.2.14",
+          "size": 1
+        },
+        {
+          "name": "\\nu",
+          "desc": "",
+          "tip": " Lower case of Nu, use \\N to denote upper case ",
+          "id": "sym.2.15",
+          "size": 1
+        },
+        {
+          "name": "\\xi",
+          "desc": "",
+          "tip": "Lower case of Xi, use \\Xi to denote upper case, use \\varXi to denote variation of upper case",
+          "id": "sym.2.16",
+          "size": 1
+        },
+        {
+          "name": "o",
+          "desc": "",
+          "tip": "Lower case of Omicron, use \\O to denote upper case",
+          "id": "sym.2.17",
+          "size": 1
+        },
+        {
+          "name": "\\pi",
+          "desc": "",
+          "tip": "lowercase style, uppercase style denotes by   PI, lowercase style denotes by   varpi, uppercase style   varpi",
+          "id": "sym.2.18",
+          "size": 1
+        },
+        {
+          "name": "\\rho",
+          "desc": "",
+          "tip": "Lower case of Rho, use \\P to denote upper case, use \\varrho to denote variation of lower case",
+          "id": "sym.2.19",
+          "size": 1
+        },
+        {
+          "name": "\\varrho",
+          "desc": "",
+          "tip": " Variation of lower case of Rho, use \\rho to denote proper case, use \\P to denote upper case ",
+          "id": "sym.2.20",
+          "size": 1
+        },
+        {
+          "name": "\\sigma",
+          "desc": "",
+          "tip": " Lower case of Sigma, use \\Sigma to denote upper case, equal to the summation sign. Use \\varsigma to denote variation of lower case, use \\varSigma to denote variation of upper case ",
+          "id": "sym.2.21",
+          "size": 1
+        },
+        {
+          "name": "\\varsigma",
+          "desc": "",
+          "tip": " Lower case of Sigma, use \\Sigma to denote proper case, use \\Sigma to denote upper case, equal to the summation sign \\sum. Use \\varSigma to denote variation of upper case ",
+          "id": "sym.2.22",
+          "size": 1
+        },
+        {
+          "name": "\\tau",
+          "desc": "",
+          "tip": "Lower case of Tao, use \\T to denote upper case",
+          "id": "sym.2.23",
+          "size": 1
+        },
+        {
+          "name": "\\upsilon",
+          "desc": "",
+          "tip": " Lower case of Upsilon, use \\Upsilon to denote upper case, use \\varupsilon to denote variation of lower case, use \\varUpsilon to denote variation of upper case ",
+          "id": "sym.2.24",
+          "size": 1
+        },
+        {
+          "name": "\\phi",
+          "desc": "",
+          "tip": " Lower case of Phi, use \\Phi to denote upper case, use \\varphi to denote variation of lower case, use \\varPhi to denote variation of upper case ",
+          "id": "sym.2.25",
+          "size": 1
+        },
+        {
+          "name": "\\varphi",
+          "desc": "",
+          "tip": " Lower case of Phi, use \\phi to denote proper case, use \\Phi to denote upper case, use \\varPhi to denote variation of upper case ",
+          "id": "sym.2.26",
+          "size": 1
+        },
+        {
+          "name": "\\chi",
+          "desc": "",
+          "tip": "Lower case of Chi, use \\X to denote upper case",
+          "id": "sym.2.27",
+          "size": 1
+        },
+        {
+          "name": "\\psi",
+          "desc": "",
+          "tip": "Lower case of Psi, use \\Psi to denote upper case, use \\varPsi to denote variation of upper case",
+          "id": "sym.2.28",
+          "size": 1
+        },
+        {
+          "name": "\\omega",
+          "desc": "",
+          "tip": " Lower case of Omega, use \\Omega to denote upper case, use \\varOmega to denote variation of upper case ",
+          "id": "sym.2.29",
+          "size": 1
+        },
+        {
+          "name": "A",
+          "desc": "",
+          "tip": "Upper case of Alpha, use \\alpha to denote lower case",
+          "id": "sym.2.30",
+          "size": 1
+        },
+        {
+          "name": "B",
+          "desc": "",
+          "tip": " Upper case of Beta, use \\beta to denote lower case ",
+          "id": "sym.2.31",
+          "size": 1
+        },
+        {
+          "name": "\\Gamma",
+          "desc": "",
+          "tip": " Upper case of Gamma, use \\gamma to denote lower case, use \\varGamma to denote variation of upper case",
+          "id": "sym.2.32",
+          "size": 1
+        },
+        {
+          "name": "\\Delta",
+          "desc": "",
+          "tip": " Upper case of Delta, use \\delta to denote lower case, use \\varDelta to denote variation of upper case ",
+          "id": "sym.2.33",
+          "size": 1
+        },
+        {
+          "name": "E",
+          "desc": "",
+          "tip": " Upper case of Epsilon, use \\epsilon to denote lower case, use \\varepsilon to denote variation of lower case ",
+          "id": "sym.2.34",
+          "size": 1
+        },
+        {
+          "name": "Z",
+          "desc": "",
+          "tip": "Upper case of Zeta, use \\zeta to denote lower case",
+          "id": "sym.2.35",
+          "size": 1
+        },
+        {
+          "name": "H",
+          "desc": "",
+          "tip": " Upper case of Eta, use \\eta to denote lower case ",
+          "id": "sym.2.36",
+          "size": 1
+        },
+        {
+          "name": "\\Theta",
+          "desc": "",
+          "tip": "Upper case of Theta, use \\theta to denote lower case, use \\vartheta to denote variation of lower case, use \\varTheta to denote variation of upper case",
+          "id": "sym.2.37",
+          "size": 1
+        },
+        {
+          "name": "I",
+          "desc": "",
+          "tip": "Upper case of Iota, use \\iota to denote upper case",
+          "id": "sym.2.38",
+          "size": 1
+        },
+        {
+          "name": "K",
+          "desc": "",
+          "tip": " Upper case of Kappa, use \\kappa to denote lower case, use \\varkappa to denote variation of lower case ",
+          "id": "sym.2.39",
+          "size": 1
+        },
+        {
+          "name": "\\Lambda",
+          "desc": "",
+          "tip": " Upper case of Lambda, use \\lambda to denote lower case, use \\varLambda to denote variation of upper case ",
+          "id": "sym.2.40",
+          "size": 1
+        },
+        {
+          "name": "M",
+          "desc": "",
+          "tip": "Upper case of Mu, use \\mu to denote lower case",
+          "id": "sym.2.41",
+          "size": 1
+        },
+        {
+          "name": "N",
+          "desc": "",
+          "tip": " Upper case of Nu, use \\nu to denote lower case ",
+          "id": "sym.2.42",
+          "size": 1
+        },
+        {
+          "name": "\\Xi",
+          "desc": "",
+          "tip": " Upper case of Xi, use \\xi to denote lower case, use \\varXi to denote variation of upper case ",
+          "id": "sym.2.43",
+          "size": 1
+        },
+        {
+          "name": "O",
+          "desc": "",
+          "tip": "Upper case of Omicron, use \\omicron to denote lower case",
+          "id": "sym.2.44",
+          "size": 1
+        },
+        {
+          "name": "\\Pi",
+          "desc": "",
+          "tip": " Upper case of Pi, use \\pi to denote lower case, use \\varPi to denote variation lower case, use \\varPi to denote variation upper case ",
+          "id": "sym.2.45",
+          "size": 1
+        },
+        {
+          "name": "P",
+          "desc": "",
+          "tip": " Upper case of Rho, use \\P to denote lower case, use \\varrho to denote variation of lower case ",
+          "id": "sym.2.46",
+          "size": 1
+        },
+        {
+          "name": "\\Sigma",
+          "desc": "",
+          "tip": " Upper case of Sigma, equals to the summation sign \\sum. Use \\sigma to denote lower case. Use \\varsigma to denote variation of lower case, use \\varSigma to denote variation of upper case ",
+          "id": "sym.2.47",
+          "size": 1
+        },
+        {
+          "name": "T",
+          "desc": "",
+          "tip": "Upper case of Tau, use \\tau to denote lower case",
+          "id": "sym.2.48",
+          "size": 1
+        },
+        {
+          "name": "\\Upsilon",
+          "desc": "",
+          "tip": " Upper case of Upsilon, use \\upsilon to denote lower case, use \\varupsilon to denote variation of lower case, use \\varUpsilon to denote variation of upper case ",
+          "id": "sym.2.49",
+          "size": 1
+        },
+        {
+          "name": "\\Phi",
+          "desc": "",
+          "tip": " Upper case of Phi, use \\phi to denote lower case, use \\varphi to denote variation of lower case, use \\varPhi to denote variation of upper case ",
+          "id": "sym.2.50",
+          "size": 1
+        },
+        {
+          "name": "\\varPhi",
+          "desc": "",
+          "tip": " Upper case of Phi, use \\phi to denote lower case, use \\varphi to denote variation of lower case, use \\varPhi to denote variation of upper case ",
+          "id": "sym.2.51",
+          "size": 1
+        },
+        {
+          "name": "X",
+          "desc": "",
+          "tip": "Upper case of Chi, use \\chi to denote lower case",
+          "id": "sym.2.52",
+          "size": 1
+        },
+        {
+          "name": "\\Psi",
+          "desc": "",
+          "tip": " Upper case of Chi, use \\chi to denote lower case, use \\varPsi to denote variation of upper case",
+          "id": "sym.2.53",
+          "size": 1
+        },
+        {
+          "name": "\\Omega",
+          "desc": "",
+          "tip": "Upper case ofOmega, use\\ omega to denote lower case, use\\ varOmega to denote variation of upper case",
+          "id": "sym.2.54",
+          "size": 1
+        }
+      ]
+    },
+    {
+      "id": "sym.3",
+      "name": "Sign of letters",
+      "desc": "",
+      "list": [
+        {
+          "name": "\\forall",
+          "desc": "",
+          "tip": "Any one, All, Every one",
+          "id": "sym.3.1",
+          "size": 1
+        },
+        {
+          "name": "\\complement",
+          "desc": "",
+          "tip": "Complementary sign",
+          "id": "sym.3.2",
+          "size": 1
+        },
+        {
+          "name": "\\mathbb{C}",
+          "desc": "",
+          "tip": "Set of complex number",
+          "id": "sym.3.3",
+          "size": 1
+        },
+        {
+          "name": "\\partial",
+          "desc": "",
+          "tip": "Partial derivative sign",
+          "id": "sym.3.4",
+          "size": 1
+        },
+        {
+          "name": "\\eth",
+          "desc": "",
+          "tip": "Eth sign ",
+          "id": "sym.3.5",
+          "size": 1
+        },
+        {
+          "name": "\\varepsilon",
+          "desc": "",
+          "tip": "Variation of Epsilon sign",
+          "id": "sym.3.6",
+          "size": 1
+        },
+        {
+          "name": "\\digamma",
+          "desc": "",
+          "tip": "Double Gamma function sign",
+          "id": "sym.3.7",
+          "size": 1
+        },
+        {
+          "name": "\\mathcal{H}",
+          "desc": "",
+          "tip": "Hand-written upper case H",
+          "id": "sym.3.8",
+          "size": 1
+        },
+        {
+          "name": "\\mathfrak{H}",
+          "desc": "",
+          "tip": "Ancient German letter H",
+          "id": "sym.3.9",
+          "size": 1
+        },
+        {
+          "name": "h",
+          "desc": "",
+          "tip": "Lower case h sign",
+          "id": "sym.3.10",
+          "size": 1
+        },
+        {
+          "name": "\\hbar",
+          "desc": "",
+          "tip": "Planck constant sign",
+          "id": "sym.3.11",
+          "size": 1
+        },
+        {
+          "name": "\\iota",
+          "desc": "",
+          "tip": "Lower case of Iota, use \\I  to denote upper case",
+          "id": "sym.3.12",
+          "size": 1
+        },
+        {
+          "name": "\\Im",
+          "desc": "",
+          "tip": "Capital complex number notation",
+          "id": "sym.3.13",
+          "size": 1
+        },
+        {
+          "name": "j",
+          "desc": "",
+          "tip": "Lower case j",
+          "id": "sym.3.14",
+          "size": 1
+        },
+        {
+          "name": "\\kappa",
+          "desc": "",
+          "tip": "Lower case Kappa",
+          "id": "sym.3.15",
+          "size": 1
+        },
+        {
+          "name": "\\mathcal{L}",
+          "desc": "",
+          "tip": "Hand-written L sign",
+          "id": "sym.3.16",
+          "size": 1
+        },
+        {
+          "name": "\\ell",
+          "desc": "",
+          "tip": "Hand-written lower case I sign",
+          "id": "sym.3.17",
+          "size": 1
+        },
+        {
+          "name": "\\mathbb{N}",
+          "desc": "",
+          "tip": "Upper case N sign, denotes natural numbers set",
+          "id": "sym.3.18",
+          "size": 1
+        },
+        {
+          "name": "\\wp",
+          "desc": "",
+          "tip": "",
+          "id": "sym.3.19",
+          "size": 1
+        },
+        {
+          "name": "\\mathbb{Q}",
+          "desc": "",
+          "tip": "Upper case Q sign, denotes rational numbers set",
+          "id": "sym.3.20",
+          "size": 1
+        },
+        {
+          "name": "\\mathcal{R}",
+          "desc": "",
+          "tip": "",
+          "id": "sym.3.21",
+          "size": 1
+        },
+        {
+          "name": "\\mathfrak{R}",
+          "desc": "",
+          "tip": "Ancient German letter R sign",
+          "id": "sym.3.22",
+          "size": 1
+        },
+        {
+          "name": "\\mathbb{R}",
+          "desc": "",
+          "tip": "Board body R, denotes real numbers set ",
+          "id": "sym.3.23",
+          "size": 1
+        },
+        {
+          "name": "\\mathbb{Z}",
+          "desc": "",
+          "tip": "Board body Z, denotes whole numbers set",
+          "id": "sym.3.24",
+          "size": 1
+        },
+        {
+          "name": "\\mathcal{e}",
+          "desc": "",
+          "tip": "Hand-written e, denotes natural index number sign",
+          "id": "sym.3.25",
+          "size": 1
+        },
+        {
+          "name": "\\exists",
+          "desc": "",
+          "tip": "Exist sign",
+          "id": "sym.3.26",
+          "size": 1
+        },
+        {
+          "name": "\\nexists",
+          "desc": "",
+          "tip": "Not exist sign",
+          "id": "sym.3.27",
+          "size": 1
+        },
+        {
+          "name": "\\mathcal{F}",
+          "desc": "",
+          "tip": "Hand-written F sign",
+          "id": "sym.3.28",
+          "size": 1
+        },
+        {
+          "name": "\\mathcal{M}",
+          "desc": "",
+          "tip": "Hand-written N",
+          "id": "sym.3.29",
+          "size": 1
+        },
+        {
+          "name": "\\aleph",
+          "desc": "",
+          "tip": "Ancient Hebrew letter sign aleph",
+          "id": "sym.3.30",
+          "size": 1
+        },
+        {
+          "name": "\\beth",
+          "desc": "",
+          "tip": "Transfinite cardinal number sign",
+          "id": "sym.3.31",
+          "size": 1
+        },
+        {
+          "name": "\\gimel",
+          "desc": "",
+          "tip": "Gimel function sign",
+          "id": "sym.3.32",
+          "size": 1
+        },
+        {
+          "name": "\\daleth",
+          "desc": "",
+          "tip": "An ancient Semitic sign",
+          "id": "sym.3.33",
+          "size": 1
+        }
+      ]
+    },
+    {
+      "id": "sym.4",
+      "name": "Operative sign",
+      "desc": "",
+      "list": [
+        {
+          "name": "+",
+          "desc": "",
+          "tip": "Plus sign is denoted by itself",
+          "id": "sym.4.1",
+          "size": 1
+        },
+        {
+          "name": "-",
+          "desc": "",
+          "tip": "Minus sign",
+          "id": "sym.4.2",
+          "size": 1
+        },
+        {
+          "name": "\\times",
+          "desc": "",
+          "tip": "Times sign",
+          "id": "sym.4.3",
+          "size": 1
+        },
+        {
+          "name": "\\div",
+          "desc": "",
+          "tip": "Division sign, related:\\times times sign",
+          "id": "sym.4.4",
+          "size": 1
+        },
+        {
+          "name": "\\pm",
+          "desc": "",
+          "tip": "Plus-minus sign, plus on the top. Related:\\mp",
+          "id": "sym.4.5",
+          "size": 1
+        },
+        {
+          "name": "\\mp",
+          "desc": "",
+          "tip": "Minus-plus sign, plus on the top. Related:\\pm",
+          "id": "sym.4.6",
+          "size": 1
+        },
+        {
+          "name": "\\propto",
+          "desc": "",
+          "tip": "Direct proportional to",
+          "id": "sym.4.7",
+          "size": 1
+        },
+        {
+          "name": "\\ast",
+          "desc": "",
+          "tip": "Snow flake sign, star sign ",
+          "id": "sym.4.8",
+          "size": 1
+        },
+        {
+          "name": "\\circ",
+          "desc": "",
+          "tip": "Circle sign, complex function action sign",
+          "id": "sym.4.9",
+          "size": 1
+        },
+        {
+          "name": "\\cdot",
+          "desc": "",
+          "tip": "Dot sign",
+          "id": "sym.4.10",
+          "size": 1
+        },
+        {
+          "name": "\\bullet",
+          "desc": "",
+          "tip": "Big black dot sign",
+          "id": "sym.4.11",
+          "size": 1
+        },
+        {
+          "name": "\\cap",
+          "desc": "",
+          "tip": "Intersection sign, related:\\cup",
+          "id": "sym.4.12",
+          "size": 1
+        },
+        {
+          "name": "\\cup",
+          "desc": "",
+          "tip": "Union set sign, related:\\cap",
+          "id": "sym.4.13",
+          "size": 1
+        },
+        {
+          "name": "\\uplus",
+          "desc": "",
+          "tip": "Disjoint union operator",
+          "id": "sym.4.14",
+          "size": 1
+        },
+        {
+          "name": "\\sqcap",
+          "desc": "",
+          "tip": "Denotes greatest lower bound",
+          "id": "sym.4.15",
+          "size": 1
+        },
+        {
+          "name": "\\sqcup",
+          "desc": "",
+          "tip": " least upper bound ",
+          "id": "sym.4.16",
+          "size": 1
+        },
+        {
+          "name": "\\wedge",
+          "desc": "",
+          "tip": "Disjunction sign",
+          "id": "sym.4.17",
+          "size": 1
+        },
+        {
+          "name": "\\vee",
+          "desc": "",
+          "tip": "Deny sign",
+          "id": "sym.4.18",
+          "size": 1
+        },
+        {
+          "name": "=",
+          "desc": "",
+          "tip": "Equal sign, related:\\not=",
+          "id": "sym.4.19",
+          "size": 1
+        },
+        {
+          "name": "\\not=",
+          "desc": "",
+          "tip": "Not equal sign",
+          "id": "sym.4.20",
+          "size": 1
+        },
+        {
+          "name": "\\lt",
+          "desc": "",
+          "tip": "Less than sign, related:\\le\\gtll",
+          "id": "sym.4.21",
+          "size": 1
+        },
+        {
+          "name": "\\gt",
+          "desc": "",
+          "tip": "Greater than sign, related:\\ge\\lt\\gg",
+          "id": "sym.4.22",
+          "size": 1
+        },
+        {
+          "name": "\\le",
+          "desc": "",
+          "tip": "Less than or equal to sign, related:\\It\\ge",
+          "id": "sym.4.23",
+          "size": 1
+        },
+        {
+          "name": "\\ge",
+          "desc": "",
+          "tip": "Greater than or equal to , related:\\gt\\le",
+          "id": "sym.4.24",
+          "size": 1
+        },
+        {
+          "name": "\\not\\lt",
+          "desc": "",
+          "tip": "Not less than",
+          "id": "sym.4.25",
+          "size": 1
+        },
+        {
+          "name": "\\not\\le",
+          "desc": "",
+          "tip": "Neither less than nor equal to",
+          "id": "sym.4.26",
+          "size": 1
+        },
+        {
+          "name": "\\not\\gt",
+          "desc": "",
+          "tip": "Not greater than",
+          "id": "sym.4.27",
+          "size": 1
+        },
+        {
+          "name": "\\not\\ge",
+          "desc": "",
+          "tip": "Neither greater than nor equal to",
+          "id": "sym.4.28",
+          "size": 1
+        },
+        {
+          "name": "\\equiv",
+          "desc": "",
+          "tip": "Equivalent sign",
+          "id": "sym.4.29",
+          "size": 1
+        },
+        {
+          "name": "\\sim",
+          "desc": "",
+          "tip": "Range sign",
+          "id": "sym.4.30",
+          "size": 1
+        },
+        {
+          "name": "\\simeq",
+          "desc": "",
+          "tip": "Approximately equal to",
+          "id": "sym.4.31",
+          "size": 1
+        },
+        {
+          "name": "\\approx",
+          "desc": "",
+          "tip": " Approximately equal to ",
+          "id": "sym.4.32",
+          "size": 1
+        },
+        {
+          "name": "\\cong",
+          "desc": "",
+          "tip": "Equivalent sign",
+          "id": "sym.4.33",
+          "size": 1
+        },
+        {
+          "name": "\\not \\equiv",
+          "desc": "",
+          "tip": "Not equivalent",
+          "id": "sym.4.34",
+          "size": 1
+        },
+        {
+          "name": "\\not\\simeq",
+          "desc": "",
+          "tip": "Not approximate to",
+          "id": "sym.4.35",
+          "size": 1
+        },
+        {
+          "name": "\\not\\approx",
+          "desc": "",
+          "tip": "Not approximate to",
+          "id": "sym.4.36",
+          "size": 1
+        },
+        {
+          "name": "\\not\\cong",
+          "desc": "",
+          "tip": "Not equivalent to",
+          "id": "sym.4.37",
+          "size": 1
+        },
+        {
+          "name": "\\propto",
+          "desc": "",
+          "tip": "Direct proportional to",
+          "id": "sym.4.38",
+          "size": 1
+        },
+        {
+          "name": "\\ll",
+          "desc": "",
+          "tip": "Far smaller than",
+          "id": "sym.4.39",
+          "size": 1
+        },
+        {
+          "name": "\\gg",
+          "desc": "",
+          "tip": "Far larger than",
+          "id": "sym.4.40",
+          "size": 1
+        },
+        {
+          "name": "\\in",
+          "desc": "",
+          "tip": "Belong to",
+          "id": "sym.4.41",
+          "size": 1
+        },
+        {
+          "name": "\\ni",
+          "desc": "",
+          "tip": "Include",
+          "id": "sym.4.42",
+          "size": 1
+        },
+        {
+          "name": "\\not\\in",
+          "desc": "",
+          "tip": "Not belong to",
+          "id": "sym.4.43",
+          "size": 1
+        },
+        {
+          "name": "\\not\\ni",
+          "desc": "",
+          "tip": "Not include",
+          "id": "sym.4.44",
+          "size": 1
+        },
+        {
+          "name": "\\subset",
+          "desc": "",
+          "tip": "Subset",
+          "id": "sym.4.45",
+          "size": 1
+        },
+        {
+          "name": "\\supset",
+          "desc": "",
+          "tip": "Superset",
+          "id": "sym.4.46",
+          "size": 1
+        },
+        {
+          "name": "\\subseteq",
+          "desc": "",
+          "tip": "Consists of",
+          "id": "sym.4.47",
+          "size": 1
+        },
+        {
+          "name": "\\supseteq",
+          "desc": "",
+          "tip": "Consist",
+          "id": "sym.4.48",
+          "size": 1
+        },
+        {
+          "name": "\\prec",
+          "desc": "",
+          "tip": "Preceding",
+          "id": "sym.4.49",
+          "size": 1
+        },
+        {
+          "name": "\\succ",
+          "desc": "",
+          "tip": "Succeeding",
+          "id": "sym.4.50",
+          "size": 1
+        },
+        {
+          "name": "\\preceq",
+          "desc": "",
+          "tip": "Predecessor or apposition",
+          "id": "sym.4.51",
+          "size": 1
+        },
+        {
+          "name": "\\succeq",
+          "desc": "",
+          "tip": "Successor or apposition",
+          "id": "sym.4.52",
+          "size": 1
+        },
+        {
+          "name": "\\sqsubset",
+          "desc": "",
+          "tip": "",
+          "id": "sym.4.53",
+          "size": 1
+        },
+        {
+          "name": "\\sqsupset",
+          "desc": "",
+          "tip": "",
+          "id": "sym.4.54",
+          "size": 1
+        },
+        {
+          "name": "\\sqsubseteq",
+          "desc": "",
+          "tip": "",
+          "id": "sym.4.55",
+          "size": 1
+        },
+        {
+          "name": "\\sqsupseteq",
+          "desc": "",
+          "tip": "",
+          "id": "sym.4.56",
+          "size": 1
+        },
+        {
+          "name": "\\parallel",
+          "desc": "",
+          "tip": "Parallel to",
+          "id": "sym.4.57",
+          "size": 1
+        },
+        {
+          "name": "\\perp",
+          "desc": "",
+          "tip": "Perpendicular to",
+          "id": "sym.4.58",
+          "size": 1
+        },
+        {
+          "name": "\\vdash",
+          "desc": "",
+          "tip": "Derivative relationship",
+          "id": "sym.4.59",
+          "size": 1
+        },
+        {
+          "name": "\\dashv",
+          "desc": "",
+          "tip": "",
+          "id": "sym.4.60",
+          "size": 1
+        },
+        {
+          "name": "\\bowtie",
+          "desc": "",
+          "tip": "",
+          "id": "sym.4.61",
+          "size": 1
+        },
+        {
+          "name": "\\asymp",
+          "desc": "",
+          "tip": "",
+          "id": "sym.4.62",
+          "size": 1
+        },
+        {
+          "name": "\\sum",
+          "desc": "",
+          "tip": "Summation sign",
+          "id": "sym.4.63",
+          "size": 1
+        },
+        {
+          "name": "\\int",
+          "desc": "",
+          "tip": "Single integral",
+          "id": "sym.4.64",
+          "size": 1
+        },
+        {
+          "name": "\\iint",
+          "desc": "",
+          "tip": "Double integral",
+          "id": "sym.4.65",
+          "size": 1
+        },
+        {
+          "name": "\\iiint",
+          "desc": "",
+          "tip": "Triple integral",
+          "id": "sym.4.66",
+          "size": 1
+        },
+        {
+          "name": "\\oint",
+          "desc": "",
+          "tip": "Circle integral sign",
+          "id": "sym.4.67",
+          "size": 1
+        },
+        {
+          "name": "\\oiint",
+          "desc": "",
+          "tip": "Area integral sign",
+          "id": "sym.4.78",
+          "size": 1
+        },
+        {
+          "name": "\\oiiint",
+          "desc": "",
+          "tip": "Volume integral sign",
+          "id": "sym.4.79",
+          "size": 1
+        },
+        {
+          "name": "\\prod",
+          "desc": "",
+          "tip": "Cumprod sign",
+          "id": "sym.4.68",
+          "size": 1
+        },
+        {
+          "name": "\\coprod",
+          "desc": "",
+          "tip": "",
+          "id": "sym.4.69",
+          "size": 1
+        },
+        {
+          "name": "\\bigcap",
+          "desc": "",
+          "tip": "Intersection sign",
+          "id": "sym.4.70",
+          "size": 1
+        },
+        {
+          "name": "\\bigcup",
+          "desc": "",
+          "tip": "Union set sign",
+          "id": "sym.4.71",
+          "size": 1
+        },
+        {
+          "name": "\\bigwedge",
+          "desc": "",
+          "tip": "Disjunction sign",
+          "id": "sym.4.72",
+          "size": 1
+        },
+        {
+          "name": "\\bigvee",
+          "desc": "",
+          "tip": "Conjunction sign",
+          "id": "sym.4.73",
+          "size": 1
+        },
+        {
+          "name": "\\bigodot",
+          "desc": "",
+          "tip": "",
+          "id": "sym.4.74",
+          "size": 1
+        },
+        {
+          "name": "\\bigotimes",
+          "desc": "",
+          "tip": "",
+          "id": "sym.4.75",
+          "size": 1
+        },
+        {
+          "name": "\\bigoplus",
+          "desc": "",
+          "tip": "",
+          "id": "sym.4.76",
+          "size": 1
+        },
+        {
+          "name": "\\biguplus",
+          "desc": "",
+          "tip": "",
+          "id": "sym.4.77",
+          "size": 1
+        }
+      ]
+    },
+    {
+      "id": "sym.5",
+      "name": "Arrow",
+      "desc": "",
+      "list": [
+        {
+          "name": "\\leftarrow",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.1",
+          "size": 1
+        },
+        {
+          "name": "\\rightarrow",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.2",
+          "size": 1
+        },
+        {
+          "name": "\\uparrow",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.3",
+          "size": 1
+        },
+        {
+          "name": "\\downarrow",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.4",
+          "size": 1
+        },
+        {
+          "name": "\\Leftarrow",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.5",
+          "size": 1
+        },
+        {
+          "name": "\\Rightarrow",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.6",
+          "size": 1
+        },
+        {
+          "name": "\\Uparrow",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.7",
+          "size": 1
+        },
+        {
+          "name": "\\Downarrow",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.8",
+          "size": 1
+        },
+        {
+          "name": "\\rightrightarrows",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.9",
+          "size": 1
+        },
+        {
+          "name": "\\leftleftarrows",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.10",
+          "size": 1
+        },
+        {
+          "name": "\\downdownarrows",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.11",
+          "size": 1
+        },
+        {
+          "name": "\\upuparrows",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.12",
+          "size": 1
+        },
+        {
+          "name": "\\nleftarrow",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.13",
+          "size": 1
+        },
+        {
+          "name": "\\nrightarrow",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.14",
+          "size": 1
+        },
+        {
+          "name": "\\nLeftarrow",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.15",
+          "size": 1
+        },
+        {
+          "name": "\\nRightarrow",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.16",
+          "size": 1
+        },
+        {
+          "name": "\\nleftrightarrow",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.17",
+          "size": 1
+        },
+        {
+          "name": "\\nLeftrightarrow",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.18",
+          "size": 1
+        },
+        {
+          "name": "\\leftrightarrow",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.19",
+          "size": 1
+        },
+        {
+          "name": "\\Leftrightarrow",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.20",
+          "size": 1
+        },
+        {
+          "name": "\\Updownarrow",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.21",
+          "size": 1
+        },
+        {
+          "name": "\\nearrow",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.22",
+          "size": 1
+        },
+        {
+          "name": "\\searrow",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.23",
+          "size": 1
+        },
+        {
+          "name": "\\nwarrow",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.24",
+          "size": 1
+        },
+        {
+          "name": "\\swarrow",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.25",
+          "size": 1
+        },
+        {
+          "name": "\\leftharpoonup",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.26",
+          "size": 1
+        },
+        {
+          "name": "\\rightharpoonup",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.27",
+          "size": 1
+        },
+        {
+          "name": "\\leftharpoondown",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.28",
+          "size": 1
+        },
+        {
+          "name": "\\rightharpoondown",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.29",
+          "size": 1
+        },
+        {
+          "name": "\\rightleftharpoons",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.30",
+          "size": 1
+        },
+        {
+          "name": "\\leftrightharpoons",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.31",
+          "size": 1
+        },
+        {
+          "name": "\\mapsto",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.32",
+          "size": 1
+        },
+        {
+          "name": "\\longmapsto",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.33",
+          "size": 1
+        },
+        {
+          "name": "\\leftarrowtail",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.34",
+          "size": 1
+        },
+        {
+          "name": "\\rightarrowtail",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.35",
+          "size": 1
+        },
+        {
+          "name": "\\rightsquigarrow",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.45",
+          "size": 1
+        },
+        {
+          "name": "\\leadsto",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.46",
+          "size": 1
+        },
+        {
+          "name": "\\leftrightsquigarrow",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.47",
+          "size": 1
+        },
+        {
+          "name": "\\twoheadleftarrow",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.48",
+          "size": 1
+        },
+        {
+          "name": "\\twoheadrightarrow",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.49",
+          "size": 1
+        },
+        {
+          "name": "\\circlearrowleft",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.50",
+          "size": 1
+        },
+        {
+          "name": "\\circlearrowright",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.51",
+          "size": 1
+        },
+        {
+          "name": "\\dashleftarrow",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.52",
+          "size": 1
+        },
+        {
+          "name": "\\dashrightarrow",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.53",
+          "size": 1
+        },
+        {
+          "name": "\\hookleftarrow",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.54",
+          "size": 1
+        },
+        {
+          "name": "\\hookrightarrow",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.55",
+          "size": 1
+        },
+        {
+          "name": "\\looparrowleft",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.56",
+          "size": 1
+        },
+        {
+          "name": "\\looparrowright",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.57",
+          "size": 1
+        },
+        {
+          "name": "\\vec{A}",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.42",
+          "size": 3
+        },
+        {
+          "name": "\\overleftarrow{A}",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.36",
+          "size": 3
+        },
+        {
+          "name": "\\underleftarrow{A}",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.39",
+          "size": 3
+        },
+        {
+          "name": "\\overrightarrow{AB}",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.37",
+          "size": 3
+        },
+        {
+          "name": "\\underrightarrow{AB}",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.40",
+          "size": 3
+        },
+        {
+          "name": "\\overleftrightarrow{AB}",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.38",
+          "size": 3
+        },
+        {
+          "name": "\\underleftrightarrow{AB}",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.41",
+          "size": 3
+        },
+        {
+          "name": "\\xleftarrow[f]{g}",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.43",
+          "size": 3
+        },
+        {
+          "name": "\\xrightarrow[Heating]{Catalyst}",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.44",
+          "size": 3
+        },
+        {
+          "name": "\\xlongequal{Light up}",
+          "desc": "",
+          "tip": "",
+          "id": "sym.5.45",
+          "size": 3
+        }
+      ]
+    },
+    {
+      "id": "sym.6",
+      "name": "Hand-written letter",
+      "desc": "",
+      "list": [
+        {
+          "name": "\\mathcal{abcdefg}",
+          "desc": "",
+          "tip": "Lower case variation letter, can be denoted by \\cal",
+          "id": "sym.6.2",
+          "size": 7
+        },
+        {
+          "name": "\\mathcal{ABCDEFG}",
+          "desc": "",
+          "tip": "Upper case variation letter, can be denoted by \\cal",
+          "id": "sym.6.1",
+          "size": 7
+        },
+        {
+          "name": "\\mathbb{abcdefg}",
+          "desc": "",
+          "tip": "Black board letter, can be denoted by \\Bbb",
+          "id": "sym.6.5",
+          "size": 7
+        },
+        {
+          "name": "\\mathbb{ABCDEFG}",
+          "desc": "",
+          "tip": "Black board letter, can be denoted by \\Bbb",
+          "id": "sym.6.4",
+          "size": 7
+        },
+        {
+          "name": "\\mathfrak{abcdefg}",
+          "desc": "",
+          "tip": "Ancient German letter, can be denoted by \\frak",
+          "id": "sym.6.7",
+          "size": 7
+        },
+        {
+          "name": "\\mathfrak{ABCDEFG}",
+          "desc": "",
+          "tip": " Ancient German letter, can be denoted by \\frak ",
+          "id": "sym.6.6",
+          "size": 7
+        }
+      ]
+    }
+  ],
+  "formulas": [
+    {
+      "id": "for.1",
+      "name": "Common formulas",
+      "desc": "",
+      "list": [
+        {
+          "name": "\\sqrt{x}",
+          "desc": "",
+          "tip": "Use \\sqrt [index]{radicand}to denote radical, square root can be denoted by \\sqrt{}. Related:\\root",
+          "id": "for.1.1",
+          "size": 1
+        },
+        {
+          "name": "\\sqrt[2]{x}",
+          "desc": "",
+          "tip": " Use \\sqrt [index]{radicand}to denote radical, square root can be denoted by \\sqrt{}. Related:\\root ",
+          "id": "for.1.2",
+          "size": 1
+        },
+        {
+          "name": "x_a",
+          "desc": "",
+          "tip": "Use_ to denote subscript, if subscript is more than a sign, use {} to contain. Related^",
+          "id": "for.1.3",
+          "size": 1
+        },
+        {
+          "name": "x^a",
+          "desc": "",
+          "tip": "Use ^ to denote superscript, if superscript is more than a sign, use {} to contain. Related _",
+          "id": "for.1.4",
+          "size": 1
+        },
+        {
+          "name": "x_a^b",
+          "desc": "",
+          "tip": "Subscript and superscript exist at the same time",
+          "id": "for.1.5",
+          "size": 1
+        },
+        {
+          "name": "x^{y^2}",
+          "desc": "",
+          "tip": "There is a composite structure in superscript",
+          "id": "for.1.6",
+          "size": 1
+        },
+        {
+          "name": "\\dfrac {\\pi} {2}",
+          "desc": "",
+          "tip": "Fraction can be denoted by \\frac{numerator}{denominator} or \\dfrac{numerator}{denominator} . The former can be adjusted according to the display of lines and equation, the latter display consistently in both lines and equation",
+          "id": "for.1.7",
+          "size": 3
+        },
+        {
+          "name": "a / b",
+          "desc": "",
+          "tip": "The horizontal form of fraction is usually used to denote simple fractions",
+          "id": "for.1.8",
+          "size": 3
+        },
+        {
+          "name": "\\frac ab",
+          "desc": "",
+          "tip": "Fraction can be denoted by \\frac{numerator}{denominator} or \\dfrac{numerator}{denominator} . The former can be adjusted according to the display of lines and equation, the latter display consistently in both lines and equation",
+          "id": "for.1.9",
+          "size": 3
+        },
+        {
+          "name": "\\frac{a+1}{b+1}",
+          "desc": "",
+          "tip": "Fraction can be denoted by \\frac{numerator}{denominator} or \\dfrac{numerator}{denominator} . The former can be adjusted according to the display of lines and equation, the latter display consistently in both lines and equation",
+          "id": "for.1.10",
+          "size": 3
+        },
+        {
+          "name": "\\frac {dx}{dy}",
+          "desc": "",
+          "tip": "Differential ratio",
+          "id": "for.1.11",
+          "size": 3
+        },
+        {
+          "name": "\\frac {\\delta y}{\\delta x}",
+          "desc": "",
+          "tip": "Finite difference ratio",
+          "id": "for.1.12",
+          "size": 3
+        },
+        {
+          "name": "\\frac {\\partial x}{\\partial y}",
+          "desc": "",
+          "tip": "Partial differential ratio",
+          "id": "for.1.13",
+          "size": 3
+        },
+        {
+          "name": "\\frac {\\Delta x} {\\Delta y}",
+          "desc": "",
+          "tip": "Differential ratio",
+          "id": "for.1.14",
+          "size": 3
+        },
+        {
+          "name": "e^{-i\\omega t}",
+          "desc": "",
+          "tip": "Common expressions of complex functions",
+          "id": "for.1.15",
+          "size": 5
+        },
+        {
+          "name": "\\sqrt{a^2 + b^2}",
+          "desc": "",
+          "tip": "Common root form",
+          "id": "for.1.16",
+          "size": 5
+        },
+        {
+          "name": "\\frac {-b \\pm \\sqrt{b^2 -4ac}} {2a}",
+          "desc": "",
+          "tip": "Common root form",
+          "id": "for.1.17",
+          "size": 5
+        },
+        {
+          "name": "\\frac{2}{1+\\frac{2}{1+\\frac{2}{1}}}",
+          "desc": "",
+          "tip": "Continuous fraction form ",
+          "id": "for.1.18",
+          "size": 5
+        }
+      ]
+    },
+    {
+      "id": "for.7",
+      "name": "Function",
+      "desc": "",
+      "list": [
+        {
+          "name": "\\log x",
+          "desc": "",
+          "tip": "Logarithm function, related:\\n",
+          "id": "for.7.1",
+          "size": 2
+        },
+        {
+          "name": "\\log_2 x",
+          "desc": "",
+          "tip": "Common logarithm function, related:\\n",
+          "id": "for.7.1",
+          "size": 2
+        },
+        {
+          "name": "\\ln x",
+          "desc": "",
+          "tip": "Logarithm function with a natural number as base number, related:\\log",
+          "id": "for.7.1",
+          "size": 2
+        },
+        {
+          "name": "\\sin",
+          "desc": "",
+          "tip": "Sine function",
+          "id": "for.7.1",
+          "size": 2
+        },
+        {
+          "name": "\\cos",
+          "desc": "",
+          "tip": "Cosine function",
+          "id": "for.7.2",
+          "size": 2
+        },
+        {
+          "name": "\\tan",
+          "desc": "",
+          "tip": "Tangent function,related:\\cot",
+          "id": "for.7.3",
+          "size": 2
+        },
+        {
+          "name": "\\cot",
+          "desc": "",
+          "tip": "Cotangent function, related:\\tan",
+          "id": "for.7.4",
+          "size": 2
+        },
+        {
+          "name": "\\sec",
+          "desc": "",
+          "tip": "Secant function, related:\\csc",
+          "id": "for.7.5",
+          "size": 2
+        },
+        {
+          "name": "\\csc",
+          "desc": "",
+          "tip": "Secant function, related:\\sec",
+          "id": "for.7.6",
+          "size": 2
+        },
+        {
+          "name": "\\sinh",
+          "desc": "",
+          "tip": "Hyperbolic sine function, related:\\cosh",
+          "id": "for.7.13",
+          "size": 2
+        },
+        {
+          "name": "\\cosh",
+          "desc": "",
+          "tip": "Hyperbolic cosine function, related:\\sinh",
+          "id": "for.7.14",
+          "size": 2
+        },
+        {
+          "name": "\\tanh",
+          "desc": "",
+          "tip": "Hyperbolic tangent function, related:\\coth",
+          "id": "for.7.15",
+          "size": 2
+        },
+        {
+          "name": "\\coth",
+          "desc": "",
+          "tip": "Hyperbolic cotangent function, related:\\tanh",
+          "id": "for.7.16",
+          "size": 2
+        },
+        {
+          "name": "\\arcsin",
+          "desc": "",
+          "tip": "Arc-sine function",
+          "id": "for.7.7",
+          "size": 4
+        },
+        {
+          "name": "\\arccos",
+          "desc": "",
+          "tip": "Arc-cosine function",
+          "id": "for.7.8",
+          "size": 4
+        },
+        {
+          "name": "\\arctan",
+          "desc": "",
+          "tip": "Arc-tangent function ",
+          "id": "for.7.9",
+          "size": 4
+        },
+        {
+          "name": "\\tan \\theta = \\dfrac {\\sin \\theta} {\\cos \\theta}",
+          "desc": "",
+          "tip": "Trigonometric equation",
+          "id": "for.7.27",
+          "size": 6
+        }
+      ]
+    },
+    {
+      "id": "for.6",
+      "name": "Bracket",
+      "desc": "",
+      "list": [
+        {
+          "name": "()",
+          "desc": "",
+          "tip": "Parenthesis, can use \\left and \\right to adjust the height",
+          "id": "for.6.1",
+          "size": 2
+        },
+        {
+          "name": "[]",
+          "desc": "",
+          "tip": "Square bracket, can use \\left and \\right to adjust the height",
+          "id": "for.6.2",
+          "size": 2
+        },
+        {
+          "name": "||",
+          "desc": "",
+          "tip": "Vertical separator, can use \\left and \\right to adjust the height",
+          "id": "for.6.3",
+          "size": 2
+        },
+        {
+          "name": "\\{\\}",
+          "desc": "",
+          "tip": "Brace, use transform backslash expressions to denote",
+          "id": "for.6.4",
+          "size": 2
+        },
+        {
+          "name": "\\langle\\rangle",
+          "desc": "",
+          "tip": "Angle bracket, can use \\left and \\right to adjust the height",
+          "id": "for.6.5",
+          "size": 2
+        },
+        {
+          "name": "\\lbrack\\rbrack",
+          "desc": "",
+          "tip": "Square bracket, can use \\left and \\right to adjust the height",
+          "id": "for.6.6",
+          "size": 2
+        },
+        {
+          "name": "\\lceil \\rceil",
+          "desc": "",
+          "tip": "Left and right corner sign, can use \\left and \\right to adjust the height",
+          "id": "for.6.7",
+          "size": 2
+        },
+        {
+          "name": "\\lgroup \\rgroup",
+          "desc": "",
+          "tip": "Can use \\left and \\right to adjust the height",
+          "id": "for.6.8",
+          "size": 2
+        },
+        {
+          "name": "<>",
+          "desc": "",
+          "tip": "Angle bracket, can use \\left and \\right to adjust the height",
+          "id": "for.6.9",
+          "size": 2
+        },
+        {
+          "name": "\\lfloor \\rfloor",
+          "desc": "",
+          "tip": " Left and right corner sign , can use \\left and \\right to adjust the height ",
+          "id": "for.6.10",
+          "size": 2
+        },
+        {
+          "name": "\\lmoustache \\rmoustache",
+          "desc": "",
+          "tip": "Beard , can use \\left and \\right to adjust the height ",
+          "id": "for.6.11",
+          "size": 2
+        },
+        {
+          "name": "\\Vert \\Vert",
+          "desc": "",
+          "tip": "Norm tag, can use \\left and \\right to adjust the height ",
+          "id": "for.6.12",
+          "size": 2
+        },
+        {
+          "name": "(x|y)",
+          "desc": "",
+          "tip": "in",
+          "id": "for.6.15",
+          "size": 3
+        },
+        {
+          "name": "\\{x |y \\}",
+          "desc": "",
+          "tip": "",
+          "id": "for.6.16",
+          "size": 3
+        },
+        {
+          "name": "\\langle x| y \\rangle",
+          "desc": "",
+          "tip": "Scalar product sign",
+          "id": "for.6.17",
+          "size": 3
+        },
+        {
+          "name": "\\langle x| y| z\\rangle",
+          "desc": "",
+          "tip": "",
+          "id": "for.6.18",
+          "size": 3
+        },
+        {
+          "name": "a \\atop b",
+          "desc": "",
+          "tip": "Vertical column denotes 1",
+          "id": "for.6.21",
+          "size": 3
+        },
+        {
+          "name": "\\left ( a \\atop b \\right )",
+          "desc": "",
+          "tip": "Vertical column denotes 2",
+          "id": "for.6.22",
+          "size": 3
+        },
+        {
+          "name": "\\cases{ a \\cr b}",
+          "desc": "",
+          "tip": " Vertical column denotes 3",
+          "id": "for.6.19",
+          "size": 3
+        },
+        {
+          "name": "\\cases{ a \\cr b \\cr c}",
+          "desc": "",
+          "tip": " Vertical column denotes 4",
+          "id": "for.6.20",
+          "size": 3
+        },
+        {
+          "name": "\\tbinom n k",
+          "desc": "",
+          "tip": "Binomial distribution coefficient denotes, related:\\binom n k",
+          "id": "for.6.24",
+          "size": 3
+        },
+        {
+          "name": "\\binom n k",
+          "desc": "",
+          "tip": " Binomial distribution coefficient , related:\\binom n k",
+          "id": "for.6.25",
+          "size": 3
+        },
+        {
+          "name": "\\langle {a \\atop b} \\rangle",
+          "desc": "",
+          "tip": "",
+          "id": "for.6.26",
+          "size": 3
+        },
+        {
+          "name": "\\left ( \\frac{a+1}{b+1} \\right )",
+          "desc": "",
+          "tip": "Common form of fraction",
+          "id": "for.6.14",
+          "size": 5
+        },
+        {
+          "name": "f(x) = \\begin{cases} -x,  &x<0 \\cr  x,  &x>0 \\end{cases}",
+          "desc": "",
+          "tip": "Piecewise fraction, use \\begin{case} equation\\end{cases} to denote",
+          "id": "for.6.23",
+          "size": 5
+        }
+      ]
+    },
+    {
+      "id": "for.8",
+      "name": "Derivative sign",
+      "desc": "",
+      "list": [
+        {
+          "name": "\\hat A",
+          "desc": "",
+          "tip": "Hat label",
+          "id": "for.8.1",
+          "size": 1
+        },
+        {
+          "name": "\\tilde A",
+          "desc": "",
+          "tip": "Curve label",
+          "id": "for.8.2",
+          "size": 1
+        },
+        {
+          "name": "\\check A",
+          "desc": "",
+          "tip": "",
+          "id": "for.8.3",
+          "size": 1
+        },
+        {
+          "name": "\\dot A",
+          "desc": "",
+          "tip": "Dot label, usually used on derivatives ",
+          "id": "for.8.4",
+          "size": 1
+        },
+        {
+          "name": "\\ddot A",
+          "desc": "",
+          "tip": "Double-dot label",
+          "id": "for.8.5",
+          "size": 1
+        },
+        {
+          "name": "\\dddot A",
+          "desc": "",
+          "tip": "Triple-dot label",
+          "id": "for.8.6",
+          "size": 1
+        },
+        {
+          "name": "{A}'",
+          "desc": "",
+          "tip": "",
+          "id": "for.8.7",
+          "size": 1
+        },
+        {
+          "name": "{A}''",
+          "desc": "",
+          "tip": "",
+          "id": "for.8.8",
+          "size": 1
+        },
+        {
+          "name": "\\grave{A}",
+          "desc": "",
+          "tip": "",
+          "id": "for.8.9",
+          "size": 1
+        },
+        {
+          "name": "\\acute{A}",
+          "desc": "",
+          "tip": "",
+          "id": "for.8.10",
+          "size": 1
+        },
+        {
+          "name": "\\breve A",
+          "desc": "",
+          "tip": "",
+          "id": "for.8.11",
+          "size": 1
+        },
+        {
+          "name": "\\bar A",
+          "desc": "",
+          "tip": "",
+          "id": "for.8.12",
+          "size": 1
+        },
+        {
+          "name": "\\vec A",
+          "desc": "",
+          "tip": "",
+          "id": "for.8.13",
+          "size": 1
+        },
+        {
+          "name": "\\not A",
+          "desc": "",
+          "tip": "",
+          "id": "for.8.14",
+          "size": 1
+        },
+        {
+          "name": "A^{\\circ}",
+          "desc": "",
+          "tip": "Number of degree label",
+          "id": "for.8.15",
+          "size": 1
+        },
+        {
+          "name": "\\overleftarrow{AB}",
+          "desc": "",
+          "tip": "Direction label 1",
+          "id": "for.8.16",
+          "size": 2
+        },
+        {
+          "name": "\\overrightarrow{AB}",
+          "desc": "",
+          "tip": " Direction label 2",
+          "id": "for.8.17",
+          "size": 2
+        },
+        {
+          "name": "\\overleftrightarrow{AB}",
+          "desc": "",
+          "tip": " Direction label 3",
+          "id": "for.8.18",
+          "size": 2
+        },
+        {
+          "name": "\\overline{ABC}",
+          "desc": "",
+          "tip": "",
+          "id": "for.8.19",
+          "size": 2
+        },
+        {
+          "name": "\\underline{ABC}",
+          "desc": "",
+          "tip": "",
+          "id": "for.8.20",
+          "size": 2
+        },
+        {
+          "name": "\\overbrace{ABC}",
+          "desc": "",
+          "tip": "",
+          "id": "for.8.21",
+          "size": 2
+        },
+        {
+          "name": "\\underbrace{ABC}",
+          "desc": "",
+          "tip": "",
+          "id": "for.8.22",
+          "size": 2
+        },
+        {
+          "name": "\\overset{a}{ABC}",
+          "desc": "",
+          "tip": "",
+          "id": "for.8.23",
+          "size": 2
+        },
+        {
+          "name": "\\underset{a}{ABC}",
+          "desc": "",
+          "tip": "",
+          "id": "for.8.24",
+          "size": 2
+        },
+        {
+          "name": "\\widetilde{ABC}",
+          "desc": "",
+          "tip": "",
+          "id": "for.8.25",
+          "size": 2
+        }
+      ]
+    },
+    {
+      "id": "for.4",
+      "name": "Calculus",
+      "desc": "",
+      "list": [
+        {
+          "name": "dx",
+          "desc": "",
+          "tip": "Differential label",
+          "id": "for.4.1",
+          "size": 2
+        },
+        {
+          "name": "\\partial x",
+          "desc": "",
+          "tip": "Partial differential label",
+          "id": "for.4.1",
+          "size": 2
+        },
+        {
+          "name": "\\delta x",
+          "desc": "",
+          "tip": "Finite difference label",
+          "id": "for.4.1",
+          "size": 2
+        },
+        {
+          "name": "\\dot A",
+          "desc": "",
+          "tip": "Derivative label",
+          "id": "for.4.1",
+          "size": 2
+        },
+        {
+          "name": "f'(x)",
+          "desc": "",
+          "tip": "The first derivative of function label",
+          "id": "for.4.1",
+          "size": 3
+        },
+        {
+          "name": "\\int_0^{\\pi}{dx}",
+          "desc": "",
+          "tip": "Integral label 1, integration is limited on the left",
+          "id": "for.4.2",
+          "size": 3
+        },
+        {
+          "name": "\\intop\\limits_{x}^{y} dx",
+          "desc": "",
+          "tip": " Integral label 2, integration is limited on the top and bottom ",
+          "id": "for.4.3",
+          "size": 3
+        },
+        {
+          "name": "\\iint{dxdy}",
+          "desc": "",
+          "tip": "Double integral label, related:\\int\\iiint",
+          "id": "for.4.4",
+          "size": 3
+        },
+        {
+          "name": "\\iint_0^{\\pi}{dxdy}",
+          "desc": "",
+          "tip": "Double integral label, integration is limited on the right. Use \\limits_{lower limit}^{upper limit} to denotes upper and lower limits’ label",
+          "id": "for.4.5",
+          "size": 3
+        },
+        {
+          "name": "\\iint\\limits_0^{\\pi}{dxdy}",
+          "desc": "",
+          "tip": "Double integral label, integration is limited on top and bottom",
+          "id": "for.4.6",
+          "size": 3
+        },
+        {
+          "name": "\\iiint",
+          "desc": "",
+          "tip": "Triple integral label",
+          "id": "for.4.7",
+          "size": 3
+        },
+        {
+          "name": "\\iiint_0^{\\pi}dxdydz",
+          "desc": "",
+          "tip": " Triple integral, integration is limited on the right, use \\limits_{lower limit}^{upper limit} to denote upper and lower limits’ label",
+          "id": "for.4.8",
+          "size": 3
+        },
+        {
+          "name": "\\iiint\\limits_0^\\pi dxdydz",
+          "desc": "",
+          "tip": "Triple integral, integration is limited on the top and bottom",
+          "id": "for.4.9",
+          "size": 3
+        },
+        {
+          "name": "\\oint",
+          "desc": "",
+          "tip": "Contour integral label",
+          "id": "for.4.10",
+          "size": 3
+        },
+        {
+          "name": "\\oint\\limits_0^\\pi",
+          "desc": "",
+          "tip": " Contour integral, integration is limited on top and bottom",
+          "id": "for.4.11",
+          "size": 3
+        },
+        {
+          "name": "\\oint_0^\\pi",
+          "desc": "",
+          "tip": " Contour integral, integration is limited on the right",
+          "id": "for.4.12",
+          "size": 3
+        },
+        {
+          "name": "\\oiint",
+          "desc": "",
+          "tip": "Area integral label",
+          "id": "for.4.16",
+          "size": 3
+        },
+        {
+          "name": "\\oiint\\limits_0^\\pi",
+          "desc": "",
+          "tip": "Area integral, integration is limited on top and bottom",
+          "id": "for.4.17",
+          "size": 3
+        },
+        {
+          "name": "\\oiint_0^\\pi",
+          "desc": "",
+          "tip": " Area integral, integration is limited on the right",
+          "id": "for.4.18",
+          "size": 3
+        },
+        {
+          "name": "\\oiiint",
+          "desc": "",
+          "tip": "Volume integral label",
+          "id": "for.4.19",
+          "size": 3
+        },
+        {
+          "name": "\\oiiint\\limits_0^\\pi",
+          "desc": "",
+          "tip": "Volume integral label, integration is limited on top and bottom ",
+          "id": "for.4.20",
+          "size": 3
+        },
+        {
+          "name": "\\oiiint_0^\\pi",
+          "desc": "",
+          "tip": " Volume integral label, integration is limited on the right",
+          "id": "for.4.21",
+          "size": 3
+        },
+        {
+          "name": "\\lim_{n \\rightarrow\\infty}f(n)",
+          "desc": "",
+          "tip": "Limit, limit label is on the right",
+          "id": "for.4.14",
+          "size": 5
+        },
+        {
+          "name": "\\lim\\limits_{n \\rightarrow\\infty}f(n)",
+          "desc": "",
+          "tip": "Limit, use \\limits_{} to display limit label on the right bottom",
+          "id": "for.4.15",
+          "size": 5
+        }
+      ]
+    },
+    {
+      "id": "for.10",
+      "name": "Matrix",
+      "desc": "",
+      "list": [
+        {
+          "name": "\\cdots",
+          "desc": "",
+          "tip": " Ellipsis, display by horizontally centered ",
+          "id": "for.10.8",
+          "size": 2
+        },
+        {
+          "name": "\\ldots",
+          "desc": "",
+          "tip": " Ellipsis, display on the bottom line position ",
+          "id": "for.10.9",
+          "size": 2
+        },
+        {
+          "name": "\\vdots",
+          "desc": "",
+          "tip": "Vertical ellipsis",
+          "id": "for.10.10",
+          "size": 2
+        },
+        {
+          "name": "\\ddots",
+          "desc": "",
+          "tip": "Oblique ellipsis, usually used to denote the omitted part of the matrix",
+          "id": "for.10.11",
+          "size": 2
+        },
+        {
+          "name": "\\matrix {a & b}",
+          "desc": "",
+          "tip": "Single-row matrixes, use & to separate different columns",
+          "id": "for.10.1",
+          "size": 2
+        },
+        {
+          "name": "\\matrix{a \\cr b}",
+          "desc": "",
+          "tip": " Single-row matrixes, use \\\\or\\cr to separate different columns ",
+          "id": "for.10.2",
+          "size": 2
+        },
+        {
+          "name": "\\matrix{a & b \\cr c & d}",
+          "desc": "",
+          "tip": "2*2 matrix denotes, not including brackets",
+          "id": "for.10.5",
+          "size": 3
+        },
+        {
+          "name": "\\left ( \\matrix{a & b \\cr c & d} \\right )",
+          "desc": "",
+          "tip": "Parenthesis surrounds 2*2 matrix, use \\left \\right to adjust the size of parenthesis automatically",
+          "id": "for.10.12",
+          "size": 3
+        },
+        {
+          "name": "\\left \\langle \\matrix{a & b \\cr c & d} \\right \\rangle",
+          "desc": "",
+          "tip": "Arrow bracket surrounds 2*2 matrix, use \\left \\right to adjust the size of parenthesis automatically ",
+          "id": "for.10.13",
+          "size": 3
+        },
+        {
+          "name": "\\left \\lbrace \\matrix{a & b \\cr c & d} \\right \\rbrace",
+          "desc": "",
+          "tip": "Square bracket surrounds 2*2 matrix, use \\left \\right to adjust the size of parenthesis automatically ",
+          "id": "for.10.14",
+          "size": 3
+        },
+        {
+          "name": "\\left \\lbrack \\matrix{a & b \\cr c & d} \\right \\rbrack",
+          "desc": "",
+          "tip": "Brace surrounds 2*2 matrix, use \\left \\right to adjust the size of parenthesis automatically ",
+          "id": "for.10.15",
+          "size": 3
+        },
+        {
+          "name": "\\left | \\matrix{a & b \\cr c & d} \\right |",
+          "desc": "",
+          "tip": "Vertical line surrounds 2*2 matrix, use \\left \\right to adjust the size of parenthesis automatically ",
+          "id": "for.10.16",
+          "size": 3
+        },
+        {
+          "name": "\\left \\Vert \\matrix{a & b \\cr c & d} \\right \\Vert",
+          "desc": "",
+          "tip": "Double vertical line surrounds 2*2 matrix, use \\left \\right to adjust the size of parenthesis automatically ",
+          "id": "for.10.17",
+          "size": 3
+        },
+        {
+          "name": "\\begin{bmatrix} aaa & b \\cr c & ddd \\end {bmatrix}",
+          "desc": "",
+          "tip": "Square bracket surrounds 2*2 matrix, use {bmatrix} environmental label ",
+          "id": "for.10.19",
+          "size": 3
+        },
+        {
+          "name": "\\matrix {a & b & c}",
+          "desc": "",
+          "tip": "Matrix 1*3, use & to separate different columns",
+          "id": "for.10.3",
+          "size": 4
+        },
+        {
+          "name": "\\matrix {a \\cr b \\cr c}",
+          "desc": "",
+          "tip": "Matrix 3*1, use \\\\ or \\cr to separate different columns",
+          "id": "for.10.4",
+          "size": 4
+        },
+        {
+          "name": "\\matrix{a & b & c \\cr d & e & f}",
+          "desc": "",
+          "tip": "Matrix 2*3",
+          "id": "for.10.6",
+          "size": 4
+        },
+        {
+          "name": "\\left[ \\begin{array}{cc|c} a&b&c \\cr x&y&z \\end{array} \\right]",
+          "desc": "",
+          "tip": "Augmented matrix, use \\begin{array}\\end{array} environment, add vertical lines at the aligning label behind \\begin{array}, to denote vertical separation { cc|c }",
+          "id": "for.10.19",
+          "size": 4
+        },
+        {
+          "name": "\\matrix{x_1 & x_2 & x_3 \\cr x_4 & x_5 & x_6 \\cr x_7 & x_8 & x_9}",
+          "desc": "",
+          "tip": "Common matrix of 3*3",
+          "id": "for.10.7",
+          "size": 5
+        },
+        {
+          "name": "\\begin{array}{lc|r} aaa & bbb & ccc \\cr xx & yy & z \\cr n & n & n \\end{array}",
+          "desc": "",
+          "tip": "Augmented matrix of 3*3",
+          "id": "for.10.7",
+          "size": 5
+        },
+        {
+          "name": "\\begin{array}{c|lcr} n & \\text{左对齐} & \\text{居中对齐} & \\text{右对齐} \\cr \\hline 1 & 0.24 & 1 & 125 \\cr 2 & -1 & 189 & -8 \\cr 3 & -20 & 2000 & 1+10i \\end{array}",
+          "desc": "",
+          "tip": "Tabular matrix. Use aligning label { c|lcr } to add vertical separation lines, use \\hline to denote horizontal separation lines",
+          "id": "for.10.7",
+          "size": 6
+        },
+        {
+          "name": "\\pmatrix {a_{11} & a_{12} & \\ldots & a_{1n} \\cr a_{21} & a_{22} & \\ldots & a_{2n} \\cr \\vdots & \\vdots & \\ddots & \\vdots \\cr a_{m1} & a_{m2} & \\ldots & a_{mn} \\cr    }",
+          "desc": "",
+          "tip": "Matrix m*n",
+          "id": "for.10.18",
+          "size": 6
+        }
+      ]
+    },
+    {
+      "id": "for.5",
+      "name": "Large operator",
+      "desc": "",
+      "list": [
+        {
+          "name": "\\sum",
+          "desc": "",
+          "tip": "Summation sign, the size of sign will adjust automatically according to the upper and lower limitations",
+          "id": "for.5.1",
+          "size": 3
+        },
+        {
+          "name": "\\sum_{1}^{100}",
+          "desc": "",
+          "tip": " Summation sign, use upper small scale to denote upper and lower limitations",
+          "id": "for.5.2",
+          "size": 3
+        },
+        {
+          "name": "\\sum\\limits_{i=1}^{i=100}",
+          "desc": "",
+          "tip": "Summation sign, use \\limits_{lower limit}^{upper limit} to display upper and lower limitations on the right above and right below",
+          "id": "for.5.3",
+          "size": 3
+        },
+        {
+          "name": "\\displaystyle \\sum\\nolimits_{i=1}^{i=100}{i^2}",
+          "desc": "",
+          "tip": "Common summation label",
+          "id": "for.5.4",
+          "size": 3
+        },
+        {
+          "name": "\\prod",
+          "desc": "",
+          "tip": "Multiplication sign, the size of sign adjust automatically according to the equation",
+          "id": "for.5.5",
+          "size": 3
+        },
+        {
+          "name": "\\prod_{1}^{100}",
+          "desc": "",
+          "tip": "Multiplication sign, upper and lower limits are on the right of the sign",
+          "id": "for.5.6",
+          "size": 3
+        },
+        {
+          "name": "\\prod\\limits_{i=1}^{i=100}",
+          "desc": "",
+          "tip": " Multiplication sign, upper and lower limits are displayed on the right above and right below",
+          "id": "for.5.7",
+          "size": 3
+        },
+        {
+          "name": "\\displaystyle \\prod\\nolimits_{i=1}^{i=100}{i^2}",
+          "desc": "",
+          "tip": "Common multiplication form",
+          "id": "for.5.8",
+          "size": 3
+        },
+        {
+          "name": "\\coprod",
+          "desc": "",
+          "tip": "",
+          "id": "for.5.9",
+          "size": 3
+        },
+        {
+          "name": "\\coprod_{1}^{100}",
+          "desc": "",
+          "tip": "",
+          "id": "for.5.10",
+          "size": 3
+        },
+        {
+          "name": "\\coprod\\limits_{i=1}^{i=100}",
+          "desc": "",
+          "tip": "",
+          "id": "for.5.11",
+          "size": 3
+        },
+        {
+          "name": "\\displaystyle \\coprod\\nolimits_{i=1}^{i=100}{i^2}",
+          "desc": "",
+          "tip": "",
+          "id": "for.5.12",
+          "size": 3
+        },
+        {
+          "name": "\\bigcap",
+          "desc": "",
+          "tip": "Intersection sign",
+          "id": "for.5.13",
+          "size": 3
+        },
+        {
+          "name": "\\bigcap_{a}^{b}",
+          "desc": "",
+          "tip": " Intersection sign, upper and lower limits are displayed on the right",
+          "id": "for.5.14",
+          "size": 3
+        },
+        {
+          "name": "\\bigcap\\limits_a^{b}",
+          "desc": "",
+          "tip": " Intersection sign, upper and lower limits are displayed on the right above and right below",
+          "id": "for.5.15",
+          "size": 3
+        },
+        {
+          "name": "\\displaystyle \\bigcap\\nolimits_{a}^{b}",
+          "desc": "",
+          "tip": "Common intersection operation",
+          "id": "for.5.16",
+          "size": 3
+        },
+        {
+          "name": "\\bigcup",
+          "desc": "",
+          "tip": "Union set sign",
+          "id": "for.5.17",
+          "size": 3
+        },
+        {
+          "name": "\\bigcup_{a}^{b}",
+          "desc": "",
+          "tip": " Union set sign, upper and lower limits are displayed on the right ",
+          "id": "for.5.18",
+          "size": 3
+        },
+        {
+          "name": "\\bigcup\\limits_a^{b}",
+          "desc": "",
+          "tip": " Union set sign, upper and lower limits are displayed on the right above and right below ",
+          "id": "for.5.19",
+          "size": 3
+        },
+        {
+          "name": "\\displaystyle \\bigcup\\nolimits_{a}^{b}",
+          "desc": "",
+          "tip": "Common union set operation",
+          "id": "for.5.20",
+          "size": 3
+        },
+        {
+          "name": "\\bigvee",
+          "desc": "",
+          "tip": "Disjunction sign",
+          "id": "for.5.21",
+          "size": 3
+        },
+        {
+          "name": "\\bigvee_{a}^{b}",
+          "desc": "",
+          "tip": "Disjunction sign, upper and lower limits are displayed on the right ",
+          "id": "for.5.22",
+          "size": 3
+        },
+        {
+          "name": "\\bigvee\\limits_a^{b}",
+          "desc": "",
+          "tip": " Disjunction sign, upper and lower limits are displayed on the right above and right below ",
+          "id": "for.5.23",
+          "size": 3
+        },
+        {
+          "name": "\\displaystyle \\bigvee\\nolimits_{a}^{b}",
+          "desc": "",
+          "tip": "Common disjunction operation",
+          "id": "for.5.24",
+          "size": 3
+        },
+        {
+          "name": "\\bigwedge",
+          "desc": "",
+          "tip": "Conjunction sign",
+          "id": "for.5.25",
+          "size": 3
+        },
+        {
+          "name": "\\bigwedge_{a}^{b}",
+          "desc": "",
+          "tip": "Conjunction sign, upper and lower limits are displayed on the right ",
+          "id": "for.5.26",
+          "size": 3
+        },
+        {
+          "name": "\\bigwedge\\limits_a^{b}",
+          "desc": "",
+          "tip": "Conjunction sign, upper and lower limits are displayed on the right above and right below ",
+          "id": "for.5.27",
+          "size": 3
+        },
+        {
+          "name": "\\displaystyle \\bigwedge\\nolimits_{a}^{b}",
+          "desc": "",
+          "tip": "Common conjunction operation",
+          "id": "for.5.28",
+          "size": 3
+        },
+        {
+          "name": "\\sum\\limits_{{0 \\le x \\le m} \\atop {0 \\lt j \\lt n}} P(i,j)",
+          "desc": "",
+          "tip": "Common equation of summation of two variables",
+          "id": "for.5.32",
+          "size": 6
+        },
+        {
+          "name": "\\bigcup\\limits_{n=1}^{m} (X_n \\cap Y_n)",
+          "desc": "",
+          "tip": "Common set operation formulas",
+          "id": "for.5.33",
+          "size": 6
+        }
+      ]
+    },
+    {
+      "id": "for.17",
+      "name": "Large formulas",
+      "desc": "",
+      "list": [
+        {
+          "name": "f(n) = \\begin{cases} x + 2y + 3z & \\gt 0 \\cr x + y & \\le 10 \\cr z & \\ge 5 \\end{cases}",
+          "desc": "",
+          "tip": "Use & to denote alignment position",
+          "id": "for.10.8",
+          "size": 7
+        },
+        {
+          "name": "f(n) = \\begin{cases} n/2, & \\text{if $n$ is even} \\cr 3n+1, & \\text{if $n$ is odd} \\end{cases}",
+          "desc": "",
+          "tip": "Text is denoted by \\text",
+          "id": "for.10.8",
+          "size": 7
+        },
+        {
+          "name": "\\begin{align} (a+b)^2 &= (a+b)(a+b) \\cr &= a^2 + ab + ba + b^2 \\cr &= a^2 + 2ab + b^2 \\cr \\end{align}",
+          "desc": "",
+          "tip": "Use \\begin{align}\\end{align} surrounds equation set",
+          "id": "for.10.8",
+          "size": 7
+        },
+        {
+          "name": "\\begin{align*}\\sum_0^\\infty \\frac{f^{(n)}(x_0)}{n!}(x-x_0)^n = &f(x_0)+f^{'}(x_0)(x-x_0)+       \\frac{f^{''}(x0)}{2!}(x-x_0)^2 \\cr &+ \\cdots+ \\frac{f^{(n)}(x0)}{n!}(x-x_0)^n + \\cdots  \\end{align*} ",
+          "desc": "",
+          "tip": "When equation needs line shifting, use \\cr or \\, use & to make sure the aligning position",
+          "id": "for.10.8",
+          "size": 7
+        }
+      ]
+    }
+  ],
+  "subjects": [
+    {
+      "id": "sub.1",
+      "name": "Mathematics",
+      "desc": "",
+      "list": [
+        {
+          "name": "\\int_a^b f(x)dx = F(b) - F(a) = F(x)|_a^b",
+          "desc": "",
+          "tip": "Fundamental theorem of calculus",
+          "id": "sub.1.1",
+          "size": 7
+        },
+        {
+          "name": "\\pmatrix {a_{11} & a_{12} & \\ldots & a_{1n} \\cr a_{21} & a_{22} & \\ldots & a_{2n} \\cr \\vdots & \\vdots & \\ddots & \\vdots \\cr a_{m1} & a_{m2} & \\ldots & a_{mn} \\cr    } \\pmatrix {x_1 \\cr x_2 \\cr \\vdots \\cr x_m} = \\pmatrix {b_1 \\cr b_2 \\cr \\vdots \\cr b_m}",
+          "desc": "",
+          "tip": "Matrix multiplication",
+          "id": "sub.1.1",
+          "size": 7
+        }
+      ]
+    },
+    {
+      "id": "sub.2",
+      "name": "Physics",
+      "desc": "",
+      "list": [
+        {
+          "name": "\\begin{align}& \\oint_lH\\cdot dl = \\int_s J\\cdot S + \\int_s \\frac {\\partial D}{\\partial t}\\cdot ds \\tag{1} \\cr      &\\oint_lE\\cdot dl = - \\frac{d}{dt}\\int_sB\\cdot ds  \\tag{2} \\cr &\\oint_s B\\cdot ds = - 0  \\tag{3} \\cr       & \\oint_s D \\cdot ds = \\int_s \\rho \\cdot dv \\tag{4} \\end{align}",
+          "desc": "",
+          "tip": "The integral form of Maxwell’s equation",
+          "id": "sub.2.1",
+          "size": 7
+        },
+        {
+          "name": "\\begin{align} & \\nabla\\times\\bf H = J+\\frac {\\partial {\\bf{D}}}{\\partial t} \\tag{1} \\cr      & \\nabla \\times \\bf E = - \\frac {\\partial \\bf{B}}{\\partial t} \\tag{2} \\\\[2ex] & \\nabla \\cdot \\bf B = 0 \\tag{3} \\\\[2ex]       & \\nabla \\cdot \\bf E = 0  \\tag{4} \\end{align}",
+          "desc": "",
+          "tip": " The integral form of Maxwell’s equation ",
+          "id": "sub.2.2",
+          "size": 7
+        }
+      ]
+    },
+    {
+      "id": "sub.3",
+      "name": "Chemistry",
+      "desc": "",
+      "list": [
+        {
+          "name": "\\ce{SO4^2- + Ba^2+ -> BaSO4 v}",
+          "desc": "",
+          "tip": "Common chemical formulas",
+          "id": "sub.3.1",
+          "size": 7
+        },
+        {
+          "name": "\\ce{x Na(NH4)HPO4 ->[\\Delta] (NaPO3)_x + x NH3 ^ + x H2O}",
+          "desc": "",
+          "tip": " Common chemical formulas ",
+          "id": "sub.3.2",
+          "size": 7
+        },
+        {
+          "name": "\\ce{A\\bond{~--}B\\bond{~=}C\\bond{-~-}D}",
+          "desc": "",
+          "tip": "Chemical bonds denote",
+          "id": "sub.3.3",
+          "size": 7
+        },
+        {
+          "name": "\\ce{{^{14}_{7}N} + {^{4}_{2}He} -> {^{17}_{8}O} + {^{1}_{1}H}}",
+          "desc": "",
+          "tip": "Artificial transformation of nucleus",
+          "id": "sub.3.4",
+          "size": 7
+        },
+        {
+          "name": "\\ce{5O2 + 4P \\xlongequal{点燃} 2P2O5}",
+          "desc": "",
+          "tip": "Chemical equation",
+          "id": "sub.3.5",
+          "size": 7
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,357 @@
+@charset "UTF-8";
+
+.formula-plugin {
+  * {
+    box-sizing: border-box;
+    outline: none;
+    color: #444444;
+  }
+
+  .formula-back {
+    display: none;
+    position: fixed;
+    z-index: 200;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  .formula-dialog {
+    display:none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 800px;
+    height: 600px;
+    max-width: 100%;
+    max-height: 100%;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+  }
+
+  .dialog-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 36px;
+    padding: 0 12px;
+    line-height: 36px;
+    background-color: #eee;
+  }
+  .close-btn {
+    float: right;
+    color: #969696;
+    cursor: pointer;
+  }
+
+  .dialog-body {
+    height: 100%;
+    padding: 14px 15px 24px;
+    overflow: auto;
+  }
+
+  .dialog-footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 52px;
+    padding: 10px 0;
+    text-align: center;
+    background-color: #eee;
+  }
+  .fbtn {
+    display: inline-block;
+    min-width: 80px;
+    height: 32px;
+    padding: 0 12px;
+    line-height: 30px;
+    border: 1px solid;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &.confirm-fbtn {
+      margin-right: 20px;
+      background-color: #ea5947;
+      border-color: #ea5947;
+      color: #fff;
+    }
+    &.cancel-fbtn {
+      background-color: #fff;
+      border-color: #ea5947;
+      color: #ea5947;
+    }
+  }
+
+  /* 主体样式 */
+  .tool-panel {
+    float: left;
+    width: 30%;
+    height: 100%;
+    padding: 10px;
+    border: 1px solid #eee;
+  }
+  .edit-panel {
+    float: left;
+    width: 70%;
+    height: 100%;
+    padding-left: 10px;
+  }
+
+  .symbol-type-filter {
+    min-height: 32px;
+    overflow: auto;
+
+    .type-item {
+      float: left;
+      margin-right: 5%;
+      width: 30%;
+      line-height: 30px;
+      border: 1px solid #eee;
+      border-radius: 4px;
+      border-bottom: none;
+      text-align: center;
+      cursor: pointer;
+
+      &.last-item {
+        margin-right: 0;
+      }
+      &:hover,
+      &.active {
+        background-color: #eee;
+      }
+    }
+  }
+  .sub-type-filter {
+    height: 84px;
+    overflow: auto;
+    border-bottom: 1px solid #aaa;
+
+    .sub-type-item {
+      float: left;
+      margin-right: 4px;
+      padding: 0 4px;
+      line-height: 26px;
+      border-radius: 4px;
+      cursor: pointer;
+
+      &:hover,
+      &.active {
+        background-color: #eee;
+      }
+    }
+  }
+  .symbol-panel {
+    position: relative;
+    height: 354px;
+    font-size: 0;
+    overflow: auto;
+  }
+
+  .control-area {
+    height: 36px;
+    padding: 0 10px;
+    line-height: 36px;
+    background-color: #eee;
+    button {
+      margin-right: 5px;
+    }
+  }
+  .formula-type {
+    float: left;
+    margin-top: 4px;
+    margin-right: 10px;
+    height: 28px;
+    border-radius: 4px;
+    border: 1px solid #ea5947;
+    background-color: #fff;
+    font-size: 0;
+
+    .type-btn {
+      display: inline-block;
+      padding: 0 10px;
+      font-size: 14px;
+      line-height: 26px;
+      color: #ea5947;
+      cursor: pointer;
+
+      &:hover {
+        color: #fff;
+        background-color: rgba(234, 89, 71, 0.5);
+      }
+      &.active {
+        color: #fff;
+        background-color: #ea5947;
+      }
+      .inline-type {
+        border-right: 1px solid #ea5947;
+      }
+    }
+  }
+
+  .edit-area {
+    margin-top: 10px;
+    height: 180px;
+  }
+  .input-textarea {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    resize: unset;
+  }
+  .preview-area {
+    position: relative;
+    margin-top: 10px;
+    height: 180px;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+  }
+  .previewDiv-warpper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  .tip-area {
+    position: relative;
+    margin-top: 10px;
+    height: 66px;
+    padding: 6px;
+    font-size: 14px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+
+    .help-link {
+      position: absolute;
+      bottom: 6px;
+      right: 6px;
+      font-size: 14px;
+      line-height: 1.5;
+      color: #8d77fb;
+      text-decoration: none
+    }
+  }
+
+  .symbol-btn {
+    display: inline-block;
+    margin: 2px;
+    padding: 2px;
+    line-height: 1;
+    font-size: 16px;
+    border: 1px solid #808080;
+    text-align: center;
+    cursor: pointer;
+    vertical-align: middle;
+
+    &:hover {
+      border-color: #4c8be8;
+    }
+
+    svg {
+      vertical-align: middle !important;
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+    }
+    &.size-type-1 {
+      width: 30px;
+      height: 28px;
+
+      svg {
+        width: 24px;
+        height: 22px;
+      }
+    }
+    &.size-type-2 {
+      width: 45px;
+      height: 32px;
+
+      svg {
+        width: 39px;
+        height: 26px;
+      }
+    }
+    &.size-type-3 {
+      // width: 45px;
+      // height: 48px;
+
+      svg {
+        width: 39px;
+        height: 42px;
+      }
+    }
+    &.size-type-4 {
+      width: 60px;
+      height: 48px;
+
+      svg {
+        width: 54px;
+        height: 42px;
+      }
+    }
+    &.size-type-5 {
+      width: 90px;
+      height: 48px;
+
+      svg {
+        width: 84px;
+        height: 42px;
+      }
+    }
+    &.size-type-6 {
+      width: 90px;
+      height: 60px;
+
+      svg {
+        width: 84px;
+        height: 54px;
+      }
+    }
+    &.size-type-7 {
+      width: 180px;
+      height: 90px;
+
+      svg {
+        width: 174px;
+        height: 84px;
+      }
+    }
+  }
+
+  .loader-wrapper {
+    display: none;
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+
+    .loader-inner {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 100%;
+      height: 40px;
+      text-align: center;
+
+      div {
+        background-color: #ea5947;
+      }
+    }
+  }
+}
