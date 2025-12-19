@@ -7,7 +7,7 @@
     </FileList>
     <button id="upload" style="display: none"></button>
     <TinyDialogBox dialog-class="math-dialog" v-model:visible="boxVisibility" title="消息" width="60%" 	
-    append-to-body="true">
+    :append-to-body="true">
       <iframe :src="iframeUrl" frameborder="0"></iframe>
       <template #footer>
         <TinyButton @click="boxVisibility = false">取 消</TinyButton>

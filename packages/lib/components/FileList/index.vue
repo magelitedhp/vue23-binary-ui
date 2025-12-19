@@ -93,6 +93,14 @@
         </li>
       </ul>
     </div>
+    <TinyDialogBox v-model:visible="boxVisibility" :title="t('messageTip')" width="40%" 	
+    :append-to-body="true">
+      <span>{{ t('confirmDelete') }}</span>
+      <template #footer>
+        <TinyButton @click="boxVisibility = false">{{ t('cancel') }}</TinyButton>
+        <TinyButton type="primary" @click="deleteConfirm">{{ t('confirm') }}</TinyButton>
+      </template>
+    </TinyDialogBox>
   </div>
 </template>
 
@@ -100,7 +108,7 @@
 import { defineComponent, ref, reactive } from 'vue-demi'
 import Preview from "./Preview.vue";
 // import showPreview from "./PreviewMask.js";
-import { TinyBaseSelect, TinyOption, Modal  } from "@opentiny/vue";
+import { TinyBaseSelect, TinyOption, TinyDialogBox, TinyButton } from "@opentiny/vue";
 import { fileIcon, formatSize, formatFileType, getFileSvg } from "@/utils/file.js";
 import Obs from "@/plugins/ulearning-obs.js";
 import { useT } from "../../locale/index.js"
@@ -112,7 +120,9 @@ export default defineComponent({
   components: {
     Preview,
     TinyBaseSelect,
-    TinyOption
+    TinyOption,
+    TinyDialogBox,
+    TinyButton
   },
   props: {
     list: {
@@ -178,6 +188,11 @@ export default defineComponent({
   },
   setup(props, { emit }) {
     const t = useT()
+    const boxVisibility = ref(false)
+    const curDeleteFile = reactive({
+      item: {},
+      index: 0
+    })
     // 响应式数据
     const state = reactive({
       obs: {},
@@ -193,13 +208,21 @@ export default defineComponent({
 
     // 删除文件（带确认）
     const deleteFile = (item, index) => {
-      Modal.confirm(t('confirmDelete')).then((res) => {
-        console.log(res,'res');
-        if(res === 'confirm') {
-          item.actionIndex = props.actionIndex
-          emit("deleteFile", item, index)
-        }
-      })
+      curDeleteFile.item = item
+      curDeleteFile.index = index
+      boxVisibility.value = true
+      // Modal.confirm(t('confirmDelete')).then((res) => {
+      //   console.log(res,'res');
+      //   if(res === 'confirm') {
+      //     item.actionIndex = props.actionIndex
+      //     emit("deleteFile", item, index)
+      //   }
+      // })
+    }
+    // 删除逻辑
+    const deleteConfirm = () => {
+      emit("deleteFile", curDeleteFile.item, curDeleteFile.index)
+      boxVisibility.value = false
     }
 
     // 下载文件
@@ -243,7 +266,10 @@ export default defineComponent({
       download,
       showPreview: showPreviewHandle,
       isFileCanPreview,
-      isAudio
+      isAudio,
+      boxVisibility,
+      curDeleteFile,
+      deleteConfirm
     }
   }
 })

@@ -988,5 +988,6 @@
   "screenAbnormal": "屏幕异常",
   "screenNormal": "屏幕正常",
   "confirmClearException": "请仔细查看系统截图内容是否违规后再清除异常。确定清除异常吗",
-  "commitExamTip9": "屏幕监控异常达到规定次数，系统强制交卷"
+  "commitExamTip9": "屏幕监控异常达到规定次数，系统强制交卷",
+  "messageTip": "消息提醒"
 }
