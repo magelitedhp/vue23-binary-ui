@@ -50,7 +50,7 @@
       </TinyCheckboxGroup>
     </div>
     <div class="btn-save">
-      <TinyButton type="info" @click="saveQuestion">{{ t("save") }}</TinyButton>
+      <TinyButton type="primary" @click="saveQuestion">{{ t("save") }}</TinyButton>
       <TinyButton @click="cancel">{{ t("cancel") }}</TinyButton>
     </div>
   </div>

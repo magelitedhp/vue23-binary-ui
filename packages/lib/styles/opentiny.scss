@@ -2,6 +2,11 @@
 @import "@/styles/variables.scss";
 :root,
 :host {
+  --tiny-primary-color: #167fff;
+  --tiny-primary-text-color: #fff;
+  --tiny-primary-bg: var(--tiny-primary-color);
+  --tiny-primary-hover-bg: color-mix(in srgb, var(--tiny-primary-color) 85%, #000);
+  --tiny-primary-hover-text-color: color-mix(in srgb, var(--tiny-primary-text-color) 85%, #000);
   .tiny-button {
     --tv-border-width: calc(1 * var(--question-font-size));
     --tv-font-size-default: calc(14 * var(--question-font-size));
@@ -9,18 +14,32 @@
     --tv-Button-height: calc(32 * var(--question-font-size));
     --tv-Button-height-medium: calc(40 * var(--question-font-size));
     --tv-border-radius-md: calc(6 * var(--question-font-size));
+
+    --tv-Button-bg-color-primary: var(--tiny-primary-bg);
+    --tv-Button-text-color-primary: var(--tiny-primary-text-color);
+    --tv-Button-bg-color-primary: var(--tiny-primary-bg);
+    --tv-Button-border-color-primary: var(--tiny-primary-color);
+    --tv-Button-icon-color-primary: var(--tiny-primary-color);
+    &.tiny-button--primary:hover {
+      background-color: var(--tiny-primary-hover-bg);
+      border-color: var(--tiny-primary-hover-bg);
+      color: var(--tiny-primary-hover-text-color);
+    }
   }
   .tiny-radio {
     --tv-Radio-font-size: calc(14 * var(--question-font-size));
     --tv-Radio-inner-size: calc(8 * var(--question-font-size));
     --tv-Radio-inner-width: calc(16 * var(--question-font-size));
     --tv-Radio-inner-height: calc(16 * var(--question-font-size));
+    --tv-Radio-bordered-checked-border-color: var(--tiny-primary-color);
+    --tv-Radio-inner-checked-bg-color: var(--tiny-primary-color);
     .tiny-radio__label {
       padding-left: calc(8 * var(--question-font-size));
     }
   }
   .tiny-checkbox {
     --tv-Checkbox-icon-size: calc(16 * var(--question-font-size));
+    --tv-Checkbox-bg-color-active: var(--tiny-primary-bg);
     .tiny-checkbox__label {
       padding-left: calc(8 * var(--question-font-size));
     }
@@ -34,6 +53,9 @@
         >button, .ql-better-table {
           height: calc(24 * var(--question-font-size));
           margin-right: calc(8 * var(--question-font-size));
+        }
+        .ql-better-table {
+          width: calc(16 * var(--question-font-size));
         }
         .ql-font {
           width: calc(98 * var(--question-font-size)) !important;
@@ -52,7 +74,16 @@
               width: calc(60 * var(--question-font-size));
               line-height: calc(22 * var(--question-font-size));
             }
-          } 
+          }
+          &.ql-align {
+            margin-right: calc(8 * var(--question-font-size)) !important;
+            .ql-picker-label {
+              padding: calc(2 * var(--question-font-size)) calc(2 * var(--question-font-size)) 0;
+            }
+          }
+          &.ql-color-picker {
+            margin: 0;
+          }
         }
         .ql-size {
           width: calc(98 * var(--question-font-size));
@@ -68,10 +99,12 @@
           width: calc(16 * var(--question-font-size)) !important;
           font-size: calc(16 * var(--question-font-size)) !important;
         }
-        .ql-image1 svg {
-          width: calc(32 * var(--question-font-size)) !important;
-          scale: 0.65;
-        }
+        .ql-image1 {
+          svg{
+            width: calc(32 * var(--question-font-size)) !important;
+            scale: 0.65;
+          }
+        }  
       }
     }
     .ql-container {

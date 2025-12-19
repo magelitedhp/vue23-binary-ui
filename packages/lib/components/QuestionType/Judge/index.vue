@@ -14,7 +14,7 @@
         </TinyRadioGroup>
       </div>
       <div class="action-buttons">
-        <TinyButton type="info" @click="saveQuestion">{{ t("save") }}</TinyButton>
+        <TinyButton type="primary" @click="saveQuestion">{{ t("save") }}</TinyButton>
         <TinyButton @click="cancel">{{ t("cancel") }}</TinyButton>
       </div>
     </template>

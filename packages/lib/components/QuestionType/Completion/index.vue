@@ -21,7 +21,7 @@
           <TinyCheckbox v-model="question.allowExchange" :false-label="0" :true-label="1">答案可互换顺序</TinyCheckbox>
         </div>
         <div class="btn-save">
-          <TinyButton type="info" @click="saveQuestion">{{ t("save") }}</TinyButton>
+          <TinyButton type="primary" @click="saveQuestion">{{ t("save") }}</TinyButton>
           <TinyButton @click="cancel">{{ t("cancel") }}</TinyButton>
         </div>
       </div>

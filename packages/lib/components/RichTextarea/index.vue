@@ -6,11 +6,12 @@
       :isShowLimitTimes="isShowLimitTimes" :is-question-bank="isQuestionBank" @deleteFile="deleteFile">
     </FileList>
     <button id="upload" style="display: none"></button>
-    <TinyDialogBox dialog-class="math-dialog" v-model:visible="boxVisibility" title="消息" width="60%">
+    <TinyDialogBox dialog-class="math-dialog" v-model:visible="boxVisibility" title="消息" width="60%" 	
+    append-to-body="true">
       <iframe :src="iframeUrl" frameborder="0"></iframe>
       <template #footer>
         <TinyButton @click="boxVisibility = false">取 消</TinyButton>
-        <TinyButton type="info" @click="mathConfirm">确 定</TinyButton>
+        <TinyButton type="primary" @click="mathConfirm">确 定</TinyButton>
       </template>
     </TinyDialogBox>
   </div>
@@ -265,8 +266,7 @@ export default defineComponent({
           },
             {
               "background": []
-            }],
-          [
+            },
             {
               "list": "ordered"
             },
@@ -275,15 +275,13 @@ export default defineComponent({
             },
             {
               "align": []
-            }
-          ], [
+            },
             {
               "script": "sub"
             },
             {
               "script": "super"
-            }
-          ], [
+            },
             "image1",
             'audio', 'video1',
             "math",
