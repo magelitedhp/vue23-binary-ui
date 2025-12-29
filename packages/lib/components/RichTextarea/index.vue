@@ -5,9 +5,9 @@
     <FileList ref="fileList" mode="edit" type="block" :isPreview="true" :list="list"
       :isShowLimitTimes="isShowLimitTimes" :is-question-bank="isQuestionBank" @deleteFile="deleteFile">
     </FileList>
-    <button id="upload" style="display: none"></button>
+    <button :id="`upload-${containerId}`" style="display: none"></button>
     <TinyDialogBox dialog-class="math-dialog" v-model:visible="boxVisibility" title="消息" width="60%" 	
-    :append-to-body="true">
+    :append-to-body="true" destroy-on-close>
       <iframe :src="iframeUrl" frameborder="0"></iframe>
       <template #footer>
         <TinyButton @click="boxVisibility = false">取 消</TinyButton>
@@ -90,7 +90,7 @@ export default defineComponent({
       const toolbar = fluentEditor.getModule('toolbar')
       // 创建隐藏的上传按钮
       obs.value = new Obs({ ...uploadOptions });
-      const uploadBtn = document.getElementById('upload');
+      const uploadBtn = document.getElementById(`upload-${containerId.value}`);
       obs.value.initUpBtn(uploadBtn);
       obs.value.onBeforeUpload = (file) => {
         // if (checkAddFile && !checkAddFile(file)) {

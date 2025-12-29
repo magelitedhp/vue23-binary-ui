@@ -221,6 +221,7 @@
   "inputAnalyTip": "解析不能超过{n}字符",
   "addQuestionTip1": "至少添加一个小题",
   "optionContentTip": "选项内容不能超过{n}字符",
+  "optionContentTip3": "选项内容不能超过1000字符",
   "optionContentTip1": "选项内容不能为空",
   "optionContentTip2": "最多添加{n}个选项",
   "inputAnswerTip1": "请设置正确的答案",

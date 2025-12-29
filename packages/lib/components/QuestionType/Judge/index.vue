@@ -76,13 +76,17 @@
         </div>
       </div>
     </template>
+    <!-- 提示信息 -->
+    <TinyAlert v-if="alertInfo.text" class="alert-warning" :type="alertInfo.type">
+      <template #description>{{ alertInfo.text }}</template>
+    </TinyAlert>
   </Base>
 </template>
 
 <script>
 import { useT } from "@/locale/index.js";
 import { defineComponent, ref, computed, watch } from 'vue-demi';
-import { TinyButton, TinyRadio, TinyRadioGroup } from '@opentiny/vue'
+import { TinyButton, TinyRadio, TinyRadioGroup, TinyAlert } from '@opentiny/vue'
 import Base from '../Base.vue'
 import FileList from '../../FileList/index.vue';
 import { getQuestion } from "../../../model/questionFactory.js"
@@ -94,6 +98,7 @@ export default defineComponent({
     TinyRadioGroup,
     TinyButton,
     FileList,
+    TinyAlert
   },
   props: {
     mode: {
@@ -116,6 +121,19 @@ export default defineComponent({
   emits: ['save', 'cancel', 'change'],
   setup(props, { emit }) {
     const t = useT()
+    const alertInfo = ref({
+      type: 'warning',
+      text: ''
+    })
+    const showAlertHandler = (type, text) => {
+      alertInfo.value = {
+        type,
+        text
+      }
+      setTimeout(() => {
+        alertInfo.value.text = ''
+      }, 2000)
+    }
     const question = ref({})
     const userAnswer = ref('');
 
@@ -170,12 +188,12 @@ export default defineComponent({
       
       // 基本验证
       if (!question.value.title || !question.value.title.trim()) {
-        console.warn('请输入题目内容');
+        showAlertHandler('warning', t('questionTitleTip1'))
         return;
       }
       
       if (!correctAnswer.value) {
-        console.warn('请选择正确答案');
+        showAlertHandler('warning', t('inputAnswerTip4'))
         return;
       }
       
@@ -232,7 +250,9 @@ export default defineComponent({
       isCorrect,
       saveQuestion,
       handleAnswerClass,
-      handleCorrectAnswerClass
+      handleCorrectAnswerClass,
+      alertInfo,
+      showAlertHandler
     };
   }
 });

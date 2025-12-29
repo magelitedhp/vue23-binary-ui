@@ -159,6 +159,9 @@
       </div>
     </div>
   </div>
+  <TinyAlert v-if="alertInfo.text" class="alert-warning" :type="alertInfo.type">
+    <template #description>{{ alertInfo.text }}</template>
+  </TinyAlert>
   </Base>
 </template>
 
@@ -166,7 +169,7 @@
 import { useT } from "@/locale/index.js";
 import { defineComponent, ref, watch } from 'vue-demi'
 import Base from '../Base.vue'
-import { TinyButton, TinyRadioGroup, TinyRadio, TinyCheckboxGroup, TinyCheckbox } from '@opentiny/vue'
+import { TinyButton, TinyRadioGroup, TinyRadio, TinyCheckboxGroup, TinyCheckbox, TinyAlert } from '@opentiny/vue'
 import FileList from '@/components/FileList/index.vue'
 import { getQuestion } from "@/model/questionFactory.js"
 import RichTextarea from '@/components/RichTextarea/index.vue'
@@ -178,6 +181,7 @@ export default defineComponent({
     TinyRadio,
     TinyCheckboxGroup,
     TinyCheckbox,
+    TinyAlert,
     FileList,
     Base,
     RichTextarea
@@ -216,6 +220,19 @@ export default defineComponent({
   emits: ['save', 'cancel', 'change'],
   setup(props, { emit }) {
     const t = useT()
+    const alertInfo = ref({
+      type: 'warning',
+      text: ''
+    })
+    const showAlertHandler = (type, text) => {
+      alertInfo.value = {
+        type,
+        text
+      }
+      setTimeout(() => {
+        alertInfo.value.text = ''
+      }, 2000)
+    }
     const activeIndex = ref(null)
     const question = ref({})
     // 初始化答案
@@ -369,10 +386,19 @@ export default defineComponent({
     // 保存问题数据（编辑模式）
     const saveQuestion = () => {
       if (props.mode !== 1) return
-
+      // 验证标题是否为空
+      if (!question.value.title) {
+        showAlertHandler('warning', t('questionTitleTip1'))
+        return
+      }
+      // 验证选项是否为空
+      if (question.value.choices.some(choice => !choice.text)) {
+        showAlertHandler('warning', t('optionContentTip1'))
+        return
+      }
       // 验证是否有正确答案
-      if (!question.value.correctAnswer) {
-        console.warn(t('pleaseSetCorrectAnswer') || '请设置正确答案');
+      if (!question.value.correctAnswer || question.value.correctAnswer.length === 0) {
+        showAlertHandler('warning', t('inputAnswerTip4'))
         return
       }
       // 深拷贝数据以避免直接修改
@@ -434,7 +460,9 @@ export default defineComponent({
       deleteFile,
       addFile,
       deleteChoice,
-      userAnswer
+      userAnswer,
+      alertInfo,
+      showAlertHandler
     }
   }
 })

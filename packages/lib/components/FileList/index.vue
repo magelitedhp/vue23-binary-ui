@@ -22,17 +22,17 @@
               </div>
               <!-- 操作按钮组 -->
               <div class="operations" v-else>
-                <a href="javascript:;" class="ul-link" v-if="canPreview && isFileCanPreview(item) && item.status !== 3"
+                <!-- <a href="javascript:;" class="ul-link" v-if="canPreview && isFileCanPreview(item) && item.status !== 3"
                   @click="showPreview(item)">
                   {{ t('view') }}
-                </a>
+                </a> -->
                 <span class="upload-fail" v-if="item.status === 3">{{ item.errMessage }}</span>
                 <a href="javascript:;" v-if="mode === 'edit'" class="ul-link" @click.stop="deleteFile(item, index)">
                   {{ t('delete') }}
                 </a>
-                <a href="javascript:;" v-else class="ul-link" @click="download(item.fileUrl)">
+                <!-- <a href="javascript:;" v-else class="ul-link" @click="download(item.fileUrl)">
                   {{ t('download') }}
-                </a>
+                </a> -->
               </div>
             </div>
           </div>

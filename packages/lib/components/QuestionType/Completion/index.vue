@@ -40,12 +40,15 @@
       </div>
     </div>
   </template>
+  <TinyAlert v-if="alertInfo.text" class="alert-warning" :type="alertInfo.type">
+    <template #description>{{ alertInfo.text }}</template>
+  </TinyAlert>
   </Base>
 </template>
 
 <script>
 import { defineComponent, ref, watch } from 'vue-demi';
-import { TinyButton, TinyCheckbox } from '@opentiny/vue'
+import { TinyButton, TinyCheckbox, TinyAlert } from '@opentiny/vue'
 import Base from '../Base.vue'
 import FileList from '../../FileList/index.vue';
 import { t } from '../../../locale/index.js';
@@ -58,7 +61,8 @@ export default defineComponent({
     Base,
     FileList,
     TinyButton,
-    TinyCheckbox
+    TinyCheckbox,
+    TinyAlert
   },
   props: {
     mode: {
@@ -82,7 +86,19 @@ export default defineComponent({
   setup(props, { emit }) {
     const question = ref({})
     const userAnswers = ref([]);
-
+    const alertInfo = ref({
+      type: 'warning',
+      text: ''
+    })
+    const showAlertHandler = (type, text) => {
+      alertInfo.value = {
+        type,
+        text
+      }
+      setTimeout(() => {
+        alertInfo.value.text = ''
+      }, 2000)
+    }
     // 标题内容变化处理
     const handleTitleChange = (newValue) => {
       if (props.mode !== 1) return;
@@ -303,8 +319,8 @@ export default defineComponent({
       // 执行答案变化处理确保答案同步
       answerChange();
       // 基本验证
-      if (!question.value.title || !question.value.blanks || question.value.blanks.length === 0) {
-        console.warn('请输入题目内容并添加空格');
+      if (!question.value.title) {
+        showAlertHandler('warning', t('questionTitleTip1'))
         return;
       }
       // 检查是否所有空格都有答案
@@ -316,7 +332,20 @@ export default defineComponent({
         }
       }
       if (hasEmptyAnswer) {
-        console.warn('请为所有空格填写答案');
+        showAlertHandler('warning', t('optionContentTip1'))
+        return;
+      }
+      // 限制每个空答案长度不超过1000字符
+      let hasOverLength = false;
+      for (let i = 0; i < question.value.blanks.length; i++) {
+        const ans = question.value.blanks[i].correctAnswer || '';
+        if (ans.length > 1000) {
+          hasOverLength = true;
+          break;
+        }
+      }
+      if (hasOverLength) {
+        showAlertHandler('warning', t('optionContentTip3'))
         return;
       }
       console.log('save-completion', question.value);
@@ -402,7 +431,9 @@ export default defineComponent({
       answerChange,
       blankAnswerChange,
       deleteBlank,
-      baseComponent
+      baseComponent,
+      alertInfo,
+      showAlertHandler
     };
   }
 });

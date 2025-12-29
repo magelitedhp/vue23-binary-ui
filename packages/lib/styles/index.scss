@@ -124,3 +124,9 @@ input {
   outline: none;
   -webkit-appearance: none;
 }
+.alert-warning, .alert-success {
+  position: absolute;
+  top: calc(12 * var(--question-font-size));
+  left: 50%;
+  transform: translateX(-50%);
+}
