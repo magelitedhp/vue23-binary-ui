@@ -307,6 +307,7 @@ export default defineComponent({
   margin-top: calc(12 * var(--question-font-size));
 }
 .preview-title {
+  padding: 0 !important;
   margin-bottom: calc(16 * var(--question-font-size));
 }
 // 填空题预览和答题样式
