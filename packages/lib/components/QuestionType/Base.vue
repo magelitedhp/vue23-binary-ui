@@ -4,7 +4,7 @@
     <template v-if="mode == 2 || mode == 3">
       <!-- 填空题特殊处理：将（ ）替换为输入框 -->
       <div v-if="question.type == 3" class="completion-preview">
-        <div v-if="mode == 2" class="preview-title">
+        <div v-if="mode == 2" class="ql-editor preview-title">
           <!-- 遍历标题部分，分别渲染文本和输入框 -->
           <template v-for="(part, index) in titleParts">
             <!-- 文本部分 -->
@@ -27,7 +27,7 @@
             </div>
           </template>
         </div>
-        <div v-if="mode == 3" class="preview-title">
+        <div v-if="mode == 3" class="ql-editor preview-title">
           <template v-for="(part, index) in titleParts">
             <!-- 文本部分 -->
             <span v-if="part.type === 'text'" v-html="part.content"></span>
@@ -53,7 +53,7 @@
         <div v-if="question.allowExchange" class="can-exchange">*{{ t('answerCanChangeTip') }}</div>
       </div>
       <!-- 其他题型正常显示 -->
-      <div v-else class="preview-title" v-html="question.title || ''"></div>
+      <div v-else class="ql-editor preview-title" v-html="question.title || ''"></div>
       <FileList mode="view" type="block" :isPreview="true" :list="question.link" @deleteFile=""></FileList>
     </template>
     <RichTextarea

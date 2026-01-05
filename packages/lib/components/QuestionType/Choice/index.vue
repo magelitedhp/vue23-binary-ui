@@ -63,7 +63,7 @@
           :label="getOption(index)">
           <span class="index">{{ getOption(index) }}. </span>
           <div class="choice-content">
-            <span class="rich-text" v-html="choice.text"></span>
+            <span class="rich-text ql-editor not-edit" v-html="choice.text"></span>
             <FileList class="choice-file-list" mode="preview" type="block" :isPreview="true" :list="choice.attachments"
               :isShowLimitTimes="false" v-if="choice.attachments?.length"></FileList>
           </div>
@@ -76,7 +76,7 @@
           :label="getOption(index)">
           <span class="index">{{ getOption(index) }}. </span>
           <div class="choice-content">
-            <span class="rich-text" v-html="choice.text"></span>
+            <span class="rich-text ql-editor not-edit" v-html="choice.text"></span>
             <FileList class="choice-file-list" mode="preview" type="block" :isPreview="true" :list="choice.attachments"
               :isShowLimitTimes="false" v-if="choice.attachments?.length"></FileList>
           </div>
@@ -100,7 +100,7 @@
           v-for="(choice, index) in question.choices" :key="choice.id" :label="getOption(index)">
           <span class="index">{{ getOption(index) }}. </span>
           <div class="choice-content">
-            <span class="rich-text" v-html="choice.text"></span>
+            <span class="rich-text ql-editor not-edit" v-html="choice.text"></span>
             <FileList class="choice-file-list" mode="preview" type="block" :isPreview="true" :list="choice.attachments"
               :isShowLimitTimes="false" :showDownLoad="mode !== 3" v-if="choice.attachments?.length"></FileList>
           </div>
@@ -112,7 +112,7 @@
           v-for="(choice, index) in question.choices" :key="choice.id" :label="getOption(index)">
           <span class="index">{{ getOption(index) }}. </span>
           <div class="choice-content">
-            <span class="rich-text" v-html="choice.text"></span>
+            <span class="rich-text ql-editor not-edit" v-html="choice.text"></span>
             <FileList class="choice-file-list" mode="preview" type="block" :isPreview="true" :list="choice.attachments"
               :isShowLimitTimes="false" :showDownLoad="mode !== 3" v-if="choice.attachments?.length"></FileList>
           </div>
@@ -127,7 +127,7 @@
           v-for="(choice, index) in question.choices" :key="choice.id" :label="getOption(index)">
           <span class="index">{{ getOption(index) }}. </span>
           <div class="choice-content">
-            <span class="rich-text" v-html="choice.text"></span>
+            <span class="rich-text ql-editor not-edit" v-html="choice.text"></span>
             <FileList class="choice-file-list" mode="preview" type="block" :isPreview="true" :list="choice.attachments"
               :isShowLimitTimes="false" :showDownLoad="mode !== 3" v-if="choice.attachments?.length"></FileList>
           </div>
@@ -139,7 +139,7 @@
           v-for="(choice, index) in question.choices" :key="choice.id" :label="getOption(index)">
           <span class="index">{{ getOption(index) }}. </span>
           <div class="choice-content">
-            <span class="rich-text" v-html="choice.text"></span>
+            <span class="rich-text ql-editor" v-html="choice.text"></span>
             <FileList class="choice-file-list" mode="preview" type="block" :isPreview="true" :list="choice.attachments"
               :isShowLimitTimes="false" :showDownLoad="mode !== 3" v-if="choice.attachments?.length"></FileList>
           </div>
@@ -503,11 +503,6 @@ export default defineComponent({
           line-height: calc(44 * var(--question-font-size));
         }
       }
-
-      .rich-text {
-        padding: calc(9 * var(--question-font-size)) calc(10 * var(--question-font-size));
-      }
-
       .no-content-tip {
         font-size: calc(14 * var(--question-font-size));
         color: #969696;

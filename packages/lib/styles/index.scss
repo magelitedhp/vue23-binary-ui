@@ -62,9 +62,13 @@ textarea {
   vertical-align: middle;
 }
 .rich-text {
-  font-size: calc(16 * var(--question-font-size));
+  padding: calc(8 * var(--question-font-size)) calc(16 * var(--question-font-size)) !important;
   line-height: 1.5;
   color: #444444;
+  font-size: calc(16 * var(--question-font-size)) !important;
+  &.not-edit {
+    padding: 0 !important;
+  }
   img {
     max-width: 100%;
     position: relative;
@@ -77,18 +81,6 @@ textarea {
   
   p {
     margin: 0;
-  }
-  ol, ul {
-    padding-left: 0;
-    li {
-      list-style-position: inside;
-    }
-  }
-  ol {
-    list-style-type: decimal;
-  }
-  ul {
-    list-style-type: disc;
   }
   table {
     border-spacing: calc(1 * var(--question-font-size));
