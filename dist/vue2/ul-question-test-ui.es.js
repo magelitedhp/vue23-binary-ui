@@ -2746,7 +2746,7 @@ function I5(t) {
     return e[n] || (e[n] = t(n));
   };
 }
-const Yan = I5((t) => t.charAt(0).toUpperCase() + t.slice(1));
+const Xan = I5((t) => t.charAt(0).toUpperCase() + t.slice(1));
 function N5(t) {
   const e = t.length;
   let n = 0;
@@ -3377,7 +3377,7 @@ dr.parse = (t, e, n) => {
     i[s - 1](r, l[s], o);
   return r.isPm === !0 && !Dt(r.hour) && Number(r.hour) !== 12 ? r.hour = Number(r.hour) + 12 : r.isPm === !1 && Number(r.hour) === 12 && (r.hour = 0), wS(r);
 };
-const Xan = Ns.Weeks, Zan = Ns.MonhtList, Jan = Ns.DateFormats.date, esn = Ns.DateFormats.time;
+const Zan = Ns.Weeks, Jan = Ns.MonhtList, esn = Ns.DateFormats.date, tsn = Ns.DateFormats.time;
 const F0 = (t, e, n = YA) => {
   if (Array.isArray(t) && typeof n == "function") {
     for (let o = 0, r = t.length; o < r; o++)
@@ -5653,7 +5653,7 @@ const s2 = (t, e) => {
   const a = r + n.reduce((d, u) => d + u.offsetTop, 0), l = a + i, s = t.scrollTop, c = s + t.clientHeight;
   a < s ? t.scrollTop = a : l > c && (t.scrollTop = l - t.clientHeight);
 };
-const nsn = et ? null : Element.prototype.matches;
+const osn = et ? null : Element.prototype.matches;
 var Ku = {
   enUS: "英语",
   zhCN: "中文",
@@ -9133,11 +9133,11 @@ var wl = Ku, xl = function() {
   zhCN: Ku
 }, Symbol.toStringTag, {
   value: "Module"
-})), osn = ai.use, ns = ai.t;
+})), rsn = ai.use, ns = ai.t;
 ai.i18n;
 ai.initI18n;
 ai.extend;
-var rsn = ai.zhCN, isn = ai.enUS, asn = ai.language;
+var isn = ai.zhCN, asn = ai.enUS, ssn = ai.language;
 const J3 = ({ onMounted: t, onActivated: e, nextTick: n }) => (o) => {
   let r;
   t(() => {
@@ -9583,7 +9583,7 @@ var d6 = function() {
       };
     }
   });
-}, ml = typeof window > "u" ? null : window.__Longque__, m2 = !!((Qg = qo.version) != null && Qg.includes("2.7")), dt = m2 ? Bp : LA, ssn = C6(dt);
+}, ml = typeof window > "u" ? null : window.__Longque__, m2 = !!((Qg = qo.version) != null && Qg.includes("2.7")), dt = m2 ? Bp : LA, lsn = C6(dt);
 !dt.default.__composition_api_installed__ && !m2 && qo.use(dt.default);
 var A6 = function(e) {
   var n = e.loader, o = e.loadingComponent, r = e.errorComponent, i = e.delay, a = e.timeout;
@@ -9906,7 +9906,7 @@ var A6 = function(e) {
     }).$mount();
   };
 }, Ae = dt.defineComponent, Yu = !0;
-var lsn = qo.component("KeepAlive"), eh = function(e) {
+var csn = qo.component("KeepAlive"), eh = function(e) {
   var n = [];
   return Object.keys(e).forEach(function(o) {
     return e[o] && n.push(o);
@@ -10000,9 +10000,9 @@ var z6 = ["IconLoadingShadow", "IconNoData"], k2 = 0, C2 = function(e, n) {
     var n = {};
     C2(e, n), A2(e, n), k2++;
   }
-}, csn = e6(Ji({}, dt, {
+}, usn = e6(Ji({}, dt, {
   isVue2: Yu
-})), usn = t6(Ji({}, dt, {
+})), dsn = t6(Ji({}, dt, {
   isVue2: Yu
 })), ze = "Tiny", lt = {
   tiny_mode: String,
@@ -63831,7 +63831,50 @@ function Pb(t = document.body) {
     console.log(e, "error");
   }
 }
-const van = Vo({
+function van() {
+  try {
+    window.MathJax || (window.MathJax = {
+      tex: {
+        packages: { "[+]": ["ams"] },
+        // 加载AMS扩展
+        inlineMath: [
+          ["$", "$"],
+          ["\\(", "\\)"]
+        ],
+        displayMath: [
+          ["$$", "$$"],
+          ["\\[", "\\]"]
+        ]
+      },
+      // 配置MathML输入
+      mathml: {
+        displayAlign: "center"
+        // MathML公式居中显示
+      },
+      // 配置SVG输出
+      svg: {
+        fontCache: "global",
+        // 全局缓存字体以提高性能
+        scale: 1,
+        // 公式缩放比例
+        displayAlign: "center"
+        // SVG公式居中显示
+      },
+      options: {
+        ignoreHtmlClass: "script|noscript|style|textarea|pre|code|a",
+        // 忽略带有该类的元素
+        enableMenu: !1
+      },
+      startup: {
+        // 禁用自动渲染, 后续通过代码手动控制渲染时机
+        typeset: !1
+      }
+    }), cse("3rdlib/mathjax-3.2.2/tex-mml-svg.js");
+  } catch (t) {
+    console.log(t);
+  }
+}
+const yan = Vo({
   name: "Base",
   components: {
     RichTextarea: qk,
@@ -63945,35 +63988,35 @@ const van = Vo({
     };
   }
 });
-var yan = function() {
+var ban = function() {
   var e = this, n = e._self._c;
-  return e._self._setupProxy, n("div", { staticClass: "base-container" }, [e.mode == 2 || e.mode == 3 ? [e.question.type == 3 ? n("div", { staticClass: "completion-preview" }, [e.mode == 2 ? n("div", { staticClass: "preview-title" }, [e._l(e.titleParts, function(o, r) {
+  return e._self._setupProxy, n("div", { staticClass: "base-container" }, [e.mode == 2 || e.mode == 3 ? [e.question.type == 3 ? n("div", { staticClass: "completion-preview" }, [e.mode == 2 ? n("div", { staticClass: "ql-editor preview-title" }, [e._l(e.titleParts, function(o, r) {
     return [o.type === "text" ? n("span", { domProps: { innerHTML: e._s(o.content) } }) : n("div", [n("span", { staticClass: "blank-index" }, [e._v("[" + e._s(e.blankIndex(r) + 1) + "]")]), n("input", { directives: [{ name: "model", rawName: "v-model", value: e.userAnswers[e.blankIndex(r)], expression: "userAnswers[blankIndex(index)]" }], staticClass: "completion-input", class: {
       "answer-correct": e.mode === 3 && e.isSubmitted && e.checkAnswerCorrect(r),
       "answer-error": e.mode === 3 && e.isSubmitted && !e.checkAnswerCorrect(r)
     }, staticStyle: { margin: "0 2px" }, attrs: { type: "text", disabled: !0 }, domProps: { value: e.userAnswers[e.blankIndex(r)] }, on: { input: [function(i) {
       i.target.composing || e.$set(e.userAnswers, e.blankIndex(r), i.target.value);
     }, e.editWidth] } })])];
-  })], 2) : e._e(), e.mode == 3 ? n("div", { staticClass: "preview-title" }, [e._l(e.titleParts, function(o, r) {
+  })], 2) : e._e(), e.mode == 3 ? n("div", { staticClass: "ql-editor preview-title" }, [e._l(e.titleParts, function(o, r) {
     return [o.type === "text" ? n("span", { domProps: { innerHTML: e._s(o.content) } }) : n("div", [n("span", { staticClass: "blank-index" }, [e._v("[" + e._s(e.blankIndex(r) + 1) + "]")]), n("input", { directives: [{ name: "model", rawName: "v-model", value: e.userAnswers[e.blankIndex(r)], expression: "userAnswers[blankIndex(index)]" }], staticClass: "completion-input", class: {
       "answer-correct": e.mode === 3 && e.isSubmitted && e.checkAnswerCorrect(r),
       "answer-error": e.mode === 3 && e.isSubmitted && !e.checkAnswerCorrect(r)
     }, staticStyle: { margin: "0 2px" }, attrs: { type: "text", disabled: e.mode == 3 && e.isSubmitted }, domProps: { value: e.userAnswers[e.blankIndex(r)] }, on: { input: [function(i) {
       i.target.composing || e.$set(e.userAnswers, e.blankIndex(r), i.target.value);
     }, e.editWidth] } })])];
-  })], 2) : e._e(), e.question.allowExchange ? n("div", { staticClass: "can-exchange" }, [e._v("*" + e._s(e.t("answerCanChangeTip")))]) : e._e()]) : n("div", { staticClass: "preview-title", domProps: { innerHTML: e._s(e.question.title || "") } }), n("FileList", { attrs: { mode: "view", type: "block", isPreview: !0, list: e.question.link }, on: { deleteFile: function(o) {
+  })], 2) : e._e(), e.question.allowExchange ? n("div", { staticClass: "can-exchange" }, [e._v("*" + e._s(e.t("answerCanChangeTip")))]) : e._e()]) : n("div", { staticClass: "ql-editor preview-title", domProps: { innerHTML: e._s(e.question.title || "") } }), n("FileList", { attrs: { mode: "view", type: "block", isPreview: !0, list: e.question.link }, on: { deleteFile: function(o) {
   } } })] : n("RichTextarea", { ref: "richTextareaRef", attrs: { placeholderText: e.t("inputQuestionTitle"), list: e.question.link, maxNum: 5, "is-question-bank": e.isQuestionBank, type: e.question.type }, on: { addFile: e.addTitleFile, deleteFile: e.deleteTitleFile }, model: { value: e.question.title, callback: function(o) {
     e.$set(e.question, "title", o);
   }, expression: "question.title" } }), e.question.type == 3 && e.mode == 1 ? n("TinyButton", { staticClass: "insert-blank", on: { click: e.insert } }, [e._v(" " + e._s(e.t("insertQue")) + " ")]) : e._e(), e._t("default")], 2);
-}, ban = [], wan = /* @__PURE__ */ On(
-  van,
+}, wan = [], xan = /* @__PURE__ */ On(
   yan,
   ban,
+  wan,
   !1,
   null,
-  "a1a5c26f"
+  "5ac4a1be"
 );
-const If = wan.exports;
+const If = xan.exports;
 class ao {
   constructor({
     id: e,
@@ -63993,7 +64036,7 @@ class ao {
     hardlevel: v = 3,
     knowledgeDTOS: f = []
   }) {
-    this.id = e || n, this.questionid = this.id, this.type = o, this.title = r, this.score = i, this.correctAnswer = a, this.reply = l, this.record = new xan(s), this.lisCount = c, this.link = d || [], this.analyLinkList = u || [], this.answerlink = m, this.correctChoiceIds = h, this.tags = p || [], this.hardlevel = v, this.knowledgeDTOS = f || [];
+    this.id = e || n, this.questionid = this.id, this.type = o, this.title = r, this.score = i, this.correctAnswer = a, this.reply = l, this.record = new Tan(s), this.lisCount = c, this.link = d || [], this.analyLinkList = u || [], this.answerlink = m, this.correctChoiceIds = h, this.tags = p || [], this.hardlevel = v, this.knowledgeDTOS = f || [];
   }
   scoring() {
     console.error("子类自行实现接口");
@@ -64008,7 +64051,7 @@ class ao {
   getCorrectAnswer() {
   }
 }
-class xan {
+class Tan {
   constructor({
     id: e = "",
     answer: n = [],
@@ -64032,7 +64075,7 @@ let Mp = class {
     this.id = e || n, this.choiceId = o, this.text = r, this.attachments = i, this.record = a;
   }
 };
-class Tan extends ao {
+class kan extends ao {
   constructor(e) {
     super(e), this.choices = [];
     for (let n = 0; e.item && n < e.item.length; n++) {
@@ -64087,7 +64130,7 @@ let _b = class {
   constructor({ id: e = "", correctAnswer: n = "" }) {
     this.id = e, this.correctAnswer = n;
   }
-}, kan = class extends ao {
+}, Can = class extends ao {
   constructor(e) {
     super(e), this.allowExchange = e.allowExchange || e.blankOrder || e.blackOrder || 0, this.blanks = [];
     let n = 0;
@@ -64114,7 +64157,7 @@ let _b = class {
     o.blankIndex = n, this.blanks.splice(e, 0, o), this.correctAnswer.splice(e, 0, "");
   }
 };
-class Can extends ao {
+class Aan extends ao {
   constructor(e) {
     super(e);
   }
@@ -64131,7 +64174,7 @@ class Can extends ao {
     return o ? r ? "correct" : "error" : "";
   }
 }
-class Aan extends ao {
+class San extends ao {
   constructor(e) {
     super(e), this.answerLinkList = e.answerLinkList || [], this.answerLinkList.length == 0 && this.answerlink && this.answerLinkList.push({ fileUrl: this.answerlink });
   }
@@ -64144,7 +64187,7 @@ class Aan extends ao {
     return Array.isArray(this.correctAnswer) ? this.correctAnswer[0] : this.correctAnswer;
   }
 }
-class San extends ao {
+class Ean extends ao {
   constructor(e) {
     super(e), this.subQuestions = [];
     for (let n = 0; e.subQuestions && n < e.subQuestions.length; n++) {
@@ -64178,7 +64221,7 @@ let Lp = class {
     this.id = e, this.text = n, this.option = o, this.attachments = r;
   }
 };
-class Ean extends ao {
+class $an extends ao {
   constructor(e) {
     super(e), this.choices = [], this.subQuestions = [];
     for (let n = 0; e.item && n < e.item.length; n++) {
@@ -64245,7 +64288,7 @@ class Ean extends ao {
     return this.record.answer && this.record.answer.includes(o) ? r ? "correct" : "error" : "";
   }
 }
-class $an extends ao {
+class Pan extends ao {
   constructor(e) {
     super(e), this.subQuestions = [];
     for (let n = 0; e.subQuestions && n < e.subQuestions.length; n++) {
@@ -64269,7 +64312,7 @@ let Ip = class {
     this.id = e, this.text = n, this.option = o;
   }
 };
-class Pan extends ao {
+class _an extends ao {
   constructor(e) {
     super(e), this.choices = [];
     for (let n = 0; e.item && n < e.item.length; n++) {
@@ -64315,7 +64358,7 @@ class Pan extends ao {
     return e && this.record.answer && this.record.answer[n] ? this.correctAnswer[n] === this.record.answer[n] ? "correct" : "error" : "";
   }
 }
-class _an extends ao {
+class Man extends ao {
   constructor(e) {
     super(e);
   }
@@ -64325,7 +64368,7 @@ class _an extends ao {
     return this.record.answer.join("") || "";
   }
 }
-class Man extends ao {
+class Lan extends ao {
   constructor(e) {
     super(e);
   }
@@ -64342,7 +64385,7 @@ class Np {
     this.formula = e, this.answerRange = n, this.precision = o;
   }
 }
-class Lan extends ao {
+class Ian extends ao {
   constructor(e) {
     super(e), this.variables = [], this.blanks = [], this.scope = {}, this.desc1 = e.desc1;
     try {
@@ -64429,38 +64472,38 @@ function sc(t) {
   switch (t.type) {
     case 1:
     case 2:
-      e = new Tan(t);
-      break;
-    case 3:
       e = new kan(t);
       break;
-    case 4:
+    case 3:
       e = new Can(t);
       break;
-    case 5:
+    case 4:
       e = new Aan(t);
       break;
+    case 5:
+      e = new San(t);
+      break;
     case 12:
-      e = new Pan(t);
+      e = new _an(t);
       break;
     case 11:
     case 23:
-      e = new San(t);
-      break;
-    case 17:
       e = new Ean(t);
       break;
-    case 16:
-      e = new _an(t);
-      break;
-    case 19:
-      e = new Man(t);
-      break;
-    case 24:
+    case 17:
       e = new $an(t);
       break;
-    case 25:
+    case 16:
+      e = new Man(t);
+      break;
+    case 19:
       e = new Lan(t);
+      break;
+    case 24:
+      e = new Pan(t);
+      break;
+    case 25:
+      e = new Ian(t);
       break;
     default:
       e = new ao(t);
@@ -64484,7 +64527,7 @@ function Nf(t) {
     e.score = e.score === 0 || e.score > 0 ? Number(wm(e.score, 2)) : 1, t.score += e.score;
   })), t.score = t.score === 0 || t.score > 0 ? Number(wm(t.score, 2)) : 1, t.type == 25 && !t.formulaVar && t.desc1 && (t.formulaVar = JSON.parse(t.desc1)), sc(t);
 }
-const Fk = "data:image/png;base64,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", Ian = "data:image/svg+xml,%3csvg%20width='18'%20height='18'%20viewBox='0%200%2018%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3crect%20opacity='0.01'%20width='18'%20height='18'%20fill='black'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M8.57917%2015.9145C8.70747%2016.0428%208.8824%2016.1134%209.06382%2016.1102C9.43813%2016.1092%209.74175%2015.8068%209.74422%2015.4325V9.67071H15.5051C15.8805%209.66972%2016.1845%209.36568%2016.1855%208.99031C16.1887%208.8089%2016.118%208.63397%2015.9897%208.50567C15.8614%208.37737%2015.6865%208.30671%2015.5051%208.30991H9.74422V2.57151C9.74422%202.19574%209.43959%201.89111%209.06382%201.89111C8.68804%201.89111%208.38342%202.19574%208.38342%202.57151V8.30991H2.645C2.26923%208.30991%201.9646%208.61454%201.9646%208.99031C1.9646%209.36609%202.26923%209.67071%202.645%209.67071H8.38342V15.4298C8.38021%2015.6112%208.45087%2015.7862%208.57917%2015.9145ZM8.38342%209.67071H9.74422V8.30991H8.38342V9.67071Z'%20fill='%23529FFF'/%3e%3c/svg%3e", Nan = Vo({
+const Fk = "data:image/png;base64,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", Nan = "data:image/svg+xml,%3csvg%20width='18'%20height='18'%20viewBox='0%200%2018%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3crect%20opacity='0.01'%20width='18'%20height='18'%20fill='black'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M8.57917%2015.9145C8.70747%2016.0428%208.8824%2016.1134%209.06382%2016.1102C9.43813%2016.1092%209.74175%2015.8068%209.74422%2015.4325V9.67071H15.5051C15.8805%209.66972%2016.1845%209.36568%2016.1855%208.99031C16.1887%208.8089%2016.118%208.63397%2015.9897%208.50567C15.8614%208.37737%2015.6865%208.30671%2015.5051%208.30991H9.74422V2.57151C9.74422%202.19574%209.43959%201.89111%209.06382%201.89111C8.68804%201.89111%208.38342%202.19574%208.38342%202.57151V8.30991H2.645C2.26923%208.30991%201.9646%208.61454%201.9646%208.99031C1.9646%209.36609%202.26923%209.67071%202.645%209.67071H8.38342V15.4298C8.38021%2015.6112%208.45087%2015.7862%208.57917%2015.9145ZM8.38342%209.67071H9.74422V8.30991H8.38342V9.67071Z'%20fill='%23529FFF'/%3e%3c/svg%3e", Oan = Vo({
   name: "Choice",
   components: {
     TinyButton: Pt,
@@ -64628,7 +64671,7 @@ const Fk = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAYAAACtWK6eAA
     };
   }
 });
-var Oan = function() {
+var Dan = function() {
   var o;
   var e = this, n = e._self._c;
   return e._self._setupProxy, n("Base", { staticClass: "choice-container", attrs: { question: e.question, mode: e.mode } }, [e.mode === 1 ? n("div", { staticClass: "edit-mode" }, [n("div", { staticClass: "choice-list-base" }, [e._l(e.question.choices, function(r, i) {
@@ -64641,7 +64684,7 @@ var Oan = function() {
     } } })]), i > 1 ? n("img", { staticClass: "btn-delete", attrs: { src: Fk, alt: "" }, on: { click: function(a) {
       return e.deleteChoice(r, i);
     } } }) : e._e()], 1)]);
-  }), n("div", { staticClass: "btn-add", on: { click: e.addChoice } }, [n("img", { attrs: { src: Ian, alt: "" } }), e._v(e._s(e.t("addOption")) + " ")])], 2), n("div", { staticClass: "choice-list" }, [n("div", { staticClass: "answer-display" }, [n("span", [e._v(e._s(e.t("answer")) + "：")]), n("span", [e._v(e._s(e.formatAnswer(e.question.correctAnswer)))])]), e.question.type === 1 ? n("TinyRadioGroup", { staticClass: "choices", model: { value: e.radioAnswer, callback: function(r) {
+  }), n("div", { staticClass: "btn-add", on: { click: e.addChoice } }, [n("img", { attrs: { src: Nan, alt: "" } }), e._v(e._s(e.t("addOption")) + " ")])], 2), n("div", { staticClass: "choice-list" }, [n("div", { staticClass: "answer-display" }, [n("span", [e._v(e._s(e.t("answer")) + "：")]), n("span", [e._v(e._s(e.formatAnswer(e.question.correctAnswer)))])]), e.question.type === 1 ? n("TinyRadioGroup", { staticClass: "choices", model: { value: e.radioAnswer, callback: function(r) {
     e.radioAnswer = r;
   }, expression: "radioAnswer" } }, e._l(e.question.choices, function(r, i) {
     return n("TinyRadio", { key: r.id, staticClass: "choice-item", attrs: { label: e.getOption(i) } }, [n("span", { staticClass: "index" }, [e._v(e._s(e.getOption(i)))])]);
@@ -64653,46 +64696,46 @@ var Oan = function() {
     e.radioAnswer = r;
   }, expression: "radioAnswer" } }, e._l(e.question.choices, function(r, i) {
     var a;
-    return n("TinyRadio", { key: r.id, staticClass: "choice-item", attrs: { label: e.getOption(i) } }, [n("span", { staticClass: "index" }, [e._v(e._s(e.getOption(i)) + ". ")]), n("div", { staticClass: "choice-content" }, [n("span", { staticClass: "rich-text", domProps: { innerHTML: e._s(r.text) } }), (a = r.attachments) != null && a.length ? n("FileList", { staticClass: "choice-file-list", attrs: { mode: "preview", type: "block", isPreview: !0, list: r.attachments, isShowLimitTimes: !1 } }) : e._e()], 1)]);
+    return n("TinyRadio", { key: r.id, staticClass: "choice-item", attrs: { label: e.getOption(i) } }, [n("span", { staticClass: "index" }, [e._v(e._s(e.getOption(i)) + ". ")]), n("div", { staticClass: "choice-content" }, [n("span", { staticClass: "rich-text ql-editor not-edit", domProps: { innerHTML: e._s(r.text) } }), (a = r.attachments) != null && a.length ? n("FileList", { staticClass: "choice-file-list", attrs: { mode: "preview", type: "block", isPreview: !0, list: r.attachments, isShowLimitTimes: !1 } }) : e._e()], 1)]);
   }), 1) : e._e(), e.question.type === 2 ? n("TinyCheckboxGroup", { staticClass: "choices", attrs: { disabled: "" }, model: { value: e.checkboxAnswer, callback: function(r) {
     e.checkboxAnswer = r;
   }, expression: "checkboxAnswer" } }, e._l(e.question.choices, function(r, i) {
     var a;
-    return n("TinyCheckbox", { key: r.id, staticClass: "choice-item", attrs: { label: e.getOption(i) } }, [n("span", { staticClass: "index" }, [e._v(e._s(e.getOption(i)) + ". ")]), n("div", { staticClass: "choice-content" }, [n("span", { staticClass: "rich-text", domProps: { innerHTML: e._s(r.text) } }), (a = r.attachments) != null && a.length ? n("FileList", { staticClass: "choice-file-list", attrs: { mode: "preview", type: "block", isPreview: !0, list: r.attachments, isShowLimitTimes: !1 } }) : e._e()], 1)]);
+    return n("TinyCheckbox", { key: r.id, staticClass: "choice-item", attrs: { label: e.getOption(i) } }, [n("span", { staticClass: "index" }, [e._v(e._s(e.getOption(i)) + ". ")]), n("div", { staticClass: "choice-content" }, [n("span", { staticClass: "rich-text ql-editor not-edit", domProps: { innerHTML: e._s(r.text) } }), (a = r.attachments) != null && a.length ? n("FileList", { staticClass: "choice-file-list", attrs: { mode: "preview", type: "block", isPreview: !0, list: r.attachments, isShowLimitTimes: !1 } }) : e._e()], 1)]);
   }), 1) : e._e()], 1), n("div", { staticClass: "answer-display" }, [n("span", [e._v(e._s(e.t("answer")) + "：")]), n("span", [e._v(e._s(e.formatAnswer(e.question.correctAnswer)))])])]) : e._e(), e.mode === 3 ? n("div", { staticClass: "answer-mode" }, [e.isSubmitted ? n("div", { staticClass: "choice-list" }, [e.question.type === 1 ? n("TinyRadioGroup", { staticClass: "choices", attrs: { disabled: !0 }, model: { value: e.userAnswer, callback: function(r) {
     e.userAnswer = r;
   }, expression: "userAnswer" } }, e._l(e.question.choices, function(r, i) {
     var a;
-    return n("TinyRadio", { key: r.id, staticClass: "choice-item", class: e.handleAnswerClass(i), attrs: { label: e.getOption(i) } }, [n("span", { staticClass: "index" }, [e._v(e._s(e.getOption(i)) + ". ")]), n("div", { staticClass: "choice-content" }, [n("span", { staticClass: "rich-text", domProps: { innerHTML: e._s(r.text) } }), (a = r.attachments) != null && a.length ? n("FileList", { staticClass: "choice-file-list", attrs: { mode: "preview", type: "block", isPreview: !0, list: r.attachments, isShowLimitTimes: !1, showDownLoad: e.mode !== 3 } }) : e._e()], 1)]);
+    return n("TinyRadio", { key: r.id, staticClass: "choice-item", class: e.handleAnswerClass(i), attrs: { label: e.getOption(i) } }, [n("span", { staticClass: "index" }, [e._v(e._s(e.getOption(i)) + ". ")]), n("div", { staticClass: "choice-content" }, [n("span", { staticClass: "rich-text ql-editor not-edit", domProps: { innerHTML: e._s(r.text) } }), (a = r.attachments) != null && a.length ? n("FileList", { staticClass: "choice-file-list", attrs: { mode: "preview", type: "block", isPreview: !0, list: r.attachments, isShowLimitTimes: !1, showDownLoad: e.mode !== 3 } }) : e._e()], 1)]);
   }), 1) : e._e(), e.question.type === 2 ? n("TinyCheckboxGroup", { staticClass: "choices", attrs: { disabled: !0 }, model: { value: e.userAnswer, callback: function(r) {
     e.userAnswer = r;
   }, expression: "userAnswer" } }, e._l(e.question.choices, function(r, i) {
     var a;
-    return n("TinyCheckbox", { key: r.id, staticClass: "choice-item", class: e.handleAnswerClass(i), attrs: { label: e.getOption(i) } }, [n("span", { staticClass: "index" }, [e._v(e._s(e.getOption(i)) + ". ")]), n("div", { staticClass: "choice-content" }, [n("span", { staticClass: "rich-text", domProps: { innerHTML: e._s(r.text) } }), (a = r.attachments) != null && a.length ? n("FileList", { staticClass: "choice-file-list", attrs: { mode: "preview", type: "block", isPreview: !0, list: r.attachments, isShowLimitTimes: !1, showDownLoad: e.mode !== 3 } }) : e._e()], 1)]);
+    return n("TinyCheckbox", { key: r.id, staticClass: "choice-item", class: e.handleAnswerClass(i), attrs: { label: e.getOption(i) } }, [n("span", { staticClass: "index" }, [e._v(e._s(e.getOption(i)) + ". ")]), n("div", { staticClass: "choice-content" }, [n("span", { staticClass: "rich-text ql-editor", domProps: { innerHTML: e._s(r.text) } }), (a = r.attachments) != null && a.length ? n("FileList", { staticClass: "choice-file-list", attrs: { mode: "preview", type: "block", isPreview: !0, list: r.attachments, isShowLimitTimes: !1, showDownLoad: e.mode !== 3 } }) : e._e()], 1)]);
   }), 1) : e._e()], 1) : n("div", { staticClass: "choice-list" }, [e.question.type === 1 ? n("TinyRadioGroup", { staticClass: "choices", model: { value: e.radioAnswer, callback: function(r) {
     e.radioAnswer = r;
   }, expression: "radioAnswer" } }, e._l(e.question.choices, function(r, i) {
     var a;
-    return n("TinyRadio", { key: r.id, staticClass: "choice-item", attrs: { label: e.getOption(i) } }, [n("span", { staticClass: "index" }, [e._v(e._s(e.getOption(i)) + ". ")]), n("div", { staticClass: "choice-content" }, [n("span", { staticClass: "rich-text", domProps: { innerHTML: e._s(r.text) } }), (a = r.attachments) != null && a.length ? n("FileList", { staticClass: "choice-file-list", attrs: { mode: "preview", type: "block", isPreview: !0, list: r.attachments, isShowLimitTimes: !1, showDownLoad: e.mode !== 3 } }) : e._e()], 1)]);
+    return n("TinyRadio", { key: r.id, staticClass: "choice-item", attrs: { label: e.getOption(i) } }, [n("span", { staticClass: "index" }, [e._v(e._s(e.getOption(i)) + ". ")]), n("div", { staticClass: "choice-content" }, [n("span", { staticClass: "rich-text ql-editor not-edit", domProps: { innerHTML: e._s(r.text) } }), (a = r.attachments) != null && a.length ? n("FileList", { staticClass: "choice-file-list", attrs: { mode: "preview", type: "block", isPreview: !0, list: r.attachments, isShowLimitTimes: !1, showDownLoad: e.mode !== 3 } }) : e._e()], 1)]);
   }), 1) : e._e(), e.question.type === 2 ? n("TinyCheckboxGroup", { staticClass: "choices", model: { value: e.checkboxAnswer, callback: function(r) {
     e.checkboxAnswer = r;
   }, expression: "checkboxAnswer" } }, e._l(e.question.choices, function(r, i) {
     var a;
-    return n("TinyCheckbox", { key: r.id, staticClass: "choice-item", attrs: { label: e.getOption(i) } }, [n("span", { staticClass: "index" }, [e._v(e._s(e.getOption(i)) + ". ")]), n("div", { staticClass: "choice-content" }, [n("span", { staticClass: "rich-text", domProps: { innerHTML: e._s(r.text) } }), (a = r.attachments) != null && a.length ? n("FileList", { staticClass: "choice-file-list", attrs: { mode: "preview", type: "block", isPreview: !0, list: r.attachments, isShowLimitTimes: !1, showDownLoad: e.mode !== 3 } }) : e._e()], 1)]);
+    return n("TinyCheckbox", { key: r.id, staticClass: "choice-item", attrs: { label: e.getOption(i) } }, [n("span", { staticClass: "index" }, [e._v(e._s(e.getOption(i)) + ". ")]), n("div", { staticClass: "choice-content" }, [n("span", { staticClass: "rich-text ql-editor not-edit", domProps: { innerHTML: e._s(r.text) } }), (a = r.attachments) != null && a.length ? n("FileList", { staticClass: "choice-file-list", attrs: { mode: "preview", type: "block", isPreview: !0, list: r.attachments, isShowLimitTimes: !1, showDownLoad: e.mode !== 3 } }) : e._e()], 1)]);
   }), 1) : e._e()], 1), e.isSubmitted && e.showAnswer ? n("div", [n("div", { staticClass: "answer-display" }, [n("span", [e._v(e._s(e.t("stuAnswer")) + "：")]), n("span", [e._v(e._s(e.formatAnswer((o = e.question.record) == null ? void 0 : o.answer)))])]), n("div", { staticClass: "correct-answer" }, [n("span", [e._v(e._s(e.t("correctAnswer")) + "：")]), n("span", [e._v(e._s(e.formatAnswer(e.question.correctAnswer)))])])]) : e._e()]) : e._e(), e.alertInfo.text ? n("TinyAlert", { staticClass: "alert-warning", attrs: { type: e.alertInfo.type }, scopedSlots: e._u([{ key: "description", fn: function() {
     return [e._v(e._s(e.alertInfo.text))];
   }, proxy: !0 }], null, !1, 3471111397) }) : e._e()], 1);
-}, Dan = [], Ban = /* @__PURE__ */ On(
-  Nan,
+}, Ban = [], qan = /* @__PURE__ */ On(
   Oan,
   Dan,
+  Ban,
   !1,
   null,
-  "829ac6c0"
+  "2e610653"
 );
-const uu = Ban.exports;
+const uu = qan.exports;
 uu.install = (t) => t.component(uu.name, uu);
-const qan = Vo({
+const Fan = Vo({
   name: "Completion",
   components: {
     Base: If,
@@ -64859,7 +64902,7 @@ const qan = Vo({
     };
   }
 });
-var Fan = function() {
+var Ran = function() {
   var e = this, n = e._self._c;
   return e._self._setupProxy, n("Base", { ref: "baseComponent", staticClass: "completion-question", attrs: { question: e.question, mode: e.mode, isSubmitted: e.isSubmitted }, on: { blankAnswerChange: e.blankAnswerChange } }, [e.mode === 1 ? [n("div", { staticClass: "edit-mode" }, [n("div", { staticClass: "title" }), n("div", { staticClass: "correct-answer" }, [n("span", { staticClass: "tip" }, [e._v(e._s(e.t("answer")) + "：")]), n("span", { staticClass: "correct-answer-tip" }, [e._v("( " + e._s(e.t("inputAnswerTip2")) + " )")]), e._l(e.question.blanks, function(o, r) {
     return n("div", { key: o.id || r }, [n("div", { staticClass: "answer-item" }, [n("span", { staticClass: "answer-option" }, [e._v("[" + e._s(r + 1) + "]")]), n("input", { directives: [{ name: "model", rawName: "v-model", value: o.correctAnswer, expression: "blank.correctAnswer" }], staticClass: "answer-input", attrs: { placeholder: e.t("inputAnswer"), type: "text" }, domProps: { value: o.correctAnswer }, on: { change: e.answerChange, input: function(i) {
@@ -64874,17 +64917,17 @@ var Fan = function() {
   })], 2)], 1)] : e._e(), e.alertInfo.text ? n("TinyAlert", { staticClass: "alert-warning", attrs: { type: e.alertInfo.type }, scopedSlots: e._u([{ key: "description", fn: function() {
     return [e._v(e._s(e.alertInfo.text))];
   }, proxy: !0 }], null, !1, 3471111397) }) : e._e()], 2);
-}, Ran = [], jan = /* @__PURE__ */ On(
-  qan,
+}, jan = [], zan = /* @__PURE__ */ On(
   Fan,
   Ran,
+  jan,
   !1,
   null,
   "ea944f6b"
 );
-const du = jan.exports;
+const du = zan.exports;
 du.install = (t) => t.component(du.name, du);
-const cl = "data:image/svg+xml,%3csvg%20width='18'%20height='18'%20viewBox='0%200%2018%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3crect%20opacity='0.01'%20width='18'%20height='18'%20fill='%23475467'/%3e%3cpath%20d='M6.77719%2012.6257L2.59039%207.87367C2.34614%207.5802%201.96178%207.44255%201.58677%207.51423C1.21175%207.58592%200.905259%207.85563%200.786475%208.21849C0.66769%208.58135%200.755358%208.98009%201.01539%209.25967L5.96539%2014.8865C6.16186%2015.1092%206.4434%2015.2385%206.74039%2015.2422C7.03739%2015.246%207.32212%2015.124%207.52419%2014.9063L17.2712%204.40687C17.5406%204.13474%2017.6404%203.73748%2017.5316%203.37035C17.4227%203.00321%2017.1226%202.7245%2016.7484%202.64313C16.3742%202.56177%2015.9854%202.69067%2015.734%202.97947L6.77719%2012.6275V12.6257Z'%20fill='%23475467'/%3e%3c/svg%3e", ul = "data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3crect%20opacity='0.01'%20width='16'%20height='16'%20fill='%23475467'/%3e%3cpath%20d='M9.48719%208.00012L15.2562%202.23012C15.6662%201.82112%2015.6662%201.15012%2015.2562%200.741117C14.8462%200.331117%2014.1762%200.331117%2013.7662%200.741117L7.99719%206.51112L2.22719%200.740117C1.81819%200.330117%201.14719%200.330117%200.738187%200.740117C0.328187%201.15012%200.328187%201.82012%200.738187%202.23012L6.50819%208.00012L0.737188%2013.7701C0.327188%2014.1791%200.327188%2014.8501%200.737188%2015.2591C1.14719%2015.6691%201.81719%2015.6691%202.22719%2015.2591L7.99719%209.48912L13.7672%2015.2591C14.1762%2015.6691%2014.8472%2015.6691%2015.2562%2015.2591C15.6662%2014.8491%2015.6662%2014.1791%2015.2562%2013.7691L9.48619%208.00012H9.48719Z'%20fill='%23475467'/%3e%3c/svg%3e", zan = Vo({
+const cl = "data:image/svg+xml,%3csvg%20width='18'%20height='18'%20viewBox='0%200%2018%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3crect%20opacity='0.01'%20width='18'%20height='18'%20fill='%23475467'/%3e%3cpath%20d='M6.77719%2012.6257L2.59039%207.87367C2.34614%207.5802%201.96178%207.44255%201.58677%207.51423C1.21175%207.58592%200.905259%207.85563%200.786475%208.21849C0.66769%208.58135%200.755358%208.98009%201.01539%209.25967L5.96539%2014.8865C6.16186%2015.1092%206.4434%2015.2385%206.74039%2015.2422C7.03739%2015.246%207.32212%2015.124%207.52419%2014.9063L17.2712%204.40687C17.5406%204.13474%2017.6404%203.73748%2017.5316%203.37035C17.4227%203.00321%2017.1226%202.7245%2016.7484%202.64313C16.3742%202.56177%2015.9854%202.69067%2015.734%202.97947L6.77719%2012.6275V12.6257Z'%20fill='%23475467'/%3e%3c/svg%3e", ul = "data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3crect%20opacity='0.01'%20width='16'%20height='16'%20fill='%23475467'/%3e%3cpath%20d='M9.48719%208.00012L15.2562%202.23012C15.6662%201.82112%2015.6662%201.15012%2015.2562%200.741117C14.8462%200.331117%2014.1762%200.331117%2013.7662%200.741117L7.99719%206.51112L2.22719%200.740117C1.81819%200.330117%201.14719%200.330117%200.738187%200.740117C0.328187%201.15012%200.328187%201.82012%200.738187%202.23012L6.50819%208.00012L0.737188%2013.7701C0.327188%2014.1791%200.327188%2014.8501%200.737188%2015.2591C1.14719%2015.6691%201.81719%2015.6691%202.22719%2015.2591L7.99719%209.48912L13.7672%2015.2591C14.1762%2015.6691%2014.8472%2015.6691%2015.2562%2015.2591C15.6662%2014.8491%2015.6662%2014.1791%2015.2562%2013.7691L9.48619%208.00012H9.48719Z'%20fill='%23475467'/%3e%3c/svg%3e", Uan = Vo({
   name: "JudgeQuestion",
   components: {
     Base: If,
@@ -64972,7 +65015,7 @@ const cl = "data:image/svg+xml,%3csvg%20width='18'%20height='18'%20viewBox='0%20
     };
   }
 });
-var Uan = function() {
+var Van = function() {
   var e = this, n = e._self._c;
   return e._self._setupProxy, n("Base", { staticClass: "true-or-false-question", attrs: { question: e.question, mode: e.mode } }, [e.mode === 1 ? [n("div", { staticClass: "correct-answer" }, [n("span", [e._v(e._s(e.t("correctAnswer")) + "：")]), n("TinyRadioGroup", { model: { value: e.correctAnswer, callback: function(o) {
     e.correctAnswer = o;
@@ -64987,27 +65030,27 @@ var Uan = function() {
   }, expression: "userAnswer" } }, [n("TinyRadio", { attrs: { label: "true" } }, [n("img", { attrs: { src: cl, alt: "" } })]), n("TinyRadio", { attrs: { label: "false" } }, [n("img", { attrs: { src: ul, alt: "" } })])], 1)], 1)])])] : e._e(), e.alertInfo.text ? n("TinyAlert", { staticClass: "alert-warning", attrs: { type: e.alertInfo.type }, scopedSlots: e._u([{ key: "description", fn: function() {
     return [e._v(e._s(e.alertInfo.text))];
   }, proxy: !0 }], null, !1, 3471111397) }) : e._e()], 2);
-}, Van = [], Han = /* @__PURE__ */ On(
-  zan,
+}, Han = [], Qan = /* @__PURE__ */ On(
   Uan,
   Van,
+  Han,
   !1,
   null,
   "7d8d29c8"
 );
-const pu = Han.exports;
+const pu = Qan.exports;
 pu.install = (t) => t.component(pu.name, pu);
-cse("3rdlib/mathjax-3.2.2/tex-mml-svg.js");
-const Qan = [
+van();
+const Kan = [
   Kc,
   au,
   su,
   uu,
   du,
   pu
-], Kan = (t) => {
-  Qan.forEach((e) => t.use(e));
-}, Ysn = { install: Kan };
+], Gan = (t) => {
+  Kan.forEach((e) => t.use(e));
+}, Xsn = { install: Gan };
 export {
   uu as Choice,
   du as Completion,
@@ -65015,5 +65058,5 @@ export {
   Kc as MyButton,
   au as MyTinyButton,
   su as MyTinyRadio,
-  Ysn as default
+  Xsn as default
 };
