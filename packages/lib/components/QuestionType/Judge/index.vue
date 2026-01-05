@@ -85,8 +85,9 @@
 
 <script>
 import { useT } from "@/locale/index.js";
-import { defineComponent, ref, computed, watch } from 'vue-demi';
+import { defineComponent, ref, computed, watch, nextTick } from 'vue-demi';
 import { TinyButton, TinyRadio, TinyRadioGroup, TinyAlert } from '@opentiny/vue'
+import { renderMath } from "@/utils/mathjax.js"
 import Base from '../Base.vue'
 import FileList from '../../FileList/index.vue';
 import { getQuestion } from "../../../model/questionFactory.js"
@@ -159,6 +160,9 @@ export default defineComponent({
           userAnswer.value = '';
         }
       }
+      nextTick(() => {
+        renderMath()
+      })
       console.log(question.value, '--------Judge--------');
     }, { immediate: true });
 

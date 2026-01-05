@@ -47,8 +47,9 @@
 </template>
 
 <script>
-import { defineComponent, ref, watch } from 'vue-demi';
+import { defineComponent, ref, watch, nextTick } from 'vue-demi';
 import { TinyButton, TinyCheckbox, TinyAlert } from '@opentiny/vue'
+import { renderMath } from "@/utils/mathjax.js"
 import Base from '../Base.vue'
 import FileList from '../../FileList/index.vue';
 import { t } from '../../../locale/index.js';
@@ -298,6 +299,9 @@ export default defineComponent({
     // 监听原始题目变化
     watch(() => props.oriQuestion, (newVal) => {
       question.value = getQuestion(newVal);
+      nextTick(() => {
+        renderMath()
+      })
     }, { immediate: true });
     // 答案变化处理
     const answerChange = () => {

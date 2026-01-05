@@ -167,7 +167,8 @@
 
 <script>
 import { useT } from "@/locale/index.js";
-import { defineComponent, ref, watch } from 'vue-demi'
+import { defineComponent, ref, watch, nextTick } from 'vue-demi'
+import { renderMath } from "@/utils/mathjax.js"
 import Base from '../Base.vue'
 import { TinyButton, TinyRadioGroup, TinyRadio, TinyCheckboxGroup, TinyCheckbox, TinyAlert } from '@opentiny/vue'
 import FileList from '@/components/FileList/index.vue'
@@ -276,6 +277,9 @@ export default defineComponent({
       question.value = getQuestion(newVal)
       // 根据不同模式初始化答案
       updateSelectAnswer()
+      nextTick(() => {
+        renderMath()
+      })
       console.log(question.value, '--------Choice--------', newVal);
     }, { immediate: true })
     watch([() => props.mode, () => props.isSubmitted], () => {
