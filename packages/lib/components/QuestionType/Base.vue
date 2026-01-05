@@ -309,6 +309,7 @@ export default defineComponent({
 .preview-title {
   padding: 0 !important;
   margin-bottom: calc(16 * var(--question-font-size));
+  overflow-y: unset !important;
 }
 // 填空题预览和答题样式
 .completion-preview {
