@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import { defineComponent, ref, watch, onMounted, onUnmounted, computed } from 'vue-demi'
+import { defineComponent, ref, watch, onMounted, onUnmounted, computed, version } from 'vue-demi'
 import { TinyFluentEditor, TinyDialogBox, TinyButton } from '@opentiny/vue'
 import FileList from "../FileList/index.vue";
 import { handlerErrCode, formatTypeLimit } from "../../utils/file.js";
@@ -42,6 +42,7 @@ export default defineComponent({
   },
   props: {
     value: String,
+    modelValue: String,
     list: {
       type: Array,
       default() {
@@ -73,11 +74,11 @@ export default defineComponent({
       default: 0,
     },
   },
-  emits: ['change', 'addFile', 'deleteFile'],
+  emits: ['change', 'addFile', 'deleteFile', 'update:modelValue'],
   setup(props, { emit }) {
     const t = useT()
     const obs = ref(null)
-    const content = ref(props.value || '')
+    const content = ref(props.modelValue || '')
     const fluentEditorRef = ref(null)
     const containerId = ref(getUniqueValue())
     const boxVisibility = ref(false)
@@ -192,7 +193,11 @@ export default defineComponent({
         // const reg = /（\s*）|\(\s*\)/g
         val = val.replace(reg, '(&nbsp;)')
       }
-      emit('change', val)
+      if(version.startsWith('3')){
+        emit('update:modelValue', val)
+      }else {
+        emit('change', val)
+      }
     })
     const options = ref({
       placeholder: props.placeholderText,

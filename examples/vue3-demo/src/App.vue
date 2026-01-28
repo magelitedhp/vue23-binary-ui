@@ -17,14 +17,15 @@
 </template>
 
 <script setup>
-import { Choice, Judge, Completion } from 'ul-question-test-ui/vue3';
+// import { Choice, Judge, Completion } from 'ul-question-test-ui/vue3';
+import { Choice, Judge, Completion } from 'my-vue3-ui'
 import { ref, computed } from "vue"
 import { Button as MyTinyButton } from '@opentiny/vue'
 
 // 状态定义
 const question = ref({})
 const mode = ref(1)
-const questionType = ref(1) // 1: 单选, 2: 多选, 3: 判断, 4: 填空
+const questionType = ref(1) // 1: 单选, 2: 多选, 3: 填空, 4: 判断
 
 // 模式映射
 const modeObj = {
@@ -37,8 +38,8 @@ const modeObj = {
 const components = {
     1: Choice,
     2: Choice,
-    3: Judge,
-    4: Completion
+    3: Completion,
+    4: Judge
 }
 
 // 当前组件计算属性
@@ -54,113 +55,6 @@ const changeMode = (val) => {
 // 清空题目
 const clearQuestion = () => {
     question.value = {}
-}
-const getQuestion3 = () => {
-    question.value = {
-        "questionid": 12496525,
-        "oldQuestionId": null,
-        "title": "<p>这是一道判断题</p>",
-        "type": 3,
-        "iscontent": 1,
-        "hardlevel": 2,
-        "parentid": 0,
-        "score": 1,
-        "correctreply": "",
-        "correctAnswer": [
-            "正确"
-        ],
-        "lisCount": null,
-        "createtime": null,
-        "updatetime": 1764209055000,
-        "remark": null,
-        "userid": 7449024,
-        "orgid": null,
-        "aspid": null,
-        "desc1": "",
-        "desc4": null,
-        "isShare": 0,
-        "theLatest": null,
-        "blankOrder": 0,
-        "item": null,
-        "subQuestions": null,
-        "link": null,
-        "analyLinkList": null,
-        "answerLinkList": null,
-        "demoLinkList": null,
-        "formulaVar": null,
-        "parentFolders": [],
-        "creater": "csbm_testtea001@!:+./！",
-        "orgName": "测试部门-测试机构",
-        "shareArray": [],
-        "isUsed": null,
-        "autoscore": 0,
-        "linkOptionList": null,
-        "tags": null,
-        "tagIds": null,
-        "compareInfo": null,
-        "originalQuestionId": null,
-        "isShareFolder": 0,
-        "isShareRootDir": null,
-        "shareFolderUse": null,
-        "shareFolderAllowCopy": null,
-        "shareFolderRootDirId": null,
-        "knowledgeDTOS": null,
-        "source": null
-    }
-}
-const getQuestion4 = () => {
-    question.value = {
-        "questionid": 12496526,
-        "oldQuestionId": null,
-        "title": "<p>请填写：中国的首都是____，美国的首都是____。</p>",
-        "type": 4,
-        "iscontent": 1,
-        "hardlevel": 1,
-        "parentid": 0,
-        "score": 1,
-        "correctreply": "",
-        "correctAnswer": [
-            "北京",
-            "华盛顿"
-        ],
-        "lisCount": null,
-        "createtime": null,
-        "updatetime": 1764209055000,
-        "remark": null,
-        "userid": 7449024,
-        "orgid": null,
-        "aspid": null,
-        "desc1": "",
-        "desc4": null,
-        "isShare": 0,
-        "theLatest": null,
-        "blankOrder": 0,
-        "item": null,
-        "subQuestions": null,
-        "link": null,
-        "analyLinkList": null,
-        "answerLinkList": null,
-        "demoLinkList": null,
-        "formulaVar": null,
-        "parentFolders": [],
-        "creater": "csbm_testtea001@!:+./！",
-        "orgName": "测试部门-测试机构",
-        "shareArray": [],
-        "isUsed": null,
-        "autoscore": 0,
-        "linkOptionList": null,
-        "tags": null,
-        "tagIds": null,
-        "compareInfo": null,
-        "originalQuestionId": null,
-        "isShareFolder": 0,
-        "isShareRootDir": null,
-        "shareFolderUse": null,
-        "shareFolderAllowCopy": null,
-        "shareFolderRootDirId": null,
-        "knowledgeDTOS": null,
-        "source": null
-    }
 }
 // 获取题型名称
 const getQuestionTypeName = (type) => {
@@ -182,6 +76,7 @@ const addQuestion = (type) => {
             // 简单单选题
             question.value = {
                 type,
+                title: '213131231',
                 questionId: Math.floor(Math.random() * 1e9),
             }
             break;
@@ -199,123 +94,257 @@ const addQuestion = (type) => {
     }
 }
 const getQuestion1 = () => {
-    question.value = {
-        "questionid": 12496523,
-        "oldQuestionId": null,
-        "title": "<p>123131有附件的单选题呵呵呵呵呵呵呵<img src=\"https://leicloud.ulearning.cn/resources/7449024/202509281042424985.jpg\" /></p>",
-        "type": 1,
-        "iscontent": 1,
-        "hardlevel": 3,
-        "parentid": 0,
-        "score": 1,
-        "correctreply": "",
-        "correctAnswer": [
-            "B"
-        ],
-        "lisCount": null,
-        "createtime": null,
-        "updatetime": 1764209055000,
-        "remark": null,
-        "userid": 7449024,
-        "orgid": null,
-        "aspid": null,
-        "desc1": "",
-        "desc4": null,
-        "isShare": 0,
-        "theLatest": null,
-        "blankOrder": 0,
-        "item": [
-            {
-                "choiceItemID": 457368601,
-                "questionID": 12496523,
-                "title": "<p>123</p>",
-                "link": "https://tobs.ulearning.cn/resources/web/16601871016762958.mp3"
-            },
-            {
-                "choiceItemID": 457368602,
-                "questionID": 12496523,
-                "title": "<p><img src=\"https://tobs.ulearning.cn/resources/web/16601866903825796.png\" width=\"515\" height=\"213\" /><img src=\"https://tobs.ulearning.cn/resources/web/166018692562230.png\" /></p>",
-                "link": ""
-            },
-            {
-                "choiceItemID": 457368603,
-                "questionID": 12496523,
-                "title": "<p>123</p>",
-                "link": ""
-            },
-            {
-                "choiceItemID": 457368604,
-                "questionID": 12496523,
-                "title": "<p>123</p>",
-                "link": ""
-            }
-        ],
-        "subQuestions": null,
-        "link": [
-            {
-                "fileUrl": "https://leicloud.ulearning.cn/resources/7449024/202509281042488834.mp3",
-                "lisCount": null,
-                "fileName": "16994360136574566.mp3",
-                "fileSize": 0,
-                "srt": null,
-                "avatar": null
-            },
-            {
-                "fileUrl": "https://leicloud.ulearning.cn/resources/7449024/202509281042534031.mp4",
-                "lisCount": null,
-                "fileName": "62c74441fde0d91b474d9a85bd68fd7c.mp4",
-                "fileSize": 0,
-                "srt": null,
-                "avatar": null
-            }
-        ],
-        "analyLinkList": null,
-        "answerLinkList": null,
-        "demoLinkList": null,
-        "formulaVar": null,
-        "parentFolders": [],
-        "creater": "csbm_testtea001@!:+./！",
-        "orgName": "测试部门-测试机构",
-        "shareArray": [],
-        "isUsed": null,
-        "autoscore": 0,
-        "linkOptionList": null,
-        "tags": null,
-        "tagIds": null,
-        "compareInfo": null,
-        "originalQuestionId": null,
-        "isShareFolder": 0,
-        "isShareRootDir": null,
-        "shareFolderUse": null,
-        "shareFolderAllowCopy": null,
-        "shareFolderRootDirId": null,
-        "knowledgeDTOS": null,
-        "source": null
-    }
-}
+  question.value = {
+    questionid: 19673995,
+    oldQuestionId: null,
+    title: "<p>\\(= = \\div \\times \\times \\times \\)</p>优学院是一个集( )、( )、( )、( )的平台<p><img src=\"https://obscloud.ulearning.cn/resources/web/17653341516826949.png\" /></p>",
+    type: 1,
+    iscontent: 1,
+    hardlevel: 3,
+    parentid: 0,
+    score: 1,
+    correctreply: "",
+    correctAnswer: ["B"],
+    lisCount: null,
+    createtime: null,
+    updatetime: 1765344324000,
+    remark: null,
+    userid: 10792509,
+    orgid: null,
+    aspid: null,
+    desc1: "",
+    desc4: null,
+    isShare: 0,
+    theLatest: null,
+    blankOrder: 0,
+    item: [
+      {
+        choiceItemID: 47315155,
+        questionID: 19673995,
+        title: "<p>123123<img src=\"https://obscloud.ulearning.cn/resources/web/17653442934763743.png\" /></p>",
+        link: "https://obscloud.ulearning.cn/resources/web/17653443214724001.mp4"
+      },
+      {
+        choiceItemID: 47315156,
+        questionID: 19673995,
+        title: "<p>123123</p>",
+        link: ""
+      },
+      {
+        choiceItemID: 47315157,
+        questionID: 19673995,
+        title: "<p>122313</p>",
+        link: ""
+      },
+      {
+        choiceItemID: 47315158,
+        questionID: 19673995,
+        title: "<p>12312132</p>",
+        link: ""
+      }
+    ],
+    subQuestions: null,
+    link: [
+      {
+        fileUrl: "https://obscloud.ulearning.cn/resources/web/17653341688477768.mp3",
+        lisCount: null,
+        fileName: "16994360136574566.mp3",
+        fileSize: 0,
+        srt: null,
+        avatar: null
+      },
+      {
+        fileUrl: "https://obscloud.ulearning.cn/resources/web/17653341742454581.mp4",
+        lisCount: null,
+        fileName: "17639736759711778.mp4",
+        fileSize: 0,
+        srt: null,
+        avatar: null
+      }
+    ],
+    analyLinkList: null,
+    answerLinkList: null,
+    demoLinkList: null,
+    formulaVar: null,
+    parentFolders: [],
+    creater: "测试教师",
+    orgName: "文华在线测试部门",
+    shareArray: [],
+    isUsed: null,
+    autoscore: 0,
+    linkOptionList: null,
+    tags: null,
+    tagIds: null,
+    compareInfo: null,
+    originalQuestionId: null,
+    isShareFolder: 0,
+    isShareRootDir: null,
+    shareFolderUse: null,
+    shareFolderAllowCopy: null,
+    shareFolderRootDirId: null,
+    knowledgeDTOS: null,
+    source: null
+  };
+  // question.value.mode = 3
+  // question.value = {
+  //     id: null,
+  //     type: 1,
+  //     title: "<p>修改答案一次这是单选标题 答案A</p>",
+  //     score: 1,
+  //     correctAnswer: [
+  //         "B"
+  //     ],
+  //     choices: [
+  //         {
+  //             choiceItemId: 217,
+  //             questionId: 77,
+  //             link: "",
+  //             title: "选项A的内容"
+  //         },
+  //         {
+  //             choiceItemId: 218,
+  //             questionId: 77,
+  //             link: "",
+  //             title: "选项B的内容"
+  //         },
+  //         {
+  //             choiceItemId: 219,
+  //             questionId: 77,
+  //             link: "",
+  //             title: "选项C的内容"
+  //         },
+  //         {
+  //             choiceItemId: 220,
+  //             questionId: 77,
+  //             link: "",
+  //             title: "选项D的内容"
+  //         }
+  //     ],
+  //     item: [
+  //         {
+  //             choiceItemId: 217,
+  //             questionId: 77,
+  //             link: "",
+  //             title: "选项A的内容"
+  //         },
+  //         {
+  //             choiceItemId: 218,
+  //             questionId: 77,
+  //             link: "",
+  //             title: "选项B的内容"
+  //         },
+  //         {
+  //             choiceItemId: 219,
+  //             questionId: 77,
+  //             link: "",
+  //             title: "选项C的内容"
+  //         },
+  //         {
+  //             choiceItemId: 220,
+  //             questionId: 77,
+  //             link: "",
+  //             title: "选项D的内容"
+  //         }
+  //     ],
+  //     record: {
+  //       answer: "A"
+  //     },
+  //     mode: 2
+  // }
+  // console.log(question.value, '--------Choice--------');
+};
+
 const getQuestion2 = () => {
-    question.value = {
-        "questionid": 12496524,
-        "oldQuestionId": null,
-        "title": "<p>123131有附件的多选题呵呵呵呵呵呵呵<img src=\"https://leicloud.ulearning.cn/resources/7449024/202509281042424985.jpg\" /></p>",
-        "type": 2,
-        "iscontent": 1,
-        "hardlevel": 3,
-        "parentid": 0,
-        "score": 1,
-        "correctreply": "",
-        "correctAnswer": [
-            "A",
-            "B"
-        ],
-        "lisCount": null,
-        "createtime": null,
-        "updatetime": 1764209055000,
-        "remark": null,
-        "userid": 7449024,
-        "orgid": null,
-        "aspid": null
+  question.value = {
+    questionid: 12496524,
+    oldQuestionId: null,
+    title: "1321312312",
+    // title: `<span class="q-space" contenteditable="false">(&nbsp;)</span><p>123131有附件的多选题呵呵呵呵呵呵呵<img src=\"https://leicloud.ulearning.cn/resources/7449024/202509281042424985.jpg\" /></p>`,
+    type: 2,
+    iscontent: 1,
+    hardlevel: 3,
+    parentid: 0,
+    score: 1,
+    correctreply: "",
+    correctAnswer: ["A", "B"],
+    lisCount: null,
+    createtime: null,
+    updatetime: 1764209055000,
+    remark: null,
+    userid: 7449024,
+    orgid: null,
+    aspid: null,
+    record: {
+      answer: ["A", "D"]
     }
-}
+  };
+};
+
+const getQuestion3 = () => {
+  question.value = {
+    allowExchange: 0,
+    questionid: 12497547,
+    oldQuestionId: null,
+    title: "<p>优学院是一个集(&nbsp;)、(&nbsp;)、(&nbsp;)、(&nbsp;)的平台</p>",
+    type: 3,
+    iscontent: 1,
+    hardlevel: 3,
+    parentid: 0,
+    score: 1,
+    correctreply: "",
+    correctAnswer: ["AI//ai", "智能化", "酌情给分", "酌情给分1"],
+    lisCount: null,
+    createtime: null,
+    updatetime: 1762758218000,
+    remark: null,
+    userid: 6546517,
+    orgid: null,
+    aspid: null,
+    desc1: "",
+    desc4: null,
+    isShare: 0,
+    theLatest: null,
+    blankOrder: 0,
+    item: null,
+    subQuestions: null,
+    link: null,
+    analyLinkList: null,
+    answerLinkList: null,
+    demoLinkList: null,
+    formulaVar: null,
+    parentFolders: [],
+    creater: "魏艺宁老师",
+    orgName: "文华在线",
+    shareArray: [],
+    isUsed: null,
+    autoscore: null,
+    linkOptionList: null,
+    tags: null,
+    tagIds: null,
+    compareInfo: null,
+    originalQuestionId: null,
+    isShareFolder: 0,
+    isShareRootDir: null,
+    shareFolderUse: null,
+    shareFolderAllowCopy: null,
+    shareFolderRootDirId: null,
+    knowledgeDTOS: null,
+    source: null,
+    record: {
+      answer: ["AI", "智能化", "酌情给分21312213", "酌情给分21312312211"]
+    },
+    mode: 3
+  };
+};
+
+const getQuestion4 = () => {
+  question.value = {
+    type: 4,
+    questionId: 8,
+    record: {
+      answer: "true"
+    }
+  };
+};
 </script>
 <style></style>
