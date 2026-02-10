@@ -20,6 +20,9 @@
       </div>
     </template>
     <template v-else>
+      <div class="base-tip">
+        {{ t('setAnswer') }}
+      </div>
       <div class="correct-answer mobile">
         <TinyRadioGroup v-model="correctAnswer">
           <TinyRadio label="true">
@@ -319,6 +322,12 @@ export default defineComponent({
 
 .title {
   margin-bottom: calc(15 * var(--question-font-size));
+}
+.base-tip {
+  font-size: calc(14 * var(--question-font-size));
+  color: #B1B1B1;
+  background-color: #F5F5F5; 
+  padding: calc(8 * var(--question-font-size)) 0;
 }
 .correct-answer {
   margin: calc(15 * var(--question-font-size)) 0;

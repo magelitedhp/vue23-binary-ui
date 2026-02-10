@@ -485,7 +485,12 @@ export default defineComponent({
       display: none;
     }
     .ql-editor {
+      margin: 0 !important;
       border-top: unset !important;
+      &::before {
+        left: 0 !important;
+        font-style: unset;
+      }
     }
   }
   .mobile-upload-btn {
