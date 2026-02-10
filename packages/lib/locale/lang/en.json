@@ -976,5 +976,11 @@
   "imgLimitTip": "Image size exceeds limit",
   "imgTypeLimitTip": "Image format is incorrect, please re-upload png, jpg, jpeg format image",
   "viewUploadTypeTip": "Supports common formats such as images, documents, videos, and audios; upload up to 10 attachments per question; a single file on the computer does not exceed 500M. For unsupported format files, please compress and upload. <br/>Documents: pdf, doc, docx, xls, xlsx, ppt, pptx, txt, psd, xmind, dwg <br/>Images: png, jpg, gif, jpeg, bmp <br/>Videos: mp4, avi, wmv, rm, rmvb, mpeg, mpg, mkv, mov, flv <br/>Audio: mp3, wav, wma <br/>Compression package: zip, rar, 7z <br/>Subtitle file: srt",
-  "calculator": "Calculator"
+  "calculator": "Calculator",
+  "startRecording": "Start Recording",
+  "stopRecording": "Stop Recording",
+  "recording": "Recording",
+  "recorded": "Recorded",
+  "readyToRecord": "Ready to Record",
+  "recordingInitFailed": "Recording initialization failed"
 }

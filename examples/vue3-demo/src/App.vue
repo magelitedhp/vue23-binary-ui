@@ -4,15 +4,16 @@
         <MyTinyButton @click="changeMode(1)">切换到编辑模式</MyTinyButton>
         <MyTinyButton @click="changeMode(2)">切换到预览模式</MyTinyButton>
         <MyTinyButton @click="changeMode(3)">切换到答题模式</MyTinyButton>
+        <h1 @click="saveQuestion">移动端直接保存</h1>
         <br>
         <br>
         <div>
             <MyTinyButton type="primary" @click="clearQuestion">清空题目</MyTinyButton>
         </div>
         <div v-for="item in 4" :key="item" style="margin: 10px 0; cursor: pointer;">
-            <div @click="addQuestion(item)">{{ '添加' + getQuestionTypeName(item) + '题型' }}</div>
+          <div @click="addQuestion(item)">{{ '添加' + getQuestionTypeName(item) + '题型' }}</div>
         </div>
-        <component v-if="Object.keys(question).length > 0" :is="currentComponent" :mode="mode" :oriQuestion="question"></component>
+        <component v-if="Object.keys(question).length > 0" :is="currentComponent" :mode="mode" :oriQuestion="question" @updateQuestion="updateQuestion"></component>
     </div>
 </template>
 
@@ -26,7 +27,9 @@ import { Button as MyTinyButton } from '@opentiny/vue'
 const question = ref({})
 const mode = ref(1)
 const questionType = ref(1) // 1: 单选, 2: 多选, 3: 填空, 4: 判断
-
+const updateQuestion = (val) => {
+  console.log(val,'/???????????');
+}
 // 模式映射
 const modeObj = {
     1: '编辑模式',
@@ -76,8 +79,55 @@ const addQuestion = (type) => {
             // 简单单选题
             question.value = {
                 type,
-                title: '213131231',
+                title: "<p>\\(= = \\div \\times \\times \\times \\)</p>优学院是一个集( )、( )、( )、( )的平台<p><img src=\"https://obscloud.ulearning.cn/resources/web/17653341516826949.png\" /></p>",
                 questionId: Math.floor(Math.random() * 1e9),
+                "item": [
+                  {
+                    "choiceItemID": 47315155,
+                    "questionID": 19673995,
+                    "title": "<p>123123<img src=\"https://obscloud.ulearning.cn/resources/web/17653442934763743.png\" /></p>",
+                    "link": "https://obscloud.ulearning.cn/resources/web/17653443214724001.mp4"
+                  },
+                  {
+                    "choiceItemID": 47315156,
+                    "questionID": 19673995,
+                    "title": "<p>123123</p>",
+                    "link": ""
+                  },
+                  {
+                    "choiceItemID": 47315157,
+                    "questionID": 19673995,
+                    "title": "<p>122313</p>",
+                    "link": ""
+                  },
+                  {
+                    "choiceItemID": 47315158,
+                    "questionID": 19673995,
+                    "title": "<p>12312132</p>",
+                    "link": ""
+                  }
+                ],
+                "link": [
+    {
+      "fileUrl": "https://obscloud.ulearning.cn/resources/web/17653341688477768.mp3",
+      "lisCount": null,
+      "fileName": "16994360136574566.mp3",
+      "fileSize": 0,
+      "srt": null,
+      "avatar": null
+    },
+    {
+      "fileUrl": "https://obscloud.ulearning.cn/resources/web/17653341742454581.mp4",
+      "lisCount": null,
+      "fileName": "17639736759711778.mp4",
+      "fileSize": 0,
+      "srt": null,
+      "avatar": null
+    }
+  ],
+            }
+            question.value = {
+              type: 1
             }
             break;
         case 2:

@@ -1,58 +1,97 @@
 <template>
   <Base class="choice-container" :question="question" :mode="mode">
   <!-- 编辑模式 -->
-  <div v-if="mode === 1" class="edit-mode">
-    <div class="choice-list-base">
-      <div v-for="(choice, index) in question.choices" :key="choice.id">
-        <div class="choice-item">
-          <span class="choice-option">{{ getOption(index) }}</span>
-          <RichTextarea class="choice-input-wrap" v-if="activeIndex === index" v-model="choice.text"
-            :placeholder="t('optionContent')" :list="choice.attachments" :isShowLimitTimes="false" :actionIndex="index"
-            :placeholderText="t('optionContent')" @addFile="addFile"
-            @deleteFile="deleteFile"></RichTextarea>
-          <div class="choice-input-wrap" v-else>
-            <input v-if="!needRichText" class="choice-input" v-model="choice.text" type="text"
-              :placeholder="t('optionContent')" />
-            <div class="choice-input" v-else @click="activeRichText(index)">
-              <span class="no-content-tip"
-                v-if="!(choice.text || (choice.attachments && choice.attachments.length > 0))">{{ t("optionContent")
-                }}</span>
-              <div class="rich-text" v-html="choice.text" v-if="choice.text"></div>
-              <FileList ref="fileList" mode="edit" type="block" :isPreview="true" :list="choice.attachments || []"
-                :isShowLimitTimes="false" :actionIndex="index" @deleteFile="deleteFile"></FileList>
+  <div v-if="mode === 1" class="edit-mode" :class="{ 'mobile': isMobile }">
+    <template v-if="!isMobile">
+      <div class="choice-list-base">
+        <div v-for="(choice, index) in question.choices" :key="choice.id">
+          <div class="choice-item">
+            <span class="choice-option">{{ getOption(index) }}</span>
+            <RichTextarea class="choice-input-wrap" v-if="activeIndex === index" v-model="choice.text"
+              :placeholder="t('optionContent')" :list="choice.attachments" :isShowLimitTimes="false"
+              :actionIndex="index" :placeholderText="t('optionContent')" @addFile="addFile" @deleteFile="deleteFile">
+            </RichTextarea>
+            <div class="choice-input-wrap" v-else>
+              <input v-if="!needRichText" class="choice-input" v-model="choice.text" type="text"
+                :placeholder="t('optionContent')" />
+              <div class="choice-input" v-else @click="activeRichText(index)">
+                <span class="no-content-tip"
+                  v-if="!(choice.text || (choice.attachments && choice.attachments.length > 0))">{{ t("optionContent")
+                  }}</span>
+                <div class="rich-text" v-html="choice.text" v-if="choice.text"></div>
+                <FileList ref="fileList" mode="edit" type="block" :isPreview="true" :list="choice.attachments || []"
+                  :isShowLimitTimes="false" :actionIndex="index" @deleteFile="deleteFile"></FileList>
+              </div>
             </div>
+            <img v-if="index > 1" class="btn-delete" src="@/assets/close.png" alt=""
+              @click="deleteChoice(choice, index)">
           </div>
-          <img v-if="index > 1" class="btn-delete" src="@/assets/close.png" alt="" @click="deleteChoice(choice, index)">
+        </div>
+        <div class="btn-add" @click="addChoice">
+          <img src="@/assets/add.svg" alt="">{{ t("addOption") }}
         </div>
       </div>
-      <div class="btn-add" @click="addChoice">
-        <img src="@/assets/add.svg" alt="">{{ t("addOption") }}
+      <div class="choice-list">
+        <div class="answer-display">
+          <span>{{ t('answer') }}：</span>
+          <span>{{ formatAnswer(question.correctAnswer) }}</span>
+        </div>
+        <!-- 单选题 -->
+        <TinyRadioGroup class="choices" v-if="question.type === 1" v-model="radioAnswer">
+          <TinyRadio class="choice-item" v-for="(choice, index) in question.choices" :key="choice.id"
+            :label="getOption(index)">
+            <span class="index">{{ getOption(index) }}</span>
+          </TinyRadio>
+        </TinyRadioGroup>
+        <!-- 多选题 -->
+        <TinyCheckboxGroup class="choices" v-if="question.type === 2" v-model="checkboxAnswer">
+          <TinyCheckbox class="choice-item" v-for="(choice, index) in question.choices" :key="choice.id"
+            :label="getOption(index)">
+            <span class="index">{{ getOption(index) }}</span>
+          </TinyCheckbox>
+        </TinyCheckboxGroup>
       </div>
-    </div>
-    <div class="choice-list">
-      <div class="answer-display">
-        <span>{{ t('answer') }}：</span>
-        <span>{{ formatAnswer(question.correctAnswer) }}</span>
+      <div class="btn-save">
+        <TinyButton type="primary" @click="saveQuestion">{{ t("save") }}</TinyButton>
+        <TinyButton @click="cancel">{{ t("cancel") }}</TinyButton>
       </div>
-      <!-- 单选题 -->
-      <TinyRadioGroup class="choices" v-if="question.type === 1" v-model="radioAnswer">
-        <TinyRadio class="choice-item" v-for="(choice, index) in question.choices" :key="choice.id"
-          :label="getOption(index)">
-          <span class="index">{{ getOption(index) }}</span>
-        </TinyRadio>
-      </TinyRadioGroup>
-      <!-- 多选题 -->
-      <TinyCheckboxGroup class="choices" v-if="question.type === 2" v-model="checkboxAnswer">
-        <TinyCheckbox class="choice-item" v-for="(choice, index) in question.choices" :key="choice.id"
-          :label="getOption(index)">
-          <span class="index">{{ getOption(index) }}</span>
-        </TinyCheckbox>
-      </TinyCheckboxGroup>
-    </div>
-    <div class="btn-save">
-      <TinyButton type="primary" @click="saveQuestion">{{ t("save") }}</TinyButton>
-      <TinyButton @click="cancel">{{ t("cancel") }}</TinyButton>
-    </div>
+    </template>
+    <template v-else>
+      <div class="base-tip">
+        {{ t('choiceTip') }}
+      </div>
+      <div class="choice-list-base">
+        <div v-for="(choice, index) in question.choices" :key="choice.id">
+          <div class="choice-item">
+            <span class="choice-option" :class="{ 'active': question.type === 1 ? radioAnswer === getOption(index) : checkboxAnswer.includes(getOption(index)) }" @click="selectOption(index)">{{ getOption(index) }}</span>
+            <RichTextarea class="choice-input-wrap" v-if="activeIndex === index" v-model="choice.text" :ref="(el) => setItemRef(el, index)"
+              :placeholder="t('optionContent')" :list="choice.attachments" :isShowLimitTimes="false"
+              :actionIndex="index" :placeholderText="t('optionContent')" @addFile="addFile" @deleteFile="deleteFile">
+            </RichTextarea>
+            <div class="choice-input-wrap" v-else>
+              <input v-if="!needRichText" class="choice-input" v-model="choice.text" type="text"
+                :placeholder="t('optionContent')" />
+              <div class="choice-input" v-else @click="activeRichText(index)">
+                <span class="no-content-tip" v-if="!(choice.text || (choice.attachments && choice.attachments.length > 0))">{{ t("optionContent")
+                  }}</span>
+                <div class="rich-text" v-html="choice.text" v-if="choice.text"></div>
+                <FileList ref="fileList" mode="edit" type="block" :isPreview="true" :list="choice.attachments || []"
+                  :isShowLimitTimes="false" :actionIndex="index" @deleteFile="deleteFile"></FileList>
+              </div>
+            </div>
+            <div class="btn-list" @click="activeRichText(index)">
+              <img src="@/assets/mobile/upload-img.svg" alt="" @click="uploadImg(index)"/>
+              <img v-if="index > 1" class="btn-delete" src="@/assets/mobile/delete.png" alt=""
+              @click="deleteChoice(choice, index)">
+              <img v-else class="btn-delete" src="@/assets/mobile/delete-disable.svg" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="btn-add" @click="addChoice">
+          <img src="@/assets/add.svg" alt="">{{ t("addOption") }}
+        </div>
+      </div>
+    </template>
   </div>
   <!-- 预览选项 -->
   <div v-if="mode === 2" class="preview-mode">
@@ -96,8 +135,8 @@
     <div class="choice-list" v-if="!isSubmitted">
       <!-- 单选题 -->
       <TinyRadioGroup class="choices" v-if="question.type === 1" v-model="radioAnswer">
-        <TinyRadio class="choice-item"
-          v-for="(choice, index) in question.choices" :key="choice.id" :label="getOption(index)">
+        <TinyRadio class="choice-item" v-for="(choice, index) in question.choices" :key="choice.id"
+          :label="getOption(index)">
           <span class="index">{{ getOption(index) }}. </span>
           <div class="choice-content">
             <span class="rich-text ql-editor not-edit" v-html="choice.text"></span>
@@ -108,8 +147,8 @@
       </TinyRadioGroup>
       <!-- 多选题 -->
       <TinyCheckboxGroup class="choices" v-if="question.type === 2" v-model="checkboxAnswer">
-        <TinyCheckbox class="choice-item"
-          v-for="(choice, index) in question.choices" :key="choice.id" :label="getOption(index)">
+        <TinyCheckbox class="choice-item" v-for="(choice, index) in question.choices" :key="choice.id"
+          :label="getOption(index)">
           <span class="index">{{ getOption(index) }}. </span>
           <div class="choice-content">
             <span class="rich-text ql-editor not-edit" v-html="choice.text"></span>
@@ -123,8 +162,8 @@
     <div class="choice-list" v-else>
       <!-- 单选题 -->
       <TinyRadioGroup class="choices" v-if="question.type === 1" v-model="userAnswer" :disabled="true">
-        <TinyRadio class="choice-item" :class="handleAnswerClass(index)"
-          v-for="(choice, index) in question.choices" :key="choice.id" :label="getOption(index)">
+        <TinyRadio class="choice-item" :class="handleAnswerClass(index)" v-for="(choice, index) in question.choices"
+          :key="choice.id" :label="getOption(index)">
           <span class="index">{{ getOption(index) }}. </span>
           <div class="choice-content">
             <span class="rich-text ql-editor not-edit" v-html="choice.text"></span>
@@ -135,8 +174,8 @@
       </TinyRadioGroup>
       <!-- 多选题 -->
       <TinyCheckboxGroup class="choices" v-if="question.type === 2" v-model="userAnswer" :disabled="true">
-        <TinyCheckbox class="choice-item" :class="handleAnswerClass(index)"
-          v-for="(choice, index) in question.choices" :key="choice.id" :label="getOption(index)">
+        <TinyCheckbox class="choice-item" :class="handleAnswerClass(index)" v-for="(choice, index) in question.choices"
+          :key="choice.id" :label="getOption(index)">
           <span class="index">{{ getOption(index) }}. </span>
           <div class="choice-content">
             <span class="rich-text ql-editor" v-html="choice.text"></span>
@@ -145,7 +184,7 @@
           </div>
         </TinyCheckbox>
       </TinyCheckboxGroup>
-    </div>  
+    </div>
 
     <!-- 提交后显示答案 -->
     <div v-if="isSubmitted && showAnswer">
@@ -167,8 +206,9 @@
 
 <script>
 import { useT } from "@/locale/index.js";
-import { defineComponent, ref, watch, nextTick } from 'vue-demi'
+import { defineComponent, ref, watch, nextTick, onBeforeUpdate } from 'vue-demi'
 import { renderMath } from "@/utils/mathjax.js"
+import { getPlatform } from "@/utils"
 import Base from '../Base.vue'
 import { TinyButton, TinyRadioGroup, TinyRadio, TinyCheckboxGroup, TinyCheckbox, TinyAlert } from '@opentiny/vue'
 import FileList from '@/components/FileList/index.vue'
@@ -218,13 +258,40 @@ export default defineComponent({
       default: false
     }
   },
-  emits: ['save', 'cancel', 'change'],
+  emits: ['save', 'cancel', 'change', 'updateQuestion'],
   setup(props, { emit }) {
+    const isMobile = getPlatform().isMobile
     const t = useT()
     const alertInfo = ref({
       type: 'warning',
       text: ''
     })
+    // 存储 ref 的数组
+    const uploadRefs = ref([])
+    // 设置 ref 的函数
+    const setItemRef = (el, index) => {
+      if (el) {
+        uploadRefs.value[index] = el
+      }
+    }
+    // 重要：更新前重置数组，防止重复
+    onBeforeUpdate(() => {
+      uploadRefs.value = []
+    })
+    // 移动端答案
+    const selectOption = (index) => {
+      if (isMobile) {
+        if (question.value.type === 1) {
+          radioAnswer.value = getOption(index)
+        } else {
+          if (checkboxAnswer.value.includes(getOption(index))) {
+            checkboxAnswer.value = checkboxAnswer.value.filter(item => item !== getOption(index))
+          } else {
+            checkboxAnswer.value.push(getOption(index))
+          }
+        }
+      }
+    }
     const showAlertHandler = (type, text) => {
       alertInfo.value = {
         type,
@@ -358,11 +425,19 @@ export default defineComponent({
     }
     // 添加文件
     const addFile = (file, actionIndex) => {
-      console.log(file, actionIndex, question.value,'question.valuequestion.value');
+      console.log(file, actionIndex, question.value, 'question.valuequestion.value');
       if (props.mode !== 1) return // 仅编辑模式可添加文件
       question.value.choices[actionIndex].attachments.push(file);
     }
-
+    // 触发编辑器的上传
+    const uploadImg = (index) => {
+      if (props.mode !== 1) return // 仅编辑模式可上传文件
+      // 触发富文本编辑器的上传
+      activeRichText(index)
+      nextTick(() => {
+        uploadRefs.value[index]?.uploadImg()
+      })
+    }
     // 删除选项
     const deleteChoice = (choice, index) => {
       if (props.mode !== 1) return // 仅编辑模式可删除选项
@@ -386,23 +461,48 @@ export default defineComponent({
         console.warn(t('atLeastTwo') || '至少需要两个选项');
       }
     }
-
-    // 保存问题数据（编辑模式）
-    const saveQuestion = () => {
-      if (props.mode !== 1) return
+    const updateQuestion = () => {
+      // 深拷贝数据以避免直接修改
+      const questionData = JSON.parse(JSON.stringify(question.value))
+      // 发出保存事件
+      emit('updateQuestion', questionData)
+    }
+    // 校验题目
+    const validateQuestion = () => {
+      let isValid = true
       // 验证标题是否为空
       if (!question.value.title) {
         showAlertHandler('warning', t('questionTitleTip1'))
-        return
+        isValid = false
       }
       // 验证选项是否为空
       if (question.value.choices.some(choice => !choice.text)) {
         showAlertHandler('warning', t('optionContentTip1'))
-        return
+        isValid = false
       }
       // 验证是否有正确答案
       if (!question.value.correctAnswer || question.value.correctAnswer.length === 0) {
         showAlertHandler('warning', t('inputAnswerTip4'))
+        isValid = false
+      }
+      return isValid
+    }
+    // 移动端监听题目变化
+    const watchQuestionChange = () => {     
+      watch(() => question.value, (newVal, oldVal) => {
+        if (newVal && props.mode === 1) {
+          updateQuestion()
+        } 
+      }, { deep: true })
+    }
+    if(isMobile) {
+      watchQuestionChange()
+    }
+    // 保存问题数据（编辑模式）
+    const saveQuestion = () => {
+      if (props.mode !== 1) return
+      // 校验题目
+      if (!validateQuestion()) {
         return
       }
       // 深拷贝数据以避免直接修改
@@ -452,6 +552,8 @@ export default defineComponent({
       question,
       radioAnswer,
       checkboxAnswer,
+      setItemRef,
+      uploadRefs,
       getOption,
       formatAnswer,
       handleAnswerClass,
@@ -464,9 +566,13 @@ export default defineComponent({
       deleteFile,
       addFile,
       deleteChoice,
+      uploadImg,
       userAnswer,
       alertInfo,
-      showAlertHandler
+      showAlertHandler,
+      isMobile,
+      selectOption,
+      updateQuestion
     }
   }
 })
@@ -474,6 +580,7 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 @import "@/styles/variables.scss";
+
 .choice-container {
   width: 100%;
 }
@@ -485,6 +592,7 @@ export default defineComponent({
   .choice-item {
     margin-top: calc(12 * var(--question-font-size));
     display: flex;
+
     .choice-option {
       margin-right: calc(20 * var(--question-font-size));
       line-height: $height;
@@ -507,6 +615,7 @@ export default defineComponent({
           line-height: calc(44 * var(--question-font-size));
         }
       }
+
       .no-content-tip {
         font-size: calc(14 * var(--question-font-size));
         color: #969696;
@@ -527,16 +636,17 @@ export default defineComponent({
   }
 
   .btn-add {
-      margin: calc(12 * var(--question-font-size)) 0 0 calc(30 * var(--question-font-size));
-      color: #529FFF;
-      display: flex;
-      align-items: center;
-      gap: calc(4 * var(--question-font-size));
-      cursor: pointer;
-      img {
-        width: calc(18 * var(--question-font-size));
-      }
+    margin: calc(12 * var(--question-font-size)) 0 0 calc(30 * var(--question-font-size));
+    color: #529FFF;
+    display: flex;
+    align-items: center;
+    gap: calc(4 * var(--question-font-size));
+    cursor: pointer;
+
+    img {
+      width: calc(18 * var(--question-font-size));
     }
+  }
 }
 
 .choices {
@@ -544,6 +654,7 @@ export default defineComponent({
   display: flex;
   flex-direction: column;
   gap: calc(12 * var(--question-font-size));
+
   .choice-item {
     display: flex;
     margin-right: calc(2 * var(--question-font-size));
@@ -566,17 +677,21 @@ export default defineComponent({
 
     &.wrong {
       color: #f60000;
+
       :deep(.tiny-radio__inner) {
         border-color: #f60000;
+
         &:after {
           background-color: #f60000;
         }
       }
+
       :deep(.tiny-checkbox__inner) {
         .icon-checked-sur path:first-child {
           fill: #f60000;
         }
       }
+
       span {
         color: #f60000;
       }
@@ -588,17 +703,21 @@ export default defineComponent({
 
     &.correct {
       color: #69d184;
+
       :deep(.tiny-radio__inner) {
         border-color: #69d184;
+
         &:after {
           background-color: #69d184;
         }
       }
+
       :deep(.tiny-checkbox__inner) {
         .icon-checked-sur path:first-child {
           fill: #69d184;
         }
       }
+
       span {
         color: #69d184;
       }
@@ -623,35 +742,109 @@ export default defineComponent({
     flex-direction: row;
     gap: 0;
   }
+
   .choice-item {
     margin-right: calc(2 * var(--question-font-size));
   }
+
   .choice-list {
     .choice-item {
       margin-right: calc(12 * var(--question-font-size));
     }
   }
+
   .btn-save {
     margin-top: calc(12 * var(--question-font-size));
   }
 }
-.preview-mode, .answer-mode {
+.edit-mode.mobile {
+  .base-tip {
+    font-size: calc(14 * var(--question-font-size));
+    color: #B1B1B1;
+    background-color: #F5F5F5; 
+    padding: calc(8 * var(--question-font-size)) 0;
+  }
+  .choice-list-base {
+    .choice-item {
+      align-items: center;
+      .choice-option {
+        align-self: flex-start;
+        color: #969696;
+        text-align: center;
+        width: calc(24 * var(--question-font-size));
+        height: calc(24 * var(--question-font-size));
+        font-size: calc(14 * var(--question-font-size));
+        margin-right: 0;
+        line-height: 1.4;
+        font-weight: normal;
+        border-radius: calc(32 * var(--question-font-size));
+        border: calc(1 * var(--question-font-size)) solid #E3E3E9;
+        background: var(--ffffff, #FFF);
+        &.active {
+          color: #fff;
+          background: var(--tiny-primary-color);
+        }
+      }
+      .choice-input-wrap {
+        flex: 1;
+        margin: 0 calc(12 * var(--question-font-size));
+        border-bottom: calc(1 * var(--question-font-size)) solid #E3E3E9;
+        padding-bottom: calc(8 * var(--question-font-size));
+        .choice-input {
+          min-height: unset;
+          border: unset;
+          .rich-text {
+            padding: 0 !important;
+            line-height: 1;
+          }
+          .no-content-tip {
+            margin-left: 0;
+            line-height: 1;
+          }
+        }
+      }
+      .btn-list {
+        align-self: flex-start;
+        img {
+          width: calc(16 * var(--question-font-size));
+          height: calc(16 * var(--question-font-size));
+        }
+      }
+      :deep(.ql-editor) {
+        margin: 0;
+        padding: 0;
+        &.ql-blank::before {
+          left: 0;
+          font-style: unset;
+        }
+      }
+    }
+  }
+}
+
+.preview-mode,
+.answer-mode {
   :deep(.choice-item) {
     align-items: baseline;
     width: 100%;
-    .tiny-radio__label, .tiny-checkbox__label {
+
+    .tiny-radio__label,
+    .tiny-checkbox__label {
       display: flex;
     }
+
     .choice-content {
       display: unset;
       font-size: calc(16 * var(--question-font-size));
     }
+
     .tiny-radio__input {
       position: relative;
       transform: translateY(calc(2 * var(--question-font-size)));
     }
   }
 }
+
 :deep(p) {
   margin: 0;
   white-space: break-spaces;

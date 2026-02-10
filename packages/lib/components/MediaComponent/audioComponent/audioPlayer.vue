@@ -5,7 +5,7 @@
         class="icon-player"
         @click="togglePlayer"
       >
-        <img :src="paused ? require('@/assets/play.svg') : require('@/assets/pause.svg')" class="iconfont" alt="" />
+        <img :src="paused ? playIcon : pauseIcon" class="iconfont" alt="" />
       </div>
       <div class="current-time">{{ currentTimeStr }}</div>
       <div
@@ -26,7 +26,7 @@
     <div class="player-content-circle" v-if="mode === 'circle'">
       <div class="icon-player" @click="togglePlayer">
         <img
-          :src="paused ? require('@/assets/play.svg') : require('@/assets/pause.svg')"
+          :src="paused ? playIcon : pauseIcon"
         ></img>
         <div class="txt">
           {{ paused ? t("play") : t("pause") }}
@@ -38,7 +38,7 @@
         class="icon-player"
         @click="togglePlayer"
       >
-        <img :src="paused ? require('@/assets/play.svg') : require('@/assets/pause.svg')" class="iconfont" alt="" />
+        <img :src="paused ? playIcon : pauseIcon" class="iconfont" alt="" />
       </div>
       <div
         class="status-bar"
@@ -81,6 +81,8 @@
 </template>
 
 <script>
+import playIcon from '@/assets/play.svg'
+import pauseIcon from '@/assets/pause.svg'
 import "@/components/MediaComponent/style/audioPlayer.scss";
 import { parseDuration } from "@/utils";
 import { getFullPath } from '@/utils/file.js';
@@ -88,6 +90,8 @@ import { useT } from "@/locale/index.js"
 export default {
   data() {
     return {
+      playIcon,
+      pauseIcon,
       currentTimeStr: "00:00",
       totalTime: 0,
       statusBarWidth: 0,

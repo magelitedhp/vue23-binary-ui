@@ -1,41 +1,68 @@
 <template>
-  <Base ref="baseComponent" class="completion-question" :question="question" :mode="mode" @blankAnswerChange="blankAnswerChange" :isSubmitted="isSubmitted">
+  <Base ref="baseComponent" class="completion-question" :question="question" :mode="mode"
+    @blankAnswerChange="blankAnswerChange" :isSubmitted="isSubmitted">
   <!-- 编辑模式 -->
   <template v-if="mode === 1">
-    <div class="edit-mode">
-      <div class="title">
-      </div>
-      <div class="correct-answer">
-        <span class="tip">{{ t('answer') }}：</span><span class="correct-answer-tip">( {{ t('inputAnswerTip2') }} )</span>
-        <div v-for="(blank, index) in question.blanks" :key="blank.id || index">
-          <div class="answer-item">
-            <span class="answer-option">[{{ index + 1 }}]</span>
-            <input class="answer-input" :placeholder="t('inputAnswer')" v-model="blank.correctAnswer" type="text"
-              @change="answerChange" />
-            <div class="btn-delete">
-              <img src="@/assets/close.png" alt="" @click="deleteBlank(blank, index)">
+    <template v-if="!isMobile">
+      <div class="edit-mode">
+        <div class="correct-answer">
+          <span class="tip">{{ t('answer') }}：</span><span class="correct-answer-tip">( {{ t('inputAnswerTip2') }}
+            )</span>
+          <div v-for="(blank, index) in question.blanks" :key="blank.id || index">
+            <div class="answer-item">
+              <span class="answer-option">[{{ index + 1 }}]</span>
+              <input class="answer-input" :placeholder="t('inputAnswer')" v-model="blank.correctAnswer" type="text"
+                @change="answerChange" />
+              <div class="btn-delete">
+                <img src="@/assets/close.png" alt="" @click="deleteBlank(blank, index)">
+              </div>
             </div>
           </div>
-        </div>
-        <div class="can-exchange">
-          <TinyCheckbox v-model="question.allowExchange" :false-label="0" :true-label="1">答案可互换顺序</TinyCheckbox>
-        </div>
-        <div class="btn-save">
-          <TinyButton type="primary" @click="saveQuestion">{{ t("save") }}</TinyButton>
-          <TinyButton @click="cancel">{{ t("cancel") }}</TinyButton>
+          <div class="can-exchange">
+            <TinyCheckbox v-model="question.allowExchange" :false-label="0" :true-label="1">{{ t('allowExchange') }}</TinyCheckbox>
+          </div>
+          <div class="btn-save">
+            <TinyButton type="primary" @click="saveQuestion">{{ t("save") }}</TinyButton>
+            <TinyButton @click="cancel">{{ t("cancel") }}</TinyButton>
+          </div>
         </div>
       </div>
-    </div>
+    </template>
+    <template v-else>
+      <div class="edit-mode mobile">
+        <div class="correct-answer">
+          <div class="base-tip">{{ t('setAnswerTip') }}</div>
+          <div v-for="(blank, index) in question.blanks" :key="blank.id || index">
+            <div class="answer-item">
+              <span class="m-answer-option">[{{ index + 1 }}]</span>
+              <input class="m-answer-input" :placeholder="t('inputAnswer')" v-model="blank.correctAnswer" type="text"
+                @change="answerChange" />
+              <div class="m-btn-delete">
+                <img src="@/assets/mobile/delete.png" alt="" @click="deleteBlank(blank, index)">
+              </div>
+            </div>
+          </div>
+          <div class="can-exchange">
+            <TinyCheckbox v-model="question.allowExchange" :false-label="0" :true-label="1">{{ t('allowExchange') }}</TinyCheckbox>
+          </div>
+          <div class="btn-save" v-if="!isMobile">
+            <TinyButton type="primary" @click="saveQuestion">{{ t("save") }}</TinyButton>
+            <TinyButton @click="cancel">{{ t("cancel") }}</TinyButton>
+          </div>
+        </div>
+      </div>
+    </template>
   </template>
   <!-- 预览模式 -->
   <template v-else-if="(mode === 2 || mode === 3) && showAnswer">
     <div class="preview-mode">
       <FileList :list="question.link"></FileList>
       <div class="correct-answer-preview">
-        <div :class="{'title': mode === 3}">{{ t('correctAnswer') }}：</div>
+        <div :class="{ 'title': mode === 3 }">{{ t('correctAnswer') }}：</div>
         <span class="answer-item" v-for="(blank, index) in question.blanks" :key="blank.id || index">
           <span class="answer-option">[{{ index + 1 }}]</span>
-          <span class="answer-value">{{ `${blank.correctAnswer}${index !== question.blanks.length - 1 ? '、' : ''}` || '-' }}</span>
+          <span class="answer-value">{{ `${blank.correctAnswer}${index !== question.blanks.length - 1 ? '、' : ''}` ||
+            '-' }}</span>
         </span>
       </div>
     </div>
@@ -53,7 +80,7 @@ import { renderMath } from "@/utils/mathjax.js"
 import Base from '../Base.vue'
 import FileList from '../../FileList/index.vue';
 import { t } from '../../../locale/index.js';
-import { getUniqueValue } from "@/utils"
+import { getUniqueValue, getPlatform } from "@/utils"
 import { getQuestion } from "../../../model/questionFactory.js"
 
 export default defineComponent({
@@ -83,9 +110,27 @@ export default defineComponent({
       default: false
     }
   },
-  emits: ['save', 'cancel', 'submit'],
+  emits: ['save', 'cancel', 'submit', 'updateQuestion'],
   setup(props, { emit }) {
     const question = ref({})
+    const isMobile = getPlatform().isMobile
+    const updateQuestion = () => {
+      // 深拷贝数据以避免直接修改
+      const questionData = JSON.parse(JSON.stringify(question.value))
+      // 发出保存事件
+      emit('updateQuestion', questionData)
+    }
+    // 移动端监听题目变化
+    const watchQuestionChange = () => {     
+      watch(() => question.value, (newVal, oldVal) => {
+        if (newVal && props.mode === 1) {
+          updateQuestion()
+        } 
+      }, { deep: true })
+    }
+    if(isMobile) {
+      watchQuestionChange()
+    }
     const userAnswers = ref([]);
     const alertInfo = ref({
       type: 'warning',
@@ -110,8 +155,8 @@ export default defineComponent({
       // 防止newIndices不正确 <p>a阿达(&nbsp;)阿松大(&nbsp;)</p>
       let count = 0, tempStr = "<p>"
       while ((match = reg.exec(newValue)) !== null) {
-        newIndices.push(match.index - 5 * count - tempStr.length  );
-        count ++ 
+        newIndices.push(match.index - 5 * count - tempStr.length);
+        count++
       }
       // 2. 获取光标位置
       let insertIndex = 0;
@@ -119,7 +164,7 @@ export default defineComponent({
         const selection = baseComponent.value.richTextareaRef.$refs.fluentEditorRef.state.quill?.getSelection?.();
         insertIndex = selection?.index ?? question.value.title?.length ?? 0;
       }
-      
+
       // 3. 确定当前光标位置在第几个(&nbsp;)之后
       let currentBlankPosition = 0;
       for (let i = 0; i < newIndices.length; i++) {
@@ -134,23 +179,23 @@ export default defineComponent({
         return (a.orderIndex || 0) - (b.orderIndex || 0);
       });
       const currentAnswers = currentBlanks.map(blank => blank.correctAnswer || '');
-      
+
       // 5. 构建新的blank数组，考虑光标位置
       const newBlanks = [];
       let orderIndex = 0;
-      
+
       // 新占位符数量
       const newCount = newIndices.length;
       // 旧占位符数量
       const oldCount = currentBlanks.length;
-      
+
       // 处理答案映射，考虑光标位置
       const newCorrectAnswers = Array(newCount).fill('');
-      
+
       if (oldCount > 0) {
         // 确定是否插入了新的占位符
         const hasNewBlank = newCount > oldCount;
-        
+
         if (hasNewBlank) {
           // 新增了占位符，根据光标位置调整答案顺序
           for (let i = 0; i < newCount; i++) {
@@ -177,7 +222,7 @@ export default defineComponent({
           }
         }
       }
-      
+
       // 6. 创建新的blank对象
       for (let i = 0; i < newIndices.length; i++) {
         newBlanks.push({
@@ -186,16 +231,16 @@ export default defineComponent({
           orderIndex: orderIndex,
           correctAnswer: newCorrectAnswers[i]
         });
-        
+
         orderIndex++;
       }
-      
+
       // 7. 更新blanks数组
       question.value.blanks = newBlanks;
-      
+
       // 8. 确保userAnswers数组正确
       userAnswers.value = question.value.blanks.map(() => '');
-      
+
       // 9. 更新correctAnswer数组
       answerChange();
     };
@@ -214,7 +259,7 @@ export default defineComponent({
     //   const reg = /\(&nbsp;\)/g;
     //   let match;
     //   let newIndices = [];
-      
+
     //   while ((match = reg.exec(newValue)) !== null) {
     //     newIndices.push(match.index);
     //   }
@@ -269,13 +314,13 @@ export default defineComponent({
     //     question.value.blanks.sort((a, b) => a.blankIndex - b.blankIndex);
     //     // 按位置顺序处理新添加的空格（从后往前）
     //     blanksToAdd.sort((a, b) => b.index - a.index);
-        
+
     //     blanksToAdd.forEach((item) => {
     //       // 插入新的空格
     //       question.value.blanks.splice(item.index, 0, item.blank);
     //       userAnswers.value.splice(item.index, 0, '');
     //     });
-        
+
     //     // 重新获取所有(&nbsp;)的匹配位置
     //     const finalIndices = [];
     //     const finalReg = /\(&nbsp;\)/g;
@@ -286,7 +331,7 @@ export default defineComponent({
     //     console.log(finalIndices,'-p---------')
     //   }
     //   console.log(question.value.blanks, '当前光标在第', currentBlankPosition, '个(&nbsp;)之后');
-      
+
     //   // 确保blanks数组始终根据blankIndex排序，保持与(&nbsp;)占位符在标题中的顺序一致
     //   if (question.value.blanks && question.value.blanks.length > 1) {
     //     question.value.blanks.sort((a, b) => {
@@ -370,18 +415,18 @@ export default defineComponent({
     // 删除空格
     const deleteBlank = (blank, index) => {
       if (props.mode !== 1) return;
-      
+
       // 找到要删除的blank在blanks数组中的位置
       const blankIndex = question.value.blanks.findIndex(b => b.id === blank.id);
       if (blankIndex === -1) return;
-      
+
       // 从blanks数组中移除
       question.value.blanks.splice(blankIndex, 1);
-      
+
       // 更新富文本内容，重新生成正确的HTML
       // 首先获取当前标题内容
       let title = question.value.title;
-      
+
       // 查找所有(&nbsp;)的位置
       const reg = /\(&nbsp;\)/g;
       let match;
@@ -389,20 +434,20 @@ export default defineComponent({
       while ((match = reg.exec(title)) !== null) {
         indices.push(match.index);
       }
-      
+
       // 如果索引有效，删除对应的占位符
       if (index >= 0 && index < indices.length) {
         const idx = indices[index];
         title = title.substring(0, idx) + title.substring(idx + 8);
-        
+
         // 更新标题内容
         question.value.title = title;
-        
+
         // 手动更新富文本内容
         if (baseComponent.value?.richTextareaRef) {
           baseComponent.value.richTextareaRef.content = title;
         }
-        
+
         // 更新所有剩余blank的blankIndex
         const newReg = /\(&nbsp;\)/g;
         let newMatch;
@@ -410,7 +455,7 @@ export default defineComponent({
         while ((newMatch = newReg.exec(title)) !== null) {
           newIndices.push(newMatch.index);
         }
-        
+
         // 更新blanks数组中每个blank的blankIndex
         question.value.blanks.forEach((b, idx) => {
           if (newIndices[idx] !== undefined) {
@@ -418,14 +463,14 @@ export default defineComponent({
           }
         });
       }
-      
+
       // 更新userAnswers数组
       userAnswers.value = question.value.blanks.map(() => '');
-      
+
       // 更新correctAnswer数组
       answerChange();
     };
-    
+
     return {
       t,
       question,
@@ -437,7 +482,8 @@ export default defineComponent({
       deleteBlank,
       baseComponent,
       alertInfo,
-      showAlertHandler
+      showAlertHandler,
+      isMobile
     };
   }
 });
@@ -446,28 +492,69 @@ export default defineComponent({
 <style lang="scss" scoped>
 @import "@/styles/variables.scss";
 $height: calc(44 * var(--question-font-size));
+
 .completion-question {
   .edit-mode {
     .correct-answer {
       margin-top: calc(12 * var(--question-font-size));
     }
+    &.mobile {
+      .base-tip {
+        font-size: calc(14 * var(--question-font-size));
+        color: #B1B1B1;
+        background-color: #F5F5F5; 
+        padding: calc(8 * var(--question-font-size)) 0;
+      }
+      .answer-item {
+        line-height: 1;
+        align-items: center;
+        margin-bottom: 10px;
+        .m-answer-option {
+          align-self: flex-start;
+        }
+        .m-answer-input {
+          flex: 1;
+          margin: 0 calc(12 * var(--question-font-size));
+          padding: 0 0 calc(8 * var(--question-font-size));
+          border: unset;
+          border-bottom: calc(1 * var(--question-font-size)) solid #dcdfe6;
+          outline: none;
+          font-size: calc(16 * var(--question-font-size));
+        }
+        .m-btn-delete {
+          align-self: flex-start;
+          img {
+            width: calc(16 * var(--question-font-size));
+            height: calc(16 * var(--question-font-size));
+          }
+        }
+      }
+      .can-exchange {
+        margin: calc(6 * var(--question-font-size)) 0 calc(12 * var(--question-font-size));
+      }
+    }
   }
+
   .preview-mode {
     .correct-answer-preview {
       margin-top: calc(12 * var(--question-font-size));
+
       >div {
         font-weight: 600;
       }
     }
+
     .title {
       color: #17B26A;
     }
+
     .answer-item {
       display: unset;
       line-height: 1;
     }
   }
 }
+
 .title-tip {
   margin-left: calc(10 * var(--question-font-size));
   font-size: calc(14 * var(--question-font-size));

@@ -990,5 +990,14 @@
   "screenNormal": "屏幕正常",
   "confirmClearException": "请仔细查看系统截图内容是否违规后再清除异常。确定清除异常吗",
   "commitExamTip9": "屏幕监控异常达到规定次数，系统强制交卷",
-  "messageTip": "消息提醒"
+  "messageTip": "消息提醒",
+  "choiceTip": "点击选项字母，设为正确答案",
+  "allowExchange": "答案可互换顺序",
+  "setAnswerTip": "设置答案（一个空如果有多个答案请用 // 分隔）",
+  "startRecording": "开始录音",
+  "stopRecording": "停止录音",
+  "recording": "录音中，点击波纹停止",
+  "recorded": "已录制",
+  "readyToRecord": "点击开始录音",
+  "recordingInitFailed": "录音初始化失败"
 }

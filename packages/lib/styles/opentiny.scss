@@ -41,6 +41,7 @@
     --tv-Checkbox-icon-size: calc(16 * var(--question-font-size));
     --tv-Checkbox-bg-color-active: var(--tiny-primary-bg);
     .tiny-checkbox__label {
+      font-size: calc(14 * var(--question-font-size));
       padding-left: calc(8 * var(--question-font-size));
     }
   }
@@ -117,10 +118,28 @@
       }
     }
   }
+  .tiny-drawer {
+    .tiny-drawer__title {
+      font-size: calc(16 * var(--question-font-size)) !important;
+    }
+    .tiny-drawer__headerbtn {
+      width: calc(24 * var(--question-font-size)) !important;
+      height: calc(24 * var(--question-font-size)) !important;
+      .tiny-drawer__close {
+        font-size: calc(24 * var(--question-font-size)) !important;
+      }
+    }
+  }
 }
 .ql-editor {
   ol {
     list-style-type: none;
     padding-left: 0;
+  }
+}
+.mobile-input {
+  &.tiny-textarea textarea{
+    border: unset;
+    resize: none;
   }
 }

@@ -67,8 +67,9 @@
       :type="question.type"
       @addFile="addTitleFile"
       @deleteFile="deleteTitleFile"
+      :isBase="true"
     ></RichTextarea>
-    <TinyButton class="insert-blank" v-if="question.type == 3 && mode == 1" @click="insert">
+    <TinyButton class="insert-blank" v-if="question.type == 3 && mode == 1 && !isMobile" @click="insert">
       {{ t("insertQue") }}
     </TinyButton>
     <slot></slot>
@@ -80,7 +81,7 @@ import { defineComponent, computed, ref, watch, nextTick } from 'vue-demi'
 import { TinyButton } from '@opentiny/vue'
 import RichTextarea from '../RichTextarea/index.vue'
 import FileList from '../FileList/index.vue'
-import { changeInputWidth, getUniqueValue } from "@/utils"
+import { changeInputWidth, getPlatform } from "@/utils"
 import { useT } from "../../locale/index.js"
 import { renderMath } from "@/utils/mathjax.js"
 export default defineComponent({
@@ -112,6 +113,7 @@ export default defineComponent({
   emits: ['blankAnswerChange'],
   setup(props, { emit }) {
     const t = useT()    
+    const isMobile = getPlatform().isMobile
     const richTextareaRef = ref(null)
     const userAnswers = ref([])
     // 计算填空题中（ ）的数量
@@ -292,7 +294,8 @@ export default defineComponent({
       checkAnswerCorrect,
       blankIndex,
       addTitleFile,
-      deleteTitleFile
+      deleteTitleFile,
+      isMobile
     }
   }
 })

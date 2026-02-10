@@ -1,7 +1,14 @@
 <template>
   <div class="ritchtextarea-container" :id="containerId">
-    <TinyFluentEditor ref="fluentEditorRef" v-model="content" :data-type="false" :data-upgrade="false"
-      :options="options" :before-editor-init="beforeEditorInit" />
+    <TinyFluentEditor :class="{ 'mobile': isMobile }" ref="fluentEditorRef" v-model="content" :data-type="false" :data-upgrade="false" :options="options" :before-editor-init="beforeEditorInit" />
+    <div v-if="isMobile && isBase" class="mobile-upload-btn">
+      <img src="@/assets/mobile/upload-img.svg" alt="" @click="uploadImg"/>
+      <img src="@/assets/mobile/upload-file.svg" alt="" @click="uploadFile"/>
+      <img src="@/assets/mobile/upload-audio.svg" alt="" @click="drawerVisible = true"/>
+      <TinyButton class="insert-blank" v-if="isMobile && isBase && type === 3" @click="insertContent('(&nbsp;)')">
+        {{ t("insertQue") }}
+      </TinyButton>
+    </div>
     <FileList ref="fileList" mode="edit" type="block" :isPreview="true" :list="list"
       :isShowLimitTimes="isShowLimitTimes" :is-question-bank="isQuestionBank" @deleteFile="deleteFile">
     </FileList>
@@ -14,20 +21,37 @@
         <TinyButton type="primary" @click="mathConfirm">确 定</TinyButton>
       </template>
     </TinyDialogBox>
+    <TinyDrawer
+      v-if="drawerVisible"
+      title=""
+      placement="bottom"
+      show-close
+      v-model:visible="drawerVisible"
+      height="600px"
+    >
+      <AudioRecorder
+        :obs="obs"
+        :actionIndex="actionIndex"
+        :insertContent="insertContent"
+        :emitAddFile="(file, index) => $emit('addFile', file, index)"
+        :onClose="() => drawerVisible = false"
+      />
+    </TinyDrawer>
   </div>
 </template>
 
 <script>
-import { defineComponent, ref, watch, onMounted, onUnmounted, computed, version } from 'vue-demi'
-import { TinyFluentEditor, TinyDialogBox, TinyButton } from '@opentiny/vue'
+import { defineComponent, ref, watch, onMounted, onUnmounted, computed, version, reactive  } from 'vue-demi'
+import { TinyFluentEditor, TinyDialogBox, TinyButton, TinyInput, TinyDrawer } from '@opentiny/vue'
 import FileList from "../FileList/index.vue";
 import { handlerErrCode, formatTypeLimit } from "../../utils/file.js";
 import Obs from "@/plugins/ulearning-obs.js";
 import { uploadOptions } from "@/plugins/upload.js";
 import Attach from "@/model/attach";
-import { getUniqueValue, handleNum } from "@/utils"
+import { getUniqueValue, handleNum, getPlatform } from "@/utils"
 import { formatFileType } from '@/utils/file.js'
 import { useT } from "../../locale/index.js"
+import AudioRecorder from '../AudioRecorder/index.vue'
 export default defineComponent({
   name: 'RichTextarea',
   components: {
@@ -35,6 +59,9 @@ export default defineComponent({
     FileList,
     TinyDialogBox,
     TinyButton,
+    TinyInput,
+    TinyDrawer,
+    AudioRecorder
   },
   model: {
     prop: "value",
@@ -73,9 +100,56 @@ export default defineComponent({
       type: Number,
       default: 0,
     },
+    isBase: {
+      type: Boolean,
+      default: false,
+    },
   },
   emits: ['change', 'addFile', 'deleteFile', 'update:modelValue'],
   setup(props, { emit }) {
+    const drawerVisible = ref(false)
+    const isMobile = getPlatform().isMobile
+    
+    const handleHtmlInput = (e) => {
+      const selection = window.getSelection()
+      const range = selection.getRangeAt(0)
+      const preCaretRange = range.cloneRange()
+      preCaretRange.selectNodeContents(e.target)
+      preCaretRange.setEnd(range.endContainer, range.endOffset)
+      const caretOffset = preCaretRange.toString().length
+      content.value = e.target.innerHTML
+      setTimeout(() => {
+        const newRange = document.createRange()
+        const newSelection = window.getSelection()
+        let charCount = 0
+        let found = false
+        function traverseNodes(node) {
+          if (found) return
+          if (node.nodeType === Node.TEXT_NODE) {
+            const nextCount = charCount + node.length
+            if (caretOffset <= nextCount) {
+              newRange.setStart(node, caretOffset - charCount)
+              newRange.setEnd(node, caretOffset - charCount)
+              found = true
+            } else {
+              charCount = nextCount
+            }
+          } else {
+            for (let i = 0; i < node.childNodes.length; i++) {
+              traverseNodes(node.childNodes[i])
+              if (found) return
+            }
+          }
+        }
+        traverseNodes(e.target)
+        if (!found) {
+          newRange.selectNodeContents(e.target)
+          newRange.collapse(false)
+        }
+        newSelection.removeAllRanges()
+        newSelection.addRange(newRange)
+      }, 0)
+    }
     const t = useT()
     const obs = ref(null)
     const content = ref(props.modelValue || '')
@@ -85,25 +159,39 @@ export default defineComponent({
     const iframeUrl = computed(() => {
       return "formula/index.html"
     })
+    const uploadBtn = ref(null)
+    const uploadImg = () => {
+      obs.value.$el.accept = formatTypeLimit(["image"]);
+      uploadBtn.value.click();
+    }
+    const uploadFile = () => {
+      obs.value.$el.accept = formatTypeLimit(["file"]);
+      uploadBtn.value.click();
+    }
+    const uploadVideo = () => {
+      obs.value.$el.accept = formatTypeLimit(["video"]);
+      uploadBtn.value.click();
+    }
+    const uploadAudio = () => {
+      obs.value.$el.accept = formatTypeLimit(["audio"]);
+      uploadBtn.value.click();
+    }
     onMounted(() => {
-      // 初始化编辑器内容
-      const fluentEditor = fluentEditorRef.value.state.quill
-      const toolbar = fluentEditor.getModule('toolbar')
       // 创建隐藏的上传按钮
       obs.value = new Obs({ ...uploadOptions });
-      const uploadBtn = document.getElementById(`upload-${containerId.value}`);
+      uploadBtn.value = document.getElementById(`upload-${containerId.value}`);
       obs.value.initUpBtn(uploadBtn);
       obs.value.onBeforeUpload = (file) => {
         // if (checkAddFile && !checkAddFile(file)) {
         //   return 
         // }
-        let myFile = new Attach({
+        let myFile = reactive(new Attach({
           fileName: file.name,
           fileSize: file.size,
           fileUrl: file.name,
           status: 1,
           lisCount: -1
-        })
+        }))
         let fileType = formatFileType(myFile.fileUrl);
         file.onProgress = (progress) => {
           myFile.progress = handleNum(progress, 2, "floor")
@@ -128,6 +216,10 @@ export default defineComponent({
           emit('addFile', myFile, props.actionIndex)
         }
       }
+      if(isMobile) return 
+      // 初始化编辑器内容
+      const fluentEditor = fluentEditorRef.value?.state.quill
+      const toolbar = fluentEditor.getModule('toolbar')
       // 每次最多上传个文件检测
       // const checkAddFile = (file) => {
       //   if (props.attachments.length >= maxNum.value) {
@@ -139,18 +231,15 @@ export default defineComponent({
       //   }
       //   return true
       // }
-      toolbar.addHandler('image1', function (value) {
-        // 触发文件选择对话框
-        obs.value.$el.accept = formatTypeLimit(["image"]);
-        uploadBtn.click();
+      
+      toolbar.addHandler('image1',  (value) => {
+        uploadImg()
       });
-      toolbar.addHandler('video1', function (value) {
-        obs.value.$el.accept = formatTypeLimit(["video"]);
-        uploadBtn.click();
+      toolbar.addHandler('video1',  (value) => {
+        uploadVideo()
       })
-      toolbar.addHandler('audio', function (value) {
-        obs.value.$el.accept = formatTypeLimit(["audio"]);
-        uploadBtn.click();
+      toolbar.addHandler('audio1',  (value) => {
+        uploadAudio()
         // let jsx = `<img src="https://tobs.ulearning.cn/resources/web/17548922973825322.png" devui-editorx-image="true" data-image-id=${getUniqueValue()} />`
         // jsx = `&nbsp;<span class="q-space" contenteditable="false" data-index="${getUniqueValue()}">(&nbsp;)</span>&nbsp;`
         // console.log(fluentEditor,'fluentEditoraudio')
@@ -340,6 +429,7 @@ export default defineComponent({
       FluentEditor.register('formats/math', MathStyle)
     }
     return {
+      t,
       content,
       initSrtUploder,
       deleteFile,
@@ -350,7 +440,15 @@ export default defineComponent({
       containerId,
       boxVisibility,
       mathConfirm,
-      iframeUrl
+      iframeUrl,
+      isMobile,
+      handleHtmlInput,
+      uploadImg,
+      uploadVideo,
+      uploadAudio,
+      uploadFile,
+      drawerVisible,
+      obs
     }
   }
 });
@@ -380,4 +478,36 @@ export default defineComponent({
     }
   }
 }
+.ritchtextarea-container {
+  .mobile {
+    border: none;
+    .ql-toolbar, .ql-mention-list-container {
+      display: none;
+    }
+    .ql-editor {
+      border-top: unset !important;
+    }
+  }
+  .mobile-upload-btn {
+    display: flex;
+    align-items: center;
+    gap: calc(16 * var(--question-font-size));
+    margin-bottom: calc(16 * var(--question-font-size));
+    img {
+      width: calc(16 * var(--question-font-size));
+      height: calc(16 * var(--question-font-size));
+    }
+    .insert-blank {
+      min-width: calc(84 * var(--question-font-size));
+      height: calc(28 * var(--question-font-size));
+      margin-left: auto;
+      font-size: calc(12 * var(--question-font-size));
+      color: var(--tiny-primary-color);
+      border-radius: calc(4 * var(--question-font-size));
+      border: calc(1 * var(--question-font-size)) solid var(--tiny-primary-color);
+      padding: calc(2 * var(--question-font-size)) calc(8 * var(--question-font-size));
+    }
+  }
+}
+
 </style>
