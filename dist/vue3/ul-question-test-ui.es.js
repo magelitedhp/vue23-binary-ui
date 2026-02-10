@@ -2,7 +2,7 @@ var b4 = Object.defineProperty;
 var w4 = (e, t, n) => t in e ? b4(e, t, { enumerable: !0, configurable: !0, writable: !0, value: n }) : e[t] = n;
 var jt = (e, t, n) => w4(e, typeof t != "symbol" ? t + "" : t, n);
 import * as bn from "vue";
-import { defineComponent as Gr, version as ku, openBlock as P, createElementBlock as K, createTextVNode as Dt, toDisplayString as qe, renderSlot as vt, createElementVNode as V, resolveComponent as tt, mergeProps as Kn, createBlock as st, createCommentVNode as Ie, resolveDynamicComponent as xn, normalizeClass as je, createVNode as Ze, Transition as so, withCtx as rt, withDirectives as Xt, normalizeStyle as fn, vShow as Jn, resolveDirective as Yo, Fragment as Lt, renderList as an, withModifiers as Pt, normalizeProps as Tu, createSlots as Ca, guardReactiveProps as C4, withKeys as Yn, vModelText as ii, vModelCheckbox as Is, toHandlers as Dv, vModelRadio as Eu, toRefs as k4, getCurrentInstance as T4, ref as hn, computed as _i, onMounted as Pv, onBeforeUnmount as Ov, watch as Mo, reactive as Wc, nextTick as zi, onUnmounted as E4, onBeforeUpdate as S4 } from "vue";
+import { defineComponent as Gr, version as ku, openBlock as P, createElementBlock as K, createTextVNode as Dt, toDisplayString as Qe, renderSlot as vt, createElementVNode as J, resolveComponent as tt, mergeProps as Kn, createBlock as st, createCommentVNode as Ie, resolveDynamicComponent as xn, normalizeClass as je, createVNode as Ze, Transition as so, withCtx as rt, withDirectives as Xt, normalizeStyle as fn, vShow as Jn, resolveDirective as Yo, Fragment as Lt, renderList as an, withModifiers as Pt, normalizeProps as Tu, createSlots as Ca, guardReactiveProps as C4, withKeys as Yn, vModelText as ii, vModelCheckbox as Is, toHandlers as Dv, vModelRadio as Eu, toRefs as k4, getCurrentInstance as T4, ref as hn, computed as _i, onMounted as Pv, onBeforeUnmount as Ov, watch as Mo, reactive as Wc, nextTick as wi, onUnmounted as E4, onBeforeUpdate as S4 } from "vue";
 const or = (e, t) => {
   const n = e.__vccOpts || e;
   for (const [o, r] of t)
@@ -23,7 +23,7 @@ function x4(e, t, n, o, r, i) {
     class: "my-btn",
     onClick: t[0] || (t[0] = (...a) => e.onClick && e.onClick(...a))
   }, [
-    Dt(qe("vue-version:" + e.vueVersion) + " ", 1),
+    Dt(Qe("vue-version:" + e.vueVersion) + " ", 1),
     vt(e.$slots, "default", {}, void 0, !0)
   ]);
 }
@@ -288,26 +288,26 @@ function Rv() {
     };
   }
   var r = new e();
-  function i(E, J, G) {
+  function i(E, V, G) {
   }
-  function a(E, J, G) {
+  function a(E, V, G) {
   }
-  function s(E, J, G) {
+  function s(E, V, G) {
   }
-  function l(E, J, G) {
+  function l(E, V, G) {
   }
   function u(E) {
     return E.replace(c, "&lt;").replace(h, "&gt;");
   }
-  function d(E, J, G, oe) {
-    if (G = N(G), J === "href" || J === "src") {
+  function d(E, V, G, oe) {
+    if (G = N(G), V === "href" || V === "src") {
       if (G = n.trim(G), G === "#") return "#";
       if (!(G.substr(0, 7) === "http://" || G.substr(0, 8) === "https://" || G.substr(0, 7) === "mailto:" || G.substr(0, 4) === "tel:" || G.substr(0, 11) === "data:image/" || G.substr(0, 6) === "ftp://" || G.substr(0, 2) === "./" || G.substr(0, 3) === "../" || G[0] === "#" || G[0] === "/"))
         return "";
-    } else if (J === "background") {
+    } else if (V === "background") {
       if (b.lastIndex = 0, b.test(G))
         return "";
-    } else if (J === "style") {
+    } else if (V === "style") {
       if (k.lastIndex = 0, k.test(G) || (I.lastIndex = 0, I.test(G) && (b.lastIndex = 0, b.test(G))))
         return "";
       oe !== !1 && (oe = oe || r, G = oe.process(G));
@@ -322,7 +322,7 @@ function Rv() {
     return E.replace(p, '"');
   }
   function U(E) {
-    return E.replace(v, function(J, G) {
+    return E.replace(v, function(V, G) {
       return G[0] === "x" || G[0] === "X" ? String.fromCharCode(parseInt(G.substr(1), 16)) : String.fromCharCode(parseInt(G, 10));
     });
   }
@@ -330,9 +330,9 @@ function Rv() {
     return E.replace(m, ":").replace(y, " ");
   }
   function L(E) {
-    for (var J = "", G = 0, oe = E.length; G < oe; G++)
-      J += E.charCodeAt(G) < 32 ? " " : E.charAt(G);
-    return n.trim(J);
+    for (var V = "", G = 0, oe = E.length; G < oe; G++)
+      V += E.charCodeAt(G) < 32 ? " " : E.charAt(G);
+    return n.trim(V);
   }
   function N(E) {
     return E = T(E), E = U(E), E = Q(E), E = L(E), E;
@@ -343,8 +343,8 @@ function Rv() {
   function Y() {
     return "";
   }
-  function O(E, J) {
-    typeof J != "function" && (J = function() {
+  function O(E, V) {
+    typeof V != "function" && (V = function() {
     });
     var G = !Array.isArray(E);
     function oe(we) {
@@ -363,7 +363,7 @@ function Rv() {
           } else
             return ve || (ve = ne.position), "[removed]";
         else
-          return J(we, pe, ne);
+          return V(we, pe, ne);
       },
       remove: function(we) {
         var pe = "", ne = 0;
@@ -374,28 +374,28 @@ function Rv() {
     };
   }
   function w(E) {
-    for (var J = "", G = 0; G < E.length; ) {
+    for (var V = "", G = 0; G < E.length; ) {
       var oe = E.indexOf("<!--", G);
       if (oe === -1) {
-        J += E.slice(G);
+        V += E.slice(G);
         break;
       }
-      J += E.slice(G, oe);
+      V += E.slice(G, oe);
       var le = E.indexOf("-->", oe);
       if (le === -1)
         break;
       G = le + 3;
     }
-    return J;
+    return V;
   }
-  function X(E) {
-    var J = E.split("");
-    return J = J.filter(function(G) {
+  function Z(E) {
+    var V = E.split("");
+    return V = V.filter(function(G) {
       var oe = G.charCodeAt(0);
       return oe === 127 ? !1 : oe <= 31 ? oe === 10 || oe === 13 : !0;
-    }), J.join("");
+    }), V.join("");
   }
-  return mo.whiteList = o(), mo.getDefaultWhiteList = o, mo.onTag = i, mo.onIgnoreTag = a, mo.onTagAttr = s, mo.onIgnoreTagAttr = l, mo.safeAttrValue = d, mo.escapeHtml = u, mo.escapeQuote = x, mo.unescapeQuote = T, mo.escapeHtmlEntities = U, mo.escapeDangerHtml5Entities = Q, mo.clearNonPrintableCharacter = L, mo.friendlyAttrValue = N, mo.escapeAttrValue = F, mo.onIgnoreTagStripAll = Y, mo.StripTagBody = O, mo.stripCommentTag = w, mo.stripBlankChar = X, mo.cssFilter = r, mo.getDefaultCSSWhiteList = t, mo;
+  return mo.whiteList = o(), mo.getDefaultWhiteList = o, mo.onTag = i, mo.onIgnoreTag = a, mo.onTagAttr = s, mo.onIgnoreTagAttr = l, mo.safeAttrValue = d, mo.escapeHtml = u, mo.escapeQuote = x, mo.unescapeQuote = T, mo.escapeHtmlEntities = U, mo.escapeDangerHtml5Entities = Q, mo.clearNonPrintableCharacter = L, mo.friendlyAttrValue = N, mo.escapeAttrValue = F, mo.onIgnoreTagStripAll = Y, mo.StripTagBody = O, mo.stripCommentTag = w, mo.stripBlankChar = Z, mo.cssFilter = r, mo.getDefaultCSSWhiteList = t, mo;
 }
 var ec = {}, wf;
 function Qv() {
@@ -578,11 +578,11 @@ function P4() {
         if (O.isWhite) {
           if (O.isClosing)
             return "</" + N + ">";
-          var X = s(F), E = p[N], J = r(X.html, function(G, oe) {
+          var Z = s(F), E = p[N], V = r(Z.html, function(G, oe) {
             var le = i.indexOf(E, G) !== -1, ve = y(N, G, oe, le);
             return a(ve) ? le ? (oe = k(N, G, oe, x), oe ? G + '="' + oe + '"' : G) : (ve = b(N, G, oe, le), a(ve) ? void 0 : ve) : ve;
           });
-          return F = "<" + N, J && (F += " " + J), X.closing && (F += " /"), F += ">", F;
+          return F = "<" + N, V && (F += " " + V), Z.closing && (F += " /"), F += ">", F;
         } else
           return w = m(N, F, O), a(w) ? I(F) : w;
       },
@@ -753,7 +753,7 @@ const U4 = (e) => {
   "[object String]": "string",
   "[object Number]": "number",
   "[object Boolean]": "boolean"
-}, Lo = (e) => e == null, nr = (e) => Lo(e) ? String(e) : j4[$v.call(e)] || "object", ai = (e) => nr(e) === "object", Y4 = (e) => ["asyncFunction", "function"].includes(nr(e)), Ii = (e) => {
+}, Lo = (e) => e == null, nr = (e) => Lo(e) ? String(e) : j4[$v.call(e)] || "object", ai = (e) => nr(e) === "object", Y4 = (e) => ["asyncFunction", "function"].includes(nr(e)), xi = (e) => {
   if (!e || $v.call(e) !== "[object Object]")
     return !1;
   const t = H4(e);
@@ -769,7 +769,7 @@ const U4 = (e) => {
         return !1;
   }
   return !0;
-}, Gi = (e) => typeof e == "number" && isFinite(e);
+}, Hi = (e) => typeof e == "number" && isFinite(e);
 const $h = (e) => nr(e) === "date", K4 = (e, t) => e === t || typeof e == "number" && typeof t == "number" && isNaN(e) && isNaN(t);
 const Bn = typeof window > "u", z4 = () => {
   let e = 8;
@@ -1118,7 +1118,7 @@ const r3 = 20, i3 = ["top", "right", "bottom", "left", "width", "height", "size"
 const v3 = (function() {
   return typeof Xc.ResizeObserver < "u" ? Xc.ResizeObserver : Zv;
 })();
-const A3 = "tcirzywvqlkjhgfbZQG_FLOWHSUBDNIMYREVKCAJxp57XP043891T62-modnaesu", Scn = A3.split("").reverse().join("");
+const A3 = "tcirzywvqlkjhgfbZQG_FLOWHSUBDNIMYREVKCAJxp57XP043891T62-modnaesu", Icn = A3.split("").reverse().join("");
 function b3(e) {
   return !Bn && (e.document.all || e.document.documentMode) && !e.crypto && e.msCrypto;
 }
@@ -1138,7 +1138,7 @@ const C3 = globalThis;
 w3(C3);
 let si;
 const er = (e, t, n) => {
-  if (!e || !Ii(e) || !t || typeof t != "string")
+  if (!e || !xi(e) || !t || typeof t != "string")
     return;
   const o = t.split(".");
   let r = e;
@@ -1151,7 +1151,7 @@ const er = (e, t, n) => {
   } else
     return r[o[0]];
 }, Xv = (e, t, n, o) => {
-  if (!e || !Ii(e) || !t || typeof t != "string")
+  if (!e || !xi(e) || !t || typeof t != "string")
     return e;
   const r = t.split("."), i = e;
   let a = r.length, s = r[0];
@@ -1159,7 +1159,7 @@ const er = (e, t, n) => {
     a--;
     let l = i, u, d;
     for (let c = 0; c < a; c++)
-      u = r[c], d = l[u], (d === null || !Ii(d)) && (l[u] = {}, d = l[u]), l = d;
+      u = r[c], d = l[u], (d === null || !xi(d)) && (l[u] = {}, d = l[u]), l = d;
     s = r[a], l[s] = n;
   } else
     i[s] = n;
@@ -1169,14 +1169,14 @@ const er = (e, t, n) => {
     const u = {};
     return a.forEach((d) => Xv(u, d, er(i, d))), u;
   };
-  return Ii(e) ? Array.isArray(t) ? r(e, t) : si(n !== !1, {}, e) : e;
+  return xi(e) ? Array.isArray(t) ? r(e, t) : si(n !== !1, {}, e) : e;
 }, k3 = (e) => Array.isArray(e) ? e.map((t) => fp(t)) : e, T3 = (e, t, n, o, r) => {
   let i;
-  if (n && o && (Ii(o) || (i = Array.isArray(o))))
+  if (n && o && (xi(o) || (i = Array.isArray(o))))
     if (i)
       i = !1, e[t] = k3(o);
     else {
-      const a = r && Ii(r) ? r : {};
+      const a = r && xi(r) ? r : {};
       e[t] = si(n, a, o);
     }
   else if (o !== void 0)
@@ -1213,7 +1213,7 @@ const Ul = (e, t, n, o) => {
   return !1;
 };
 eu = (e, t, n) => {
-  if (!Ii(e)) {
+  if (!xi(e)) {
     if (!Array.isArray(e))
       return e === t;
     if (e.length !== t.length)
@@ -1355,7 +1355,7 @@ const q3 = (e, t) => {
   }
   return n;
 }, U3 = (e, t, n, o = "0") => {
-  if (typeof e == "string" && typeof o == "string" && Gi(t)) {
+  if (typeof e == "string" && typeof o == "string" && Hi(t)) {
     let r = e.length - t;
     if (r > 0)
       return n ? e.substr(0, t) : e.substr(r, t);
@@ -1398,7 +1398,7 @@ const q3 = (e, t) => {
 }, j3 = () => (e, t, n, o) => e.replace(t, (r, i, a, s) => {
   if (!Io(i) && !Io(s))
     return `{${a}}`;
-  const l = n[a], u = Ii(l) ? E3(l) : l;
+  const l = n[a], u = xi(l) ? E3(l) : l;
   return Io(l) ? "" : typeof l == "string" && typeof o == "function" ? o(u) : u;
 }), Y3 = ({ type: e, res: t, formatText: n, string: o, reg: r, args: i }) => (e === br.url ? t = n(o, r, i, encodeURIComponent) : e === br.html ? t = n(o, r, i, e2) : t = n(o, r, i), t), K3 = (e, t, n) => {
   const o = e[e.length - 1];
@@ -1415,7 +1415,7 @@ const q3 = (e, t) => {
   if (typeof e != "string" || arguments.length < 2)
     return e;
   let o, r;
-  if (Ii(t))
+  if (xi(t))
     return $3(e, t, n);
   const i = z3({ data: t, args: o, type: n, _arguments: arguments });
   o = i.args, n = i.type;
@@ -1449,7 +1449,7 @@ const J3 = (e) => /([(\uAC00-\uD7AF)|(\u3130-\u318F)])+/gi.test(e), t2 = (e, t, 
   "s{1,2}": /s{1,2}/,
   "S{1,3}": /S{1,3}/,
   "Z{1,1}": /Z{1,1}/
-}, Qi = {
+}, qi = {
   YEAR: 9999,
   MONTH: 11,
   DATE: 31,
@@ -1462,7 +1462,7 @@ const r5 = (e) => {
   const t = 0 - e.getTimezoneOffset() / 60;
   let n;
   return t === 0 ? n = "Z" : t > 0 ? n = "+" + (t > 10 ? t : "0" + t) + "00" : n = (t < -10 ? t : "-0" + -t) + "00", n;
-}, o2 = (e) => e % 400 === 0 || e % 4 === 0 && e % 100 !== 0, r2 = (e) => e > Qi.MILLISECOND ? Number(String(e).substring(0, 3)) : e, zh = ({ year: e, month: t, date: n, hours: o, minutes: r, seconds: i, milliseconds: a }) => {
+}, o2 = (e) => e % 400 === 0 || e % 4 === 0 && e % 100 !== 0, r2 = (e) => e > qi.MILLISECOND ? Number(String(e).substring(0, 3)) : e, zh = ({ year: e, month: t, date: n, hours: o, minutes: r, seconds: i, milliseconds: a }) => {
   let s = n2[t];
   if (o2(e) && t === 1 && (s += 1), n <= s)
     return new Date(e, t, n, o, r, i, r2(a));
@@ -1571,7 +1571,7 @@ const r5 = (e) => {
     }
   }
   return n;
-}, ga = (e, t, n) => isNaN(e) || e < t || e > n, d5 = ({ year: e, month: t, date: n, hours: o, minutes: r, seconds: i, milliseconds: a }) => ga(e, 0, Qi.YEAR) || ga(t, 0, Qi.MONTH) || ga(n, 0, Qi.DATE) || ga(o, 0, Qi.HOUR) || ga(r, 0, Qi.MINUTE) || ga(i, 0, Qi.SECOND) || ga(a, 0, Qi.MILLISECOND), p5 = (e, t) => {
+}, ga = (e, t, n) => isNaN(e) || e < t || e > n, d5 = ({ year: e, month: t, date: n, hours: o, minutes: r, seconds: i, milliseconds: a }) => ga(e, 0, qi.YEAR) || ga(t, 0, qi.MONTH) || ga(n, 0, qi.DATE) || ga(o, 0, qi.HOUR) || ga(r, 0, qi.MINUTE) || ga(i, 0, qi.SECOND) || ga(a, 0, qi.MILLISECOND), p5 = (e, t) => {
   if (typeof t == "string") {
     const n = u5(e, t), o = Number(n[0]), r = Number(n[1]), i = Number(n[2] || 1), a = Number(n[3] || 0), s = Number(n[4] || 0), l = Number(n[5] || 0), u = Number(n[6] || 0);
     return d5({
@@ -1595,7 +1595,7 @@ const r5 = (e) => {
     return l5(e);
 }, h5 = (e, t, n) => {
   let o;
-  return Gi(e) ? o = new Date(e) : typeof e == "string" && (o = p5(e, t)), o;
+  return Hi(e) ? o = new Date(e) : typeof e == "string" && (o = p5(e, t)), o;
 }, ll = function(e, t = "yyyy/MM/dd hh:mm:ss") {
   if ($h(e)) {
     if (typeof t == "string") {
@@ -1738,7 +1738,7 @@ const m5 = "date,datetime,time,time-select,week,month,year,years,yearrange,dater
   IE: "ie",
   Edge: "edge"
 };
-const bi = {}, Vh = ["\\d\\d?", "\\d{3}", "\\d{4}"], Ri = Vh[0], f5 = Vh[1], g5 = Vh[2], _s = "[^\\s]+", i2 = /\[([^]*?)\]/gm, xf = () => {
+const bi = {}, Vh = ["\\d\\d?", "\\d{3}", "\\d{4}"], Qi = Vh[0], f5 = Vh[1], g5 = Vh[2], _s = "[^\\s]+", i2 = /\[([^]*?)\]/gm, xf = () => {
 }, y5 = {
   shortDate: "M/D/yy",
   mediumDate: "MMM d, yyyy",
@@ -1800,46 +1800,46 @@ const Mf = {
     const t = e.getTimezoneOffset();
     return (t > 0 ? "-" : "+") + mr(Math.floor(Math.abs(t) / 60) * 100 + Math.abs(t) % 60, 4);
   }
-}, Hi = {
+}, $i = {
   d: [
-    Ri,
+    Qi,
     (e, t) => {
       e.day = t;
     }
   ],
   Do: [
-    Ri + _s,
+    Qi + _s,
     (e, t) => {
       e.day = parseInt(t, 10);
     }
   ],
   M: [
-    Ri,
+    Qi,
     (e, t) => {
       e.month = t - 1;
     }
   ],
   yy: [
-    Ri,
+    Qi,
     (e, t) => {
       const n = Number(String((/* @__PURE__ */ new Date()).getFullYear()).substr(0, 2));
       e.year = String(t > 68 ? n - 1 : n) + t;
     }
   ],
   h: [
-    Ri,
+    Qi,
     (e, t) => {
       e.hour = t;
     }
   ],
   m: [
-    Ri,
+    Qi,
     (e, t) => {
       e.minute = t;
     }
   ],
   s: [
-    Ri,
+    Qi,
     (e, t) => {
       e.second = t;
     }
@@ -1868,7 +1868,7 @@ const Mf = {
       e.millisecond = t;
     }
   ],
-  D: [Ri, xf],
+  D: [Qi, xf],
   ddd: [_s, xf],
   MMM: [_s, Bf("monthNamesShort")],
   MMMM: [_s, Bf("monthNames")],
@@ -1888,9 +1888,9 @@ const Mf = {
   ]
 }, C5 = ["A", "DD", "dd", "mm", "hh", "MM", "ss", "hh", "H", "HH"];
 bi.masks = y5;
-Hi.dddd = Hi.ddd;
+$i.dddd = $i.ddd;
 C5.forEach((e) => {
-  e === "MM" ? Hi[e] = Hi[e.substr(0, 1)] : Hi[e] = Hi[e.substr(0, 1).toLowerCase()];
+  e === "MM" ? $i[e] = $i[e.substr(0, 1)] : $i[e] = $i[e.substr(0, 1).toLowerCase()];
 });
 bi.format = (e, t, n) => {
   const o = n || bi.i18n;
@@ -1905,8 +1905,8 @@ bi.format = (e, t, n) => {
 };
 const k5 = (e, t) => {
   let n = [], o = v5(e).replace(s2, (r) => {
-    if (Hi[r]) {
-      const i = Hi[r];
+    if ($i[r]) {
+      const i = $i[r];
       return t.push(i[1]), "(" + i[0] + ")";
     }
     return r;
@@ -1950,7 +1950,7 @@ bi.parse = (e, t, n) => {
     i[l - 1](r, s[l], o);
   return r.isPm === !0 && !Lo(r.hour) && Number(r.hour) !== 12 ? r.hour = Number(r.hour) + 12 : r.isPm === !1 && Number(r.hour) === 12 && (r.hour = 0), T5(r);
 };
-const Icn = Rs.Weeks, xcn = Rs.MonhtList, Bcn = Rs.DateFormats.date, Mcn = Rs.DateFormats.time;
+const xcn = Rs.Weeks, Bcn = Rs.MonhtList, Mcn = Rs.DateFormats.date, Lcn = Rs.DateFormats.time;
 const E5 = (e, t, n = K4) => {
   if (Array.isArray(e) && typeof n == "function") {
     for (let o = 0, r = e.length; o < r; o++)
@@ -2376,7 +2376,7 @@ const z5 = '^(([^<>()\\[\\]\\\\.,;:\\s@"]+(\\.[^<>()\\[\\]\\\\.,;:\\s@"]+)*)|(".
     }
   },
   date: $h,
-  number: (e) => Gi(Number(e)),
+  number: (e) => Hi(Number(e)),
   object: (e) => ai(e) && !cl.array(e),
   method: (e) => nr(e) === "function",
   email: (e) => Io(e) || !!e.match(Zr.email) && e.length < 255,
@@ -2433,9 +2433,9 @@ function W5({ min: e, max: t, val: n, key: o, rule: r, errors: i, util: a, optio
   e && !t && n < r.min ? i.push(a.format(s.messages[o].min, r.min)) : t && !e && n > r.max ? i.push(a.format(s.messages[o].max, r.max)) : e && t && (n < r.min || n > r.max) && i.push(a.format(s.messages[o].range, r.min, r.max));
 }
 function Z5(e, t, n, o, r) {
-  const i = Gi(e.len), a = Gi(e.min), s = Gi(e.max);
+  const i = Hi(e.len), a = Hi(e.min), s = Hi(e.max);
   let l = t, u = e.type;
-  const d = Gi(t), c = typeof t == "string", h = Array.isArray(t);
+  const d = Hi(t), c = typeof t == "string", h = Array.isArray(t);
   if (d ? u ?? (u = "number") : c ? u ?? (u = "string") : h && (u ?? (u = "array")), !u)
     return !1;
   h && (l = t.length), c && (l = q3(t, e.regular ?? "string")), e.type === "number" && (l = t), i ? l !== e.len && o.push(Qr(r.messages[u].len, e.len)) : W5({ min: a, max: s, val: l, key: u, rule: e, errors: o, util: Q5, options: r });
@@ -3010,7 +3010,7 @@ const k2 = function(e) {
   A2 = setTimeout(() => {
     ka.close();
   }, 5e3);
-}, Di = function(e, t) {
+}, Pi = function(e, t) {
   let n = Ok++;
   if (n = String(n), e.cid = n, !Ta) {
     t && setTimeout(t, 0, { ok: !1, message: "eSpace is not logged in." });
@@ -3021,7 +3021,7 @@ const k2 = function(e) {
   }, y2)), ka.send(JSON.stringify(e));
 }, T2 = function() {
   Rf = setTimeout(() => {
-    Ta ? Di(
+    Ta ? Pi(
       {
         type: "heartbeat"
       },
@@ -3081,7 +3081,7 @@ jo.on = function(e, t) {
   b2[e] = t;
 };
 jo.getUserInfo = function(e, t) {
-  Di(
+  Pi(
     {
       type: "get-user-info",
       param: e
@@ -3116,7 +3116,7 @@ jo.getUserInfo = function(e, t) {
 };
 jo.subscribeUserStatus = function(e, t) {
   Array.isArray(e) && e.forEach((n) => {
-  }), Di(
+  }), Pi(
     {
       type: "subscribe-user-status",
       param: e
@@ -3125,7 +3125,7 @@ jo.subscribeUserStatus = function(e, t) {
   );
 };
 jo.eSpaceCall = function(e, t, n) {
-  Di(
+  Pi(
     {
       type: "espace-call",
       param: {
@@ -3137,7 +3137,7 @@ jo.eSpaceCall = function(e, t, n) {
   );
 };
 jo.eSpaceCallByAccount = function(e, t) {
-  Di(
+  Pi(
     {
       type: "espace-call",
       param: {
@@ -3148,7 +3148,7 @@ jo.eSpaceCallByAccount = function(e, t) {
   );
 };
 jo.eSpaceCallByNumber = function(e, t) {
-  Di(
+  Pi(
     {
       type: "espace-call",
       param: {
@@ -3159,7 +3159,7 @@ jo.eSpaceCallByNumber = function(e, t) {
   );
 };
 jo.showImDialog = function(e, t) {
-  Di(
+  Pi(
     {
       type: "show-espace-im-dialog",
       param: e
@@ -3168,7 +3168,7 @@ jo.showImDialog = function(e, t) {
   );
 };
 jo.showGroupDialog = function(e, t) {
-  Di(
+  Pi(
     {
       type: "show-espace-im-group-dialog",
       param: e
@@ -3177,7 +3177,7 @@ jo.showGroupDialog = function(e, t) {
   );
 };
 jo.addContactList = function(e, t) {
-  Di(
+  Pi(
     {
       type: "add-contact-list",
       param: e
@@ -3679,17 +3679,17 @@ class Wk {
     Object.assign(this._options, t);
   }
 }
-const $i = "__resizeListeners__", Zk = (e) => {
+const ji = "__resizeListeners__", Zk = (e) => {
   e.forEach((t) => {
-    const n = t.target[$i] || [];
+    const n = t.target[ji] || [];
     n.length && n.forEach((o) => {
       o();
     });
   });
 }, ru = (e, t) => {
-  Bn || (e[$i] || (e[$i] = [], e.__ro__ = new v3(Zk), e.__ro__.observe(e)), e[$i].push(t));
+  Bn || (e[ji] || (e[ji] = [], e.__ro__ = new v3(Zk), e.__ro__.observe(e)), e[ji].push(t));
 }, iu = (e, t) => {
-  !e || !e[$i] || (e[$i].splice(e[$i].indexOf(t), 1), e[$i].length || (e.__ro__.disconnect(), delete e.__ro__));
+  !e || !e[ji] || (e[ji].splice(e[ji].indexOf(t), 1), e[ji].length || (e.__ro__.disconnect(), delete e.__ro__));
 };
 let rc;
 function Xk() {
@@ -3722,7 +3722,7 @@ const _k = (e, t) => {
   const a = r + n.reduce((d, c) => d + c.offsetTop, 0), s = a + i, l = e.scrollTop, u = l + e.clientHeight;
   a < l ? e.scrollTop = a : s > u && (e.scrollTop = s - e.clientHeight);
 };
-const Dcn = Bn ? null : Element.prototype.matches;
+const Pcn = Bn ? null : Element.prototype.matches;
 var Iu = {
   enUS: "英语",
   zhCN: "中文",
@@ -7195,11 +7195,11 @@ var ml = Iu, El = null, xu = function(t, n) {
   zhCN: Iu
 }, Symbol.toStringTag, {
   value: "Module"
-})), Pcn = aa.use, cs = aa.t;
+})), Ocn = aa.use, cs = aa.t;
 aa.i18n;
 aa.initI18n;
 aa.extend;
-var Ocn = aa.zhCN, Fcn = aa.enUS, Ncn = aa.language;
+var Fcn = aa.zhCN, Ncn = aa.enUS, Rcn = aa.language;
 const rT = ({ onMounted: e, onActivated: t, nextTick: n }) => (o) => {
   let r;
   e(() => {
@@ -7473,7 +7473,7 @@ var R2 = function() {
     }), r;
   } else
     return t[n] || "";
-}, kp = typeof window > "u" ? null : window.__Longque__, Rcn = bn.Teleport, vT = bn.defineAsyncComponent, AT = bn.markRaw, Q2 = function(t) {
+}, kp = typeof window > "u" ? null : window.__Longque__, Qcn = bn.Teleport, vT = bn.defineAsyncComponent, AT = bn.markRaw, Q2 = function(t) {
   var n = t.view, o = n === void 0 ? void 0 : n, r = t.component, i = r === void 0 ? void 0 : r, a = t.props, s = t.customDesignProps, l = t.context, u = l.attrs, d = l.slots, c = t.extend, h = c === void 0 ? {} : c;
   return function() {
     return bn.h(o && o.value || i, Ms({
@@ -7545,7 +7545,7 @@ var R2 = function() {
     var o = au(t), r = 0, i = function(s) {
       return {
         level: r,
-        vm: wi({}, s),
+        vm: Ci({}, s),
         el: s.vnode.el,
         options: s.type
       };
@@ -7564,7 +7564,7 @@ var R2 = function() {
           if (s.some(function(u) {
             return u.component && n({
               level: l,
-              vm: wi({}, u.component),
+              vm: Ci({}, u.component),
               el: u.el,
               options: u.type,
               isLevel1: !0
@@ -7598,10 +7598,10 @@ var R2 = function() {
     var o = t.dynamicChildren || t.children;
     Array.isArray(o) ? o.forEach(function(r) {
       if (r.component) {
-        var i = wi({}, r.component);
+        var i = Ci({}, r.component);
         n.push(i), r.props.ref && (n.refs[r.props.ref] = i);
       }
-    }) : t.component && n.push(wi({}, t.component));
+    }) : t.component && n.push(Ci({}, t.component));
   }
   return n;
 }, Tp = function(t, n, o, r) {
@@ -7628,7 +7628,7 @@ var R2 = function() {
   return t.indexOf("_") === 0;
 }, $2 = function(t, n) {
   return Tp(t, n, "setupState", null), Tp(t, n, "props", Yf), BT(t, n, "ctx", Yf), t;
-}, wi = function(t, n, o) {
+}, Ci = function(t, n, o) {
   o === void 0 && (o = null);
   var r = IT(n.attrs), i = r.$attrs, a = r.$listeners, s = n.$emitter;
   s || (G2(n), s = n.$emitter);
@@ -7704,7 +7704,7 @@ var R2 = function() {
     },
     $parent: {
       get: function() {
-        return n.parent && wi({}, au(n));
+        return n.parent && Ci({}, au(n));
       }
     },
     $refs: {
@@ -7742,7 +7742,7 @@ var R2 = function() {
   for (var o in t.refs)
     Object.prototype.hasOwnProperty.call(t.refs, o) && (n[o] = t.refs[o]);
 }, LT = function(t, n) {
-  var o, r, i = bn.getCurrentInstance(), a = i == null ? void 0 : i.appContext.config.globalProperties, s = CT(i), l = s.route, u = s.router, d = i == null || (o = i.proxy) == null || (r = o.$root) == null ? void 0 : r.$i18n, c = kT(i), h = c.dispatch, f = c.broadcast, p = TT(i), v = ET(i), m = wi({}, i, t), y = t.emit, b = {}, k = typeof i.props.tiny_template > "u" && au(i), I = k ? wi({}, k) : i.parent ? wi({}, i.parent) : null, x = function(L) {
+  var o, r, i = bn.getCurrentInstance(), a = i == null ? void 0 : i.appContext.config.globalProperties, s = CT(i), l = s.route, u = s.router, d = i == null || (o = i.proxy) == null || (r = o.$root) == null ? void 0 : r.$i18n, c = kT(i), h = c.dispatch, f = c.broadcast, p = TT(i), v = ET(i), m = Ci({}, i, t), y = t.emit, b = {}, k = typeof i.props.tiny_template > "u" && au(i), I = k ? Ci({}, k) : i.parent ? Ci({}, i.parent) : null, x = function(L) {
     var N, F = L.name, Y = L.value, O = k ? k.ctx : i == null || (N = i.parent) == null ? void 0 : N.ctx;
     O[F] = Y, I[F] = Y;
   }, T = function(L) {
@@ -7826,7 +7826,7 @@ var R2 = function() {
     component: t,
     customElement: o
   };
-}, Ci = function(t, n, o) {
+}, ki = function(t, n, o) {
   var r = {}, i = o, a = FT(t), s = a.customElement, l = a.type;
   return t = a.component, n && typeof n == "object" && !Array.isArray(n) ? (r = OT(n), n.scopedSlots && (i = n.scopedSlots)) : (typeof n == "string" || Array.isArray(n)) && (o = n), (typeof o == "string" || Array.isArray(o)) && (i = typeof t != "string" || s ? function() {
     return o;
@@ -7836,9 +7836,9 @@ var R2 = function() {
     var o, r = n.component, i = n.propsData, a = n.el, s = Object.assign(r, {
       provide: (o = {}, o[t.configKey] = t.configInstance, o)
     }), l = bn.createVNode(s, i);
-    return bn.render(l, a), wi({}, l.component);
+    return bn.render(l, a), Ci({}, l.component);
   };
-}, Ft = bn.defineComponent, K2 = !1, Qcn = bn.isVNode, qcn = bn.KeepAlive, Ep = function(t) {
+}, Ft = bn.defineComponent, K2 = !1, qcn = bn.isVNode, Ucn = bn.KeepAlive, Ep = function(t) {
   var n = [];
   return Object.keys(t).forEach(function(o) {
     return t[o] && n.push(o);
@@ -7932,9 +7932,9 @@ var UT = ["IconLoadingShadow", "IconNoData"], z2 = 0, V2 = function(t, n) {
     var n = {};
     V2(t, n), J2(t, n), z2++;
   }
-}, Ucn = iT(Ms({}, bn, {
+}, Gcn = iT(Ms({}, bn, {
   isVue2: K2
-})), Gcn = aT(Ms({}, bn, {
+})), Hcn = aT(Ms({}, bn, {
   isVue2: K2
 })), mn = "Tiny", Hn = {
   tiny_mode: String,
@@ -8153,11 +8153,11 @@ var JT = Object.defineProperty, WT = Object.defineProperties, ZT = Object.getOwn
     for (var n of Kf(t))
       _T.call(t, n) && zf(e, n, t[n]);
   return e;
-}, Pi = (e, t) => WT(e, ZT(t));
+}, Oi = (e, t) => WT(e, ZT(t));
 var eE = {
   viewBox: "0 0 16 16",
   xmlns: "http://www.w3.org/2000/svg"
-}, tE = /* @__PURE__ */ V(
+}, tE = /* @__PURE__ */ J(
   "path",
   {
     d: "M8.588 1.99a2.002 2.002 0 0 1 2.83 0l2.591 2.591a2 2 0 0 1 0 2.83L7.412 14.01a2.002 2.002 0 0 1-2.83 0L1.99 11.419a2.003 2.003 0 0 1 0-2.831Zm4.703 11.177a.5.5 0 0 1 .067.995l-.067.005H10a.5.5 0 0 1-.068-.996l.068-.004h3.29ZM3.757 8.235l-1.06 1.06a1.003 1.003 0 0 0 0 1.417l2.592 2.59c.39.391 1.025.391 1.416 0l1.06-1.06-4.008-4.007Zm6.954-5.537a1.002 1.002 0 0 0-1.416 0l-4.83 4.83 4.006 4.007 4.831-4.83a1 1 0 0 0 .084-1.322l-.084-.095Z"
@@ -8174,7 +8174,7 @@ var rE = {
 }, iE = {
   viewBox: "0 0 24 24",
   xmlns: "http://www.w3.org/2000/svg"
-}, aE = /* @__PURE__ */ V(
+}, aE = /* @__PURE__ */ J(
   "path",
   {
     d: "m4.576 11.279 8.13 8.13L11.119 21a2.983 2.983 0 0 1-2.123.88A2.983 2.983 0 0 1 6.872 21l-3.886-3.885a2.982 2.982 0 0 1-.88-2.123c0-.802.313-1.556.88-2.122l1.59-1.59Zm15.36 8.457a.75.75 0 0 1 0 1.5H15a.75.75 0 0 1 0-1.5h4.936ZM12.882 2.972c1.133-1.135 3.111-1.135 4.246 0l3.886 3.886c.567.567.88 1.32.88 2.123 0 .802-.313 1.556-.88 2.122l-7.247 7.246-8.13-8.131Z"
@@ -8201,7 +8201,7 @@ var cE = {
     "enable-background": "new 0 0 16 16"
   },
   "xml:space": "preserve"
-}, dE = /* @__PURE__ */ V(
+}, dE = /* @__PURE__ */ J(
   "rect",
   {
     style: {
@@ -8211,7 +8211,7 @@ var cE = {
   null,
   -1
   /* HOISTED */
-), pE = /* @__PURE__ */ V(
+), pE = /* @__PURE__ */ J(
   "path",
   {
     d: "M8 1.5C4.4 1.5 1.5 4.4 1.5 8s2.9 6.5 6.5 6.5 6.5-2.9 6.5-6.5S11.6 1.5 8 1.5zm0 12C5 13.5 2.5 11 2.5 8S5 2.5 8 2.5 13.5 5 13.5 8 11 13.5 8 13.5zM12 8c0 .3-.2.5-.5.5h-3v3c0 .3-.2.5-.5.5s-.5-.2-.5-.5v-3h-3c-.3 0-.5-.2-.5-.5s.2-.5.5-.5h3v-3c0-.3.2-.5.5-.5s.5.2.5.5v3h3c.3 0 .5.2.5.5z",
@@ -8238,7 +8238,7 @@ var Vf = {
 }, fE = {
   viewBox: "0 0 14 14",
   xmlns: "http://www.w3.org/2000/svg"
-}, gE = /* @__PURE__ */ V(
+}, gE = /* @__PURE__ */ J(
   "path",
   {
     d: "M3.284 4h7.432a1 1 0 0 1 .735 1.678L7.735 9.704a1 1 0 0 1-1.47 0L2.55 5.678A1 1 0 0 1 3.284 4Z"
@@ -8262,7 +8262,7 @@ var Jf = {
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 24 24",
   "xml:space": "preserve"
-}, wE = /* @__PURE__ */ V(
+}, wE = /* @__PURE__ */ J(
   "path",
   {
     class: "arrow-left_svg__st0",
@@ -8287,7 +8287,7 @@ var Wf = {
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 24 24",
   "xml:space": "preserve"
-}, SE = /* @__PURE__ */ V(
+}, SE = /* @__PURE__ */ J(
   "path",
   {
     class: "arrow-right_svg__st0",
@@ -8314,7 +8314,7 @@ var Zf = {
   viewBox: "0 0 16 16",
   fill: "none",
   xmlns: "http://www.w3.org/2000/svg"
-}, LE = /* @__PURE__ */ V(
+}, LE = /* @__PURE__ */ J(
   "path",
   {
     d: "M16 4c0-2-2-4-4-4H4C2 0 0 2 0 4v8c0 2 2 4 4 4h8c2 0 4-2 4-4V4Z",
@@ -8324,7 +8324,7 @@ var Zf = {
   null,
   -1
   /* HOISTED */
-), DE = /* @__PURE__ */ V(
+), DE = /* @__PURE__ */ J(
   "path",
   {
     d: "M16 4c0-2.21-1.8-4-4-4H4C1.79 0 0 1.79 0 4v8c0 2.2 1.79 4 4 4h8c2.2 0 4-1.8 4-4V4Zm-1 0c0-1.66-1.35-3-3-3H4C2.34 1 1 2.34 1 4v8c0 1.65 1.34 3 3 3h8c1.65 0 3-1.35 3-3V4Z",
@@ -8352,7 +8352,7 @@ var Xf = {
   viewBox: "0 0 16 16",
   fill: "none",
   xmlns: "http://www.w3.org/2000/svg"
-}, NE = /* @__PURE__ */ V(
+}, NE = /* @__PURE__ */ J(
   "path",
   {
     d: "M4 16h8c2.2 0 4-1.8 4-4V4c0-2.21-1.8-4-4-4H4C1.79 0 0 1.79 0 4v8c0 2.2 1.79 4 4 4Zm3.26-4.38 5.99-6.43a.6.6 0 1 0-.88-.82L6.8 10.35 3.6 7.19a.6.6 0 1 0-.84.86l3.64 3.59c.28.28.57.26.86-.02Z",
@@ -8362,7 +8362,7 @@ var Xf = {
   null,
   -1
   /* HOISTED */
-), RE = /* @__PURE__ */ V(
+), RE = /* @__PURE__ */ J(
   "path",
   {
     d: "M13.25 5.17 7.26 11.6c-.29.29-.58.3-.86.02L2.76 8.03a.6.6 0 0 1-.01-.85c.24-.24.61-.24.85 0l3.2 3.15 5.57-5.98a.6.6 0 0 1 .85-.02c.24.22.26.6.03.84Z",
@@ -8391,7 +8391,7 @@ var _f = {
     "enable-background": "new 0 0 16 16"
   },
   "xml:space": "preserve"
-}, GE = /* @__PURE__ */ V(
+}, GE = /* @__PURE__ */ J(
   "rect",
   {
     style: {
@@ -8401,7 +8401,7 @@ var _f = {
   null,
   -1
   /* HOISTED */
-), HE = /* @__PURE__ */ V(
+), HE = /* @__PURE__ */ J(
   "path",
   {
     class: "chevron-down_svg__st1",
@@ -8425,7 +8425,7 @@ var eg = {
 }, YE = {
   viewBox: "0 0 16 16",
   xmlns: "http://www.w3.org/2000/svg"
-}, KE = /* @__PURE__ */ V(
+}, KE = /* @__PURE__ */ J(
   "path",
   {
     d: "M5.42 7.42c-.31.32-.31.83 0 1.14l4.1 4.1c.23.23.62.23.85 0a.61.61 0 0 0 0-.85L6.56 8l3.81-3.83c.21-.2.23-.53.06-.76-.23-.24-.67-.3-.91-.08l-4.1 4.09Z"
@@ -8448,7 +8448,7 @@ var tg = {
 }, JE = {
   viewBox: "0 0 16 16",
   xmlns: "http://www.w3.org/2000/svg"
-}, WE = /* @__PURE__ */ V(
+}, WE = /* @__PURE__ */ J(
   "path",
   {
     d: "M10.56 7.43c.32.31.32.82 0 1.13l-4.1 4.1c-.23.24-.61.24-.85 0a.61.61 0 0 1 0-.85L9.43 8 5.61 4.18a.607.607 0 0 1-.06-.78l.06-.07c.24-.24.62-.24.85 0l4.1 4.1Z"
@@ -8472,7 +8472,7 @@ var ng = {
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 24 24",
   "xml:space": "preserve"
-}, e6 = /* @__PURE__ */ V(
+}, e6 = /* @__PURE__ */ J(
   "path",
   {
     class: "chevron-up_svg__st0",
@@ -8496,7 +8496,7 @@ var og = {
 }, o6 = {
   viewBox: "0 0 16 16",
   xmlns: "http://www.w3.org/2000/svg"
-}, r6 = /* @__PURE__ */ V(
+}, r6 = /* @__PURE__ */ J(
   "path",
   {
     d: "M12.49 3.3a.5.5 0 0 1 .05.62L8.58 7.89l3.91 3.88c.21.19.23.48.05.71-.17.19-.49.24-.71.06L7.88 8.58 4 12.49c-.18.17-.5.18-.68.01a.496.496 0 0 1-.08-.67l3.93-3.94L3.29 4a.524.524 0 0 1 .04-.71c.17-.14.42-.16.58-.05l3.97 3.93 3.9-3.87c.18-.22.51-.22.71 0Z",
@@ -8521,7 +8521,7 @@ var rg = {
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 24 24",
   "xml:space": "preserve"
-}, l6 = /* @__PURE__ */ V(
+}, l6 = /* @__PURE__ */ J(
   "path",
   {
     class: "cloud-upload_svg__st0",
@@ -8546,7 +8546,7 @@ var ig = {
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 24 24",
   "xml:space": "preserve"
-}, p6 = /* @__PURE__ */ V(
+}, p6 = /* @__PURE__ */ J(
   "path",
   {
     class: "copy_svg__st0",
@@ -8570,7 +8570,7 @@ var ag = {
 }, f6 = {
   viewBox: "0 0 16 16",
   xmlns: "http://www.w3.org/2000/svg"
-}, g6 = /* @__PURE__ */ V(
+}, g6 = /* @__PURE__ */ J(
   "path",
   {
     d: "M9.37 1.03c.58 0 1.09.33 1.25.83l.5 1.76h3.01c.25 0 .5.25.5.5s-.25.5-.5.5H1.86c-.25 0-.5-.25-.5-.5s.25-.5.5-.5h2.92l.67-1.76c.17-.5.67-.83 1.17-.83h2.75Zm-2.67.92h2.67c.17 0 .25.08.33.16l.42 1.42H5.87l.5-1.42c0-.08.17-.16.33-.16Zm6.34 3.83c0-.25-.25-.5-.5-.5s-.5.25-.5.5v7.34c0 .5-.42.839-.83.839H4.45c-.5 0-.83-.42-.83-.84V5.78c0-.25-.25-.5-.5-.5s-.5.25-.5.5v7.34c0 1 .83 1.84 1.83 1.84h6.76c1 0 1.83-.84 1.83-1.84V5.78ZM6.28 6.79c.26 0 .51.25.51.5v4.58c0 .17-.09.25-.17.339-.08.08-.25.16-.34.16-.33 0-.5-.25-.5-.5V7.29c0-.25.25-.5.5-.5Zm3.59.5c0-.25-.25-.5-.5-.5s-.5.25-.5.5v4.58c0 .25.25.5.5.5s.5-.25.5-.5V7.29Z",
@@ -8595,7 +8595,7 @@ var sg = {
 }, b6 = {
   viewBox: "0 0 16 16",
   xmlns: "http://www.w3.org/2000/svg"
-}, w6 = /* @__PURE__ */ V(
+}, w6 = /* @__PURE__ */ J(
   "path",
   {
     d: "M8.49 10.45c-.27.27-.72.27-.99 0l-4.1-4.1c-.2-.2-.2-.51 0-.71.19-.19.51-.19.71 0L8 9.53l3.88-3.89c.18-.17.45-.19.64-.06l.07.06c.2.2.2.51 0 .71l-4.1 4.1Z"
@@ -8618,7 +8618,7 @@ var lg = {
 }, T6 = {
   viewBox: "0 0 16 16",
   xmlns: "http://www.w3.org/2000/svg"
-}, E6 = /* @__PURE__ */ V(
+}, E6 = /* @__PURE__ */ J(
   "path",
   {
     d: "M8.54 2.6c0-.28-.22-.5-.5-.5s-.5.22-.5.5v8.359l-2.02-2.01c-.19-.199-.51-.199-.71 0-.19.19-.19.51 0 .701l2.83 2.83c.2.2.51.2.71 0l2.83-2.83a.502.502 0 0 0 0-.7l-.07-.061a.492.492 0 0 0-.64.06l-1.93 1.93v-8.28ZM14 10.5c.27 0 .5.219.5.5v1.28c0 1.22-1 2.22-2.22 2.22H3.71c-1.22 0-2.21-1-2.21-2.22V11a.501.501 0 0 1 1 0v1.28c0 .67.54 1.22 1.21 1.22h8.57c.67 0 1.22-.55 1.22-1.22V11c0-.281.22-.5.5-.5Z",
@@ -8643,7 +8643,7 @@ var cg = {
 }, B6 = {
   viewBox: "0 0 16 16",
   xmlns: "http://www.w3.org/2000/svg"
-}, M6 = /* @__PURE__ */ V(
+}, M6 = /* @__PURE__ */ J(
   "path",
   {
     d: "M9.311 9.033a.5.5 0 0 1 .41-.492l.09-.008h3.039c.593 0 1.08.449 1.143 1.025l.007.125v2.53a1.15 1.15 0 0 1-1.025 1.143l-.125.007H9.811a.5.5 0 0 1-.09-.992l.09-.008h3.039a.15.15 0 0 0 .142-.103l.008-.047v-2.53a.15.15 0 0 0-.103-.142l-.047-.008H9.811a.5.5 0 0 1-.5-.5Zm0-5.834a.5.5 0 0 1 .41-.492l.09-.008h1.01c.593 0 1.081.448 1.144 1.024l.006.126v2.53a1.15 1.15 0 0 1-1.024 1.143l-.126.007h-1.01a.5.5 0 0 1-.09-.992l.09-.008h1.01a.15.15 0 0 0 .143-.103l.007-.047v-2.53a.15.15 0 0 0-.102-.143L10.82 3.7h-1.01a.5.5 0 0 1-.5-.5Zm-2.006-.67a.5.5 0 0 1 .992-.094l.008.094v11a.5.5 0 0 1-.992.09l-.008-.09v-11ZM2 9.683c0-.593.449-1.08 1.025-1.143l.125-.007h2.651a.5.5 0 0 1 .09.992l-.09.008H3.15a.15.15 0 0 0-.142.103L3 9.683v2.53a.15.15 0 0 0 .103.142l.047.008h2.651a.5.5 0 0 1 .09.992l-.09.008H3.15a1.15 1.15 0 0 1-1.143-1.025L2 12.213v-2.53ZM3.971 3.85c0-.593.449-1.081 1.025-1.144l.125-.006h.68a.5.5 0 0 1 .09.992l-.09.008h-.68a.15.15 0 0 0-.142.102l-.008.048v2.53a.15.15 0 0 0 .103.142l.047.008h.68a.5.5 0 0 1 .09.992l-.09.008h-.68a1.15 1.15 0 0 1-1.143-1.025l-.007-.125v-2.53Z"
@@ -8666,7 +8666,7 @@ var ug = {
 }, P6 = {
   viewBox: "0 0 16 16",
   xmlns: "http://www.w3.org/2000/svg"
-}, O6 = /* @__PURE__ */ V(
+}, O6 = /* @__PURE__ */ J(
   "path",
   {
     d: "M4.498 8.498c-.644 0-1.166.523-1.166 1.167v2.5c0 .644.522 1.167 1.166 1.167h5.664a1.17 1.17 0 0 0 1.17-1.167v-2.5a1.17 1.17 0 0 0-1.17-1.167ZM1.835 2.672a.5.5 0 0 0-.492.41l-.008.09v9.656a.5.5 0 0 0 .992.09l.008-.09V3.172a.5.5 0 0 0-.5-.5Zm2.663 6.826h5.664a.17.17 0 0 1 .17.167v2.5a.17.17 0 0 1-.17.167H4.498a.167.167 0 0 1-.166-.167v-2.5c0-.092.074-.167.166-.167Zm0-6.83c-.644 0-1.166.523-1.166 1.167v2.5c0 .644.522 1.167 1.166 1.167h8.997a1.17 1.17 0 0 0 1.17-1.167v-2.5a1.17 1.17 0 0 0-1.17-1.167Zm-.006 1h9.003a.17.17 0 0 1 .17.167v2.5a.17.17 0 0 1-.17.167H4.492a.167.167 0 0 1-.167-.167v-2.5c0-.092.075-.167.167-.167Z"
@@ -8689,7 +8689,7 @@ var dg = {
 }, R6 = {
   viewBox: "0 0 16 16",
   xmlns: "http://www.w3.org/2000/svg"
-}, Q6 = /* @__PURE__ */ V(
+}, Q6 = /* @__PURE__ */ J(
   "path",
   {
     d: "M11.502 8.498c.644 0 1.166.523 1.166 1.167v2.5c0 .644-.522 1.167-1.166 1.167H5.838a1.17 1.17 0 0 1-1.17-1.167v-2.5a1.17 1.17 0 0 1 1.17-1.167Zm2.663-5.826a.5.5 0 0 1 .492.41l.008.09v9.656a.5.5 0 0 1-.992.09l-.008-.09V3.172a.5.5 0 0 1 .5-.5Zm-2.663 6.826H5.838a.17.17 0 0 0-.17.167v2.5a.17.17 0 0 0 .17.167h5.664a.167.167 0 0 0 .166-.167v-2.5a.167.167 0 0 0-.166-.167Zm0-6.83c.644 0 1.166.523 1.166 1.167v2.5c0 .644-.522 1.167-1.166 1.167H2.505a1.17 1.17 0 0 1-1.17-1.167v-2.5a1.17 1.17 0 0 1 1.17-1.167Zm.006 1H2.505a.17.17 0 0 0-.17.167v2.5a.17.17 0 0 0 .17.167h9.003a.167.167 0 0 0 .167-.167v-2.5a.167.167 0 0 0-.167-.167Z"
@@ -8712,7 +8712,7 @@ var pg = {
 }, G6 = {
   viewBox: "0 0 16 16",
   xmlns: "http://www.w3.org/2000/svg"
-}, H6 = /* @__PURE__ */ V(
+}, H6 = /* @__PURE__ */ J(
   "path",
   {
     d: "M11.062 1.97c.397 0 .795.153 1.099.458.604.604.61 1.577.013 2.173L7.177 9.6a.655.655 0 0 1-.187.132l-2.764 1.303a.505.505 0 0 1-.67-.671l1.302-2.764a.664.664 0 0 1 .132-.187l4.997-4.997a1.514 1.514 0 0 1 1.075-.444ZM9.86 3.956 5.738 8.078l-.69 1.462 1.463-.69 4.122-4.122-.773-.773Zm1.202-.984-.047.002a.511.511 0 0 0-.321.15l-.127.125.773.773.127-.126a.515.515 0 0 0 .149-.325l.002-.047a.551.551 0 0 0-.164-.388.554.554 0 0 0-.392-.164ZM12.333 12.207a.5.5 0 0 1 .5.5v1.5a.5.5 0 0 1-.5.5H3.667a.5.5 0 0 1-.5-.5v-1.5a.5.5 0 0 1 .5-.5Z"
@@ -8735,7 +8735,7 @@ var hg = {
 }, Y6 = {
   viewBox: "0 0 16 16",
   xmlns: "http://www.w3.org/2000/svg"
-}, K6 = /* @__PURE__ */ V(
+}, K6 = /* @__PURE__ */ J(
   "path",
   {
     d: "M8.549 1.167a3.417 3.417 0 0 1 2.238 5.998 4.08 4.08 0 0 1 2.128 3.585 4.083 4.083 0 0 1-4.083 4.083.67.67 0 0 1-.139-.015l-.066.01-.078.005H4.75a1.667 1.667 0 0 1-1.663-1.557l-.004-.11V2.834c0-.883.688-1.606 1.557-1.663l.11-.003h3.798ZM4.417 8v5.167c0 .163.119.3.274.328l.06.005h3.798a.67.67 0 0 1 .14.015.67.67 0 0 1 .143-.016 2.75 2.75 0 1 0 0-5.499H4.417ZM8.55 2.5H4.75c-.163 0-.3.118-.328.273l-.005.06v3.834h4.13a2.083 2.083 0 0 0 0-4.167Z"
@@ -8758,7 +8758,7 @@ var mg = {
 }, J6 = {
   viewBox: "0 0 16 16",
   xmlns: "http://www.w3.org/2000/svg"
-}, W6 = /* @__PURE__ */ V(
+}, W6 = /* @__PURE__ */ J(
   "path",
   {
     d: "M9.73 3.675a.5.5 0 0 1 .299.585l-.021.065-3.089 7.721a.5.5 0 0 1-.95-.306l.022-.065 3.088-7.721a.5.5 0 0 1 .65-.279Zm-4.662.112a.5.5 0 0 1 .05.651l-.048.057-3.045 3.06a.657.657 0 0 0-.054.866l.054.062 3.007 3.023a.5.5 0 0 1-.653.754l-.056-.049L1.316 9.19a1.657 1.657 0 0 1-.08-2.252l.08-.087 3.045-3.06a.5.5 0 0 1 .707-.003Zm6.515-.046.056.048 3.045 3.06c.616.62.643 1.603.08 2.253l-.08.087-3.004 3.02a.5.5 0 0 1-.758-.65l.049-.056 3.004-3.02a.657.657 0 0 0 .054-.866l-.054-.062-3.045-3.06a.5.5 0 0 1 .653-.754Z"
@@ -8781,7 +8781,7 @@ var fg = {
 }, _6 = {
   viewBox: "0 0 16 16",
   xmlns: "http://www.w3.org/2000/svg"
-}, eS = /* @__PURE__ */ V(
+}, eS = /* @__PURE__ */ J(
   "path",
   {
     d: "M13.333 7.5a.5.5 0 0 1 .068.995l-.068.005H2.667a.5.5 0 0 1-.068-.995l.068-.005h10.666Z"
@@ -8789,7 +8789,7 @@ var fg = {
   null,
   -1
   /* HOISTED */
-), tS = /* @__PURE__ */ V(
+), tS = /* @__PURE__ */ J(
   "path",
   {
     d: "M7.82 1.5c-1.189 0-2.158.293-2.913.878-.788.595-1.179 1.378-1.179 2.359 0 .995.41 1.76 1.242 2.308.46.321 1.27.66 2.426 1.013l1.055.31c.855.26 1.445.479 1.771.66.775.422 1.17 1.042 1.17 1.847 0 1.722-1.143 2.586-3.375 2.586-1.068 0-1.874-.224-2.42-.678-.382-.328-.669-.787-.86-1.378a24.088 24.088 0 0 1-.2-.718.519.519 0 0 0-.616-.37.531.531 0 0 0-.406.609c.05.284.093.493.132.628.52 1.822 1.813 2.795 3.895 2.93l.255.012.263.004c3.007 0 4.485-1.228 4.485-3.698 0-1.027-.432-1.833-1.306-2.428-.557-.381-1.524-.766-2.899-1.152l-.542-.167c-.856-.271-1.474-.509-1.858-.715-.7-.406-1.058-.951-1.058-1.627 0-.654.28-1.189.831-1.597.527-.385 1.223-.577 2.085-.577 1.04 0 1.826.233 2.353.702.402.338.69.831.867 1.478l.12.464a.523.523 0 0 0 .647.371.554.554 0 0 0 .39-.662c-.056-.235-.095-.39-.115-.469-.476-1.805-1.713-2.77-3.73-2.906l-.25-.013-.26-.004Z"
@@ -8812,7 +8812,7 @@ var gg = {
 }, rS = {
   viewBox: "0 0 16 16",
   xmlns: "http://www.w3.org/2000/svg"
-}, iS = /* @__PURE__ */ V(
+}, iS = /* @__PURE__ */ J(
   "path",
   {
     d: "M4.667 14.667a.5.5 0 0 1-.068-.996l.068-.004h1.596l2.45-11.334h-1.38a.5.5 0 0 1-.068-.995l.068-.005h4a.5.5 0 0 1 .068.996l-.068.004H9.737L7.286 13.666h1.38a.5.5 0 0 1 .069.996l-.068.005h-4Z"
@@ -8835,7 +8835,7 @@ var yg = {
 }, lS = {
   viewBox: "0 0 16 16",
   xmlns: "http://www.w3.org/2000/svg"
-}, cS = /* @__PURE__ */ V(
+}, cS = /* @__PURE__ */ J(
   "path",
   {
     d: "M2 2.667a.5.5 0 0 1 .995-.068L3 2.667v11a.5.5 0 0 1-.995.068L2 13.667v-11ZM14 4a2 2 0 0 0-1.882-1.997L12 2H4.167a.5.5 0 0 0-.068.995L4.167 3H12a1 1 0 0 1 .995.904L13 4v8a1 1 0 0 1-.904.995L12 13H4.167a.5.5 0 0 0-.068.995l.068.005H12a2 2 0 0 0 1.997-1.882L14 12V4Z"
@@ -8858,7 +8858,7 @@ var vg = {
 }, pS = {
   viewBox: "0 0 16 16",
   xmlns: "http://www.w3.org/2000/svg"
-}, hS = /* @__PURE__ */ V(
+}, hS = /* @__PURE__ */ J(
   "path",
   {
     d: "M3.74 12.01a.666.666 0 1 1 .002 1.331.666.666 0 0 1-.001-1.332Zm8.686.146a.5.5 0 0 1 .068.996l-.068.004H5.76a.5.5 0 0 1-.067-.995l.067-.005h6.667ZM3.741 7.324a.666.666 0 1 1 0 1.332.666.666 0 0 1 0-1.332Zm8.685.166a.5.5 0 0 1 .068.996l-.068.004H5.76a.5.5 0 0 1-.067-.995l.067-.005h6.667ZM3.741 2.658a.666.666 0 1 1 0 1.332.666.666 0 0 1 0-1.332Zm8.685.166a.5.5 0 0 1 .068.996l-.068.004H5.76a.5.5 0 0 1-.067-.995l.067-.005h6.667Z"
@@ -8881,7 +8881,7 @@ var Ag = {
 }, gS = {
   viewBox: "0 0 16 16",
   xmlns: "http://www.w3.org/2000/svg"
-}, yS = /* @__PURE__ */ V(
+}, yS = /* @__PURE__ */ J(
   "path",
   {
     d: "M12.426 12.156a.5.5 0 0 1 .068.996l-.068.004H6.76a.5.5 0 0 1-.067-.995l.067-.005h5.667Zm0-4.666a.5.5 0 0 1 .068.996l-.068.004H6.76a.5.5 0 0 1-.067-.995l.067-.005h5.667Zm0-4.666a.5.5 0 0 1 .068.996l-.068.004H6.76a.5.5 0 0 1-.067-.995l.067-.005h5.667ZM4.3 1.65c.157 0 .287.111.317.259l.007.065v1.99h.602a.324.324 0 0 1 .065.642l-.065.007H3.374a.324.324 0 0 1-.065-.642l.065-.006h.601V2.298h-.6a.324.324 0 0 1-.318-.259l-.007-.065c0-.157.111-.287.259-.317l.065-.007H4.3ZM3.358 6.658a1.053 1.053 0 0 1 1.577 1.39l-.088.1-.603.602h.721c.17 0 .31.12.343.28l.007.07c0 .17-.12.31-.28.343l-.07.007H3.4a.35.35 0 0 1-.295-.54l.048-.057 1.2-1.2a.353.353 0 1 0-.597-.317l-.006.07a.35.35 0 1 1-.7.004 1.05 1.05 0 0 1 .308-.752ZM4.2 10.95c.632 0 1.15.439 1.15 1.04 0 .195-.05.358-.139.489l-.082.1c.14.163.221.37.221.612 0 .602-.518 1.04-1.15 1.04-.632 0-1.15-.438-1.15-1.04a.35.35 0 0 1 .693-.07l.007.07c0 .187.182.34.45.34s.45-.153.45-.34c0-.17-.165-.297-.45-.297a.35.35 0 1 1 0-.7c.328 0 .45-.074.45-.203 0-.187-.182-.341-.45-.341-.204 0-.372.114-.429.263l-.017.066a.35.35 0 1 1-.692-.105c.08-.534.57-.924 1.138-.924Z"
@@ -8904,7 +8904,7 @@ var bg = {
 }, bS = {
   viewBox: "0 0 16 16",
   xmlns: "http://www.w3.org/2000/svg"
-}, wS = /* @__PURE__ */ V(
+}, wS = /* @__PURE__ */ J(
   "path",
   {
     d: "M3.47 4c0-.42-.33-.75-.75-.75a.749.749 0 1 0 0 1.5c.42 0 .75-.34.75-.75Zm10.58 0c0-.28-.22-.5-.5-.5H5.1c-.27 0-.5.22-.5.5 0 .27.23.5.5.5h8.45c.28 0 .5-.23.5-.5ZM2.72 7.25c.42 0 .75.33.75.75a.749.749 0 1 1-1.5 0c0-.42.34-.75.75-.75ZM14.05 8c0-.28-.22-.5-.5-.5H5.1c-.27 0-.5.22-.5.5 0 .27.23.5.5.5h8.45c.28 0 .5-.23.5-.5ZM3.47 12c0-.42-.33-.75-.75-.75a.749.749 0 1 0 0 1.5c.42 0 .75-.34.75-.75Zm10.08-.5c.28 0 .5.22.5.5 0 .27-.22.5-.5.5H5.1c-.27 0-.5-.23-.5-.5 0-.28.23-.5.5-.5h8.45Z",
@@ -8929,7 +8929,7 @@ var wg = {
 }, TS = {
   viewBox: "0 0 16 16",
   xmlns: "http://www.w3.org/2000/svg"
-}, ES = /* @__PURE__ */ V(
+}, ES = /* @__PURE__ */ J(
   "path",
   {
     d: "M13.5 12.833a.5.5 0 0 1 .068.996l-.068.004h-11a.5.5 0 0 1-.068-.995l.068-.005h11ZM4.597 5.362c.21-.21.57-.06.57.236v4.805c0 .296-.36.445-.57.236l-2.26-2.262a.532.532 0 0 1 0-.754ZM13.5 9.278a.5.5 0 0 1 .068.995l-.068.005H6.833a.5.5 0 0 1-.068-.995l.068-.005H13.5Zm0-3.556a.5.5 0 0 1 .068.996l-.068.004H6.833a.5.5 0 0 1-.068-.995l.068-.005H13.5Zm0-3.555a.5.5 0 0 1 .068.995l-.068.005h-11a.5.5 0 0 1-.068-.996l.068-.004h11Z"
@@ -8952,7 +8952,7 @@ var Cg = {
 }, xS = {
   viewBox: "0 0 16 16",
   xmlns: "http://www.w3.org/2000/svg"
-}, BS = /* @__PURE__ */ V(
+}, BS = /* @__PURE__ */ J(
   "path",
   {
     d: "M13.5 12.833a.5.5 0 0 1 .068.996l-.068.004h-11a.5.5 0 0 1-.068-.995l.068-.005h11ZM2.167 5.598c0-.297.358-.446.569-.236l2.26 2.261a.532.532 0 0 1 0 .754l-2.26 2.261a.333.333 0 0 1-.57-.235ZM13.5 9.278a.5.5 0 0 1 .068.995l-.068.005H6.833a.5.5 0 0 1-.068-.995l.068-.005H13.5Zm0-3.556a.5.5 0 0 1 .068.996l-.068.004H6.833a.5.5 0 0 1-.068-.995l.068-.005H13.5Zm0-3.555a.5.5 0 0 1 .068.995l-.068.005h-11a.5.5 0 0 1-.068-.996l.068-.004h11Z"
@@ -8975,7 +8975,7 @@ var kg = {
 }, DS = {
   viewBox: "0 0 16 16",
   xmlns: "http://www.w3.org/2000/svg"
-}, PS = /* @__PURE__ */ V(
+}, PS = /* @__PURE__ */ J(
   "path",
   {
     d: "M6.2 2.7a.3.3 0 0 1 .3.3v3.7h-.003v.048C6.396 10.198 4.232 13 1.5 13a.5.5 0 1 1 0-1c2.125 0 3.92-2.33 3.997-5.299L2.8 6.7a.3.3 0 0 1-.3-.3V3a.3.3 0 0 1 .3-.3h3.4Zm7 0a.3.3 0 0 1 .3.3v3.7h-.003v.048C13.396 10.198 11.232 13 8.5 13a.5.5 0 1 1 0-1c2.125 0 3.92-2.33 3.997-5.299L9.8 6.7a.3.3 0 0 1-.3-.3V3a.3.3 0 0 1 .3-.3h3.4Z"
@@ -8998,7 +8998,7 @@ var Tg = {
 }, NS = {
   viewBox: "0 0 16 16",
   xmlns: "http://www.w3.org/2000/svg"
-}, RS = /* @__PURE__ */ V(
+}, RS = /* @__PURE__ */ J(
   "path",
   {
     d: "m10.326 3.313 3.86 3.862a.834.834 0 0 1 0 1.179l-3.861 3.862a.828.828 0 0 1-.907.18.83.83 0 0 1-.515-.77L8.902 9.94c-1.688.05-3.127.357-4.283.913a.499.499 0 1 1-.434-.901c1.405-.676 3.16-1.02 5.218-1.02a.5.5 0 0 1 .5.5v1.794l3.46-3.46-3.46-3.46v1.793a.5.5 0 0 1-.41.492l-.09.008c-2.582 0-4.514.987-5.744 2.933C2.732 11 2.568 12.47 2.567 12.483a.5.5 0 1 1-.995-.104c.007-.067.757-6.46 7.33-6.77V3.904a.83.83 0 0 1 .516-.77.83.83 0 0 1 .908.18Z"
@@ -9021,7 +9021,7 @@ var Eg = {
 }, US = {
   viewBox: "0 0 16 16",
   xmlns: "http://www.w3.org/2000/svg"
-}, GS = /* @__PURE__ */ V(
+}, GS = /* @__PURE__ */ J(
   "path",
   {
     d: "M14 2.5a.5.5 0 0 0-.995-.068L13 2.5v11a.5.5 0 0 0 .995.068L14 13.5v-11ZM2 4a2 2 0 0 1 1.882-1.997L4 2h7.833a.5.5 0 0 1 .068.995L11.833 3H4a1 1 0 0 0-.995.904L3 4v8a1 1 0 0 0 .904.995L4 13h7.833a.5.5 0 0 1 .068.995l-.068.005H4a2 2 0 0 1-1.997-1.882L2 12V4Z"
@@ -9044,7 +9044,7 @@ var Sg = {
 }, jS = {
   viewBox: "0 0 16 16",
   xmlns: "http://www.w3.org/2000/svg"
-}, YS = /* @__PURE__ */ V(
+}, YS = /* @__PURE__ */ J(
   "path",
   {
     d: "M8.89 3.506a.5.5 0 0 1 .684.726L6.368 7.846l3.206 3.614a.5.5 0 0 1-.683.725l-.066-.062L5.7 8.6l-3.125 3.524-.066.062a.5.5 0 0 1-.683-.725L5.03 7.846 1.826 4.232a.5.5 0 0 1 .683-.726l.066.062L5.7 7.092l3.125-3.524ZM11.075 7.975a1.964 1.964 0 0 1 2.893 2.654l-.114.125-1.647 1.645 2.054.001a.5.5 0 0 1 .492.41l.008.09a.5.5 0 0 1-.41.492l-.09.008H11a.5.5 0 0 1-.41-.788l.056-.066 2.5-2.5a.964.964 0 1 0-1.638-.803l-.008.128a.5.5 0 0 1-1 .006 1.96 1.96 0 0 1 .575-1.402Z"
@@ -9067,7 +9067,7 @@ var Ig = {
 }, VS = {
   viewBox: "0 0 16 16",
   xmlns: "http://www.w3.org/2000/svg"
-}, JS = /* @__PURE__ */ V(
+}, JS = /* @__PURE__ */ J(
   "path",
   {
     d: "M2.8 2.496a.5.5 0 0 1 .492.41l.008.09v10a.5.5 0 0 1-.992.09l-.008-.09v-10a.5.5 0 0 1 .5-.5ZM8.8 2.496a.5.5 0 0 1 .492.41l.008.09v10a.5.5 0 0 1-.992.09l-.008-.09v-10a.5.5 0 0 1 .5-.5Z"
@@ -9075,7 +9075,7 @@ var Ig = {
   null,
   -1
   /* HOISTED */
-), WS = /* @__PURE__ */ V(
+), WS = /* @__PURE__ */ J(
   "path",
   {
     d: "M14.06 12.8H10.8l2.5-2.5a1.464 1.464 0 1 0-2.5-1.026",
@@ -9084,7 +9084,7 @@ var Ig = {
   null,
   -1
   /* HOISTED */
-), ZS = /* @__PURE__ */ V(
+), ZS = /* @__PURE__ */ J(
   "path",
   {
     d: "M8.8 7.5a.5.5 0 0 1 .09.992L8.8 8.5h-6a.5.5 0 0 1-.09-.992L2.8 7.5h6Z"
@@ -9107,7 +9107,7 @@ var xg = {
 }, eI = {
   viewBox: "0 0 16 16",
   xmlns: "http://www.w3.org/2000/svg"
-}, tI = /* @__PURE__ */ V(
+}, tI = /* @__PURE__ */ J(
   "path",
   {
     d: "M11.075 1.975a1.964 1.964 0 0 1 2.893 2.654l-.114.125-1.647 1.645 2.054.001a.5.5 0 0 1 .492.41l.008.09a.5.5 0 0 1-.41.492l-.09.008H11a.5.5 0 0 1-.41-.788l.056-.066 2.5-2.5a.964.964 0 1 0-1.638-.803l-.008.128a.5.5 0 0 1-1 .006 1.96 1.96 0 0 1 .575-1.402ZM8.891 3.715a.5.5 0 0 1 .683.725L6.368 8.057l3.2 3.611a.5.5 0 0 1-.682.726l-.066-.062L5.7 8.81l-3.12 3.522-.066.062a.5.5 0 0 1-.683-.726l3.2-3.61L1.826 4.44a.5.5 0 0 1 .683-.725l.065.062L5.7 7.303l3.126-3.526Z"
@@ -9130,7 +9130,7 @@ var Bg = {
 }, rI = {
   viewBox: "0 0 16 16",
   xmlns: "http://www.w3.org/2000/svg"
-}, iI = /* @__PURE__ */ V(
+}, iI = /* @__PURE__ */ J(
   "path",
   {
     d: "M12 2.002a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2ZM5.641 6.5H3v5.503a1 1 0 0 0 .883.994l.117.006h1.641V6.5Zm3.667 0H6.641v6.503h2.667V6.5ZM13 6.497l-.025.003h-2.667v6.502H12a1 1 0 0 0 .993-.883l.007-.117V6.497Zm-1-3.495H4a1 1 0 0 0-1 1V5.5l9.975.001.025.001V4.002a1 1 0 0 0-.883-.993L12 3.002Z"
@@ -9153,7 +9153,7 @@ var Mg = {
 }, lI = {
   viewBox: "0 0 16 16",
   xmlns: "http://www.w3.org/2000/svg"
-}, cI = /* @__PURE__ */ V(
+}, cI = /* @__PURE__ */ J(
   "path",
   {
     d: "M12.333 12.207a.5.5 0 0 1 .492.41l.008.09v1.5a.5.5 0 0 1-.41.492l-.09.008H3.667a.5.5 0 0 1-.492-.41l-.008-.09v-1.5a.5.5 0 0 1 .41-.492l.09-.008h8.666ZM9.036 1.959l.043.099 3.387 8.72a.5.5 0 0 1-.903.424l-.03-.062-1.272-3.276H5.738L4.466 11.14a.5.5 0 0 1-.952-.297l.02-.065 3.387-8.72a1.141 1.141 0 0 1 2.115-.099Zm-1.16.415-.023.046-1.726 4.444h3.746L8.147 2.42c-.06-.153-.197-.168-.271-.046Z"
@@ -9176,7 +9176,7 @@ var Lg = {
 }, pI = {
   viewBox: "0 0 16 16",
   xmlns: "http://www.w3.org/2000/svg"
-}, hI = /* @__PURE__ */ V(
+}, hI = /* @__PURE__ */ J(
   "path",
   {
     d: "M2.8 2.496a.5.5 0 0 1 .492.41l.008.09v10a.5.5 0 0 1-.992.09l-.008-.09v-10a.5.5 0 0 1 .5-.5ZM8.8 2.496a.5.5 0 0 1 .492.41l.008.09v10a.5.5 0 0 1-.992.09l-.008-.09v-10a.5.5 0 0 1 .5-.5Z"
@@ -9184,7 +9184,7 @@ var Lg = {
   null,
   -1
   /* HOISTED */
-), mI = /* @__PURE__ */ V(
+), mI = /* @__PURE__ */ J(
   "path",
   {
     d: "M8.8 7.5a.5.5 0 0 1 .09.992L8.8 8.5h-6a.5.5 0 0 1-.09-.992L2.8 7.5h6Z"
@@ -9192,7 +9192,7 @@ var Lg = {
   null,
   -1
   /* HOISTED */
-), fI = /* @__PURE__ */ V(
+), fI = /* @__PURE__ */ J(
   "path",
   {
     fill: "#fff",
@@ -9216,7 +9216,7 @@ var Dg = {
 }, vI = {
   viewBox: "0 0 16 16",
   xmlns: "http://www.w3.org/2000/svg"
-}, AI = /* @__PURE__ */ V(
+}, AI = /* @__PURE__ */ J(
   "path",
   {
     d: "M12.333 13.667a.5.5 0 0 1 .068.996l-.068.004H3.667a.5.5 0 0 1-.068-.995l.068-.005h8.666Zm-.396-12.334a.5.5 0 0 1 .495.432l.005.068V8.23a4.437 4.437 0 0 1-8.871.156l-.003-.156V1.833a.5.5 0 0 1 .996-.068l.004.068V8.23a3.437 3.437 0 0 0 6.87.145l.004-.145V1.833a.5.5 0 0 1 .5-.5Z"
@@ -9239,7 +9239,7 @@ var Pg = {
 }, CI = {
   viewBox: "0 0 16 16",
   xmlns: "http://www.w3.org/2000/svg"
-}, kI = /* @__PURE__ */ V(
+}, kI = /* @__PURE__ */ J(
   "path",
   {
     d: "m6.574 6.158-.04-.01a.496.496 0 0 1-.076-.027l.031.013a.498.498 0 0 1-.318-.4l-.004-.067V3.873l-3.46 3.46 3.46 3.46V9l.002-.035.006-.055a.508.508 0 0 1 .424-.406l.068-.004c2.136 0 3.862.366 5.217 1.02a.5.5 0 1 1-.434.9c-1.111-.535-2.526-.86-4.283-.913V12a.5.5 0 0 1-.802.399l-.052-.045-4.667-4.667a.5.5 0 0 1-.048-.651l.048-.056 4.667-4.667a.5.5 0 0 1 .85.285l.004.069v2.511c2.828.132 4.824 1.385 6.09 3.388a8.747 8.747 0 0 1 1.016 2.31l.042.154.07.284.053.25.037.212c.01.065.017.122.022.172a.5.5 0 0 1-.994.104l-.016-.112-.02-.123A7.759 7.759 0 0 0 12.41 9.1c-1.162-1.84-3.006-2.934-5.744-2.934l-.093-.009Z"
@@ -9262,7 +9262,7 @@ var Og = {
 }, SI = {
   viewBox: "0 0 16 16",
   xmlns: "http://www.w3.org/2000/svg"
-}, II = /* @__PURE__ */ V(
+}, II = /* @__PURE__ */ J(
   "path",
   {
     d: "M9.757 2.833a2 2 0 0 1 1.997 1.883l.003.117v.53l1.621-.856a1.222 1.222 0 0 1 1.79.986l.004.094v4.826c0 .89-.913 1.47-1.71 1.121l-.085-.041-.646-.343a.5.5 0 0 1 .407-.91l.062.027.645.342a.222.222 0 0 0 .322-.148l.005-.048V5.587a.222.222 0 0 0-.281-.214l-.045.018-2.355 1.245a.5.5 0 0 1-.73-.373l-.004-.069v-1.36a1 1 0 0 0-.903-.996l-.097-.005H2.828a1 1 0 0 0-.995.904l-.005.096v6.334a1 1 0 0 0 .904.995l.096.005h6.93a1 1 0 0 0 .995-.904l.004-.096V7.893a.5.5 0 0 1 .996-.066l.004.066v3.274a2 2 0 0 1-1.882 1.996l-.118.004H2.828a2 2 0 0 1-1.997-1.883l-.003-.117V4.833A2 2 0 0 1 2.71 2.837l.118-.004h6.93ZM4.5 5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm0 .833a.667.667 0 1 0 0 1.334.667.667 0 0 0 0-1.334Z"
@@ -9289,7 +9289,7 @@ var Fg = {
     "enable-background": "new 0 0 16 16"
   },
   "xml:space": "preserve"
-}, LI = /* @__PURE__ */ V(
+}, LI = /* @__PURE__ */ J(
   "rect",
   {
     style: {
@@ -9299,7 +9299,7 @@ var Fg = {
   null,
   -1
   /* HOISTED */
-), DI = /* @__PURE__ */ V(
+), DI = /* @__PURE__ */ J(
   "path",
   {
     d: "M5.48 14.29c.19-.08.35-.19.49-.33l7.69-7.69c.13-.13.25-.27.34-.42.08-.13.15-.27.21-.41s.1-.29.13-.44a2.074 2.074 0 0 0 0-1c-.03-.15-.07-.3-.13-.44s-.13-.28-.21-.41c-.09-.15-.21-.29-.34-.42-.13-.13-.27-.24-.42-.34-.13-.08-.26-.15-.4-.21-.15-.05-.29-.1-.44-.13-.17-.03-.33-.05-.5-.05-.18 0-.34.02-.51.05-.15.03-.29.08-.44.13-.14.06-.27.13-.4.21-.15.1-.29.21-.42.34l-7.69 7.69c-.15.15-.25.31-.33.49-.08.18-.11.38-.11.58v2.21c0 .1.01.19.05.27.03.08.08.16.15.22.07.07.14.12.23.16.08.03.17.05.27.05h2.21c.2 0 .39-.04.57-.11zm7.48-8.73-1.13 1.13-2.12-2.13 1.12-1.12c.09-.08.18-.15.27-.21.07-.05.15-.09.23-.12.08-.03.17-.06.25-.08a1.733 1.733 0 0 1 .63 0c.08.02.17.05.25.08.08.03.16.07.23.12.09.06.18.13.27.21.08.08.15.17.21.27.04.07.08.15.12.23.03.08.05.16.07.25.02.1.04.2.04.31s-.02.21-.04.31c-.02.09-.04.17-.07.25-.08.19-.19.36-.33.5zm-7.7 7.69 5.86-5.86L9 5.27l-5.86 5.86c-.1.1-.14.22-.14.36v1.91h1.91c.14 0 .26-.05.35-.15zm2.75.63c0-.28.22-.5.5-.5h5c.28 0 .5.22.5.5s-.22.5-.5.5h-5c-.28 0-.5-.22-.5-.5z",
@@ -9329,7 +9329,7 @@ var Ng = {
   viewBox: "0 0 16 16",
   fill: "none",
   xmlns: "http://www.w3.org/2000/svg"
-}, RI = /* @__PURE__ */ V(
+}, RI = /* @__PURE__ */ J(
   "path",
   {
     d: "M2.55 7.96v.08c.02.65.55 1.16 1.2 1.16.66 0 1.2-.53 1.2-1.2 0-.66-.54-1.2-1.2-1.2-.65 0-1.18.52-1.2 1.16ZM6.79 8.01c0 .66.53 1.2 1.2 1.2.66 0 1.2-.54 1.2-1.2 0-.67-.54-1.2-1.2-1.2-.67 0-1.2.53-1.2 1.2ZM11.03 7.96v.08c.02.64.55 1.16 1.2 1.16.66 0 1.2-.54 1.2-1.2 0-.67-.54-1.2-1.2-1.2-.65 0-1.18.51-1.2 1.16Z"
@@ -9353,7 +9353,7 @@ var Rg = {
   "data-name": "图层 1",
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 16 16"
-}, GI = /* @__PURE__ */ V(
+}, GI = /* @__PURE__ */ J(
   "path",
   {
     "data-name": "路径",
@@ -9366,7 +9366,7 @@ var Rg = {
   null,
   -1
   /* HOISTED */
-), HI = /* @__PURE__ */ V(
+), HI = /* @__PURE__ */ J(
   "path",
   {
     "data-name": "形状结合",
@@ -9398,7 +9398,7 @@ var Qg = {
     "enable-background": "new 0 0 16 16"
   },
   "xml:space": "preserve"
-}, KI = /* @__PURE__ */ V(
+}, KI = /* @__PURE__ */ J(
   "rect",
   {
     style: {
@@ -9408,7 +9408,7 @@ var Qg = {
   null,
   -1
   /* HOISTED */
-), zI = /* @__PURE__ */ V(
+), zI = /* @__PURE__ */ J(
   "path",
   {
     d: "m3.49 5.21.72.72-.23.18c-.16.13-.3.27-.46.4l-.25.23c-.39.39-.75.79-1.05 1.2L2.16 8l-.05.06-.17.24.28.38.19.24c.33.4.7.8 1.1 1.19l.18.16c1.32 1.18 2.78 1.87 4.32 1.87h.23c.61-.02 1.21-.17 1.78-.4l.76.76-.22.1c-.81.35-1.67.55-2.56.55h-.22c-1.81-.06-3.47-.92-4.95-2.29l-.27-.25c-.42-.42-.81-.86-1.15-1.3l-.04-.09-.05-.06-.17-.24-.14-.19-.1-.16-.04-.07a.5.5 0 0 1 0-.38l.04-.08.1-.16.13-.19.17-.24.1-.13.21-.27c.35-.44.76-.87 1.2-1.28.22-.19.44-.39.67-.56zm.27-2.35h.07c.1.01.19.06.28.15l1.12 1.12c.88-.42 1.8-.65 2.77-.65h.23c1.81.06 3.47.92 4.95 2.29l.27.25c.42.42.81.86 1.15 1.3l.05.07.05.06.17.24.13.19.1.16.04.07c.05.12.05.25.01.38l-.05.09-.1.16-.13.19-.17.25-.1.13-.2.27c-.35.44-.76.87-1.2 1.28l-.24.22c-.13.12-.28.24-.42.35l.79.79.05.06c.15.19.13.47-.05.65l-.06.05c-.19.15-.47.13-.65-.05l-.94-.93-.73-.73-1.33-1.33-.21-.22-6-6.01-.05-.06c-.15-.2-.14-.47.05-.66a.52.52 0 0 1 .35-.13zM5.3 7.02l.78.78-.03.12c-.03.13-.04.25-.04.38v.12c.05 1.06.92 1.88 1.99 1.88h.13c.13-.01.25-.04.39-.06l.78.78-.15.06c-.35.15-.74.23-1.14.23h-.14a2.993 2.993 0 0 1-2.86-2.99c-.02-.48.09-.91.29-1.3zM8 4.47h-.22c-.62.03-1.21.16-1.79.4l.73.73c.39-.18.82-.29 1.3-.29h.15c1.59.07 2.86 1.38 2.86 2.99v.17c-.02.4-.12.79-.29 1.13l1.09 1.09c.23-.18.46-.38.69-.59l.24-.23c.39-.39.75-.79 1.05-1.2l.05-.06.05-.06.18-.25-.28-.38-.19-.24c-.33-.4-.7-.8-1.1-1.19l-.18-.16C10.98 5.16 9.54 4.47 8 4.47zM8 6.3h-.13c-.14.02-.26.03-.38.06l2.45 2.45c.05-.17.07-.34.07-.52v-.12A2.02 2.02 0 0 0 8 6.3z"
@@ -9435,7 +9435,7 @@ var qg = {
     "enable-background": "new 0 0 16 16"
   },
   "xml:space": "preserve"
-}, ZI = /* @__PURE__ */ V(
+}, ZI = /* @__PURE__ */ J(
   "rect",
   {
     style: {
@@ -9445,7 +9445,7 @@ var qg = {
   null,
   -1
   /* HOISTED */
-), XI = /* @__PURE__ */ V(
+), XI = /* @__PURE__ */ J(
   "path",
   {
     class: "eyeopen_svg__st1",
@@ -9469,7 +9469,7 @@ var Ug = {
 }, tx = {
   viewBox: "0 0 16 16",
   xmlns: "http://www.w3.org/2000/svg"
-}, nx = /* @__PURE__ */ V(
+}, nx = /* @__PURE__ */ J(
   "path",
   {
     d: "M16 0v16H0V0h16Z",
@@ -9478,7 +9478,7 @@ var Ug = {
   null,
   -1
   /* HOISTED */
-), ox = /* @__PURE__ */ V(
+), ox = /* @__PURE__ */ J(
   "path",
   {
     d: "M6.98 10.15a.828.828 0 0 1-.43-.18l-.09-.07-1.48-1.49a.435.435 0 0 1 0-.63.43.43 0 0 1 .56-.06l.07.06 1.48 1.48 3.29-3.28c.17-.18.46-.18.63 0 .16.15.18.39.06.56l-.06.07L7.73 9.9c-.14.14-.32.23-.52.25l-.12.01-.11-.01Z",
@@ -9503,7 +9503,7 @@ var Gg = {
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 24 24",
   "xml:space": "preserve"
-}, sx = /* @__PURE__ */ V(
+}, sx = /* @__PURE__ */ J(
   "path",
   {
     class: "fullscreen_svg__st0",
@@ -9530,7 +9530,7 @@ var Hg = {
   viewBox: "0 0 16 16",
   fill: "none",
   xmlns: "http://www.w3.org/2000/svg"
-}, dx = /* @__PURE__ */ V(
+}, dx = /* @__PURE__ */ J(
   "path",
   {
     d: "M4 0h8c2.2 0 4 1.79 4 4v8c0 2.2-1.8 4-4 4H4c-2.21 0-4-1.8-4-4V4c0-2.21 1.79-4 4-4Zm6 5H6c-.56 0-1 .44-1 1v4c0 .55.44 1 1 1h4c.55 0 1-.45 1-1V6c0-.56-.45-1-1-1Z",
@@ -9540,7 +9540,7 @@ var Hg = {
   null,
   -1
   /* HOISTED */
-), px = /* @__PURE__ */ V(
+), px = /* @__PURE__ */ J(
   "path",
   {
     d: "M6 5h4c.55 0 1 .44 1 1v4c0 .55-.45 1-1 1H6c-.56 0-1-.45-1-1V6c0-.56.44-1 1-1Z",
@@ -9565,7 +9565,7 @@ var $g = {
 }, fx = {
   viewBox: "0 0 16 16",
   xmlns: "http://www.w3.org/2000/svg"
-}, gx = /* @__PURE__ */ V(
+}, gx = /* @__PURE__ */ J(
   "path",
   {
     d: "M15 8c0-3.87-3.14-7-7-7-3.87 0-7 3.13-7 7 0 3.86 3.13 7 7 7 3.86 0 7-3.14 7-7ZM2 8c0-3.32 2.68-6 6-6 3.31 0 6 2.68 6 6 0 3.31-2.69 6-6 6-3.32 0-6-2.69-6-6Zm8.2-1.28c0-1.23-1-2.22-2.23-2.22s-2.22.99-2.22 2.22c0 .27.22.5.5.5.27 0 .5-.23.5-.5 0-.68.54-1.22 1.22-1.22.68 0 1.23.54 1.23 1.22 0 .67-.55 1.21-1.23 1.21-.27 0-.5.23-.5.5v1.23c0 .27.23.5.5.5l.09-.01c.24-.04.41-.24.41-.49v-.78l.12-.03c.93-.27 1.61-1.12 1.61-2.13Zm-2.27 3.87c.31 0 .57.25.57.56 0 .31-.26.56-.57.56a.56.56 0 0 1-.56-.56c0-.31.25-.56.56-.56Z",
@@ -9591,7 +9591,7 @@ var jg = {
   "data-name": "图层 1",
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 16 16"
-}, bx = /* @__PURE__ */ V(
+}, bx = /* @__PURE__ */ J(
   "path",
   {
     "data-name": "路径",
@@ -9604,7 +9604,7 @@ var jg = {
   null,
   -1
   /* HOISTED */
-), wx = /* @__PURE__ */ V(
+), wx = /* @__PURE__ */ J(
   "path",
   {
     "data-name": "形状结合",
@@ -9636,7 +9636,7 @@ var Yg = {
     "enable-background": "new 0 0 16 16"
   },
   "xml:space": "preserve"
-}, Ex = /* @__PURE__ */ V(
+}, Ex = /* @__PURE__ */ J(
   "path",
   {
     d: "m5.84 8.78-.09-.1a1.06 1.06 0 0 1 .09-1.46L9.6 3.65l.07-.06c.21-.13.49-.12.67.06.21.2.21.51 0 .71L6.58 7.93l-.02.03c-.02.04-.01.08.02.11l3.76 3.57.06.07c.14.19.12.46-.06.64-.21.2-.54.2-.74 0L5.84 8.78z"
@@ -9660,7 +9660,7 @@ var Kg = {
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 24 24",
   "xml:space": "preserve"
-}, Mx = /* @__PURE__ */ V(
+}, Mx = /* @__PURE__ */ J(
   "path",
   {
     class: "link_svg__st0",
@@ -9684,12 +9684,12 @@ var zg = {
 }, Px = {
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 32 32"
-}, Ox = /* @__PURE__ */ V(
+}, Ox = /* @__PURE__ */ J(
   "defs",
   {
     fill: "none"
   },
-  [/* @__PURE__ */ V("linearGradient", {
+  [/* @__PURE__ */ J("linearGradient", {
     id: "loading-shadow_svg__a",
     x1: "-1285.88",
     y1: "25.63",
@@ -9697,17 +9697,17 @@ var zg = {
     y2: "25.13",
     gradientTransform: "matrix(29.6 0 0 29.6 38096.4 -732.8)",
     gradientUnits: "userSpaceOnUse"
-  }, [/* @__PURE__ */ V("stop", {
+  }, [/* @__PURE__ */ J("stop", {
     offset: "0",
     "stop-color": "#191919",
     "stop-opacity": "0"
-  }), /* @__PURE__ */ V("stop", {
+  }), /* @__PURE__ */ J("stop", {
     offset: "1",
     "stop-color": "#191919"
   })])],
   -1
   /* HOISTED */
-), Fx = /* @__PURE__ */ V(
+), Fx = /* @__PURE__ */ J(
   "mask",
   {
     fill: "none",
@@ -9717,10 +9717,10 @@ var zg = {
     x: "0",
     y: "0"
   },
-  [/* @__PURE__ */ V("path", {
+  [/* @__PURE__ */ J("path", {
     fill: "url(#loading-shadow_svg__a)",
     d: "M16 1.2c1 0 1.8.8 1.8 1.8S17 4.8 16 4.8C9.8 4.8 4.8 9.8 4.8 16s5 11.2 11.2 11.2 11.2-5 11.2-11.2c0-1 .8-1.8 1.8-1.8s1.8.8 1.8 1.8c0 8.2-6.6 14.8-14.8 14.8S1.2 24.2 1.2 16 7.8 1.2 16 1.2Z"
-  }, [/* @__PURE__ */ V("animateTransform", {
+  }, [/* @__PURE__ */ J("animateTransform", {
     attributeName: "transform",
     attributeType: "XML",
     type: "rotate",
@@ -9731,12 +9731,12 @@ var zg = {
   })])],
   -1
   /* HOISTED */
-), Nx = /* @__PURE__ */ V(
+), Nx = /* @__PURE__ */ J(
   "g",
   {
     mask: "url(#loading-shadow_svg__b)"
   },
-  [/* @__PURE__ */ V("path", {
+  [/* @__PURE__ */ J("path", {
     d: "M-.1 32H32V-.11H-.1V32Z",
     "fill-rule": "evenodd"
   })],
@@ -9758,7 +9758,7 @@ var Vg = {
   class: "loading_svg__icon",
   viewBox: "0 0 1024 1024",
   xmlns: "http://www.w3.org/2000/svg"
-}, Ux = /* @__PURE__ */ V(
+}, Ux = /* @__PURE__ */ J(
   "path",
   {
     d: "M511.883 287.998h-.362a31.999 31.999 0 0 1-31.66-31.977v-.361c0-.105.117-11.723.117-63.659v-96a31.999 31.999 0 1 1 64.001 0v96c0 52.586-.112 63.882-.12 64.338a32.003 32.003 0 0 1-31.976 31.66zm.115 672A31.999 31.999 0 0 1 480 928v-96.38c0-51.61-.112-63.174-.115-63.286s0-.242 0-.361a31.999 31.999 0 0 1 63.998-.314c0 .455.119 11.711.119 64.034v96.307a31.999 31.999 0 0 1-32.003 32zM330.9 363.021a31.898 31.898 0 0 1-22.866-9.612c-.076-.076-8.208-8.37-44.932-45.095l-67.903-67.885a31.999 31.999 0 0 1 45.257-45.253l67.881 67.882c37.183 37.183 45.09 45.253 45.412 45.578A31.999 31.999 0 0 1 330.9 363.02zm475.238 475.094a31.901 31.901 0 0 1-22.628-9.375l-67.885-67.88c-36.724-36.725-45.018-44.86-45.098-44.94a31.999 31.999 0 0 1 44.777-45.73c.325.318 8.395 8.23 45.578 45.412l67.881 67.882a31.999 31.999 0 0 1-22.625 54.63zm-582.137 0a31.901 31.901 0 0 0 22.628-9.375l67.882-67.88c36.724-36.725 45.022-44.86 45.097-44.94a31.999 31.999 0 0 0-44.776-45.73c-.325.318-8.395 8.23-45.578 45.412l-67.881 67.885A31.999 31.999 0 0 0 224 838.115zm31.949-294.056h-.362c-.104 0-11.722-.116-63.658-.116H95.943a31.999 31.999 0 1 1 0-64.002h95.997c52.586 0 63.882.112 64.337.12a31.999 31.999 0 0 1 31.66 31.977v.361a32.003 32.003 0 0 1-31.988 31.66zm511.99 0a32.003 32.003 0 0 1-31.995-31.667v-.361a31.999 31.999 0 0 1 31.66-31.97c.455 0 11.754-.12 64.34-.12h96.001a31.999 31.999 0 0 1 0 64.002h-96c-51.936 0-63.554.112-63.666.116h-.336zM693 363.018a31.999 31.999 0 0 1-22.863-54.382c.318-.325 8.23-8.395 45.412-45.578l67.882-67.885a31.999 31.999 0 1 1 45.263 45.256l-67.892 67.882c-31.02 31.023-41.644 41.76-44.241 44.393l-.697.723a31.909 31.909 0 0 1-22.864 9.59z"
@@ -9782,7 +9782,7 @@ var Jg = {
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 24 24",
   "xml:space": "preserve"
-}, jx = /* @__PURE__ */ V(
+}, jx = /* @__PURE__ */ J(
   "path",
   {
     class: "minscreen_svg__st0",
@@ -9806,7 +9806,7 @@ var Wg = {
 }, zx = {
   viewBox: "0 0 20 20",
   xmlns: "http://www.w3.org/2000/svg"
-}, Vx = /* @__PURE__ */ V(
+}, Vx = /* @__PURE__ */ J(
   "path",
   {
     d: "M16.364 3.636A9 9 0 1 1 3.636 16.364 9 9 0 0 1 16.364 3.636ZM10 6a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z",
@@ -9830,15 +9830,15 @@ var Zg = {
 }, Xx = {
   viewBox: "0 0 20 20",
   xmlns: "http://www.w3.org/2000/svg"
-}, _x = /* @__PURE__ */ V(
+}, _x = /* @__PURE__ */ J(
   "g",
   {
     "fill-rule": "nonzero"
   },
-  [/* @__PURE__ */ V("path", {
+  [/* @__PURE__ */ J("path", {
     d: "M10 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16Z",
     fill: "#FFF"
-  }), /* @__PURE__ */ V("path", {
+  }), /* @__PURE__ */ J("path", {
     d: "M10 1a9 9 0 1 1 0 18 9 9 0 0 1 0-18Zm0 1a8 8 0 1 0 0 16 8 8 0 0 0 0-16Z"
   })],
   -1
@@ -9858,7 +9858,7 @@ var Xg = {
 }, o8 = {
   viewBox: "0 0 16 16",
   xmlns: "http://www.w3.org/2000/svg"
-}, r8 = /* @__PURE__ */ V(
+}, r8 = /* @__PURE__ */ J(
   "path",
   {
     d: "M12 1.5c1.38 0 2.5 1.11 2.5 2.5v8a2.5 2.5 0 0 1-2.5 2.5H4c-1.39 0-2.5-1.12-2.5-2.5V4c0-1.39 1.11-2.5 2.5-2.5h8Zm-8 1h8.1c.78.05 1.4.7 1.4 1.5v7.01l-2.18-2.1c-.42-.41-1.1-.4-1.52.02l-.75.76c-.04.03-.08.03-.12 0l-2.7-2.66a1.08 1.08 0 0 0-1.51 0L2.5 9.19V4c0-.83.67-1.5 1.5-1.5ZM10.02 4c.83 0 1.5.67 1.5 1.5 0 .82-.67 1.5-1.5 1.5s-1.5-.68-1.5-1.5c0-.83.67-1.5 1.5-1.5Zm-.5 1.5c0-.28.23-.5.5-.5.28 0 .5.22.5.5 0 .27-.22.5-.5.5-.27 0-.5-.23-.5-.5Zm-4.1 2.25-2.91 2.81L2.5 12c0 .79.61 1.44 1.39 1.49l.11.01h8a1.5 1.5 0 0 0 1.44-1.11l-2.81-2.76c-.04-.03-.09-.03-.12 0l-.75.77c-.42.42-1.1.42-1.53.01l-2.7-2.66a.08.08 0 0 0-.11 0Z",
@@ -9883,7 +9883,7 @@ var _g = {
 }, s8 = {
   viewBox: "0 0 16 16",
   xmlns: "http://www.w3.org/2000/svg"
-}, l8 = /* @__PURE__ */ V(
+}, l8 = /* @__PURE__ */ J(
   "path",
   {
     d: "M2.3 7.78v.08c.02.65.561 1.17 1.221 1.17.68 0 1.229-.54 1.229-1.21 0-.672-.549-1.21-1.229-1.21-.66 0-1.2.519-1.22 1.17Zm4.241.04c0 .67.54 1.21 1.22 1.21.68 0 1.23-.54 1.23-1.21 0-.672-.55-1.21-1.23-1.21-.68 0-1.22.538-1.22 1.21Zm4.24.04v-.08c.02-.651.559-1.17 1.219-1.17.682 0 1.23.538 1.23 1.21 0 .67-.548 1.21-1.23 1.21-.66 0-1.2-.52-1.219-1.17Z",
@@ -9908,7 +9908,7 @@ var e1 = {
 }, p8 = {
   viewBox: "0 0 16 16",
   xmlns: "http://www.w3.org/2000/svg"
-}, h8 = /* @__PURE__ */ V(
+}, h8 = /* @__PURE__ */ J(
   "path",
   {
     d: "M8 1a7 7 0 1 1 0 14A7 7 0 0 1 8 1Zm0 1a6 6 0 1 0 0 12A6 6 0 0 0 8 2Z"
@@ -9916,7 +9916,7 @@ var e1 = {
   null,
   -1
   /* HOISTED */
-), m8 = /* @__PURE__ */ V(
+), m8 = /* @__PURE__ */ J(
   "path",
   {
     d: "M3.757 12.243a6 6 0 1 0 8.486-8.486 6 6 0 0 0-8.486 8.486Z",
@@ -9940,7 +9940,7 @@ var t1 = {
 }, v8 = {
   viewBox: "0 0 16 16",
   xmlns: "http://www.w3.org/2000/svg"
-}, A8 = /* @__PURE__ */ V(
+}, A8 = /* @__PURE__ */ J(
   "path",
   {
     d: "M3.05 12.95a7 7 0 1 1 9.9-9.9 7 7 0 0 1-9.9 9.9Z"
@@ -9948,7 +9948,7 @@ var t1 = {
   null,
   -1
   /* HOISTED */
-), b8 = /* @__PURE__ */ V(
+), b8 = /* @__PURE__ */ J(
   "circle",
   {
     fill: "#FFF",
@@ -9975,7 +9975,7 @@ var n1 = {
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 24 24",
   "xml:space": "preserve"
-}, E8 = /* @__PURE__ */ V(
+}, E8 = /* @__PURE__ */ J(
   "path",
   {
     class: "refres_svg__st0",
@@ -10000,7 +10000,7 @@ var o1 = {
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 24 24",
   "xml:space": "preserve"
-}, B8 = /* @__PURE__ */ V(
+}, B8 = /* @__PURE__ */ J(
   "path",
   {
     class: "repeat_svg__st0",
@@ -10028,7 +10028,7 @@ var r1 = {
     "enable-background": "new 0 0 16 16"
   },
   "xml:space": "preserve"
-}, P8 = /* @__PURE__ */ V(
+}, P8 = /* @__PURE__ */ J(
   "rect",
   {
     style: {
@@ -10038,7 +10038,7 @@ var r1 = {
   null,
   -1
   /* HOISTED */
-), O8 = /* @__PURE__ */ V(
+), O8 = /* @__PURE__ */ J(
   "path",
   {
     class: "search_svg__st1",
@@ -10063,7 +10063,7 @@ var i1 = {
   "data-name": "图层 1",
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 16 16"
-}, Q8 = /* @__PURE__ */ V(
+}, Q8 = /* @__PURE__ */ J(
   "path",
   {
     "data-name": "路径",
@@ -10076,7 +10076,7 @@ var i1 = {
   null,
   -1
   /* HOISTED */
-), q8 = /* @__PURE__ */ V(
+), q8 = /* @__PURE__ */ J(
   "path",
   {
     "data-name": "形状结合",
@@ -10105,7 +10105,7 @@ var a1 = {
   "data-name": "图层 1",
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 16 16"
-}, $8 = /* @__PURE__ */ V(
+}, $8 = /* @__PURE__ */ J(
   "path",
   {
     "data-name": "三角形",
@@ -10118,7 +10118,7 @@ var a1 = {
   null,
   -1
   /* HOISTED */
-), j8 = /* @__PURE__ */ V(
+), j8 = /* @__PURE__ */ J(
   "path",
   {
     "data-name": "形状结合",
@@ -10147,7 +10147,7 @@ var s1 = {
   "data-name": "图层 1",
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 16 16"
-}, J8 = /* @__PURE__ */ V(
+}, J8 = /* @__PURE__ */ J(
   "path",
   {
     "data-name": "三角形",
@@ -10160,7 +10160,7 @@ var s1 = {
   null,
   -1
   /* HOISTED */
-), W8 = /* @__PURE__ */ V(
+), W8 = /* @__PURE__ */ J(
   "path",
   {
     "data-name": "形状结合",
@@ -10189,7 +10189,7 @@ var l1 = {
   class: "zoom-in_svg__icon",
   viewBox: "0 0 1024 1024",
   xmlns: "http://www.w3.org/2000/svg"
-}, eB = /* @__PURE__ */ V(
+}, eB = /* @__PURE__ */ J(
   "path",
   {
     d: "M943.616 892.416 742.4 691.712c24.064-29.184 44.032-61.44 58.88-96.256 19.968-47.104 30.208-97.792 30.208-149.504s-10.24-101.888-30.208-149.504c-19.456-45.568-47.104-86.528-81.92-121.856A385.587 385.587 0 0 0 597.504 92.16C550.4 72.192 500.224 61.952 448 61.952S346.112 72.192 298.496 92.16c-45.568 19.456-86.528 47.104-121.856 82.432s-62.976 76.288-81.92 121.856c-19.968 47.104-30.208 97.792-30.208 149.504S74.752 547.84 94.72 595.456c19.456 45.568 47.104 86.528 81.92 121.856 35.328 35.328 76.288 62.976 121.856 82.432 47.104 19.968 97.28 30.208 149.504 30.208 51.712 0 101.888-10.24 149.504-30.208 34.816-14.848 66.56-34.304 95.232-57.856l201.728 201.216c6.656 6.656 15.872 10.24 25.088 10.24 9.216 0 17.92-3.584 25.088-10.24 12.8-14.336 12.8-36.864-1.024-50.688zm-273.92-225.792c-.512.512-1.024.512-1.024 1.024l-1.024 1.024C608.768 727.04 530.432 759.296 448 759.296c-83.456 0-162.304-32.768-221.184-91.648s-91.648-137.728-91.648-221.184 32.256-162.304 91.648-221.184S364.544 133.632 448 133.632 610.304 166.4 669.184 225.28c58.88 58.88 91.648 137.728 91.648 221.184 0 82.944-32.768 161.28-91.136 220.16z"
@@ -10197,7 +10197,7 @@ var l1 = {
   null,
   -1
   /* HOISTED */
-), tB = /* @__PURE__ */ V(
+), tB = /* @__PURE__ */ J(
   "path",
   {
     d: "M573.952 418.816H473.088v-97.792c0-19.456-12.8-35.328-32.256-35.328s-32.256 15.872-32.256 35.328v97.792H305.152c-19.456 0-35.328 12.8-35.328 32.256s15.872 32.256 35.328 32.256h102.912V588.8c0 19.456 12.8 35.328 32.256 35.328s32.256-15.872 32.256-35.328V483.84H573.44c19.456 0 35.328-12.8 35.328-32.256s-15.36-32.768-34.816-32.768z"
@@ -10221,7 +10221,7 @@ var c1 = {
   class: "zoom-out_svg__icon",
   viewBox: "0 0 1024 1024",
   xmlns: "http://www.w3.org/2000/svg"
-}, iB = /* @__PURE__ */ V(
+}, iB = /* @__PURE__ */ J(
   "path",
   {
     d: "M948.522 896.4 715.467 663.347c58.54-70.264 95.164-159.438 95.164-258.044C810.63 181.458 629.166 0 405.32 0 181.486.001.022 181.458.022 405.301c0 223.838 181.465 405.302 405.3 405.302 98.6 0 187.773-36.617 258.038-95.15l233.056 233.056c14.391 14.384 37.715 14.384 52.106 0s14.393-37.73.001-52.108zm-543.2-159.489c-183.136 0-331.601-148.465-331.601-331.61S222.186 73.69 405.323 73.69c183.144 0 331.61 148.466 331.61 331.61 0 160.64-129.895 331.61-331.61 331.61z"
@@ -10229,7 +10229,7 @@ var c1 = {
   null,
   -1
   /* HOISTED */
-), aB = /* @__PURE__ */ V(
+), aB = /* @__PURE__ */ J(
   "path",
   {
     d: "M552.706 368.456H257.948c-20.353 0-36.853 16.5-36.853 36.845s16.5 36.845 36.853 36.845h294.758c20.353 0 36.845-16.5 36.845-36.845s-16.492-36.845-36.845-36.845z"
@@ -10475,10 +10475,10 @@ function OB(e, t, n, o, r, i) {
       "is-text": e.text || e.slots.default
     })
   }, null, 8, ["class"])) : Ie("v-if", !0), vt(e.$slots, "default", {}, function() {
-    return [V(
+    return [J(
       "span",
       null,
-      qe(e.text),
+      Qe(e.text),
       1
       /* TEXT */
     )];
@@ -10602,10 +10602,10 @@ function GB(e, t, n, o, r, i) {
     key: 1,
     class: je([e.gcls("button-icon"), e.gcls("button-icon-" + (e.state.buttonDisabled ? "disabled" : "default"))])
   }, null, 8, ["class"])) : Ie("v-if", !0), vt(e.$slots, "default", {}, function() {
-    return [V(
+    return [J(
       "span",
       null,
-      qe(e.text),
+      Qe(e.text),
       1
       /* TEXT */
     )];
@@ -10994,7 +10994,7 @@ function xM(e, t, n, o, r, i) {
       persisted: ""
     }, {
       default: rt(function() {
-        return [Xt(V("div", {
+        return [Xt(J("div", {
           class: je(["tiny-popover tiny-popper", [e.popperClass, e.content && "tiny-popover__plain", {
             "no-arrow": !e.visibleArrow
           }]]),
@@ -11008,10 +11008,10 @@ function xM(e, t, n, o, r, i) {
         }, [e.title ? (P(), K("div", {
           key: 0,
           class: "tiny-popover__title",
-          textContent: qe(e.title)
+          textContent: Qe(e.title)
         }, null, 8, IM)) : Ie("v-if", !0), vt(e.$slots, "default", {}, function() {
           return [Dt(
-            qe(e.content),
+            Qe(e.content),
             1
             /* TEXT */
           )];
@@ -11019,7 +11019,7 @@ function xM(e, t, n, o, r, i) {
       }),
       _: 3
       /* FORWARDED */
-    }, 8, ["name", "onAfterEnter", "onAfterLeave"]), V(
+    }, 8, ["name", "onAfterEnter", "onAfterLeave"]), J(
       "span",
       {
         ref: "wrapper",
@@ -11215,7 +11215,7 @@ function YM(e, t, n, o, r, i) {
       persisted: ""
     }, {
       default: rt(function() {
-        return [Xt(V("div", {
+        return [Xt(J("div", {
           "data-tag": "tiny-popover tiny-popper",
           class: je([e.m(e.gcls("popper"), e.popperClass)]),
           ref: "popper",
@@ -11224,15 +11224,15 @@ function YM(e, t, n, o, r, i) {
           }),
           role: "tooltip",
           id: e.state.tooltipId
-        }, [V("div", FM, [e.slots.header ? vt(e.$slots, "header", {
+        }, [J("div", FM, [e.slots.header ? vt(e.$slots, "header", {
           key: 0
         }) : e.title ? (P(), K("div", {
           key: 1,
           class: je([e.gcls("title")]),
-          textContent: qe(e.title)
+          textContent: Qe(e.title)
         }, null, 10, NM)) : Ie("v-if", !0), vt(e.$slots, "default", {}, function() {
           return [Dt(
-            qe(e.content),
+            Qe(e.content),
             1
             /* TEXT */
           )];
@@ -11247,19 +11247,19 @@ function YM(e, t, n, o, r, i) {
           null,
           2
           /* CLASS */
-        )) : Ie("v-if", !0)]), V("div", RM, [V("div", QM, [V("div", qM, [V("div", UM, [V(
+        )) : Ie("v-if", !0)]), J("div", RM, [J("div", QM, [J("div", qM, [J("div", UM, [J(
           "span",
           GM,
-          qe(e.title || e.t("ui.alert.title")),
+          Qe(e.title || e.t("ui.alert.title")),
           1
           /* TEXT */
         ), Ze(a, {
           onClick: t[0] || (t[0] = function(s) {
             return e.state.showPopper = !1;
           })
-        })]), V("div", HM, [vt(e.$slots, "default", {}, function() {
+        })]), J("div", HM, [vt(e.$slots, "default", {}, function() {
           return [Dt(
-            qe(e.content),
+            Qe(e.content),
             1
             /* TEXT */
           )];
@@ -11267,7 +11267,7 @@ function YM(e, t, n, o, r, i) {
       }),
       _: 3
       /* FORWARDED */
-    }, 8, ["name", "onAfterEnter", "onAfterLeave"]), V(
+    }, 8, ["name", "onAfterEnter", "onAfterLeave"]), J(
       "span",
       jM,
       [vt(e.$slots, "reference")],
@@ -11694,7 +11694,7 @@ var v1 = /* @__PURE__ */ Ft({
       if (u && (!bn.Comment || u[0].type !== bn.Comment))
         return u;
       var d;
-      return l.renderContent ? d = l.renderContent(Ci, l.content) : l.pre ? d = l.content ? Ci("pre", l.content) : null : d = l.content, d;
+      return l.renderContent ? d = l.renderContent(ki, l.content) : l.pre ? d = l.content ? ki("pre", l.content) : null : d = l.content, d;
     };
     if (!Object.prototype.hasOwnProperty.call(this, "popperVM")) {
       var o = {
@@ -11722,7 +11722,7 @@ var v1 = /* @__PURE__ */ Ft({
                   };
                   return t.$nextTick(function() {
                     !t.disabled && t.state.showPopper && u && t.updatePopper();
-                  }), Ci("transition", c, [Xt(Ze("div", {
+                  }), ki("transition", c, [Xt(Ze("div", {
                     ref: "popper",
                     id: t.state.tooltipId,
                     class: ["tiny-tooltip", "tiny-tooltip__popper", h, t.popperClass, {
@@ -11973,7 +11973,7 @@ var Xr = {
       if (c)
         return c;
       var h;
-      return d.renderContent ? h = d.renderContent(Ci, d.content) : d.pre ? h = d.content ? Ci("pre", {
+      return d.renderContent ? h = d.renderContent(ki, d.content) : d.pre ? h = d.content ? ki("pre", {
         class: "tiny-tooltip-text-pre whitespace-pre-wrap"
       }, d.content) : null : h = d.content, h;
     };
@@ -11997,7 +11997,7 @@ var Xr = {
                   }, v = function() {
                     t.setExpectedState(!1), t.debounceClose();
                   }, m = t.state.xPlacement || "";
-                  return Ci("transition", f, [Xt(Ze("div", {
+                  return ki("transition", f, [Xt(Ze("div", {
                     "data-tag": "tiny-tooltip",
                     ref: "popper",
                     id: t.state.tooltipId,
@@ -12262,7 +12262,7 @@ var y9 = 2, ps = {
       el: document.createElement("div"),
       propsData: {
         renderContent: function() {
-          return Ci("span", {
+          return ki("span", {
             class: "tiny-directive-tip__content"
           }, xd.value);
         },
@@ -12521,12 +12521,12 @@ function q9(e, t, n, o, r, i) {
                   active: e.state.value === c[e.valueField]
                 })
               },
-              [V("button", {
+              [J("button", {
                 class: je(e.getItemClass(c)),
                 onClick: function(p) {
                   return e.handleClick(c);
                 }
-              }, qe(c[e.textField]), 11, D9), c.sup ? (P(), K(
+              }, Qe(c[e.textField]), 11, D9), c.sup ? (P(), K(
                 "span",
                 {
                   key: 0,
@@ -12544,7 +12544,7 @@ function q9(e, t, n, o, r, i) {
                 })) : c.sup.text ? (P(), K(
                   "span",
                   P9,
-                  qe(c.sup.text),
+                  Qe(c.sup.text),
                   1
                   /* TEXT */
                 )) : Ie("v-if", !0)],
@@ -12574,7 +12574,7 @@ function q9(e, t, n, o, r, i) {
             })];
           }),
           default: rt(function() {
-            return [V("ul", F9, [(P(!0), K(
+            return [J("ul", F9, [(P(!0), K(
               Lt,
               null,
               an(e.state.moreData, function(c, h) {
@@ -12587,7 +12587,7 @@ function q9(e, t, n, o, r, i) {
                   onClick: function(p) {
                     return e.moreNodeClick(c);
                   }
-                }, qe(c[e.textField]), 11, N9);
+                }, Qe(c[e.textField]), 11, N9);
               }),
               128
               /* KEYED_FRAGMENT */
@@ -12626,7 +12626,7 @@ function q9(e, t, n, o, r, i) {
                   return e.handleClick(c);
                 }
               }, [Dt(
-                qe(c[e.textField]),
+                Qe(c[e.textField]),
                 1
                 /* TEXT */
               )], 10, B9)), [[d, c.tip ? {
@@ -12650,7 +12650,7 @@ function q9(e, t, n, o, r, i) {
                 })) : c.sup.text ? (P(), K(
                   "span",
                   M9,
-                  qe(c.sup.text),
+                  Qe(c.sup.text),
                   1
                   /* TEXT */
                 )) : Ie("v-if", !0)],
@@ -12668,7 +12668,7 @@ function q9(e, t, n, o, r, i) {
         /* STABLE_FRAGMENT */
       )) : (P(), K("span", Q9, [vt(e.$slots, "empty", {}, function() {
         return [Dt(
-          qe(e.t("ui.buttonGroup.noData")),
+          Qe(e.t("ui.buttonGroup.noData")),
           1
           /* TEXT */
         )];
@@ -13090,16 +13090,16 @@ function L7(e, t, n, o, r, i) {
     "aria-disabled": e.disabled,
     tabindex: e.disabled ? null : -1,
     role: "menuitem"
-  }, [V("div", I7, [e.itemData.children && e.itemData.children.length ? (P(), K("span", x7, [(P(), st(xn(e.state.getIcon)))])) : Ie("v-if", !0), V("div", B7, [e.icon ? (P(), st(xn(e.icon), {
+  }, [J("div", I7, [e.itemData.children && e.itemData.children.length ? (P(), K("span", x7, [(P(), st(xn(e.state.getIcon)))])) : Ie("v-if", !0), J("div", B7, [e.icon ? (P(), st(xn(e.icon), {
     key: 0,
     class: "tiny-svg-size tiny-dropdown-item__pre-icon"
-  })) : Ie("v-if", !0), V("span", M7, [vt(e.$slots, "default", {
+  })) : Ie("v-if", !0), J("span", M7, [vt(e.$slots, "default", {
     itemData: e.itemData
   }, function() {
-    return [V(
+    return [J(
       "span",
       null,
-      qe(e.label),
+      Qe(e.label),
       1
       /* TEXT */
     )];
@@ -13243,7 +13243,7 @@ function q7(e, t, n, o, r, i) {
     }, ["stop"])),
     "aria-disabled": e.disabled,
     tabindex: e.disabled ? null : -1
-  }, [V(
+  }, [J(
     "div",
     {
       "data-tag": "tiny-dropdown-level",
@@ -13434,7 +13434,7 @@ function J7(e, t, n, o, r, i) {
     persisted: ""
   }, {
     default: rt(function() {
-      return [Xt(V(
+      return [Xt(J(
         "ul",
         {
           class: je(["tiny-dropdown-menu tiny-popper", [e.state.size && "tiny-dropdown-menu--" + e.state.size, e.popperClass]]),
@@ -13533,7 +13533,7 @@ function eL(e, t, n, o, r, i) {
     persisted: ""
   }, {
     default: rt(function() {
-      return [Xt(V(
+      return [Xt(J(
         "ul",
         {
           "data-tag": "tiny-dropdown-menu",
@@ -13800,11 +13800,11 @@ var B1 = /* @__PURE__ */ Ft({
         }
       });
     else {
-      var w, X = f["suffix-icon"] && f["suffix-icon"](), E = f["prefix-icon"] && f["prefix-icon"](), J = O && ((w = O[0]) == null ? void 0 : w.data) || {}, G = J.attrs, oe = G === void 0 ? {} : G;
-      s && !oe.disabled && (oe.disabled = !0, J.attrs = oe);
+      var w, Z = f["suffix-icon"] && f["suffix-icon"](), E = f["prefix-icon"] && f["prefix-icon"](), V = O && ((w = O[0]) == null ? void 0 : w.data) || {}, G = V.attrs, oe = G === void 0 ? {} : G;
+      s && !oe.disabled && (oe.disabled = !0, V.attrs = oe);
       var le = y ? Ze("span", {
         class: "tiny-dropdown__suffix-inner " + L
-      }, [X || Ze(N, {
+      }, [Z || Ze(N, {
         "aria-label": "down"
       }, null)]) : "", ve = h || E ? Ze("span", {
         class: "tiny-dropdown__prefix-inner " + L
@@ -14332,7 +14332,7 @@ var GL = function(t, n) {
       props: ["node"],
       render: function() {
         var t = this.node;
-        return typeof t == "function" ? t(Ci) : t;
+        return typeof t == "function" ? t(ki) : t;
       }
     }
   },
@@ -14403,7 +14403,7 @@ function ZL(e, t, n, o, r, i) {
     persisted: ""
   }, {
     default: rt(function() {
-      return [Xt(V(
+      return [Xt(J(
         "div",
         {
           "data-tag": "tiny-drawer-main",
@@ -14434,7 +14434,7 @@ function ZL(e, t, n, o, r, i) {
           null,
           2
           /* CLASS */
-        )) : Ie("v-if", !0), V("div", jL, [e.showHeader ? (P(), K(
+        )) : Ie("v-if", !0), J("div", jL, [e.showHeader ? (P(), K(
           "div",
           YL,
           [vt(e.$slots, "header", {}, function() {
@@ -14442,10 +14442,10 @@ function ZL(e, t, n, o, r, i) {
             return [(c = e.customSlots) != null && c.header ? (P(), st(a, {
               key: 0,
               node: e.customSlots.header
-            }, null, 8, ["node"])) : (P(), K("div", KL, [V("div", zL, [e.title ? (P(), K(
+            }, null, 8, ["node"])) : (P(), K("div", KL, [J("div", zL, [e.title ? (P(), K(
               "div",
               VL,
-              qe(e.title),
+              Qe(e.title),
               1
               /* TEXT */
             )) : Ie("v-if", !0), e.tipsProps ? (P(), st(
@@ -14464,7 +14464,7 @@ function ZL(e, t, n, o, r, i) {
               },
               16
               /* FULL_PROPS */
-            )) : Ie("v-if", !0)]), V("div", JL, [vt(e.$slots, "header-right", {}, function() {
+            )) : Ie("v-if", !0)]), J("div", JL, [vt(e.$slots, "header-right", {}, function() {
               var h;
               return [(h = e.customSlots) != null && h.headerRight ? (P(), st(a, {
                 key: 0,
@@ -14484,7 +14484,7 @@ function ZL(e, t, n, o, r, i) {
           })])) : Ie("v-if", !0)],
           512
           /* NEED_PATCH */
-        )) : Ie("v-if", !0), V(
+        )) : Ie("v-if", !0), J(
           "div",
           {
             "data-tag": "drawer-body",
@@ -14522,7 +14522,7 @@ function ZL(e, t, n, o, r, i) {
               }, {
                 default: rt(function() {
                   return [Dt(
-                    qe(e.t("ui.button.cancel")),
+                    Qe(e.t("ui.button.cancel")),
                     1
                     /* TEXT */
                   )];
@@ -14538,7 +14538,7 @@ function ZL(e, t, n, o, r, i) {
               }, {
                 default: rt(function() {
                   return [Dt(
-                    qe(e.t("ui.button.confirm")),
+                    Qe(e.t("ui.button.confirm")),
                     1
                     /* TEXT */
                   )];
@@ -14651,7 +14651,7 @@ function cD(e, t, n, o, r, i) {
       null,
       2
       /* CLASS */
-    )) : Ie("v-if", !0), V(
+    )) : Ie("v-if", !0), J(
       "div",
       {
         "data-tag": "tiny-drawer-main",
@@ -14692,17 +14692,17 @@ function cD(e, t, n, o, r, i) {
         null,
         2
         /* CLASS */
-      )) : Ie("v-if", !0), V("div", oD, [e.showHeader ? (P(), K(
+      )) : Ie("v-if", !0), J("div", oD, [e.showHeader ? (P(), K(
         "div",
         rD,
         [vt(e.$slots, "header", {}, function() {
           return [e.title ? (P(), K(
             "div",
             iD,
-            qe(e.title),
+            Qe(e.title),
             1
             /* TEXT */
-          )) : Ie("v-if", !0), V("div", aD, [vt(e.$slots, "header-right", {}, function() {
+          )) : Ie("v-if", !0), J("div", aD, [vt(e.$slots, "header-right", {}, function() {
             return [Ze(a, {
               "custom-class": "h-5 w-5 cursor-pointer",
               class: "fill-color-icon-primary",
@@ -14714,7 +14714,7 @@ function cD(e, t, n, o, r, i) {
         })],
         512
         /* NEED_PATCH */
-      )) : Ie("v-if", !0), V(
+      )) : Ie("v-if", !0), J(
         "div",
         {
           "data-tag": "drawer-body",
@@ -14729,7 +14729,7 @@ function cD(e, t, n, o, r, i) {
       ), e.showFooter ? (P(), K(
         "div",
         sD,
-        [V("div", lD, [vt(e.$slots, "footer", {}, function() {
+        [J("div", lD, [vt(e.$slots, "footer", {}, function() {
           return [Ze(s, {
             tiny_mode: "mobile-first",
             onClick: t[2] || (t[2] = function(l) {
@@ -14738,7 +14738,7 @@ function cD(e, t, n, o, r, i) {
           }, {
             default: rt(function() {
               return [Dt(
-                qe(e.t("ui.button.cancel")),
+                Qe(e.t("ui.button.cancel")),
                 1
                 /* TEXT */
               )];
@@ -14755,7 +14755,7 @@ function cD(e, t, n, o, r, i) {
           }, {
             default: rt(function() {
               return [Dt(
-                qe(e.t("ui.button.confirm")),
+                Qe(e.t("ui.button.confirm")),
                 1
                 /* TEXT */
               )];
@@ -14857,7 +14857,7 @@ var dD = function(t) {
   tipsProps: Object,
   // tiny 新增：用于方法调用组件
   customSlots: Object
-}), ki = Ft({
+}), Ti = Ft({
   name: mn + "Drawer",
   props: pD,
   setup: function(t, n) {
@@ -14901,7 +14901,7 @@ var dD = function(t) {
       typeof ((u = t.events) == null ? void 0 : u.confirm) == "function" && t.events.confirm(l);
     }
   }, r = Il({}, hD, t, o), i = Mu({
-    component: ki,
+    component: Ti,
     propsData: Il({}, r, {
       _constants: nb,
       tiny_mode: t.tiny_mode || ((n = U2().tiny_mode) == null ? void 0 : n.value)
@@ -14912,15 +14912,15 @@ var dD = function(t) {
     i.open();
   }), i;
 }, mD = "3.undefined";
-ki.model = {
+Ti.model = {
   prop: "visible",
   event: "update:visible"
 };
-ki.service = ob;
-ki.install = function(e) {
-  e.component(ki.name, ki);
+Ti.service = ob;
+Ti.install = function(e) {
+  e.component(Ti.name, Ti);
 };
-ki.version = mD;
+Ti.version = mD;
 qc.TINYDrawer = {
   init: function(t) {
     var n = t.$apiPrefix || "$";
@@ -15256,16 +15256,16 @@ var ya = {
       return 1 - --e * e * e * e;
     }
   }
-}, BD = 1e3 / 60, ji = ci && window;
+}, BD = 1e3 / 60, Yi = ci && window;
 function cb() {
 }
 var ub = (function() {
-  return ci ? ji.requestAnimationFrame || ji.webkitRequestAnimationFrame || ji.mozRequestAnimationFrame || ji.oRequestAnimationFrame || // if all else fails, use setTimeout
+  return ci ? Yi.requestAnimationFrame || Yi.webkitRequestAnimationFrame || Yi.mozRequestAnimationFrame || Yi.oRequestAnimationFrame || // if all else fails, use setTimeout
   function(e) {
     return window.setTimeout(e, e.interval || BD);
   } : cb;
 })(), Oa = (function() {
-  return ci ? ji.cancelAnimationFrame || ji.webkitCancelAnimationFrame || ji.mozCancelAnimationFrame || ji.oCancelAnimationFrame || function(e) {
+  return ci ? Yi.cancelAnimationFrame || Yi.webkitCancelAnimationFrame || Yi.mozCancelAnimationFrame || Yi.oCancelAnimationFrame || function(e) {
     window.clearTimeout(e);
   } : cb;
 })(), Q1 = function(e) {
@@ -16321,7 +16321,7 @@ var ZD = function(t, n) {
 }, XD = Ft({
   components: {
     TinyButton: lo,
-    TinyDrawer: ki,
+    TinyDrawer: Ti,
     IconClose: Do()
   },
   emits: ["update:modelValue", "update:visible", "hide", "close", "click"],
@@ -16401,13 +16401,13 @@ function dP(e, t, n, o, r, i) {
       return [e.showHeader && e.type !== "action" ? (P(), K(
         "div",
         eP,
-        [V("div", tP, [vt(e.$slots, "header-left")]), V(
+        [J("div", tP, [vt(e.$slots, "header-left")]), J(
           "div",
           nP,
-          qe(e.title),
+          Qe(e.title),
           1
           /* TEXT */
-        ), V("div", oP, [vt(e.$slots, "header-right", {}, function() {
+        ), J("div", oP, [vt(e.$slots, "header-right", {}, function() {
           return [e.showClose ? (P(), st(a, {
             key: 0,
             "custom-class": "h-5 w-5 cursor-pointer",
@@ -16416,7 +16416,7 @@ function dP(e, t, n, o, r, i) {
         })])],
         512
         /* NEED_PATCH */
-      )) : Ie("v-if", !0), vt(e.$slots, "body-top"), V(
+      )) : Ie("v-if", !0), vt(e.$slots, "body-top"), J(
         "div",
         {
           "data-tag": "action-sheet-body",
@@ -16425,13 +16425,13 @@ function dP(e, t, n, o, r, i) {
             "flex flex-col": e.flex
           }])
         },
-        [e.type === "action" ? (P(), K("div", rP, [e.title ? (P(), K("div", iP, [V(
+        [e.type === "action" ? (P(), K("div", rP, [e.title ? (P(), K("div", iP, [J(
           "span",
           aP,
-          qe(e.title),
+          Qe(e.title),
           1
           /* TEXT */
-        )])) : Ie("v-if", !0), V("div", sP, [(P(!0), K(
+        )])) : Ie("v-if", !0), J("div", sP, [(P(!0), K(
           Lt,
           null,
           an(e.menus, function(u, d) {
@@ -16445,10 +16445,10 @@ function dP(e, t, n, o, r, i) {
               data: u,
               index: d
             }, function() {
-              return [V(
+              return [J(
                 "span",
                 cP,
-                qe(u),
+                Qe(u),
                 1
                 /* TEXT */
               )];
@@ -16456,7 +16456,7 @@ function dP(e, t, n, o, r, i) {
           }),
           128
           /* KEYED_FRAGMENT */
-        ))]), V(
+        ))]), J(
           "div",
           {
             class: "flex-none flex items-center justify-center h-16 text-base border-t-8 border-color-bg-2 px-4 cursor-pointer",
@@ -16464,7 +16464,7 @@ function dP(e, t, n, o, r, i) {
               return e.close && e.close.apply(e, arguments);
             }, ["stop"]))
           },
-          qe(e.t("ui.base.cancel")),
+          Qe(e.t("ui.base.cancel")),
           1
           /* TEXT */
         )])) : vt(e.$slots, "default", {
@@ -16486,7 +16486,7 @@ function dP(e, t, n, o, r, i) {
           }, {
             default: rt(function() {
               return [Dt(
-                qe(e.t("ui.button.confirm")),
+                Qe(e.t("ui.button.confirm")),
                 1
                 /* TEXT */
               )];
@@ -16755,7 +16755,7 @@ function FP(e, t, n, o, r, i) {
         [e.showIcon ? (P(), st(xn(e.state.getIcon), {
           key: 0,
           class: "tiny-svg-size tiny-alert__icon"
-        })) : Ie("v-if", !0), V(
+        })) : Ie("v-if", !0), J(
           "div",
           {
             class: je(["tiny-alert__content", {
@@ -16764,11 +16764,11 @@ function FP(e, t, n, o, r, i) {
           },
           [e.size === "large" && e.showTitle ? (P(), K("div", DP, [vt(e.$slots, "title", {}, function() {
             return [Dt(
-              qe(e.state.getTitle),
+              Qe(e.state.getTitle),
               1
               /* TEXT */
             )];
-          })])) : Ie("v-if", !0), V(
+          })])) : Ie("v-if", !0), J(
             "div",
             {
               class: je(["tiny-alert__description", {
@@ -16777,7 +16777,7 @@ function FP(e, t, n, o, r, i) {
             },
             [vt(e.$slots, "description", {}, function() {
               return [Dt(
-                qe(e.description),
+                Qe(e.description),
                 1
                 /* TEXT */
               )];
@@ -16800,7 +16800,7 @@ function FP(e, t, n, o, r, i) {
             }),
             class: "is-custom"
           },
-          qe(e.closeText),
+          Qe(e.closeText),
           1
           /* TEXT */
         )) : Ie("v-if", !0)],
@@ -16923,15 +16923,15 @@ function jP(e, t, n, o, r, i) {
               return e.handleHeaderClick && e.handleHeaderClick.apply(e, arguments);
             }),
             class: "inline-flex cursor-pointer font-medium"
-          }, [V("span", UP, [vt(e.$slots, "title", {}, function() {
+          }, [J("span", UP, [vt(e.$slots, "title", {}, function() {
             return [Dt(
-              qe(e.state.getTitle),
+              Qe(e.state.getTitle),
               1
               /* TEXT */
             )];
-          })]), V("span", GP, [Ze(a, {
+          })]), J("span", GP, [Ze(a, {
             class: je(["transition-transform duration-300 align-top my-1 fill-color-icon-placeholder", [e.state.contentVisible ? "rotate-180" : "rotate-0"]])
-          }, null, 8, ["class"])])])) : Ie("v-if", !0), V(
+          }, null, 8, ["class"])])])) : Ie("v-if", !0), J(
             "div",
             {
               "data-tag": "tiny-alert-content",
@@ -16942,7 +16942,7 @@ function jP(e, t, n, o, r, i) {
                 "overflow-y-auto": e.state.scrollStatus
               }, e.state.contentVisible ? "max-h-[theme(spacing.72)]" : "max-h-0"])
             },
-            [V(
+            [J(
               "div",
               {
                 "data-tag": "tiny-alert-singline",
@@ -16954,7 +16954,7 @@ function jP(e, t, n, o, r, i) {
               },
               [vt(e.$slots, "description", {}, function() {
                 return [Dt(
-                  qe(e.description),
+                  Qe(e.description),
                   1
                   /* TEXT */
                 )];
@@ -16991,11 +16991,11 @@ function jP(e, t, n, o, r, i) {
           },
           [e.size === "large" && e.showTitle ? (P(), K("div", HP, [vt(e.$slots, "title", {}, function() {
             return [Dt(
-              qe(e.state.getTitle),
+              Qe(e.state.getTitle),
               1
               /* TEXT */
             )];
-          })])) : Ie("v-if", !0), V(
+          })])) : Ie("v-if", !0), J(
             "div",
             {
               "data-tag": "tiny-alert-singlelinebox",
@@ -17003,7 +17003,7 @@ function jP(e, t, n, o, r, i) {
                 hidden: e.size === "large" && !e.description && !e.slots.description
               }])
             },
-            [V(
+            [J(
               "div",
               {
                 "data-tag": "tiny-alert-singleline",
@@ -17015,7 +17015,7 @@ function jP(e, t, n, o, r, i) {
               },
               [vt(e.$slots, "description", {}, function() {
                 return [Dt(
-                  qe(e.description),
+                  Qe(e.description),
                   1
                   /* TEXT */
                 )];
@@ -17042,7 +17042,7 @@ function jP(e, t, n, o, r, i) {
             }),
             class: "leading-6 text-sm cursor-pointer"
           },
-          qe(e.closeText),
+          Qe(e.closeText),
           1
           /* TEXT */
         )) : Ie("v-if", !0)],
@@ -17413,7 +17413,7 @@ var HO = ({ api: e, props: t, reactive: n, toRefs: o }) => {
     storageData: [],
     isMemoryStorage: !1
   });
-  return Pi(qo({}, o(r)), {
+  return Oi(qo({}, o(r)), {
     addMemory: qO(t),
     searchMemory: UO({ props: t, state: r }),
     selectedMemory: GO({ api: e, state: r })
@@ -17499,7 +17499,7 @@ const fb = [
     ),
     validateState: t(() => r.formItem ? r.formItem.validateState : ""),
     inputStyle: t(() => a.inputStyle()),
-    textareaStyle: t(() => Pi(qo({}, u.textareaCalcStyle), {
+    textareaStyle: t(() => Oi(qo({}, u.textareaCalcStyle), {
       resize: o.resize,
       textAlign: o.textAlign
     })),
@@ -18032,7 +18032,7 @@ function SF(e, t, n, o, r, i) {
     persisted: ""
   }, {
     default: rt(function() {
-      return [Xt(V(
+      return [Xt(J(
         "div",
         {
           class: je(["tiny-dialog-box__wrapper", e.dialogClass]),
@@ -18072,14 +18072,14 @@ function SF(e, t, n, o, r, i) {
                 })
               },
               [vt(e.$slots, "title", {}, function() {
-                return [V(
+                return [J(
                   "span",
                   CF,
-                  qe(e.title),
+                  Qe(e.title),
                   1
                   /* TEXT */
                 )];
-              }), V("div", kF, [e.resize && !e.state.isFull ? (P(), K("button", {
+              }), J("div", kF, [e.resize && !e.state.isFull ? (P(), K("button", {
                 key: 0,
                 type: "button",
                 class: "tiny-dialog-box__headerbtn",
@@ -18112,7 +18112,7 @@ function SF(e, t, n, o, r, i) {
               })])) : Ie("v-if", !0)])],
               544
               /* NEED_HYDRATION, NEED_PATCH */
-            )) : Ie("v-if", !0), V("div", TF, [vt(e.$slots, "default")]), e.slots.footer ? (P(), K(
+            )) : Ie("v-if", !0), J("div", TF, [vt(e.$slots, "default")]), e.slots.footer ? (P(), K(
               "div",
               EF,
               [vt(e.$slots, "footer", {
@@ -18208,7 +18208,7 @@ function FF(e, t, n, o, r, i) {
     persisted: ""
   }, {
     default: rt(function() {
-      return [Xt(V(
+      return [Xt(J(
         "div",
         {
           class: je(["fixed inset-0 m-0 flex items-center", e.dialogClass]),
@@ -18241,10 +18241,10 @@ function FF(e, t, n, o, r, i) {
               })
             },
             [vt(e.$slots, "title", {}, function() {
-              return [V(
+              return [J(
                 "span",
                 DF,
-                qe(e.title),
+                Qe(e.title),
                 1
                 /* TEXT */
               )];
@@ -18287,7 +18287,7 @@ function FF(e, t, n, o, r, i) {
             })])) : Ie("v-if", !0)],
             32
             /* NEED_HYDRATION */
-          )) : Ie("v-if", !0), V(
+          )) : Ie("v-if", !0), J(
             "div",
             {
               "data-tag": "tiny-dialog-box__body",
@@ -18598,7 +18598,7 @@ function KF(e, t, n, o, r, i) {
         return e.mousedown && e.mousedown.apply(e, arguments);
       })
     },
-    [V("div", jF, [V(
+    [J("div", jF, [J(
       "ul",
       {
         onKeydown: t[0] || (t[0] = Yn(function() {
@@ -18616,7 +18616,7 @@ function KF(e, t, n, o, r, i) {
             onClick: function(l) {
               return e.selectItem(a);
             }
-          }, qe(a), 11, YF);
+          }, Qe(a), 11, YF);
         }),
         128
         /* KEYED_FRAGMENT */
@@ -18744,7 +18744,7 @@ function vN(e, t, n, o, r, i) {
         [vt(e.$slots, "prepend")],
         512
         /* NEED_PATCH */
-      )) : Ie("v-if", !0), V("span", WF, [e.state.isDisplayOnly ? (P(), st(a, {
+      )) : Ie("v-if", !0), J("span", WF, [e.state.isDisplayOnly ? (P(), st(a, {
         key: 0,
         disabled: !e.showTooltip,
         effect: "light",
@@ -18758,13 +18758,13 @@ function vN(e, t, n, o, r, i) {
           return [e.type === "password" ? (P(), K(
             "span",
             ZF,
-            qe(e.state.hiddenPassword),
+            Qe(e.state.hiddenPassword),
             1
             /* TEXT */
-          )) : e.mask ? (P(), K("span", XF, [V(
+          )) : e.mask ? (P(), K("span", XF, [J(
             "span",
             _F,
-            qe(e.state.displayedMaskValue),
+            Qe(e.state.displayedMaskValue),
             1
             /* TEXT */
           ), (P(), st(xn(e.state.maskValueVisible ? "icon-eyeopen" : "icon-eyeclose"), {
@@ -18774,7 +18774,7 @@ function vN(e, t, n, o, r, i) {
           }))])) : (P(), K(
             "span",
             eN,
-            qe(e.state.displayOnlyText),
+            Qe(e.state.displayOnlyText),
             1
             /* TEXT */
           ))];
@@ -18840,14 +18840,14 @@ function vN(e, t, n, o, r, i) {
         })) : Ie("v-if", !0)],
         512
         /* NEED_PATCH */
-      )) : Ie("v-if", !0), V("div", null, [Ze(so, {
+      )) : Ie("v-if", !0), J("div", null, [Ze(so, {
         name: "tiny-transition-icon-out-in"
       }, {
         default: rt(function() {
           return [!e.state.isDisplayOnly && e.getSuffixVisible() ? (P(), K(
             "span",
             oN,
-            [V("span", rN, [e.frontClearIcon && e.state.showClear ? (P(), st(l, {
+            [J("span", rN, [e.frontClearIcon && e.state.showClear ? (P(), st(l, {
               key: 0,
               class: "tiny-svg-size tiny-input__icon tiny-input__clear",
               role: "button",
@@ -18898,16 +18898,16 @@ function vN(e, t, n, o, r, i) {
               class: "tiny-input__count",
               role: "status",
               "aria-live": "polite"
-            }, [V("span", aN, [V(
+            }, [J("span", aN, [J(
               "span",
               sN,
-              qe(e.state.showWordLimit ? "" + e.state.textLength : ""),
+              Qe(e.state.showWordLimit ? "" + e.state.textLength : ""),
               1
               /* TEXT */
-            ), V(
+            ), J(
               "span",
               lN,
-              qe(e.state.showWordLimit ? "/" + e.state.upperLimit : e.state.textLength),
+              Qe(e.state.showWordLimit ? "/" + e.state.upperLimit : e.state.textLength),
               1
               /* TEXT */
             )])], 8, iN)) : Ie("v-if", !0)]), e.state.validateState ? (P(), K(
@@ -18960,7 +18960,7 @@ function vN(e, t, n, o, r, i) {
         })
       }, {
         default: rt(function() {
-          return [V("div", dN, [V(
+          return [J("div", dN, [J(
             "span",
             pN,
             [e.state.showMoreBtn ? (P(), K(
@@ -18972,11 +18972,11 @@ function vN(e, t, n, o, r, i) {
                 }),
                 class: "more-btn"
               },
-              qe(e.t("ui.input.more")) + ">",
+              Qe(e.t("ui.input.more")) + ">",
               1
               /* TEXT */
             )) : Ie("v-if", !0), Dt(
-              qe(e.state.displayOnlyText),
+              Qe(e.state.displayOnlyText),
               1
               /* TEXT */
             )],
@@ -19003,7 +19003,7 @@ function vN(e, t, n, o, r, i) {
           }, {
             default: rt(function() {
               return [Dt(
-                qe(e.t("ui.input.close")),
+                Qe(e.t("ui.input.close")),
                 1
                 /* TEXT */
               )];
@@ -19013,10 +19013,10 @@ function vN(e, t, n, o, r, i) {
           })];
         }),
         default: rt(function() {
-          return [V(
+          return [J(
             "pre",
             null,
-            qe(e.state.displayOnlyText),
+            Qe(e.state.displayOnlyText),
             1
             /* TEXT */
           )];
@@ -19090,16 +19090,16 @@ function vN(e, t, n, o, r, i) {
       class: "tiny-input__count",
       role: "status",
       "aria-live": "polite"
-    }, [V("span", fN, [V(
+    }, [J("span", fN, [J(
       "span",
       gN,
-      qe(e.state.showWordLimit ? "" + e.state.textLength : ""),
+      Qe(e.state.showWordLimit ? "" + e.state.textLength : ""),
       1
       /* TEXT */
-    ), V(
+    ), J(
       "span",
       yN,
-      qe(e.state.showWordLimit ? "/" + e.state.upperLimit : e.state.textLength),
+      Qe(e.state.showWordLimit ? "/" + e.state.upperLimit : e.state.textLength),
       1
       /* TEXT */
     )])], 8, mN)) : Ie("v-if", !0), vt(e.$slots, "default")],
@@ -19166,7 +19166,7 @@ function TN(e, t, n, o, r, i) {
         return e.mousedown && e.mousedown.apply(e, arguments);
       })
     },
-    [V("div", CN, [V(
+    [J("div", CN, [J(
       "ul",
       {
         onKeydown: t[0] || (t[0] = Yn(function() {
@@ -19184,7 +19184,7 @@ function TN(e, t, n, o, r, i) {
             onClick: function(l) {
               return e.selectItem(a);
             }
-          }, qe(a), 11, kN);
+          }, Qe(a), 11, kN);
         }),
         128
         /* KEYED_FRAGMENT */
@@ -19292,7 +19292,7 @@ function YN(e, t, n, o, r, i) {
         [vt(e.$slots, "prepend")],
         512
         /* NEED_PATCH */
-      )) : Ie("v-if", !0), V(
+      )) : Ie("v-if", !0), J(
         "span",
         {
           class: je(["relative text-sm block", [e.state.inputSizeMf !== "mini" ? "sm:text-sm" : "sm:text-xs"]]),
@@ -19315,13 +19315,13 @@ function YN(e, t, n, o, r, i) {
             return [e.type === "password" ? (P(), K(
               "span",
               xN,
-              qe(e.state.hiddenPassword),
+              Qe(e.state.hiddenPassword),
               1
               /* TEXT */
-            )) : e.mask ? (P(), K("span", BN, [V(
+            )) : e.mask ? (P(), K("span", BN, [J(
               "span",
               MN,
-              qe(e.state.displayedMaskValue),
+              Qe(e.state.displayedMaskValue),
               1
               /* TEXT */
             ), (P(), st(xn(e.state.maskValueVisible ? "icon-eyeopen" : "icon-eyeclose"), {
@@ -19331,7 +19331,7 @@ function YN(e, t, n, o, r, i) {
             }))])) : (P(), K(
               "span",
               LN,
-              qe(e.state.displayOnlyText),
+              Qe(e.state.displayOnlyText),
               1
               /* TEXT */
             ))];
@@ -19403,7 +19403,7 @@ function YN(e, t, n, o, r, i) {
       )) : Ie("v-if", !0), !e.state.isDisplayOnly && e.getSuffixVisible() ? (P(), K(
         "span",
         ON,
-        [V("span", FN, [e.state.showClear ? (P(), st(l, {
+        [J("span", FN, [e.state.showClear ? (P(), st(l, {
           key: 0,
           class: je(e.m("hidden sm:block text-center transition-all duration-300 ease-in-out text-xs cursor-pointer", e.state.inputSizeMf === "medium" ? "leading-8" : e.state.inputSizeMf === "mini" ? "leading-6" : "leading-7")),
           role: "button",
@@ -19454,10 +19454,10 @@ function YN(e, t, n, o, r, i) {
           class: "h-full inline-flex items-center text-xs sm:text-sm text-color-text-placeholder",
           role: "status",
           "aria-live": "polite"
-        }, [V(
+        }, [J(
           "span",
           RN,
-          qe(e.state.showWordLimit ? e.state.textLength + "/" + e.state.upperLimit : e.state.textLength),
+          Qe(e.state.showWordLimit ? e.state.textLength + "/" + e.state.upperLimit : e.state.textLength),
           1
           /* TEXT */
         )], 8, NN)) : Ie("v-if", !0)]), e.state.validateState ? (P(), K(
@@ -19510,7 +19510,7 @@ function YN(e, t, n, o, r, i) {
         })
       }, {
         default: rt(function() {
-          return [V("div", UN, [V(
+          return [J("div", UN, [J(
             "span",
             {
               ref: "textBox",
@@ -19522,11 +19522,11 @@ function YN(e, t, n, o, r, i) {
             [e.state.showMoreBtn ? (P(), K(
               "span",
               GN,
-              qe(e.t("ui.input.more")) + ">",
+              Qe(e.t("ui.input.more")) + ">",
               1
               /* TEXT */
             )) : Ie("v-if", !0), Dt(
-              qe(e.state.displayOnlyText),
+              Qe(e.state.displayOnlyText),
               1
               /* TEXT */
             )],
@@ -19555,7 +19555,7 @@ function YN(e, t, n, o, r, i) {
           }, {
             default: rt(function() {
               return [Dt(
-                qe(e.t("ui.input.close")),
+                Qe(e.t("ui.input.close")),
                 1
                 /* TEXT */
               )];
@@ -19565,17 +19565,17 @@ function YN(e, t, n, o, r, i) {
           })];
         }),
         default: rt(function() {
-          return [V(
+          return [J(
             "pre",
             HN,
-            qe(e.state.displayOnlyText),
+            Qe(e.state.displayOnlyText),
             1
             /* TEXT */
           )];
         }),
         _: 1
         /* STABLE */
-      }, 8, ["title", "visible"])) : Ie("v-if", !0), V("textarea", Kn({
+      }, 8, ["title", "visible"])) : Ie("v-if", !0), J("textarea", Kn({
         ref: "textarea"
       }, e.a(e.$attrs, ["type", "class", "style", "^on[A-Z]"]), {
         tabindex: e.tabindex,
@@ -19624,7 +19624,7 @@ function YN(e, t, n, o, r, i) {
       class: "text-color-text-placeholder text-xs leading-5 absolute bottom-0 right-3",
       role: "status",
       "aria-live": "polite"
-    }, qe(e.state.showWordLimit ? e.state.textLength + "/" + e.state.upperLimit : e.state.textLength), 9, jN)) : Ie("v-if", !0), vt(e.$slots, "default")],
+    }, Qe(e.state.showWordLimit ? e.state.textLength + "/" + e.state.upperLimit : e.state.textLength), 9, jN)) : Ie("v-if", !0), vt(e.$slots, "default")],
     38
     /* CLASS, STYLE, NEED_HYDRATION */
   );
@@ -19801,7 +19801,7 @@ var zN = function(t) {
       return ["normal", "underline"].includes(t);
     }
   }
-}), Ti = Ft({
+}), Ei = Ft({
   name: mn + "Input",
   inheritAttrs: !1,
   props: JN,
@@ -19813,14 +19813,14 @@ var zN = function(t) {
     });
   }
 }), WN = "3.undefined";
-Ti.model = {
+Ei.model = {
   prop: "modelValue",
   event: "update:modelValue"
 };
-Ti.install = function(e) {
-  e.component(Ti.name, Ti);
+Ei.install = function(e) {
+  e.component(Ei.name, Ei);
 };
-Ti.version = WN;
+Ei.version = WN;
 let cm;
 const ZN = (e, t, n) => {
   const { hasOwnProperty: o } = Object.prototype, r = t[n];
@@ -20150,7 +20150,7 @@ const Ib = ["state", "visible", "hoverItem", "selectOptionClick"], hR = ({ react
     Tb({ props: t, vm: o, type: "remove" }), a > -1 && s < 0 && n.state.cachedOptions.splice(a, 1), n.onOptionDestroy(n.state.options.findIndex((l) => l.state === r));
   });
 }, vR = ({ state: e, select: t, props: n, toRefs: o, reactive: r }) => {
-  let i = r(Pi(qo({}, o(n)), { state: e }));
+  let i = r(Oi(qo({}, o(n)), { state: e }));
   t.state.options.push(i), t.state.cachedOptions.push(i), t.state.optionsIndex++, e.index = t.state.optionsIndex, t.state.optionsCount++, t.state.filteredOptionsCount++;
 }, xb = (e, { computed: t, onMounted: n, onBeforeUnmount: o, reactive: r, watch: i, inject: a, markRaw: s, toRefs: l }, { vm: u, parent: d }) => {
   const c = {}, h = a("select"), f = h._constants, p = hR({ reactive: r, computed: t, props: e, api: c, markRaw: s, select: h, parent: d });
@@ -20241,14 +20241,14 @@ function SR(e, t, n, o, r, i) {
   }, null, 8, ["class"]))])) : Ie("v-if", !0), e.icon ? (P(), st(xn(e.icon), {
     key: 1,
     class: "tiny-option__icon"
-  })) : Ie("v-if", !0), V(
+  })) : Ie("v-if", !0), J(
     "div",
     {
       class: je(["tiny-option-wrapper", e.state.selectMultiple ? "calc-width" : "full-width"])
     },
     [vt(e.$slots, "default", {}, function() {
       return [Xt((P(), K("span", ER, [Dt(
-        qe(e.state.currentLabel),
+        Qe(e.state.currentLabel),
         1
         /* TEXT */
       )])), [[a, {
@@ -20349,7 +20349,7 @@ function FR(e, t, n, o, r, i) {
     }))
   }, null, 8, ["class"]))])) : Ie("v-if", !0), vt(e.$slots, "default", {}, function() {
     return [Xt((P(), K("span", PR, [Dt(
-      qe(e.state.currentLabel),
+      Qe(e.state.currentLabel),
       1
       /* TEXT */
     )])), [[s, {
@@ -20577,7 +20577,7 @@ var Nd = /* @__PURE__ */ Ft({
       var v = "-" + f + "px", m = "-" + (f - h) + "px", y = "margin-bottom: " + m + "; margin-right: " + v + ";";
       Array.isArray(i) ? (p = I5(i), p.marginRight = v, p.marginBottom = m) : ai(i) ? (p.marginRight = v, p.marginBottom = m) : typeof i == "string" ? p += y : p = y;
     }
-    var b = Ci(n, {
+    var b = ki(n, {
       class: ["tiny-scrollbar__view", l],
       style: s,
       ref: "resize"
@@ -20879,7 +20879,7 @@ const AQ = ({ emit: e }) => (...t) => {
     reactive: r,
     toRefs: i,
     watch: a
-  }), h = r(Pi(qo({
+  }), h = r(Oi(qo({
     show: !1,
     focus: !1,
     hovering: !1,
@@ -20994,7 +20994,7 @@ function zQ(e, t, n, o, r, i) {
         return e.state.hovering = !1;
       })
     },
-    [V(
+    [J(
       "div",
       {
         class: je(["tiny-search__line", {
@@ -21007,7 +21007,7 @@ function zQ(e, t, n, o, r, i) {
         persisted: ""
       }, {
         default: rt(function() {
-          return [Xt(V(
+          return [Xt(J(
             "div",
             {
               class: "tiny-search__present",
@@ -21018,14 +21018,14 @@ function zQ(e, t, n, o, r, i) {
             [vt(e.$slots, "text", {
               slotScope: e.state.searchValue
             }, function() {
-              return [V(
+              return [J(
                 "span",
                 QQ,
-                qe(e.state.searchValue.text),
+                Qe(e.state.searchValue.text),
                 1
                 /* TEXT */
               )];
-            }), V("span", qQ, [Ze(a, {
+            }), J("span", qQ, [Ze(a, {
               class: "tiny-svg-size"
             })])],
             512
@@ -21034,7 +21034,7 @@ function zQ(e, t, n, o, r, i) {
         }),
         _: 3
         /* FORWARDED */
-      }), Xt(V("input", Kn({
+      }), Xt(J("input", Kn({
         ref: "input"
       }, e.a(e.$attrs, ["type", "class", "style", "^on[A-Z]", "id", "clearable"]), {
         "onUpdate:modelValue": t[1] || (t[1] = function(u) {
@@ -21070,7 +21070,7 @@ function zQ(e, t, n, o, r, i) {
         name: "tiny-transition-icon-scale-in"
       }, {
         default: rt(function() {
-          return [e.state.showClear && !e.state.collapse && !e.disabled ? (P(), K("div", GQ, [V("a", {
+          return [e.state.showClear && !e.state.collapse && !e.disabled ? (P(), K("div", GQ, [J("a", {
             onClick: t[9] || (t[9] = function(u) {
               return e.clear(u);
             })
@@ -21084,7 +21084,7 @@ function zQ(e, t, n, o, r, i) {
         /* STABLE */
       }), e.slots.suffix ? vt(e.$slots, "suffix", {
         key: 1
-      }) : !e.slots.prefix && !e.slots.suffix ? (P(), K("div", HQ, [V("a", {
+      }) : !e.slots.prefix && !e.slots.suffix ? (P(), K("div", HQ, [J("a", {
         onClick: t[10] || (t[10] = function(u) {
           return e.searchClick(u);
         })
@@ -21102,10 +21102,10 @@ function zQ(e, t, n, o, r, i) {
       persisted: ""
     }, {
       default: rt(function() {
-        return [Xt(V(
+        return [Xt(J(
           "div",
           $Q,
-          [V("div", jQ, [V("ul", YQ, [(P(!0), K(
+          [J("div", jQ, [J("ul", YQ, [(P(!0), K(
             Lt,
             null,
             an(e.state.types, function(u, d) {
@@ -21119,7 +21119,7 @@ function zQ(e, t, n, o, r, i) {
                 slotScope: u
               }, function() {
                 return [Dt(
-                  qe(u.text),
+                  Qe(u.text),
                   1
                   /* TEXT */
                 )];
@@ -21239,7 +21239,7 @@ var WQ = function(t, n) {
     IconSearch: Fu(),
     IconClose: Do(),
     IconError: Gs(),
-    TinyInput: Ti,
+    TinyInput: Ei,
     TinyButton: lo
   },
   setup: function(t, n) {
@@ -21270,7 +21270,7 @@ function oq(e, t, n, o, r, i) {
         return e.state.hovering = !1;
       })
     },
-    [V(
+    [J(
       "div",
       {
         class: je(e.m(e.gcls("pc-search-line"), e.gcls({
@@ -21290,7 +21290,7 @@ function oq(e, t, n, o, r, i) {
         persisted: ""
       }, {
         default: rt(function() {
-          return [Xt(V(
+          return [Xt(J(
             "div",
             {
               "data-tag": "tiny-search__present",
@@ -21306,17 +21306,17 @@ function oq(e, t, n, o, r, i) {
             [vt(e.$slots, "text", {
               slotScope: e.state.searchValue
             }, function() {
-              return [V(
+              return [J(
                 "span",
                 {
                   "data-tag": "tiny-search__text",
                   class: je(e.m(e.gcls("pc-search-present-pointer")))
                 },
-                qe(e.state.searchValue.text),
+                Qe(e.state.searchValue.text),
                 3
                 /* TEXT, CLASS */
               )];
-            }), V(
+            }), J(
               "span",
               {
                 "data-tag": "tiny-icon-outer",
@@ -21335,7 +21335,7 @@ function oq(e, t, n, o, r, i) {
         }),
         _: 3
         /* FORWARDED */
-      }), Xt(V("input", {
+      }), Xt(J("input", {
         ref: "input",
         "onUpdate:modelValue": t[1] || (t[1] = function(h) {
           return e.state.currentValue = h;
@@ -21396,7 +21396,7 @@ function oq(e, t, n, o, r, i) {
                 "pc-search-input-btn-transtion-unbig": e.size === "small" && !e.big
               })))
             },
-            [V(
+            [J(
               "a",
               {
                 class: je(e.m(e.gcls("pc-search-input-btn-transtion-a"))),
@@ -21419,7 +21419,7 @@ function oq(e, t, n, o, r, i) {
         }),
         _: 1
         /* STABLE */
-      }), V(
+      }), J(
         "div",
         {
           "data-tag": "tiny-search__input-btn",
@@ -21429,7 +21429,7 @@ function oq(e, t, n, o, r, i) {
             "pc-search-input-btn-unbig": e.size === "small" && !e.big
           })))
         },
-        [V(
+        [J(
           "a",
           {
             class: je(e.m(e.gcls("pc-search-input-btn-a"))),
@@ -21457,20 +21457,20 @@ function oq(e, t, n, o, r, i) {
       persisted: ""
     }, {
       default: rt(function() {
-        return [Xt(V(
+        return [Xt(J(
           "div",
           {
             ref: "selector",
             "data-tag": "tiny-search__selector",
             class: je(e.m(e.gcls("search-selector")))
           },
-          [V(
+          [J(
             "div",
             {
               "data-tag": "tiny-search__selector-body",
               class: je(e.m(e.gcls("search-selector-body")))
             },
-            [V("ul", eq, [(P(!0), K(
+            [J("ul", eq, [(P(!0), K(
               Lt,
               null,
               an(e.state.types, function(h, f) {
@@ -21489,7 +21489,7 @@ function oq(e, t, n, o, r, i) {
                   slotScope: h
                 }, function() {
                   return [Dt(
-                    qe(h.text),
+                    Qe(h.text),
                     1
                     /* TEXT */
                   )];
@@ -21507,7 +21507,7 @@ function oq(e, t, n, o, r, i) {
       }),
       _: 3
       /* FORWARDED */
-    }), V(
+    }), J(
       "div",
       {
         class: je(e.m(e.gcls("mobile-search")))
@@ -21539,7 +21539,7 @@ function oq(e, t, n, o, r, i) {
       }, [e.state.showClear && !e.state.collapse ? {
         name: "suffix",
         fn: rt(function() {
-          return [V("span", nq, [Ze(u, {
+          return [J("span", nq, [Ze(u, {
             "data-tag": "tiny-svg-size",
             "custom-class": "w-4 h-4 fill-color-none-hover relative -top-0.5",
             onClick: e.clear
@@ -21555,7 +21555,7 @@ function oq(e, t, n, o, r, i) {
       }, {
         default: rt(function() {
           return [Dt(
-            qe(e.t("ui.search.placeholder")),
+            Qe(e.t("ui.search.placeholder")),
             1
             /* TEXT */
           )];
@@ -21787,7 +21787,7 @@ function kq(e, t, n, o, r, i) {
     [vt(e.$slots, "default")],
     38
     /* CLASS, STYLE, NEED_HYDRATION */
-  )) : (P(), K("div", pq, [V(
+  )) : (P(), K("div", pq, [J(
     "div",
     {
       ref: "mask",
@@ -21804,7 +21804,7 @@ function kq(e, t, n, o, r, i) {
     null,
     6
     /* CLASS, STYLE */
-  ), V(
+  ), J(
     "div",
     {
       "data-tag": "tiny-select-dropdown-main",
@@ -21818,7 +21818,7 @@ function kq(e, t, n, o, r, i) {
         "translate-y-0": e.state.visible
       }))
     },
-    [V("div", hq, [V("div", mq, [e.state.showClose ? (P(), K(
+    [J("div", hq, [J("div", mq, [e.state.showClose ? (P(), K(
       "span",
       {
         key: 0,
@@ -21827,13 +21827,13 @@ function kq(e, t, n, o, r, i) {
           return e.handleClear && e.handleClear.apply(e, arguments);
         })
       },
-      qe(e.t("ui.base.clear")),
+      Qe(e.t("ui.base.clear")),
       1
       /* TEXT */
-    )) : Ie("v-if", !0), V(
+    )) : Ie("v-if", !0), J(
       "p",
       fq,
-      qe(e.title),
+      Qe(e.title),
       1
       /* TEXT */
     ), Ze(a, {
@@ -21851,7 +21851,7 @@ function kq(e, t, n, o, r, i) {
       onInput: e.debouncedQueryChange,
       clearable: "",
       big: ""
-    }, null, 8, ["modelValue", "placeholder", "onInput"]), V(
+    }, null, 8, ["modelValue", "placeholder", "onInput"]), J(
       "span",
       {
         class: "inline-block h-8 leading-8 text-color-text-secondary shrink-0 ml-3 text-base",
@@ -21859,10 +21859,10 @@ function kq(e, t, n, o, r, i) {
           return e.cancelSearch && e.cancelSearch.apply(e, arguments);
         })
       },
-      qe(e.t("ui.base.cancel")),
+      Qe(e.t("ui.base.cancel")),
       1
       /* TEXT */
-    )])) : Ie("v-if", !0)]), V("div", yq, [vt(e.$slots, "default")]), e.state.multiple ? (P(), K("div", vq, [V("div", null, [V(
+    )])) : Ie("v-if", !0)]), J("div", yq, [vt(e.$slots, "default")]), e.state.multiple ? (P(), K("div", vq, [J("div", null, [J(
       "span",
       {
         onClick: t[6] || (t[6] = function(c) {
@@ -21870,7 +21870,7 @@ function kq(e, t, n, o, r, i) {
         }),
         class: "mr-2"
       },
-      qe(e.t("ui.select.selectedNum", {
+      Qe(e.t("ui.select.selectedNum", {
         num: e.state.selected.length
       })),
       1
@@ -21885,7 +21885,7 @@ function kq(e, t, n, o, r, i) {
     }, {
       default: rt(function() {
         return [Dt(
-          qe(e.t("ui.base.confirm")),
+          Qe(e.t("ui.base.confirm")),
           1
           /* TEXT */
         )];
@@ -21899,7 +21899,7 @@ function kq(e, t, n, o, r, i) {
         "data-tag": "tiny-selected-box",
         class: je(["absolute left-0 bottom-0 flex flex-col w-full bg-color-bg-1 transition-all ease-linear duration-200 overflow-hidden z-[2001]", [e.state.showSelectedBox ? "h-full p-4" : "h-0 p-0"]])
       },
-      [V("div", Aq, [V(
+      [J("div", Aq, [J(
         "span",
         {
           class: "inline-block h-6 py-1 text-color-brand",
@@ -21907,7 +21907,7 @@ function kq(e, t, n, o, r, i) {
             return e.deleteSelected("", !0);
           })
         },
-        qe(e.t("ui.base.clear")),
+        Qe(e.t("ui.base.clear")),
         1
         /* TEXT */
       ), Ze(a, {
@@ -21915,17 +21915,17 @@ function kq(e, t, n, o, r, i) {
         onClick: t[8] || (t[8] = function(c) {
           return e.toggleSelectedBox(!1);
         })
-      })]), V("div", bq, [V("ul", null, [(P(!0), K(
+      })]), J("div", bq, [J("ul", null, [(P(!0), K(
         Lt,
         null,
         an(e.state.selectedArr, function(c, h) {
           return P(), K("li", {
             key: (c.value || "") + h,
             class: "flex h-12 justify-between items-center"
-          }, [V(
+          }, [J(
             "span",
             wq,
-            qe(c.label),
+            Qe(c.label),
             1
             /* TEXT */
           ), Ze(d, {
@@ -21937,14 +21937,14 @@ function kq(e, t, n, o, r, i) {
         }),
         128
         /* KEYED_FRAGMENT */
-      ))])]), V("div", Cq, [Ze(u, {
+      ))])]), J("div", Cq, [Ze(u, {
         type: "primary",
         "custom-class": "w-full",
         onClick: e.selectedBoxConfirm
       }, {
         default: rt(function() {
           return [Dt(
-            qe(e.t("ui.base.confirm")),
+            Qe(e.t("ui.base.confirm")),
             1
             /* TEXT */
           )];
@@ -22269,7 +22269,7 @@ function Wq(e, t, n, o, r, i) {
     "aria-checked": e.indeterminate ? "mixed" : e.state.isChecked,
     "aria-disabled": e.state.isDisabled || e.state.isDisplayOnly,
     "aria-label": e.text || e.label
-  }, e.a(e.$attrs, ["class", "style", "onClick"], !0)), [V(
+  }, e.a(e.$attrs, ["class", "style", "onClick"], !0)), [J(
     "span",
     {
       class: je(["tiny-checkbox__input", {
@@ -22326,7 +22326,7 @@ function Wq(e, t, n, o, r, i) {
       }),
       onClick: t[9] || (t[9] = Pt(function() {
       }, ["stop"]))
-    }, null, 40, zq)), [[Is, e.state.model]]), V("span", Vq, [e.indeterminate && e.state.shape !== "filter" ? (P(), st(a, {
+    }, null, 40, zq)), [[Is, e.state.model]]), J("span", Vq, [e.indeterminate && e.state.shape !== "filter" ? (P(), st(a, {
       key: 0,
       class: "tiny-svg-size icon-halfselect"
     })) : e.state.isChecked ? (P(), st(s, {
@@ -22340,7 +22340,7 @@ function Wq(e, t, n, o, r, i) {
     /* CLASS */
   ), e.slots.default && e.slots.default() || e.state.isShowText ? Xt((P(), K("span", Jq, [vt(e.$slots, "default", {}, function() {
     return [Dt(
-      qe(e.state.showText),
+      Qe(e.state.showText),
       1
       /* TEXT */
     )];
@@ -22414,11 +22414,11 @@ function sU(e, t, n, o, r, i) {
     "aria-checked": e.indeterminate ? "mixed" : e.state.isChecked,
     "aria-disabled": e.state.isDisabled || e.state.isDisplayOnly,
     "aria-label": e.text || e.label
-  }, e.a(e.$attrs, ["class", "style", "onClick"], !0)), [V("span", {
+  }, e.a(e.$attrs, ["class", "style", "onClick"], !0)), [J("span", {
     class: je(["relative w-7 h-7 mr-2 sm:mr-0 sm:p-0", e.state.size === "medium" ? "sm:w-6 sm:h-6" : "sm:h-4 sm:w-4", e.state.isDisplayOnly || e.state.isGroupDisplayOnly ? "hidden" : ""]),
     role: e.indeterminate ? "checkbox" : !1,
     "aria-checked": e.indeterminate ? "mixed" : !1
-  }, [V("span", oU, [Ze(a, {
+  }, [J("span", oU, [Ze(a, {
     "data-tag": "icon-check",
     class: je(e.m("w-5 h-5 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0", e.state.size === "medium" ? "sm:w-6 sm:h-6" : "sm:w-4 sm:h-4", e.state.isDisabled ? "[&_path:nth-of-type(2)]:fill-color-icon-disabled [&_path:nth-of-type(1)]:fill-color-bg-3 cursor-not-allowed" : "[&_path:nth-of-type(2)]:fill-color-none-hover"))
   }, null, 8, ["class"]), Ze(s, {
@@ -22481,7 +22481,7 @@ function sU(e, t, n, o, r, i) {
     },
     [vt(e.$slots, "default", {}, function() {
       return [Dt(
-        qe(e.text || e.label),
+        Qe(e.text || e.label),
         1
         /* TEXT */
       )];
@@ -22496,7 +22496,7 @@ function sU(e, t, n, o, r, i) {
     [e.state.isDisplayOnly ? (P(), K(
       "span",
       aU,
-      qe(e.state.displayLabel),
+      Qe(e.state.displayLabel),
       1
       /* TEXT */
     )) : Ie("v-if", !0)],
@@ -22582,7 +22582,7 @@ var cU = function(t) {
     type: String,
     default: "0"
   }
-}), Ei = Ft({
+}), Si = Ft({
   name: mn + "Checkbox",
   props: dU,
   setup: function(t, n) {
@@ -22593,14 +22593,14 @@ var cU = function(t) {
     });
   }
 }), pU = "3.undefined";
-Ei.model = {
+Si.model = {
   prop: "modelValue",
   event: "update:modelValue"
 };
-Ei.install = function(e) {
-  e.component(Ei.name, Ei);
+Si.install = function(e) {
+  e.component(Si.name, Si);
 };
-Ei.version = pU;
+Si.version = pU;
 const hU = (e) => () => (e.formItem || {}).formItemSize, mU = ({ props: e, formItemSize: t }) => () => e.size || t.value, Gb = ["state"], Hb = (e, { computed: t, reactive: n, watch: o, provide: r }, { dispatch: i, constants: a }) => {
   const s = {
     computedFormItemSize: hU(e)
@@ -22789,7 +22789,7 @@ function OU(e, t, n, o, r, i) {
     },
     [vt(e.$slots, "default", {}, function() {
       return [Dt(
-        qe(e.state.showText),
+        Qe(e.state.showText),
         1
         /* TEXT */
       )];
@@ -22890,7 +22890,7 @@ var GU = function(t, n) {
   return o;
 }, HU = /* @__PURE__ */ Ft({
   components: {
-    Checkbox: Ei,
+    Checkbox: Si,
     CheckboxButton: La
   },
   props: [].concat(Cn, ["modelValue", "type", "options", "disabled", "min", "max", "size", "fill", "textColor", "vertical", "displayOnly", "shape"]),
@@ -22991,7 +22991,7 @@ var KU = function(t, n) {
   return o;
 }, zU = Ft({
   components: {
-    Checkbox: Ei,
+    Checkbox: Si,
     CheckboxButton: La
   },
   inheritAttrs: !1,
@@ -23575,7 +23575,7 @@ const _U = ({ api: e, nextTick: t, state: n }) => (o) => {
   n.allowCopy && e.$refs.reference && (e.$refs.reference.$el.querySelector("input").selectionEnd = 0), t.softFocus = !1, o("dropdown-click", r);
 }, fH = ({ state: e }) => (t, n) => {
   const o = t.target;
-  o && o.scrollWidth > o.offsetWidth && (e.tooltipContent = Pi(qo({}, e.tooltipContent), { [n]: o.innerText }));
+  o && o.scrollWidth > o.offsetWidth && (e.tooltipContent = Oi(qo({}, e.tooltipContent), { [n]: o.innerText }));
 }, gH = ({ state: e, vm: t, props: n }) => () => {
   if (e.inputHovering && !n.clickExpand)
     return e.isHidden = !0;
@@ -23682,7 +23682,7 @@ const _U = ({ api: e, nextTick: t, state: n }) => (o) => {
   n.isClickChoose = !0, o && n.device === "mb" && e.multiple && !i ? n.modelValue = r : t("update:modelValue", r);
 }, IH = ({ props: e, state: t }) => (n) => {
   const o = t.datas, r = n.state ? n.state.currentValue : n.value, i = o.find((s) => s.value === r);
-  return Pi(qo({}, i), {
+  return Oi(qo({}, i), {
     label: n.state ? n.state.currentLabel : n.currentLabel,
     value: r
   });
@@ -23807,7 +23807,7 @@ const _U = ({ api: e, nextTick: t, state: n }) => (o) => {
   vm: u,
   designConfig: d
 }) => {
-  const c = ZH({ computed: t, props: n, api: o, parent: i }), h = e(Pi(qo({}, c), {
+  const c = ZH({ computed: t, props: n, api: o, parent: i }), h = e(Oi(qo({}, c), {
     selectEmitter: r(),
     datas: [],
     initDatas: [],
@@ -23921,7 +23921,7 @@ const _U = ({ api: e, nextTick: t, state: n }) => (o) => {
     currentKey: t.modelValue,
     updateId: "",
     popperElm: null,
-    debounce: e(() => Gi(t.queryDebounce) ? t.queryDebounce : t.remote ? 300 : 0),
+    debounce: e(() => Hi(t.queryDebounce) ? t.queryDebounce : t.remote ? 300 : 0),
     emptyText: e(() => n.emptyText()),
     emptyFlag: e(() => n.emptyFlag()),
     formItemSize: e(() => (o.formItem || { state: {} }).state.formItemSize),
@@ -24275,15 +24275,15 @@ function u$(e, t, n, o, r, i) {
         return e.handeClick && e.handeClick.apply(e, arguments);
       })
     },
-    [V(
+    [J(
       "p",
       {
         class: je(["title", e.dropDownVisible && "active"])
       },
-      [V(
+      [J(
         "label",
         null,
-        qe(e.label),
+        Qe(e.label),
         1
         /* TEXT */
       ), e.tip ? (P(), st(s, {
@@ -24300,12 +24300,12 @@ function u$(e, t, n, o, r, i) {
       }, 8, ["content"])) : Ie("v-if", !0)],
       2
       /* CLASS */
-    ), V(
+    ), J(
       "p",
       {
         class: je(["value", !e.value && e.value !== 0 && "placeholder"])
       },
-      qe(e.value || e.value === 0 ? e.value : e.placeholder),
+      Qe(e.value || e.value === 0 ? e.value : e.placeholder),
       3
       /* TEXT, CLASS */
     ), e.value && e.showClose && !e.disabled ? (P(), st(l, {
@@ -24945,7 +24945,7 @@ var rj = function(t, n) {
   }),
   components: {
     TinyTag: fs,
-    TinyInput: Ti,
+    TinyInput: Ei,
     TinyOption: Ba,
     TinyButton: lo,
     IconClose: Do(),
@@ -25129,7 +25129,7 @@ var rj = function(t, n) {
 }, Dj = {
   key: 0,
   class: "tiny-base-select__placeholder"
-}, Pj = /* @__PURE__ */ V(
+}, Pj = /* @__PURE__ */ J(
   "input",
   {
     class: "tiny-input__inner",
@@ -25201,7 +25201,7 @@ function Fj(e, t, n, o, r, i) {
                 "is-disabled": e.state.isDisabled
               }])
             },
-            [V("span", null, [(P(!0), K(
+            [J("span", null, [(P(!0), K(
               Lt,
               null,
               an(e.state.selected, function(T) {
@@ -25211,7 +25211,7 @@ function Fj(e, t, n, o, r, i) {
                   item: T
                 }, function() {
                   return [Dt(
-                    qe(T.state ? T.state.currentLabel : T.currentLabel),
+                    Qe(T.state ? T.state.currentLabel : T.currentLabel),
                     1
                     /* TEXT */
                   )];
@@ -25252,18 +25252,18 @@ function Fj(e, t, n, o, r, i) {
                     item: e.getLabelSlotValue(e.state.selected[0])
                   }, function() {
                     return [Dt(
-                      qe(e.state.selected[0].state ? e.state.selected[0].state.currentLabel : e.state.selected[0].currentLabel),
+                      Qe(e.state.selected[0].state ? e.state.selected[0].state.currentLabel : e.state.selected[0].currentLabel),
                       1
                       /* TEXT */
                     )];
                   })])) : Ie("v-if", !0)];
                 }),
                 default: rt(function() {
-                  return [V("span", lj, [vt(e.$slots, "label", {
+                  return [J("span", lj, [vt(e.$slots, "label", {
                     item: e.getLabelSlotValue(e.state.selected[0])
                   }, function() {
                     return [Dt(
-                      qe(e.state.selected[0].state ? e.state.selected[0].state.currentLabel : e.state.selected[0].currentLabel),
+                      Qe(e.state.selected[0].state ? e.state.selected[0].state.currentLabel : e.state.selected[0].currentLabel),
                       1
                       /* TEXT */
                     )];
@@ -25286,10 +25286,10 @@ function Fj(e, t, n, o, r, i) {
             maxWidth: e.maxTagWidth
           }, {
             default: rt(function() {
-              return [V(
+              return [J(
                 "span",
                 uj,
-                "+ " + qe(e.state.selected.length - 1),
+                "+ " + Qe(e.state.selected.length - 1),
                 1
                 /* TEXT */
               )];
@@ -25313,7 +25313,7 @@ function Fj(e, t, n, o, r, i) {
             }, {
               default: rt(function() {
                 return [Dt(
-                  qe(e.allText || e.t("ui.base.all")),
+                  Qe(e.allText || e.t("ui.base.all")),
                   1
                   /* TEXT */
                 )];
@@ -25347,7 +25347,7 @@ function Fj(e, t, n, o, r, i) {
                       key: 0
                     },
                     [Dt(
-                      " + " + qe(e.state.collapseTagsLength),
+                      " + " + Qe(e.state.collapseTagsLength),
                       1
                       /* TEXT */
                     )],
@@ -25393,14 +25393,14 @@ function Fj(e, t, n, o, r, i) {
                           return [!e.state.visible && e.state.overflow === U ? (P(), K(
                             "span",
                             pj,
-                            qe(T.state ? T.state.currentLabel + "... " : T.currentLabel + "... "),
+                            Qe(T.state ? T.state.currentLabel + "... " : T.currentLabel + "... "),
                             1
                             /* TEXT */
                           )) : (P(), K("span", hj, [vt(e.$slots, "label", {
                             item: e.getLabelSlotValue(T)
                           }, function() {
                             return [Dt(
-                              qe(T.state ? T.state.currentLabel : T.currentLabel),
+                              Qe(T.state ? T.state.currentLabel : T.currentLabel),
                               1
                               /* TEXT */
                             )];
@@ -25414,14 +25414,14 @@ function Fj(e, t, n, o, r, i) {
                           return [!e.state.visible && e.state.overflow === U ? (P(), K(
                             "span",
                             mj,
-                            qe(T.state ? T.state.currentLabel + "... " : T.currentLabel + "... "),
+                            Qe(T.state ? T.state.currentLabel + "... " : T.currentLabel + "... "),
                             1
                             /* TEXT */
                           )) : (P(), K("span", fj, [vt(e.$slots, "label", {
                             item: e.getLabelSlotValue(T)
                           }, function() {
                             return [Dt(
-                              qe(T.state ? T.state.currentLabel : T.currentLabel),
+                              Qe(T.state ? T.state.currentLabel : T.currentLabel),
                               1
                               /* TEXT */
                             )];
@@ -25443,7 +25443,7 @@ function Fj(e, t, n, o, r, i) {
                   return e.onClickCollapseTag(T);
                 })
               }, [Dt(
-                qe(e.t("ui.select.collapse")) + " ",
+                Qe(e.t("ui.select.collapse")) + " ",
                 1
                 /* TEXT */
               ), Ze(d)])) : Ie("v-if", !0)],
@@ -25452,7 +25452,7 @@ function Fj(e, t, n, o, r, i) {
             ))],
             512
             /* NEED_PATCH */
-          ))])), Xt(V("input", {
+          ))])), Xt(J("input", {
             ref: "input",
             "onUpdate:modelValue": t[5] || (t[5] = function(T) {
               return e.state.query = T;
@@ -25558,13 +25558,13 @@ function Fj(e, t, n, o, r, i) {
             return [vt(e.$slots, "suffix"), e.showLimitText && e.multiple && e.multipleLimit && !e.state.showCopy ? (P(), K(
               "span",
               yj,
-              qe(e.state.selected.length) + "/" + qe(e.multipleLimit),
+              Qe(e.state.selected.length) + "/" + Qe(e.multipleLimit),
               1
               /* TEXT */
             )) : e.showProportion && e.state.selected.length > 0 && e.state.options.length > 1 ? (P(), K(
               "span",
               vj,
-              qe(e.state.selected.length + "/" + e.state.options.length),
+              Qe(e.state.selected.length + "/" + e.state.options.length),
               1
               /* TEXT */
             )) : Ie("v-if", !0), e.state.showCopy ? (P(), K("span", {
@@ -25636,14 +25636,14 @@ function Fj(e, t, n, o, r, i) {
                 }, null, 8, ["modelValue", "placeholder", "onInput", "onFocus"])],
                 2
                 /* CLASS */
-              )) : Ie("v-if", !0), e.topCreate ? (P(), K("div", Aj, [V("div", {
+              )) : Ie("v-if", !0), e.topCreate ? (P(), K("div", Aj, [J("div", {
                 onClick: t[28] || (t[28] = function(Q) {
                   return e.$emit("top-create-click", Q);
                 })
-              }, [(P(), st(xn(((T = e.state.designConfig) == null || (U = T.icons) == null ? void 0 : U.addIcon) || "icon-add-circle"))), V(
+              }, [(P(), st(xn(((T = e.state.designConfig) == null || (U = T.icons) == null ? void 0 : U.addIcon) || "icon-add-circle"))), J(
                 "span",
                 null,
-                qe(e.topCreateText),
+                Qe(e.topCreateText),
                 1
                 /* TEXT */
               )])])) : Ie("v-if", !0), vt(e.$slots, "panel", {
@@ -25669,7 +25669,7 @@ function Fj(e, t, n, o, r, i) {
                   })];
                 }),
                 suffix: rt(function() {
-                  return [Xt(V(
+                  return [Xt(J(
                     "span",
                     bj,
                     [Ze(h, {
@@ -25766,12 +25766,12 @@ function Fj(e, t, n, o, r, i) {
                         return e.state.hoverIndex = -9;
                       })
                     },
-                    [V("span", wj, [(P(), st(xn("icon-" + e.state.selectCls), {
+                    [J("span", wj, [(P(), st(xn("icon-" + e.state.selectCls), {
                       class: je(["tiny-svg-size", e.state.selectCls])
-                    }, null, 8, ["class"]))]), V("div", Cj, [V(
+                    }, null, 8, ["class"]))]), J("div", Cj, [J(
                       "span",
                       kj,
-                      qe(e.allText || e.t("ui.base.all")),
+                      Qe(e.allText || e.t("ui.base.all")),
                       1
                       /* TEXT */
                     )])],
@@ -25796,12 +25796,12 @@ function Fj(e, t, n, o, r, i) {
                         return e.state.hoverIndex = -9;
                       })
                     },
-                    [V("span", Tj, [(P(), st(xn("icon-" + e.state.filteredSelectCls), {
+                    [J("span", Tj, [(P(), st(xn("icon-" + e.state.filteredSelectCls), {
                       class: je(["tiny-svg-size", e.state.filteredSelectCls])
-                    }, null, 8, ["class"]))]), V("div", Ej, [V(
+                    }, null, 8, ["class"]))]), J("div", Ej, [J(
                       "span",
                       Sj,
-                      qe(e.allText || e.t("ui.base.all")),
+                      Qe(e.allText || e.t("ui.base.all")),
                       1
                       /* TEXT */
                     )])],
@@ -25846,7 +25846,7 @@ function Fj(e, t, n, o, r, i) {
                 }) : e.showEmptyImage ? (P(), K("span", xj)) : (P(), K(
                   "p",
                   Bj,
-                  qe(e.state.emptyText),
+                  Qe(e.state.emptyText),
                   1
                   /* TEXT */
                 ))])) : (P(), K(
@@ -25868,7 +25868,7 @@ function Fj(e, t, n, o, r, i) {
                     [e.showEmptyImage ? (P(), K("span", Mj)) : (P(), K(
                       "span",
                       Lj,
-                      qe(e.state.emptyText),
+                      Qe(e.state.emptyText),
                       1
                       /* TEXT */
                     ))],
@@ -25953,7 +25953,7 @@ var Qj = function(t, n) {
   }),
   components: {
     TinyTag: fs,
-    TinyInput: Ti,
+    TinyInput: Ei,
     TinyOption: Ba,
     TinyScrollbar: gs,
     TinyButton: lo,
@@ -26008,7 +26008,7 @@ var Qj = function(t, n) {
 }, Wj = {
   key: 0,
   class: "py-2.5 px-0 m-0 text-center text-color-text-secondary text-xs"
-}, Zj = /* @__PURE__ */ V(
+}, Zj = /* @__PURE__ */ J(
   "input",
   {
     disabled: ""
@@ -26035,7 +26035,7 @@ function _j(e, t, n, o, r, i) {
         return e.toggleMenu && e.toggleMenu.apply(e, arguments);
       })
     }, e.a(e.$attrs, ["class", "style"], !0)),
-    [V(
+    [J(
       "div",
       {
         ref: "tagsGroup",
@@ -26094,7 +26094,7 @@ function _j(e, t, n, o, r, i) {
             disabled: !e.showTips || e.state.device === "mb"
           }, {
             content: rt(function() {
-              return [V(
+              return [J(
                 "div",
                 {
                   class: je([e.state.showTips && "max-h-[theme(spacing.72)] overflow-x-hidden w-full", "inline-block"])
@@ -26114,7 +26114,7 @@ function _j(e, t, n, o, r, i) {
                 ))])) : (P(), K(
                   "span",
                   jj,
-                  qe(e.disabledTooltipContent || e.state.disabledTooltipContent),
+                  Qe(e.disabledTooltipContent || e.state.disabledTooltipContent),
                   1
                   /* TEXT */
                 ))],
@@ -26123,7 +26123,7 @@ function _j(e, t, n, o, r, i) {
               )];
             }),
             default: rt(function() {
-              return [V("span", Hj, [(P(!0), K(
+              return [J("span", Hj, [(P(!0), K(
                 Lt,
                 null,
                 an(e.state.selected, function(T) {
@@ -26133,7 +26133,7 @@ function _j(e, t, n, o, r, i) {
                     item: T
                   }, function() {
                     return [Dt(
-                      qe(T.state ? T.state.currentLabel : T.currentLabel),
+                      Qe(T.state ? T.state.currentLabel : T.currentLabel),
                       1
                       /* TEXT */
                     )];
@@ -26185,7 +26185,7 @@ function _j(e, t, n, o, r, i) {
                   },
                   Ca({
                     default: rt(function() {
-                      return [V(
+                      return [J(
                         "span",
                         {
                           class: je(e.gcls("tags-text"))
@@ -26194,7 +26194,7 @@ function _j(e, t, n, o, r, i) {
                           item: e.getLabelSlotValue(e.state.selectedVal[0])
                         }, function() {
                           return [Dt(
-                            qe(e.state.selectedVal[0].state ? e.state.selectedVal[0].state.currentLabel : e.state.selectedVal[0].currentLabel),
+                            Qe(e.state.selectedVal[0].state ? e.state.selectedVal[0].state.currentLabel : e.state.selectedVal[0].currentLabel),
                             1
                             /* TEXT */
                           )];
@@ -26208,7 +26208,7 @@ function _j(e, t, n, o, r, i) {
                   }, [e.state.tooltipContent[e.getValueKey(e.state.selectedVal[0])] ? {
                     name: "content",
                     fn: rt(function() {
-                      return [V(
+                      return [J(
                         "span",
                         {
                           class: je(e.gcls("tags-text"))
@@ -26217,7 +26217,7 @@ function _j(e, t, n, o, r, i) {
                           item: e.getLabelSlotValue(e.state.selectedVal[0])
                         }, function() {
                           return [Dt(
-                            qe(e.state.selectedVal[0].state ? e.state.selectedVal[0].state.currentLabel : e.state.selectedVal[0].currentLabel),
+                            Qe(e.state.selectedVal[0].state ? e.state.selectedVal[0].state.currentLabel : e.state.selectedVal[0].currentLabel),
                             1
                             /* TEXT */
                           )];
@@ -26244,12 +26244,12 @@ function _j(e, t, n, o, r, i) {
               maxWidth: e.maxTagWidth
             }, {
               default: rt(function() {
-                return [V(
+                return [J(
                   "span",
                   {
                     class: je(e.gcls("tags-text"))
                   },
-                  "+ " + qe(e.state.selectedVal.length - 1),
+                  "+ " + Qe(e.state.selectedVal.length - 1),
                   3
                   /* TEXT, CLASS */
                 )];
@@ -26276,7 +26276,7 @@ function _j(e, t, n, o, r, i) {
             }, {
               default: rt(function() {
                 return [Dt(
-                  qe(e.allText || e.t("ui.base.all")),
+                  Qe(e.allText || e.t("ui.base.all")),
                   1
                   /* TEXT */
                 )];
@@ -26313,7 +26313,7 @@ function _j(e, t, n, o, r, i) {
                       key: 0
                     },
                     [Dt(
-                      "+ " + qe(e.state.collapseTagsLength),
+                      "+ " + Qe(e.state.collapseTagsLength),
                       1
                       /* TEXT */
                     )],
@@ -26357,7 +26357,7 @@ function _j(e, t, n, o, r, i) {
                               key: 0,
                               class: je(e.gcls("tags-text"))
                             },
-                            qe(T.state ? T.state.currentLabel + "... " : T.currentLabel + "... "),
+                            Qe(T.state ? T.state.currentLabel + "... " : T.currentLabel + "... "),
                             3
                             /* TEXT, CLASS */
                           )) : (P(), K(
@@ -26370,7 +26370,7 @@ function _j(e, t, n, o, r, i) {
                               item: e.getLabelSlotValue(T)
                             }, function() {
                               return [Dt(
-                                qe(T.state ? T.state.currentLabel : T.currentLabel),
+                                Qe(T.state ? T.state.currentLabel : T.currentLabel),
                                 1
                                 /* TEXT */
                               )];
@@ -26390,7 +26390,7 @@ function _j(e, t, n, o, r, i) {
                               key: 0,
                               class: je(e.gcls("tags-text"))
                             },
-                            qe(T.state ? T.state.currentLabel + "... " : T.currentLabel + "... "),
+                            Qe(T.state ? T.state.currentLabel + "... " : T.currentLabel + "... "),
                             3
                             /* TEXT, CLASS */
                           )) : (P(), K(
@@ -26403,7 +26403,7 @@ function _j(e, t, n, o, r, i) {
                               item: e.getLabelSlotValue(T)
                             }, function() {
                               return [Dt(
-                                qe(T.state ? T.state.currentLabel : T.currentLabel),
+                                Qe(T.state ? T.state.currentLabel : T.currentLabel),
                                 1
                                 /* TEXT */
                               )];
@@ -26428,7 +26428,7 @@ function _j(e, t, n, o, r, i) {
                   return e.onClickCollapseTag(T);
                 })
               }, [Dt(
-                qe(e.t("ui.select.collapse")) + " ",
+                Qe(e.t("ui.select.collapse")) + " ",
                 1
                 /* TEXT */
               ), Ze(d)])) : Ie("v-if", !0)],
@@ -26547,7 +26547,7 @@ function _j(e, t, n, o, r, i) {
           }, null, 8, ["class"])])) : Ie("v-if", !0), e.showProportion && e.state.selected.length > 0 && e.state.options.length > 1 ? (P(), K(
             "span",
             Kj,
-            qe(e.state.selected.length + "/" + e.state.options.length),
+            Qe(e.state.selected.length + "/" + e.state.options.length),
             1
             /* TEXT */
           )) : Ie("v-if", !0), e.state.showClose ? (P(), st(h, {
@@ -26707,12 +26707,12 @@ function _j(e, t, n, o, r, i) {
                     },
                     [(P(), st(xn("icon-" + e.state.selectCls), {
                       class: je(e.m(["-mt-0.5 mr-2 fill-color-icon-secondary w-3.5 h-3.5", e.state.selectCls !== "check" && "fill-color-brand text-color-brand"]))
-                    }, null, 8, ["class"])), V(
+                    }, null, 8, ["class"])), J(
                       "span",
                       {
                         class: je([e.state.selectCls === "checked-sur" ? "text-color-brand" : "text-color-text-primary"])
                       },
-                      qe(e.allText || e.t("ui.base.all")),
+                      Qe(e.allText || e.t("ui.base.all")),
                       3
                       /* TEXT, CLASS */
                     )],
@@ -26739,12 +26739,12 @@ function _j(e, t, n, o, r, i) {
                     },
                     [(P(), st(xn("icon-" + e.state.filteredSelectCls), {
                       class: je(e.m(["-mt-0.5 mr-2 fill-color-icon-secondary", e.state.filteredSelectCls !== "check" && "fill-color-brand"]))
-                    }, null, 8, ["class"])), V(
+                    }, null, 8, ["class"])), J(
                       "span",
                       {
                         class: je([e.state.filteredSelectCls === "checked-sur" ? "text-color-brand" : "text-color-text-primary"])
                       },
-                      qe(e.allText || e.t("ui.base.all")),
+                      Qe(e.allText || e.t("ui.base.all")),
                       3
                       /* TEXT, CLASS */
                     )],
@@ -26789,7 +26789,7 @@ function _j(e, t, n, o, r, i) {
                 }) : (P(), K(
                   "p",
                   Vj,
-                  qe(e.state.emptyText),
+                  Qe(e.state.emptyText),
                   1
                   /* TEXT */
                 ))])) : (P(), K("div", Jj, [e.loading ? (P(), st(b, {
@@ -26798,7 +26798,7 @@ function _j(e, t, n, o, r, i) {
                 })) : (P(), K(
                   "span",
                   Wj,
-                  qe(e.state.emptyText),
+                  Qe(e.state.emptyText),
                   1
                   /* TEXT */
                 ))]))],
@@ -27380,7 +27380,7 @@ function AY(e, t, n, o, r, i) {
     onKeydown: t[6] || (t[6] = Yn(Pt(function(a) {
       return e.state.model = e.state.isDisabled ? e.state.model : e.label;
     }, ["stop", "prevent"]), ["space"]))
-  }, e.a(e.$attrs, ["class", "style"], !0)), [V(
+  }, e.a(e.$attrs, ["class", "style"], !0)), [J(
     "span",
     {
       class: je(["tiny-radio__input", {
@@ -27388,10 +27388,10 @@ function AY(e, t, n, o, r, i) {
         "is-checked": e.state.model === e.label
       }])
     },
-    [V("span", {
+    [J("span", {
       class: "tiny-radio__inner",
       tabindex: e.tabindex
-    }, null, 8, gY), Xt(V("input", {
+    }, null, 8, gY), Xt(J("input", {
       ref: "radio",
       class: "tiny-radio__original",
       value: e.label,
@@ -27415,14 +27415,14 @@ function AY(e, t, n, o, r, i) {
     }, null, 40, yY), [[Eu, e.state.model]])],
     2
     /* CLASS */
-  ), V("span", {
+  ), J("span", {
     id: (e.name || "radio") + "-" + e.label + "-label",
     class: "tiny-radio__label",
     onKeydown: t[5] || (t[5] = Pt(function() {
     }, ["stop"]))
   }, [vt(e.$slots, "default", {}, function() {
     return [Dt(
-      qe(e.text || e.label),
+      Qe(e.text || e.label),
       1
       /* TEXT */
     )];
@@ -27537,13 +27537,13 @@ function BY(e, t, n, o, r, i) {
     onKeydown: t[6] || (t[6] = Yn(Pt(function(d) {
       return e.state.model = e.state.isDisabled ? e.state.model : e.label;
     }, ["stop", "prevent"]), ["space"]))
-  }, e.a(e.$attrs, ["class", "style", "onClick"], !0)), [V(
+  }, e.a(e.$attrs, ["class", "style", "onClick"], !0)), [J(
     "span",
     {
       "data-tag": "tiny-radio-content",
       class: je(e.m(e.gcls("radio-label-common"), e.gcls(e.state.size === "medium" ? "radio-label-size-medium" : "radio-label-size-common"), e.gcls(e.state.isDisplayOnly && e.state.model === e.label && "hidden-radio")))
     },
-    [V("span", {
+    [J("span", {
       "data-tag": "tiny-radio-icon",
       class: je(e.m(e.gcls("radio-label-circle"))),
       tabindex: e.tabindex
@@ -27579,7 +27579,7 @@ function BY(e, t, n, o, r, i) {
       }), e.gcls({
         "mobile-icon-radioselected-default": !e.state.isDisabled
       })))
-    }, null, 8, ["class"])], 10, SY), Xt(V("input", {
+    }, null, 8, ["class"])], 10, SY), Xt(J("input", {
       ref: "radio",
       class: je(e.m(e.gcls("radio-input"))),
       value: e.label,
@@ -27603,7 +27603,7 @@ function BY(e, t, n, o, r, i) {
     }, null, 42, IY), [[Eu, e.state.model]])],
     2
     /* CLASS */
-  ), V("span", {
+  ), J("span", {
     "data-tag": "tiny-radio-label",
     ref: "label",
     id: (e.name || "radio") + "-" + e.label + "-label",
@@ -27614,7 +27614,7 @@ function BY(e, t, n, o, r, i) {
     }, ["stop"]))
   }, [vt(e.$slots, "default", {}, function() {
     return [Dt(
-      qe(e.text || e.label),
+      Qe(e.text || e.label),
       1
       /* TEXT */
     )];
@@ -27857,7 +27857,7 @@ function XY(e, t, n, o, r, i) {
     onKeydown: t[5] || (t[5] = Yn(Pt(function(a) {
       return e.state.value = e.state.isDisabled ? e.state.value : e.label;
     }, ["stop", "prevent"]), ["space"]))
-  }, [Xt(V("input", {
+  }, [Xt(J("input", {
     ref: "radio",
     class: "tiny-radio-button__orig-radio",
     value: e.label,
@@ -27877,7 +27877,7 @@ function XY(e, t, n, o, r, i) {
     onBlur: t[3] || (t[3] = function(a) {
       return e.state.focus = !1;
     })
-  }, null, 40, ZY), [[Eu, e.state.value]]), V(
+  }, null, 40, ZY), [[Eu, e.state.value]]), J(
     "span",
     {
       class: "tiny-radio-button__inner",
@@ -27891,7 +27891,7 @@ function XY(e, t, n, o, r, i) {
         key: 0
       },
       [Dt(
-        qe(e.text || e.label),
+        Qe(e.text || e.label),
         1
         /* TEXT */
       )],
@@ -27963,7 +27963,7 @@ function iK(e, t, n, o, r, i) {
     onKeydown: t[5] || (t[5] = Yn(Pt(function() {
       return e.keydownHandle && e.keydownHandle.apply(e, arguments);
     }, ["stop", "prevent"]), ["space"]))
-  }, e.a(e.$attrs, ["class", "style"], !0)), [Xt(V("input", {
+  }, e.a(e.$attrs, ["class", "style"], !0)), [Xt(J("input", {
     ref: "radio",
     class: "opacity-0 outline-0 absolute -z-10",
     value: e.label,
@@ -27983,7 +27983,7 @@ function iK(e, t, n, o, r, i) {
     onBlur: t[3] || (t[3] = function() {
       return e.handleBlur && e.handleBlur.apply(e, arguments);
     })
-  }, null, 40, rK), [[Eu, e.state.value]]), V(
+  }, null, 40, rK), [[Eu, e.state.value]]), J(
     "span",
     {
       "data-tag": "tiny-radio-button-content",
@@ -27998,7 +27998,7 @@ function iK(e, t, n, o, r, i) {
         key: 0
       },
       [Dt(
-        qe(e.text || e.label) + " ",
+        Qe(e.text || e.label) + " ",
         1
         /* TEXT */
       ), e.state.showTips ? (P(), st(s, {
@@ -28821,7 +28821,7 @@ const EK = ({
 }), Sz = ({ FluentEditor: e, state: t }) => {
   const n = e.imports["modules/better-table"];
   return {
-    bindings: Pi(qo({}, n.keyboardBindings), {
+    bindings: Oi(qo({}, n.keyboardBindings), {
       "list autofill": Cz({ FluentEditor: e, state: t }),
       // fix:在list的offset为0时（即只在最左侧触发）加键盘事件，使其跳过contenteditable=false的span进行移动
       "list ignoreRight": kz({ FluentEditor: e, state: t }),
@@ -28904,7 +28904,7 @@ const EK = ({
   underline: "IconEditorUnderline",
   undo: "IconEditorUndo",
   video: "IconEditorVideo"
-}, xz = Pi(qo({}, ew), {
+}, xz = Oi(qo({}, ew), {
   align: {
     default: '<svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path id="矢量 245" d="M21 3L3 3C2.58 3 2.25 3.33 2.25 3.75C2.25 4.16 2.58 4.5 3 4.5L21 4.5C21.41 4.5 21.75 4.16 21.75 3.75C21.75 3.33 21.41 3 21 3ZM3 8.5L15 8.5C15.41 8.5 15.75 8.83 15.75 9.25C15.75 9.66 15.41 10 15 10L3 10C2.58 10 2.25 9.66 2.25 9.25C2.25 8.83 2.58 8.5 3 8.5ZM21 14L3 14C2.58 14 2.25 14.33 2.25 14.75C2.25 15.16 2.58 15.5 3 15.5L21 15.5C21.41 15.5 21.75 15.16 21.75 14.75C21.75 14.33 21.41 14 21 14ZM15 19.5L3 19.5C2.58 19.5 2.25 19.83 2.25 20.25C2.25 20.66 2.58 21 3 21L15 21C15.41 21 15.75 20.66 15.75 20.25C15.75 19.83 15.41 19.5 15 19.5Z"/></svg>',
     center: '<svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path id="矢量 247" d="M21 3L3 3C2.58 3 2.25 3.33 2.25 3.75C2.25 4.16 2.58 4.5 3 4.5L21 4.5C21.41 4.5 21.75 4.16 21.75 3.75C21.75 3.33 21.41 3 21 3ZM6 8.5L18 8.5C18.41 8.5 18.75 8.83 18.75 9.25C18.75 9.66 18.41 10 18 10L6 10C5.58 10 5.25 9.66 5.25 9.25C5.25 8.83 5.58 8.5 6 8.5ZM21 14L3 14C2.58 14 2.25 14.33 2.25 14.75C2.25 15.16 2.58 15.5 3 15.5L21 15.5C21.41 15.5 21.75 15.16 21.75 14.75C21.75 14.33 21.41 14 21 14ZM18 19.5L6 19.5C5.58 19.5 5.25 19.83 5.25 20.25C5.25 20.66 5.58 21 6 21L18 21C18.41 21 18.75 20.66 18.75 20.25C18.75 19.83 18.41 19.5 18 19.5Z"/></svg>',
@@ -29066,7 +29066,7 @@ var Gz = "[object Null]", Hz = "[object Undefined]", R0 = na ? na.toStringTag : 
 function $s(e) {
   return e == null ? e === void 0 ? Hz : Gz : R0 && R0 in Object(e) ? Rz(e) : Uz(e);
 }
-function xi(e) {
+function Bi(e) {
   return e != null && typeof e == "object";
 }
 var Fa = Array.isArray;
@@ -29269,12 +29269,12 @@ function IV(e, t) {
 }
 var xV = "[object Arguments]";
 function G0(e) {
-  return xi(e) && $s(e) == xV;
+  return Bi(e) && $s(e) == xV;
 }
 var cw = Object.prototype, BV = cw.hasOwnProperty, MV = cw.propertyIsEnumerable, dh = G0(/* @__PURE__ */ (function() {
   return arguments;
 })()) ? G0 : function(e) {
-  return xi(e) && BV.call(e, "callee") && !MV.call(e, "callee");
+  return Bi(e) && BV.call(e, "callee") && !MV.call(e, "callee");
 };
 function LV() {
   return !1;
@@ -29283,7 +29283,7 @@ var uw = typeof exports == "object" && exports && !exports.nodeType && exports, 
 io[JV] = io[WV] = io[ZV] = io[XV] = io[_V] = io[eJ] = io[tJ] = io[nJ] = io[oJ] = !0;
 io[OV] = io[FV] = io[zV] = io[NV] = io[VV] = io[RV] = io[QV] = io[qV] = io[UV] = io[GV] = io[HV] = io[$V] = io[jV] = io[YV] = io[KV] = !1;
 function rJ(e) {
-  return xi(e) && lw(e.length) && !!io[$s(e)];
+  return Bi(e) && lw(e.length) && !!io[$s(e)];
 }
 function hm(e) {
   return function(t) {
@@ -29410,23 +29410,23 @@ function OJ(e, t) {
   var n = this.__data__, o = Gu(n, e);
   return o < 0 ? (++this.size, n.push([e, t])) : n[o][1] = t, this;
 }
-function Oi(e) {
+function Fi(e) {
   var t = -1, n = e == null ? 0 : e.length;
   for (this.clear(); ++t < n; ) {
     var o = e[t];
     this.set(o[0], o[1]);
   }
 }
-Oi.prototype.clear = xJ;
-Oi.prototype.delete = LJ;
-Oi.prototype.get = DJ;
-Oi.prototype.has = PJ;
-Oi.prototype.set = OJ;
+Fi.prototype.clear = xJ;
+Fi.prototype.delete = LJ;
+Fi.prototype.get = DJ;
+Fi.prototype.has = PJ;
+Fi.prototype.set = OJ;
 var Dl = Ga(ui, "Map");
 function FJ() {
   this.size = 0, this.__data__ = {
     hash: new Na(),
-    map: new (Dl || Oi)(),
+    map: new (Dl || Fi)(),
     string: new Na()
   };
 }
@@ -29471,7 +29471,7 @@ function GJ(e, t) {
 }
 var fw = hw(Object.getPrototypeOf, Object), HJ = "[object Object]", $J = Function.prototype, jJ = Object.prototype, gw = $J.toString, YJ = jJ.hasOwnProperty, KJ = gw.call(Object);
 function zJ(e) {
-  if (!xi(e) || $s(e) != HJ)
+  if (!Bi(e) || $s(e) != HJ)
     return !1;
   var t = fw(e);
   if (t === null)
@@ -29480,7 +29480,7 @@ function zJ(e) {
   return typeof n == "function" && n instanceof n && gw.call(n) == KJ;
 }
 function VJ() {
-  this.__data__ = new Oi(), this.size = 0;
+  this.__data__ = new Fi(), this.size = 0;
 }
 function JJ(e) {
   var t = this.__data__, n = t.delete(e);
@@ -29495,7 +29495,7 @@ function ZJ(e) {
 var XJ = 200;
 function _J(e, t) {
   var n = this.__data__;
-  if (n instanceof Oi) {
+  if (n instanceof Fi) {
     var o = n.__data__;
     if (!Dl || o.length < XJ - 1)
       return o.push([e, t]), this.size = ++n.size, this;
@@ -29504,7 +29504,7 @@ function _J(e, t) {
   return n.set(e, t), this.size = n.size, this;
 }
 function ni(e) {
-  var t = this.__data__ = new Oi(e);
+  var t = this.__data__ = new Fi(e);
   this.size = t.size;
 }
 ni.prototype.clear = VJ;
@@ -29625,11 +29625,11 @@ function bw(e) {
 }
 var UW = "[object Map]";
 function GW(e) {
-  return xi(e) && Pr(e) == UW;
+  return Bi(e) && Pr(e) == UW;
 }
 var ny = Ps && Ps.isMap, HW = ny ? hm(ny) : GW, $W = "[object Set]";
 function jW(e) {
-  return xi(e) && Pr(e) == $W;
+  return Bi(e) && Pr(e) == $W;
 }
 var oy = Ps && Ps.isSet, YW = oy ? hm(oy) : jW, KW = 1, ww = "[object Arguments]", zW = "[object Array]", VW = "[object Boolean]", JW = "[object Date]", WW = "[object Error]", Cw = "[object Function]", ZW = "[object GeneratorFunction]", XW = "[object Map]", _W = "[object Number]", kw = "[object Object]", eZ = "[object RegExp]", tZ = "[object Set]", nZ = "[object String]", oZ = "[object Symbol]", rZ = "[object WeakMap]", iZ = "[object ArrayBuffer]", aZ = "[object DataView]", sZ = "[object Float32Array]", lZ = "[object Float64Array]", cZ = "[object Int8Array]", uZ = "[object Int16Array]", dZ = "[object Int32Array]", pZ = "[object Uint8Array]", hZ = "[object Uint8ClampedArray]", mZ = "[object Uint16Array]", fZ = "[object Uint32Array]", to = {};
 to[ww] = to[zW] = to[iZ] = to[aZ] = to[VW] = to[JW] = to[sZ] = to[lZ] = to[cZ] = to[uZ] = to[dZ] = to[XW] = to[_W] = to[kw] = to[eZ] = to[tZ] = to[nZ] = to[oZ] = to[pZ] = to[hZ] = to[mZ] = to[fZ] = !0;
@@ -29832,7 +29832,7 @@ function zZ(e, t, n, o, r, i) {
   return h ? (i || (i = new ni()), jZ(e, t, n, o, r, i)) : !1;
 }
 function Ew(e, t, n, o, r) {
-  return e === t ? !0 : e == null || t == null || !xi(e) && !xi(t) ? e !== e && t !== t : zZ(e, t, n, o, Ew, r);
+  return e === t ? !0 : e == null || t == null || !Bi(e) && !Bi(t) ? e !== e && t !== t : zZ(e, t, n, o, Ew, r);
 }
 function VZ(e) {
   return function(t, n, o) {
@@ -29849,7 +29849,7 @@ function gh(e, t, n) {
   (n !== void 0 && !Hl(e[t], n) || n === void 0 && !(t in e)) && dm(e, t, n);
 }
 function WZ(e) {
-  return xi(e) && Uu(e);
+  return Bi(e) && Uu(e);
 }
 function yh(e, t) {
   if (!(t === "constructor" && typeof e[t] == "function") && t != "__proto__")
@@ -29884,7 +29884,7 @@ function Sw(e, t, n, o, r) {
 function gm(e, t) {
   return Ew(e, t);
 }
-var Si = EV(function(e, t, n) {
+var Ii = EV(function(e, t, n) {
   Sw(e, t, n);
 }), en = /* @__PURE__ */ ((e) => (e[e.TYPE = 3] = "TYPE", e[e.LEVEL = 12] = "LEVEL", e[e.ATTRIBUTE = 13] = "ATTRIBUTE", e[e.BLOT = 14] = "BLOT", e[e.INLINE = 7] = "INLINE", e[e.BLOCK = 11] = "BLOCK", e[e.BLOCK_BLOT = 10] = "BLOCK_BLOT", e[e.INLINE_BLOT = 6] = "INLINE_BLOT", e[e.BLOCK_ATTRIBUTE = 9] = "BLOCK_ATTRIBUTE", e[e.INLINE_ATTRIBUTE = 5] = "INLINE_ATTRIBUTE", e[e.ANY = 15] = "ANY", e))(en || {});
 class li {
@@ -30276,7 +30276,7 @@ function cy(e, t) {
     }), e.parentNode && e.parentNode.replaceChild(o.domNode, e), o.attach(), o;
   }
 }
-const Lw = class qi extends Bw {
+const Lw = class Ui extends Bw {
   constructor(t, n) {
     super(t, n), this.uiNode = null, this.build();
   }
@@ -30289,7 +30289,7 @@ const Lw = class qi extends Bw {
     });
   }
   attachUI(t) {
-    this.uiNode != null && this.uiNode.remove(), this.uiNode = t, qi.uiClass && this.uiNode.classList.add(qi.uiClass), this.uiNode.setAttribute("contenteditable", "false"), this.domNode.insertBefore(this.uiNode, this.domNode.firstChild);
+    this.uiNode != null && this.uiNode.remove(), this.uiNode = t, Ui.uiClass && this.uiNode.classList.add(Ui.uiClass), this.uiNode.setAttribute("contenteditable", "false"), this.domNode.insertBefore(this.uiNode, this.domNode.firstChild);
   }
   /**
    * Called during construction, should fill its own children LinkedList.
@@ -30315,7 +30315,7 @@ const Lw = class qi extends Bw {
   }
   descendant(t, n = 0) {
     const [o, r] = this.children.find(n);
-    return t.blotName == null && t(o) || t.blotName != null && o instanceof t ? [o, r] : o instanceof qi ? o.descendant(t, r) : [null, -1];
+    return t.blotName == null && t(o) || t.blotName != null && o instanceof t ? [o, r] : o instanceof Ui ? o.descendant(t, r) : [null, -1];
   }
   descendants(t, n = 0, o = Number.MAX_VALUE) {
     let r = [], i = o;
@@ -30323,7 +30323,7 @@ const Lw = class qi extends Bw {
       n,
       o,
       (a, s, l) => {
-        (t.blotName == null && t(a) || t.blotName != null && a instanceof t) && r.push(a), a instanceof qi && (r = r.concat(
+        (t.blotName == null && t(a) || t.blotName != null && a instanceof t) && r.push(a), a instanceof Ui && (r = r.concat(
           a.descendants(t, s, i)
         )), i -= l;
       }
@@ -30339,7 +30339,7 @@ const Lw = class qi extends Bw {
     this.children.forEach((n) => {
       t || this.statics.allowedChildren.some(
         (o) => n instanceof o
-      ) || (n.statics.scope === en.BLOCK_BLOT ? (n.next != null && this.splitAfter(n), n.prev != null && this.splitAfter(n.prev), n.parent.unwrap(), t = !0) : n instanceof qi ? n.unwrap() : n.remove());
+      ) || (n.statics.scope === en.BLOCK_BLOT ? (n.next != null && this.splitAfter(n), n.prev != null && this.splitAfter(n.prev), n.parent.unwrap(), t = !0) : n instanceof Ui ? n.unwrap() : n.remove());
     });
   }
   formatAt(t, n, o, r) {
@@ -30379,14 +30379,14 @@ const Lw = class qi extends Bw {
   }
   path(t, n = !1) {
     const [o, r] = this.children.find(t, n), i = [[this, t]];
-    return o instanceof qi ? i.concat(o.path(r, n)) : (o != null && i.push([o, r]), i);
+    return o instanceof Ui ? i.concat(o.path(r, n)) : (o != null && i.push([o, r]), i);
   }
   removeChild(t) {
     this.children.remove(t);
   }
   replaceWith(t, n) {
     const o = typeof t == "string" ? this.scroll.create(t, n) : t;
-    return o instanceof qi && this.moveChildren(o), super.replaceWith(o);
+    return o instanceof Ui && this.moveChildren(o), super.replaceWith(o);
   }
   split(t, n = !1) {
     if (!n) {
@@ -30737,7 +30737,7 @@ function fX() {
   if (uy) return Gd;
   uy = 1;
   var e = -1, t = 1, n = 0;
-  function o(F, Y, O, w, X) {
+  function o(F, Y, O, w, Z) {
     if (F === Y)
       return F ? [[n, F]] : [];
     if (O != null) {
@@ -30745,12 +30745,12 @@ function fX() {
       if (E)
         return E;
     }
-    var J = s(F, Y), G = F.substring(0, J);
-    F = F.substring(J), Y = Y.substring(J), J = u(F, Y);
-    var oe = F.substring(F.length - J);
-    F = F.substring(0, F.length - J), Y = Y.substring(0, Y.length - J);
+    var V = s(F, Y), G = F.substring(0, V);
+    F = F.substring(V), Y = Y.substring(V), V = u(F, Y);
+    var oe = F.substring(F.length - V);
+    F = F.substring(0, F.length - V), Y = Y.substring(0, Y.length - V);
     var le = r(F, Y);
-    return G && le.unshift([n, G]), oe && le.push([n, oe]), b(le, X), w && c(le), le;
+    return G && le.unshift([n, G]), oe && le.push([n, oe]), b(le, Z), w && c(le), le;
   }
   function r(F, Y) {
     var O;
@@ -30758,30 +30758,30 @@ function fX() {
       return [[t, Y]];
     if (!Y)
       return [[e, F]];
-    var w = F.length > Y.length ? F : Y, X = F.length > Y.length ? Y : F, E = w.indexOf(X);
+    var w = F.length > Y.length ? F : Y, Z = F.length > Y.length ? Y : F, E = w.indexOf(Z);
     if (E !== -1)
       return O = [
         [t, w.substring(0, E)],
-        [n, X],
-        [t, w.substring(E + X.length)]
+        [n, Z],
+        [t, w.substring(E + Z.length)]
       ], F.length > Y.length && (O[0][0] = O[2][0] = e), O;
-    if (X.length === 1)
+    if (Z.length === 1)
       return [
         [e, F],
         [t, Y]
       ];
-    var J = d(F, Y);
-    if (J) {
-      var G = J[0], oe = J[1], le = J[2], ve = J[3], we = J[4], pe = o(G, le), ne = o(oe, ve);
+    var V = d(F, Y);
+    if (V) {
+      var G = V[0], oe = V[1], le = V[2], ve = V[3], we = V[4], pe = o(G, le), ne = o(oe, ve);
       return pe.concat([[n, we]], ne);
     }
     return i(F, Y);
   }
   function i(F, Y) {
-    for (var O = F.length, w = Y.length, X = Math.ceil((O + w) / 2), E = X, J = 2 * X, G = new Array(J), oe = new Array(J), le = 0; le < J; le++)
+    for (var O = F.length, w = Y.length, Z = Math.ceil((O + w) / 2), E = Z, V = 2 * Z, G = new Array(V), oe = new Array(V), le = 0; le < V; le++)
       G[le] = -1, oe[le] = -1;
     G[E + 1] = 0, oe[E + 1] = 0;
-    for (var ve = O - w, we = ve % 2 !== 0, pe = 0, ne = 0, ge = 0, z = 0, ue = 0; ue < X; ue++) {
+    for (var ve = O - w, we = ve % 2 !== 0, pe = 0, ne = 0, ge = 0, z = 0, ue = 0; ue < Z; ue++) {
       for (var D = -ue + pe; D <= ue - ne; D += 2) {
         var ye = E + D, B;
         D === -ue || D !== ue && G[ye - 1] < G[ye + 1] ? B = G[ye + 1] : B = G[ye - 1] + 1;
@@ -30793,7 +30793,7 @@ function fX() {
           pe += 2;
         else if (we) {
           var C = E + ve - D;
-          if (C >= 0 && C < J && oe[C] !== -1) {
+          if (C >= 0 && C < V && oe[C] !== -1) {
             var M = O - oe[C];
             if (B >= M)
               return a(F, Y, B, g);
@@ -30811,7 +30811,7 @@ function fX() {
           ge += 2;
         else if (!we) {
           var ye = E + ve - H;
-          if (ye >= 0 && ye < J && G[ye] !== -1) {
+          if (ye >= 0 && ye < V && G[ye] !== -1) {
             var B = G[ye], g = E + B - ye;
             if (M = O - M, B >= M)
               return a(F, Y, B, g);
@@ -30825,43 +30825,43 @@ function fX() {
     ];
   }
   function a(F, Y, O, w) {
-    var X = F.substring(0, O), E = Y.substring(0, w), J = F.substring(O), G = Y.substring(w), oe = o(X, E), le = o(J, G);
+    var Z = F.substring(0, O), E = Y.substring(0, w), V = F.substring(O), G = Y.substring(w), oe = o(Z, E), le = o(V, G);
     return oe.concat(le);
   }
   function s(F, Y) {
     if (!F || !Y || F.charAt(0) !== Y.charAt(0))
       return 0;
-    for (var O = 0, w = Math.min(F.length, Y.length), X = w, E = 0; O < X; )
-      F.substring(E, X) == Y.substring(E, X) ? (O = X, E = O) : w = X, X = Math.floor((w - O) / 2 + O);
-    return k(F.charCodeAt(X - 1)) && X--, X;
+    for (var O = 0, w = Math.min(F.length, Y.length), Z = w, E = 0; O < Z; )
+      F.substring(E, Z) == Y.substring(E, Z) ? (O = Z, E = O) : w = Z, Z = Math.floor((w - O) / 2 + O);
+    return k(F.charCodeAt(Z - 1)) && Z--, Z;
   }
   function l(F, Y) {
     var O = F.length, w = Y.length;
     if (O == 0 || w == 0)
       return 0;
     O > w ? F = F.substring(O - w) : O < w && (Y = Y.substring(0, O));
-    var X = Math.min(O, w);
+    var Z = Math.min(O, w);
     if (F == Y)
-      return X;
-    for (var E = 0, J = 1; ; ) {
-      var G = F.substring(X - J), oe = Y.indexOf(G);
+      return Z;
+    for (var E = 0, V = 1; ; ) {
+      var G = F.substring(Z - V), oe = Y.indexOf(G);
       if (oe == -1)
         return E;
-      J += oe, (oe == 0 || F.substring(X - J) == Y.substring(0, J)) && (E = J, J++);
+      V += oe, (oe == 0 || F.substring(Z - V) == Y.substring(0, V)) && (E = V, V++);
     }
   }
   function u(F, Y) {
     if (!F || !Y || F.slice(-1) !== Y.slice(-1))
       return 0;
-    for (var O = 0, w = Math.min(F.length, Y.length), X = w, E = 0; O < X; )
-      F.substring(F.length - X, F.length - E) == Y.substring(Y.length - X, Y.length - E) ? (O = X, E = O) : w = X, X = Math.floor((w - O) / 2 + O);
-    return I(F.charCodeAt(F.length - X)) && X--, X;
+    for (var O = 0, w = Math.min(F.length, Y.length), Z = w, E = 0; O < Z; )
+      F.substring(F.length - Z, F.length - E) == Y.substring(Y.length - Z, Y.length - E) ? (O = Z, E = O) : w = Z, Z = Math.floor((w - O) / 2 + O);
+    return I(F.charCodeAt(F.length - Z)) && Z--, Z;
   }
   function d(F, Y) {
     var O = F.length > Y.length ? F : Y, w = F.length > Y.length ? Y : F;
     if (O.length < 4 || w.length * 2 < O.length)
       return null;
-    function X(ne, ge, z) {
+    function Z(ne, ge, z) {
       for (var ue = ne.substring(z, z + Math.floor(ne.length / 4)), D = -1, ye = "", B, g, C, M; (D = ge.indexOf(ue, D + 1)) !== -1; ) {
         var H = s(
           ne.substring(z),
@@ -30880,29 +30880,29 @@ function fX() {
         ye
       ] : null;
     }
-    var E = X(
+    var E = Z(
       O,
       w,
       Math.ceil(O.length / 4)
-    ), J = X(
+    ), V = Z(
       O,
       w,
       Math.ceil(O.length / 2)
     ), G;
-    if (!E && !J)
+    if (!E && !V)
       return null;
-    J ? E ? G = E[4].length > J[4].length ? E : J : G = J : G = E;
+    V ? E ? G = E[4].length > V[4].length ? E : V : G = V : G = E;
     var oe, le, ve, we;
     F.length > Y.length ? (oe = G[0], le = G[1], ve = G[2], we = G[3]) : (ve = G[0], we = G[1], oe = G[2], le = G[3]);
     var pe = G[4];
     return [oe, le, ve, we, pe];
   }
   function c(F) {
-    for (var Y = !1, O = [], w = 0, X = null, E = 0, J = 0, G = 0, oe = 0, le = 0; E < F.length; )
-      F[E][0] == n ? (O[w++] = E, J = oe, G = le, oe = 0, le = 0, X = F[E][1]) : (F[E][0] == t ? oe += F[E][1].length : le += F[E][1].length, X && X.length <= Math.max(J, G) && X.length <= Math.max(oe, le) && (F.splice(O[w - 1], 0, [
+    for (var Y = !1, O = [], w = 0, Z = null, E = 0, V = 0, G = 0, oe = 0, le = 0; E < F.length; )
+      F[E][0] == n ? (O[w++] = E, V = oe, G = le, oe = 0, le = 0, Z = F[E][1]) : (F[E][0] == t ? oe += F[E][1].length : le += F[E][1].length, Z && Z.length <= Math.max(V, G) && Z.length <= Math.max(oe, le) && (F.splice(O[w - 1], 0, [
         e,
-        X
-      ]), F[O[w - 1] + 1][0] = t, w--, w--, E = w > 0 ? O[w - 1] : -1, J = 0, G = 0, oe = 0, le = 0, X = null, Y = !0)), E++;
+        Z
+      ]), F[O[w - 1] + 1][0] = t, w--, w--, E = w > 0 ? O[w - 1] : -1, V = 0, G = 0, oe = 0, le = 0, Z = null, Y = !0)), E++;
     for (Y && b(F), y(F), E = 1; E < F.length; ) {
       if (F[E - 1][0] == e && F[E][0] == t) {
         var ve = F[E - 1][1], we = F[E][1], pe = l(ve, we), ne = l(we, ve);
@@ -30933,15 +30933,15 @@ function fX() {
     }
     for (var O = 1; O < F.length - 1; ) {
       if (F[O - 1][0] == n && F[O + 1][0] == n) {
-        var w = F[O - 1][1], X = F[O][1], E = F[O + 1][1], J = u(w, X);
-        if (J) {
-          var G = X.substring(X.length - J);
-          w = w.substring(0, w.length - J), X = G + X.substring(0, X.length - J), E = G + E;
+        var w = F[O - 1][1], Z = F[O][1], E = F[O + 1][1], V = u(w, Z);
+        if (V) {
+          var G = Z.substring(Z.length - V);
+          w = w.substring(0, w.length - V), Z = G + Z.substring(0, Z.length - V), E = G + E;
         }
-        for (var oe = w, le = X, ve = E, we = Y(w, X) + Y(X, E); X.charAt(0) === E.charAt(0); ) {
-          w += X.charAt(0), X = X.substring(1) + E.charAt(0), E = E.substring(1);
-          var pe = Y(w, X) + Y(X, E);
-          pe >= we && (we = pe, oe = w, le = X, ve = E);
+        for (var oe = w, le = Z, ve = E, we = Y(w, Z) + Y(Z, E); Z.charAt(0) === E.charAt(0); ) {
+          w += Z.charAt(0), Z = Z.substring(1) + E.charAt(0), E = E.substring(1);
+          var pe = Y(w, Z) + Y(Z, E);
+          pe >= we && (we = pe, oe = w, le = Z, ve = E);
         }
         F[O - 1][1] != oe && (oe ? F[O - 1][1] = oe : (F.splice(O - 1, 1), O--), F[O][1] = le, ve ? F[O + 1][1] = ve : (F.splice(O + 1, 1), O--));
       }
@@ -30950,64 +30950,64 @@ function fX() {
   }
   function b(F, Y) {
     F.push([n, ""]);
-    for (var O = 0, w = 0, X = 0, E = "", J = "", G; O < F.length; ) {
+    for (var O = 0, w = 0, Z = 0, E = "", V = "", G; O < F.length; ) {
       if (O < F.length - 1 && !F[O][1]) {
         F.splice(O, 1);
         continue;
       }
       switch (F[O][0]) {
         case t:
-          X++, J += F[O][1], O++;
+          Z++, V += F[O][1], O++;
           break;
         case e:
           w++, E += F[O][1], O++;
           break;
         case n:
-          var oe = O - X - w - 1;
+          var oe = O - Z - w - 1;
           if (Y) {
             if (oe >= 0 && T(F[oe][1])) {
               var le = F[oe][1].slice(-1);
               if (F[oe][1] = F[oe][1].slice(
                 0,
                 -1
-              ), E = le + E, J = le + J, !F[oe][1]) {
+              ), E = le + E, V = le + V, !F[oe][1]) {
                 F.splice(oe, 1), O--;
                 var ve = oe - 1;
-                F[ve] && F[ve][0] === t && (X++, J = F[ve][1] + J, ve--), F[ve] && F[ve][0] === e && (w++, E = F[ve][1] + E, ve--), oe = ve;
+                F[ve] && F[ve][0] === t && (Z++, V = F[ve][1] + V, ve--), F[ve] && F[ve][0] === e && (w++, E = F[ve][1] + E, ve--), oe = ve;
               }
             }
             if (x(F[O][1])) {
               var le = F[O][1].charAt(0);
-              F[O][1] = F[O][1].slice(1), E += le, J += le;
+              F[O][1] = F[O][1].slice(1), E += le, V += le;
             }
           }
           if (O < F.length - 1 && !F[O][1]) {
             F.splice(O, 1);
             break;
           }
-          if (E.length > 0 || J.length > 0) {
-            E.length > 0 && J.length > 0 && (G = s(J, E), G !== 0 && (oe >= 0 ? F[oe][1] += J.substring(
+          if (E.length > 0 || V.length > 0) {
+            E.length > 0 && V.length > 0 && (G = s(V, E), G !== 0 && (oe >= 0 ? F[oe][1] += V.substring(
               0,
               G
             ) : (F.splice(0, 0, [
               n,
-              J.substring(0, G)
-            ]), O++), J = J.substring(G), E = E.substring(G)), G = u(J, E), G !== 0 && (F[O][1] = J.substring(J.length - G) + F[O][1], J = J.substring(
+              V.substring(0, G)
+            ]), O++), V = V.substring(G), E = E.substring(G)), G = u(V, E), G !== 0 && (F[O][1] = V.substring(V.length - G) + F[O][1], V = V.substring(
               0,
-              J.length - G
+              V.length - G
             ), E = E.substring(
               0,
               E.length - G
             )));
-            var we = X + w;
-            E.length === 0 && J.length === 0 ? (F.splice(O - we, we), O = O - we) : E.length === 0 ? (F.splice(O - we, we, [t, J]), O = O - we + 1) : J.length === 0 ? (F.splice(O - we, we, [e, E]), O = O - we + 1) : (F.splice(
+            var we = Z + w;
+            E.length === 0 && V.length === 0 ? (F.splice(O - we, we), O = O - we) : E.length === 0 ? (F.splice(O - we, we, [t, V]), O = O - we + 1) : V.length === 0 ? (F.splice(O - we, we, [e, E]), O = O - we + 1) : (F.splice(
               O - we,
               we,
               [e, E],
-              [t, J]
+              [t, V]
             ), O = O - we + 2);
           }
-          O !== 0 && F[O - 1][0] === n ? (F[O - 1][1] += F[O][1], F.splice(O, 1)) : O++, X = 0, w = 0, E = "", J = "";
+          O !== 0 && F[O - 1][0] === n ? (F[O - 1][1] += F[O][1], F.splice(O, 1)) : O++, Z = 0, w = 0, E = "", V = "";
           break;
       }
     }
@@ -31048,12 +31048,12 @@ function fX() {
     ]);
   }
   function L(F, Y, O) {
-    var w = typeof O == "number" ? { index: O, length: 0 } : O.oldRange, X = typeof O == "number" ? null : O.newRange, E = F.length, J = Y.length;
-    if (w.length === 0 && (X === null || X.length === 0)) {
-      var G = w.index, oe = F.slice(0, G), le = F.slice(G), ve = X ? X.index : null;
+    var w = typeof O == "number" ? { index: O, length: 0 } : O.oldRange, Z = typeof O == "number" ? null : O.newRange, E = F.length, V = Y.length;
+    if (w.length === 0 && (Z === null || Z.length === 0)) {
+      var G = w.index, oe = F.slice(0, G), le = F.slice(G), ve = Z ? Z.index : null;
       e: {
-        var we = G + J - E;
-        if (ve !== null && ve !== we || we < 0 || we > J)
+        var we = G + V - E;
+        if (ve !== null && ve !== we || we < 0 || we > V)
           break e;
         var pe = Y.slice(0, we), ne = Y.slice(we);
         if (ne !== le)
@@ -31070,22 +31070,22 @@ function fX() {
         var B = G, pe = Y.slice(0, B), ne = Y.slice(B);
         if (pe !== oe)
           break e;
-        var g = Math.min(E - B, J - B), C = le.slice(le.length - g), M = ne.slice(ne.length - g);
+        var g = Math.min(E - B, V - B), C = le.slice(le.length - g), M = ne.slice(ne.length - g);
         if (C !== M)
           break e;
         var D = le.slice(0, le.length - g), ye = ne.slice(0, ne.length - g);
         return Q(oe, D, ye, C);
       }
     }
-    if (w.length > 0 && X && X.length === 0)
+    if (w.length > 0 && Z && Z.length === 0)
       e: {
         var z = F.slice(0, w.index), C = F.slice(w.index + w.length), ge = z.length, g = C.length;
-        if (J < ge + g)
+        if (V < ge + g)
           break e;
-        var ue = Y.slice(0, ge), M = Y.slice(J - g);
+        var ue = Y.slice(0, ge), M = Y.slice(V - g);
         if (z !== ue || C !== M)
           break e;
-        var D = F.slice(ge, E - g), ye = Y.slice(ge, J - g);
+        var D = F.slice(ge, E - g), ye = Y.slice(ge, V - g);
         return Q(z, D, ye, C);
       }
     return null;
@@ -31100,8 +31100,8 @@ ul.exports;
 var dy;
 function Pw() {
   return dy || (dy = 1, (function(e, t) {
-    var n = 200, o = "__lodash_hash_undefined__", r = 9007199254740991, i = "[object Arguments]", a = "[object Array]", s = "[object Boolean]", l = "[object Date]", u = "[object Error]", d = "[object Function]", c = "[object GeneratorFunction]", h = "[object Map]", f = "[object Number]", p = "[object Object]", v = "[object Promise]", m = "[object RegExp]", y = "[object Set]", b = "[object String]", k = "[object Symbol]", I = "[object WeakMap]", x = "[object ArrayBuffer]", T = "[object DataView]", U = "[object Float32Array]", Q = "[object Float64Array]", L = "[object Int8Array]", N = "[object Int16Array]", F = "[object Int32Array]", Y = "[object Uint8Array]", O = "[object Uint8ClampedArray]", w = "[object Uint16Array]", X = "[object Uint32Array]", E = /[\\^$.*+?()[\]{}|]/g, J = /\w*$/, G = /^\[object .+?Constructor\]$/, oe = /^(?:0|[1-9]\d*)$/, le = {};
-    le[i] = le[a] = le[x] = le[T] = le[s] = le[l] = le[U] = le[Q] = le[L] = le[N] = le[F] = le[h] = le[f] = le[p] = le[m] = le[y] = le[b] = le[k] = le[Y] = le[O] = le[w] = le[X] = !0, le[u] = le[d] = le[I] = !1;
+    var n = 200, o = "__lodash_hash_undefined__", r = 9007199254740991, i = "[object Arguments]", a = "[object Array]", s = "[object Boolean]", l = "[object Date]", u = "[object Error]", d = "[object Function]", c = "[object GeneratorFunction]", h = "[object Map]", f = "[object Number]", p = "[object Object]", v = "[object Promise]", m = "[object RegExp]", y = "[object Set]", b = "[object String]", k = "[object Symbol]", I = "[object WeakMap]", x = "[object ArrayBuffer]", T = "[object DataView]", U = "[object Float32Array]", Q = "[object Float64Array]", L = "[object Int8Array]", N = "[object Int16Array]", F = "[object Int32Array]", Y = "[object Uint8Array]", O = "[object Uint8ClampedArray]", w = "[object Uint16Array]", Z = "[object Uint32Array]", E = /[\\^$.*+?()[\]{}|]/g, V = /\w*$/, G = /^\[object .+?Constructor\]$/, oe = /^(?:0|[1-9]\d*)$/, le = {};
+    le[i] = le[a] = le[x] = le[T] = le[s] = le[l] = le[U] = le[Q] = le[L] = le[N] = le[F] = le[h] = le[f] = le[p] = le[m] = le[y] = le[b] = le[k] = le[Y] = le[O] = le[w] = le[Z] = !0, le[u] = le[d] = le[I] = !1;
     var ve = typeof kr == "object" && kr && kr.Object === Object && kr, we = typeof self == "object" && self && self.Object === Object && self, pe = ve || we || Function("return this")(), ne = t && !t.nodeType && t, ge = ne && !0 && e && !e.nodeType && e, z = ge && ge.exports === ne;
     function ue(q, ie) {
       return q.set(ie[0], ie[1]), q;
@@ -31373,7 +31373,7 @@ function Pw() {
       return g(pt, ue, new q.constructor());
     }
     function Ot(q) {
-      var ie = new q.constructor(q.source, J.exec(q));
+      var ie = new q.constructor(q.source, V.exec(q));
       return ie.lastIndex = q.lastIndex, ie;
     }
     function on(q, ie, Re) {
@@ -31458,7 +31458,7 @@ function Pw() {
         case Y:
         case O:
         case w:
-        case X:
+        case Z:
           return On(q, pt);
         case h:
           return Zn(q, pt, Re);
@@ -31548,8 +31548,8 @@ dl.exports;
 var py;
 function Ow() {
   return py || (py = 1, (function(e, t) {
-    var n = 200, o = "__lodash_hash_undefined__", r = 1, i = 2, a = 9007199254740991, s = "[object Arguments]", l = "[object Array]", u = "[object AsyncFunction]", d = "[object Boolean]", c = "[object Date]", h = "[object Error]", f = "[object Function]", p = "[object GeneratorFunction]", v = "[object Map]", m = "[object Number]", y = "[object Null]", b = "[object Object]", k = "[object Promise]", I = "[object Proxy]", x = "[object RegExp]", T = "[object Set]", U = "[object String]", Q = "[object Symbol]", L = "[object Undefined]", N = "[object WeakMap]", F = "[object ArrayBuffer]", Y = "[object DataView]", O = "[object Float32Array]", w = "[object Float64Array]", X = "[object Int8Array]", E = "[object Int16Array]", J = "[object Int32Array]", G = "[object Uint8Array]", oe = "[object Uint8ClampedArray]", le = "[object Uint16Array]", ve = "[object Uint32Array]", we = /[\\^$.*+?()[\]{}|]/g, pe = /^\[object .+?Constructor\]$/, ne = /^(?:0|[1-9]\d*)$/, ge = {};
-    ge[O] = ge[w] = ge[X] = ge[E] = ge[J] = ge[G] = ge[oe] = ge[le] = ge[ve] = !0, ge[s] = ge[l] = ge[F] = ge[d] = ge[Y] = ge[c] = ge[h] = ge[f] = ge[v] = ge[m] = ge[b] = ge[x] = ge[T] = ge[U] = ge[N] = !1;
+    var n = 200, o = "__lodash_hash_undefined__", r = 1, i = 2, a = 9007199254740991, s = "[object Arguments]", l = "[object Array]", u = "[object AsyncFunction]", d = "[object Boolean]", c = "[object Date]", h = "[object Error]", f = "[object Function]", p = "[object GeneratorFunction]", v = "[object Map]", m = "[object Number]", y = "[object Null]", b = "[object Object]", k = "[object Promise]", I = "[object Proxy]", x = "[object RegExp]", T = "[object Set]", U = "[object String]", Q = "[object Symbol]", L = "[object Undefined]", N = "[object WeakMap]", F = "[object ArrayBuffer]", Y = "[object DataView]", O = "[object Float32Array]", w = "[object Float64Array]", Z = "[object Int8Array]", E = "[object Int16Array]", V = "[object Int32Array]", G = "[object Uint8Array]", oe = "[object Uint8ClampedArray]", le = "[object Uint16Array]", ve = "[object Uint32Array]", we = /[\\^$.*+?()[\]{}|]/g, pe = /^\[object .+?Constructor\]$/, ne = /^(?:0|[1-9]\d*)$/, ge = {};
+    ge[O] = ge[w] = ge[Z] = ge[E] = ge[V] = ge[G] = ge[oe] = ge[le] = ge[ve] = !0, ge[s] = ge[l] = ge[F] = ge[d] = ge[Y] = ge[c] = ge[h] = ge[f] = ge[v] = ge[m] = ge[b] = ge[x] = ge[T] = ge[U] = ge[N] = !1;
     var z = typeof kr == "object" && kr && kr.Object === Object && kr, ue = typeof self == "object" && self && self.Object === Object && self, D = z || ue || Function("return this")(), ye = t && !t.nodeType && t, B = ye && !0 && e && !e.nodeType && e, g = B && B.exports === ye, C = g && z.process, M = (function() {
       try {
         return C && C.binding && C.binding("util");
@@ -32774,14 +32774,14 @@ function Rw(e) {
     console[e](...n);
   }
 }
-function Fi(e) {
+function Ni(e) {
   return kh.reduce((t, n) => (t[n] = Rw.bind(console, n, e), t), {});
 }
-Fi.level = (e) => {
+Ni.level = (e) => {
   Th = e;
 };
-Rw.level = Fi.level;
-const $d = Fi("quill:events"), kX = ["selectionchange", "mousedown", "mouseup", "click"];
+Rw.level = Ni.level;
+const $d = Ni("quill:events"), kX = ["selectionchange", "mousedown", "mouseup", "click"];
 kX.forEach((e) => {
   document.addEventListener(e, function() {
     for (var t = arguments.length, n = new Array(t), o = 0; o < t; o++)
@@ -32838,7 +32838,7 @@ jt(qt, "events", {
   SILENT: "silent",
   USER: "user"
 });
-const jd = Fi("quill:selection");
+const jd = Ni("quill:selection");
 class Ur {
   constructor(t) {
     let n = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : 0;
@@ -33084,10 +33084,10 @@ class SX {
           c = !p.endsWith(`
 `) && (n <= a || !!this.scroll.descendant(wr, a)[0]), this.scroll.insertAt(a, p);
           const [v, m] = this.scroll.line(a);
-          let y = Si({}, yr(v));
+          let y = Ii({}, yr(v));
           if (v instanceof Ro) {
             const [b] = v.descendant($o, m);
-            b && (y = Si(y, yr(b)));
+            b && (y = Ii(y, yr(b)));
           }
           u = Tr.AttributeMap.diff(y, u) || {};
         } else if (typeof s.insert == "object") {
@@ -33104,7 +33104,7 @@ class SX {
           if (this.scroll.insertAt(a, p, s.insert[p]), v) {
             const [m] = this.scroll.descendant($o, a);
             if (m) {
-              const y = Si({}, yr(m));
+              const y = Ii({}, yr(m));
               u = Tr.AttributeMap.diff(y, u) || {};
             }
           }
@@ -33484,11 +33484,11 @@ const MX = (e) => e.parentElement || e.getRootNode().host || null, LX = (e) => {
         break;
       }
   }), o;
-}, Ts = Fi("quill"), Ac = new Os();
+}, Ts = Ni("quill"), Ac = new Os();
 Nr.uiClass = "ql-ui";
 const Dr = class Dr {
   static debug(t) {
-    t === !0 && (t = "log"), Fi.level(t);
+    t === !0 && (t = "log"), Ni.level(t);
   }
   static find(t) {
     let n = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : !1;
@@ -33798,7 +33798,7 @@ function NX(e, t) {
       container: u.toolbar
     }
   });
-  const d = Si({}, zd(i), zd(s), u), c = {
+  const d = Ii({}, zd(i), zd(s), u), c = {
     ...a,
     ...ky(l),
     ...ky(t)
@@ -33816,7 +33816,7 @@ function NX(e, t) {
       return y == null ? (Ts.error(`Cannot load ${v} module. Are you sure you registered it?`), f) : {
         ...f,
         // @ts-expect-error
-        [v]: Si({}, y.DEFAULTS || {}, m)
+        [v]: Ii({}, y.DEFAULTS || {}, m)
       };
     }, {}),
     bounds: Cy(c.bounds)
@@ -34157,7 +34157,7 @@ const Kw = new UX("font", "font-family", jw), zw = new Hr("size", "ql-size", {
 }), Vw = new la("size", "font-size", {
   scope: en.INLINE,
   whitelist: ["10px", "18px", "32px"]
-}), GX = Fi("quill:keyboard"), HX = /Mac/i.test(navigator.platform) ? "metaKey" : "ctrlKey";
+}), GX = Ni("quill:keyboard"), HX = /Mac/i.test(navigator.platform) ? "metaKey" : "ctrlKey";
 class Ku extends di {
   static match(t, n) {
     return ["altKey", "ctrlKey", "metaKey", "shiftKey"].some((o) => !!n[o] !== t[o] && n[o] !== null) ? !1 : n.key === t.key || n.key === t.which;
@@ -34706,7 +34706,7 @@ const o_ = [n_, WX], r_ = (e) => {
   e.documentElement && o_.forEach((t) => {
     t(e);
   });
-}, i_ = Fi("quill:clipboard"), a_ = [[Node.TEXT_NODE, A_], [Node.TEXT_NODE, Ly], ["br", p_], [Node.ELEMENT_NODE, Ly], [Node.ELEMENT_NODE, d_], [Node.ELEMENT_NODE, u_], [Node.ELEMENT_NODE, y_], ["li", f_], ["ol, ul", g_], ["pre", h_], ["tr", v_], ["b", Wd("bold")], ["i", Wd("italic")], ["strike", Wd("strike")], ["style", m_]], s_ = [RX, Gw].reduce((e, t) => (e[t.keyName] = t, e), {}), My = [qw, Cm, wm, $w, Kw, Vw].reduce((e, t) => (e[t.keyName] = t, e), {});
+}, i_ = Ni("quill:clipboard"), a_ = [[Node.TEXT_NODE, A_], [Node.TEXT_NODE, Ly], ["br", p_], [Node.ELEMENT_NODE, Ly], [Node.ELEMENT_NODE, d_], [Node.ELEMENT_NODE, u_], [Node.ELEMENT_NODE, y_], ["li", f_], ["ol, ul", g_], ["pre", h_], ["tr", v_], ["b", Wd("bold")], ["i", Wd("italic")], ["strike", Wd("strike")], ["style", m_]], s_ = [RX, Gw].reduce((e, t) => (e[t.keyName] = t, e), {}), My = [qw, Cm, wm, $w, Kw, Vw].reduce((e, t) => (e[t.keyName] = t, e), {});
 var hp;
 let l_ = (hp = class extends di {
   constructor(t, n) {
@@ -34882,13 +34882,13 @@ function $l(e, t) {
   }
   return n.slice(-1 * t.length) === t;
 }
-function Yi(e, t) {
+function Ki(e, t) {
   if (!(e instanceof Element)) return !1;
   const n = t.query(e);
   return n && n.prototype instanceof lr ? !1 : ["address", "article", "blockquote", "canvas", "dd", "div", "dl", "dt", "fieldset", "figcaption", "figure", "footer", "form", "h1", "h2", "h3", "h4", "h5", "h6", "header", "iframe", "li", "main", "nav", "ol", "output", "p", "pre", "section", "table", "td", "tr", "ul", "video"].includes(e.tagName.toLowerCase());
 }
 function c_(e, t) {
-  return e.previousElementSibling && e.nextElementSibling && !Yi(e.previousElementSibling, t) && !Yi(e.nextElementSibling, t);
+  return e.previousElementSibling && e.nextElementSibling && !Ki(e.previousElementSibling, t) && !Ki(e.nextElementSibling, t);
 }
 const wc = /* @__PURE__ */ new WeakMap();
 function Jw(e) {
@@ -34961,13 +34961,13 @@ function g_(e, t, n) {
 function Ly(e, t, n) {
   if (!$l(t, `
 `)) {
-    if (Yi(e, n) && (e.childNodes.length > 0 || e instanceof HTMLParagraphElement))
+    if (Ki(e, n) && (e.childNodes.length > 0 || e instanceof HTMLParagraphElement))
       return t.insert(`
 `);
     if (t.length() > 0 && e.nextSibling) {
       let o = e.nextSibling;
       for (; o != null; ) {
-        if (Yi(o, n))
+        if (Ki(o, n))
           return t.insert(`
 `);
         const r = n.query(o);
@@ -35007,7 +35007,7 @@ function A_(e, t, n) {
     if (o.trim().length === 0 && o.includes(`
 `) && !c_(e, n))
       return t;
-    o = o.replace(/[^\S\u00a0]/g, " "), o = o.replace(/ {2,}/g, " "), (e.previousSibling == null && e.parentElement != null && Yi(e.parentElement, n) || e.previousSibling instanceof Element && Yi(e.previousSibling, n)) && (o = o.replace(/^ /, "")), (e.nextSibling == null && e.parentElement != null && Yi(e.parentElement, n) || e.nextSibling instanceof Element && Yi(e.nextSibling, n)) && (o = o.replace(/ $/, "")), o = o.replaceAll(" ", " ");
+    o = o.replace(/[^\S\u00a0]/g, " "), o = o.replace(/ {2,}/g, " "), (e.previousSibling == null && e.parentElement != null && Ki(e.parentElement, n) || e.previousSibling instanceof Element && Ki(e.previousSibling, n)) && (o = o.replace(/^ /, "")), (e.nextSibling == null && e.parentElement != null && Ki(e.parentElement, n) || e.nextSibling instanceof Element && Ki(e.nextSibling, n)) && (o = o.replace(/ $/, "")), o = o.replaceAll(" ", " ");
   }
   return t.insert(o);
 }
@@ -35479,7 +35479,7 @@ let P_ = (sl = class extends wr {
 const pl = new Hr("code-token", "hljs", {
   scope: en.INLINE
 });
-class Bi extends ca {
+class Mi extends ca {
   static formats(t, n) {
     for (; t != null && t !== n.domNode; ) {
       if (t.classList && t.classList.contains(Ko.className))
@@ -35491,14 +35491,14 @@ class Bi extends ca {
     super(t, n, o), pl.add(this.domNode, o);
   }
   format(t, n) {
-    t !== Bi.blotName ? super.format(t, n) : n ? pl.add(this.domNode, n) : (pl.remove(this.domNode), this.domNode.classList.remove(this.statics.className));
+    t !== Mi.blotName ? super.format(t, n) : n ? pl.add(this.domNode, n) : (pl.remove(this.domNode), this.domNode.classList.remove(this.statics.className));
   }
   optimize() {
     super.optimize(...arguments), pl.value(this.domNode) || this.unwrap();
   }
 }
-Bi.blotName = "code-token";
-Bi.className = "ql-token";
+Mi.blotName = "code-token";
+Mi.className = "ql-token";
 class vr extends Ko {
   static create(t) {
     const n = super.create(t);
@@ -35514,7 +35514,7 @@ class vr extends Ko {
     t === this.statics.blotName && n ? this.domNode.setAttribute("data-language", n) : super.format(t, n);
   }
   replaceWith(t, n) {
-    return this.formatAt(0, this.length(), Bi.blotName, !1), super.replaceWith(t, n);
+    return this.formatAt(0, this.length(), Mi.blotName, !1), super.replaceWith(t, n);
   }
 }
 class yl extends ja {
@@ -35544,7 +35544,7 @@ class yl extends ja {
             attributes: c
           } = u;
           return d ? (c && Object.keys(c).forEach((h) => {
-            [vr.blotName, Bi.blotName].includes(h) && this.formatAt(l, d, h, c[h]);
+            [vr.blotName, Mi.blotName].includes(h) && this.formatAt(l, d, h, c[h]);
           }), l + d) : l;
         }, 0);
       }
@@ -35566,7 +35566,7 @@ ${Yu(this.code(t, n))}
 }
 yl.allowedChildren = [vr];
 vr.requiredContainer = yl;
-vr.allowedChildren = [Bi, Fs, qr, $r];
+vr.allowedChildren = [Mi, Fs, qr, $r];
 const O_ = (e, t, n) => {
   if (typeof e.versionString == "string") {
     const o = e.versionString.split(".")[0];
@@ -35579,7 +35579,7 @@ const O_ = (e, t, n) => {
 };
 let _w = class extends di {
   static register() {
-    Te.register(Bi, !0), Te.register(vr, !0), Te.register(yl, !0);
+    Te.register(Mi, !0), Te.register(vr, !0), Te.register(yl, !0);
   }
   constructor(t, n) {
     if (super(t, n), this.options.hljs == null)
@@ -35636,7 +35636,7 @@ let _w = class extends di {
     return o.classList.add(Ko.className), o.innerHTML = O_(this.options.hljs, n, t), Sm(this.quill.scroll, o, [(r, i) => {
       const a = pl.value(r);
       return a ? i.compose(new Zt().retain(i.length(), {
-        [Bi.blotName]: a
+        [Mi.blotName]: a
       })) : i;
     }], [(r, i) => r.data.split(`
 `).reduce((a, s, l) => (l !== 0 && a.insert(`
@@ -35692,8 +35692,8 @@ _w.DEFAULTS = {
     label: "SQL"
   }]
 };
-var Ui;
-let vi = (Ui = class extends Ro {
+var Gi;
+let vi = (Gi = class extends Ro {
   static create(t) {
     const n = super.create();
     return t ? n.setAttribute("data-row", t) : n.setAttribute("data-row", Im()), n;
@@ -35706,7 +35706,7 @@ let vi = (Ui = class extends Ro {
     return this.parent ? this.parent.children.indexOf(this) : -1;
   }
   format(t, n) {
-    t === Ui.blotName && n ? this.domNode.setAttribute("data-row", n) : super.format(t, n);
+    t === Gi.blotName && n ? this.domNode.setAttribute("data-row", n) : super.format(t, n);
   }
   row() {
     return this.parent;
@@ -35717,7 +35717,7 @@ let vi = (Ui = class extends Ro {
   table() {
     return this.row() && this.row().table();
   }
-}, jt(Ui, "blotName", "table"), jt(Ui, "tagName", "TD"), Ui);
+}, jt(Gi, "blotName", "table"), jt(Gi, "tagName", "TD"), Gi);
 var Pc;
 let Ra = (Pc = class extends $a {
   checkMerge() {
@@ -35887,7 +35887,7 @@ class F_ extends di {
     });
   }
 }
-const Fy = Fi("quill:toolbar");
+const Fy = Ni("quill:toolbar");
 let xm = class extends di {
   constructor(t, n) {
     var o, r;
@@ -36275,7 +36275,7 @@ class Kl extends Ns {
     this.quill.on(qt.events.EDITOR_CHANGE, o);
   }
 }
-Kl.DEFAULTS = Si({}, Ns.DEFAULTS, {
+Kl.DEFAULTS = Ii({}, Ns.DEFAULTS, {
   modules: {
     toolbar: {
       handlers: {
@@ -36418,7 +36418,7 @@ class rC extends Kl {
     this.tooltip = new oC(this.quill, this.options.bounds), t.container != null && (this.tooltip.root.appendChild(t.container), this.buildButtons(t.container.querySelectorAll("button"), Nl), this.buildPickers(t.container.querySelectorAll("select"), Nl));
   }
 }
-rC.DEFAULTS = Si({}, Kl.DEFAULTS, {
+rC.DEFAULTS = Ii({}, Kl.DEFAULTS, {
   modules: {
     toolbar: {
       handlers: {
@@ -36486,7 +36486,7 @@ let aC = class extends Kl {
     }));
   }
 };
-aC.DEFAULTS = Si({}, Kl.DEFAULTS, {
+aC.DEFAULTS = Ii({}, Kl.DEFAULTS, {
   modules: {
     toolbar: {
       handlers: {
@@ -37132,7 +37132,7 @@ class nte extends tte {
           h.index = N - 1, h.length = 0;
         else if (t.index === Y - 1 && O instanceof HTMLDivElement && O.classList.contains("quill-better-table-wrapper")) {
           const w = b.filter(
-            (X) => X.attributes && X.attributes.list
+            (Z) => Z.attributes && Z.attributes.list
           );
           if (w && w.length)
             return;
@@ -37141,8 +37141,8 @@ class nte extends tte {
           if (!l["table-cell-line"])
             return;
           b = {
-            ops: b.filter((w, X) => {
-              const E = /^[\n\r]+$/, G = w.insert && typeof w.insert == "string" && E.test(w.insert), oe = G && w.attributes && w.attributes["table-cell-line"], le = G && w.attributes && w.attributes.list, ve = G && !oe && !le, we = G && w.attributes && w.attributes["table-col"], pe = oe && X === d - 1;
+            ops: b.filter((w, Z) => {
+              const E = /^[\n\r]+$/, G = w.insert && typeof w.insert == "string" && E.test(w.insert), oe = G && w.attributes && w.attributes["table-cell-line"], le = G && w.attributes && w.attributes.list, ve = G && !oe && !le, we = G && w.attributes && w.attributes["table-col"], pe = oe && Z === d - 1;
               return !ve && !we && !pe;
             })
           }, b = ote(
@@ -37799,7 +37799,7 @@ class fte {
       var r;
       const i = o.target;
       ((r = i == null ? void 0 : i.classList) == null ? void 0 : r.contains("blot-formatter__overlay")) || this.hide(), document.body.removeEventListener("click", this.hideImageOverlay);
-    }, this.quill = t, this.options = Si(hte, n, { arrayMerge: mte }), this.currentSpec = null, this.actions = [], this.overlay = document.createElement("div"), this.overlay.classList.add(this.options.overlay.className), this.options.overlay.style && Object.assign(this.overlay.style, this.options.overlay.style), document.execCommand("enableObjectResizing", !1, "false"), this.quill.root.addEventListener("click", this.onClick), this.quill.root.addEventListener("mouseover", (o) => this.onMouseOver(o)), this.specs = this.options.specs.map((o) => new o(this)), this.specs.forEach((o) => o.init());
+    }, this.quill = t, this.options = Ii(hte, n, { arrayMerge: mte }), this.currentSpec = null, this.actions = [], this.overlay = document.createElement("div"), this.overlay.classList.add(this.options.overlay.className), this.options.overlay.style && Object.assign(this.overlay.style, this.options.overlay.style), document.execCommand("enableObjectResizing", !1, "false"), this.quill.root.addEventListener("click", this.onClick), this.quill.root.addEventListener("mouseover", (o) => this.onMouseOver(o)), this.specs = this.options.specs.map((o) => new o(this)), this.specs.forEach((o) => o.init());
   }
   static register() {
     Te.register("formats/image", zl, !0), Te.register("formats/image-container", Vl, !0), Te.register("modules/image-spec", fC, !0);
@@ -39177,15 +39177,15 @@ class Zi extends une {
 Zi.blotName = "header";
 Zi.tagName = ["H1", "H2", "H3", "H4", "H5", "H6"];
 const dne = Te.imports["blots/block"], pne = Te.imports["blots/container"];
-class Mi extends pne {
+class Li extends pne {
   format(t, n) {
     const { row: o, cell: r, rowspan: i, colspan: a } = this.domNode.dataset;
-    t === Mi.blotName && (n ? super.format(t, { row: o, cell: r, rowspan: i, colspan: a }) : o && this.replaceWith("table-cell-line", { row: o, cell: r, rowspan: i, colspan: a }));
+    t === Li.blotName && (n ? super.format(t, { row: o, cell: r, rowspan: i, colspan: a }) : o && this.replaceWith("table-cell-line", { row: o, cell: r, rowspan: i, colspan: a }));
   }
 }
-Mi.blotName = "list-container";
-Mi.tagName = "OL";
-class Li extends dne {
+Li.blotName = "list-container";
+Li.tagName = "OL";
+class Di extends dne {
   static create(t) {
     const n = super.create();
     return typeof t == "string" ? t = { value: t } : [...Or, ...Xo].forEach((o) => {
@@ -39197,7 +39197,7 @@ class Li extends dne {
     return n.value = t.classList.item(0) || void 0, [...Xo, ...Or].reduce((o, r) => (t.dataset[r] && (o[r] = t.dataset[r]), o), n);
   }
   static register() {
-    Te.register({ "formats/list-container": Mi }, !0);
+    Te.register({ "formats/list-container": Li }, !0);
   }
   constructor(t, n) {
     super(t, n);
@@ -39214,7 +39214,7 @@ class Li extends dne {
     i.addEventListener("mousedown", a), i.addEventListener("touchstart", a), this.attachUI(i);
   }
   format(t, n) {
-    if (t !== Li.blotName) {
+    if (t !== Di.blotName) {
       super.format(t, n);
       return;
     }
@@ -39224,7 +39224,7 @@ class Li extends dne {
         l.style.verticalAlign = "baseLine";
       }), a && a.statics.blotName === "table") {
         const l = a.formats();
-        this.replaceWith("table-cell-line", l), this.parent.statics.blotName === Mi.blotName && this.parent.unwrap();
+        this.replaceWith("table-cell-line", l), this.parent.statics.blotName === Li.blotName && this.parent.unwrap();
       } else
         super.format(t, n);
     else r ? this.domNode.className = this.domNode.className.replace(r, o) : this.domNode.classList.add(o);
@@ -39238,7 +39238,7 @@ class Li extends dne {
       return;
     }
     super.optimize(t);
-    const o = hne(this.parent.domNode), r = Li.formats(this.domNode), i = this.domNode.dataset || [], a = this.domNode.querySelectorAll("img[data-image-id]");
+    const o = hne(this.parent.domNode), r = Di.formats(this.domNode), i = this.domNode.dataset || [], a = this.domNode.querySelectorAll("img[data-image-id]");
     if (o.list !== r.value) {
       const s = this.parent.domNode.classList[0];
       s ? this.parent.domNode.className = this.parent.domNode.className.replace(s, r.value) : this.parent.domNode.classList.add(r.value);
@@ -39248,10 +39248,10 @@ class Li extends dne {
     });
   }
 }
-Li.blotName = "list";
-Li.tagName = "LI";
-Mi.allowedChildren = [Li];
-Li.requiredContainer = Mi;
+Di.blotName = "list";
+Di.tagName = "LI";
+Li.allowedChildren = [Di];
+Di.requiredContainer = Li;
 function hne(e) {
   const t = {};
   return e.tagName === "OL" && (t.list = e.classList.item(0)), [...Xo, ...Or].reduce((n, o) => (e.hasAttribute(`data-${o}`) && (n[o] = e.getAttribute(`data-${o}`) || void 0), n), t);
@@ -39291,7 +39291,7 @@ class _o extends xC {
   static create(t) {
     const n = super.create(t);
     return t.tdBgColor && (n.setAttribute("data-parent-bg", t.tdBgColor), delete t.tdBgColor), Or.forEach((o) => {
-      const r = o === "row" ? oa : Ki;
+      const r = o === "row" ? oa : zi;
       n.setAttribute(`data-${o}`, t[o] || r());
     }), Xo.forEach((o) => {
       const r = t[o] || $c[o];
@@ -39548,7 +39548,7 @@ class da extends Ys {
 }
 da.blotName = "table-col-group";
 da.tagName = "colgroup";
-class Ni extends Ys {
+class Ri extends Ys {
   static create() {
     return super.create();
   }
@@ -39653,7 +39653,7 @@ class Ni extends Ys {
     this.remove(), n.hideTableTools(), t.update(Te.sources.USER);
   }
   insertCell(t, n, o = "") {
-    const r = Ki(), i = t.formats().row, a = this.scroll.create(
+    const r = zi(), i = t.formats().row, a = this.scroll.create(
       Ho.blotName,
       { ...$c, row: i }
     );
@@ -39672,7 +39672,7 @@ class Ni extends Ys {
       const v = fo(p.domNode.getBoundingClientRect(), r);
       o ? Math.abs(v.x1 - t.x1) < gn ? l.push(p) : t.x1 - v.x > gn && t.x1 - v.x1 < -gn && u.push(p) : Math.abs(v.x - t.x) < gn ? l.push(p) : t.x - v.x > gn && t.x - v.x1 < -gn && u.push(p);
     }), l.forEach((p) => {
-      const v = o ? p.next : p, m = Ki(), y = p.parent, b = y.formats().row, k = p.formats(), I = this.scroll.create(
+      const v = o ? p.next : p, m = zi(), y = p.parent, b = y.formats().row, k = p.formats(), I = this.scroll.create(
         Ho.blotName,
         { ...$c, row: b, rowspan: k.rowspan }
       ), x = this.scroll.create(_o.blotName, {
@@ -39708,7 +39708,7 @@ class Ni extends Ys {
       return v - m;
     };
     l.sort(c), l.forEach((f) => {
-      const p = Ki(), v = f.formats(), m = this.scroll.create(
+      const p = zi(), v = f.formats(), m = this.scroll.create(
         Ho.blotName,
         { ...$c, row: a, cell: p, colspan: v.colspan }
       ), y = this.scroll.create(_o.blotName, {
@@ -39770,7 +39770,7 @@ class Ni extends Ys {
     t.forEach((n) => {
       const o = n.formats(), r = this.scroll.create(_o.blotName, {
         row: o.row || oa(),
-        cell: o.cell || Ki(),
+        cell: o.cell || zi(),
         rowspan: o.rowspan,
         colspan: o.colspan
       }), i = this.scroll.create(sv.blotName);
@@ -39782,9 +39782,9 @@ class Ni extends Ys {
     return yn(t) ? [] : t.children.map((n) => n);
   }
 }
-Ni.blotName = "ql-table-container";
-Ni.className = "quill-better-table";
-Ni.tagName = "TABLE";
+Ri.blotName = "ql-table-container";
+Ri.className = "quill-better-table";
+Ri.tagName = "TABLE";
 class Ka extends Ys {
   constructor(t, n) {
     super(t, n);
@@ -39802,23 +39802,23 @@ class Ka extends Ys {
 Ka.blotName = "table-view";
 Ka.className = "quill-better-table-wrapper";
 Ka.tagName = "DIV";
-Ka.allowedChildren = [Ni];
-Ni.requiredContainer = Ka;
-Ni.allowedChildren = [Fr, da];
-Fr.requiredContainer = Ni;
+Ka.allowedChildren = [Ri];
+Ri.requiredContainer = Ka;
+Ri.allowedChildren = [Fr, da];
+Fr.requiredContainer = Ri;
 Fr.allowedChildren = [ri];
 ri.requiredContainer = Fr;
 ri.allowedChildren = [Ho];
 Ho.requiredContainer = ri;
-Ho.allowedChildren = [_o, Zi, Li, Mi];
+Ho.allowedChildren = [_o, Zi, Di, Li];
 _o.requiredContainer = Ho;
 da.allowedChildren = [Xi];
-da.requiredContainer = Ni;
+da.requiredContainer = Ri;
 Xi.requiredContainer = da;
 function oa() {
   return `row-${Math.random().toString(36).slice(2, 6)}`;
 }
-function Ki() {
+function zi() {
   return `cell-${Math.random().toString(36).slice(2, 6)}`;
 }
 function BC(e, t) {
@@ -40656,7 +40656,7 @@ function Ene(e, t) {
   let o = n.dataset.row;
   o || (o = n.dataset.row = oa());
   let r = e.dataset.cell;
-  (!r || r === "undefined") && (r = Ki());
+  (!r || r === "undefined") && (r = zi());
   const i = e.getAttribute("colspan") || 1, a = e.getAttribute("rowspan") || 1;
   if (t.length() === 0)
     return t = new Rr().insert(`
@@ -40767,7 +40767,7 @@ function Ine(e, t, n) {
         const k = oa();
         for (let I = 0; I < d; I++)
           m.insert(`
-`, { "table-cell-line": { row: k, cell: Ki(), rowspan: 1, colspan: 1 } });
+`, { "table-cell-line": { row: k, cell: zi(), rowspan: 1, colspan: 1 } });
         break;
       }
       default:
@@ -40835,7 +40835,7 @@ function Pne(e, t, n) {
 const One = Te.imports["blots/block"], Fne = Te.imports.delta, Nne = Te.imports["core/module"];
 class Om extends Nne {
   static register() {
-    Te.register(Xi, !0), Te.register(da, !0), Te.register(_o, !0), Te.register(Ho, !0), Te.register(ri, !0), Te.register(Fr, !0), Te.register(Ni, !0), Te.register(Ka, !0), Te.register("formats/header", Zi, !0), Te.register("formats/list", Li, !0);
+    Te.register(Xi, !0), Te.register(da, !0), Te.register(_o, !0), Te.register(Ho, !0), Te.register(ri, !0), Te.register(Fr, !0), Te.register(Ri, !0), Te.register(Ka, !0), Te.register("formats/header", Zi, !0), Te.register("formats/list", Di, !0);
   }
   constructor(t, n) {
     super(t, n), this.isComposition = !1, this.isTableSelectorVisible = !1, this.quill.root.addEventListener("mousedown", (r) => this.handleMouseDown(r, t), !1), this.quill.root.addEventListener("compositionend", () => this.handleCompositionend(t), !1), this.quill.root.addEventListener("compositionstart", () => this.handleCompositionstart(t), !1), this.quill.root.addEventListener("keypress", (r) => this.handleKeyDown(r, t), !1), this.quill.root.addEventListener(
@@ -40971,7 +40971,7 @@ class Om extends Nne {
 `).reduce((l, u) => (l.insert(u, { "table-col": !0 }), l), i), i = new Array(t).fill(0).reduce((l) => {
       const u = oa();
       return new Array(n).fill(`
-`).reduce((d, c) => (d.insert(c, { "table-cell-line": { row: u, cell: Ki() } }), d), l);
+`).reduce((d, c) => (d.insert(c, { "table-cell-line": { row: u, cell: zi() } }), d), l);
     }, i);
     const [a] = this.quill.getLine(o.index);
     a && a.statics.blotName === "table-col" && i.insert(`
@@ -42454,7 +42454,7 @@ var kre = function(t, n) {
       api: HC
     });
   }
-}), Ere = /* @__PURE__ */ V(
+}), Ere = /* @__PURE__ */ J(
   "div",
   {
     class: "tiny-image-viewer__mask"
@@ -42466,7 +42466,7 @@ var kre = function(t, n) {
   class: "tiny-image-viewer__btn tiny-image-viewer__actions"
 }, Ire = {
   class: "tiny-image-viewer__actions-inner"
-}, xre = /* @__PURE__ */ V(
+}, xre = /* @__PURE__ */ J(
   "i",
   {
     class: "tiny-image-viewer__actions-divider"
@@ -42474,7 +42474,7 @@ var kre = function(t, n) {
   null,
   -1
   /* HOISTED */
-), Bre = /* @__PURE__ */ V(
+), Bre = /* @__PURE__ */ J(
   "i",
   {
     class: "tiny-image-viewer__actions-divider"
@@ -42505,7 +42505,7 @@ function Pre(e, t, n, o, r, i) {
           onMousewheel: t[10] || (t[10] = Pt(function() {
           }, ["prevent"]))
         },
-        [Ere, V("span", {
+        [Ere, J("span", {
           class: "tiny-image-viewer__btn tiny-image-viewer__close",
           onClick: t[0] || (t[0] = function() {
             return e.hide && e.hide.apply(e, arguments);
@@ -42517,7 +42517,7 @@ function Pre(e, t, n, o, r, i) {
           {
             key: 0
           },
-          [V(
+          [J(
             "span",
             {
               class: je(["tiny-image-viewer__btn tiny-image-viewer__prev", {
@@ -42532,7 +42532,7 @@ function Pre(e, t, n, o, r, i) {
             })],
             2
             /* CLASS */
-          ), V(
+          ), J(
             "span",
             {
               class: je(["tiny-image-viewer__btn tiny-image-viewer__next", {
@@ -42550,7 +42550,7 @@ function Pre(e, t, n, o, r, i) {
           )],
           64
           /* STABLE_FRAGMENT */
-        )), V("div", Sre, [V("div", Ire, [Ze(u, {
+        )), J("div", Sre, [J("div", Ire, [Ze(u, {
           class: "tiny-svg-size",
           onClick: t[3] || (t[3] = function(f) {
             return e.handleActions("zoomOut");
@@ -42579,11 +42579,11 @@ function Pre(e, t, n, o, r, i) {
           return [e.showIndex ? (P(), K(
             "span",
             Mre,
-            qe(e.state.index + 1) + "/" + qe(e.urlList.length),
+            Qe(e.state.index + 1) + "/" + Qe(e.urlList.length),
             1
             /* TEXT */
           )) : Ie("v-if", !0)];
-        })])]), V("div", Lre, [(P(!0), K(
+        })])]), J("div", Lre, [(P(!0), K(
           Lt,
           null,
           an(e.urlList, function(f, p) {
@@ -42745,7 +42745,7 @@ var Rre = /* @__PURE__ */ (function() {
 }, Hre = ["onClick"], $re = ["src"], jre = ["title"], Yre = ["onClick"], Kre = ["title"], zre = {
   class: "flex-auto h-full relative",
   "data-tag": "tiny-image-tools"
-}, Vre = /* @__PURE__ */ V(
+}, Vre = /* @__PURE__ */ J(
   "div",
   {
     "data-tag": "tiny-image-pc-mask",
@@ -42774,7 +42774,7 @@ var Rre = /* @__PURE__ */ (function() {
   key: 1,
   "data-tag": "tiny-image-mobile-common",
   class: "w-screen h-screen fixed top-0 left-0 z-50 sm:hidden"
-}, sie = /* @__PURE__ */ V(
+}, sie = /* @__PURE__ */ J(
   "div",
   {
     "data-tag": "tiny-image-mobile-mask",
@@ -42801,7 +42801,7 @@ var Rre = /* @__PURE__ */ (function() {
   key: 0,
   "data-tag": "tiny-image-isthumbnail-preview",
   class: "w-screen h-screen fixed top-0 left-0 z-50 sm:hidden"
-}, fie = /* @__PURE__ */ V(
+}, fie = /* @__PURE__ */ J(
   "div",
   {
     "data-tag": "tiny-image-mobile-mask",
@@ -42862,22 +42862,22 @@ function Cie(e, t, n, o, r, i) {
                 class: "w-[88%] [&:not(:last-child)]:mb-2 [&:first-of-type]:mt-2",
                 ref_for: !0,
                 ref: "isThumbnail_" + Q
-              }, [V("div", {
+              }, [J("div", {
                 onClick: function(N) {
                   return e.activeItems(Q);
                 },
                 class: je(["rounded cursor-pointer p-1", {
                   "bg-color-brand": e.state.currentIndex === Q
                 }])
-              }, [V("img", {
+              }, [J("img", {
                 class: "max-h-full max-w-full aspect-square bg-current rounded",
                 ref_for: !0,
                 ref: "img_" + Q,
                 src: U.url
-              }, null, 8, $re), V("div", {
+              }, null, 8, $re), J("div", {
                 title: U.name || U.url,
                 class: je(["px-1 mt-1 sm:text-xs text-sm leading-5 overflow-hidden whitespace-nowrap text-ellipsis", e.bgColor === "white" && e.state.currentIndex !== Q ? "text-color-text-primary" : "text-color-bg-1"])
-              }, qe(U.name), 11, jre)], 10, Hre)]);
+              }, Qe(U.name), 11, jre)], 10, Hre)]);
             }),
             128
             /* KEYED_FRAGMENT */
@@ -42899,7 +42899,7 @@ function Cie(e, t, n, o, r, i) {
               return P(), K("div", {
                 key: Q,
                 class: "w-[88%]"
-              }, [V("div", {
+              }, [J("div", {
                 onClick: function(N) {
                   return e.activeItems(Q);
                 },
@@ -42913,17 +42913,17 @@ function Cie(e, t, n, o, r, i) {
                 ref_for: !0,
                 ref: "img_" + Q,
                 src: U.url
-              }, null, 8, ["class", "src"]), V("div", {
+              }, null, 8, ["class", "src"]), J("div", {
                 title: U.name || U.url,
                 class: je(["w-[67%] sm:text-xs text-sm leading-5 overflow-hidden whitespace-nowrap text-ellipsis", e.bgColor === "white" && e.state.menuItemIndex !== Q ? "text-color-text-primary" : "text-color-bg-1"])
-              }, qe(U.name), 11, Kre)], 10, Yre)]);
+              }, Qe(U.name), 11, Kre)], 10, Yre)]);
             }),
             128
             /* KEYED_FRAGMENT */
           ))],
           2
           /* CLASS */
-        )) : Ie("v-if", !0), V("div", zre, [Vre, e.modalView || !e.state.isThumbnail && !e.state.isMenuView ? (P(), K("span", {
+        )) : Ie("v-if", !0), J("div", zre, [Vre, e.modalView || !e.state.isThumbnail && !e.state.isMenuView ? (P(), K("span", {
           key: 0,
           "data-tag": "tiny-image-pc-close",
           class: "z-[1] flex absolute items-center justify-center rounded-full box-border select-none top-20 right-20 bottom-10 text-xl cursor-pointer w-8 h-8 hover:bg-color-text-primary active:bg-color-border fill-color-bg-1 bg-color-border",
@@ -42932,7 +42932,7 @@ function Cie(e, t, n, o, r, i) {
           })
         }, [Ze(s, {
           class: "fill-color-bg-1 cursor-pointer"
-        })])) : Ie("v-if", !0), V("div", Jre, [V("div", Wre, [(P(), st(xn(e.state.mode.icon), {
+        })])) : Ie("v-if", !0), J("div", Jre, [J("div", Wre, [(P(), st(xn(e.state.mode.icon), {
           class: "cursor-pointer",
           onClick: e.toggleMode
         }, null, 8, ["onClick"])), Ze(l, {
@@ -42960,7 +42960,7 @@ function Cie(e, t, n, o, r, i) {
           onClick: t[5] || (t[5] = function(U) {
             return e.handleActions("delImage");
           })
-        }), V("a", {
+        }), J("a", {
           href: "" + e.state.currentImg,
           target: "_blank",
           rel: "noopener noreferrer",
@@ -42985,7 +42985,7 @@ function Cie(e, t, n, o, r, i) {
                 }, {
                   default: rt(function() {
                     return [Dt(
-                      qe(e.state.isThumbnail || e.state.isMenuView ? e.t("ui.imageViewer.hide") : e.t("ui.imageViewer.show")),
+                      Qe(e.state.isThumbnail || e.state.isMenuView ? e.t("ui.imageViewer.hide") : e.t("ui.imageViewer.show")),
                       1
                       /* TEXT */
                     )];
@@ -42999,7 +42999,7 @@ function Cie(e, t, n, o, r, i) {
                 }, {
                   default: rt(function() {
                     return [Dt(
-                      qe(e.t("ui.imageViewer.thumbnail")),
+                      Qe(e.t("ui.imageViewer.thumbnail")),
                       1
                       /* TEXT */
                     )];
@@ -43013,7 +43013,7 @@ function Cie(e, t, n, o, r, i) {
                 }, {
                   default: rt(function() {
                     return [Dt(
-                      qe(e.t("ui.imageViewer.menu")),
+                      Qe(e.t("ui.imageViewer.menu")),
                       1
                       /* TEXT */
                     )];
@@ -43027,7 +43027,7 @@ function Cie(e, t, n, o, r, i) {
             })];
           }),
           default: rt(function() {
-            return [V("span", null, [Ze(p)])];
+            return [J("span", null, [Ze(p)])];
           }),
           _: 1
           /* STABLE */
@@ -43041,13 +43041,13 @@ function Cie(e, t, n, o, r, i) {
           class: je(["cursor-pointer", {
             "is-disabled": !e.state.infinite && e.state.isLast
           }])
-        }, null, 8, ["onClick", "class"])])]), e.showIndex ? (P(), K("div", Xre, [V(
+        }, null, 8, ["onClick", "class"])])]), e.showIndex ? (P(), K("div", Xre, [J(
           "span",
           _re,
-          qe(e.state.index + 1 + "/" + e.state.urlList.length),
+          Qe(e.state.index + 1 + "/" + e.state.urlList.length),
           1
           /* TEXT */
-        )])) : Ie("v-if", !0), V("div", eie, [(P(!0), K(
+        )])) : Ie("v-if", !0), J("div", eie, [(P(!0), K(
           Lt,
           null,
           an(e.state.urlList, function(U, Q) {
@@ -43096,7 +43096,7 @@ function Cie(e, t, n, o, r, i) {
             hidden: e.state.hiddenThumbnail
           }])
         },
-        [V("div", nie, [(P(!0), K(
+        [J("div", nie, [(P(!0), K(
           Lt,
           null,
           an(e.state.urlList, function(U, Q) {
@@ -43106,31 +43106,31 @@ function Cie(e, t, n, o, r, i) {
               onTouchstart: function(N) {
                 return e.imagePreview(Q);
               }
-            }, [V("img", {
+            }, [J("img", {
               class: "bg-current w-full h-auto",
               ref_for: !0,
               ref: "img_" + Q,
               src: U.url
-            }, null, 8, rie), V("div", {
+            }, null, 8, rie), J("div", {
               title: U.name || U.url,
               class: "color-text-primary mt-2 sm:text-xs text-sm leading-5 overflow-hidden whitespace-nowrap text-ellipsis text-color-text-primary"
-            }, qe(U.name), 9, iie)], 40, oie);
+            }, Qe(U.name), 9, iie)], 40, oie);
           }),
           128
           /* KEYED_FRAGMENT */
         ))])],
         2
         /* CLASS */
-      )) : e.state.isMenuView ? Ie("v-if", !0) : (P(), K("div", aie, [sie, Xt((P(), K("div", lie, [e.showIndex ? (P(), K("div", cie, [V(
+      )) : e.state.isMenuView ? Ie("v-if", !0) : (P(), K("div", aie, [sie, Xt((P(), K("div", lie, [e.showIndex ? (P(), K("div", cie, [J(
         "span",
         uie,
-        qe(e.state.index + 1 + "/" + e.state.urlList.length),
+        Qe(e.state.index + 1 + "/" + e.state.urlList.length),
         1
         /* TEXT */
-      )])) : Ie("v-if", !0), V(
+      )])) : Ie("v-if", !0), J(
         "div",
         die,
-        [V(
+        [J(
           "div",
           {
             class: "h-full flex items-center justify-center",
@@ -43156,7 +43156,7 @@ function Cie(e, t, n, o, r, i) {
                     width: e.state.imageItemWidth + "px"
                   }, Q === e.state.index ? e.state.imgStyle : ""))
                 },
-                [V("div", pie, [Q === e.state.index ? (P(), K("img", {
+                [J("div", pie, [Q === e.state.index ? (P(), K("img", {
                   key: Q,
                   class: je(["block w-full h-full object-contain", {
                     "object-fill": e.state.fullScreen
@@ -43204,16 +43204,16 @@ function Cie(e, t, n, o, r, i) {
     name: "viewer-fade"
   }, {
     default: rt(function() {
-      return [e.state.isImagePreview ? (P(), K("div", mie, [fie, Xt((P(), K("div", gie, [e.showIndex ? (P(), K("div", yie, [V(
+      return [e.state.isImagePreview ? (P(), K("div", mie, [fie, Xt((P(), K("div", gie, [e.showIndex ? (P(), K("div", yie, [J(
         "span",
         vie,
-        qe(e.state.index + 1 + "/" + e.state.urlList.length),
+        Qe(e.state.index + 1 + "/" + e.state.urlList.length),
         1
         /* TEXT */
-      )])) : Ie("v-if", !0), V(
+      )])) : Ie("v-if", !0), J(
         "div",
         Aie,
-        [V(
+        [J(
           "div",
           {
             class: "h-full flex items-center justify-center",
@@ -43239,7 +43239,7 @@ function Cie(e, t, n, o, r, i) {
                     width: e.state.imageItemWidth + "px"
                   }, Q === e.state.index ? e.state.imgStyle : ""))
                 },
-                [V("div", bie, [(P(), K("img", {
+                [J("div", bie, [(P(), K("img", {
                   key: Q,
                   class: je(["block w-full h-full object-contain", {
                     "object-fill": e.state.fullScreen
@@ -43302,14 +43302,14 @@ function Cie(e, t, n, o, r, i) {
     onClick: e.selectOption
   }, {
     default: rt(function(U) {
-      return [V(
+      return [J(
         "div",
         {
           class: je([{
             "text-color-error": U.data.type === "del"
           }])
         },
-        qe(U.data.label),
+        Qe(U.data.label),
         3
         /* TEXT, CLASS */
       )];
@@ -43543,7 +43543,7 @@ function Lie(e, t, n, o, r, i) {
         "z-index": e.state.zIndex
       })
     },
-    [V(
+    [J(
       "div",
       {
         ref: "editor",
@@ -43564,7 +43564,7 @@ function Lie(e, t, n, o, r, i) {
       null,
       16
       /* FULL_PROPS */
-    )) : Ie("v-if", !0), V(
+    )) : Ie("v-if", !0), J(
       "div",
       Mie,
       [(P(!0), K(
@@ -43684,7 +43684,7 @@ function Rie(e, t, n, o, r, i) {
         "z-index": e.state.zIndex
       })
     },
-    [V(
+    [J(
       "div",
       {
         ref: "editor",
@@ -43705,7 +43705,7 @@ function Rie(e, t, n, o, r, i) {
       null,
       16
       /* FULL_PROPS */
-    )) : Ie("v-if", !0), V(
+    )) : Ie("v-if", !0), J(
       "div",
       Nie,
       [(P(!0), K(
@@ -43915,7 +43915,7 @@ function Kie(e, t, n, o, r, i) {
     class: "my-tiny-radio"
   }, {
     default: rt(() => [
-      e.$slots.default ? Ie("", !0) : (P(), K("span", Yie, qe(`vueVersion: ${e.version} ${e.label}`), 1)),
+      e.$slots.default ? Ie("", !0) : (P(), K("span", Yie, Qe(`vueVersion: ${e.version} ${e.label}`), 1)),
       vt(e.$slots, "default", {}, void 0, !0)
     ]),
     _: 3
@@ -51590,16 +51590,16 @@ function _rn() {
             case "video":
               var Y = T.mediaElement.originalNode.children.length, O = T.mediaElement.originalNode.getAttribute("src");
               if (O) {
-                var w = T.mediaElement.originalNode, X = (0, c.formatType)(O, w.getAttribute("type"));
+                var w = T.mediaElement.originalNode, Z = (0, c.formatType)(O, w.getAttribute("type"));
                 F.push({
-                  type: X,
-                  src: N(O, X)
+                  type: Z,
+                  src: N(O, Z)
                 });
               }
               for (var E = 0; E < Y; E++) {
-                var J = T.mediaElement.originalNode.children[E];
-                if (J.tagName.toLowerCase() === "source") {
-                  var G = J.getAttribute("src"), oe = (0, c.formatType)(G, J.getAttribute("type"));
+                var V = T.mediaElement.originalNode.children[E];
+                if (V.tagName.toLowerCase() === "source") {
+                  var G = V.getAttribute("src"), oe = (0, c.formatType)(G, V.getAttribute("type"));
                   F.push({ type: oe, src: N(G, oe) });
                 }
               }
@@ -51907,10 +51907,10 @@ function _rn() {
               k.media.originalNode.webkitEnterFullscreen();
               return;
             }
-            if ((0, p.addClass)(a.default.documentElement, k.options.classPrefix + "fullscreen"), (0, p.addClass)(k.getElement(k.container), k.options.classPrefix + "container-fullscreen"), k.normalHeight = parseFloat(x.height), k.normalWidth = parseFloat(x.width), (k.fullscreenMode === "native-native" || k.fullscreenMode === "plugin-native") && (h.requestFullScreen(k.getElement(k.container)), k.isInIframe && setTimeout(function X() {
+            if ((0, p.addClass)(a.default.documentElement, k.options.classPrefix + "fullscreen"), (0, p.addClass)(k.getElement(k.container), k.options.classPrefix + "container-fullscreen"), k.normalHeight = parseFloat(x.height), k.normalWidth = parseFloat(x.width), (k.fullscreenMode === "native-native" || k.fullscreenMode === "plugin-native") && (h.requestFullScreen(k.getElement(k.container)), k.isInIframe && setTimeout(function Z() {
               if (k.isNativeFullScreen) {
-                var E = 2e-3, J = r.default.innerWidth || a.default.documentElement.clientWidth || a.default.body.clientWidth, G = screen.width, oe = Math.abs(G - J), le = G * E;
-                oe > le ? k.exitFullScreen() : setTimeout(X, 500);
+                var E = 2e-3, V = r.default.innerWidth || a.default.documentElement.clientWidth || a.default.body.clientWidth, G = screen.width, oe = Math.abs(G - V), le = G * E;
+                oe > le ? k.exitFullScreen() : setTimeout(Z, 500);
               }
             }, 1e3)), k.getElement(k.container).style.width = "100%", k.getElement(k.container).style.height = "100%", k.containerSizeTimeout = setTimeout(function() {
               k.getElement(k.container).style.width = "100%", k.getElement(k.container).style.height = "100%", k.setControlsSize();
@@ -51996,38 +51996,38 @@ function _rn() {
           var b = 0, k = !1, I = !1, x = this, T = p.options.autoRewind, U = p.options.enableProgressTooltip ? '<span class="' + x.options.classPrefix + 'time-float">' + ('<span class="' + x.options.classPrefix + 'time-float-current">00:00</span>') + ('<span class="' + x.options.classPrefix + 'time-float-corner"></span>') + "</span>" : "", Q = r.default.createElement("div");
           Q.className = x.options.classPrefix + "time-rail", Q.innerHTML = '<span class="' + x.options.classPrefix + "time-total " + x.options.classPrefix + 'time-slider">' + ('<span class="' + x.options.classPrefix + 'time-buffering"></span>') + ('<span class="' + x.options.classPrefix + 'time-loaded"></span>') + ('<span class="' + x.options.classPrefix + 'time-current"></span>') + ('<span class="' + x.options.classPrefix + 'time-hovered no-hover"></span>') + ('<span class="' + x.options.classPrefix + 'time-handle"><span class="' + x.options.classPrefix + 'time-handle-content"></span></span>') + ("" + U) + "</span>", x.addControlElement(Q, "progress"), x.options.keyActions.push({
             keys: [37, 227],
-            action: function(J) {
-              if (!isNaN(J.duration) && J.duration > 0) {
-                J.isVideo && (J.showControls(), J.startControlsTimer());
-                var G = J.getElement(J.container).querySelector("." + x.options.classPrefix + "time-total");
+            action: function(V) {
+              if (!isNaN(V.duration) && V.duration > 0) {
+                V.isVideo && (V.showControls(), V.startControlsTimer());
+                var G = V.getElement(V.container).querySelector("." + x.options.classPrefix + "time-total");
                 G && G.focus();
-                var oe = Math.max(J.currentTime - J.options.defaultSeekBackwardInterval(J), 0);
-                J.paused || J.pause(), setTimeout(function() {
-                  J.setCurrentTime(oe);
+                var oe = Math.max(V.currentTime - V.options.defaultSeekBackwardInterval(V), 0);
+                V.paused || V.pause(), setTimeout(function() {
+                  V.setCurrentTime(oe);
                 }, 0), setTimeout(function() {
-                  J.play();
+                  V.play();
                 }, 0);
               }
             }
           }, {
             keys: [39, 228],
-            action: function(J) {
-              if (!isNaN(J.duration) && J.duration > 0) {
-                J.isVideo && (J.showControls(), J.startControlsTimer());
-                var G = J.getElement(J.container).querySelector("." + x.options.classPrefix + "time-total");
+            action: function(V) {
+              if (!isNaN(V.duration) && V.duration > 0) {
+                V.isVideo && (V.showControls(), V.startControlsTimer());
+                var G = V.getElement(V.container).querySelector("." + x.options.classPrefix + "time-total");
                 G && G.focus();
-                var oe = Math.min(J.currentTime + J.options.defaultSeekForwardInterval(J), J.duration);
-                J.paused || J.pause(), setTimeout(function() {
-                  J.setCurrentTime(oe);
+                var oe = Math.min(V.currentTime + V.options.defaultSeekForwardInterval(V), V.duration);
+                V.paused || V.pause(), setTimeout(function() {
+                  V.setCurrentTime(oe);
                 }, 0), setTimeout(function() {
-                  J.play();
+                  V.play();
                 }, 0);
               }
             }
-          }), x.rail = v.querySelector("." + x.options.classPrefix + "time-rail"), x.total = v.querySelector("." + x.options.classPrefix + "time-total"), x.loaded = v.querySelector("." + x.options.classPrefix + "time-loaded"), x.current = v.querySelector("." + x.options.classPrefix + "time-current"), x.handle = v.querySelector("." + x.options.classPrefix + "time-handle"), x.timefloat = v.querySelector("." + x.options.classPrefix + "time-float"), x.timefloatcurrent = v.querySelector("." + x.options.classPrefix + "time-float-current"), x.slider = v.querySelector("." + x.options.classPrefix + "time-slider"), x.hovered = v.querySelector("." + x.options.classPrefix + "time-hovered"), x.buffer = v.querySelector("." + x.options.classPrefix + "time-buffering"), x.newTime = 0, x.forcedHandlePause = !1, x.setTransformStyle = function(E, J) {
-            E.style.transform = J, E.style.webkitTransform = J, E.style.MozTransform = J, E.style.msTransform = J, E.style.OTransform = J;
+          }), x.rail = v.querySelector("." + x.options.classPrefix + "time-rail"), x.total = v.querySelector("." + x.options.classPrefix + "time-total"), x.loaded = v.querySelector("." + x.options.classPrefix + "time-loaded"), x.current = v.querySelector("." + x.options.classPrefix + "time-current"), x.handle = v.querySelector("." + x.options.classPrefix + "time-handle"), x.timefloat = v.querySelector("." + x.options.classPrefix + "time-float"), x.timefloatcurrent = v.querySelector("." + x.options.classPrefix + "time-float-current"), x.slider = v.querySelector("." + x.options.classPrefix + "time-slider"), x.hovered = v.querySelector("." + x.options.classPrefix + "time-hovered"), x.buffer = v.querySelector("." + x.options.classPrefix + "time-buffering"), x.newTime = 0, x.forcedHandlePause = !1, x.setTransformStyle = function(E, V) {
+            E.style.transform = V, E.style.webkitTransform = V, E.style.MozTransform = V, E.style.msTransform = V, E.style.OTransform = V;
           }, x.buffer.style.display = "none";
-          var L = function(J) {
+          var L = function(V) {
             var G = getComputedStyle(x.total), oe = (0, c.offset)(x.total), le = x.total.offsetWidth, ve = (function() {
               return G.webkitTransform !== void 0 ? "webkitTransform" : G.mozTransform !== void 0 ? "mozTransform " : G.oTransform !== void 0 ? "oTransform" : G.msTransform !== void 0 ? "msTransform" : "transform";
             })(), we = (function() {
@@ -52038,7 +52038,7 @@ function _rn() {
               if ("CSSMatrix" in window)
                 return "CSSMatrix";
             })(), pe = 0, ne = 0, ge = 0, z = void 0;
-            if (J.originalEvent && J.originalEvent.changedTouches ? z = J.originalEvent.changedTouches[0].pageX : J.changedTouches ? z = J.changedTouches[0].pageX : z = J.pageX, x.getDuration()) {
+            if (V.originalEvent && V.originalEvent.changedTouches ? z = V.originalEvent.changedTouches[0].pageX : V.changedTouches ? z = V.changedTouches[0].pageX : z = V.pageX, x.getDuration()) {
               if (z < oe.left ? z = oe.left : z > le + oe.left && (z = le + oe.left), ge = z - oe.left, pe = ge / le, x.newTime = pe * x.getDuration(), k && x.getCurrentTime() !== null && x.newTime.toFixed(4) !== x.getCurrentTime().toFixed(4) && (x.setCurrentRailHandle(x.newTime), x.updateCurrent(x.newTime)), !u.IS_IOS && !u.IS_ANDROID) {
                 if (ge < 0 && (ge = 0), x.options.useSmoothHover && we !== null && typeof window[we] < "u") {
                   var ue = new window[we](getComputedStyle(x.handle)[ve]), D = ue.m41, ye = ge / parseFloat(getComputedStyle(x.total).width) - D / parseFloat(getComputedStyle(x.total).width);
@@ -52051,8 +52051,8 @@ function _rn() {
               }
             } else !u.IS_IOS && !u.IS_ANDROID && x.timefloat && (ne = x.timefloat.offsetWidth + le >= x.getElement(x.container).offsetWidth ? x.timefloat.offsetWidth / 2 : 0, x.timefloat.style.left = ne + "px", x.timefloat.style.left = ne + "px", x.timefloat.style.display = "block");
           }, N = function() {
-            var J = x.getCurrentTime(), G = l.default.t("mejs.time-slider"), oe = (0, d.secondsToTimeCode)(J, p.options.alwaysShowHours, p.options.showTimecodeFrameCount, p.options.framesPerSecond, p.options.secondsDecimalLength, p.options.timeFormat), le = x.getDuration();
-            x.slider.setAttribute("role", "slider"), x.slider.tabIndex = 0, y.paused ? (x.slider.setAttribute("aria-label", G), x.slider.setAttribute("aria-valuemin", 0), x.slider.setAttribute("aria-valuemax", isNaN(le) ? 0 : le), x.slider.setAttribute("aria-valuenow", J), x.slider.setAttribute("aria-valuetext", oe)) : (x.slider.removeAttribute("aria-label"), x.slider.removeAttribute("aria-valuemin"), x.slider.removeAttribute("aria-valuemax"), x.slider.removeAttribute("aria-valuenow"), x.slider.removeAttribute("aria-valuetext"));
+            var V = x.getCurrentTime(), G = l.default.t("mejs.time-slider"), oe = (0, d.secondsToTimeCode)(V, p.options.alwaysShowHours, p.options.showTimecodeFrameCount, p.options.framesPerSecond, p.options.secondsDecimalLength, p.options.timeFormat), le = x.getDuration();
+            x.slider.setAttribute("role", "slider"), x.slider.tabIndex = 0, y.paused ? (x.slider.setAttribute("aria-label", G), x.slider.setAttribute("aria-valuemin", 0), x.slider.setAttribute("aria-valuemax", isNaN(le) ? 0 : le), x.slider.setAttribute("aria-valuenow", V), x.slider.setAttribute("aria-valuetext", oe)) : (x.slider.removeAttribute("aria-label"), x.slider.removeAttribute("aria-valuemin"), x.slider.removeAttribute("aria-valuemax"), x.slider.removeAttribute("aria-valuenow"), x.slider.removeAttribute("aria-valuetext"));
           }, F = function() {
             /* @__PURE__ */ new Date() - b >= 1e3 && x.play();
           }, Y = function() {
@@ -52064,15 +52064,15 @@ function _rn() {
             p.options.autoRewind = T;
           }), x.slider.addEventListener("keydown", function(E) {
             if (/* @__PURE__ */ new Date() - b >= 1e3 && (I = x.paused), x.options.enableKeyboard && x.options.keyActions.length) {
-              var J = E.which || E.keyCode || 0, G = x.getDuration(), oe = p.options.defaultSeekForwardInterval(y), le = p.options.defaultSeekBackwardInterval(y), ve = x.getCurrentTime(), we = x.getElement(x.container).querySelector("." + x.options.classPrefix + "volume-slider");
-              if (J === 38 || J === 40) {
+              var V = E.which || E.keyCode || 0, G = x.getDuration(), oe = p.options.defaultSeekForwardInterval(y), le = p.options.defaultSeekBackwardInterval(y), ve = x.getCurrentTime(), we = x.getElement(x.container).querySelector("." + x.options.classPrefix + "volume-slider");
+              if (V === 38 || V === 40) {
                 we && (we.style.display = "block"), x.isVideo && (x.showControls(), x.startControlsTimer());
-                var pe = J === 38 ? Math.min(x.volume + 0.1, 1) : Math.max(x.volume - 0.1, 0), ne = pe <= 0;
+                var pe = V === 38 ? Math.min(x.volume + 0.1, 1) : Math.max(x.volume - 0.1, 0), ne = pe <= 0;
                 x.setVolume(pe), x.setMuted(ne);
                 return;
               } else
                 we && (we.style.display = "none");
-              switch (J) {
+              switch (V) {
                 case 37:
                   x.getDuration() !== 1 / 0 && (ve -= le);
                   break;
@@ -52101,12 +52101,12 @@ function _rn() {
           x.slider.addEventListener("dragstart", function() {
             return !1;
           });
-          for (var w = 0, X = O.length; w < X; w++)
+          for (var w = 0, Z = O.length; w < Z; w++)
             x.slider.addEventListener(O[w], function(E) {
               if (x.forcedHandlePause = !1, x.getDuration() !== 1 / 0 && (E.which === 1 || E.which === 0)) {
                 x.paused || (x.pause(), x.forcedHandlePause = !0), k = !0, L(E);
-                for (var J = ["mouseup", "touchend"], G = 0, oe = J.length; G < oe; G++)
-                  x.getElement(x.container).addEventListener(J[G], function(le) {
+                for (var V = ["mouseup", "touchend"], G = 0, oe = V.length; G < oe; G++)
+                  x.getElement(x.container).addEventListener(V[G], function(le) {
                     var ve = le.target;
                     (ve === x.slider || ve.closest("." + x.options.classPrefix + "time-slider")) && L(le);
                   });
@@ -52116,17 +52116,17 @@ function _rn() {
               }
             }, u.SUPPORT_PASSIVE_EVENT && O[w] === "touchstart" ? { passive: !0 } : !1);
           x.slider.addEventListener("mouseenter", function(E) {
-            E.target === x.slider && x.getDuration() !== 1 / 0 && (x.getElement(x.container).addEventListener("mousemove", function(J) {
-              var G = J.target;
-              (G === x.slider || G.closest("." + x.options.classPrefix + "time-slider")) && L(J);
+            E.target === x.slider && x.getDuration() !== 1 / 0 && (x.getElement(x.container).addEventListener("mousemove", function(V) {
+              var G = V.target;
+              (G === x.slider || G.closest("." + x.options.classPrefix + "time-slider")) && L(V);
             }), x.timefloat && !u.IS_IOS && !u.IS_ANDROID && (x.timefloat.style.display = "block"), x.hovered && !u.IS_IOS && !u.IS_ANDROID && x.options.useSmoothHover && (0, c.removeClass)(x.hovered, "no-hover"));
           }), x.slider.addEventListener("mouseleave", function() {
             x.getDuration() !== 1 / 0 && (k || (x.timefloat && (x.timefloat.style.display = "none"), x.hovered && x.options.useSmoothHover && (0, c.addClass)(x.hovered, "no-hover")));
           }), x.broadcastCallback = function(E) {
-            var J = v.querySelector("." + x.options.classPrefix + "broadcast");
+            var V = v.querySelector("." + x.options.classPrefix + "broadcast");
             if (!x.options.forceLive && x.getDuration() !== 1 / 0)
-              J && (x.slider.style.display = "", J.remove()), p.setProgressRail(E), x.forcedHandlePause || p.setCurrentRail(E), N();
-            else if (!J && x.options.forceLive) {
+              V && (x.slider.style.display = "", V.remove()), p.setProgressRail(E), x.forcedHandlePause || p.setCurrentRail(E), N();
+            else if (!V && x.options.forceLive) {
               var G = r.default.createElement("span");
               G.className = x.options.classPrefix + "broadcast", G.innerText = l.default.t("mejs.live-broadcast"), x.slider.style.display = "none", x.rail.appendChild(G);
             }
@@ -52257,11 +52257,11 @@ function _rn() {
             }
             m.trackToLoad = -1, m.selectedTrack = null, m.isLoadingTrack = !1;
             for (var w = 0; w < Q; w++) {
-              var X = m.tracks[w].kind;
-              m.tracks[w].src.trim() && (X === "subtitles" || X === "captions") && m.addTrackButton(m.tracks[w].trackId, m.tracks[w].srclang, m.tracks[w].label);
+              var Z = m.tracks[w].kind;
+              m.tracks[w].src.trim() && (Z === "subtitles" || Z === "captions") && m.addTrackButton(m.tracks[w].trackId, m.tracks[w].srclang, m.tracks[w].label);
             }
             m.loadNextTrack();
-            var E = ["mouseenter", "focusin"], J = ["mouseleave", "focusout"];
+            var E = ["mouseenter", "focusin"], V = ["mouseleave", "focusout"];
             if (I.options.toggleCaptionsButtonWhenOnlyOne && N === 1)
               m.captionsButton.addEventListener("click", function(C) {
                 var M = "none";
@@ -52274,8 +52274,8 @@ function _rn() {
                 m.captionsButton.addEventListener(E[le], function() {
                   (0, f.removeClass)(this.querySelector("." + I.options.classPrefix + "captions-selector"), I.options.classPrefix + "offscreen");
                 });
-              for (var we = 0, pe = J.length; we < pe; we++)
-                m.captionsButton.addEventListener(J[we], function() {
+              for (var we = 0, pe = V.length; we < pe; we++)
+                m.captionsButton.addEventListener(V[we], function() {
                   (0, f.addClass)(this.querySelector("." + I.options.classPrefix + "captions-selector"), I.options.classPrefix + "offscreen");
                 });
               for (var ne = 0, ge = oe.length; ne < ge; ne++)
@@ -52298,8 +52298,8 @@ function _rn() {
               m.chaptersButton.addEventListener(E[D], function() {
                 this.querySelector("." + I.options.classPrefix + "chapters-selector-list").children.length && (0, f.removeClass)(this.querySelector("." + I.options.classPrefix + "chapters-selector"), I.options.classPrefix + "offscreen");
               });
-            for (var B = 0, g = J.length; B < g; B++)
-              m.chaptersButton.addEventListener(J[B], function() {
+            for (var B = 0, g = V.length; B < g; B++)
+              m.chaptersButton.addEventListener(V[B], function() {
                 (0, f.addClass)(this.querySelector("." + I.options.classPrefix + "chapters-selector"), I.options.classPrefix + "offscreen");
               });
             m.chaptersButton.addEventListener("keydown", function(C) {
@@ -52344,17 +52344,17 @@ function _rn() {
           for (var Q = 0, L = I.length; Q < L; Q++)
             (0, f.removeClass)(I[Q], b.options.classPrefix + "captions-selected");
           x.checked = !0;
-          for (var N = (0, f.siblings)(x, function(J) {
-            return (0, f.hasClass)(J, b.options.classPrefix + "captions-selector-label");
+          for (var N = (0, f.siblings)(x, function(V) {
+            return (0, f.hasClass)(V, b.options.classPrefix + "captions-selector-label");
           }), F = 0, Y = N.length; F < Y; F++)
             (0, f.addClass)(N[F], b.options.classPrefix + "captions-selected");
           if (m === "none")
             b.selectedTrack = null, (0, f.removeClass)(b.captionsButton, b.options.classPrefix + "captions-enabled");
           else
             for (var O = 0, w = b.tracks.length; O < w; O++) {
-              var X = b.tracks[O];
-              if (X.trackId === m) {
-                b.selectedTrack === null && (0, f.addClass)(b.captionsButton, b.options.classPrefix + "captions-enabled"), b.selectedTrack = X, b.captions.setAttribute("lang", b.selectedTrack.srclang), b.displayCaptions();
+              var Z = b.tracks[O];
+              if (Z.trackId === m) {
+                b.selectedTrack === null && (0, f.addClass)(b.captionsButton, b.options.classPrefix + "captions-enabled"), b.selectedTrack = Z, b.captions.setAttribute("lang", b.selectedTrack.srclang), b.displayCaptions();
                 break;
               }
             }
@@ -52423,8 +52423,8 @@ function _rn() {
               for (var Q = U.getElementsByTagName("script"), L = Q.length; L--; )
                 Q[L].remove();
               for (var N = U.getElementsByTagName("*"), F = 0, Y = N.length; F < Y; F++)
-                for (var O = N[F].attributes, w = Array.prototype.slice.call(O), X = 0, E = w.length; X < E; X++)
-                  w[X].name.startsWith("on") || w[X].value.startsWith("javascript") ? N[F].remove() : w[X].name === "style" && N[F].removeAttribute(w[X].name);
+                for (var O = N[F].attributes, w = Array.prototype.slice.call(O), Z = 0, E = w.length; Z < E; Z++)
+                  w[Z].name.startsWith("on") || w[Z].value.startsWith("javascript") ? N[F].remove() : w[Z].name === "style" && N[F].removeAttribute(w[Z].name);
               return U.innerHTML;
             };
             if (y !== null && y.isLoaded) {
@@ -52482,11 +52482,11 @@ function _rn() {
               y.chaptersButton.querySelector("ul").innerHTML += '<li class="' + y.options.classPrefix + 'chapters-selector-list-item" role="menuitemcheckbox" aria-live="polite" aria-disabled="false" aria-checked="false">' + ('<input type="radio" class="' + y.options.classPrefix + 'captions-selector-input" ') + ('name="' + y.id + '_chapters" id="' + y.id + "_chapters_" + k + '" value="' + m.entries[k].start + '" disabled>') + ('<label class="' + y.options.classPrefix + 'chapters-selector-label"') + ('for="' + y.id + "_chapters_" + k + '">' + m.entries[k].text + "</label>") + "</li>";
             for (var I = y.chaptersButton.querySelectorAll('input[type="radio"]'), x = y.chaptersButton.querySelectorAll("." + y.options.classPrefix + "chapters-selector-label"), T = 0, U = I.length; T < U; T++)
               I[T].disabled = !1, I[T].checked = !1, I[T].addEventListener("click", function(N) {
-                var F = this, Y = y.chaptersButton.querySelectorAll("li"), O = (0, f.siblings)(F, function(J) {
-                  return (0, f.hasClass)(J, y.options.classPrefix + "chapters-selector-label");
+                var F = this, Y = y.chaptersButton.querySelectorAll("li"), O = (0, f.siblings)(F, function(V) {
+                  return (0, f.hasClass)(V, y.options.classPrefix + "chapters-selector-label");
                 })[0];
                 F.checked = !0, F.parentNode.setAttribute("aria-checked", !0), (0, f.addClass)(O, y.options.classPrefix + "chapters-selected"), (0, f.removeClass)(y.chaptersButton.querySelector("." + y.options.classPrefix + "chapters-selected"), y.options.classPrefix + "chapters-selected");
-                for (var w = 0, X = Y.length; w < X; w++)
+                for (var w = 0, Z = Y.length; w < Z; w++)
                   Y[w].setAttribute("aria-checked", !1);
                 var E = N.keyCode || N.which;
                 typeof E > "u" && setTimeout(function() {
@@ -52666,7 +52666,7 @@ function _rn() {
             var L = !1, N = !1, F = !1, Y = function() {
               var we = Math.floor(y.volume * 100);
               O.setAttribute("aria-valuenow", we), O.setAttribute("aria-valuetext", we + "%");
-            }, O = k === "vertical" ? b.getElement(b.container).querySelector("." + b.options.classPrefix + "volume-slider") : b.getElement(b.container).querySelector("." + b.options.classPrefix + "horizontal-volume-slider"), w = k === "vertical" ? b.getElement(b.container).querySelector("." + b.options.classPrefix + "volume-total") : b.getElement(b.container).querySelector("." + b.options.classPrefix + "horizontal-volume-total"), X = k === "vertical" ? b.getElement(b.container).querySelector("." + b.options.classPrefix + "volume-current") : b.getElement(b.container).querySelector("." + b.options.classPrefix + "horizontal-volume-current"), E = k === "vertical" ? b.getElement(b.container).querySelector("." + b.options.classPrefix + "volume-handle") : b.getElement(b.container).querySelector("." + b.options.classPrefix + "horizontal-volume-handle"), J = function(we) {
+            }, O = k === "vertical" ? b.getElement(b.container).querySelector("." + b.options.classPrefix + "volume-slider") : b.getElement(b.container).querySelector("." + b.options.classPrefix + "horizontal-volume-slider"), w = k === "vertical" ? b.getElement(b.container).querySelector("." + b.options.classPrefix + "volume-total") : b.getElement(b.container).querySelector("." + b.options.classPrefix + "horizontal-volume-total"), Z = k === "vertical" ? b.getElement(b.container).querySelector("." + b.options.classPrefix + "volume-current") : b.getElement(b.container).querySelector("." + b.options.classPrefix + "horizontal-volume-current"), E = k === "vertical" ? b.getElement(b.container).querySelector("." + b.options.classPrefix + "volume-handle") : b.getElement(b.container).querySelector("." + b.options.classPrefix + "horizontal-volume-handle"), V = function(we) {
               if (!(we === null || isNaN(we) || we === void 0)) {
                 if (we = Math.max(0, we), we = Math.min(we, 1), we === 0) {
                   (0, c.removeClass)(U, b.options.classPrefix + "mute"), (0, c.addClass)(U, b.options.classPrefix + "unmute");
@@ -52678,7 +52678,7 @@ function _rn() {
                   ne.setAttribute("title", I), ne.setAttribute("aria-label", I);
                 }
                 var ge = we * 100 + "%", z = getComputedStyle(E);
-                k === "vertical" ? (X.style.bottom = 0, X.style.height = ge, E.style.bottom = ge, E.style.marginBottom = -parseFloat(z.height) / 2 + "px") : (X.style.left = 0, X.style.width = ge, E.style.left = ge, E.style.marginLeft = -parseFloat(z.width) / 2 + "px");
+                k === "vertical" ? (Z.style.bottom = 0, Z.style.height = ge, E.style.bottom = ge, E.style.marginBottom = -parseFloat(z.height) / 2 + "px") : (Z.style.left = 0, Z.style.width = ge, E.style.left = ge, E.style.marginLeft = -parseFloat(z.width) / 2 + "px");
               }
             }, G = function(we) {
               var pe = (0, c.offset)(w), ne = getComputedStyle(w);
@@ -52692,9 +52692,9 @@ function _rn() {
                 var D = parseFloat(ne.width), ye = we.pageX - pe.left;
                 ge = ye / D;
               }
-              ge = Math.max(0, ge), ge = Math.min(ge, 1), J(ge), b.setMuted(ge === 0), b.setVolume(ge), we.preventDefault(), we.stopPropagation();
+              ge = Math.max(0, ge), ge = Math.min(ge, 1), V(ge), b.setMuted(ge === 0), b.setVolume(ge), we.preventDefault(), we.stopPropagation();
             }, oe = function() {
-              b.muted ? (J(0), (0, c.removeClass)(U, b.options.classPrefix + "mute"), (0, c.addClass)(U, b.options.classPrefix + "unmute")) : (J(y.volume), (0, c.removeClass)(U, b.options.classPrefix + "unmute"), (0, c.addClass)(U, b.options.classPrefix + "mute"));
+              b.muted ? (V(0), (0, c.removeClass)(U, b.options.classPrefix + "mute"), (0, c.addClass)(U, b.options.classPrefix + "unmute")) : (V(y.volume), (0, c.removeClass)(U, b.options.classPrefix + "unmute"), (0, c.addClass)(U, b.options.classPrefix + "mute"));
             };
             p.getElement(p.container).addEventListener("keydown", function(ve) {
               var we = !!ve.target.closest("." + b.options.classPrefix + "container");
@@ -52722,7 +52722,7 @@ function _rn() {
                   default:
                     return !0;
                 }
-                L = !1, J(pe), y.setVolume(pe), ve.preventDefault(), ve.stopPropagation();
+                L = !1, V(pe), y.setVolume(pe), ve.preventDefault(), ve.stopPropagation();
               }
             }), U.querySelector("button").addEventListener("click", function() {
               y.setMuted(!y.muted);
@@ -52849,13 +52849,13 @@ function _rn() {
         return Y && typeof Symbol == "function" && Y.constructor === Symbol && Y !== Symbol.prototype ? "symbol" : typeof Y;
       }, r = /* @__PURE__ */ (function() {
         function Y(O, w) {
-          for (var X = 0; X < w.length; X++) {
-            var E = w[X];
+          for (var Z = 0; Z < w.length; Z++) {
+            var E = w[Z];
             E.enumerable = E.enumerable || !1, E.configurable = !0, "value" in E && (E.writable = !0), Object.defineProperty(O, E.key, E);
           }
         }
-        return function(O, w, X) {
-          return w && Y(O.prototype, w), X && Y(O, X), O;
+        return function(O, w, Z) {
+          return w && Y(O.prototype, w), Z && Y(O, Z), O;
         };
       })(), i = e(3), a = Q(i), s = e(2), l = Q(s), u = e(7), d = Q(u), c = e(6), h = Q(c), f = e(17), p = Q(f), v = e(5), m = Q(v), y = e(25), b = e(27), k = e(30), I = e(28), x = e(26), T = U(x);
       function U(Y) {
@@ -52931,17 +52931,17 @@ function _rn() {
       var F = (function() {
         function Y(O, w) {
           L(this, Y);
-          var X = this, E = typeof O == "string" ? l.default.getElementById(O) : O;
-          if (!(X instanceof Y))
+          var Z = this, E = typeof O == "string" ? l.default.getElementById(O) : O;
+          if (!(Z instanceof Y))
             return new Y(E, w);
-          if (X.node = X.media = E, !!X.node) {
-            if (X.media.player)
-              return X.media.player;
-            if (X.hasFocus = !1, X.controlsAreVisible = !0, X.controlsEnabled = !0, X.controlsTimer = null, X.currentMediaTime = 0, X.proxy = null, w === void 0) {
-              var J = X.node.getAttribute("data-mejsoptions");
-              w = J ? JSON.parse(J) : {};
+          if (Z.node = Z.media = E, !!Z.node) {
+            if (Z.media.player)
+              return Z.media.player;
+            if (Z.hasFocus = !1, Z.controlsAreVisible = !0, Z.controlsEnabled = !0, Z.controlsTimer = null, Z.currentMediaTime = 0, Z.proxy = null, w === void 0) {
+              var V = Z.node.getAttribute("data-mejsoptions");
+              w = V ? JSON.parse(V) : {};
             }
-            return X.options = Object.assign({}, N, w), X.options.loop && !X.media.getAttribute("loop") ? (X.media.loop = !0, X.node.loop = !0) : X.media.loop && (X.options.loop = !0), X.options.timeFormat || (X.options.timeFormat = "mm:ss", X.options.alwaysShowHours && (X.options.timeFormat = "hh:mm:ss"), X.options.showTimecodeFrameCount && (X.options.timeFormat += ":ff")), (0, k.calculateTimeFormat)(0, X.options, X.options.framesPerSecond || 25), X.id = "mep_" + d.default.mepIndex++, d.default.players[X.id] = X, X.init(), X;
+            return Z.options = Object.assign({}, N, w), Z.options.loop && !Z.media.getAttribute("loop") ? (Z.media.loop = !0, Z.node.loop = !0) : Z.media.loop && (Z.options.loop = !0), Z.options.timeFormat || (Z.options.timeFormat = "mm:ss", Z.options.alwaysShowHours && (Z.options.timeFormat = "hh:mm:ss"), Z.options.showTimecodeFrameCount && (Z.options.timeFormat += ":ff")), (0, k.calculateTimeFormat)(0, Z.options, Z.options.framesPerSecond || 25), Z.id = "mep_" + d.default.mepIndex++, d.default.players[Z.id] = Z, Z.init(), Z;
           }
         }
         return r(Y, [{
@@ -52952,7 +52952,7 @@ function _rn() {
         }, {
           key: "init",
           value: function() {
-            var w = this, X = Object.assign({}, w.options, {
+            var w = this, Z = Object.assign({}, w.options, {
               success: function(ne, ge) {
                 w._meReady(ne, ge);
               },
@@ -52964,8 +52964,8 @@ function _rn() {
               w.node.setAttribute("controls", !0), y.IS_IPAD && w.node.getAttribute("autoplay") && w.play();
             else if ((w.isVideo || !w.isVideo && (w.options.features.length || w.options.useDefaultControls)) && !(y.IS_ANDROID && w.options.AndroidUseNativeControls)) {
               w.node.removeAttribute("controls");
-              var J = w.isVideo ? m.default.t("mejs.video-player") : m.default.t("mejs.audio-player"), G = l.default.createElement("span");
-              if (G.className = w.options.classPrefix + "offscreen", G.innerText = J, w.media.parentNode.insertBefore(G, w.media), w.container = l.default.createElement("div"), w.getElement(w.container).id = w.id, w.getElement(w.container).className = w.options.classPrefix + "container " + w.options.classPrefix + "container-keyboard-inactive " + w.media.className, w.getElement(w.container).tabIndex = 0, w.getElement(w.container).setAttribute("role", "application"), w.getElement(w.container).setAttribute("aria-label", J), w.getElement(w.container).innerHTML = '<div class="' + w.options.classPrefix + 'inner">' + ('<div class="' + w.options.classPrefix + 'mediaelement"></div>') + ('<div class="' + w.options.classPrefix + 'layers"></div>') + ('<div class="' + w.options.classPrefix + 'controls"></div>') + "</div>", w.getElement(w.container).addEventListener("focus", function(pe) {
+              var V = w.isVideo ? m.default.t("mejs.video-player") : m.default.t("mejs.audio-player"), G = l.default.createElement("span");
+              if (G.className = w.options.classPrefix + "offscreen", G.innerText = V, w.media.parentNode.insertBefore(G, w.media), w.container = l.default.createElement("div"), w.getElement(w.container).id = w.id, w.getElement(w.container).className = w.options.classPrefix + "container " + w.options.classPrefix + "container-keyboard-inactive " + w.media.className, w.getElement(w.container).tabIndex = 0, w.getElement(w.container).setAttribute("role", "application"), w.getElement(w.container).setAttribute("aria-label", V), w.getElement(w.container).innerHTML = '<div class="' + w.options.classPrefix + 'inner">' + ('<div class="' + w.options.classPrefix + 'mediaelement"></div>') + ('<div class="' + w.options.classPrefix + 'layers"></div>') + ('<div class="' + w.options.classPrefix + 'controls"></div>') + "</div>", w.getElement(w.container).addEventListener("focus", function(pe) {
                 if (!w.controlsAreVisible && !w.hasFocus && w.controlsEnabled) {
                   w.showControls(!0);
                   var ne = (0, b.isNodeAfter)(pe.relatedTarget, w.getElement(w.container)) ? "." + w.options.classPrefix + "controls ." + w.options.classPrefix + "button:last-child > button" : "." + w.options.classPrefix + "playpause-button > button", ge = w.getElement(w.container).querySelector(ne);
@@ -52978,9 +52978,9 @@ function _rn() {
               }
               y.IS_ANDROID && T.addClass(w.getElement(w.container), w.options.classPrefix + "android"), y.IS_IOS && T.addClass(w.getElement(w.container), w.options.classPrefix + "ios"), y.IS_IPAD && T.addClass(w.getElement(w.container), w.options.classPrefix + "ipad"), y.IS_IPHONE && T.addClass(w.getElement(w.container), w.options.classPrefix + "iphone"), T.addClass(w.getElement(w.container), w.isVideo ? w.options.classPrefix + "video" : w.options.classPrefix + "audio"), w.getElement(w.container).querySelector("." + w.options.classPrefix + "mediaelement").appendChild(w.node), w.media.player = w, w.controls = w.getElement(w.container).querySelector("." + w.options.classPrefix + "controls"), w.layers = w.getElement(w.container).querySelector("." + w.options.classPrefix + "layers");
               var le = w.isVideo ? "video" : "audio", ve = le.substring(0, 1).toUpperCase() + le.substring(1);
-              w.options[le + "Width"] > 0 || w.options[le + "Width"].toString().indexOf("%") > -1 ? w.width = w.options[le + "Width"] : w.node.style.width !== "" && w.node.style.width !== null ? w.width = w.node.style.width : w.node.getAttribute("width") ? w.width = w.node.getAttribute("width") : w.width = w.options["default" + ve + "Width"], w.options[le + "Height"] > 0 || w.options[le + "Height"].toString().indexOf("%") > -1 ? w.height = w.options[le + "Height"] : w.node.style.height !== "" && w.node.style.height !== null ? w.height = w.node.style.height : w.node.getAttribute("height") ? w.height = w.node.getAttribute("height") : w.height = w.options["default" + ve + "Height"], w.initialAspectRatio = w.height >= w.width ? w.width / w.height : w.height / w.width, w.setPlayerSize(w.width, w.height), X.pluginWidth = w.width, X.pluginHeight = w.height;
+              w.options[le + "Width"] > 0 || w.options[le + "Width"].toString().indexOf("%") > -1 ? w.width = w.options[le + "Width"] : w.node.style.width !== "" && w.node.style.width !== null ? w.width = w.node.style.width : w.node.getAttribute("width") ? w.width = w.node.getAttribute("width") : w.width = w.options["default" + ve + "Width"], w.options[le + "Height"] > 0 || w.options[le + "Height"].toString().indexOf("%") > -1 ? w.height = w.options[le + "Height"] : w.node.style.height !== "" && w.node.style.height !== null ? w.height = w.node.style.height : w.node.getAttribute("height") ? w.height = w.node.getAttribute("height") : w.height = w.options["default" + ve + "Height"], w.initialAspectRatio = w.height >= w.width ? w.width / w.height : w.height / w.width, w.setPlayerSize(w.width, w.height), Z.pluginWidth = w.width, Z.pluginHeight = w.height;
             } else !w.isVideo && !w.options.features.length && !w.options.useDefaultControls && (w.node.style.display = "none");
-            if (d.default.MepDefaults = X, new h.default(w.media, X, w.mediaFiles), w.getElement(w.container) !== void 0 && w.options.features.length && w.controlsAreVisible && !w.options.hideVideoControlsOnLoad) {
+            if (d.default.MepDefaults = Z, new h.default(w.media, Z, w.mediaFiles), w.getElement(w.container) !== void 0 && w.options.features.length && w.controlsAreVisible && !w.options.hideVideoControlsOnLoad) {
               var we = (0, b.createEvent)("controlsshown", w.getElement(w.container));
               w.getElement(w.container).dispatchEvent(we);
             }
@@ -52988,37 +52988,37 @@ function _rn() {
         }, {
           key: "showControls",
           value: function(w) {
-            var X = this;
-            if (w = w === void 0 || w, !(X.controlsAreVisible || !X.isVideo)) {
+            var Z = this;
+            if (w = w === void 0 || w, !(Z.controlsAreVisible || !Z.isVideo)) {
               if (w)
                 (function() {
-                  T.fadeIn(X.getElement(X.controls), 200, function() {
-                    T.removeClass(X.getElement(X.controls), X.options.classPrefix + "offscreen");
-                    var ne = (0, b.createEvent)("controlsshown", X.getElement(X.container));
-                    X.getElement(X.container).dispatchEvent(ne);
+                  T.fadeIn(Z.getElement(Z.controls), 200, function() {
+                    T.removeClass(Z.getElement(Z.controls), Z.options.classPrefix + "offscreen");
+                    var ne = (0, b.createEvent)("controlsshown", Z.getElement(Z.container));
+                    Z.getElement(Z.container).dispatchEvent(ne);
                   });
-                  for (var le = X.getElement(X.container).querySelectorAll("." + X.options.classPrefix + "control"), ve = function(ge, z) {
+                  for (var le = Z.getElement(Z.container).querySelectorAll("." + Z.options.classPrefix + "control"), ve = function(ge, z) {
                     T.fadeIn(le[ge], 200, function() {
-                      T.removeClass(le[ge], X.options.classPrefix + "offscreen");
+                      T.removeClass(le[ge], Z.options.classPrefix + "offscreen");
                     });
                   }, we = 0, pe = le.length; we < pe; we++)
                     ve(we);
                 })();
               else {
-                T.removeClass(X.getElement(X.controls), X.options.classPrefix + "offscreen"), X.getElement(X.controls).style.display = "", X.getElement(X.controls).style.opacity = 1;
-                for (var E = X.getElement(X.container).querySelectorAll("." + X.options.classPrefix + "control"), J = 0, G = E.length; J < G; J++)
-                  T.removeClass(E[J], X.options.classPrefix + "offscreen"), E[J].style.display = "";
-                var oe = (0, b.createEvent)("controlsshown", X.getElement(X.container));
-                X.getElement(X.container).dispatchEvent(oe);
+                T.removeClass(Z.getElement(Z.controls), Z.options.classPrefix + "offscreen"), Z.getElement(Z.controls).style.display = "", Z.getElement(Z.controls).style.opacity = 1;
+                for (var E = Z.getElement(Z.container).querySelectorAll("." + Z.options.classPrefix + "control"), V = 0, G = E.length; V < G; V++)
+                  T.removeClass(E[V], Z.options.classPrefix + "offscreen"), E[V].style.display = "";
+                var oe = (0, b.createEvent)("controlsshown", Z.getElement(Z.container));
+                Z.getElement(Z.container).dispatchEvent(oe);
               }
-              X.controlsAreVisible = !0, X.setControlsSize();
+              Z.controlsAreVisible = !0, Z.setControlsSize();
             }
           }
         }, {
           key: "hideControls",
-          value: function(w, X) {
+          value: function(w, Z) {
             var E = this;
-            if (w = w === void 0 || w, !(X !== !0 && (!E.controlsAreVisible || E.options.alwaysShowControls || E.paused && E.readyState === 4 && (!E.options.hideVideoControlsOnLoad && E.currentTime <= 0 || !E.options.hideVideoControlsOnPause && E.currentTime > 0) || E.isVideo && !E.options.hideVideoControlsOnLoad && !E.readyState || E.ended))) {
+            if (w = w === void 0 || w, !(Z !== !0 && (!E.controlsAreVisible || E.options.alwaysShowControls || E.paused && E.readyState === 4 && (!E.options.hideVideoControlsOnLoad && E.currentTime <= 0 || !E.options.hideVideoControlsOnPause && E.currentTime > 0) || E.isVideo && !E.options.hideVideoControlsOnLoad && !E.readyState || E.ended))) {
               if (w)
                 (function() {
                   T.fadeOut(E.getElement(E.controls), 200, function() {
@@ -53035,8 +53035,8 @@ function _rn() {
                 })();
               else {
                 T.addClass(E.getElement(E.controls), E.options.classPrefix + "offscreen"), E.getElement(E.controls).style.display = "", E.getElement(E.controls).style.opacity = 0;
-                for (var J = E.getElement(E.container).querySelectorAll("." + E.options.classPrefix + "control"), G = 0, oe = J.length; G < oe; G++)
-                  T.addClass(J[G], E.options.classPrefix + "offscreen"), J[G].style.display = "";
+                for (var V = E.getElement(E.container).querySelectorAll("." + E.options.classPrefix + "control"), G = 0, oe = V.length; G < oe; G++)
+                  T.addClass(V[G], E.options.classPrefix + "offscreen"), V[G].style.display = "";
                 var le = (0, b.createEvent)("controlshidden", E.getElement(E.container));
                 E.getElement(E.container).dispatchEvent(le);
               }
@@ -53046,9 +53046,9 @@ function _rn() {
         }, {
           key: "startControlsTimer",
           value: function(w) {
-            var X = this;
-            w = typeof w < "u" ? w : X.options.controlsTimeoutDefault, X.killControlsTimer("start"), X.controlsTimer = setTimeout(function() {
-              X.hideControls(), X.killControlsTimer("hide");
+            var Z = this;
+            w = typeof w < "u" ? w : Z.options.controlsTimeoutDefault, Z.killControlsTimer("start"), Z.controlsTimer = setTimeout(function() {
+              Z.hideControls(), Z.killControlsTimer("hide");
             }, w);
           }
         }, {
@@ -53079,10 +53079,10 @@ function _rn() {
           }
         }, {
           key: "_meReady",
-          value: function(w, X) {
-            var E = this, J = X.getAttribute("autoplay"), G = !(J == null || J === "false"), oe = w.rendererName !== null && /(native|html5)/i.test(w.rendererName);
+          value: function(w, Z) {
+            var E = this, V = Z.getAttribute("autoplay"), G = !(V == null || V === "false"), oe = w.rendererName !== null && /(native|html5)/i.test(w.rendererName);
             if (E.getElement(E.controls) && E.enableControls(), E.getElement(E.container) && E.getElement(E.container).querySelector("." + E.options.classPrefix + "overlay-play") && (E.getElement(E.container).querySelector("." + E.options.classPrefix + "overlay-play").style.display = ""), !E.created) {
-              if (E.created = !0, E.media = w, E.domNode = X, !(y.IS_ANDROID && E.options.AndroidUseNativeControls) && !(y.IS_IPAD && E.options.iPadUseNativeControls) && !(y.IS_IPHONE && E.options.iPhoneUseNativeControls)) {
+              if (E.created = !0, E.media = w, E.domNode = Z, !(y.IS_ANDROID && E.options.AndroidUseNativeControls) && !(y.IS_IPAD && E.options.iPadUseNativeControls) && !(y.IS_IPHONE && E.options.iPhoneUseNativeControls)) {
                 if (!E.isVideo && !E.options.features.length && !E.options.useDefaultControls) {
                   G && oe && E.play(), E.options.success && (typeof E.options.success == "string" ? a.default[E.options.success](E.media, E.domNode, E) : E.options.success(E.media, E.domNode, E));
                   return;
@@ -53154,29 +53154,29 @@ function _rn() {
           }
         }, {
           key: "_handleError",
-          value: function(w, X, E) {
-            var J = this, G = J.getElement(J.layers).querySelector("." + J.options.classPrefix + "overlay-play");
-            G && (G.style.display = "none"), J.options.error && J.options.error(w, X, E), J.getElement(J.container).querySelector("." + J.options.classPrefix + "cannotplay") && J.getElement(J.container).querySelector("." + J.options.classPrefix + "cannotplay").remove();
+          value: function(w, Z, E) {
+            var V = this, G = V.getElement(V.layers).querySelector("." + V.options.classPrefix + "overlay-play");
+            G && (G.style.display = "none"), V.options.error && V.options.error(w, Z, E), V.getElement(V.container).querySelector("." + V.options.classPrefix + "cannotplay") && V.getElement(V.container).querySelector("." + V.options.classPrefix + "cannotplay").remove();
             var oe = l.default.createElement("div");
-            oe.className = J.options.classPrefix + "cannotplay", oe.style.width = "100%", oe.style.height = "100%";
-            var le = typeof J.options.customError == "function" ? J.options.customError(J.media, J.media.originalNode) : J.options.customError, ve = "";
+            oe.className = V.options.classPrefix + "cannotplay", oe.style.width = "100%", oe.style.height = "100%";
+            var le = typeof V.options.customError == "function" ? V.options.customError(V.media, V.media.originalNode) : V.options.customError, ve = "";
             if (!le) {
-              var we = J.media.originalNode.getAttribute("poster");
+              var we = V.media.originalNode.getAttribute("poster");
               if (we && (ve = '<img src="' + we + '" alt="' + d.default.i18n.t("mejs.download-file") + '">'), w.message && (le = "<p>" + w.message + "</p>"), w.urls)
                 for (var pe = 0, ne = w.urls.length; pe < ne; pe++) {
                   var ge = w.urls[pe];
                   le += '<a href="' + ge.src + '" data-type="' + ge.type + '"><span>' + d.default.i18n.t("mejs.download-file") + ": " + ge.src + "</span></a>";
                 }
             }
-            le && J.getElement(J.layers).querySelector("." + J.options.classPrefix + "overlay-error") && (oe.innerHTML = le, J.getElement(J.layers).querySelector("." + J.options.classPrefix + "overlay-error").innerHTML = "" + ve + oe.outerHTML, J.getElement(J.layers).querySelector("." + J.options.classPrefix + "overlay-error").parentNode.style.display = "block"), J.controlsEnabled && J.disableControls();
+            le && V.getElement(V.layers).querySelector("." + V.options.classPrefix + "overlay-error") && (oe.innerHTML = le, V.getElement(V.layers).querySelector("." + V.options.classPrefix + "overlay-error").innerHTML = "" + ve + oe.outerHTML, V.getElement(V.layers).querySelector("." + V.options.classPrefix + "overlay-error").parentNode.style.display = "block"), V.controlsEnabled && V.disableControls();
           }
         }, {
           key: "setPlayerSize",
-          value: function(w, X) {
+          value: function(w, Z) {
             var E = this;
             if (!E.options.setDimensions)
               return !1;
-            switch (typeof w < "u" && (E.width = w), typeof X < "u" && (E.height = X), E.options.stretching) {
+            switch (typeof w < "u" && (E.width = w), typeof Z < "u" && (E.height = Z), E.options.stretching) {
               case "fill":
                 E.isVideo ? E.setFillMode() : E.setDimensions(E.width, E.height);
                 break;
@@ -53200,7 +53200,7 @@ function _rn() {
         }, {
           key: "setResponsiveMode",
           value: function() {
-            var w = this, X = (function() {
+            var w = this, Z = (function() {
               for (var z = void 0, ue = w.getElement(w.container); ue; ) {
                 try {
                   if (y.IS_FIREFOX && ue.tagName.toLowerCase() === "html" && a.default.self !== a.default.top && a.default.frameElement !== null)
@@ -53214,7 +53214,7 @@ function _rn() {
                 ue = z;
               }
               return null;
-            })(), E = getComputedStyle(X || l.default.body, null), J = (function() {
+            })(), E = getComputedStyle(Z || l.default.body, null), V = (function() {
               return w.isVideo ? w.node.videoWidth && w.node.videoWidth > 0 ? w.node.videoWidth : w.node.getAttribute("width") ? w.node.getAttribute("width") : w.options.defaultVideoWidth : w.options.defaultAudioWidth;
             })(), G = (function() {
               return w.isVideo ? w.node.videoHeight && w.node.videoHeight > 0 ? w.node.videoHeight : w.node.getAttribute("height") ? w.node.getAttribute("height") : w.options.defaultVideoHeight : w.options.defaultAudioHeight;
@@ -53224,7 +53224,7 @@ function _rn() {
               var z = 1;
               return w.isVideo && (w.node.videoWidth && w.node.videoWidth > 0 && w.node.videoHeight && w.node.videoHeight > 0 ? z = w.height >= w.width ? w.node.videoWidth / w.node.videoHeight : w.node.videoHeight / w.node.videoWidth : z = w.initialAspectRatio, (isNaN(z) || z < 0.01 || z > 100) && (z = 1)), z;
             })(), le = parseFloat(E.height), ve = void 0, we = parseFloat(E.width);
-            if (w.isVideo ? w.height === "100%" ? ve = parseFloat(we * G / J, 10) : ve = w.height >= w.width ? parseFloat(we / oe, 10) : parseFloat(we * oe, 10) : ve = G, isNaN(ve) && (ve = le), w.getElement(w.container).parentNode.length > 0 && w.getElement(w.container).parentNode.tagName.toLowerCase() === "body" && (we = a.default.innerWidth || l.default.documentElement.clientWidth || l.default.body.clientWidth, ve = a.default.innerHeight || l.default.documentElement.clientHeight || l.default.body.clientHeight), ve && we) {
+            if (w.isVideo ? w.height === "100%" ? ve = parseFloat(we * G / V, 10) : ve = w.height >= w.width ? parseFloat(we / oe, 10) : parseFloat(we * oe, 10) : ve = G, isNaN(ve) && (ve = le), w.getElement(w.container).parentNode.length > 0 && w.getElement(w.container).parentNode.tagName.toLowerCase() === "body" && (we = a.default.innerWidth || l.default.documentElement.clientWidth || l.default.body.clientWidth, ve = a.default.innerHeight || l.default.documentElement.clientHeight || l.default.body.clientHeight), ve && we) {
               w.getElement(w.container).style.width = we + "px", w.getElement(w.container).style.height = ve + "px", w.node.style.width = "100%", w.node.style.height = "100%", w.isVideo && w.media.setSize && w.media.setSize(we, ve);
               for (var pe = w.getElement(w.layers).children, ne = 0, ge = pe.length; ne < ge; ne++)
                 pe[ne].style.width = "100%", pe[ne].style.height = "100%";
@@ -53233,7 +53233,7 @@ function _rn() {
         }, {
           key: "setFillMode",
           value: function() {
-            var w = this, X = a.default.self !== a.default.top && a.default.frameElement !== null, E = (function() {
+            var w = this, Z = a.default.self !== a.default.top && a.default.frameElement !== null, E = (function() {
               for (var _ = void 0, ae = w.getElement(w.container); ae; ) {
                 try {
                   if (y.IS_FIREFOX && ae.tagName.toLowerCase() === "html" && a.default.self !== a.default.top && a.default.frameElement !== null)
@@ -53247,9 +53247,9 @@ function _rn() {
                 ae = _;
               }
               return null;
-            })(), J = getComputedStyle(E || l.default.body, null);
-            w.node.style.height !== "none" && w.node.style.height !== w.height && (w.node.style.height = "auto"), w.node.style.maxWidth !== "none" && w.node.style.maxWidth !== w.width && (w.node.style.maxWidth = "none"), w.node.style.maxHeight !== "none" && w.node.style.maxHeight !== w.height && (w.node.style.maxHeight = "none"), w.node.currentStyle && (w.node.currentStyle.height === "100%" && (w.node.currentStyle.height = "auto"), w.node.currentStyle.maxWidth === "100%" && (w.node.currentStyle.maxWidth = "none"), w.node.currentStyle.maxHeight === "100%" && (w.node.currentStyle.maxHeight = "none")), !X && !parseFloat(J.width) && (E.style.width = w.media.offsetWidth + "px"), !X && !parseFloat(J.height) && (E.style.height = w.media.offsetHeight + "px"), J = getComputedStyle(E);
-            var G = parseFloat(J.width), oe = parseFloat(J.height);
+            })(), V = getComputedStyle(E || l.default.body, null);
+            w.node.style.height !== "none" && w.node.style.height !== w.height && (w.node.style.height = "auto"), w.node.style.maxWidth !== "none" && w.node.style.maxWidth !== w.width && (w.node.style.maxWidth = "none"), w.node.style.maxHeight !== "none" && w.node.style.maxHeight !== w.height && (w.node.style.maxHeight = "none"), w.node.currentStyle && (w.node.currentStyle.height === "100%" && (w.node.currentStyle.height = "auto"), w.node.currentStyle.maxWidth === "100%" && (w.node.currentStyle.maxWidth = "none"), w.node.currentStyle.maxHeight === "100%" && (w.node.currentStyle.maxHeight = "none")), !Z && !parseFloat(V.width) && (E.style.width = w.media.offsetWidth + "px"), !Z && !parseFloat(V.height) && (E.style.height = w.media.offsetHeight + "px"), V = getComputedStyle(E);
+            var G = parseFloat(V.width), oe = parseFloat(V.height);
             w.setDimensions("100%", "100%");
             var le = w.getElement(w.container).querySelector("." + w.options.classPrefix + "poster>img");
             le && (le.style.display = "");
@@ -53258,11 +53258,11 @@ function _rn() {
           }
         }, {
           key: "setDimensions",
-          value: function(w, X) {
+          value: function(w, Z) {
             var E = this;
-            w = (0, b.isString)(w) && w.indexOf("%") > -1 ? w : parseFloat(w) + "px", X = (0, b.isString)(X) && X.indexOf("%") > -1 ? X : parseFloat(X) + "px", E.getElement(E.container).style.width = w, E.getElement(E.container).style.height = X;
-            for (var J = E.getElement(E.layers).children, G = 0, oe = J.length; G < oe; G++)
-              J[G].style.width = w, J[G].style.height = X;
+            w = (0, b.isString)(w) && w.indexOf("%") > -1 ? w : parseFloat(w) + "px", Z = (0, b.isString)(Z) && Z.indexOf("%") > -1 ? Z : parseFloat(Z) + "px", E.getElement(E.container).style.width = w, E.getElement(E.container).style.height = Z;
+            for (var V = E.getElement(E.layers).children, G = 0, oe = V.length; G < oe; G++)
+              V[G].style.width = w, V[G].style.height = Z;
           }
         }, {
           key: "setControlsSize",
@@ -53270,7 +53270,7 @@ function _rn() {
             var w = this;
             if (T.visible(w.getElement(w.container)))
               if (w.rail && T.visible(w.rail)) {
-                for (var X = w.total ? getComputedStyle(w.total, null) : null, E = X ? parseFloat(X.marginLeft) + parseFloat(X.marginRight) : 0, J = getComputedStyle(w.rail), G = parseFloat(J.marginLeft) + parseFloat(J.marginRight), oe = 0, le = T.siblings(w.rail, function(D) {
+                for (var Z = w.total ? getComputedStyle(w.total, null) : null, E = Z ? parseFloat(Z.marginLeft) + parseFloat(Z.marginRight) : 0, V = getComputedStyle(w.rail), G = parseFloat(V.marginLeft) + parseFloat(V.marginRight), oe = 0, le = T.siblings(w.rail, function(D) {
                   return D !== w.rail;
                 }), ve = le.length, we = 0; we < ve; we++)
                   oe += le[we].offsetWidth;
@@ -53285,16 +53285,16 @@ function _rn() {
           }
         }, {
           key: "addControlElement",
-          value: function(w, X) {
+          value: function(w, Z) {
             var E = this;
-            if (E.featurePosition[X] !== void 0) {
-              var J = E.getElement(E.controls).children[E.featurePosition[X] - 1];
-              J.parentNode.insertBefore(w, J.nextSibling);
+            if (E.featurePosition[Z] !== void 0) {
+              var V = E.getElement(E.controls).children[E.featurePosition[Z] - 1];
+              V.parentNode.insertBefore(w, V.nextSibling);
             } else {
               E.getElement(E.controls).appendChild(w);
               for (var G = E.getElement(E.controls).children, oe = 0, le = G.length; oe < le; oe++)
                 if (w === G[oe]) {
-                  E.featurePosition[X] = oe;
+                  E.featurePosition[Z] = oe;
                   break;
                 }
             }
@@ -53304,10 +53304,10 @@ function _rn() {
           value: function() {
             var w = this;
             if (w.isVideo && w.media.rendererName !== null && w.media.rendererName.indexOf("iframe") > -1 && !l.default.getElementById(w.media.id + "-iframe-overlay")) {
-              var X = l.default.createElement("div"), E = l.default.getElementById(w.media.id + "_" + w.media.rendererName);
-              X.id = w.media.id + "-iframe-overlay", X.className = w.options.classPrefix + "iframe-overlay", X.addEventListener("click", function(J) {
-                w.options.clickToPlayPause && (w.paused ? w.play() : w.pause(), J.preventDefault(), J.stopPropagation());
-              }), E.parentNode.insertBefore(X, E);
+              var Z = l.default.createElement("div"), E = l.default.getElementById(w.media.id + "_" + w.media.rendererName);
+              Z.id = w.media.id + "-iframe-overlay", Z.className = w.options.classPrefix + "iframe-overlay", Z.addEventListener("click", function(V) {
+                w.options.clickToPlayPause && (w.paused ? w.play() : w.pause(), V.preventDefault(), V.stopPropagation());
+              }), E.parentNode.insertBefore(Z, E);
             }
           }
         }, {
@@ -53321,58 +53321,58 @@ function _rn() {
         }, {
           key: "setPoster",
           value: function(w) {
-            var X = this;
-            if (X.getElement(X.container)) {
-              var E = X.getElement(X.container).querySelector("." + X.options.classPrefix + "poster");
-              E || (E = l.default.createElement("div"), E.className = X.options.classPrefix + "poster " + X.options.classPrefix + "layer", X.getElement(X.layers).appendChild(E));
-              var J = E.querySelector("img");
-              !J && w && (J = l.default.createElement("img"), J.className = X.options.classPrefix + "poster-img", J.width = "100%", J.height = "100%", E.style.display = "", E.appendChild(J)), w ? (J.setAttribute("src", w), E.style.backgroundImage = 'url("' + w + '")', E.style.display = "") : J ? (E.style.backgroundImage = "none", E.style.display = "none", J.remove()) : E.style.display = "none";
-            } else (y.IS_IPAD && X.options.iPadUseNativeControls || y.IS_IPHONE && X.options.iPhoneUseNativeControls || y.IS_ANDROID && X.options.AndroidUseNativeControls) && (X.media.originalNode.poster = w);
+            var Z = this;
+            if (Z.getElement(Z.container)) {
+              var E = Z.getElement(Z.container).querySelector("." + Z.options.classPrefix + "poster");
+              E || (E = l.default.createElement("div"), E.className = Z.options.classPrefix + "poster " + Z.options.classPrefix + "layer", Z.getElement(Z.layers).appendChild(E));
+              var V = E.querySelector("img");
+              !V && w && (V = l.default.createElement("img"), V.className = Z.options.classPrefix + "poster-img", V.width = "100%", V.height = "100%", E.style.display = "", E.appendChild(V)), w ? (V.setAttribute("src", w), E.style.backgroundImage = 'url("' + w + '")', E.style.display = "") : V ? (E.style.backgroundImage = "none", E.style.display = "none", V.remove()) : E.style.display = "none";
+            } else (y.IS_IPAD && Z.options.iPadUseNativeControls || y.IS_IPHONE && Z.options.iPhoneUseNativeControls || y.IS_ANDROID && Z.options.AndroidUseNativeControls) && (Z.media.originalNode.poster = w);
           }
         }, {
           key: "changeSkin",
           value: function(w) {
-            var X = this;
-            X.getElement(X.container).className = X.options.classPrefix + "container " + w, X.setPlayerSize(X.width, X.height), X.setControlsSize();
+            var Z = this;
+            Z.getElement(Z.container).className = Z.options.classPrefix + "container " + w, Z.setPlayerSize(Z.width, Z.height), Z.setControlsSize();
           }
         }, {
           key: "globalBind",
-          value: function(w, X) {
-            var E = this, J = E.node ? E.node.ownerDocument : l.default;
+          value: function(w, Z) {
+            var E = this, V = E.node ? E.node.ownerDocument : l.default;
             if (w = (0, b.splitEvents)(w, E.id), w.d)
               for (var G = w.d.split(" "), oe = 0, le = G.length; oe < le; oe++)
                 G[oe].split(".").reduce(function(ne, ge) {
-                  return J.addEventListener(ge, X, !1), ge;
+                  return V.addEventListener(ge, Z, !1), ge;
                 }, "");
             if (w.w)
               for (var ve = w.w.split(" "), we = 0, pe = ve.length; we < pe; we++)
                 ve[we].split(".").reduce(function(ne, ge) {
-                  return a.default.addEventListener(ge, X, !1), ge;
+                  return a.default.addEventListener(ge, Z, !1), ge;
                 }, "");
           }
         }, {
           key: "globalUnbind",
-          value: function(w, X) {
-            var E = this, J = E.node ? E.node.ownerDocument : l.default;
+          value: function(w, Z) {
+            var E = this, V = E.node ? E.node.ownerDocument : l.default;
             if (w = (0, b.splitEvents)(w, E.id), w.d)
               for (var G = w.d.split(" "), oe = 0, le = G.length; oe < le; oe++)
                 G[oe].split(".").reduce(function(ne, ge) {
-                  return J.removeEventListener(ge, X, !1), ge;
+                  return V.removeEventListener(ge, Z, !1), ge;
                 }, "");
             if (w.w)
               for (var ve = w.w.split(" "), we = 0, pe = ve.length; we < pe; we++)
                 ve[we].split(".").reduce(function(ne, ge) {
-                  return a.default.removeEventListener(ge, X, !1), ge;
+                  return a.default.removeEventListener(ge, Z, !1), ge;
                 }, "");
           }
         }, {
           key: "buildfeatures",
-          value: function(w, X, E, J) {
+          value: function(w, Z, E, V) {
             for (var G = this, oe = 0, le = G.options.features.length; oe < le; oe++) {
               var ve = G.options.features[oe];
               if (G["build" + ve])
                 try {
-                  G["build" + ve](w, X, E, J);
+                  G["build" + ve](w, Z, E, V);
                 } catch (we) {
                   console.error("error building " + ve, we);
                 }
@@ -53380,25 +53380,25 @@ function _rn() {
           }
         }, {
           key: "buildposter",
-          value: function(w, X, E, J) {
+          value: function(w, Z, E, V) {
             var G = this, oe = l.default.createElement("div");
             oe.className = G.options.classPrefix + "poster " + G.options.classPrefix + "layer", E.appendChild(oe);
-            var le = J.originalNode.getAttribute("poster");
-            w.options.poster !== "" && (le && y.IS_IOS && J.originalNode.removeAttribute("poster"), le = w.options.poster), le ? G.setPoster(le) : G.media.renderer !== null && typeof G.media.renderer.getPosterUrl == "function" ? G.setPoster(G.media.renderer.getPosterUrl()) : oe.style.display = "none", J.addEventListener("play", function() {
+            var le = V.originalNode.getAttribute("poster");
+            w.options.poster !== "" && (le && y.IS_IOS && V.originalNode.removeAttribute("poster"), le = w.options.poster), le ? G.setPoster(le) : G.media.renderer !== null && typeof G.media.renderer.getPosterUrl == "function" ? G.setPoster(G.media.renderer.getPosterUrl()) : oe.style.display = "none", V.addEventListener("play", function() {
               oe.style.display = "none";
-            }), J.addEventListener("playing", function() {
+            }), V.addEventListener("playing", function() {
               oe.style.display = "none";
-            }), w.options.showPosterWhenEnded && w.options.autoRewind && J.addEventListener("ended", function() {
+            }), w.options.showPosterWhenEnded && w.options.autoRewind && V.addEventListener("ended", function() {
               oe.style.display = "";
-            }), J.addEventListener("error", function() {
+            }), V.addEventListener("error", function() {
               oe.style.display = "none";
-            }), w.options.showPosterWhenPaused && J.addEventListener("pause", function() {
+            }), w.options.showPosterWhenPaused && V.addEventListener("pause", function() {
               w.ended || (oe.style.display = "");
             });
           }
         }, {
           key: "buildoverlays",
-          value: function(w, X, E, J) {
+          value: function(w, Z, E, V) {
             if (w.isVideo) {
               var G = this, oe = l.default.createElement("div"), le = l.default.createElement("div"), ve = l.default.createElement("div");
               oe.style.display = "none", oe.className = G.options.classPrefix + "overlay " + G.options.classPrefix + "layer", oe.innerHTML = '<div class="' + G.options.classPrefix + 'overlay-loading">' + ('<span class="' + G.options.classPrefix + 'overlay-loading-bg-img"></span>') + "</div>", E.appendChild(oe), le.style.display = "none", le.className = G.options.classPrefix + "overlay " + G.options.classPrefix + "layer", le.innerHTML = '<div class="' + G.options.classPrefix + 'overlay-error"></div>', E.appendChild(le), ve.className = G.options.classPrefix + "overlay " + G.options.classPrefix + "layer " + G.options.classPrefix + "overlay-play", ve.innerHTML = '<div class="' + G.options.classPrefix + 'overlay-button" role="button" tabindex="0" ' + ('aria-label="' + m.default.t("mejs.play") + '" aria-pressed="false"></div>'), ve.addEventListener("click", function() {
@@ -53414,57 +53414,57 @@ function _rn() {
                 }
               }), E.appendChild(ve), G.media.rendererName !== null && (/(youtube|facebook)/i.test(G.media.rendererName) && !(G.media.originalNode.getAttribute("poster") || w.options.poster || typeof G.media.renderer.getPosterUrl == "function" && G.media.renderer.getPosterUrl()) || y.IS_STOCK_ANDROID || G.media.originalNode.getAttribute("autoplay")) && (ve.style.display = "none");
               var we = !1;
-              J.addEventListener("play", function() {
+              V.addEventListener("play", function() {
                 ve.style.display = "none", oe.style.display = "none", le.style.display = "none", we = !1;
-              }), J.addEventListener("playing", function() {
+              }), V.addEventListener("playing", function() {
                 ve.style.display = "none", oe.style.display = "none", le.style.display = "none", we = !1;
-              }), J.addEventListener("seeking", function() {
+              }), V.addEventListener("seeking", function() {
                 ve.style.display = "none", oe.style.display = "", we = !1;
-              }), J.addEventListener("seeked", function() {
+              }), V.addEventListener("seeked", function() {
                 ve.style.display = G.paused && !y.IS_STOCK_ANDROID ? "" : "none", oe.style.display = "none", we = !1;
-              }), J.addEventListener("pause", function() {
+              }), V.addEventListener("pause", function() {
                 oe.style.display = "none", !y.IS_STOCK_ANDROID && !we && (ve.style.display = ""), we = !1;
-              }), J.addEventListener("waiting", function() {
+              }), V.addEventListener("waiting", function() {
                 oe.style.display = "", we = !1;
-              }), J.addEventListener("loadeddata", function() {
-                oe.style.display = "", y.IS_ANDROID && (J.canplayTimeout = setTimeout(function() {
+              }), V.addEventListener("loadeddata", function() {
+                oe.style.display = "", y.IS_ANDROID && (V.canplayTimeout = setTimeout(function() {
                   if (l.default.createEvent) {
                     var pe = l.default.createEvent("HTMLEvents");
-                    return pe.initEvent("canplay", !0, !0), J.dispatchEvent(pe);
+                    return pe.initEvent("canplay", !0, !0), V.dispatchEvent(pe);
                   }
                 }, 300)), we = !1;
-              }), J.addEventListener("canplay", function() {
-                oe.style.display = "none", clearTimeout(J.canplayTimeout), we = !1;
-              }), J.addEventListener("error", function(pe) {
+              }), V.addEventListener("canplay", function() {
+                oe.style.display = "none", clearTimeout(V.canplayTimeout), we = !1;
+              }), V.addEventListener("error", function(pe) {
                 G._handleError(pe, G.media, G.node), oe.style.display = "none", ve.style.display = "none", we = !0;
-              }), J.addEventListener("loadedmetadata", function() {
+              }), V.addEventListener("loadedmetadata", function() {
                 G.controlsEnabled || G.enableControls();
-              }), J.addEventListener("keydown", function(pe) {
-                G.onkeydown(w, J, pe), we = !1;
+              }), V.addEventListener("keydown", function(pe) {
+                G.onkeydown(w, V, pe), we = !1;
               });
             }
           }
         }, {
           key: "buildkeyboard",
-          value: function(w, X, E, J) {
+          value: function(w, Z, E, V) {
             var G = this;
             G.getElement(G.container).addEventListener("keydown", function() {
               G.keyboardAction = !0;
             }), G.globalKeydownCallback = function(oe) {
               var le = l.default.activeElement.closest("." + G.options.classPrefix + "container"), ve = G.media.closest("." + G.options.classPrefix + "container");
-              return G.hasFocus = !!(le && ve && le.id === ve.id), G.onkeydown(w, J, oe);
+              return G.hasFocus = !!(le && ve && le.id === ve.id), G.onkeydown(w, V, oe);
             }, G.globalClickCallback = function(oe) {
               G.hasFocus = !!oe.target.closest("." + G.options.classPrefix + "container");
             }, G.globalBind("keydown", G.globalKeydownCallback), G.globalBind("click", G.globalClickCallback);
           }
         }, {
           key: "onkeydown",
-          value: function(w, X, E) {
+          value: function(w, Z, E) {
             if (w.hasFocus && w.options.enableKeyboard) {
-              for (var J = 0, G = w.options.keyActions.length; J < G; J++)
-                for (var oe = w.options.keyActions[J], le = 0, ve = oe.keys.length; le < ve; le++)
+              for (var V = 0, G = w.options.keyActions.length; V < G; V++)
+                for (var oe = w.options.keyActions[V], le = 0, ve = oe.keys.length; le < ve; le++)
                   if (E.keyCode === oe.keys[le]) {
-                    oe.action(w, X, E.keyCode, E), E.preventDefault(), E.stopPropagation();
+                    oe.action(w, Z, E.keyCode, E), E.preventDefault(), E.stopPropagation();
                     return;
                   }
             }
@@ -53533,9 +53533,9 @@ function _rn() {
         }, {
           key: "remove",
           value: function() {
-            var w = this, X = w.media.rendererName, E = w.media.originalNode.src;
-            for (var J in w.options.features) {
-              var G = w.options.features[J];
+            var w = this, Z = w.media.rendererName, E = w.media.originalNode.src;
+            for (var V in w.options.features) {
+              var G = w.options.features[V];
               if (w["clean" + G])
                 try {
                   w["clean" + G](w, w.getElement(w.layers), w.getElement(w.controls), w.media);
@@ -53545,9 +53545,9 @@ function _rn() {
             }
             var oe = w.node.getAttribute("width"), le = w.node.getAttribute("height");
             if (oe ? oe.indexOf("%") === -1 && (oe = oe + "px") : oe = "auto", le ? le.indexOf("%") === -1 && (le = le + "px") : le = "auto", w.node.style.width = oe, w.node.style.height = le, w.setPlayerSize(0, 0), w.isDynamic ? w.getElement(w.container).parentNode.insertBefore(w.node, w.getElement(w.container)) : (function() {
-              w.node.setAttribute("controls", !0), w.node.setAttribute("id", w.node.getAttribute("id").replace("_" + X, "").replace("_from_mejs", ""));
+              w.node.setAttribute("controls", !0), w.node.setAttribute("id", w.node.getAttribute("id").replace("_" + Z, "").replace("_from_mejs", ""));
               var we = w.getElement(w.container).querySelector("." + w.options.classPrefix + "poster>img");
-              if (we && w.node.setAttribute("poster", we.src), delete w.node.autoplay, w.node.setAttribute("src", ""), w.media.canPlayType((0, I.getTypeFromFile)(E)) !== "" && w.node.setAttribute("src", E), X && X.indexOf("iframe") > -1) {
+              if (we && w.node.setAttribute("poster", we.src), delete w.node.autoplay, w.node.setAttribute("src", ""), w.media.canPlayType((0, I.getTypeFromFile)(E)) !== "" && w.node.setAttribute("src", E), Z && Z.indexOf("iframe") > -1) {
                 var pe = l.default.getElementById(w.media.id + "-iframe-overlay");
                 pe.remove();
               }
@@ -53848,7 +53848,7 @@ function _rn() {
           }), w = function(we) {
             var pe = (0, u.createEvent)(we.type, y);
             y.dispatchEvent(pe);
-          }, X = function(we) {
+          }, Z = function(we) {
             var pe = "" + we.substring(0, 1).toUpperCase() + we.substring(1);
             Q["get" + pe] = function() {
               return L !== null ? Q[we] : null;
@@ -53868,8 +53868,8 @@ function _rn() {
                 } else
                   Q[we] = ne;
             };
-          }, E = 0, J = Y.length; E < J; E++)
-            X(Y[E]);
+          }, E = 0, V = Y.length; E < V; E++)
+            Z(Y[E]);
           if (i.default["__ready__" + x] = function(ve) {
             y.dashPlayer = L = ve;
             for (var we = dashjs.MediaPlayer.events, pe = function(ye) {
@@ -53936,12 +53936,12 @@ function _rn() {
           y.plugins[N] = y.detectPlugin(F, Y, O, w);
         },
         detectPlugin: function(N, F, Y, O) {
-          var w = [0, 0, 0], X = void 0, E = void 0;
+          var w = [0, 0, 0], Z = void 0, E = void 0;
           if (p.NAV.plugins !== null && p.NAV.plugins !== void 0 && o(p.NAV.plugins[N]) === "object") {
-            if (X = p.NAV.plugins[N].description, X && !(typeof p.NAV.mimeTypes < "u" && p.NAV.mimeTypes[F] && !p.NAV.mimeTypes[F].enabledPlugin)) {
-              w = X.replace(N, "").replace(/^\s+/, "").replace(/\sr/gi, ".").split(".");
-              for (var J = 0, G = w.length; J < G; J++)
-                w[J] = parseInt(w[J].match(/\d+/), 10);
+            if (Z = p.NAV.plugins[N].description, Z && !(typeof p.NAV.mimeTypes < "u" && p.NAV.mimeTypes[F] && !p.NAV.mimeTypes[F].enabledPlugin)) {
+              w = Z.replace(N, "").replace(/^\s+/, "").replace(/\sr/gi, ".").split(".");
+              for (var V = 0, G = w.length; V < G; V++)
+                w[V] = parseInt(w[V].match(/\d+/), 10);
             }
           } else if (i.default.ActiveXObject !== void 0)
             try {
@@ -53959,7 +53959,7 @@ function _rn() {
         create: function(N, F, Y) {
           var O = {}, w = !1;
           O.options = F, O.id = N.id + "_" + O.options.prefix, O.mediaElement = N, O.flashState = {}, O.flashApi = null, O.flashApiStack = [];
-          for (var X = u.default.html5media.properties, E = function(ze) {
+          for (var Z = u.default.html5media.properties, E = function(ze) {
             O.flashState[ze] = null;
             var lt = "" + ze.substring(0, 1).toUpperCase() + ze.substring(1);
             O["get" + lt] = function() {
@@ -53992,8 +53992,8 @@ function _rn() {
                   value: ft
                 });
             };
-          }, J = 0, G = X.length; J < G; J++)
-            E(X[J]);
+          }, V = 0, G = Z.length; V < G; V++)
+            E(Z[V]);
           var oe = u.default.html5media.methods, le = function(ze) {
             O[ze] = function() {
               if (w)
@@ -54227,7 +54227,7 @@ function _rn() {
             for (var z in le)
               ge(z);
           }, k && k.length > 0) {
-            for (var w = 0, X = k.length; w < X; w++)
+            for (var w = 0, Z = k.length; w < Z; w++)
               if (l.renderer.renderers[b.prefix].canPlayType(k[w].type)) {
                 T.setAttribute("src", k[w].src);
                 break;
@@ -54236,7 +54236,7 @@ function _rn() {
           T.setAttribute("id", x), I.parentNode.insertBefore(T, I), I.autoplay = !1, I.style.display = "none";
           var E = {};
           E.type = "flv", E.url = T.src, E.cors = b.flv.cors, E.debug = b.flv.debug, E.path = b.flv.path;
-          var J = b.flv.configs;
+          var V = b.flv.configs;
           T.setSize = function(oe, le) {
             return T.style.width = oe + "px", T.style.height = le + "px", T;
           }, T.hide = function() {
@@ -54249,7 +54249,7 @@ function _rn() {
           var G = (0, u.createEvent)("rendererready", T);
           return y.dispatchEvent(G), y.promises.push(p.load({
             options: E,
-            configs: J,
+            configs: V,
             id: x
           })), T;
         }
@@ -54302,7 +54302,7 @@ function _rn() {
           }), w = function(le) {
             var ve = (0, u.createEvent)(le.type, y);
             y.dispatchEvent(ve);
-          }, X = function(le) {
+          }, Z = function(le) {
             var ve = "" + le.substring(0, 1).toUpperCase() + le.substring(1);
             L["get" + ve] = function() {
               return Q !== null ? L[le] : null;
@@ -54321,8 +54321,8 @@ function _rn() {
                 } else
                   L[le] = we;
             };
-          }, E = 0, J = Y.length; E < J; E++)
-            X(Y[E]);
+          }, E = 0, V = Y.length; E < V; E++)
+            Z(Y[E]);
           if (i.default["__ready__" + x] = function(oe) {
             y.hlsPlayer = Q = oe;
             for (var le = Hls.Events, ve = function(B) {
@@ -54424,19 +54424,19 @@ function _rn() {
         create: function(v, m, y) {
           var b = v.id + "_" + m.prefix, k = !1, I = null;
           v.originalNode === void 0 || v.originalNode === null ? (I = a.default.createElement("audio"), v.appendChild(I)) : I = v.originalNode, I.setAttribute("id", b);
-          for (var x = l.default.html5media.properties, T = function(J) {
-            var G = "" + J.substring(0, 1).toUpperCase() + J.substring(1);
+          for (var x = l.default.html5media.properties, T = function(V) {
+            var G = "" + V.substring(0, 1).toUpperCase() + V.substring(1);
             I["get" + G] = function() {
-              return I[J];
+              return I[V];
             }, I["set" + G] = function(oe) {
-              l.default.html5media.readOnlyProperties.indexOf(J) === -1 && (I[J] = oe);
+              l.default.html5media.readOnlyProperties.indexOf(V) === -1 && (I[V] = oe);
             };
           }, U = 0, Q = x.length; U < Q; U++)
             T(x[U]);
           for (var L = l.default.html5media.events.concat(["click", "mouseover", "mouseout"]).filter(function(E) {
             return E !== "error";
-          }), N = function(J) {
-            I.addEventListener(J, function(G) {
+          }), N = function(V) {
+            I.addEventListener(V, function(G) {
               if (k) {
                 var oe = (0, d.createEvent)(G.type, G.target);
                 v.dispatchEvent(oe);
@@ -54444,8 +54444,8 @@ function _rn() {
             });
           }, F = 0, Y = L.length; F < Y; F++)
             N(L[F]);
-          I.setSize = function(E, J) {
-            return I.style.width = E + "px", I.style.height = J + "px", I;
+          I.setSize = function(E, V) {
+            return I.style.width = E + "px", I.style.height = V + "px", I;
           }, I.hide = function() {
             return k = !1, I.style.display = "none", I;
           }, I.show = function() {
@@ -54462,8 +54462,8 @@ function _rn() {
           I.addEventListener("error", function(E) {
             E && E.target && E.target.error && E.target.error.code === 4 && k && (O < w && y[O + 1] !== void 0 ? (I.src = y[O++].src, I.load(), I.play()) : v.generateError("Media error: Format(s) not supported or source(s) not found", y));
           });
-          var X = (0, d.createEvent)("rendererready", I);
-          return v.dispatchEvent(X), I;
+          var Z = (0, d.createEvent)("rendererready", I);
+          return v.dispatchEvent(Z), I;
         }
       };
       r.default.HtmlMediaElement = l.default.HtmlMediaElement = f, u.renderer.add(f);
@@ -54622,9 +54622,9 @@ function _rn() {
               else
                 x.push({ type: "set", propName: D, value: B });
             };
-          }, w = 0, X = Y.length; w < X; w++)
+          }, w = 0, Z = Y.length; w < Z; w++)
             O(Y[w]);
-          for (var E = l.default.html5media.methods, J = function(D) {
+          for (var E = l.default.html5media.methods, V = function(D) {
             I[D] = function() {
               if (U !== null)
                 switch (D) {
@@ -54639,7 +54639,7 @@ function _rn() {
                 x.push({ type: "call", methodName: D });
             };
           }, G = 0, oe = E.length; G < oe; G++)
-            J(E[G]);
+            V(E[G]);
           var le = function(D) {
             var ye = "";
             switch (D.data) {
@@ -54795,22 +54795,22 @@ function _rn() {
         return M;
       })(), L = ["source", "track", "audio", "video"], N = void 0, F = 0, Y = L.length; F < Y; F++)
         N = a.default.createElement(L[F]);
-      var O = n.SUPPORTS_NATIVE_HLS = I || m && /edge/i.test(c), w = N.webkitEnterFullscreen !== void 0, X = N.requestFullscreen !== void 0;
-      w && /mac os x 10_5/i.test(c) && (X = !1, w = !1);
-      var E = N.webkitRequestFullScreen !== void 0, J = N.mozRequestFullScreen !== void 0, G = N.msRequestFullscreen !== void 0, oe = E || J || G, le = oe, ve = "", we = void 0, pe = void 0, ne = void 0;
-      J ? le = a.default.mozFullScreenEnabled : G && (le = a.default.msFullscreenEnabled), b && (w = !1), oe && (E ? ve = "webkitfullscreenchange" : J ? ve = "fullscreenchange" : G && (ve = "MSFullscreenChange"), n.isFullScreen = we = function() {
-        if (J)
+      var O = n.SUPPORTS_NATIVE_HLS = I || m && /edge/i.test(c), w = N.webkitEnterFullscreen !== void 0, Z = N.requestFullscreen !== void 0;
+      w && /mac os x 10_5/i.test(c) && (Z = !1, w = !1);
+      var E = N.webkitRequestFullScreen !== void 0, V = N.mozRequestFullScreen !== void 0, G = N.msRequestFullscreen !== void 0, oe = E || V || G, le = oe, ve = "", we = void 0, pe = void 0, ne = void 0;
+      V ? le = a.default.mozFullScreenEnabled : G && (le = a.default.msFullscreenEnabled), b && (w = !1), oe && (E ? ve = "webkitfullscreenchange" : V ? ve = "fullscreenchange" : G && (ve = "MSFullscreenChange"), n.isFullScreen = we = function() {
+        if (V)
           return a.default.mozFullScreen;
         if (E)
           return a.default.webkitIsFullScreen;
         if (G)
           return a.default.msFullscreenElement !== null;
       }, n.requestFullScreen = pe = function(H) {
-        E ? H.webkitRequestFullScreen() : J ? H.mozRequestFullScreen() : G && H.msRequestFullscreen();
+        E ? H.webkitRequestFullScreen() : V ? H.mozRequestFullScreen() : G && H.msRequestFullscreen();
       }, n.cancelFullScreen = ne = function() {
-        E ? a.default.webkitCancelFullScreen() : J ? a.default.mozCancelFullScreen() : G && a.default.msExitFullscreen();
+        E ? a.default.webkitCancelFullScreen() : V ? a.default.mozCancelFullScreen() : G && a.default.msExitFullscreen();
       });
-      var ge = n.HAS_NATIVE_FULLSCREEN = X, z = n.HAS_WEBKIT_NATIVE_FULLSCREEN = E, ue = n.HAS_MOZ_NATIVE_FULLSCREEN = J, D = n.HAS_MS_NATIVE_FULLSCREEN = G, ye = n.HAS_IOS_FULLSCREEN = w, B = n.HAS_TRUE_NATIVE_FULLSCREEN = oe, g = n.HAS_NATIVE_FULLSCREEN_ENABLED = le, C = n.FULLSCREEN_EVENT_NAME = ve;
+      var ge = n.HAS_NATIVE_FULLSCREEN = Z, z = n.HAS_WEBKIT_NATIVE_FULLSCREEN = E, ue = n.HAS_MOZ_NATIVE_FULLSCREEN = V, D = n.HAS_MS_NATIVE_FULLSCREEN = G, ye = n.HAS_IOS_FULLSCREEN = w, B = n.HAS_TRUE_NATIVE_FULLSCREEN = oe, g = n.HAS_NATIVE_FULLSCREEN_ENABLED = le, C = n.FULLSCREEN_EVENT_NAME = ve;
       n.isFullScreen = we, n.requestFullScreen = pe, n.cancelFullScreen = ne, l.default.Features = l.default.Features || {}, l.default.Features.isiPad = h, l.default.Features.isiPod = p, l.default.Features.isiPhone = f, l.default.Features.isiOS = l.default.Features.isiPhone || l.default.Features.isiPad, l.default.Features.isAndroid = v, l.default.Features.isIE = m, l.default.Features.isEdge = y, l.default.Features.isChrome = b, l.default.Features.isFirefox = k, l.default.Features.isSafari = I, l.default.Features.isStockAndroid = x, l.default.Features.hasMSE = T, l.default.Features.supportsNativeHLS = O, l.default.Features.supportsPointerEvents = U, l.default.Features.supportsPassiveEvent = Q, l.default.Features.hasiOSFullScreen = ye, l.default.Features.hasNativeFullscreen = ge, l.default.Features.hasWebkitNativeFullScreen = z, l.default.Features.hasMozNativeFullScreen = ue, l.default.Features.hasMsNativeFullScreen = D, l.default.Features.hasTrueNativeFullScreen = B, l.default.Features.nativeFullScreenEnabled = g, l.default.Features.fullScreenEventName = C, l.default.Features.isFullScreen = we, l.default.Features.requestFullScreen = pe, l.default.Features.cancelFullScreen = ne;
     }, { 2: 2, 3: 3, 7: 7 }], 26: [function(e, t, n) {
       Object.defineProperty(n, "__esModule", {
@@ -54858,8 +54858,8 @@ function _rn() {
         var F = null;
         r.default.requestAnimationFrame(function Y(O) {
           F = F || O;
-          var w = O - F, X = parseFloat(1 - w / L, 2);
-          Q.style.opacity = X < 0 ? 0 : X, w > L ? N && typeof N == "function" && N() : r.default.requestAnimationFrame(Y);
+          var w = O - F, Z = parseFloat(1 - w / L, 2);
+          Q.style.opacity = Z < 0 ? 0 : Z, w > L ? N && typeof N == "function" && N() : r.default.requestAnimationFrame(Y);
         });
       }
       function I(Q) {
@@ -54868,8 +54868,8 @@ function _rn() {
         var F = null;
         r.default.requestAnimationFrame(function Y(O) {
           F = F || O;
-          var w = O - F, X = parseFloat(w / L, 2);
-          Q.style.opacity = X > 1 ? 1 : X, w > L ? N && typeof N == "function" && N() : r.default.requestAnimationFrame(Y);
+          var w = O - F, Z = parseFloat(w / L, 2);
+          Q.style.opacity = Z > 1 ? 1 : Z, w > L ? N && typeof N == "function" && N() : r.default.requestAnimationFrame(Y);
         });
       }
       function x(Q, L) {
@@ -54884,7 +54884,7 @@ function _rn() {
         return Q.getClientRects !== void 0 && Q.getClientRects === "function" ? !!(Q.offsetWidth || Q.offsetHeight || Q.getClientRects().length) : !!(Q.offsetWidth || Q.offsetHeight);
       }
       function U(Q, L, N, F) {
-        var Y = r.default.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP"), O = "application/x-www-form-urlencoded; charset=UTF-8", w = !1, X = "*/".concat("*");
+        var Y = r.default.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP"), O = "application/x-www-form-urlencoded; charset=UTF-8", w = !1, Z = "*/".concat("*");
         switch (L) {
           case "text":
             O = "text/plain";
@@ -54899,7 +54899,7 @@ function _rn() {
             O = "application/xml, text/xml";
             break;
         }
-        O !== "application/x-www-form-urlencoded" && (X = O + ", */*; q=0.01"), Y && (Y.open("GET", Q, !0), Y.setRequestHeader("Accept", X), Y.onreadystatechange = function() {
+        O !== "application/x-www-form-urlencoded" && (Z = O + ", */*; q=0.01"), Y && (Y.open("GET", Q, !0), Y.setRequestHeader("Accept", Z), Y.onreadystatechange = function() {
           if (!w && Y.readyState === 4)
             if (Y.status === 200) {
               w = !0;
@@ -55144,13 +55144,13 @@ function _rn() {
         } else
           T = Math.floor(c / 3600) % 24, U = Math.floor(c / 60) % 60, f ? Q = Math.floor(c % 60) : Q = Math.floor(c % 60).toFixed(v);
         T = T <= 0 ? 0 : T, U = U <= 0 ? 0 : U, Q = Q <= 0 ? 0 : Q, Q = Q === 60 ? 0 : Q, U = U === 60 ? 0 : U;
-        for (var w = m.split(":"), X = {}, E = 0, J = w.length; E < J; ++E) {
+        for (var w = m.split(":"), Z = {}, E = 0, V = w.length; E < V; ++E) {
           for (var G = "", oe = 0, le = w[E].length; oe < le; oe++)
             G.indexOf(w[E][oe]) < 0 && (G += w[E][oe]);
-          ~["f", "s", "m", "h"].indexOf(G) && (X[G] = w[E].length);
+          ~["f", "s", "m", "h"].indexOf(G) && (Z[G] = w[E].length);
         }
-        var ve = h || T > 0 ? (T < 10 && X.h > 1 ? "0" + T : T) + ":" : "";
-        return ve += (U < 10 && X.m > 1 ? "0" + U : U) + ":", ve += "" + (Q < 10 && X.s > 1 ? "0" + Q : Q), f && (L = (N % b).toFixed(0), L = L <= 0 ? 0 : L, ve += L < 10 && X.f ? x + "0" + L : "" + x + L), ve;
+        var ve = h || T > 0 ? (T < 10 && Z.h > 1 ? "0" + T : T) + ":" : "";
+        return ve += (U < 10 && Z.m > 1 ? "0" + U : U) + ":", ve += "" + (Q < 10 && Z.s > 1 ? "0" + Q : Q), f && (L = (N % b).toFixed(0), L = L <= 0 ? 0 : L, ve += L < 10 && Z.f ? x + "0" + L : "" + x + L), ve;
       }
       function l(c) {
         var h = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : 25;
@@ -55324,68 +55324,68 @@ const tin = "data:image/svg+xml,%3c?xml%20version='1.0'%20standalone='no'?%3e%3c
 function Ain(e, t, n, o, r, i) {
   return P(), K("div", rin, [
     n.mode === "bar" ? (P(), K("div", iin, [
-      V("div", {
+      J("div", {
         class: "icon-player",
         onClick: t[0] || (t[0] = (...a) => i.togglePlayer && i.togglePlayer(...a))
       }, [
-        V("img", {
+        J("img", {
           src: r.paused ? r.playIcon : r.pauseIcon,
           class: "iconfont",
           alt: ""
         }, null, 8, ain)
       ]),
-      V("div", sin, qe(r.currentTimeStr), 1),
-      V("div", {
+      J("div", sin, Qe(r.currentTimeStr), 1),
+      J("div", {
         class: "status-bar",
         onClick: t[1] || (t[1] = (...a) => i.changePregress && i.changePregress(...a))
       }, [
-        V("div", lin, null, 512),
-        V("div", {
+        J("div", lin, null, 512),
+        J("div", {
           class: "current-status",
           style: fn({ width: r.statusBarWidth })
         }, null, 4)
       ]),
-      V("div", cin, qe(i.totalTimeStr), 1)
+      J("div", cin, Qe(i.totalTimeStr), 1)
     ])) : Ie("", !0),
     n.mode === "circle" ? (P(), K("div", uin, [
-      V("div", {
+      J("div", {
         class: "icon-player",
         onClick: t[2] || (t[2] = (...a) => i.togglePlayer && i.togglePlayer(...a))
       }, [
-        V("img", {
+        J("img", {
           src: r.paused ? r.playIcon : r.pauseIcon
         }, null, 8, din),
-        V("div", pin, qe(r.paused ? r.t("play") : r.t("pause")), 1)
+        J("div", pin, Qe(r.paused ? r.t("play") : r.t("pause")), 1)
       ])
     ])) : Ie("", !0),
     n.mode === "mobile-bar" ? (P(), K("div", hin, [
-      V("div", {
+      J("div", {
         class: "icon-player",
         onClick: t[3] || (t[3] = (...a) => i.togglePlayer && i.togglePlayer(...a))
       }, [
-        V("img", {
+        J("img", {
           src: r.paused ? r.playIcon : r.pauseIcon,
           class: "iconfont",
           alt: ""
         }, null, 8, min)
       ]),
-      V("div", {
+      J("div", {
         class: "status-bar",
         onClick: t[4] || (t[4] = (...a) => i.changePregress && i.changePregress(...a))
       }, [
-        V("div", fin, null, 512),
-        V("div", {
+        J("div", fin, null, 512),
+        J("div", {
           class: "current-status",
           style: fn({ width: r.statusBarWidth })
         }, null, 4),
-        V("div", {
+        J("div", {
           class: "ball-status",
           style: fn({ left: r.statusBarWidth })
         }, null, 4)
       ]),
-      V("div", gin, qe(i.totalTimeStr), 1)
+      J("div", gin, Qe(i.totalTimeStr), 1)
     ])) : Ie("", !0),
-    r.error ? (P(), K("div", yin, qe(r.t("transcodeTip1")), 1)) : Ie("", !0),
+    r.error ? (P(), K("div", yin, Qe(r.t("transcodeTip1")), 1)) : Ie("", !0),
     r.error ? Ie("", !0) : (P(), K("audio", {
       key: 4,
       class: "audioTag",
@@ -55500,22 +55500,22 @@ const bin = /* @__PURE__ */ or(oin, [["render", Ain], ["__scopeId", "data-v-f5d8
 function Min(e, t, n, o, r, i) {
   const a = tt("i18n");
   return P(), K("div", Cin, [
-    V("div", {
+    J("div", {
       class: je(["player-content stop-swiping", { disabled: r.currentTimes > 0 && n.times - r.currentTimes < 0 }])
     }, [
-      V("div", {
+      J("div", {
         class: "icon",
         onClick: t[0] || (t[0] = (...s) => i.togglePlayer && i.togglePlayer(...s))
       }, [
-        V("img", {
+        J("img", {
           src: r.paused ? require("@/assets/play.svg") : require("@/assets/pause.svg"),
           class: "iconfont",
           alt: ""
         }, null, 8, kin)
       ]),
-      V("div", Tin, qe(r.currentTimeStr), 1)
+      J("div", Tin, Qe(r.currentTimeStr), 1)
     ], 2),
-    r.error ? (P(), K("div", Ein, qe(e.$t("transcodeTip1")), 1)) : Ie("", !0),
+    r.error ? (P(), K("div", Ein, Qe(e.$t("transcodeTip1")), 1)) : Ie("", !0),
     r.currentTimes == 0 && !n.isQuestionBank ? (P(), K("div", Sin, [
       t[5] || (t[5] = Dt(" * ", -1)),
       Ze(a, {
@@ -55523,7 +55523,7 @@ function Min(e, t, n, o, r, i) {
         tag: "span"
       }, {
         n: rt(() => [
-          V("strong", null, qe(n.times), 1)
+          J("strong", null, Qe(n.times), 1)
         ]),
         _: 1
       })
@@ -55535,12 +55535,12 @@ function Min(e, t, n, o, r, i) {
         tag: "span"
       }, {
         n: rt(() => [
-          V("strong", null, qe(r.currentTimes) + "/" + qe(n.times), 1)
+          J("strong", null, Qe(r.currentTimes) + "/" + Qe(n.times), 1)
         ]),
         _: 1
       })
     ])) : Ie("", !0),
-    r.currentTimes > 0 && n.times - r.currentTimes <= 0 && !n.isQuestionBank ? (P(), K("div", xin, " *" + qe(e.$t("playTimesOver")), 1)) : Ie("", !0),
+    r.currentTimes > 0 && n.times - r.currentTimes <= 0 && !n.isQuestionBank ? (P(), K("div", xin, " *" + Qe(e.$t("playTimesOver")), 1)) : Ie("", !0),
     r.error ? Ie("", !0) : (P(), K("audio", {
       key: 4,
       ref: "audio",
@@ -55665,8 +55665,8 @@ const Fin = /* @__PURE__ */ or(Din, [["render", Oin]]), Nin = Gr({
     }
   },
   setup(e, { emit: t }) {
-    var E, J;
-    const n = T4(), o = ((J = (E = n == null ? void 0 : n.appContext) == null ? void 0 : E.config) == null ? void 0 : J.globalProperties) || {}, r = o.$t || ((G) => G), i = o.$store || { state: {} }, a = o.$getUniqueValue || (() => Math.random().toString(36).substr(2, 9)), s = hn(a()), l = hn(!1), u = hn(e.videoWidth), d = hn(e.videoHeight), c = hn(0), h = hn(0), f = hn(!1), p = hn(!1), v = hn(null), m = hn(null), y = hn(null), b = hn(null), k = _i(() => Qa(e.resource.fileUrl)), I = _i(() => {
+    var E, V;
+    const n = T4(), o = ((V = (E = n == null ? void 0 : n.appContext) == null ? void 0 : E.config) == null ? void 0 : V.globalProperties) || {}, r = o.$t || ((G) => G), i = o.$store || { state: {} }, a = o.$getUniqueValue || (() => Math.random().toString(36).substr(2, 9)), s = hn(a()), l = hn(!1), u = hn(e.videoWidth), d = hn(e.videoHeight), c = hn(0), h = hn(0), f = hn(!1), p = hn(!1), v = hn(null), m = hn(null), y = hn(null), b = hn(null), k = _i(() => Qa(e.resource.fileUrl)), I = _i(() => {
       let G = e.resource.fileUrl || "";
       const oe = k.value;
       if (oe === "document") {
@@ -55733,7 +55733,7 @@ const Fin = /* @__PURE__ */ or(Din, [["render", Oin]]), Nin = Gr({
       e.resource && typeof e.resource == "object" && (e.resource.mediaInfo = G);
     }, w = (G) => {
       b.value && b.value.videoWidth && b.value.videoHeight && (h.value = 600, c.value = Math.round(b.value.videoWidth * 600 / b.value.videoHeight), f.value && (d.value = h.value + "px", u.value = c.value + "px"));
-    }, X = () => {
+    }, Z = () => {
       e.resource && e.resource.fileUrl && console.log("预览图片:", e.resource.fileUrl);
     };
     return Pv(() => {
@@ -55763,7 +55763,7 @@ const Fin = /* @__PURE__ */ or(Din, [["render", Oin]]), Nin = Gr({
       getMediaInfo: Y,
       setMediaInfo: O,
       loadedmetadata: w,
-      showImage: X
+      showImage: Z
     };
   }
 }), Rin = {
@@ -55790,14 +55790,14 @@ function Win(e, t, n, o, r, i) {
     }, ["prevent", "stop"]))
   }, [
     e.formatFileTypeComputed === "image" ? (P(), K("div", Rin, [
-      V("img", {
+      J("img", {
         src: e.fileUrl,
         onClick: t[0] || (t[0] = (...s) => e.showImage && e.showImage(...s))
       }, null, 8, Qin)
     ])) : Ie("", !0),
     e.formatFileTypeComputed === "document" ? (P(), K("div", qin, [
-      V("div", Uin, [
-        V("iframe", { src: e.fileUrl }, null, 8, Gin)
+      J("div", Uin, [
+        J("iframe", { src: e.fileUrl }, null, 8, Gin)
       ])
     ])) : Ie("", !0),
     e.formatFileTypeComputed === "video" ? (P(), K("div", {
@@ -55805,9 +55805,9 @@ function Win(e, t, n, o, r, i) {
       class: "resource-video",
       style: fn({ width: e.width, height: e.height })
     }, [
-      V("div", Hin, [
-        Xt(V("div", $in, [
-          V("video", {
+      J("div", Hin, [
+        Xt(J("div", $in, [
+          J("video", {
             ref: "video",
             id: "video-media" + e.id,
             class: "custom-video",
@@ -55817,7 +55817,7 @@ function Win(e, t, n, o, r, i) {
             "webkit-playsinline": "",
             onLoadedmetadata: t[1] || (t[1] = (...s) => e.loadedmetadata && e.loadedmetadata(...s))
           }, [
-            V("source", {
+            J("source", {
               type: "video/mp4",
               src: e.fileUrl
             }, null, 8, Yin)
@@ -55826,18 +55826,18 @@ function Win(e, t, n, o, r, i) {
           [Jn, !e.error]
         ]),
         e.error ? (P(), K("div", Kin, [
-          V("span", zin, [
-            Dt(qe(e.$t("transcodeTip")) + " ", 1),
-            V("span", {
+          J("span", zin, [
+            Dt(Qe(e.$t("transcodeTip")) + " ", 1),
+            J("span", {
               class: "ul-link",
               onClick: t[2] || (t[2] = (...s) => e.resetVideo && e.resetVideo(...s))
-            }, qe(e.$t("clickToTry")), 1)
+            }, Qe(e.$t("clickToTry")), 1)
           ])
         ])) : Ie("", !0)
       ])
     ], 4)) : Ie("", !0),
     e.formatFileTypeComputed === "audio" ? (P(), K("div", Vin, [
-      V("div", Jin, [
+      J("div", Jin, [
         Ze(a, {
           src: e.fileUrl,
           times: e.times,
@@ -56242,14 +56242,14 @@ function Xin() {
                   return w(this, C, M);
                 case "latin1":
                 case "binary":
-                  return X(this, C, M);
+                  return Z(this, C, M);
                 case "base64":
                   return F(this, C, M);
                 case "ucs2":
                 case "ucs-2":
                 case "utf16le":
                 case "utf-16le":
-                  return J(this, C, M);
+                  return V(this, C, M);
                 default:
                   if (H) throw new TypeError("Unknown encoding: " + g);
                   g = (g + "").toLowerCase(), H = !0;
@@ -56321,7 +56321,7 @@ function Xin() {
             for (var H = g; H < C; ++H) M += String.fromCharCode(127 & B[H]);
             return M;
           }
-          function X(B, g, C) {
+          function Z(B, g, C) {
             var M = "";
             C = Math.min(B.length, C);
             for (var H = g; H < C; ++H) M += String.fromCharCode(B[H]);
@@ -56333,7 +56333,7 @@ function Xin() {
             for (var H = "", _ = g; _ < C; ++_) H += z(B[_]);
             return H;
           }
-          function J(B, g, C) {
+          function V(B, g, C) {
             for (var M = B.slice(g, C), H = "", _ = 0; _ < M.length; _ += 2) H += String.fromCharCode(M[_] + 256 * M[_ + 1]);
             return H;
           }
@@ -56655,24 +56655,24 @@ function Xin() {
               var m = v(610), y = v(2334), b = v(4942), k = v(3210), I = v(5755), x = v(3741), T = v(9912), U = v(5080), Q = v(1306), L = v(5092);
               f.exports = function(N) {
                 return new Promise(function(F, Y) {
-                  var O, w = N.data, X = N.headers, E = N.responseType;
-                  function J() {
+                  var O, w = N.data, Z = N.headers, E = N.responseType;
+                  function V() {
                     N.cancelToken && N.cancelToken.unsubscribe(O), N.signal && N.signal.removeEventListener("abort", O);
                   }
-                  m.isFormData(w) && delete X["Content-Type"];
+                  m.isFormData(w) && delete Z["Content-Type"];
                   var G = new XMLHttpRequest();
                   if (N.auth) {
                     var oe = N.auth.username || "", le = N.auth.password ? unescape(encodeURIComponent(N.auth.password)) : "";
-                    X.Authorization = "Basic " + btoa(oe + ":" + le);
+                    Z.Authorization = "Basic " + btoa(oe + ":" + le);
                   }
                   var ve = I(N.baseURL, N.url);
                   function we() {
                     if (G) {
                       var ne = "getAllResponseHeaders" in G ? x(G.getAllResponseHeaders()) : null, ge = { data: E && E !== "text" && E !== "json" ? G.response : G.responseText, status: G.status, statusText: G.statusText, headers: ne, config: N, request: G };
                       y(function(z) {
-                        F(z), J();
+                        F(z), V();
                       }, function(z) {
-                        Y(z), J();
+                        Y(z), V();
                       }, ge), G = null;
                     }
                   }
@@ -56687,10 +56687,10 @@ function Xin() {
                     N.timeoutErrorMessage && (ne = N.timeoutErrorMessage), Y(U(ne, N, ge.clarifyTimeoutError ? "ETIMEDOUT" : "ECONNABORTED", G)), G = null;
                   }, m.isStandardBrowserEnv()) {
                     var pe = (N.withCredentials || T(ve)) && N.xsrfCookieName ? b.read(N.xsrfCookieName) : void 0;
-                    pe && (X[N.xsrfHeaderName] = pe);
+                    pe && (Z[N.xsrfHeaderName] = pe);
                   }
-                  "setRequestHeader" in G && m.forEach(X, function(ne, ge) {
-                    w === void 0 && ge.toLowerCase() === "content-type" ? delete X[ge] : G.setRequestHeader(ge, ne);
+                  "setRequestHeader" in G && m.forEach(Z, function(ne, ge) {
+                    w === void 0 && ge.toLowerCase() === "content-type" ? delete Z[ge] : G.setRequestHeader(ge, ne);
                   }), m.isUndefined(N.withCredentials) || (G.withCredentials = !!N.withCredentials), E && E !== "json" && (G.responseType = N.responseType), typeof N.onDownloadProgress == "function" && G.addEventListener("progress", N.onDownloadProgress), typeof N.onUploadProgress == "function" && G.upload && G.upload.addEventListener("progress", N.onUploadProgress), (N.cancelToken || N.signal) && (O = function(ne) {
                     G && (Y(!ne || ne && ne.type ? new L("canceled") : ne), G.abort(), G = null);
                   }, N.cancelToken && N.cancelToken.subscribe(O), N.signal && (N.signal.aborted ? O() : N.signal.addEventListener("abort", O))), w || (w = null), G.send(w);
@@ -56775,14 +56775,14 @@ function Xin() {
                 if (this.interceptors.response.forEach(function(oe) {
                   w.push(oe.fulfilled, oe.rejected);
                 }), !Y) {
-                  var X = [k, void 0];
-                  for (Array.prototype.unshift.apply(X, F), X = X.concat(w), O = Promise.resolve(L); X.length; ) O = O.then(X.shift(), X.shift());
+                  var Z = [k, void 0];
+                  for (Array.prototype.unshift.apply(Z, F), Z = Z.concat(w), O = Promise.resolve(L); Z.length; ) O = O.then(Z.shift(), Z.shift());
                   return O;
                 }
                 for (var E = L; F.length; ) {
-                  var J = F.shift(), G = F.shift();
+                  var V = F.shift(), G = F.shift();
                   try {
-                    E = J(E);
+                    E = V(E);
                   } catch (oe) {
                     G(oe);
                     break;
@@ -57115,8 +57115,8 @@ function Xin() {
                 return (typeof navigator > "u" || navigator.product !== "ReactNative" && navigator.product !== "NativeScript" && navigator.product !== "NS") && typeof window < "u" && typeof document < "u";
               }, forEach: L, merge: function N() {
                 var F = {};
-                function Y(X, E) {
-                  U(F[E]) && U(X) ? F[E] = N(F[E], X) : U(X) ? F[E] = N({}, X) : k(X) ? F[E] = X.slice() : F[E] = X;
+                function Y(Z, E) {
+                  U(F[E]) && U(Z) ? F[E] = N(F[E], Z) : U(Z) ? F[E] = N({}, Z) : k(Z) ? F[E] = Z.slice() : F[E] = Z;
                 }
                 for (var O = 0, w = arguments.length; O < w; O++) L(arguments[O], Y);
                 return F;
@@ -57132,70 +57132,70 @@ function Xin() {
             }, 5917: function(f, p, v) {
               var m;
               (function(y) {
-                function b(E, J) {
-                  var G = (65535 & E) + (65535 & J);
-                  return (E >> 16) + (J >> 16) + (G >> 16) << 16 | 65535 & G;
+                function b(E, V) {
+                  var G = (65535 & E) + (65535 & V);
+                  return (E >> 16) + (V >> 16) + (G >> 16) << 16 | 65535 & G;
                 }
-                function k(E, J, G, oe, le, ve) {
-                  return b((we = b(b(J, E), b(oe, ve))) << (pe = le) | we >>> 32 - pe, G);
+                function k(E, V, G, oe, le, ve) {
+                  return b((we = b(b(V, E), b(oe, ve))) << (pe = le) | we >>> 32 - pe, G);
                   var we, pe;
                 }
-                function I(E, J, G, oe, le, ve, we) {
-                  return k(J & G | ~J & oe, E, J, le, ve, we);
+                function I(E, V, G, oe, le, ve, we) {
+                  return k(V & G | ~V & oe, E, V, le, ve, we);
                 }
-                function x(E, J, G, oe, le, ve, we) {
-                  return k(J & oe | G & ~oe, E, J, le, ve, we);
+                function x(E, V, G, oe, le, ve, we) {
+                  return k(V & oe | G & ~oe, E, V, le, ve, we);
                 }
-                function T(E, J, G, oe, le, ve, we) {
-                  return k(J ^ G ^ oe, E, J, le, ve, we);
+                function T(E, V, G, oe, le, ve, we) {
+                  return k(V ^ G ^ oe, E, V, le, ve, we);
                 }
-                function U(E, J, G, oe, le, ve, we) {
-                  return k(G ^ (J | ~oe), E, J, le, ve, we);
+                function U(E, V, G, oe, le, ve, we) {
+                  return k(G ^ (V | ~oe), E, V, le, ve, we);
                 }
-                function Q(E, J) {
+                function Q(E, V) {
                   var G, oe, le, ve, we;
-                  E[J >> 5] |= 128 << J % 32, E[14 + (J + 64 >>> 9 << 4)] = J;
+                  E[V >> 5] |= 128 << V % 32, E[14 + (V + 64 >>> 9 << 4)] = V;
                   var pe = 1732584193, ne = -271733879, ge = -1732584194, z = 271733878;
                   for (G = 0; G < E.length; G += 16) oe = pe, le = ne, ve = ge, we = z, pe = I(pe, ne, ge, z, E[G], 7, -680876936), z = I(z, pe, ne, ge, E[G + 1], 12, -389564586), ge = I(ge, z, pe, ne, E[G + 2], 17, 606105819), ne = I(ne, ge, z, pe, E[G + 3], 22, -1044525330), pe = I(pe, ne, ge, z, E[G + 4], 7, -176418897), z = I(z, pe, ne, ge, E[G + 5], 12, 1200080426), ge = I(ge, z, pe, ne, E[G + 6], 17, -1473231341), ne = I(ne, ge, z, pe, E[G + 7], 22, -45705983), pe = I(pe, ne, ge, z, E[G + 8], 7, 1770035416), z = I(z, pe, ne, ge, E[G + 9], 12, -1958414417), ge = I(ge, z, pe, ne, E[G + 10], 17, -42063), ne = I(ne, ge, z, pe, E[G + 11], 22, -1990404162), pe = I(pe, ne, ge, z, E[G + 12], 7, 1804603682), z = I(z, pe, ne, ge, E[G + 13], 12, -40341101), ge = I(ge, z, pe, ne, E[G + 14], 17, -1502002290), pe = x(pe, ne = I(ne, ge, z, pe, E[G + 15], 22, 1236535329), ge, z, E[G + 1], 5, -165796510), z = x(z, pe, ne, ge, E[G + 6], 9, -1069501632), ge = x(ge, z, pe, ne, E[G + 11], 14, 643717713), ne = x(ne, ge, z, pe, E[G], 20, -373897302), pe = x(pe, ne, ge, z, E[G + 5], 5, -701558691), z = x(z, pe, ne, ge, E[G + 10], 9, 38016083), ge = x(ge, z, pe, ne, E[G + 15], 14, -660478335), ne = x(ne, ge, z, pe, E[G + 4], 20, -405537848), pe = x(pe, ne, ge, z, E[G + 9], 5, 568446438), z = x(z, pe, ne, ge, E[G + 14], 9, -1019803690), ge = x(ge, z, pe, ne, E[G + 3], 14, -187363961), ne = x(ne, ge, z, pe, E[G + 8], 20, 1163531501), pe = x(pe, ne, ge, z, E[G + 13], 5, -1444681467), z = x(z, pe, ne, ge, E[G + 2], 9, -51403784), ge = x(ge, z, pe, ne, E[G + 7], 14, 1735328473), pe = T(pe, ne = x(ne, ge, z, pe, E[G + 12], 20, -1926607734), ge, z, E[G + 5], 4, -378558), z = T(z, pe, ne, ge, E[G + 8], 11, -2022574463), ge = T(ge, z, pe, ne, E[G + 11], 16, 1839030562), ne = T(ne, ge, z, pe, E[G + 14], 23, -35309556), pe = T(pe, ne, ge, z, E[G + 1], 4, -1530992060), z = T(z, pe, ne, ge, E[G + 4], 11, 1272893353), ge = T(ge, z, pe, ne, E[G + 7], 16, -155497632), ne = T(ne, ge, z, pe, E[G + 10], 23, -1094730640), pe = T(pe, ne, ge, z, E[G + 13], 4, 681279174), z = T(z, pe, ne, ge, E[G], 11, -358537222), ge = T(ge, z, pe, ne, E[G + 3], 16, -722521979), ne = T(ne, ge, z, pe, E[G + 6], 23, 76029189), pe = T(pe, ne, ge, z, E[G + 9], 4, -640364487), z = T(z, pe, ne, ge, E[G + 12], 11, -421815835), ge = T(ge, z, pe, ne, E[G + 15], 16, 530742520), pe = U(pe, ne = T(ne, ge, z, pe, E[G + 2], 23, -995338651), ge, z, E[G], 6, -198630844), z = U(z, pe, ne, ge, E[G + 7], 10, 1126891415), ge = U(ge, z, pe, ne, E[G + 14], 15, -1416354905), ne = U(ne, ge, z, pe, E[G + 5], 21, -57434055), pe = U(pe, ne, ge, z, E[G + 12], 6, 1700485571), z = U(z, pe, ne, ge, E[G + 3], 10, -1894986606), ge = U(ge, z, pe, ne, E[G + 10], 15, -1051523), ne = U(ne, ge, z, pe, E[G + 1], 21, -2054922799), pe = U(pe, ne, ge, z, E[G + 8], 6, 1873313359), z = U(z, pe, ne, ge, E[G + 15], 10, -30611744), ge = U(ge, z, pe, ne, E[G + 6], 15, -1560198380), ne = U(ne, ge, z, pe, E[G + 13], 21, 1309151649), pe = U(pe, ne, ge, z, E[G + 4], 6, -145523070), z = U(z, pe, ne, ge, E[G + 11], 10, -1120210379), ge = U(ge, z, pe, ne, E[G + 2], 15, 718787259), ne = U(ne, ge, z, pe, E[G + 9], 21, -343485551), pe = b(pe, oe), ne = b(ne, le), ge = b(ge, ve), z = b(z, we);
                   return [pe, ne, ge, z];
                 }
                 function L(E) {
-                  var J, G = "", oe = 32 * E.length;
-                  for (J = 0; J < oe; J += 8) G += String.fromCharCode(E[J >> 5] >>> J % 32 & 255);
+                  var V, G = "", oe = 32 * E.length;
+                  for (V = 0; V < oe; V += 8) G += String.fromCharCode(E[V >> 5] >>> V % 32 & 255);
                   return G;
                 }
                 function N(E) {
-                  var J, G = [];
-                  for (G[(E.length >> 2) - 1] = void 0, J = 0; J < G.length; J += 1) G[J] = 0;
+                  var V, G = [];
+                  for (G[(E.length >> 2) - 1] = void 0, V = 0; V < G.length; V += 1) G[V] = 0;
                   var oe = 8 * E.length;
-                  for (J = 0; J < oe; J += 8) G[J >> 5] |= (255 & E.charCodeAt(J / 8)) << J % 32;
+                  for (V = 0; V < oe; V += 8) G[V >> 5] |= (255 & E.charCodeAt(V / 8)) << V % 32;
                   return G;
                 }
                 function F(E) {
-                  var J, G, oe = "0123456789abcdef", le = "";
-                  for (G = 0; G < E.length; G += 1) J = E.charCodeAt(G), le += oe.charAt(J >>> 4 & 15) + oe.charAt(15 & J);
+                  var V, G, oe = "0123456789abcdef", le = "";
+                  for (G = 0; G < E.length; G += 1) V = E.charCodeAt(G), le += oe.charAt(V >>> 4 & 15) + oe.charAt(15 & V);
                   return le;
                 }
                 function Y(E) {
                   return unescape(encodeURIComponent(E));
                 }
                 function O(E) {
-                  return (function(J) {
-                    return L(Q(N(J), 8 * J.length));
+                  return (function(V) {
+                    return L(Q(N(V), 8 * V.length));
                   })(Y(E));
                 }
-                function w(E, J) {
+                function w(E, V) {
                   return (function(G, oe) {
                     var le, ve, we = N(G), pe = [], ne = [];
                     for (pe[15] = ne[15] = void 0, we.length > 16 && (we = Q(we, 8 * G.length)), le = 0; le < 16; le += 1) pe[le] = 909522486 ^ we[le], ne[le] = 1549556828 ^ we[le];
                     return ve = Q(pe.concat(N(oe)), 512 + 8 * oe.length), L(Q(ne.concat(ve), 640));
-                  })(Y(E), Y(J));
+                  })(Y(E), Y(V));
                 }
-                function X(E, J, G) {
-                  return J ? G ? w(J, E) : F(w(J, E)) : G ? O(E) : F(O(E));
+                function Z(E, V, G) {
+                  return V ? G ? w(V, E) : F(w(V, E)) : G ? O(E) : F(O(E));
                 }
                 (m = (function() {
-                  return X;
+                  return Z;
                 }).call(p, v, p, f)) === void 0 || (f.exports = m);
               })();
             }, 9239: function(f, p, v) {
@@ -57220,9 +57220,9 @@ function Xin() {
                     for (var Y = 0; Y < 3 && U[0] === "0" && U.length > 1; Y++) U.splice(0, 1);
                     Q[F] = U.join("");
                   }
-                  var O = -1, w = 0, X = 0, E = -1, J = !1;
-                  for (F = 0; F < N; F++) J ? Q[F] === "0" ? X += 1 : (J = !1, X > w && (O = E, w = X)) : Q[F] === "0" && (J = !0, E = F, X = 1);
-                  X > w && (O = E, w = X), w > 1 && Q.splice(O, w, ""), L = Q.length;
+                  var O = -1, w = 0, Z = 0, E = -1, V = !1;
+                  for (F = 0; F < N; F++) V ? Q[F] === "0" ? Z += 1 : (V = !1, Z > w && (O = E, w = Z)) : Q[F] === "0" && (V = !0, E = F, Z = 1);
+                  Z > w && (O = E, w = Z), w > 1 && Q.splice(O, w, ""), L = Q.length;
                   var G = "";
                   for (Q[0] === "" && (G = ":"), F = 0; F < L && (G += Q[F], F !== L - 1); F++) G += ":";
                   return Q[L - 1] === "" && (G += ":"), G;
@@ -57300,7 +57300,7 @@ function Xin() {
                 function w(g) {
                   return O(g) === "Array";
                 }
-                function X(g, C) {
+                function Z(g, C) {
                   var M, H, _ = {};
                   if (O(C) === "RegExp") _ = null;
                   else if (w(C)) for (M = 0, H = C.length; M < H; M++) _[C[M]] = !0;
@@ -57320,7 +57320,7 @@ function Xin() {
                   } else if (g[M] === C) return !0;
                   return !1;
                 }
-                function J(g, C) {
+                function V(g, C) {
                   if (!w(g) || !w(C) || g.length !== C.length) return !1;
                   g.sort(), C.sort();
                   for (var M = 0, H = g.length; M < H; M++) if (g[M] !== C[M]) return !1;
@@ -57451,7 +57451,7 @@ function Xin() {
                   else if (k(C) === "object") for (ae in C) F.call(C, ae) && L.removeQuery(g, ae, C[ae]);
                   else {
                     if (typeof C != "string") throw new TypeError("URI.removeQuery() accepts an object, string, RegExp as the first parameter");
-                    M !== void 0 ? O(M) === "RegExp" ? !w(g[C]) && M.test(g[C]) ? g[C] = void 0 : g[C] = X(g[C], M) : g[C] !== String(M) || w(M) && M.length !== 1 ? w(g[C]) && (g[C] = X(g[C], M)) : g[C] = void 0 : g[C] = void 0;
+                    M !== void 0 ? O(M) === "RegExp" ? !w(g[C]) && M.test(g[C]) ? g[C] = void 0 : g[C] = Z(g[C], M) : g[C] !== String(M) || w(M) && M.length !== 1 ? w(g[C]) && (g[C] = Z(g[C], M)) : g[C] = void 0 : g[C] = void 0;
                   }
                 }, L.hasQuery = function(g, C, M, H) {
                   switch (O(C)) {
@@ -57474,7 +57474,7 @@ function Xin() {
                     case "Function":
                       return !!M(g[C], C, g);
                     case "Array":
-                      return !!w(g[C]) && (H ? E : J)(g[C], M);
+                      return !!w(g[C]) && (H ? E : V)(g[C], M);
                     case "RegExp":
                       return w(g[C]) ? !!H && E(g[C], M) : !!(g[C] && g[C].match(M));
                     case "Number":
@@ -57845,7 +57845,7 @@ function Xin() {
                   if (H = ze.query(), _ = lt.query(), ze.query(""), lt.query(""), ze.toString() !== lt.toString() || H.length !== _.length) return !1;
                   for (ae in C = L.parseQuery(H, this._parts.escapeQuerySpace), M = L.parseQuery(_, this._parts.escapeQuerySpace), C) if (F.call(C, ae)) {
                     if (w(C[ae])) {
-                      if (!J(C[ae], M[ae])) return !1;
+                      if (!V(C[ae], M[ae])) return !1;
                     } else if (C[ae] !== M[ae]) return !1;
                     ft[ae] = !0;
                   }
@@ -57871,26 +57871,26 @@ function Xin() {
               f = v.nmd(f), (function(b) {
                 var k = y(p) == "object" && p && !p.nodeType && p, I = y(f) == "object" && f && !f.nodeType && f, x = (v.g === void 0 ? "undefined" : y(v.g)) == "object" && v.g;
                 x.global !== x && x.window !== x && x.self !== x || (b = x);
-                var T, U, Q = 2147483647, L = 36, N = /^xn--/, F = /[^\x20-\x7E]/, Y = /[\x2E\u3002\uFF0E\uFF61]/g, O = { overflow: "Overflow: input needs wider integers to process", "not-basic": "Illegal input >= 0x80 (not a basic code point)", "invalid-input": "Invalid input" }, w = Math.floor, X = String.fromCharCode;
+                var T, U, Q = 2147483647, L = 36, N = /^xn--/, F = /[^\x20-\x7E]/, Y = /[\x2E\u3002\uFF0E\uFF61]/g, O = { overflow: "Overflow: input needs wider integers to process", "not-basic": "Illegal input >= 0x80 (not a basic code point)", "invalid-input": "Invalid input" }, w = Math.floor, Z = String.fromCharCode;
                 function E(ge) {
                   throw new RangeError(O[ge]);
                 }
-                function J(ge, z) {
+                function V(ge, z) {
                   for (var ue = ge.length, D = []; ue--; ) D[ue] = z(ge[ue]);
                   return D;
                 }
                 function G(ge, z) {
                   var ue = ge.split("@"), D = "";
-                  return ue.length > 1 && (D = ue[0] + "@", ge = ue[1]), D + J((ge = ge.replace(Y, ".")).split("."), z).join(".");
+                  return ue.length > 1 && (D = ue[0] + "@", ge = ue[1]), D + V((ge = ge.replace(Y, ".")).split("."), z).join(".");
                 }
                 function oe(ge) {
                   for (var z, ue, D = [], ye = 0, B = ge.length; ye < B; ) (z = ge.charCodeAt(ye++)) >= 55296 && z <= 56319 && ye < B ? (64512 & (ue = ge.charCodeAt(ye++))) == 56320 ? D.push(((1023 & z) << 10) + (1023 & ue) + 65536) : (D.push(z), ye--) : D.push(z);
                   return D;
                 }
                 function le(ge) {
-                  return J(ge, function(z) {
+                  return V(ge, function(z) {
                     var ue = "";
-                    return z > 65535 && (ue += X((z -= 65536) >>> 10 & 1023 | 55296), z = 56320 | 1023 & z), ue + X(z);
+                    return z > 65535 && (ue += Z((z -= 65536) >>> 10 & 1023 | 55296), z = 56320 | 1023 & z), ue + Z(z);
                   }).join("");
                 }
                 function ve(ge, z) {
@@ -57912,12 +57912,12 @@ function Xin() {
                 }
                 function ne(ge) {
                   var z, ue, D, ye, B, g, C, M, H, _, ae, ze, lt, ft, Ee, Nt = [];
-                  for (ze = (ge = oe(ge)).length, z = 128, ue = 0, B = 72, g = 0; g < ze; ++g) (ae = ge[g]) < 128 && Nt.push(X(ae));
+                  for (ze = (ge = oe(ge)).length, z = 128, ue = 0, B = 72, g = 0; g < ze; ++g) (ae = ge[g]) < 128 && Nt.push(Z(ae));
                   for (D = ye = Nt.length, ye && Nt.push("-"); D < ze; ) {
                     for (C = Q, g = 0; g < ze; ++g) (ae = ge[g]) >= z && ae < C && (C = ae);
                     for (C - z > w((Q - ue) / (lt = D + 1)) && E("overflow"), ue += (C - z) * lt, z = C, g = 0; g < ze; ++g) if ((ae = ge[g]) < z && ++ue > Q && E("overflow"), ae == z) {
-                      for (M = ue, H = L; !(M < (_ = H <= B ? 1 : H >= B + 26 ? 26 : H - B)); H += L) Ee = M - _, ft = L - _, Nt.push(X(ve(_ + Ee % ft, 0))), M = w(Ee / ft);
-                      Nt.push(X(ve(M, 0))), B = we(ue, lt, D == ye), ue = 0, ++D;
+                      for (M = ue, H = L; !(M < (_ = H <= B ? 1 : H >= B + 26 ? 26 : H - B)); H += L) Ee = M - _, ft = L - _, Nt.push(Z(ve(_ + Ee % ft, 0))), M = w(Ee / ft);
+                      Nt.push(Z(ve(M, 0))), B = we(ue, lt, D == ye), ue = 0, ++D;
                     }
                     ++ue, ++z;
                   }
@@ -58007,8 +58007,8 @@ function Xin() {
                 A.prototype = Object.create(S && S.prototype, { constructor: { value: A, writable: !0, configurable: !0 } }), Object.defineProperty(A, "prototype", { writable: !1 }), S && k(A, S);
               }
               function k(A, S) {
-                return (k = Object.setPrototypeOf || function(W, Z) {
-                  return W.__proto__ = Z, W;
+                return (k = Object.setPrototypeOf || function(W, X) {
+                  return W.__proto__ = X, W;
                 })(A, S);
               }
               function I(A) {
@@ -58023,11 +58023,11 @@ function Xin() {
                   }
                 })();
                 return function() {
-                  var W, Z = x(A);
+                  var W, X = x(A);
                   if (S) {
                     var Ae = x(this).constructor;
-                    W = Reflect.construct(Z, arguments, Ae);
-                  } else W = Z.apply(this, arguments);
+                    W = Reflect.construct(X, arguments, Ae);
+                  } else W = X.apply(this, arguments);
                   return (function(he, te) {
                     if (te && (y(te) === "object" || typeof te == "function")) return te;
                     if (te !== void 0) throw new TypeError("Derived constructors may only return object or undefined");
@@ -58048,17 +58048,17 @@ function Xin() {
               }
               function U(A, S) {
                 for (var W = 0; W < S.length; W++) {
-                  var Z = S[W];
-                  Z.enumerable = Z.enumerable || !1, Z.configurable = !0, "value" in Z && (Z.writable = !0), Object.defineProperty(A, Z.key, Z);
+                  var X = S[W];
+                  X.enumerable = X.enumerable || !1, X.configurable = !0, "value" in X && (X.writable = !0), Object.defineProperty(A, X.key, X);
                 }
               }
               function Q(A, S, W) {
                 return S && U(A.prototype, S), Object.defineProperty(A, "prototype", { writable: !1 }), A;
               }
               var L = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
-              function N(A, S, W, Z) {
-                var Ae, he, te, Be = S || [0], Pe = (W = W || 0) >>> 3, Qe = Z === -1 ? 3 : 0;
-                for (Ae = 0; Ae < A.length; Ae += 1) he = (te = Ae + Pe) >>> 2, Be.length <= he && Be.push(0), Be[he] |= A[Ae] << 8 * (Qe + Z * (te % 4));
+              function N(A, S, W, X) {
+                var Ae, he, te, Be = S || [0], Pe = (W = W || 0) >>> 3, qe = X === -1 ? 3 : 0;
+                for (Ae = 0; Ae < A.length; Ae += 1) he = (te = Ae + Pe) >>> 2, Be.length <= he && Be.push(0), Be[he] |= A[Ae] << 8 * (qe + X * (te % 4));
                 return { value: Be, binLen: 8 * A.length + W };
               }
               function F(A, S, W) {
@@ -58072,23 +58072,23 @@ function Xin() {
                 }
                 switch (A) {
                   case "HEX":
-                    return function(Z, Ae, he) {
-                      return (function(te, Be, Pe, Qe) {
+                    return function(X, Ae, he) {
+                      return (function(te, Be, Pe, qe) {
                         var ht, Je, $e, ct;
                         if (te.length % 2 != 0) throw new Error("String of HEX type must be in byte increments");
-                        var yt = Be || [0], nt = (Pe = Pe || 0) >>> 3, kt = Qe === -1 ? 3 : 0;
+                        var yt = Be || [0], nt = (Pe = Pe || 0) >>> 3, kt = qe === -1 ? 3 : 0;
                         for (ht = 0; ht < te.length; ht += 2) {
                           if (Je = parseInt(te.substr(ht, 2), 16), isNaN(Je)) throw new Error("String of HEX type contains invalid characters");
                           for ($e = (ct = (ht >>> 1) + nt) >>> 2; yt.length <= $e; ) yt.push(0);
-                          yt[$e] |= Je << 8 * (kt + Qe * (ct % 4));
+                          yt[$e] |= Je << 8 * (kt + qe * (ct % 4));
                         }
                         return { value: yt, binLen: 4 * te.length + Pe };
-                      })(Z, Ae, he, W);
+                      })(X, Ae, he, W);
                     };
                   case "TEXT":
-                    return function(Z, Ae, he) {
-                      return (function(te, Be, Pe, Qe, ht) {
-                        var Je, $e, ct, yt, nt, kt, Bt, Gt, Qt = 0, $t = Pe || [0], rn = (Qe = Qe || 0) >>> 3;
+                    return function(X, Ae, he) {
+                      return (function(te, Be, Pe, qe, ht) {
+                        var Je, $e, ct, yt, nt, kt, Bt, Gt, Qt = 0, $t = Pe || [0], rn = (qe = qe || 0) >>> 3;
                         if (Be === "UTF8") for (Bt = ht === -1 ? 3 : 0, ct = 0; ct < te.length; ct += 1) for ($e = [], 128 > (Je = te.charCodeAt(ct)) ? $e.push(Je) : 2048 > Je ? ($e.push(192 | Je >>> 6), $e.push(128 | 63 & Je)) : 55296 > Je || 57344 <= Je ? $e.push(224 | Je >>> 12, 128 | Je >>> 6 & 63, 128 | 63 & Je) : (ct += 1, Je = 65536 + ((1023 & Je) << 10 | 1023 & te.charCodeAt(ct)), $e.push(240 | Je >>> 18, 128 | Je >>> 12 & 63, 128 | Je >>> 6 & 63, 128 | 63 & Je)), yt = 0; yt < $e.length; yt += 1) {
                           for (nt = (kt = Qt + rn) >>> 2; $t.length <= nt; ) $t.push(0);
                           $t[nt] |= $e[yt] << 8 * (Bt + ht * (kt % 4)), Qt += 1;
@@ -58097,32 +58097,32 @@ function Xin() {
                           for (Je = te.charCodeAt(ct), Gt === !0 && (Je = (yt = 255 & Je) << 8 | Je >>> 8), nt = (kt = Qt + rn) >>> 2; $t.length <= nt; ) $t.push(0);
                           $t[nt] |= Je << 8 * (Bt + ht * (kt % 4)), Qt += 2;
                         }
-                        return { value: $t, binLen: 8 * Qt + Qe };
-                      })(Z, S, Ae, he, W);
+                        return { value: $t, binLen: 8 * Qt + qe };
+                      })(X, S, Ae, he, W);
                     };
                   case "B64":
-                    return function(Z, Ae, he) {
-                      return (function(te, Be, Pe, Qe) {
-                        var ht, Je, $e, ct, yt, nt, kt = 0, Bt = Be || [0], Gt = (Pe = Pe || 0) >>> 3, Qt = Qe === -1 ? 3 : 0, $t = te.indexOf("=");
+                    return function(X, Ae, he) {
+                      return (function(te, Be, Pe, qe) {
+                        var ht, Je, $e, ct, yt, nt, kt = 0, Bt = Be || [0], Gt = (Pe = Pe || 0) >>> 3, Qt = qe === -1 ? 3 : 0, $t = te.indexOf("=");
                         if (te.search(/^[a-zA-Z0-9=+/]+$/) === -1) throw new Error("Invalid character in base-64 string");
                         if (te = te.replace(/=/g, ""), $t !== -1 && $t < te.length) throw new Error("Invalid '=' found in base-64 string");
                         for (ht = 0; ht < te.length; ht += 4) {
                           for (ct = te.substr(ht, 4), $e = 0, Je = 0; Je < ct.length; Je += 1) $e |= L.indexOf(ct.charAt(Je)) << 18 - 6 * Je;
                           for (Je = 0; Je < ct.length - 1; Je += 1) {
                             for (yt = (nt = kt + Gt) >>> 2; Bt.length <= yt; ) Bt.push(0);
-                            Bt[yt] |= ($e >>> 16 - 8 * Je & 255) << 8 * (Qt + Qe * (nt % 4)), kt += 1;
+                            Bt[yt] |= ($e >>> 16 - 8 * Je & 255) << 8 * (Qt + qe * (nt % 4)), kt += 1;
                           }
                         }
                         return { value: Bt, binLen: 8 * kt + Pe };
-                      })(Z, Ae, he, W);
+                      })(X, Ae, he, W);
                     };
                   case "BYTES":
-                    return function(Z, Ae, he) {
-                      return (function(te, Be, Pe, Qe) {
-                        var ht, Je, $e, ct, yt = Be || [0], nt = (Pe = Pe || 0) >>> 3, kt = Qe === -1 ? 3 : 0;
-                        for (Je = 0; Je < te.length; Je += 1) ht = te.charCodeAt(Je), $e = (ct = Je + nt) >>> 2, yt.length <= $e && yt.push(0), yt[$e] |= ht << 8 * (kt + Qe * (ct % 4));
+                    return function(X, Ae, he) {
+                      return (function(te, Be, Pe, qe) {
+                        var ht, Je, $e, ct, yt = Be || [0], nt = (Pe = Pe || 0) >>> 3, kt = qe === -1 ? 3 : 0;
+                        for (Je = 0; Je < te.length; Je += 1) ht = te.charCodeAt(Je), $e = (ct = Je + nt) >>> 2, yt.length <= $e && yt.push(0), yt[$e] |= ht << 8 * (kt + qe * (ct % 4));
                         return { value: yt, binLen: 8 * te.length + Pe };
-                      })(Z, Ae, he, W);
+                      })(X, Ae, he, W);
                     };
                   case "ARRAYBUFFER":
                     try {
@@ -58130,10 +58130,10 @@ function Xin() {
                     } catch {
                       throw new Error("ARRAYBUFFER not supported by this environment");
                     }
-                    return function(Z, Ae, he) {
-                      return (function(te, Be, Pe, Qe) {
-                        return N(new Uint8Array(te), Be, Pe, Qe);
-                      })(Z, Ae, he, W);
+                    return function(X, Ae, he) {
+                      return (function(te, Be, Pe, qe) {
+                        return N(new Uint8Array(te), Be, Pe, qe);
+                      })(X, Ae, he, W);
                     };
                   case "UINT8ARRAY":
                     try {
@@ -58141,36 +58141,36 @@ function Xin() {
                     } catch {
                       throw new Error("UINT8ARRAY not supported by this environment");
                     }
-                    return function(Z, Ae, he) {
-                      return N(Z, Ae, he, W);
+                    return function(X, Ae, he) {
+                      return N(X, Ae, he, W);
                     };
                   default:
                     throw new Error("format must be HEX, TEXT, B64, BYTES, ARRAYBUFFER, or UINT8ARRAY");
                 }
               }
-              function Y(A, S, W, Z) {
+              function Y(A, S, W, X) {
                 switch (A) {
                   case "HEX":
                     return function(Ae) {
                       return (function(he, te, Be, Pe) {
-                        var Qe, ht, Je = "", $e = te / 8, ct = Be === -1 ? 3 : 0;
-                        for (Qe = 0; Qe < $e; Qe += 1) ht = he[Qe >>> 2] >>> 8 * (ct + Be * (Qe % 4)), Je += "0123456789abcdef".charAt(ht >>> 4 & 15) + "0123456789abcdef".charAt(15 & ht);
+                        var qe, ht, Je = "", $e = te / 8, ct = Be === -1 ? 3 : 0;
+                        for (qe = 0; qe < $e; qe += 1) ht = he[qe >>> 2] >>> 8 * (ct + Be * (qe % 4)), Je += "0123456789abcdef".charAt(ht >>> 4 & 15) + "0123456789abcdef".charAt(15 & ht);
                         return Pe.outputUpper ? Je.toUpperCase() : Je;
-                      })(Ae, S, W, Z);
+                      })(Ae, S, W, X);
                     };
                   case "B64":
                     return function(Ae) {
                       return (function(he, te, Be, Pe) {
-                        var Qe, ht, Je, $e, ct, yt = "", nt = te / 8, kt = Be === -1 ? 3 : 0;
-                        for (Qe = 0; Qe < nt; Qe += 3) for ($e = Qe + 1 < nt ? he[Qe + 1 >>> 2] : 0, ct = Qe + 2 < nt ? he[Qe + 2 >>> 2] : 0, Je = (he[Qe >>> 2] >>> 8 * (kt + Be * (Qe % 4)) & 255) << 16 | ($e >>> 8 * (kt + Be * ((Qe + 1) % 4)) & 255) << 8 | ct >>> 8 * (kt + Be * ((Qe + 2) % 4)) & 255, ht = 0; ht < 4; ht += 1) yt += 8 * Qe + 6 * ht <= te ? L.charAt(Je >>> 6 * (3 - ht) & 63) : Pe.b64Pad;
+                        var qe, ht, Je, $e, ct, yt = "", nt = te / 8, kt = Be === -1 ? 3 : 0;
+                        for (qe = 0; qe < nt; qe += 3) for ($e = qe + 1 < nt ? he[qe + 1 >>> 2] : 0, ct = qe + 2 < nt ? he[qe + 2 >>> 2] : 0, Je = (he[qe >>> 2] >>> 8 * (kt + Be * (qe % 4)) & 255) << 16 | ($e >>> 8 * (kt + Be * ((qe + 1) % 4)) & 255) << 8 | ct >>> 8 * (kt + Be * ((qe + 2) % 4)) & 255, ht = 0; ht < 4; ht += 1) yt += 8 * qe + 6 * ht <= te ? L.charAt(Je >>> 6 * (3 - ht) & 63) : Pe.b64Pad;
                         return yt;
-                      })(Ae, S, W, Z);
+                      })(Ae, S, W, X);
                     };
                   case "BYTES":
                     return function(Ae) {
                       return (function(he, te, Be) {
-                        var Pe, Qe, ht = "", Je = te / 8, $e = Be === -1 ? 3 : 0;
-                        for (Pe = 0; Pe < Je; Pe += 1) Qe = he[Pe >>> 2] >>> 8 * ($e + Be * (Pe % 4)) & 255, ht += String.fromCharCode(Qe);
+                        var Pe, qe, ht = "", Je = te / 8, $e = Be === -1 ? 3 : 0;
+                        for (Pe = 0; Pe < Je; Pe += 1) qe = he[Pe >>> 2] >>> 8 * ($e + Be * (Pe % 4)) & 255, ht += String.fromCharCode(qe);
                         return ht;
                       })(Ae, S, W);
                     };
@@ -58182,8 +58182,8 @@ function Xin() {
                     }
                     return function(Ae) {
                       return (function(he, te, Be) {
-                        var Pe, Qe = te / 8, ht = new ArrayBuffer(Qe), Je = new Uint8Array(ht), $e = Be === -1 ? 3 : 0;
-                        for (Pe = 0; Pe < Qe; Pe += 1) Je[Pe] = he[Pe >>> 2] >>> 8 * ($e + Be * (Pe % 4)) & 255;
+                        var Pe, qe = te / 8, ht = new ArrayBuffer(qe), Je = new Uint8Array(ht), $e = Be === -1 ? 3 : 0;
+                        for (Pe = 0; Pe < qe; Pe += 1) Je[Pe] = he[Pe >>> 2] >>> 8 * ($e + Be * (Pe % 4)) & 255;
                         return ht;
                       })(Ae, S, W);
                     };
@@ -58195,8 +58195,8 @@ function Xin() {
                     }
                     return function(Ae) {
                       return (function(he, te, Be) {
-                        var Pe, Qe = te / 8, ht = Be === -1 ? 3 : 0, Je = new Uint8Array(Qe);
-                        for (Pe = 0; Pe < Qe; Pe += 1) Je[Pe] = he[Pe >>> 2] >>> 8 * (ht + Be * (Pe % 4)) & 255;
+                        var Pe, qe = te / 8, ht = Be === -1 ? 3 : 0, Je = new Uint8Array(qe);
+                        for (Pe = 0; Pe < qe; Pe += 1) Je[Pe] = he[Pe >>> 2] >>> 8 * (ht + Be * (Pe % 4)) & 255;
                         return Je;
                       })(Ae, S, W);
                     };
@@ -58204,73 +58204,73 @@ function Xin() {
                     throw new Error("format must be HEX, B64, BYTES, ARRAYBUFFER, or UINT8ARRAY");
                 }
               }
-              var O = [1116352408, 1899447441, 3049323471, 3921009573, 961987163, 1508970993, 2453635748, 2870763221, 3624381080, 310598401, 607225278, 1426881987, 1925078388, 2162078206, 2614888103, 3248222580, 3835390401, 4022224774, 264347078, 604807628, 770255983, 1249150122, 1555081692, 1996064986, 2554220882, 2821834349, 2952996808, 3210313671, 3336571891, 3584528711, 113926993, 338241895, 666307205, 773529912, 1294757372, 1396182291, 1695183700, 1986661051, 2177026350, 2456956037, 2730485921, 2820302411, 3259730800, 3345764771, 3516065817, 3600352804, 4094571909, 275423344, 430227734, 506948616, 659060556, 883997877, 958139571, 1322822218, 1537002063, 1747873779, 1955562222, 2024104815, 2227730452, 2361852424, 2428436474, 2756734187, 3204031479, 3329325298], w = [3238371032, 914150663, 812702999, 4144912697, 4290775857, 1750603025, 1694076839, 3204075428], X = [1779033703, 3144134277, 1013904242, 2773480762, 1359893119, 2600822924, 528734635, 1541459225], E = "Chosen SHA variant is not supported";
-              function J(A, S) {
-                var W, Z, Ae = A.binLen >>> 3, he = S.binLen >>> 3, te = Ae << 3, Be = 4 - Ae << 3;
+              var O = [1116352408, 1899447441, 3049323471, 3921009573, 961987163, 1508970993, 2453635748, 2870763221, 3624381080, 310598401, 607225278, 1426881987, 1925078388, 2162078206, 2614888103, 3248222580, 3835390401, 4022224774, 264347078, 604807628, 770255983, 1249150122, 1555081692, 1996064986, 2554220882, 2821834349, 2952996808, 3210313671, 3336571891, 3584528711, 113926993, 338241895, 666307205, 773529912, 1294757372, 1396182291, 1695183700, 1986661051, 2177026350, 2456956037, 2730485921, 2820302411, 3259730800, 3345764771, 3516065817, 3600352804, 4094571909, 275423344, 430227734, 506948616, 659060556, 883997877, 958139571, 1322822218, 1537002063, 1747873779, 1955562222, 2024104815, 2227730452, 2361852424, 2428436474, 2756734187, 3204031479, 3329325298], w = [3238371032, 914150663, 812702999, 4144912697, 4290775857, 1750603025, 1694076839, 3204075428], Z = [1779033703, 3144134277, 1013904242, 2773480762, 1359893119, 2600822924, 528734635, 1541459225], E = "Chosen SHA variant is not supported";
+              function V(A, S) {
+                var W, X, Ae = A.binLen >>> 3, he = S.binLen >>> 3, te = Ae << 3, Be = 4 - Ae << 3;
                 if (Ae % 4 != 0) {
-                  for (W = 0; W < he; W += 4) Z = Ae + W >>> 2, A.value[Z] |= S.value[W >>> 2] << te, A.value.push(0), A.value[Z + 1] |= S.value[W >>> 2] >>> Be;
+                  for (W = 0; W < he; W += 4) X = Ae + W >>> 2, A.value[X] |= S.value[W >>> 2] << te, A.value.push(0), A.value[X + 1] |= S.value[W >>> 2] >>> Be;
                   return (A.value.length << 2) - 4 >= he + Ae && A.value.pop(), { value: A.value, binLen: A.binLen + S.binLen };
                 }
                 return { value: A.value.concat(S.value), binLen: A.binLen + S.binLen };
               }
               function G(A) {
-                var S = { outputUpper: !1, b64Pad: "=", outputLen: -1 }, W = A || {}, Z = "Output length must be a multiple of 8";
+                var S = { outputUpper: !1, b64Pad: "=", outputLen: -1 }, W = A || {}, X = "Output length must be a multiple of 8";
                 if (S.outputUpper = W.outputUpper || !1, W.b64Pad && (S.b64Pad = W.b64Pad), W.outputLen) {
-                  if (W.outputLen % 8 != 0) throw new Error(Z);
+                  if (W.outputLen % 8 != 0) throw new Error(X);
                   S.outputLen = W.outputLen;
                 } else if (W.shakeLen) {
-                  if (W.shakeLen % 8 != 0) throw new Error(Z);
+                  if (W.shakeLen % 8 != 0) throw new Error(X);
                   S.outputLen = W.shakeLen;
                 }
                 if (typeof S.outputUpper != "boolean") throw new Error("Invalid outputUpper formatting option");
                 if (typeof S.b64Pad != "string") throw new Error("Invalid b64Pad formatting option");
                 return S;
               }
-              function oe(A, S, W, Z) {
+              function oe(A, S, W, X) {
                 var Ae = A + " must include a value and format";
                 if (!S) {
-                  if (!Z) throw new Error(Ae);
-                  return Z;
+                  if (!X) throw new Error(Ae);
+                  return X;
                 }
                 if (S.value === void 0 || !S.format) throw new Error(Ae);
                 return F(S.format, S.encoding || "UTF8", W)(S.value);
               }
               var le = (function() {
-                function A(S, W, Z) {
+                function A(S, W, X) {
                   T(this, A);
-                  var Ae = Z || {};
+                  var Ae = X || {};
                   if (this.t = W, this.i = Ae.encoding || "UTF8", this.numRounds = Ae.numRounds || 1, isNaN(this.numRounds) || this.numRounds !== parseInt(this.numRounds, 10) || 1 > this.numRounds) throw new Error("numRounds must a integer >= 1");
                   this.s = S, this.o = [], this.h = 0, this.u = !1, this.l = 0, this.A = !1, this.H = [], this.S = [];
                 }
                 return Q(A, [{ key: "update", value: function(S) {
-                  var W, Z = 0, Ae = this.p >>> 5, he = this.m(S, this.o, this.h), te = he.binLen, Be = he.value, Pe = te >>> 5;
-                  for (W = 0; W < Pe; W += Ae) Z + this.p <= te && (this.C = this.R(Be.slice(W, W + Ae), this.C), Z += this.p);
-                  this.l += Z, this.o = Be.slice(Z >>> 5), this.h = te % this.p, this.u = !0;
+                  var W, X = 0, Ae = this.p >>> 5, he = this.m(S, this.o, this.h), te = he.binLen, Be = he.value, Pe = te >>> 5;
+                  for (W = 0; W < Pe; W += Ae) X + this.p <= te && (this.C = this.R(Be.slice(W, W + Ae), this.C), X += this.p);
+                  this.l += X, this.o = Be.slice(X >>> 5), this.h = te % this.p, this.u = !0;
                 } }, { key: "getHash", value: function(S, W) {
-                  var Z, Ae, he = this.U, te = G(W);
+                  var X, Ae, he = this.U, te = G(W);
                   if (this.v) {
                     if (te.outputLen === -1) throw new Error("Output length must be specified in options");
                     he = te.outputLen;
                   }
                   var Be = Y(S, he, this.K, te);
                   if (this.A && this.T) return Be(this.T(te));
-                  for (Ae = this.F(this.o.slice(), this.h, this.l, this.g(this.C), he), Z = 1; Z < this.numRounds; Z += 1) this.v && he % 32 != 0 && (Ae[Ae.length - 1] &= 16777215 >>> 24 - he % 32), Ae = this.F(Ae, he, 0, this.B(this.s), he);
+                  for (Ae = this.F(this.o.slice(), this.h, this.l, this.g(this.C), he), X = 1; X < this.numRounds; X += 1) this.v && he % 32 != 0 && (Ae[Ae.length - 1] &= 16777215 >>> 24 - he % 32), Ae = this.F(Ae, he, 0, this.B(this.s), he);
                   return Be(Ae);
-                } }, { key: "setHMACKey", value: function(S, W, Z) {
+                } }, { key: "setHMACKey", value: function(S, W, X) {
                   if (!this.L) throw new Error("Variant does not support HMAC");
                   if (this.u) throw new Error("Cannot set MAC key after calling update");
-                  var Ae = F(W, (Z || {}).encoding || "UTF8", this.K);
+                  var Ae = F(W, (X || {}).encoding || "UTF8", this.K);
                   this.M(Ae(S));
                 } }, { key: "M", value: function(S) {
-                  var W, Z = this.p >>> 3, Ae = Z / 4 - 1;
+                  var W, X = this.p >>> 3, Ae = X / 4 - 1;
                   if (this.numRounds !== 1) throw new Error("Cannot set numRounds with MAC");
                   if (this.A) throw new Error("MAC key already set");
-                  for (Z < S.binLen / 8 && (S.value = this.F(S.value, S.binLen, 0, this.B(this.s), this.U)); S.value.length <= Ae; ) S.value.push(0);
+                  for (X < S.binLen / 8 && (S.value = this.F(S.value, S.binLen, 0, this.B(this.s), this.U)); S.value.length <= Ae; ) S.value.push(0);
                   for (W = 0; W <= Ae; W += 1) this.H[W] = 909522486 ^ S.value[W], this.S[W] = 1549556828 ^ S.value[W];
                   this.C = this.R(this.H, this.C), this.l = this.p, this.A = !0;
                 } }, { key: "getHMAC", value: function(S, W) {
-                  var Z = G(W);
-                  return Y(S, this.U, this.K, Z)(this.k());
+                  var X = G(W);
+                  return Y(S, this.U, this.K, X)(this.k());
                 } }, { key: "k", value: function() {
                   var S;
                   if (!this.A) throw new Error("Cannot call getHMAC without first setting MAC key");
@@ -58303,13 +58303,13 @@ function Xin() {
                 var W = (65535 & A) + (65535 & S);
                 return (65535 & (A >>> 16) + (S >>> 16) + (W >>> 16)) << 16 | 65535 & W;
               }
-              function ye(A, S, W, Z) {
-                var Ae = (65535 & A) + (65535 & S) + (65535 & W) + (65535 & Z);
-                return (65535 & (A >>> 16) + (S >>> 16) + (W >>> 16) + (Z >>> 16) + (Ae >>> 16)) << 16 | 65535 & Ae;
+              function ye(A, S, W, X) {
+                var Ae = (65535 & A) + (65535 & S) + (65535 & W) + (65535 & X);
+                return (65535 & (A >>> 16) + (S >>> 16) + (W >>> 16) + (X >>> 16) + (Ae >>> 16)) << 16 | 65535 & Ae;
               }
-              function B(A, S, W, Z, Ae) {
-                var he = (65535 & A) + (65535 & S) + (65535 & W) + (65535 & Z) + (65535 & Ae);
-                return (65535 & (A >>> 16) + (S >>> 16) + (W >>> 16) + (Z >>> 16) + (Ae >>> 16) + (he >>> 16)) << 16 | 65535 & he;
+              function B(A, S, W, X, Ae) {
+                var he = (65535 & A) + (65535 & S) + (65535 & W) + (65535 & X) + (65535 & Ae);
+                return (65535 & (A >>> 16) + (S >>> 16) + (W >>> 16) + (X >>> 16) + (Ae >>> 16) + (he >>> 16)) << 16 | 65535 & he;
               }
               function g(A) {
                 return we(A, 7) ^ we(A, 18) ^ pe(A, 3);
@@ -58321,52 +58321,52 @@ function Xin() {
                 return [1732584193, 4023233417, 2562383102, 271733878, 3285377520];
               }
               function H(A, S) {
-                var W, Z, Ae, he, te, Be, Pe, Qe = [];
-                for (W = S[0], Z = S[1], Ae = S[2], he = S[3], te = S[4], Pe = 0; Pe < 80; Pe += 1) Qe[Pe] = Pe < 16 ? A[Pe] : ve(Qe[Pe - 3] ^ Qe[Pe - 8] ^ Qe[Pe - 14] ^ Qe[Pe - 16], 1), Be = Pe < 20 ? B(ve(W, 5), ge(Z, Ae, he), te, 1518500249, Qe[Pe]) : Pe < 40 ? B(ve(W, 5), ne(Z, Ae, he), te, 1859775393, Qe[Pe]) : Pe < 60 ? B(ve(W, 5), z(Z, Ae, he), te, 2400959708, Qe[Pe]) : B(ve(W, 5), ne(Z, Ae, he), te, 3395469782, Qe[Pe]), te = he, he = Ae, Ae = ve(Z, 30), Z = W, W = Be;
-                return S[0] = D(W, S[0]), S[1] = D(Z, S[1]), S[2] = D(Ae, S[2]), S[3] = D(he, S[3]), S[4] = D(te, S[4]), S;
+                var W, X, Ae, he, te, Be, Pe, qe = [];
+                for (W = S[0], X = S[1], Ae = S[2], he = S[3], te = S[4], Pe = 0; Pe < 80; Pe += 1) qe[Pe] = Pe < 16 ? A[Pe] : ve(qe[Pe - 3] ^ qe[Pe - 8] ^ qe[Pe - 14] ^ qe[Pe - 16], 1), Be = Pe < 20 ? B(ve(W, 5), ge(X, Ae, he), te, 1518500249, qe[Pe]) : Pe < 40 ? B(ve(W, 5), ne(X, Ae, he), te, 1859775393, qe[Pe]) : Pe < 60 ? B(ve(W, 5), z(X, Ae, he), te, 2400959708, qe[Pe]) : B(ve(W, 5), ne(X, Ae, he), te, 3395469782, qe[Pe]), te = he, he = Ae, Ae = ve(X, 30), X = W, W = Be;
+                return S[0] = D(W, S[0]), S[1] = D(X, S[1]), S[2] = D(Ae, S[2]), S[3] = D(he, S[3]), S[4] = D(te, S[4]), S;
               }
-              function _(A, S, W, Z) {
+              function _(A, S, W, X) {
                 for (var Ae, he = 15 + (S + 65 >>> 9 << 4), te = S + W; A.length <= he; ) A.push(0);
-                for (A[S >>> 5] |= 128 << 24 - S % 32, A[he] = 4294967295 & te, A[he - 1] = te / 4294967296 | 0, Ae = 0; Ae < A.length; Ae += 16) Z = H(A.slice(Ae, Ae + 16), Z);
-                return Z;
+                for (A[S >>> 5] |= 128 << 24 - S % 32, A[he] = 4294967295 & te, A[he - 1] = te / 4294967296 | 0, Ae = 0; Ae < A.length; Ae += 16) X = H(A.slice(Ae, Ae + 16), X);
+                return X;
               }
               var ae = (function(A) {
                 b(W, A);
                 var S = I(W);
-                function W(Z, Ae, he) {
+                function W(X, Ae, he) {
                   var te;
-                  if (T(this, W), Z !== "SHA-1") throw new Error(E);
+                  if (T(this, W), X !== "SHA-1") throw new Error(E);
                   var Be = he || {};
-                  return (te = S.call(this, Z, Ae, he)).L = !0, te.T = te.k, te.K = -1, te.m = F(te.t, te.i, te.K), te.R = H, te.g = function(Pe) {
+                  return (te = S.call(this, X, Ae, he)).L = !0, te.T = te.k, te.K = -1, te.m = F(te.t, te.i, te.K), te.R = H, te.g = function(Pe) {
                     return Pe.slice();
                   }, te.B = M, te.F = _, te.C = [1732584193, 4023233417, 2562383102, 271733878, 3285377520], te.p = 512, te.U = 160, te.v = !1, Be.hmacKey && te.M(oe("hmacKey", Be.hmacKey, te.K)), te;
                 }
                 return Q(W);
               })(le);
               function ze(A) {
-                return A == "SHA-224" ? w.slice() : X.slice();
+                return A == "SHA-224" ? w.slice() : Z.slice();
               }
               function lt(A, S) {
-                var W, Z, Ae, he, te, Be, Pe, Qe, ht, Je, $e, ct, yt = [];
-                for (W = S[0], Z = S[1], Ae = S[2], he = S[3], te = S[4], Be = S[5], Pe = S[6], Qe = S[7], $e = 0; $e < 64; $e += 1) yt[$e] = $e < 16 ? A[$e] : ye(we(ct = yt[$e - 2], 17) ^ we(ct, 19) ^ pe(ct, 10), yt[$e - 7], g(yt[$e - 15]), yt[$e - 16]), ht = B(Qe, C(te), ge(te, Be, Pe), O[$e], yt[$e]), Je = D(ue(W), z(W, Z, Ae)), Qe = Pe, Pe = Be, Be = te, te = D(he, ht), he = Ae, Ae = Z, Z = W, W = D(ht, Je);
-                return S[0] = D(W, S[0]), S[1] = D(Z, S[1]), S[2] = D(Ae, S[2]), S[3] = D(he, S[3]), S[4] = D(te, S[4]), S[5] = D(Be, S[5]), S[6] = D(Pe, S[6]), S[7] = D(Qe, S[7]), S;
+                var W, X, Ae, he, te, Be, Pe, qe, ht, Je, $e, ct, yt = [];
+                for (W = S[0], X = S[1], Ae = S[2], he = S[3], te = S[4], Be = S[5], Pe = S[6], qe = S[7], $e = 0; $e < 64; $e += 1) yt[$e] = $e < 16 ? A[$e] : ye(we(ct = yt[$e - 2], 17) ^ we(ct, 19) ^ pe(ct, 10), yt[$e - 7], g(yt[$e - 15]), yt[$e - 16]), ht = B(qe, C(te), ge(te, Be, Pe), O[$e], yt[$e]), Je = D(ue(W), z(W, X, Ae)), qe = Pe, Pe = Be, Be = te, te = D(he, ht), he = Ae, Ae = X, X = W, W = D(ht, Je);
+                return S[0] = D(W, S[0]), S[1] = D(X, S[1]), S[2] = D(Ae, S[2]), S[3] = D(he, S[3]), S[4] = D(te, S[4]), S[5] = D(Be, S[5]), S[6] = D(Pe, S[6]), S[7] = D(qe, S[7]), S;
               }
               var ft = (function(A) {
                 b(W, A);
                 var S = I(W);
-                function W(Z, Ae, he) {
+                function W(X, Ae, he) {
                   var te;
-                  if (T(this, W), Z !== "SHA-224" && Z !== "SHA-256") throw new Error(E);
+                  if (T(this, W), X !== "SHA-224" && X !== "SHA-256") throw new Error(E);
                   var Be = he || {};
-                  return (te = S.call(this, Z, Ae, he)).T = te.k, te.L = !0, te.K = -1, te.m = F(te.t, te.i, te.K), te.R = lt, te.g = function(Pe) {
+                  return (te = S.call(this, X, Ae, he)).T = te.k, te.L = !0, te.K = -1, te.m = F(te.t, te.i, te.K), te.R = lt, te.g = function(Pe) {
                     return Pe.slice();
-                  }, te.B = ze, te.F = function(Pe, Qe, ht, Je) {
+                  }, te.B = ze, te.F = function(Pe, qe, ht, Je) {
                     return (function($e, ct, yt, nt, kt) {
                       for (var Bt, Gt = 15 + (ct + 65 >>> 9 << 4), Qt = ct + yt; $e.length <= Gt; ) $e.push(0);
                       for ($e[ct >>> 5] |= 128 << 24 - ct % 32, $e[Gt] = 4294967295 & Qt, $e[Gt - 1] = Qt / 4294967296 | 0, Bt = 0; Bt < $e.length; Bt += 16) nt = lt($e.slice(Bt, Bt + 16), nt);
                       return kt === "SHA-224" ? [nt[0], nt[1], nt[2], nt[3], nt[4], nt[5], nt[6]] : nt;
-                    })(Pe, Qe, ht, Je, Z);
-                  }, te.C = ze(Z), te.p = 512, te.U = Z === "SHA-224" ? 224 : 256, te.v = !1, Be.hmacKey && te.M(oe("hmacKey", Be.hmacKey, te.K)), te;
+                    })(Pe, qe, ht, Je, X);
+                  }, te.C = ze(X), te.p = 512, te.U = X === "SHA-224" ? 224 : 256, te.v = !1, Be.hmacKey && te.M(oe("hmacKey", Be.hmacKey, te.K)), te;
                 }
                 return Q(W);
               })(le), Ee = Q(function A(S, W) {
@@ -58387,67 +58387,67 @@ function Xin() {
                 return new Ee(A.Y & S.Y ^ A.Y & W.Y ^ S.Y & W.Y, A.N & S.N ^ A.N & W.N ^ S.N & W.N);
               }
               function Se(A) {
-                var S = fe(A, 28), W = fe(A, 34), Z = fe(A, 39);
-                return new Ee(S.Y ^ W.Y ^ Z.Y, S.N ^ W.N ^ Z.N);
+                var S = fe(A, 28), W = fe(A, 34), X = fe(A, 39);
+                return new Ee(S.Y ^ W.Y ^ X.Y, S.N ^ W.N ^ X.N);
               }
               function mt(A, S) {
-                var W, Z;
+                var W, X;
                 W = (65535 & A.N) + (65535 & S.N);
-                var Ae = (65535 & (Z = (A.N >>> 16) + (S.N >>> 16) + (W >>> 16))) << 16 | 65535 & W;
-                return W = (65535 & A.Y) + (65535 & S.Y) + (Z >>> 16), Z = (A.Y >>> 16) + (S.Y >>> 16) + (W >>> 16), new Ee((65535 & Z) << 16 | 65535 & W, Ae);
+                var Ae = (65535 & (X = (A.N >>> 16) + (S.N >>> 16) + (W >>> 16))) << 16 | 65535 & W;
+                return W = (65535 & A.Y) + (65535 & S.Y) + (X >>> 16), X = (A.Y >>> 16) + (S.Y >>> 16) + (W >>> 16), new Ee((65535 & X) << 16 | 65535 & W, Ae);
               }
-              function Ue(A, S, W, Z) {
+              function Ue(A, S, W, X) {
                 var Ae, he;
-                Ae = (65535 & A.N) + (65535 & S.N) + (65535 & W.N) + (65535 & Z.N);
-                var te = (65535 & (he = (A.N >>> 16) + (S.N >>> 16) + (W.N >>> 16) + (Z.N >>> 16) + (Ae >>> 16))) << 16 | 65535 & Ae;
-                return Ae = (65535 & A.Y) + (65535 & S.Y) + (65535 & W.Y) + (65535 & Z.Y) + (he >>> 16), he = (A.Y >>> 16) + (S.Y >>> 16) + (W.Y >>> 16) + (Z.Y >>> 16) + (Ae >>> 16), new Ee((65535 & he) << 16 | 65535 & Ae, te);
+                Ae = (65535 & A.N) + (65535 & S.N) + (65535 & W.N) + (65535 & X.N);
+                var te = (65535 & (he = (A.N >>> 16) + (S.N >>> 16) + (W.N >>> 16) + (X.N >>> 16) + (Ae >>> 16))) << 16 | 65535 & Ae;
+                return Ae = (65535 & A.Y) + (65535 & S.Y) + (65535 & W.Y) + (65535 & X.Y) + (he >>> 16), he = (A.Y >>> 16) + (S.Y >>> 16) + (W.Y >>> 16) + (X.Y >>> 16) + (Ae >>> 16), new Ee((65535 & he) << 16 | 65535 & Ae, te);
               }
-              function Ve(A, S, W, Z, Ae) {
+              function Ve(A, S, W, X, Ae) {
                 var he, te;
-                he = (65535 & A.N) + (65535 & S.N) + (65535 & W.N) + (65535 & Z.N) + (65535 & Ae.N);
-                var Be = (65535 & (te = (A.N >>> 16) + (S.N >>> 16) + (W.N >>> 16) + (Z.N >>> 16) + (Ae.N >>> 16) + (he >>> 16))) << 16 | 65535 & he;
-                return he = (65535 & A.Y) + (65535 & S.Y) + (65535 & W.Y) + (65535 & Z.Y) + (65535 & Ae.Y) + (te >>> 16), te = (A.Y >>> 16) + (S.Y >>> 16) + (W.Y >>> 16) + (Z.Y >>> 16) + (Ae.Y >>> 16) + (he >>> 16), new Ee((65535 & te) << 16 | 65535 & he, Be);
+                he = (65535 & A.N) + (65535 & S.N) + (65535 & W.N) + (65535 & X.N) + (65535 & Ae.N);
+                var Be = (65535 & (te = (A.N >>> 16) + (S.N >>> 16) + (W.N >>> 16) + (X.N >>> 16) + (Ae.N >>> 16) + (he >>> 16))) << 16 | 65535 & he;
+                return he = (65535 & A.Y) + (65535 & S.Y) + (65535 & W.Y) + (65535 & X.Y) + (65535 & Ae.Y) + (te >>> 16), te = (A.Y >>> 16) + (S.Y >>> 16) + (W.Y >>> 16) + (X.Y >>> 16) + (Ae.Y >>> 16) + (he >>> 16), new Ee((65535 & te) << 16 | 65535 & he, Be);
               }
               function At(A, S) {
                 return new Ee(A.Y ^ S.Y, A.N ^ S.N);
               }
               function Ye(A) {
-                var S = fe(A, 19), W = fe(A, 61), Z = He(A, 6);
-                return new Ee(S.Y ^ W.Y ^ Z.Y, S.N ^ W.N ^ Z.N);
+                var S = fe(A, 19), W = fe(A, 61), X = He(A, 6);
+                return new Ee(S.Y ^ W.Y ^ X.Y, S.N ^ W.N ^ X.N);
               }
               function at(A) {
-                var S = fe(A, 1), W = fe(A, 8), Z = He(A, 7);
-                return new Ee(S.Y ^ W.Y ^ Z.Y, S.N ^ W.N ^ Z.N);
+                var S = fe(A, 1), W = fe(A, 8), X = He(A, 7);
+                return new Ee(S.Y ^ W.Y ^ X.Y, S.N ^ W.N ^ X.N);
               }
               function re(A) {
-                var S = fe(A, 14), W = fe(A, 18), Z = fe(A, 41);
-                return new Ee(S.Y ^ W.Y ^ Z.Y, S.N ^ W.N ^ Z.N);
+                var S = fe(A, 14), W = fe(A, 18), X = fe(A, 41);
+                return new Ee(S.Y ^ W.Y ^ X.Y, S.N ^ W.N ^ X.N);
               }
               var Ke = [new Ee(O[0], 3609767458), new Ee(O[1], 602891725), new Ee(O[2], 3964484399), new Ee(O[3], 2173295548), new Ee(O[4], 4081628472), new Ee(O[5], 3053834265), new Ee(O[6], 2937671579), new Ee(O[7], 3664609560), new Ee(O[8], 2734883394), new Ee(O[9], 1164996542), new Ee(O[10], 1323610764), new Ee(O[11], 3590304994), new Ee(O[12], 4068182383), new Ee(O[13], 991336113), new Ee(O[14], 633803317), new Ee(O[15], 3479774868), new Ee(O[16], 2666613458), new Ee(O[17], 944711139), new Ee(O[18], 2341262773), new Ee(O[19], 2007800933), new Ee(O[20], 1495990901), new Ee(O[21], 1856431235), new Ee(O[22], 3175218132), new Ee(O[23], 2198950837), new Ee(O[24], 3999719339), new Ee(O[25], 766784016), new Ee(O[26], 2566594879), new Ee(O[27], 3203337956), new Ee(O[28], 1034457026), new Ee(O[29], 2466948901), new Ee(O[30], 3758326383), new Ee(O[31], 168717936), new Ee(O[32], 1188179964), new Ee(O[33], 1546045734), new Ee(O[34], 1522805485), new Ee(O[35], 2643833823), new Ee(O[36], 2343527390), new Ee(O[37], 1014477480), new Ee(O[38], 1206759142), new Ee(O[39], 344077627), new Ee(O[40], 1290863460), new Ee(O[41], 3158454273), new Ee(O[42], 3505952657), new Ee(O[43], 106217008), new Ee(O[44], 3606008344), new Ee(O[45], 1432725776), new Ee(O[46], 1467031594), new Ee(O[47], 851169720), new Ee(O[48], 3100823752), new Ee(O[49], 1363258195), new Ee(O[50], 3750685593), new Ee(O[51], 3785050280), new Ee(O[52], 3318307427), new Ee(O[53], 3812723403), new Ee(O[54], 2003034995), new Ee(O[55], 3602036899), new Ee(O[56], 1575990012), new Ee(O[57], 1125592928), new Ee(O[58], 2716904306), new Ee(O[59], 442776044), new Ee(O[60], 593698344), new Ee(O[61], 3733110249), new Ee(O[62], 2999351573), new Ee(O[63], 3815920427), new Ee(3391569614, 3928383900), new Ee(3515267271, 566280711), new Ee(3940187606, 3454069534), new Ee(4118630271, 4000239992), new Ee(116418474, 1914138554), new Ee(174292421, 2731055270), new Ee(289380356, 3203993006), new Ee(460393269, 320620315), new Ee(685471733, 587496836), new Ee(852142971, 1086792851), new Ee(1017036298, 365543100), new Ee(1126000580, 2618297676), new Ee(1288033470, 3409855158), new Ee(1501505948, 4234509866), new Ee(1607167915, 987167468), new Ee(1816402316, 1246189591)];
               function j(A) {
-                return A === "SHA-384" ? [new Ee(3418070365, w[0]), new Ee(1654270250, w[1]), new Ee(2438529370, w[2]), new Ee(355462360, w[3]), new Ee(1731405415, w[4]), new Ee(41048885895, w[5]), new Ee(3675008525, w[6]), new Ee(1203062813, w[7])] : [new Ee(X[0], 4089235720), new Ee(X[1], 2227873595), new Ee(X[2], 4271175723), new Ee(X[3], 1595750129), new Ee(X[4], 2917565137), new Ee(X[5], 725511199), new Ee(X[6], 4215389547), new Ee(X[7], 327033209)];
+                return A === "SHA-384" ? [new Ee(3418070365, w[0]), new Ee(1654270250, w[1]), new Ee(2438529370, w[2]), new Ee(355462360, w[3]), new Ee(1731405415, w[4]), new Ee(41048885895, w[5]), new Ee(3675008525, w[6]), new Ee(1203062813, w[7])] : [new Ee(Z[0], 4089235720), new Ee(Z[1], 2227873595), new Ee(Z[2], 4271175723), new Ee(Z[3], 1595750129), new Ee(Z[4], 2917565137), new Ee(Z[5], 725511199), new Ee(Z[6], 4215389547), new Ee(Z[7], 327033209)];
               }
               function Fe(A, S) {
-                var W, Z, Ae, he, te, Be, Pe, Qe, ht, Je, $e, ct, yt, nt, kt, Bt = [];
-                for (W = S[0], Z = S[1], Ae = S[2], he = S[3], te = S[4], Be = S[5], Pe = S[6], Qe = S[7], $e = 0; $e < 80; $e += 1) $e < 16 ? (ct = 2 * $e, Bt[$e] = new Ee(A[ct], A[ct + 1])) : Bt[$e] = Ue(Ye(Bt[$e - 2]), Bt[$e - 7], at(Bt[$e - 15]), Bt[$e - 16]), ht = Ve(Qe, re(te), (nt = Be, kt = Pe, new Ee((yt = te).Y & nt.Y ^ ~yt.Y & kt.Y, yt.N & nt.N ^ ~yt.N & kt.N)), Ke[$e], Bt[$e]), Je = mt(Se(W), Xe(W, Z, Ae)), Qe = Pe, Pe = Be, Be = te, te = mt(he, ht), he = Ae, Ae = Z, Z = W, W = mt(ht, Je);
-                return S[0] = mt(W, S[0]), S[1] = mt(Z, S[1]), S[2] = mt(Ae, S[2]), S[3] = mt(he, S[3]), S[4] = mt(te, S[4]), S[5] = mt(Be, S[5]), S[6] = mt(Pe, S[6]), S[7] = mt(Qe, S[7]), S;
+                var W, X, Ae, he, te, Be, Pe, qe, ht, Je, $e, ct, yt, nt, kt, Bt = [];
+                for (W = S[0], X = S[1], Ae = S[2], he = S[3], te = S[4], Be = S[5], Pe = S[6], qe = S[7], $e = 0; $e < 80; $e += 1) $e < 16 ? (ct = 2 * $e, Bt[$e] = new Ee(A[ct], A[ct + 1])) : Bt[$e] = Ue(Ye(Bt[$e - 2]), Bt[$e - 7], at(Bt[$e - 15]), Bt[$e - 16]), ht = Ve(qe, re(te), (nt = Be, kt = Pe, new Ee((yt = te).Y & nt.Y ^ ~yt.Y & kt.Y, yt.N & nt.N ^ ~yt.N & kt.N)), Ke[$e], Bt[$e]), Je = mt(Se(W), Xe(W, X, Ae)), qe = Pe, Pe = Be, Be = te, te = mt(he, ht), he = Ae, Ae = X, X = W, W = mt(ht, Je);
+                return S[0] = mt(W, S[0]), S[1] = mt(X, S[1]), S[2] = mt(Ae, S[2]), S[3] = mt(he, S[3]), S[4] = mt(te, S[4]), S[5] = mt(Be, S[5]), S[6] = mt(Pe, S[6]), S[7] = mt(qe, S[7]), S;
               }
               var Oe = (function(A) {
                 b(W, A);
                 var S = I(W);
-                function W(Z, Ae, he) {
+                function W(X, Ae, he) {
                   var te;
-                  if (T(this, W), Z !== "SHA-384" && Z !== "SHA-512") throw new Error(E);
+                  if (T(this, W), X !== "SHA-384" && X !== "SHA-512") throw new Error(E);
                   var Be = he || {};
-                  return (te = S.call(this, Z, Ae, he)).T = te.k, te.L = !0, te.K = -1, te.m = F(te.t, te.i, te.K), te.R = Fe, te.g = function(Pe) {
+                  return (te = S.call(this, X, Ae, he)).T = te.k, te.L = !0, te.K = -1, te.m = F(te.t, te.i, te.K), te.R = Fe, te.g = function(Pe) {
                     return Pe.slice();
-                  }, te.B = j, te.F = function(Pe, Qe, ht, Je) {
+                  }, te.B = j, te.F = function(Pe, qe, ht, Je) {
                     return (function($e, ct, yt, nt, kt) {
                       for (var Bt, Gt = 31 + (ct + 129 >>> 10 << 5), Qt = ct + yt; $e.length <= Gt; ) $e.push(0);
                       for ($e[ct >>> 5] |= 128 << 24 - ct % 32, $e[Gt] = 4294967295 & Qt, $e[Gt - 1] = Qt / 4294967296 | 0, Bt = 0; Bt < $e.length; Bt += 32) nt = Fe($e.slice(Bt, Bt + 32), nt);
                       return kt === "SHA-384" ? [(nt = nt)[0].Y, nt[0].N, nt[1].Y, nt[1].N, nt[2].Y, nt[2].N, nt[3].Y, nt[3].N, nt[4].Y, nt[4].N, nt[5].Y, nt[5].N] : [nt[0].Y, nt[0].N, nt[1].Y, nt[1].N, nt[2].Y, nt[2].N, nt[3].Y, nt[3].N, nt[4].Y, nt[4].N, nt[5].Y, nt[5].N, nt[6].Y, nt[6].N, nt[7].Y, nt[7].N];
-                    })(Pe, Qe, ht, Je, Z);
-                  }, te.C = j(Z), te.p = 1024, te.U = Z === "SHA-384" ? 384 : 512, te.v = !1, Be.hmacKey && te.M(oe("hmacKey", Be.hmacKey, te.K)), te;
+                    })(Pe, qe, ht, Je, X);
+                  }, te.C = j(X), te.p = 1024, te.U = X === "SHA-384" ? 384 : 512, te.v = !1, Be.hmacKey && te.M(oe("hmacKey", Be.hmacKey, te.K)), te;
                 }
                 return Q(W);
               })(le), ce = [new Ee(0, 1), new Ee(0, 32898), new Ee(2147483648, 32906), new Ee(2147483648, 2147516416), new Ee(0, 32907), new Ee(0, 2147483649), new Ee(2147483648, 2147516545), new Ee(2147483648, 32777), new Ee(0, 138), new Ee(0, 136), new Ee(0, 2147516425), new Ee(0, 2147483658), new Ee(0, 2147516555), new Ee(2147483648, 139), new Ee(2147483648, 32905), new Ee(2147483648, 32771), new Ee(2147483648, 32770), new Ee(2147483648, 128), new Ee(0, 32778), new Ee(2147483648, 2147483658), new Ee(2147483648, 2147516545), new Ee(2147483648, 32896), new Ee(0, 2147483649), new Ee(2147483648, 2147516424)], Ce = [[0, 36, 3, 41, 18], [1, 44, 10, 45, 2], [62, 6, 43, 15, 61], [28, 55, 25, 21, 56], [27, 20, 39, 8, 14]];
@@ -58462,43 +58462,43 @@ function Xin() {
                 return W;
               }
               function de(A, S) {
-                var W, Z, Ae, he, te, Be, Pe, Qe, ht, Je = [], $e = [];
-                if (A !== null) for (Z = 0; Z < A.length; Z += 2) S[(Z >>> 1) % 5][(Z >>> 1) / 5 | 0] = At(S[(Z >>> 1) % 5][(Z >>> 1) / 5 | 0], new Ee(A[Z + 1], A[Z]));
+                var W, X, Ae, he, te, Be, Pe, qe, ht, Je = [], $e = [];
+                if (A !== null) for (X = 0; X < A.length; X += 2) S[(X >>> 1) % 5][(X >>> 1) / 5 | 0] = At(S[(X >>> 1) % 5][(X >>> 1) / 5 | 0], new Ee(A[X + 1], A[X]));
                 for (W = 0; W < 24; W += 1) {
-                  for (he = xe(), Z = 0; Z < 5; Z += 1) Je[Z] = (te = S[Z][0], Be = S[Z][1], Pe = S[Z][2], Qe = S[Z][3], ht = S[Z][4], new Ee(te.Y ^ Be.Y ^ Pe.Y ^ Qe.Y ^ ht.Y, te.N ^ Be.N ^ Pe.N ^ Qe.N ^ ht.N));
-                  for (Z = 0; Z < 5; Z += 1) $e[Z] = At(Je[(Z + 4) % 5], Nt(Je[(Z + 1) % 5], 1));
-                  for (Z = 0; Z < 5; Z += 1) for (Ae = 0; Ae < 5; Ae += 1) S[Z][Ae] = At(S[Z][Ae], $e[Z]);
-                  for (Z = 0; Z < 5; Z += 1) for (Ae = 0; Ae < 5; Ae += 1) he[Ae][(2 * Z + 3 * Ae) % 5] = Nt(S[Z][Ae], Ce[Z][Ae]);
-                  for (Z = 0; Z < 5; Z += 1) for (Ae = 0; Ae < 5; Ae += 1) S[Z][Ae] = At(he[Z][Ae], new Ee(~he[(Z + 1) % 5][Ae].Y & he[(Z + 2) % 5][Ae].Y, ~he[(Z + 1) % 5][Ae].N & he[(Z + 2) % 5][Ae].N));
+                  for (he = xe(), X = 0; X < 5; X += 1) Je[X] = (te = S[X][0], Be = S[X][1], Pe = S[X][2], qe = S[X][3], ht = S[X][4], new Ee(te.Y ^ Be.Y ^ Pe.Y ^ qe.Y ^ ht.Y, te.N ^ Be.N ^ Pe.N ^ qe.N ^ ht.N));
+                  for (X = 0; X < 5; X += 1) $e[X] = At(Je[(X + 4) % 5], Nt(Je[(X + 1) % 5], 1));
+                  for (X = 0; X < 5; X += 1) for (Ae = 0; Ae < 5; Ae += 1) S[X][Ae] = At(S[X][Ae], $e[X]);
+                  for (X = 0; X < 5; X += 1) for (Ae = 0; Ae < 5; Ae += 1) he[Ae][(2 * X + 3 * Ae) % 5] = Nt(S[X][Ae], Ce[X][Ae]);
+                  for (X = 0; X < 5; X += 1) for (Ae = 0; Ae < 5; Ae += 1) S[X][Ae] = At(he[X][Ae], new Ee(~he[(X + 1) % 5][Ae].Y & he[(X + 2) % 5][Ae].Y, ~he[(X + 1) % 5][Ae].N & he[(X + 2) % 5][Ae].N));
                   S[0][0] = At(S[0][0], ce[W]);
                 }
                 return S;
               }
               function ke(A) {
-                var S, W, Z = 0, Ae = [0, 0], he = [4294967295 & A, A / 4294967296 & 2097151];
-                for (S = 6; S >= 0; S--) (W = he[S >> 2] >>> 8 * S & 255) == 0 && Z === 0 || (Ae[Z + 1 >> 2] |= W << 8 * (Z + 1), Z += 1);
-                return Z = Z !== 0 ? Z : 1, Ae[0] |= Z, { value: Z + 1 > 4 ? Ae : [Ae[0]], binLen: 8 + 8 * Z };
+                var S, W, X = 0, Ae = [0, 0], he = [4294967295 & A, A / 4294967296 & 2097151];
+                for (S = 6; S >= 0; S--) (W = he[S >> 2] >>> 8 * S & 255) == 0 && X === 0 || (Ae[X + 1 >> 2] |= W << 8 * (X + 1), X += 1);
+                return X = X !== 0 ? X : 1, Ae[0] |= X, { value: X + 1 > 4 ? Ae : [Ae[0]], binLen: 8 + 8 * X };
               }
               function R(A) {
-                return J(ke(A.binLen), A);
+                return V(ke(A.binLen), A);
               }
               function Ne(A, S) {
-                var W, Z = ke(S), Ae = S >>> 2, he = (Ae - (Z = J(Z, A)).value.length % Ae) % Ae;
-                for (W = 0; W < he; W++) Z.value.push(0);
-                return Z.value;
+                var W, X = ke(S), Ae = S >>> 2, he = (Ae - (X = V(X, A)).value.length % Ae) % Ae;
+                for (W = 0; W < he; W++) X.value.push(0);
+                return X.value;
               }
               var Me = (function(A) {
                 b(W, A);
                 var S = I(W);
-                function W(Z, Ae, he) {
+                function W(X, Ae, he) {
                   var te;
                   T(this, W);
-                  var Be = 6, Pe = 0, Qe = he || {};
-                  if ((te = S.call(this, Z, Ae, he)).numRounds !== 1) {
-                    if (Qe.kmacKey || Qe.hmacKey) throw new Error("Cannot set numRounds with MAC");
+                  var Be = 6, Pe = 0, qe = he || {};
+                  if ((te = S.call(this, X, Ae, he)).numRounds !== 1) {
+                    if (qe.kmacKey || qe.hmacKey) throw new Error("Cannot set numRounds with MAC");
                     if (te.s === "CSHAKE128" || te.s === "CSHAKE256") throw new Error("Cannot set numRounds for CSHAKE variants");
                   }
-                  switch (te.K = 1, te.m = F(te.t, te.i, te.K), te.R = de, te.g = De, te.B = xe, te.C = xe(), te.v = !1, Z) {
+                  switch (te.K = 1, te.m = F(te.t, te.i, te.K), te.R = de, te.g = De, te.B = xe, te.C = xe(), te.v = !1, X) {
                     case "SHA3-224":
                       te.p = Pe = 1152, te.U = 224, te.L = !0, te.T = te.k;
                       break;
@@ -58540,59 +58540,59 @@ function Xin() {
                       for (nt[(Kt = kt >>> 3) >> 2] ^= $t << Kt % 4 * 8, nt[_n - 1] ^= 2147483648, Gt = de(nt, Gt); 32 * Tn.length < rn && (dn = Gt[An % 5][An / 5 | 0], Tn.push(dn.N), !(32 * Tn.length >= rn)); ) Tn.push(dn.Y), 64 * (An += 1) % Qt == 0 && (de(null, Gt), An = 0);
                       return Tn;
                     })(ht, Je, 0, ct, Pe, Be, yt);
-                  }, Qe.hmacKey && te.M(oe("hmacKey", Qe.hmacKey, te.K)), te;
+                  }, qe.hmacKey && te.M(oe("hmacKey", qe.hmacKey, te.K)), te;
                 }
-                return Q(W, [{ key: "_", value: function(Z, Ae) {
-                  var he = (function(Qe) {
-                    var ht = Qe || {};
+                return Q(W, [{ key: "_", value: function(X, Ae) {
+                  var he = (function(qe) {
+                    var ht = qe || {};
                     return { funcName: oe("funcName", ht.funcName, 1, { value: [], binLen: 0 }), customization: oe("Customization", ht.customization, 1, { value: [], binLen: 0 }) };
-                  })(Z || {});
+                  })(X || {});
                   Ae && (he.funcName = Ae);
-                  var te = J(R(he.funcName), R(he.customization));
+                  var te = V(R(he.funcName), R(he.customization));
                   if (he.customization.binLen !== 0 || he.funcName.binLen !== 0) {
                     for (var Be = Ne(te, this.p >>> 3), Pe = 0; Pe < Be.length; Pe += this.p >>> 5) this.C = this.R(Be.slice(Pe, Pe + (this.p >>> 5)), this.C), this.l += this.p;
                     return 4;
                   }
                   return 31;
-                } }, { key: "I", value: function(Z) {
+                } }, { key: "I", value: function(X) {
                   var Ae = (function(Be) {
                     var Pe = Be || {};
                     return { kmacKey: oe("kmacKey", Pe.kmacKey, 1), funcName: { value: [1128353099], binLen: 32 }, customization: oe("Customization", Pe.customization, 1, { value: [], binLen: 0 }) };
-                  })(Z || {});
-                  this._(Z, Ae.funcName);
+                  })(X || {});
+                  this._(X, Ae.funcName);
                   for (var he = Ne(R(Ae.kmacKey), this.p >>> 3), te = 0; te < he.length; te += this.p >>> 5) this.C = this.R(he.slice(te, te + (this.p >>> 5)), this.C), this.l += this.p;
                   this.A = !0;
-                } }, { key: "X", value: function(Z) {
-                  var Ae = J({ value: this.o.slice(), binLen: this.h }, (function(he) {
-                    var te, Be, Pe = 0, Qe = [0, 0], ht = [4294967295 & he, he / 4294967296 & 2097151];
-                    for (te = 6; te >= 0; te--) (Be = ht[te >> 2] >>> 8 * te & 255) == 0 && Pe === 0 || (Qe[Pe >> 2] |= Be << 8 * Pe, Pe += 1);
-                    return Qe[(Pe = Pe !== 0 ? Pe : 1) >> 2] |= Pe << 8 * Pe, { value: Pe + 1 > 4 ? Qe : [Qe[0]], binLen: 8 + 8 * Pe };
-                  })(Z.outputLen));
-                  return this.F(Ae.value, Ae.binLen, this.l, this.g(this.C), Z.outputLen);
+                } }, { key: "X", value: function(X) {
+                  var Ae = V({ value: this.o.slice(), binLen: this.h }, (function(he) {
+                    var te, Be, Pe = 0, qe = [0, 0], ht = [4294967295 & he, he / 4294967296 & 2097151];
+                    for (te = 6; te >= 0; te--) (Be = ht[te >> 2] >>> 8 * te & 255) == 0 && Pe === 0 || (qe[Pe >> 2] |= Be << 8 * Pe, Pe += 1);
+                    return qe[(Pe = Pe !== 0 ? Pe : 1) >> 2] |= Pe << 8 * Pe, { value: Pe + 1 > 4 ? qe : [qe[0]], binLen: 8 + 8 * Pe };
+                  })(X.outputLen));
+                  return this.F(Ae.value, Ae.binLen, this.l, this.g(this.C), X.outputLen);
                 } }]), W;
               })(le), et = (function() {
-                function A(S, W, Z) {
-                  if (T(this, A), S == "SHA-1") this.O = new ae(S, W, Z);
-                  else if (S == "SHA-224" || S == "SHA-256") this.O = new ft(S, W, Z);
-                  else if (S == "SHA-384" || S == "SHA-512") this.O = new Oe(S, W, Z);
+                function A(S, W, X) {
+                  if (T(this, A), S == "SHA-1") this.O = new ae(S, W, X);
+                  else if (S == "SHA-224" || S == "SHA-256") this.O = new ft(S, W, X);
+                  else if (S == "SHA-384" || S == "SHA-512") this.O = new Oe(S, W, X);
                   else {
                     if (S != "SHA3-224" && S != "SHA3-256" && S != "SHA3-384" && S != "SHA3-512" && S != "SHAKE128" && S != "SHAKE256" && S != "CSHAKE128" && S != "CSHAKE256" && S != "KMAC128" && S != "KMAC256") throw new Error(E);
-                    this.O = new Me(S, W, Z);
+                    this.O = new Me(S, W, X);
                   }
                 }
                 return Q(A, [{ key: "update", value: function(S) {
                   this.O.update(S);
                 } }, { key: "getHash", value: function(S, W) {
                   return this.O.getHash(S, W);
-                } }, { key: "setHMACKey", value: function(S, W, Z) {
-                  this.O.setHMACKey(S, W, Z);
+                } }, { key: "setHMACKey", value: function(S, W, X) {
+                  this.O.setHMACKey(S, W, X);
                 } }, { key: "getHMAC", value: function(S, W) {
                   return this.O.getHMAC(S, W);
                 } }]), A;
               })(), me = typeof atob == "function", se = typeof btoa == "function", be = typeof a == "function", Le = typeof TextDecoder == "function" ? new TextDecoder() : void 0, We = typeof TextEncoder == "function" ? new TextEncoder() : void 0, $ = Array.prototype.slice.call("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/="), ee = (function(A) {
                 var S = {};
-                return A.forEach(function(W, Z) {
-                  return S[W] = Z;
+                return A.forEach(function(W, X) {
+                  return S[W] = X;
                 }), S;
               })($), ut = /^(?:[A-Za-z\d+\/]{4})*?(?:[A-Za-z\d+\/]{2}(?:==)?|[A-Za-z\d+\/]{3}=?)?$/, Ge = String.fromCharCode.bind(String), ot = typeof Uint8Array.from == "function" ? Uint8Array.from.bind(Uint8Array) : function(A) {
                 var S = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : function(W) {
@@ -58606,9 +58606,9 @@ function Xin() {
               }, wt = function(A) {
                 return A.replace(/[^A-Za-z0-9\+\/]/g, "");
               }, Ct = function(A) {
-                for (var S, W, Z, Ae, he = "", te = A.length % 3, Be = 0; Be < A.length; ) {
-                  if ((W = A.charCodeAt(Be++)) > 255 || (Z = A.charCodeAt(Be++)) > 255 || (Ae = A.charCodeAt(Be++)) > 255) throw new TypeError("invalid character found");
-                  he += $[(S = W << 16 | Z << 8 | Ae) >> 18 & 63] + $[S >> 12 & 63] + $[S >> 6 & 63] + $[63 & S];
+                for (var S, W, X, Ae, he = "", te = A.length % 3, Be = 0; Be < A.length; ) {
+                  if ((W = A.charCodeAt(Be++)) > 255 || (X = A.charCodeAt(Be++)) > 255 || (Ae = A.charCodeAt(Be++)) > 255) throw new TypeError("invalid character found");
+                  he += $[(S = W << 16 | X << 8 | Ae) >> 18 & 63] + $[S >> 12 & 63] + $[S >> 6 & 63] + $[63 & S];
                 }
                 return te ? he.slice(0, te - 3) + "===".substring(te) : he;
               }, Ut = se ? function(A) {
@@ -58618,7 +58618,7 @@ function Xin() {
               } : Ct, Vt = be ? function(A) {
                 return a.from(A).toString("base64");
               } : function(A) {
-                for (var S = [], W = 0, Z = A.length; W < Z; W += 4096) S.push(Ge.apply(null, A.subarray(W, W + 4096)));
+                for (var S = [], W = 0, X = A.length; W < X; W += 4096) S.push(Ge.apply(null, A.subarray(W, W + 4096)));
                 return Ut(S.join(""));
               }, Rt = function(A) {
                 var S = arguments.length > 1 && arguments[1] !== void 0 && arguments[1];
@@ -58655,7 +58655,7 @@ function Xin() {
               }, xt = function(A) {
                 if (A = A.replace(/\s+/g, ""), !ut.test(A)) throw new TypeError("malformed base64.");
                 A += "==".slice(2 - (3 & A.length));
-                for (var S, W, Z, Ae = "", he = 0; he < A.length; ) S = ee[A.charAt(he++)] << 18 | ee[A.charAt(he++)] << 12 | (W = ee[A.charAt(he++)]) << 6 | (Z = ee[A.charAt(he++)]), Ae += W === 64 ? Ge(S >> 16 & 255) : Z === 64 ? Ge(S >> 16 & 255, S >> 8 & 255) : Ge(S >> 16 & 255, S >> 8 & 255, 255 & S);
+                for (var S, W, X, Ae = "", he = 0; he < A.length; ) S = ee[A.charAt(he++)] << 18 | ee[A.charAt(he++)] << 12 | (W = ee[A.charAt(he++)]) << 6 | (X = ee[A.charAt(he++)]), Ae += W === 64 ? Ge(S >> 16 & 255) : X === 64 ? Ge(S >> 16 & 255, S >> 8 & 255) : Ge(S >> 16 & 255, S >> 8 & 255, 255 & S);
                 return Ae;
               }, St = me ? function(A) {
                 return atob(wt(A));
@@ -58719,13 +58719,13 @@ function Xin() {
                 this.parseString = function(A, S) {
                   var W;
                   window.DOMParser ? W = new window.DOMParser().parseFromString(A, "text/xml") : (W = new window.ActiveXObject("Microsoft.XMLDOM")).async = "false";
-                  var Z, Ae, he = (Z = (function te(Be) {
+                  var X, Ae, he = (X = (function te(Be) {
                     var Pe = {};
                     if (Be.nodeType === 1) {
                       if (Be.attributes.length > 0) {
                         Pe["@attributes"] = {};
-                        for (var Qe = 0; Qe < Be.attributes.length; Qe++) {
-                          var ht = Be.attributes.item(Qe);
+                        for (var qe = 0; qe < Be.attributes.length; qe++) {
+                          var ht = Be.attributes.item(qe);
                           Pe["@attributes"][ht.nodeName] = ht.value;
                         }
                       }
@@ -58742,7 +58742,7 @@ function Xin() {
                       }
                     }
                     return Pe;
-                  })(W), (Ae = JSON.stringify(Z, void 0, 2).replace(/(\\t|\\r|\\n)/g, "").replace(/"",[\n\t\r\s]+""[,]*/g, "").replace(/(\n[\t\s\r]*\n)/g, "").replace(/[\s\t]{2,}""[,]{0,1}/g, "").replace(/"[\s\t]{1,}"[,]{0,1}/g, "")).indexOf('"parsererror": {') === -1 ? Ae : "Invalid XML format");
+                  })(W), (Ae = JSON.stringify(X, void 0, 2).replace(/(\\t|\\r|\\n)/g, "").replace(/"",[\n\t\r\s]+""[,]*/g, "").replace(/(\n[\t\s\r]*\n)/g, "").replace(/[\s\t]{2,}""[,]{0,1}/g, "").replace(/"[\s\t]{1,}"[,]{0,1}/g, "")).indexOf('"parsererror": {') === -1 ? Ae : "Invalid XML format");
                   return S === void 0 ? JSON.parse(he) : he;
                 };
               }(), cn = { type: "object", location: "xml", sentAs: "Owner", parameters: { ID: { sentAs: "ID" } } }, Zn = { type: "object", location: "xml", sentAs: "Initiator", parameters: { ID: { sentAs: "ID" } } }, Ot = { sentAs: "BackToSourceRule", required: !0, location: "xml", type: "array", items: { type: "object", parameters: { ID: { sentAs: "ID" }, Condition: { sentAs: "Condition", type: "object", parameters: { ObjectKeyPrefixEquals: { sentAs: "ObjectKeyPrefixEquals" }, HttpErrorCodeReturnedEquals: { sentAs: "HttpErrorCodeReturnedEquals" } } }, Redirect: { sentAs: "Redirect", type: "object", parameters: { HttpRedirectCode: { sentAs: "HttpRedirectCode" }, SourceEndpoint: { sentAs: "SourceEndpoint" }, SourceBucketName: { sentAs: "SourceBucketName" }, ReplaceKeyWith: { sentAs: "ReplaceKeyWith" }, StaticUri: { sentAs: "StaticUri" }, ReplaceKeyPrefixWith: { sentAs: "ReplaceKeyPrefixWith" }, MigrationConfiguration: { sentAs: "MigrationConfiguration", type: "object", parameters: { Agency: { sentAs: "Agency" }, LogBucketName: { sentAs: "LogBucketName" }, PrivateBucketConfiguration: { sentAs: "PrivateBucketConfiguration", type: "object", parameters: { SourceStorageProvider: { sentAs: "SourceStorageProvider" }, SourceBucketAK: { sentAs: "SourceBucketAK" }, SourceBucketSK: { sentAs: "SourceBucketSK" }, SourceBucketZone: { sentAs: "SourceBucketZone" } } } } } } } } } }, on = { type: "array", location: "xml", sentAs: "CommonPrefixes", items: { type: "object", parameters: { Prefix: { decode: !0, sentAs: "Prefix" }, MTime: { sentAs: "MTime" }, InodeNo: { sentAs: "InodeNo" } } } }, Yt = { type: "array", location: "xml", wrapper: "AccessControlList", sentAs: "Grant", items: { type: "object", parameters: { Grantee: { type: "object", sentAs: "Grantee", parameters: { Type: { type: "ignore" }, ID: { sentAs: "ID", notAllowEmpty: !0 }, URI: { sentAs: "Canned", type: "adapter", notAllowEmpty: !0 } } }, Permission: { sentAs: "Permission" }, Delivered: { sentAs: "Delivered" } } } }, On = { type: "object", location: "xml", sentAs: "LoggingEnabled", parameters: { TargetBucket: { sentAs: "TargetBucket" }, TargetPrefix: { sentAs: "TargetPrefix" }, TargetGrants: { type: "array", wrapper: "TargetGrants", sentAs: "Grant", items: { type: "object", parameters: { Grantee: { type: "object", sentAs: "Grantee", parameters: { Type: { type: "ignore" }, ID: { sentAs: "ID" }, URI: { sentAs: "Canned", type: "adapter" } } }, Permission: { sentAs: "Permission" } } } } } }, zo = { required: !0, type: "array", location: "xml", sentAs: "Rule", items: { type: "object", parameters: { ID: { sentAs: "ID" }, Prefix: { sentAs: "Prefix" }, Status: { sentAs: "Status" }, Transitions: { type: "array", sentAs: "Transition", items: { type: "object", parameters: { StorageClass: { sentAs: "StorageClass", type: "adapter" }, Date: { sentAs: "Date" }, Days: { type: "number", sentAs: "Days" } } } }, Expiration: { type: "object", sentAs: "Expiration", parameters: { Date: { sentAs: "Date" }, Days: { type: "number", sentAs: "Days" } } }, AbortIncompleteMultipartUpload: { type: "object", sentAs: "AbortIncompleteMultipartUpload", parameters: { DaysAfterInitiation: { type: "number", sentAs: "DaysAfterInitiation" } } }, NoncurrentVersionTransitions: { type: "array", sentAs: "NoncurrentVersionTransition", items: { type: "object", parameters: { StorageClass: { sentAs: "StorageClass", type: "adapter" }, NoncurrentDays: { type: "number", sentAs: "NoncurrentDays" } } } }, NoncurrentVersionExpiration: { type: "object", sentAs: "NoncurrentVersionExpiration", parameters: { NoncurrentDays: { type: "number", sentAs: "NoncurrentDays" } } } } } }, co = { type: "object", location: "xml", sentAs: "RedirectAllRequestsTo", parameters: { HostName: { sentAs: "HostName" }, Protocol: { sentAs: "Protocol" } } }, En = { type: "array", wrapper: "RoutingRules", location: "xml", sentAs: "RoutingRule", items: { type: "object", parameters: { Condition: { type: "object", sentAs: "Condition", parameters: { HttpErrorCodeReturnedEquals: { sentAs: "HttpErrorCodeReturnedEquals" }, KeyPrefixEquals: { sentAs: "KeyPrefixEquals" } } }, Redirect: { type: "object", sentAs: "Redirect", parameters: { HostName: { sentAs: "HostName" }, HttpRedirectCode: { sentAs: "HttpRedirectCode" }, Protocol: { sentAs: "Protocol" }, ReplaceKeyPrefixWith: { sentAs: "ReplaceKeyPrefixWith" }, ReplaceKeyWith: { sentAs: "ReplaceKeyWith" } } } } } }, Ir = { type: "object", location: "xml", sentAs: "IndexDocument", parameters: { Suffix: { sentAs: "Suffix" } } }, ao = { type: "object", location: "xml", sentAs: "ErrorDocument", parameters: { Key: { sentAs: "Key" } } }, go = { required: !0, type: "array", location: "xml", sentAs: "CORSRule", items: { type: "object", parameters: { ID: { sentAs: "ID" }, AllowedMethod: { type: "array", sentAs: "AllowedMethod", items: { type: "string" } }, AllowedOrigin: { type: "array", sentAs: "AllowedOrigin", items: { type: "string" } }, AllowedHeader: { type: "array", sentAs: "AllowedHeader", items: { type: "string" } }, MaxAgeSeconds: { type: "number", sentAs: "MaxAgeSeconds" }, ExposeHeader: { type: "array", sentAs: "ExposeHeader", items: { type: "string" } } } } }, To = { type: "array", location: "xml", sentAs: "FunctionGraphConfiguration", items: { type: "object", location: "xml", parameters: { ID: { sentAs: "Id" }, Filter: { type: "object", parameters: { FilterRules: { wrapper: "Object", type: "array", sentAs: "FilterRule", items: { type: "object", parameters: { Name: {}, Value: {} } } } } }, FunctionGraph: {}, Event: { type: "array", items: { type: "adapter" } } } } }, Po = { type: "array", location: "xml", sentAs: "TopicConfiguration", items: { type: "object", location: "xml", parameters: { ID: { sentAs: "Id" }, Filter: { type: "object", parameters: { FilterRules: { wrapper: "Object", type: "array", sentAs: "FilterRule", items: { type: "object", parameters: { Name: {}, Value: {} } } } } }, Topic: {}, Event: { type: "array", items: { type: "adapter" } } } } }, cr = { type: "array", location: "xml", sentAs: "FunctionStageConfiguration", items: { type: "object", location: "xml", parameters: { ID: { sentAs: "Id" }, Filter: { type: "object", parameters: { FilterRules: { wrapper: "Object", type: "array", sentAs: "FilterRule", items: { type: "object", parameters: { Name: {}, Value: {} } } } } }, FunctionStage: {}, Event: { type: "array", items: { type: "adapter" } } } } }, No = { required: !0, type: "array", location: "xml", wrapper: "TagSet", sentAs: "Tag", items: { type: "object", parameters: { Key: { sentAs: "Key" }, Value: { sentAs: "Value" } } } }, jr = { required: !0, type: "array", location: "xml", sentAs: "Rule", items: { type: "object", parameters: { ID: { sentAs: "ID" }, Prefix: { sentAs: "Prefix" }, Status: { sentAs: "Status" }, Destination: { type: "object", sentAs: "Destination", parameters: { Bucket: { sentAs: "Bucket", type: "adapter" }, StorageClass: { sentAs: "StorageClass", type: "adapter" }, DeleteData: { sentAs: "DeleteData", type: "string" } } }, HistoricalObjectReplication: { sentAs: "HistoricalObjectReplication" } } } }, Yr = { type: "object", location: "xml", sentAs: "Rule", parameters: { ApplyServerSideEncryptionByDefault: { type: "object", sentAs: "ApplyServerSideEncryptionByDefault", parameters: { SSEAlgorithm: { sentAs: "SSEAlgorithm" }, KMSMasterKeyID: { sentAs: "KMSMasterKeyID" }, ProjectID: { sentAs: "ProjectID" } } } } }, Kr = { type: "object", location: "xml", sentAs: "InventoryConfiguration", parameters: { Id: { sentAs: "Id" }, IsEnabled: { sentAs: "IsEnabled" }, Filter: { type: "object", sentAs: "Filter", parameters: { Prefix: { sentAs: "Prefix" } } }, Destination: { type: "object", sentAs: "Destination", parameters: { Format: { sentAs: "Format" }, Bucket: { sentAs: "Bucket" }, Prefix: { sentAs: "Prefix" }, Encryption: { type: "object", sentAs: "Encryption", parameters: { "SSE-KMS": { type: "object", sentAs: "SSE-KMS", parameters: { KeyId: { sentAs: "KeyId", type: "adapter" } } } } } } }, Schedule: { type: "object", sentAs: "Schedule", parameters: { Frequency: { sentAs: "Frequency" } } }, IncludedObjectVersions: { sentAs: "IncludedObjectVersions" }, OptionalFields: { type: "object", location: "xml", sentAs: "OptionalFields", parameters: { Field: { type: "array", sentAs: "Field", items: { type: "string" } } } } } }, vo = { HeadBucket: { httpMethod: "HEAD", parameters: { Bucket: { required: !0, location: "uri" } } }, HeadApiVersion: { httpMethod: "HEAD", urlPath: "apiversion", parameters: { Bucket: { location: "uri" } } }, HeadApiVersionOutput: { parameters: { ApiVersion: { location: "header", sentAs: "x-obs-api" } } }, CreateBucket: { httpMethod: "PUT", data: { xmlRoot: "CreateBucketConfiguration" }, parameters: { Bucket: { required: !0, location: "uri" }, ACL: { location: "header", sentAs: "acl", withPrefix: !0 }, StorageType: { location: "header", sentAs: "storage-class", withPrefix: !0 }, FileInterface: { location: "header", sentAs: "fs-file-interface", withPrefix: !0 }, Type: { location: "header", sentAs: "bucket-type", withPrefix: !0 }, MultiAz: { location: "header", sentAs: "az-redundancy", withPrefix: !0 }, Cluster: { location: "header", sentAs: "location-clustergroup-id", withPrefix: !0 }, GrantFullControl: { location: "header", sentAs: "grant-full-control", withPrefix: !0 }, GrantRead: { location: "header", sentAs: "grant-read", withPrefix: !0 }, GrantReadACP: { location: "header", sentAs: "grant-read-acp", withPrefix: !0 }, GrantWrite: { location: "header", sentAs: "grant-write", withPrefix: !0 }, GrantWriteACP: { location: "header", sentAs: "grant-write-acp", withPrefix: !0 }, ClusterType: { location: "header", sentAs: "cluster-type", withPrefix: !0 }, MultiEnterprise: { location: "header", sentAs: "epid", withPrefix: !0 }, Location: { location: "xml", sentAs: "Location" } } }, GetBucketMetadata: { httpMethod: "HEAD", parameters: { Bucket: { required: !0, location: "uri" }, Origin: { location: "header", sentAs: "Origin" }, RequestHeader: { location: "header", sentAs: "Access-Control-Request-Headers" } } }, GetBucketMetadataOutput: { parameters: { StorageClass: { location: "header", sentAs: "storage-class", withPrefix: !0 }, ObsVersion: { location: "header", sentAs: "version", withPrefix: !0 }, Location: { location: "header", sentAs: "bucket-location", withPrefix: !0 }, FileInterface: { location: "header", sentAs: "fs-file-interface", withPrefix: !0 }, Type: { location: "header", sentAs: "bucket-type", withPrefix: !0 }, MultiAz: { location: "header", sentAs: "az-redundancy", withPrefix: !0 }, Cluster: { location: "header", sentAs: "location-clustergroup-id", withPrefix: !0 }, MultiEnterprise: { location: "header", sentAs: "epid", withPrefix: !0 }, ClusterType: { location: "header", sentAs: "cluster-type", withPrefix: !0 }, AllowOrigin: { location: "header", sentAs: "access-control-allow-origin" }, MaxAgeSeconds: { location: "header", sentAs: "access-control-max-age" }, ExposeHeader: { location: "header", sentAs: "access-control-expose-headers" }, AllowMethod: { location: "header", sentAs: "access-control-allow-methods" }, AllowHeader: { location: "header", sentAs: "access-control-allow-headers" } } }, DeleteBucket: { httpMethod: "DELETE", parameters: { Bucket: { required: !0, location: "uri" } } }, ListBuckets: { httpMethod: "GET", parameters: { Type: { sentAs: "x-obs-bucket-type", location: "header" }, Location: { sentAs: "location", location: "header", withPrefix: !0 } } }, ListBucketsOutput: { data: { type: "xml", xmlRoot: "ListAllMyBucketsResult" }, parameters: { Buckets: { location: "xml", sentAs: "Bucket", type: "array", wrapper: "Buckets", items: { type: "object", location: "xml", sentAs: "Bucket", parameters: { Name: { sentAs: "Name" }, CreationDate: { sentAs: "CreationDate" }, Location: { sentAs: "Location" }, ClusterType: { sentAs: "ClusterType" } } } }, Owner: { type: "object", location: "xml", sentAs: "Owner", parameters: { ID: { sentAs: "ID" }, DisplayName: { sentAs: "DisplayName" } } } } }, ListObjects: { httpMethod: "GET", parameters: { Bucket: { required: !0, location: "uri" }, Prefix: { location: "urlPath", sentAs: "prefix" }, Marker: { location: "urlPath", sentAs: "marker" }, MaxKeys: { type: "number", location: "urlPath", sentAs: "max-keys" }, Delimiter: { location: "urlPath", sentAs: "delimiter" }, EncodingType: { location: "urlPath", sentAs: "encoding-type" } } }, ListObjectsOutput: { data: { type: "xml", xmlRoot: "ListBucketResult" }, parameters: { Location: { location: "header", sentAs: "bucket-location", withPrefix: !0 }, Bucket: { location: "xml", sentAs: "Name" }, Delimiter: { decode: !0, location: "xml", sentAs: "Delimiter" }, IsTruncated: { location: "xml", sentAs: "IsTruncated" }, Prefix: { decode: !0, location: "xml", sentAs: "Prefix" }, Marker: { decode: !0, location: "xml", sentAs: "Marker" }, NextMarker: { decode: !0, location: "xml", sentAs: "NextMarker" }, MaxKeys: { location: "xml", sentAs: "MaxKeys" }, EncodingType: { location: "xml", sentAs: "EncodingType" }, Contents: { type: "array", location: "xml", sentAs: "Contents", items: { type: "object", parameters: { Key: { decode: !0, sentAs: "Key" }, LastModified: { sentAs: "LastModified" }, ETag: { sentAs: "ETag" }, Size: { sentAs: "Size" }, Type: { sentAs: "Type" }, StorageClass: { sentAs: "StorageClass" }, Owner: cn } } }, CommonPrefixes: on } }, ListVersions: { httpMethod: "GET", urlPath: "versions", parameters: { Bucket: { required: !0, location: "uri" }, Prefix: { location: "urlPath", sentAs: "prefix" }, KeyMarker: { location: "urlPath", sentAs: "key-marker" }, MaxKeys: { type: "number", location: "urlPath", sentAs: "max-keys" }, Delimiter: { location: "urlPath", sentAs: "delimiter" }, VersionIdMarker: { location: "urlPath", sentAs: "version-id-marker" }, EncodingType: { location: "urlPath", sentAs: "encoding-type" } } }, ListVersionsOutput: { data: { type: "xml", xmlRoot: "ListVersionsResult" }, parameters: { EncodingType: { location: "xml", sentAs: "EncodingType" }, Location: { location: "header", sentAs: "bucket-location", withPrefix: !0 }, Bucket: { location: "xml", sentAs: "Name" }, Prefix: { decode: !0, location: "xml", sentAs: "Prefix" }, Delimiter: { decode: !0, location: "xml", sentAs: "Delimiter" }, KeyMarker: { decode: !0, location: "xml", sentAs: "KeyMarker" }, VersionIdMarker: { location: "xml", sentAs: "VersionIdMarker" }, NextKeyMarker: { decode: !0, location: "xml", sentAs: "NextKeyMarker" }, NextVersionIdMarker: { location: "xml", sentAs: "NextVersionIdMarker" }, MaxKeys: { location: "xml", sentAs: "MaxKeys" }, IsTruncated: { location: "xml", sentAs: "IsTruncated" }, Versions: { type: "array", location: "xml", sentAs: "Version", items: { type: "object", parameters: { Key: { decode: !0, sentAs: "Key" }, VersionId: { sentAs: "VersionId" }, IsLatest: { sentAs: "IsLatest" }, LastModified: { sentAs: "LastModified" }, ETag: { sentAs: "ETag" }, Size: { sentAs: "Size" }, Type: { sentAs: "Type" }, Owner: cn, StorageClass: { sentAs: "StorageClass" } } } }, DeleteMarkers: { type: "array", location: "xml", sentAs: "DeleteMarker", items: { type: "object", parameters: { Key: { decode: !0, sentAs: "Key" }, VersionId: { sentAs: "VersionId" }, IsLatest: { sentAs: "IsLatest" }, LastModified: { sentAs: "LastModified" }, Owner: cn } } }, CommonPrefixes: on } }, PutBackToSource: { httpMethod: "PUT", data: { xmlRoot: "BackToSourceConfiguration" }, urlPath: "backtosource", parameters: { Bucket: { required: !0, location: "uri" }, BackToSourceRules: Ot, ContentMD5: { location: "header", sentAs: "Content-MD5" } } }, DeleteBackToSource: { httpMethod: "DELETE", urlPath: "backtosource", parameters: { Bucket: { required: !0, location: "uri" } } }, GetBackToSource: { httpMethod: "GET", urlPath: "backtosource", parameters: { Bucket: { required: !0, location: "uri" } } }, GetBackToSourceOutput: { data: { type: "xml", xmlRoot: "BackToSourceConfiguration" }, parameters: { BackToSourceRules: Ot } }, GetBucketLocation: { httpMethod: "GET", urlPath: "location", parameters: { Bucket: { required: !0, location: "uri" } } }, GetBucketLocationOutput: { data: { type: "xml" }, parameters: { Location: { location: "xml", sentAs: "Location" } } }, GetBucketStorageInfo: { httpMethod: "GET", urlPath: "storageinfo", parameters: { Bucket: { required: !0, location: "uri" } } }, GetBucketStorageInfoOutput: { data: { type: "xml", xmlRoot: "GetBucketStorageInfoResult" }, parameters: { Size: { location: "xml", sentAs: "Size" }, ObjectNumber: { location: "xml", sentAs: "ObjectNumber" } } }, SetBucketQuota: { httpMethod: "PUT", urlPath: "quota", data: { xmlRoot: "Quota" }, parameters: { Bucket: { required: !0, location: "uri" }, StorageQuota: { required: !0, location: "xml", sentAs: "StorageQuota" } } }, GetBucketQuota: { httpMethod: "GET", urlPath: "quota", parameters: { Bucket: { required: !0, location: "uri" } } }, GetBucketQuotaOutput: { data: { type: "xml", xmlRoot: "Quota" }, parameters: { StorageQuota: { location: "xml", sentAs: "StorageQuota" } } }, SetBucketAcl: { httpMethod: "PUT", urlPath: "acl", data: { xmlRoot: "AccessControlPolicy" }, parameters: { Bucket: { required: !0, location: "uri" }, ACL: { location: "header", sentAs: "acl", withPrefix: !0, type: "adapter" }, Owner: cn, Grants: Yt } }, GetBucketInventory: { httpMethod: "GET", urlPath: "inventory", parameters: { Bucket: { required: !0, location: "uri" } } }, GetBucketInventoryOutput: { data: { type: "xml", xmlRoot: "ListInventoryConfiguration" }, parameters: { Rules: { type: "array", location: "xml", sentAs: "InventoryConfiguration", items: { type: "object", parameters: { Id: { sentAs: "Id" }, IsEnabled: { sentAs: "IsEnabled" }, Filter: { type: "object", sentAs: "Filter", parameters: { Prefix: { sentAs: "Prefix" } } }, Destination: { type: "object", sentAs: "Destination", parameters: { Format: { sentAs: "Format" }, Bucket: { sentAs: "Bucket" }, Prefix: { sentAs: "Prefix" } } }, Schedule: { type: "object", sentAs: "Schedule", parameters: { Frequency: { sentAs: "Frequency" } } }, IncludedObjectVersions: { sentAs: "IncludedObjectVersions" }, OptionalFields: { type: "object", location: "xml", sentAs: "OptionalFields", parameters: { Field: { type: "array", sentAs: "Field", items: { type: "string" } } } }, LastExportTime: { sentAs: "LastExportTime" } } } } } }, SetBucketInventory: { httpMethod: "PUT", urlPath: "inventory", parameters: { Bucket: { required: !0, location: "uri" }, Id: { location: "urlPath", sentAs: "id" }, InventoryConfiguration: Kr } }, SetBucketInventoryOutput: { data: { type: "xml", xmlRoot: "InventoryConfiguration" }, parameters: { InventoryConfiguration: Kr } }, DeleteBucketInventory: { httpMethod: "DELETE", urlPath: "inventory", parameters: { Bucket: { required: !0, location: "uri" }, Id: { location: "urlPath", sentAs: "id" } } }, DeleteBucketInventoryOutput: { data: { type: "xml", xmlRoot: "InventoryConfiguration" }, parameters: { InventoryConfiguration: Kr } }, GetBucketAcl: { httpMethod: "GET", urlPath: "acl", parameters: { Bucket: { required: !0, location: "uri" } } }, GetBucketAclOutput: { data: { type: "xml", xmlRoot: "AccessControlPolicy" }, parameters: { Owner: cn, Grants: Yt } }, SetBucketLoggingConfiguration: { httpMethod: "PUT", urlPath: "logging", data: { xmlRoot: "BucketLoggingStatus", xmlAllowEmpty: !0 }, parameters: { Bucket: { required: !0, location: "uri" }, Agency: { location: "xml", sentAs: "Agency" }, LoggingEnabled: On } }, GetBucketLoggingConfiguration: { httpMethod: "GET", urlPath: "logging", parameters: { Bucket: { required: !0, location: "uri" } } }, GetBucketLoggingConfigurationOutput: { data: { type: "xml", xmlRoot: "BucketLoggingStatus" }, parameters: { Agency: { location: "xml", sentAs: "Agency" }, LoggingEnabled: On } }, SetSFSAcl: { httpMethod: "PUT", urlPath: "sfsacl", parameters: { Bucket: { required: !0, location: "uri" }, Policy: { required: !0, location: "body" } } }, GetSFSAcl: { httpMethod: "GET", urlPath: "sfsacl", parameters: { Bucket: { required: !0, location: "uri" } } }, GetSFSAclOutput: { data: { type: "body" }, parameters: { Policy: { location: "body" } } }, DeleteSFSAcl: { httpMethod: "DELETE", urlPath: "sfsacl", parameters: { Bucket: { required: !0, location: "uri" } } }, SetBucketPolicy: { httpMethod: "PUT", urlPath: "policy", parameters: { Bucket: { required: !0, location: "uri" }, Policy: { required: !0, location: "body" } } }, GetBucketPolicy: { httpMethod: "GET", urlPath: "policy", parameters: { Bucket: { required: !0, location: "uri" } } }, GetBucketPolicyOutput: { data: { type: "body" }, parameters: { Policy: { location: "body" } } }, DeleteBucketPolicy: { httpMethod: "DELETE", urlPath: "policy", parameters: { Bucket: { required: !0, location: "uri" } } }, SetBucketDisPolicy: { httpMethod: "PUT", urlPath: "disPolicy", parameters: { Bucket: { required: !0, location: "uri" }, ApiPath: { location: "uri" }, Rules: { required: !0, location: "body" } } }, GetBucketDisPolicy: { httpMethod: "GET", urlPath: "disPolicy", parameters: { Bucket: { required: !0, location: "uri" }, ApiPath: { location: "uri" }, ContentType: { location: "header", sentAs: "Content-Type" } } }, GetBucketDisPolicyOutput: { data: { type: "body" }, parameters: { Rules: { location: "body" } } }, DeleteBucketDisPolicy: { httpMethod: "DELETE", urlPath: "disPolicy", parameters: { Bucket: { required: !0, location: "uri" }, ApiPath: { location: "uri" } } }, SetBucketLifecycleConfiguration: { httpMethod: "PUT", urlPath: "lifecycle", data: { xmlRoot: "LifecycleConfiguration", md5: !0 }, parameters: { Bucket: { required: !0, location: "uri" }, Rules: zo } }, GetBucketLifecycleConfiguration: { httpMethod: "GET", urlPath: "lifecycle", parameters: { Bucket: { required: !0, location: "uri" } } }, GetBucketLifecycleConfigurationOutput: { data: { type: "xml", xmlRoot: "LifecycleConfiguration" }, parameters: { Rules: zo } }, DeleteBucketLifecycleConfiguration: { httpMethod: "DELETE", urlPath: "lifecycle", parameters: { Bucket: { required: !0, location: "uri" } } }, SetBucketWebsiteConfiguration: { httpMethod: "PUT", urlPath: "website", data: { xmlRoot: "WebsiteConfiguration" }, parameters: { Bucket: { required: !0, location: "uri" }, RedirectAllRequestsTo: co, IndexDocument: Ir, ErrorDocument: ao, RoutingRules: En } }, GetBucketWebsiteConfiguration: { httpMethod: "GET", urlPath: "website", parameters: { Bucket: { required: !0, location: "uri" } } }, GetBucketWebsiteConfigurationOutput: { data: { type: "xml", xmlRoot: "WebsiteConfiguration" }, parameters: { RedirectAllRequestsTo: co, IndexDocument: Ir, ErrorDocument: ao, RoutingRules: En } }, DeleteBucketWebsiteConfiguration: { httpMethod: "DELETE", urlPath: "website", parameters: { Bucket: { required: !0, location: "uri" } } }, SetBucketVersioningConfiguration: { httpMethod: "PUT", urlPath: "versioning", data: { xmlRoot: "VersioningConfiguration" }, parameters: { Bucket: { required: !0, location: "uri" }, VersionStatus: { required: !0, location: "xml", sentAs: "Status" } } }, GetBucketVersioningConfiguration: { httpMethod: "GET", urlPath: "versioning", parameters: { Bucket: { required: !0, location: "uri" } } }, GetBucketVersioningConfigurationOutput: { data: { type: "xml", xmlRoot: "VersioningConfiguration" }, parameters: { VersionStatus: { location: "xml", sentAs: "Status" } } }, SetBucketCors: { httpMethod: "PUT", urlPath: "cors", data: { xmlRoot: "CORSConfiguration", md5: !0 }, parameters: { Bucket: { required: !0, location: "uri" }, CorsRules: go } }, GetBucketCors: { httpMethod: "GET", urlPath: "cors", parameters: { Bucket: { required: !0, location: "uri" } } }, GetBucketCorsOutput: { data: { type: "xml", xmlRoot: "CORSConfiguration" }, parameters: { CorsRules: go } }, DeleteBucketCors: { httpMethod: "DELETE", urlPath: "cors", parameters: { Bucket: { required: !0, location: "uri" } } }, SetBucketNotification: { httpMethod: "PUT", urlPath: "notification", data: { xmlRoot: "NotificationConfiguration", xmlAllowEmpty: !0 }, parameters: { Bucket: { required: !0, location: "uri" }, TopicConfigurations: Po, FunctionGraphConfigurations: To, FunctionStageConfigurations: cr } }, GetBucketNotification: { httpMethod: "GET", urlPath: "notification", parameters: { Bucket: { required: !0, location: "uri" } } }, GetBucketNotificationOutput: { data: { type: "xml", xmlRoot: "NotificationConfiguration" }, parameters: { RequestId: { location: "header", sentAs: "x-obs-request-id" }, TopicConfigurations: Po, FunctionGraphConfigurations: To, FunctionStageConfigurations: cr } }, SetBucketTagging: { httpMethod: "PUT", urlPath: "tagging", data: { xmlRoot: "Tagging", md5: !0 }, parameters: { Bucket: { required: !0, location: "uri" }, Tags: No } }, DeleteBucketTagging: { httpMethod: "DELETE", urlPath: "tagging", parameters: { Bucket: { required: !0, location: "uri" } } }, GetBucketTagging: { httpMethod: "GET", urlPath: "tagging", parameters: { Bucket: { required: !0, location: "uri" } } }, GetBucketTaggingOutput: { data: { type: "xml", xmlRoot: "Tagging" }, parameters: { Tags: No } }, SetBucketStoragePolicy: { httpMethod: "PUT", urlPath: "storageClass", parameters: { Bucket: { required: !0, location: "uri" }, StorageClass: { required: !0, location: "xml", type: "adapter", sentAs: "StorageClass" } } }, GetBucketStoragePolicy: { httpMethod: "GET", urlPath: "storageClass", parameters: { Bucket: { required: !0, location: "uri" } } }, GetBucketStoragePolicyOutput: { data: { type: "xml" }, parameters: { StorageClass: { location: "xml", type: "string", sentAs: "StorageClass" } } }, SetBucketReplication: { httpMethod: "PUT", urlPath: "replication", data: { xmlRoot: "ReplicationConfiguration", md5: !0 }, parameters: { Bucket: { required: !0, location: "uri" }, Agency: { location: "xml", sentAs: "Agency" }, Rules: jr } }, GetBucketReplication: { httpMethod: "GET", urlPath: "replication", parameters: { Bucket: { required: !0, location: "uri" } } }, GetBucketReplicationOutput: { data: { type: "xml", xmlRoot: "ReplicationConfiguration" }, parameters: { Agency: { location: "xml", sentAs: "Agency" }, Rules: jr } }, DeleteBucketReplication: { httpMethod: "DELETE", urlPath: "replication", parameters: { Bucket: { required: !0, location: "uri" } } }, PutObject: { httpMethod: "PUT", parameters: { Bucket: { required: !0, location: "uri" }, Key: { required: !0, location: "uri" }, ContentMD5: { location: "header", sentAs: "Content-MD5" }, ContentType: { location: "header", sentAs: "Content-Type" }, Offset: { type: "plain" }, ContentLength: { location: "header", sentAs: "Content-Length", type: "plain" }, ACL: { location: "header", sentAs: "acl", withPrefix: !0, type: "adapter" }, GrantRead: { location: "header", sentAs: "grant-read", withPrefix: !0 }, GrantReadAcp: { location: "header", sentAs: "grant-read-acp", withPrefix: !0 }, GrantWriteAcp: { location: "header", sentAs: "grant-write-acp", withPrefix: !0 }, GrantFullControl: { location: "header", sentAs: "grant-full-control", withPrefix: !0 }, StorageClass: { location: "header", sentAs: "storage-class", withPrefix: !0, type: "adapter" }, Metadata: { type: "object", location: "header", sentAs: "meta-", withPrefix: !0 }, CacheControl: { location: "header", sentAs: "Cache-Control" }, ContentDisposition: { location: "header", sentAs: "Content-Disposition", encodingSafe: ' ;/?:@&=+$,"' }, ContentLanguage: { location: "header", sentAs: "Content-Language" }, ContentEncoding: { location: "header", sentAs: "Content-Encoding" }, WebsiteRedirectLocation: { location: "header", sentAs: "website-redirect-location", withPrefix: !0 }, Expires: { location: "header", sentAs: "expires", type: "number", withPrefix: !0 }, SuccessActionRedirect: { location: "header", sentAs: "success-action-redirect" }, SseKms: { location: "header", sentAs: "server-side-encryption", withPrefix: !0, type: "adapter" }, SseKmsKey: { location: "header", sentAs: "server-side-encryption-kms-key-id", withPrefix: !0 }, SseKmsProjectId: { location: "header", sentAs: "sse-kms-key-project-id", withPrefix: !0 }, SseC: { location: "header", sentAs: "server-side-encryption-customer-algorithm", withPrefix: !0 }, SseCKey: { location: "header", sentAs: "server-side-encryption-customer-key", type: "password", withPrefix: !0 }, Body: { location: "body" }, SourceFile: { type: "srcFile" }, ProgressCallback: { type: "plain" } } }, PutObjectOutput: { parameters: { ETag: { location: "header", sentAs: "etag" }, VersionId: { location: "header", sentAs: "version-id", withPrefix: !0 }, StorageClass: { location: "header", sentAs: "storage-class", withPrefix: !0 }, SseKms: { location: "header", sentAs: "server-side-encryption", withPrefix: !0 }, SseKmsKey: { location: "header", sentAs: "server-side-encryption-kms-key-id", withPrefix: !0 }, SseKmsProjectId: { location: "header", sentAs: "sse-kms-key-project-id", withPrefix: !0 }, SseC: { location: "header", sentAs: "server-side-encryption-customer-algorithm", withPrefix: !0 }, SseCKeyMd5: { location: "header", sentAs: "server-side-encryption-customer-key-MD5", withPrefix: !0 } } }, AppendObject: { httpMethod: "POST", urlPath: "append", parameters: { Bucket: { required: !0, location: "uri" }, Key: { required: !0, location: "uri" }, Position: { location: "urlPath", sentAs: "position", type: "number" }, ContentMD5: { location: "header", sentAs: "Content-MD5" }, ContentType: { location: "header", sentAs: "Content-Type" }, Offset: { type: "plain" }, ContentLength: { location: "header", sentAs: "Content-Length", type: "plain" }, ACL: { location: "header", sentAs: "acl", withPrefix: !0, type: "adapter" }, GrantRead: { location: "header", sentAs: "grant-read", withPrefix: !0 }, GrantReadAcp: { location: "header", sentAs: "grant-read-acp", withPrefix: !0 }, GrantWriteAcp: { location: "header", sentAs: "grant-write-acp", withPrefix: !0 }, GrantFullControl: { location: "header", sentAs: "grant-full-control", withPrefix: !0 }, StorageClass: { location: "header", sentAs: "storage-class", withPrefix: !0, type: "adapter" }, Metadata: { type: "object", location: "header", sentAs: "meta-", withPrefix: !0 }, WebsiteRedirectLocation: { location: "header", sentAs: "website-redirect-location", withPrefix: !0 }, Expires: { location: "header", sentAs: "expires", type: "number", withPrefix: !0 }, SseKms: { location: "header", sentAs: "server-side-encryption", withPrefix: !0, type: "adapter" }, SseKmsKey: { location: "header", sentAs: "server-side-encryption-kms-key-id", withPrefix: !0 }, SseC: { location: "header", sentAs: "server-side-encryption-customer-algorithm", withPrefix: !0 }, SseCKey: { location: "header", sentAs: "server-side-encryption-customer-key", type: "password", withPrefix: !0 }, Body: { location: "body" }, SourceFile: { type: "srcFile" }, ProgressCallback: { type: "plain" } } }, AppendObjectOutput: { parameters: { ETag: { location: "header", sentAs: "etag" }, NextPosition: { location: "header", sentAs: "next-append-position", withPrefix: !0 }, StorageClass: { location: "header", sentAs: "storage-class", withPrefix: !0 }, SseKms: { location: "header", sentAs: "server-side-encryption", withPrefix: !0 }, SseKmsKey: { location: "header", sentAs: "server-side-encryption-kms-key-id", withPrefix: !0 }, SseC: { location: "header", sentAs: "server-side-encryption-customer-algorithm", withPrefix: !0 }, SseCKeyMd5: { location: "header", sentAs: "server-side-encryption-customer-key-MD5", withPrefix: !0 } } }, GetObject: { httpMethod: "GET", parameters: { Bucket: { required: !0, location: "uri" }, Key: { required: !0, location: "uri" }, ResponseCacheControl: { location: "urlPath", sentAs: "response-cache-control" }, ResponseContentDisposition: { location: "urlPath", sentAs: "response-content-disposition" }, ResponseContentEncoding: { location: "urlPath", sentAs: "response-content-encoding" }, ResponseContentLanguage: { location: "urlPath", sentAs: "response-content-language" }, ResponseContentType: { location: "urlPath", sentAs: "response-content-type" }, ResponseExpires: { location: "urlPath", sentAs: "response-expires" }, VersionId: { location: "urlPath", sentAs: "versionId" }, ImageProcess: { location: "urlPath", sentAs: "x-image-process" }, IfMatch: { location: "header", sentAs: "If-Match" }, IfModifiedSince: { location: "header", sentAs: "If-Modified-Since" }, IfNoneMatch: { location: "header", sentAs: "If-None-Match" }, IfUnmodifiedSince: { location: "header", sentAs: "If-Unmodified-Since" }, Range: { location: "header", sentAs: "Range" }, Origin: { location: "header", sentAs: "Origin" }, RequestHeader: { location: "header", sentAs: "Access-Control-Request-Headers" }, SaveByType: { type: "dstFile" }, SseC: { location: "header", sentAs: "server-side-encryption-customer-algorithm", withPrefix: !0 }, SseCKey: { location: "header", sentAs: "server-side-encryption-customer-key", type: "password", withPrefix: !0 }, ProgressCallback: { type: "plain" } } }, GetObjectOutput: { data: { type: "body" }, parameters: { Content: { location: "body" }, Expiration: { location: "header", sentAs: "expiration", withPrefix: !0 }, ETag: { location: "header", sentAs: "etag" }, CacheControl: { location: "header", sentAs: "Cache-Control" }, ContentDisposition: { location: "header", sentAs: "Content-Disposition" }, ContentEncoding: { location: "header", sentAs: "Content-Encoding" }, ContentLanguage: { location: "header", sentAs: "Content-Language" }, ContentType: { location: "header", sentAs: "Content-Type" }, Expires: { location: "header", sentAs: "Expires" }, VersionId: { location: "header", sentAs: "version-id", withPrefix: !0 }, ContentLength: { location: "header", sentAs: "Content-Length" }, DeleteMarker: { location: "header", sentAs: "delete-marker", withPrefix: !0 }, LastModified: { location: "header", sentAs: "Last-Modified" }, WebsiteRedirectLocation: { location: "header", sentAs: "website-redirect-location", withPrefix: !0 }, StorageClass: { location: "header", sentAs: "storage-class", withPrefix: !0 }, Restore: { location: "header", sentAs: "restore", withPrefix: !0 }, AllowOrigin: { location: "header", sentAs: "access-control-allow-origin" }, MaxAgeSeconds: { location: "header", sentAs: "access-control-max-age" }, ExposeHeader: { location: "header", sentAs: "access-control-expose-headers" }, AllowMethod: { location: "header", sentAs: "access-control-allow-methods" }, AllowHeader: { location: "header", sentAs: "access-control-allow-headers" }, SseKms: { location: "header", sentAs: "server-side-encryption", withPrefix: !0 }, SseKmsKey: { location: "header", sentAs: "server-side-encryption-kms-key-id", withPrefix: !0 }, SseC: { location: "header", sentAs: "server-side-encryption-customer-algorithm", withPrefix: !0 }, SseCKeyMd5: { location: "header", sentAs: "server-side-encryption-customer-key-MD5", withPrefix: !0 }, Metadata: { location: "header", type: "object", sentAs: "meta-", withPrefix: !0 } } }, CopyObject: { httpMethod: "PUT", parameters: { Bucket: { required: !0, location: "uri" }, Key: { required: !0, location: "uri" }, ACL: { location: "header", sentAs: "acl", withPrefix: !0, type: "adapter" }, GrantRead: { location: "header", sentAs: "grant-read", withPrefix: !0 }, GrantReadAcp: { location: "header", sentAs: "grant-read-acp", withPrefix: !0 }, GrantWriteAcp: { location: "header", sentAs: "grant-write-acp", withPrefix: !0 }, GrantFullControl: { location: "header", sentAs: "grant-full-control", withPrefix: !0 }, StorageClass: { location: "header", sentAs: "storage-class", withPrefix: !0, type: "adapter" }, CopySource: { required: !0, location: "header", sentAs: "copy-source", withPrefix: !0, skipEncoding: !0 }, CopySourceIfMatch: { location: "header", sentAs: "copy-source-if-match", withPrefix: !0 }, CopySourceIfModifiedSince: { location: "header", sentAs: "copy-source-if-modified-since", withPrefix: !0 }, CopySourceIfNoneMatch: { location: "header", sentAs: "copy-source-if-none-match", withPrefix: !0 }, CopySourceIfUnmodifiedSince: { location: "header", sentAs: "copy-source-if-unmodified-since", withPrefix: !0 }, ContentType: { location: "header", sentAs: "Content-Type" }, ContentEncoding: { location: "header", sentAs: "content-encoding" }, ContentLanguage: { location: "header", sentAs: "content-language" }, ContentDisposition: { location: "header", sentAs: "content-disposition" }, CacheControl: { location: "header", sentAs: "cache-control" }, Expires: { location: "header", sentAs: "expires" }, Metadata: { type: "object", location: "header", sentAs: "meta-", withPrefix: !0 }, MetadataDirective: { location: "header", sentAs: "metadata-directive", withPrefix: !0 }, WebsiteRedirectLocation: { location: "header", sentAs: "website-redirect-location", withPrefix: !0 }, SuccessActionRedirect: { location: "header", sentAs: "success-action-redirect" }, SseKms: { location: "header", sentAs: "server-side-encryption", withPrefix: !0, type: "adapter" }, SseKmsKey: { location: "header", sentAs: "server-side-encryption-kms-key-id", withPrefix: !0 }, SseC: { location: "header", sentAs: "server-side-encryption-customer-algorithm", withPrefix: !0 }, SseCKey: { location: "header", sentAs: "server-side-encryption-customer-key", type: "password", withPrefix: !0 }, CopySourceSseC: { location: "header", sentAs: "copy-source-server-side-encryption-customer-algorithm", withPrefix: !0 }, CopySourceSseCKey: { location: "header", sentAs: "copy-source-server-side-encryption-customer-key", type: "password", withPrefix: !0 } } }, CopyObjectOutput: { data: { type: "xml", xmlRoot: "CopyObjectResult" }, parameters: { VersionId: { location: "header", sentAs: "version-id", withPrefix: !0 }, CopySourceVersionId: { location: "header", sentAs: "copy-source-version-id", withPrefix: !0 }, ETag: { location: "xml", sentAs: "ETag" }, LastModified: { location: "xml", sentAs: "LastModified" }, SseKms: { location: "header", sentAs: "server-side-encryption", withPrefix: !0 }, SseKmsKey: { location: "header", sentAs: "server-side-encryption-kms-key-id", withPrefix: !0 }, SseC: { location: "header", sentAs: "server-side-encryption-customer-algorithm", withPrefix: !0 }, SseCKeyMd5: { location: "header", sentAs: "server-side-encryption-customer-key-MD5", withPrefix: !0 } } }, RestoreObject: { httpMethod: "POST", urlPath: "restore", data: { xmlRoot: "RestoreRequest", md5: !0 }, parameters: { Bucket: { required: !0, location: "uri" }, Key: { required: !0, location: "uri" }, VersionId: { location: "urlPath", sentAs: "versionId" }, Days: { location: "xml", sentAs: "Days" }, Tier: { wrapper: "RestoreJob", location: "xml", sentAs: "Tier" } } }, GetObjectMetadata: { httpMethod: "HEAD", parameters: { Bucket: { required: !0, location: "uri" }, Key: { required: !0, location: "uri" }, VersionId: { location: "urlPath", sentAs: "versionId" }, Origin: { location: "header", sentAs: "Origin" }, RequestHeader: { location: "header", sentAs: "Access-Control-Request-Headers" }, SseC: { location: "header", sentAs: "server-side-encryption-customer-algorithm", withPrefix: !0 }, SseCKey: { location: "header", sentAs: "server-side-encryption-customer-key", type: "password", withPrefix: !0 } } }, GetObjectMetadataOutput: { parameters: { Expiration: { location: "header", sentAs: "expiration", withPrefix: !0 }, LastModified: { location: "header", sentAs: "Last-Modified" }, ContentLength: { location: "header", sentAs: "Content-Length" }, ContentType: { location: "header", sentAs: "Content-Type" }, ETag: { location: "header", sentAs: "etag" }, VersionId: { location: "header", sentAs: "version-id", withPrefix: !0 }, WebsiteRedirectLocation: { location: "header", sentAs: "website-redirect-location", withPrefix: !0 }, StorageClass: { location: "header", sentAs: "storage-class", withPrefix: !0 }, Restore: { location: "header", sentAs: "restore", withPrefix: !0 }, ObjectType: { location: "header", sentAs: "x-obs-object-type" }, NextPosition: { location: "header", sentAs: "x-obs-next-append-position" }, AllowOrigin: { location: "header", sentAs: "access-control-allow-origin" }, MaxAgeSeconds: { location: "header", sentAs: "access-control-max-age" }, ExposeHeader: { location: "header", sentAs: "access-control-expose-headers" }, AllowMethod: { location: "header", sentAs: "access-control-allow-methods" }, AllowHeader: { location: "header", sentAs: "access-control-allow-headers" }, SseKms: { location: "header", sentAs: "server-side-encryption", withPrefix: !0 }, SseKmsKey: { location: "header", sentAs: "x-obs-server-side-encryption-kms-key-id" }, SseKmsProjectId: { location: "header", sentAs: "sse-kms-key-project-id", withPrefix: !0 }, SseC: { location: "header", sentAs: "server-side-encryption-customer-algorithm", withPrefix: !0 }, SseCKeyMd5: { location: "header", sentAs: "server-side-encryption-customer-key-MD5", withPrefix: !0 }, Metadata: { location: "header", type: "object", sentAs: "meta-", withPrefix: !0 }, ContentLanguage: { location: "header", sentAs: "Content-Language" }, ContentEncoding: { location: "header", sentAs: "Content-Encoding" }, CacheControl: { location: "header", sentAs: "Cache-Control" }, ContentDisposition: { location: "header", sentAs: "Content-Disposition" }, Expires: { location: "header", sentAs: "Expires" }, ReplicationStatus: { location: "header", sentAs: "replication-status", withPrefix: !0 } } }, SetObjectMetadata: { httpMethod: "PUT", urlPath: "metadata", parameters: { Bucket: { required: !0, location: "uri" }, Key: { required: !0, location: "uri" }, VersionId: { location: "urlPath", sentAs: "versionId" }, Origin: { location: "header", sentAs: "Origin" }, RequestHeader: { location: "header", sentAs: "Access-Control-Request-Headers" }, CacheControl: { location: "header", sentAs: "Cache-Control" }, ContentDisposition: { location: "header", sentAs: "Content-Disposition", encodingSafe: ' ;/?:@&=+$,"' }, ContentLanguage: { location: "header", sentAs: "Content-Language" }, ContentEncoding: { location: "header", sentAs: "Content-Encoding" }, ContentType: { location: "header", sentAs: "Content-Type" }, Expires: { location: "header", sentAs: "Expires" }, Metadata: { shape: "Sy", location: "header", type: "object", sentAs: "meta-", withPrefix: !0 }, MetadataDirective: { location: "header", sentAs: "metadata-directive", withPrefix: !0 }, StorageClass: { location: "header", sentAs: "storage-class", withPrefix: !0 }, WebsiteRedirectLocation: { location: "header", sentAs: "website-redirect-location", withPrefix: !0 } } }, SetObjectMetadataOutput: { parameters: { Expires: { location: "header", sentAs: "Expires" }, ContentLength: { location: "header", sentAs: "Content-Length" }, ContentType: { location: "header", sentAs: "Content-Type" }, ContentLanguage: { location: "header", sentAs: "Content-Language" }, CacheControl: { location: "header", sentAs: "Cache-Control" }, ContentDisposition: { location: "header", sentAs: "Content-Disposition" }, WebsiteRedirectLocation: { location: "header", sentAs: "website-redirect-location", withPrefix: !0 }, StorageClass: { location: "header", sentAs: "storage-class", withPrefix: !0, type: "adapter" }, Metadata: { location: "header", type: "object", sentAs: "meta-", withPrefix: !0 } } }, SetObjectAcl: { httpMethod: "PUT", urlPath: "acl", data: { xmlRoot: "AccessControlPolicy" }, parameters: { Bucket: { required: !0, location: "uri" }, Key: { required: !0, location: "uri" }, VersionId: { location: "urlPath", sentAs: "versionId" }, ACL: { location: "header", sentAs: "acl", withPrefix: !0, type: "adapter" }, Delivered: { location: "xml", sentAs: "Delivered" }, Owner: cn, Grants: Yt } }, SetObjectAclOutput: { parameters: { VersionId: { location: "header", sentAs: "version-id", withPrefix: !0 } } }, GetObjectAcl: { httpMethod: "GET", urlPath: "acl", parameters: { Bucket: { required: !0, location: "uri" }, Key: { required: !0, location: "uri" }, VersionId: { location: "urlPath", sentAs: "versionId" } } }, GetObjectAclOutput: { data: { type: "xml", xmlRoot: "AccessControlPolicy" }, parameters: { VersionId: { location: "header", sentAs: "version-id", withPrefix: !0 }, Delivered: { location: "xml", sentAs: "Delivered" }, Owner: cn, Grants: Yt } }, DeleteObject: { httpMethod: "DELETE", parameters: { Bucket: { required: !0, location: "uri" }, Key: { required: !0, location: "uri" }, VersionId: { location: "urlPath", sentAs: "versionId" } } }, DeleteObjectOutput: { parameters: { VersionId: { location: "header", sentAs: "version-id", withPrefix: !0 }, DeleteMarker: { location: "header", sentAs: "delete-marker", withPrefix: !0 } } }, DeleteObjects: { httpMethod: "POST", urlPath: "delete", data: { xmlRoot: "Delete", md5: !0 }, parameters: { Bucket: { required: !0, location: "uri" }, Quiet: { location: "xml", sentAs: "Quiet" }, EncodingType: { location: "xml", sentAs: "EncodingType" }, Objects: { required: !0, type: "array", location: "xml", sentAs: "Object", items: { type: "object", parameters: { Key: { sentAs: "Key" }, VersionId: { sentAs: "VersionId" } } } } } }, DeleteObjectsOutput: { data: { type: "xml", xmlRoot: "DeleteResult" }, EncodingType: { location: "xml", sentAs: "EncodingType" }, parameters: { Deleteds: { type: "array", location: "xml", sentAs: "Deleted", items: { type: "object", parameters: { Key: { decode: !0, sentAs: "Key" }, VersionId: { sentAs: "VersionId" }, DeleteMarker: { sentAs: "DeleteMarker" }, DeleteMarkerVersionId: { sentAs: "DeleteMarkerVersionId" } } } }, Errors: { type: "array", location: "xml", sentAs: "Error", items: { type: "object", parameters: { Key: { sentAs: "Key" }, VersionId: { sentAs: "VersionId" }, Code: { sentAs: "Code" }, Message: { sentAs: "Message" } } } } } }, InitiateMultipartUpload: { httpMethod: "POST", urlPath: "uploads", parameters: { EncodingType: { location: "urlPath", sentAs: "encoding-type" }, Bucket: { required: !0, location: "uri" }, Key: { required: !0, location: "uri" }, ACL: { location: "header", sentAs: "acl", withPrefix: !0, type: "adapter" }, GrantRead: { location: "header", sentAs: "grant-read", withPrefix: !0 }, GrantReadAcp: { location: "header", sentAs: "grant-read-acp", withPrefix: !0 }, GrantWriteAcp: { location: "header", sentAs: "grant-write-acp", withPrefix: !0 }, GrantFullControl: { location: "header", sentAs: "grant-full-control", withPrefix: !0 }, StorageClass: { location: "header", sentAs: "storage-class", withPrefix: !0, type: "adapter" }, Metadata: { type: "object", location: "header", sentAs: "meta-", withPrefix: !0 }, WebsiteRedirectLocation: { location: "header", sentAs: "website-redirect-location", withPrefix: !0 }, Expires: { location: "header", sentAs: "expires", type: "number", withPrefix: !0 }, ContentType: { location: "header", sentAs: "Content-Type" }, SseKms: { location: "header", sentAs: "server-side-encryption", withPrefix: !0, type: "adapter" }, SseKmsKey: { location: "header", sentAs: "server-side-encryption-kms-key-id", withPrefix: !0 }, SseKmsProjectId: { location: "header", sentAs: "sse-kms-key-project-id", withPrefix: !0 }, SseC: { location: "header", sentAs: "server-side-encryption-customer-algorithm", withPrefix: !0 }, SseCKey: { location: "header", sentAs: "server-side-encryption-customer-key", type: "password", withPrefix: !0 } } }, InitiateMultipartUploadOutput: { data: { type: "xml", xmlRoot: "InitiateMultipartUploadResult" }, parameters: { EncodingType: { location: "xml", sentAs: "EncodingType" }, Bucket: { location: "xml", sentAs: "Bucket" }, Key: { location: "xml", sentAs: "Key" }, UploadId: { location: "xml", sentAs: "UploadId" }, SseKms: { location: "header", sentAs: "server-side-encryption", withPrefix: !0 }, SseKmsKey: { location: "header", sentAs: "server-side-encryption-kms-key-id", withPrefix: !0 }, SseKmsProjectId: { location: "header", sentAs: "sse-kms-key-project-id", withPrefix: !0 }, SseC: { location: "header", sentAs: "server-side-encryption-customer-algorithm", withPrefix: !0 }, SseCKeyMd5: { location: "header", sentAs: "server-side-encryption-customer-key-MD5", withPrefix: !0 } } }, ListMultipartUploads: { httpMethod: "GET", urlPath: "uploads", parameters: { Bucket: { required: !0, location: "uri" }, Delimiter: { location: "urlPath", sentAs: "delimiter" }, KeyMarker: { location: "urlPath", sentAs: "key-marker" }, MaxUploads: { type: "number", location: "urlPath", sentAs: "max-uploads" }, Prefix: { location: "urlPath", sentAs: "prefix" }, UploadIdMarker: { location: "urlPath", sentAs: "upload-id-marker" }, EncodingType: { location: "urlPath", sentAs: "encoding-type" } } }, ListMultipartUploadsOutput: { data: { type: "xml", xmlRoot: "ListMultipartUploadsResult" }, parameters: { Bucket: { location: "xml", sentAs: "Bucket" }, KeyMarker: { decode: !0, location: "xml", sentAs: "KeyMarker" }, UploadIdMarker: { location: "xml", sentAs: "UploadIdMarker" }, NextKeyMarker: { decode: !0, location: "xml", sentAs: "NextKeyMarker" }, Prefix: { decode: !0, location: "xml", sentAs: "Prefix" }, Delimiter: { decode: !0, location: "xml", sentAs: "Delimiter" }, NextUploadIdMarker: { location: "xml", sentAs: "NextUploadIdMarker" }, MaxUploads: { location: "xml", sentAs: "MaxUploads" }, IsTruncated: { location: "xml", sentAs: "IsTruncated" }, EncodingType: { location: "xml", sentAs: "EncodingType" }, Uploads: { type: "array", location: "xml", sentAs: "Upload", items: { type: "object", parameters: { UploadId: { sentAs: "UploadId" }, Key: { decode: !0, sentAs: "Key" }, Initiated: { sentAs: "Initiated" }, StorageClass: { sentAs: "StorageClass" }, Owner: cn, Initiator: Zn } } }, CommonPrefixes: on } }, UploadPart: { httpMethod: "PUT", parameters: { Bucket: { required: !0, location: "uri" }, Key: { required: !0, location: "uri" }, PartNumber: { required: !0, type: "number", location: "urlPath", sentAs: "partNumber" }, UploadId: { required: !0, location: "urlPath", sentAs: "uploadId" }, ContentMD5: { location: "header", sentAs: "Content-MD5" }, Body: { location: "body" }, SourceFile: { type: "srcFile" }, Offset: { type: "plain" }, PartSize: { type: "plain" }, SseKms: { location: "header", sentAs: "server-side-encryption", withPrefix: !0 }, SseKmsKey: { location: "header", sentAs: "server-side-encryption-kms-key-id", withPrefix: !0 }, SseKmsProjectId: { location: "header", sentAs: "sse-kms-key-project-id", withPrefix: !0 }, SseC: { location: "header", sentAs: "server-side-encryption-customer-algorithm", withPrefix: !0 }, SseCKey: { location: "header", sentAs: "server-side-encryption-customer-key", type: "password", withPrefix: !0 }, ProgressCallback: { type: "plain" } } }, UploadPartOutput: { parameters: { ETag: { location: "header", sentAs: "etag" }, SseKms: { location: "header", sentAs: "server-side-encryption", withPrefix: !0 }, SseKmsKey: { location: "header", sentAs: "server-side-encryption-kms-key-id", withPrefix: !0 }, SseKmsProjectId: { location: "header", sentAs: "sse-kms-key-project-id", withPrefix: !0 }, SseC: { location: "header", sentAs: "server-side-encryption-customer-algorithm", withPrefix: !0 }, SseCKeyMd5: { location: "header", sentAs: "server-side-encryption-customer-key-MD5", withPrefix: !0 } } }, ListParts: { httpMethod: "GET", parameters: { Bucket: { required: !0, location: "uri" }, Key: { required: !0, location: "uri" }, UploadId: { required: !0, location: "urlPath", sentAs: "uploadId" }, MaxParts: { type: "number", location: "urlPath", sentAs: "max-parts" }, PartNumberMarker: { type: "number", location: "urlPath", sentAs: "part-number-marker" }, EncodingType: { location: "urlPath", sentAs: "encoding-type" } } }, ListPartsOutput: { data: { type: "xml", xmlRoot: "ListPartsResult" }, parameters: { Bucket: { location: "xml", sentAs: "Bucket" }, Key: { decode: !0, location: "xml", sentAs: "Key" }, UploadId: { location: "xml", sentAs: "UploadId" }, PartNumberMarker: { location: "xml", sentAs: "PartNumberMarker" }, NextPartNumberMarker: { location: "xml", sentAs: "NextPartNumberMarker" }, MaxParts: { location: "xml", sentAs: "MaxParts" }, IsTruncated: { location: "xml", sentAs: "IsTruncated" }, StorageClass: { location: "xml", sentAs: "StorageClass" }, EncodingType: { location: "urlPath", sentAs: "EncodingType" }, Initiator: Zn, Owner: cn, Parts: { type: "array", location: "xml", sentAs: "Part", items: { type: "object", parameters: { PartNumber: { sentAs: "PartNumber" }, LastModified: { sentAs: "LastModified" }, ETag: { sentAs: "ETag" }, Size: { sentAs: "Size" } } } } } }, CopyPart: { httpMethod: "PUT", parameters: { Bucket: { required: !0, location: "uri" }, Key: { required: !0, location: "uri" }, PartNumber: { required: !0, location: "urlPath", sentAs: "partNumber", type: "number" }, UploadId: { required: !0, location: "urlPath", sentAs: "uploadId" }, CopySource: { required: !0, location: "header", sentAs: "copy-source", skipEncoding: !0, withPrefix: !0 }, CopySourceRange: { location: "header", sentAs: "copy-source-range", withPrefix: !0 }, SseC: { location: "header", sentAs: "server-side-encryption-customer-algorithm", withPrefix: !0 }, SseCKey: { location: "header", sentAs: "server-side-encryption-customer-key", type: "password", withPrefix: !0 }, CopySourceSseC: { location: "header", sentAs: "copy-source-server-side-encryption-customer-algorithm", withPrefix: !0 }, CopySourceSseCKey: { location: "header", sentAs: "copy-source-server-side-encryption-customer-key", type: "password", withPrefix: !0 } } }, CopyPartOutput: { data: { type: "xml", xmlRoot: "CopyPartResult" }, parameters: { LastModified: { location: "xml", sentAs: "LastModified" }, ETag: { location: "xml", sentAs: "ETag" }, SseKms: { location: "header", sentAs: "server-side-encryption", withPrefix: !0 }, SseKmsKey: { location: "header", sentAs: "server-side-encryption-kms-key-id", withPrefix: !0 }, SseC: { location: "header", sentAs: "server-side-encryption-customer-algorithm", withPrefix: !0 }, SseCKeyMd5: { location: "header", sentAs: "server-side-encryption-customer-key-MD5", withPrefix: !0 } } }, AbortMultipartUpload: { httpMethod: "DELETE", parameters: { Bucket: { required: !0, location: "uri" }, Key: { required: !0, location: "uri" }, UploadId: { required: !0, location: "urlPath", sentAs: "uploadId" } } }, CompleteMultipartUpload: { httpMethod: "POST", data: { xmlRoot: "CompleteMultipartUpload" }, parameters: { Bucket: { required: !0, location: "uri" }, Key: { required: !0, location: "uri" }, UploadId: { required: !0, location: "urlPath", sentAs: "uploadId" }, EncodingType: { location: "urlPath", sentAs: "encoding-type" }, SseKms: { location: "header", sentAs: "server-side-encryption", withPrefix: !0 }, SseKmsKey: { location: "header", sentAs: "server-side-encryption-kms-key-id", withPrefix: !0 }, SseKmsProjectId: { location: "header", sentAs: "sse-kms-key-project-id", withPrefix: !0 }, Parts: { required: !0, type: "array", location: "xml", sentAs: "Part", items: { type: "object", parameters: { PartNumber: { sentAs: "PartNumber" }, ETag: { sentAs: "ETag" } } } }, Callback: { location: "header", sentAs: "callback", withPrefix: !0, type: "callback", parameters: { CallbackUrl: { required: !0 }, CallbackBody: { required: !0 }, CallbackHost: {}, CallbackBodyType: {} } } } }, CompleteMultipartUploadOutput: { data: { type: "xml", xmlRoot: "CompleteMultipartUploadResult" }, parameters: { VersionId: { location: "header", sentAs: "version-id", withPrefix: !0 }, Location: { location: "xml", sentAs: "Location" }, EncodingType: { location: "xml", sentAs: "EncodingType" }, Bucket: { location: "xml", sentAs: "Bucket" }, Key: { decode: !0, location: "xml", sentAs: "Key" }, ETag: { location: "xml", sentAs: "ETag" }, SseKms: { location: "header", sentAs: "server-side-encryption", withPrefix: !0 }, SseKmsKey: { location: "header", sentAs: "server-side-encryption-kms-key-id", withPrefix: !0 }, SseKmsProjectId: { location: "header", sentAs: "sse-kms-key-project-id", withPrefix: !0 }, SseC: { location: "header", sentAs: "server-side-encryption-customer-algorithm", withPrefix: !0 }, SseCKeyMd5: { location: "header", sentAs: "server-side-encryption-customer-key-MD5", withPrefix: !0 } }, CallbackResponse: { location: "body", sentAs: "CallbackResponseBody" } }, OptionsBucket: { httpMethod: "OPTIONS", parameters: { Bucket: { required: !0, location: "uri" }, Origin: { required: !0, location: "header", sentAs: "Origin" }, AccessControlRequestMethods: { required: !0, type: "array", location: "header", sentAs: "Access-Control-Request-Method", items: { type: "string" } }, AccessControlRequestHeaders: { type: "array", location: "header", sentAs: "Access-Control-Request-Headers", items: { type: "string" } } } }, OptionsBucketOutput: { parameters: { AllowOrigin: { location: "header", sentAs: "access-control-allow-origin" }, AllowHeader: { location: "header", sentAs: "access-control-allow-headers" }, AllowMethod: { location: "header", sentAs: "access-control-allow-methods" }, ExposeHeader: { location: "header", sentAs: "access-control-expose-headers" }, MaxAgeSeconds: { location: "header", sentAs: "access-control-max-age" } } }, OptionsObject: { httpMethod: "OPTIONS", parameters: { Bucket: { required: !0, location: "uri" }, Key: { required: !0, location: "uri" }, Origin: { required: !0, location: "header", sentAs: "Origin" }, AccessControlRequestMethods: { required: !0, type: "array", location: "header", sentAs: "Access-Control-Request-Method", items: { type: "string" } }, AccessControlRequestHeaders: { type: "array", location: "header", sentAs: "Access-Control-Request-Headers", items: { type: "string" } } } }, OptionsObjectOutput: { parameters: { AllowOrigin: { location: "header", sentAs: "access-control-allow-origin" }, AllowHeader: { location: "header", sentAs: "access-control-allow-headers" }, AllowMethod: { location: "header", sentAs: "access-control-allow-methods" }, ExposeHeader: { location: "header", sentAs: "access-control-expose-headers" }, MaxAgeSeconds: { location: "header", sentAs: "access-control-max-age" } } }, GetBucketEncryption: { httpMethod: "GET", urlPath: "encryption", parameters: { Bucket: { required: !0, location: "uri" } } }, GetBucketEncryptionOutput: { data: { type: "xml", xmlRoot: "ServerSideEncryptionConfiguration" }, parameters: { Rule: { type: "object", location: "xml", sentAs: "Rule", parameters: { ApplyServerSideEncryptionByDefault: { type: "object", sentAs: "ApplyServerSideEncryptionByDefault", parameters: { SSEAlgorithm: { sentAs: "SSEAlgorithm" }, KMSMasterKeyID: { sentAs: "KMSMasterKeyID" }, ProjectID: { sentAs: "ProjectID" } } } } } } }, SetBucketEncryption: { httpMethod: "PUT", urlPath: "encryption", data: { xmlRoot: "ServerSideEncryptionConfiguration" }, parameters: { Bucket: { required: !0, location: "uri" }, Rule: Yr } }, SetBucketEncryptionOutput: { data: { type: "xml", xmlRoot: "ServerSideEncryptionConfiguration" }, parameters: { Rule: Yr } }, DeleteBucketEncryption: { httpMethod: "DELETE", urlPath: "encryption", parameters: { Bucket: { required: !0, location: "uri" } } }, DeleteBucketEncryptionOutput: { data: { type: "xml", xmlRoot: "ServerSideEncryptionConfiguration" }, parameters: { Rule: Yr } }, GetBucketRequesterPay: { httpMethod: "GET", urlPath: "requestPayment", parameters: { Bucket: { required: !0, location: "uri" } } }, GetBucketRequesterPayOutput: { data: { type: "xml", xmlRoot: "RequestPaymentConfiguration" }, parameters: { Payer: { location: "xml", sentAs: "Payer" } } }, SetBucketRequesterPay: { httpMethod: "PUT", urlPath: "requestPayment", data: { xmlRoot: "RequestPaymentConfiguration" }, parameters: { Bucket: { required: !0, location: "uri" }, Payer: { location: "xml", sentAs: "Payer" } } }, SetBucketRequesterPayOutput: { data: { type: "xml", xmlRoot: "RequestPaymentConfiguration" }, parameters: { Payer: { location: "xml", sentAs: "Payer" } } }, SetMirrorBackToSource: { httpMethod: "PUT", urlPath: "mirrorBackToSource", parameters: { Bucket: { required: !0, location: "uri" }, ApiPath: { location: "uri" }, Rules: { required: !0, location: "body" } } }, SetMirrorBackToSourceOutput: { data: { type: "body" }, parameters: { Rules: { location: "body" } } }, GetMirrorBackToSource: { httpMethod: "GET", urlPath: "mirrorBackToSource", parameters: { Bucket: { required: !0, location: "uri" }, ApiPath: { location: "uri" } } }, GetMirrorBackToSourceOutput: { data: { type: "body" }, parameters: { Rules: { location: "body" } } }, DeleteMirrorBackToSource: { httpMethod: "DELETE", urlPath: "mirrorBackToSource", parameters: { Bucket: { required: !0, location: "uri" }, ApiPath: { location: "uri" } } }, GetBucketDirectColdAccess: { httpMethod: "GET", urlPath: "directcoldaccess", parameters: { Bucket: { required: !0, location: "uri" } } }, GetBucketDirectColdAccessOutput: { data: { type: "xml", xmlRoot: "DirectColdAccessConfiguration" }, parameters: { Status: { location: "xml", sentAs: "Status" } } }, SetBucketDirectColdAccess: { httpMethod: "PUT", urlPath: "directcoldaccess", data: { xmlRoot: "DirectColdAccessConfiguration", md5: !0 }, parameters: { Bucket: { required: !0, location: "uri" }, Status: { required: !0, location: "xml", sentAs: "Status" } } }, SetBucketDirectColdAccessOutput: { data: { type: "xml", xmlRoot: "DirectColdAccessConfiguration" }, parameters: { Status: { location: "xml", sentAs: "Status" } } }, DeleteBucketDirectColdAccess: { httpMethod: "DELETE", urlPath: "directcoldaccess", parameters: { Bucket: { required: !0, location: "uri" } } }, DeleteBucketDirectColdAccessOutput: { data: { type: "xml", xmlRoot: "DirectColdAccessConfiguration" }, parameters: { Status: { location: "xml", sentAs: "Status" } } }, GetBucketCustomDomain: { httpMethod: "GET", urlPath: "customdomain", parameters: { Bucket: { required: !0, location: "uri" } } }, GetBucketCustomDomainOutput: { data: { type: "xml", xmlRoot: "ListBucketCustomDomainsResult" }, parameters: { Domains: { location: "xml", type: "array", sentAs: "Domains", items: { type: "object", parameters: { DomainName: { sentAs: "DomainName" }, Value: { sentAs: "CreateTime" } } } } } }, SetBucketCustomDomain: { httpMethod: "PUT", parameters: { Bucket: { required: !0, location: "uri" }, DomainName: { location: "urlPath", sentAs: "customdomain" } } }, DeleteBucketCustomDomain: { httpMethod: "DELETE", parameters: { Bucket: { required: !0, location: "uri" }, DomainName: { location: "urlPath", sentAs: "customdomain" } } }, GetCDNNotifyConfiguration: { httpMethod: "GET", urlPath: "CDNNotifyConfiguration", parameters: { Bucket: { required: !0, location: "uri" } } }, GetCDNNotifyConfigurationOutput: { data: { type: "xml", xmlRoot: "CDNNotifyConfiguration" }, parameters: { Domain: { location: "xml", type: "array", sentAs: "Domain", items: { type: "object", parameters: { Name: { sentAs: "Name" }, Events: { type: "array", items: { type: "adapter" }, sentAs: "Event" } } } } } }, SetCdnNotifyConfiguration: { httpMethod: "PUT", urlPath: "CDNNotifyConfiguration", data: { xmlRoot: "CDNNotifyConfiguration", xmlAllowEmpty: !0 }, parameters: { Bucket: { required: !0, location: "uri" }, Domain: { location: "xml", sentAs: "Domain", type: "array", items: { type: "object", parameters: { Name: { type: "string", sentAs: "Name" }, Event: { type: "array", items: { type: "adapter" }, sentAs: "Event" } } } } } }, GetQuota: { httpMethod: "GET", urlPath: "quota" }, GetQuotaOutput: { data: { type: "xml", xmlRoot: "MaxBucketNumber" }, parameters: { Size: { location: "xml", sentAs: "Number" } } }, GetWorkflowTrigger: { httpMethod: "GET", urlPath: "obsworkflowtriggerpolicy", parameters: { Bucket: { required: !0, location: "uri" }, ApiPath: { location: "uri" } } }, GetWorkflowTriggerOutput: { data: { type: "body" }, parameters: { rules: { location: "body" } } }, DeleteWorkflowTrigger: { httpMethod: "DELETE", urlPath: "obsworkflowtriggerpolicy", parameters: { Bucket: { required: !0, location: "uri" }, ApiPath: { location: "uri" } } }, CreateWorkflowTrigger: { httpMethod: "PUT", urlPath: "obsworkflowtriggerpolicy", parameters: { Bucket: { required: !0, location: "uri" }, ApiPath: { location: "uri" }, Rule: { required: !0, location: "body" } } }, RestoreFailedWorkflowExecution: { httpMethod: "PUT", parameters: { ApiPath: { location: "uri" }, Other_parameter: { required: !0, location: "uri", sentAs: "execution_name" }, GraphName: { required: !0, location: "urlPath", sentAs: "x-workflow-graph-name" } } }, CreateTemplate: { httpMethod: "POST", parameters: { ApiPath: { location: "uri" }, Template: { required: !0, location: "body" } } }, CreateWorkflow: { httpMethod: "POST", parameters: { ApiPath: { location: "uri" }, Other_parameter: { required: !0, location: "uri", sentAs: "graph_name" }, Workflow_create: { location: "urlPath", sentAs: "x-workflow-create" }, Workflow: { required: !0, location: "body" } } }, DeleteWorkflow: { httpMethod: "DELETE", parameters: { ApiPath: { location: "uri" }, Other_parameter: { location: "uri", sentAs: "graph_name" } } }, UpdateWorkflow: { httpMethod: "PUT", parameters: { ApiPath: { location: "uri" }, Other_parameter: { location: "uri", sentAs: "graph_name" }, Graph_name: { required: !0, location: "body" } } }, GetWorkflowList: { httpMethod: "GET", parameters: { ApiPath: { location: "uri" }, Other_parameter: { location: "uri", sentAs: "graph_name_prefix" }, XObsLimit: { type: "number", location: "urlPath", sentAs: "x-workflow-limit" }, XObsPrefix: { location: "urlPath", sentAs: "x-workflow-prefix" }, XObsStart: { type: "number", location: "urlPath", sentAs: "x-workflow-start" } } }, GetWorkflowListOutput: { data: { type: "body" }, parameters: { workflows: { location: "body" } } }, GetWorkflowTemplateList: { httpMethod: "GET", parameters: { ApiPath: { location: "uri" }, Other_parameter: { location: "uri", sentAs: "template_name_prefix" }, Start: { type: "number", location: "urlPath", sentAs: "x-workflow-start" }, Limit: { type: "number", location: "urlPath", sentAs: "x-workflow-limit" }, "X-workflow-prefix": { location: "urlPath", sentAs: "x-workflow-prefix" } } }, GetWorkflowTemplateListOutput: { data: { type: "body" }, parameters: { templates: { location: "body" } } }, GetWorkflowInstanceList: { httpMethod: "GET", parameters: { ApiPath: { location: "uri" }, Other_parameter: { location: "uri", sentAs: "execution_name_prefix" }, Start: { type: "number", location: "urlPath", sentAs: "x-workflow-start" }, Limit: { type: "number", location: "urlPath", sentAs: "x-workflow-limit" }, Graph_name: { location: "urlPath", sentAs: "x-workflow-graph-name" }, State: { location: "urlPath", sentAs: "x-workflow-execution-state" }, "X-workflow-prefix": { location: "urlPath", sentAs: "x-workflow-prefix" } } }, GetWorkflowInstanceListOutput: { data: { type: "body" }, parameters: { instances: { location: "body" } } }, DeleteTemplate: { httpMethod: "DELETE", parameters: { ApiPath: { location: "uri" }, Other_parameter: { location: "uri", sentAs: "template_name" } } }, GetActionTemplates: { httpMethod: "GET", parameters: { ApiPath: { location: "uri" }, Other_parameter: { location: "uri", sentAs: "template_name_prefix" }, XObsPrefix: { location: "urlPath", sentAs: "x-workflow-prefix" }, XObsCategory: { type: "String", location: "urlPath", sentAs: "x-workflow-category" } } }, GetActionTemplatesOutput: { data: { type: "body" }, parameters: { actions: { location: "body" } } }, GetWorkflowAuthorization: { httpMethod: "GET", parameters: { ApiPath: { location: "uri" } } }, GetWorkflowAuthorizationOutput: { data: { type: "body" }, parameters: { authorization: { location: "body" } } }, OpenWorkflowAuthorization: { httpMethod: "POST", parameters: { ApiPath: { location: "uri" } } }, CreateOnlineDecom: { httpMethod: "PUT", urlPath: "obscompresspolicy", parameters: { Bucket: { required: !0, location: "uri" }, Decom: { required: !0, location: "body" } } }, GetOnlineDecom: { httpMethod: "GET", urlPath: "obscompresspolicy", parameters: { Bucket: { required: !0, location: "uri" } } }, GetOnlineDecomOutput: { data: { type: "body" }, parameters: { Decom: { location: "body" } } }, DeleteOnlineDecom: { httpMethod: "DELETE", urlPath: "obscompresspolicy", parameters: { Bucket: { required: !0, location: "uri" } } }, GetPublicationTemplates: { httpMethod: "GET", parameters: { ApiPath: { location: "uri" }, OtherParameter: { location: "uri", sentAs: "template_name_prefix" }, XObsCategory: { location: "urlPath", sentAs: "x-workflow-category" }, XObsOtatus: { location: "urlPath", sentAs: "x-workflow-status" }, XObsPrefix: { location: "urlPath", sentAs: "x-workflow-prefix" } } }, GetPublicationTemplatesOutput: { data: { type: "body" }, parameters: { PublishedTemplates: { location: "body" } } }, GetPublicationTemplateDetail: { httpMethod: "GET", parameters: { ApiPath: { location: "uri" }, OtherParameter: { location: "uri", sentAs: "template_name" } } }, GetPublicationTemplateDetailOutput: { data: { type: "body" }, parameters: { PublishTemplate: { location: "body" } } }, GetWorkflowAgreements: { httpMethod: "GET", parameters: { ApiPath: { location: "uri" }, XWorkflowType: { required: !0, location: "urlPath", sentAs: "x-workflow-type" } } }, GetWorkflowAgreementsOutput: { data: { type: "body" }, parameters: { authorization: { location: "body" } } }, OpenWorkflowAgreements: { httpMethod: "POST", parameters: { ApiPath: { location: "uri" }, XWorkflowType: { required: !0, location: "urlPath", sentAs: "x-workflow-type" } } }, CreateMyActionTemplate: { httpMethod: "POST", parameters: { ApiPath: { location: "uri" }, OtherParameter: { location: "uri", sentAs: "template_name" }, ActionTemplate: { required: !0, location: "body" } } }, CreateMyActionTemplateOutput: { data: { type: "body" }, parameters: { ActionTemplate: { location: "body" } } }, GetMyActionTemplates: { httpMethod: "GET", parameters: { ApiPath: { location: "uri" }, OtherParameter: { location: "uri", sentAs: "template_name_prefix" }, XObsCategory: { location: "urlPath", sentAs: "x-workflow-category" }, XObsOtatus: { location: "urlPath", sentAs: "x-workflow-status" }, XObsPrefix: { location: "urlPath", sentAs: "x-workflow-prefix" } } }, GetMyActionTemplatesOutput: { data: { type: "body" }, parameters: { ActionTemplates: { location: "body" } } }, GetMyactiontemplateDetail: { httpMethod: "GET", parameters: { ApiPath: { location: "uri" }, OtherParameter: { location: "uri", sentAs: "template_name" } } }, GetMyactiontemplateDetailOutput: { data: { type: "body" }, parameters: { ActionTemplate: { location: "body" } } }, UpdateMyActionTemplate: { httpMethod: "PUT", parameters: { ApiPath: { location: "uri" }, OtherParameter: { location: "uri", sentAs: "template_name" }, ActionTemplate: { required: !0, location: "body" } } }, UpdateMyActionTemplateOutput: { data: { type: "body" }, parameters: { ActionTemplate: { location: "body" } } }, DeleteMyActionTemplate: { httpMethod: "DELETE", parameters: { ApiPath: { location: "uri" }, OtherParameter: { location: "uri", sentAs: "template_name" } } }, ForbidMyActionTemplate: { httpMethod: "DELETE", parameters: { ApiPath: { location: "uri" }, OtherParameter: { location: "uri", sentAs: "template_name" }, XObsForbid: { location: "urlPath", sentAs: "x-workflow-forbid" } } }, UpdatePublicActionTemplate: { httpMethod: "PUT", parameters: { ApiPath: { location: "uri" }, OtherParameter: { location: "uri", sentAs: "template_name" }, PublicAction: { required: !0, location: "body" } } }, GetOmPublicActionTemplates: { httpMethod: "GET", parameters: { ApiPath: { location: "uri" }, OtherParameter: { location: "uri", sentAs: "template_name_prefix" }, XObsCategory: { location: "urlPath", sentAs: "x-workflow-category" }, XObsOtatus: { location: "urlPath", sentAs: "x-workflow-status" }, XObsPrefix: { location: "urlPath", sentAs: "x-workflow-prefix" } } }, GetOmPublicActionTemplatesOutput: { data: { type: "body" }, parameters: { Templates: { location: "body" } } }, SetBucketAlias: { httpMethod: "PUT", urlPath: "obsbucketalias", data: { xmlRoot: "CreateBucketAlias" }, parameters: { Bucket: { required: !0, location: "uri" }, BucketList: { location: "xml", type: "object", sentAs: "BucketList", parameters: { Bucket: { location: "xml", type: "array", items: { parameters: { sentAs: "Bucket" } } } } } } }, GetBucketAlias: { httpMethod: "GET", urlPath: "obsalias", parameters: { Bucket: { required: !0, location: "uri" } } }, GetBucketAliasOutput: { data: { type: "xml", xmlRoot: "AliasList" }, parameters: { BucketAlias: { location: "xml", type: "object", sentAs: "BucketAlias", parameters: { Alias: { sentAs: "Alias" }, BucketList: { sentAs: "Bucket", location: "xml", type: "array", wrapper: "BucketList", items: { type: "string" } } } } } }, DeleteBucketAlias: { httpMethod: "DELETE", urlPath: "obsbucketalias", parameters: { Bucket: { required: !0, location: "uri" } } }, BindBucketAlias: { httpMethod: "PUT", urlPath: "obsalias", data: { xmlRoot: "AliasList" }, parameters: { Bucket: { required: !0, location: "uri" }, Alias: { location: "xml", type: "string", sentAs: "Alias" } } }, BindBucketAliasOutput: { data: { xmlRoot: "AliasList" }, parameters: { Bucket: { required: !0, location: "uri" }, Alias: { location: "xml", type: "string", sentAs: "Alias" } } }, UnbindBucketAlias: { httpMethod: "DELETE", urlPath: "obsalias", parameters: { Bucket: { required: !0, location: "uri" } } }, ListBucketsAlias: { httpMethod: "GET", urlPath: "obsbucketalias" }, ListBucketsAliasOutput: { data: { type: "xml", xmlRoot: "ListBucketAliasResult" }, parameters: { BucketAliasList: { location: "xml", sentAs: "BucketAliasList", type: "object", parameters: { BucketAlias: { location: "xml", type: "array", sentAs: "BucketAlias", items: { type: "object", parameters: { Alias: { sentAs: "Alias" }, CreationDate: { sentAs: "CreationDate" }, BucketList: { location: "xml", type: "object", sentAs: "BucketList", parameters: { Bucket: { location: "xml", type: "array", items: { parameters: { sentAs: "Bucket" } } } } } } } } } }, Owner: { location: "xml", sentAs: "Owner", type: "object", parameters: { ID: { sentAs: "ID" } } } } } }, uo = { type: "object", location: "xml", sentAs: "Owner", parameters: { ID: { sentAs: "ID" }, Name: { sentAs: "DisplayName" } } }, po = { type: "object", location: "xml", sentAs: "Rule", parameters: { ApplyServerSideEncryptionByDefault: { type: "object", sentAs: "ApplyServerSideEncryptionByDefault", parameters: { SSEAlgorithm: { sentAs: "SSEAlgorithm" }, KMSMasterKeyID: { sentAs: "KMSMasterKeyID" }, ProjectID: { sentAs: "ProjectID" } } } } }, xr = { type: "object", location: "xml", sentAs: "InventoryConfiguration", parameters: { Id: { sentAs: "Id" }, IsEnabled: { sentAs: "IsEnabled" }, Filter: { type: "object", sentAs: "Filter", parameters: { Prefix: { sentAs: "Prefix" } } }, Destination: { type: "object", sentAs: "Destination", parameters: { Format: { sentAs: "Format" }, Bucket: { sentAs: "Bucket" }, Prefix: { sentAs: "Prefix" }, Encryption: { type: "object", sentAs: "Encryption", parameters: { "SSE-KMS": { type: "object", sentAs: "SSE-KMS", parameters: { KeyId: { sentAs: "KeyId", type: "adapter" } } } } } } }, Schedule: { type: "object", sentAs: "Schedule", parameters: { Frequency: { sentAs: "Frequency" } } }, IncludedObjectVersions: { sentAs: "IncludedObjectVersions" }, OptionalFields: { type: "object", location: "xml", sentAs: "OptionalFields", parameters: { Field: { type: "array", sentAs: "Field", items: { type: "string" } } } } } }, zr = { type: "object", location: "xml", sentAs: "Initiator", parameters: { ID: { sentAs: "ID" }, Name: { sentAs: "DisplayName" } } }, ur = { sentAs: "BackToSourceRule", required: !0, location: "xml", type: "array", items: { type: "object", parameters: { ID: { sentAs: "ID" }, Condition: { sentAs: "Condition", type: "object", parameters: { ObjectKeyPrefixEquals: { sentAs: "ObjectKeyPrefixEquals" }, HttpErrorCodeReturnedEquals: { sentAs: "HttpErrorCodeReturnedEquals" } } }, Redirect: { sentAs: "Redirect", type: "object", parameters: { HttpRedirectCode: { sentAs: "HttpRedirectCode" }, SourceEndpoint: { sentAs: "SourceEndpoint" }, SourceBucketName: { sentAs: "SourceBucketName" }, ReplaceKeyWith: { sentAs: "ReplaceKeyWith" }, StaticUri: { sentAs: "StaticUri" }, ReplaceKeyPrefixWith: { sentAs: "ReplaceKeyPrefixWith" }, MigrationConfiguration: { sentAs: "MigrationConfiguration", type: "object", parameters: { Agency: { sentAs: "Agency" }, LogBucketName: { sentAs: "LogBucketName" }, PrivateBucketConfiguration: { sentAs: "PrivateBucketConfiguration", type: "object", parameters: { SourceStorageProvider: { sentAs: "SourceStorageProvider" }, SourceBucketAK: { sentAs: "SourceBucketAK" }, SourceBucketSK: { sentAs: "SourceBucketSK" }, SourceBucketZone: { sentAs: "SourceBucketZone" } } } } } } } } } }, dr = { type: "array", location: "xml", sentAs: "CommonPrefixes", items: { type: "object", parameters: { Prefix: { decode: !0, sentAs: "Prefix" }, MTime: { sentAs: "MTime" }, InodeNo: { sentAs: "InodeNo" } } } }, Dn = { type: "array", location: "xml", wrapper: "AccessControlList", sentAs: "Grant", items: { type: "object", parameters: { Grantee: { data: { xsiNamespace: "http://www.w3.org/2001/XMLSchema-instance", xsiType: "Type" }, type: "object", sentAs: "Grantee", parameters: { Type: { type: "ignore" }, ID: { sentAs: "ID", notAllowEmpty: !0 }, Name: { sentAs: "DisplayName" }, URI: { sentAs: "URI", type: "adapter", notAllowEmpty: !0 } } }, Permission: { sentAs: "Permission" } } } }, pi = { type: "object", location: "xml", sentAs: "LoggingEnabled", parameters: { TargetBucket: { sentAs: "TargetBucket" }, TargetPrefix: { sentAs: "TargetPrefix" }, TargetGrants: { type: "array", wrapper: "TargetGrants", sentAs: "Grant", items: { type: "object", parameters: { Grantee: { data: { xsiNamespace: "http://www.w3.org/2001/XMLSchema-instance", xsiType: "Type" }, type: "object", sentAs: "Grantee", parameters: { Type: { type: "ignore" }, ID: { sentAs: "ID" }, Name: { sentAs: "DisplayName" }, URI: { sentAs: "URI", type: "adapter" } } }, Permission: { sentAs: "Permission" } } } } } }, Vr = { required: !0, type: "array", location: "xml", sentAs: "Rule", items: { type: "object", parameters: { ID: { sentAs: "ID" }, Prefix: { sentAs: "Prefix" }, Status: { sentAs: "Status" }, Transitions: { type: "array", sentAs: "Transition", items: { type: "object", parameters: { StorageClass: { sentAs: "StorageClass", type: "adapter" }, Date: { sentAs: "Date" }, Days: { type: "number", sentAs: "Days" } } } }, Expiration: { type: "object", sentAs: "Expiration", parameters: { Date: { sentAs: "Date" }, Days: { type: "number", sentAs: "Days" } } }, AbortIncompleteMultipartUpload: { type: "object", sentAs: "AbortIncompleteMultipartUpload", parameters: { DaysAfterInitiation: { type: "number", sentAs: "DaysAfterInitiation" } } }, NoncurrentVersionTransitions: { type: "array", sentAs: "NoncurrentVersionTransition", items: { type: "object", parameters: { StorageClass: { sentAs: "StorageClass", type: "adapter" }, NoncurrentDays: { type: "number", sentAs: "NoncurrentDays" } } } }, NoncurrentVersionExpiration: { type: "object", sentAs: "NoncurrentVersionExpiration", parameters: { NoncurrentDays: { type: "number", sentAs: "NoncurrentDays" } } } } } }, Br = { type: "object", location: "xml", sentAs: "RedirectAllRequestsTo", parameters: { HostName: { sentAs: "HostName" }, Protocol: { sentAs: "Protocol" } } }, rr = { type: "array", wrapper: "RoutingRules", location: "xml", sentAs: "RoutingRule", items: { type: "object", parameters: { Condition: { type: "object", sentAs: "Condition", parameters: { HttpErrorCodeReturnedEquals: { sentAs: "HttpErrorCodeReturnedEquals" }, KeyPrefixEquals: { sentAs: "KeyPrefixEquals" } } }, Redirect: { type: "object", sentAs: "Redirect", parameters: { HostName: { sentAs: "HostName" }, HttpRedirectCode: { sentAs: "HttpRedirectCode" }, Protocol: { sentAs: "Protocol" }, ReplaceKeyPrefixWith: { sentAs: "ReplaceKeyPrefixWith" }, ReplaceKeyWith: { sentAs: "ReplaceKeyWith" } } } } } }, Vo = { type: "object", location: "xml", sentAs: "IndexDocument", parameters: { Suffix: { sentAs: "Suffix" } } }, Xn = { type: "object", location: "xml", sentAs: "ErrorDocument", parameters: { Key: { sentAs: "Key" } } }, pr = { required: !0, type: "array", location: "xml", sentAs: "CORSRule", items: { type: "object", parameters: { ID: { sentAs: "ID" }, AllowedMethod: { type: "array", sentAs: "AllowedMethod", items: { type: "string" } }, AllowedOrigin: { type: "array", sentAs: "AllowedOrigin", items: { type: "string" } }, AllowedHeader: { type: "array", sentAs: "AllowedHeader", items: { type: "string" } }, MaxAgeSeconds: { type: "number", sentAs: "MaxAgeSeconds" }, ExposeHeader: { type: "array", sentAs: "ExposeHeader", items: { type: "string" } } } } }, Jr = { type: "array", location: "xml", sentAs: "FunctionGraphConfiguration", items: { type: "object", location: "xml", parameters: { ID: { sentAs: "Id" }, Filter: { type: "object", parameters: { FilterRules: { wrapper: "S3Key", type: "array", sentAs: "FilterRule", items: { type: "object", parameters: { Name: {}, Value: {} } } } } }, FunctionGraph: {}, Event: { type: "array", items: { type: "adapter" } } } } }, Ao = { type: "array", location: "xml", sentAs: "FunctionStageConfiguration", items: { type: "object", location: "xml", parameters: { ID: { sentAs: "Id" }, Filter: { type: "object", parameters: { FilterRules: { wrapper: "S3Key", type: "array", sentAs: "FilterRule", items: { type: "object", parameters: { Name: {}, Value: {} } } } } }, FunctionStage: {}, Event: { type: "array", items: { type: "adapter" } } } } }, q = { type: "array", location: "xml", sentAs: "TopicConfiguration", items: { type: "object", location: "xml", parameters: { ID: { sentAs: "Id" }, Filter: { type: "object", parameters: { FilterRules: { wrapper: "S3Key", type: "array", sentAs: "FilterRule", items: { type: "object", parameters: { Name: {}, Value: {} } } } } }, Topic: {}, Event: { type: "array", items: { type: "adapter" } } } } }, ie = { required: !0, type: "array", location: "xml", wrapper: "TagSet", sentAs: "Tag", items: { type: "object", parameters: { Key: { sentAs: "Key" }, Value: { sentAs: "Value" } } } }, Re = { required: !0, type: "array", location: "xml", sentAs: "Rule", items: { type: "object", parameters: { ID: { sentAs: "ID" }, Prefix: { sentAs: "Prefix" }, Status: { sentAs: "Status" }, Destination: { type: "object", sentAs: "Destination", parameters: { Bucket: { sentAs: "Bucket", type: "adapter" }, StorageClass: { sentAs: "StorageClass", type: "adapter" }, DeleteData: { sentAs: "DeleteData", type: "string" } } }, HistoricalObjectReplication: { sentAs: "HistoricalObjectReplication" } } } }, pt = { HeadBucket: { httpMethod: "HEAD", parameters: { Bucket: { required: !0, location: "uri" } } }, HeadApiVersion: { httpMethod: "HEAD", urlPath: "apiversion", parameters: { Bucket: { location: "uri" } } }, HeadApiVersionOutput: { parameters: { ApiVersion: { location: "header", sentAs: "x-obs-api" } } }, CreateBucket: { httpMethod: "PUT", data: { xmlRoot: "CreateBucketConfiguration" }, parameters: { Bucket: { required: !0, location: "uri" }, ACL: { location: "header", sentAs: "acl", withPrefix: !0 }, StorageType: { location: "header", sentAs: "x-default-storage-class" }, FileInterface: { location: "header", sentAs: "fs-file-interface", withPrefix: !0 }, Type: { location: "header", sentAs: "bucket-type", withPrefix: !0 }, MultiAz: { location: "header", sentAs: "x-obs-az-redundancy" }, Cluster: { location: "header", sentAs: "location-clustergroup-id", withPrefix: !0 }, GrantFullControl: { location: "header", sentAs: "grant-full-control", withPrefix: !0 }, GrantRead: { location: "header", sentAs: "grant-read", withPrefix: !0 }, GrantReadACP: { location: "header", sentAs: "grant-read-acp", withPrefix: !0 }, GrantWrite: { location: "header", sentAs: "grant-write", withPrefix: !0 }, GrantWriteACP: { location: "header", sentAs: "grant-write-acp", withPrefix: !0 }, ClusterType: { location: "header", sentAs: "cluster-type", withPrefix: !0 }, MultiEnterprise: { location: "header", sentAs: "epid", withPrefix: !0 }, Location: { location: "xml", sentAs: "LocationConstraint" } } }, GetBucketMetadata: { httpMethod: "HEAD", parameters: { Bucket: { required: !0, location: "uri" }, Origin: { location: "header", sentAs: "Origin" }, RequestHeader: { location: "header", sentAs: "Access-Control-Request-Headers" } } }, GetBucketMetadataOutput: { parameters: { StorageClass: { location: "header", sentAs: "x-default-storage-class" }, ObsVersion: { location: "header", sentAs: "x-obs-version" }, Location: { location: "header", sentAs: "bucket-region", withPrefix: !0 }, FileInterface: { location: "header", sentAs: "fs-file-interface", withPrefix: !0 }, Type: { location: "header", sentAs: "bucket-type", withPrefix: !0 }, MultiAz: { location: "header", sentAs: "x-obs-az-redundancy" }, MultiEnterprise: { location: "header", sentAs: "epid", withPrefix: !0 }, ClusterType: { location: "header", sentAs: "cluster-type", withPrefix: !0 }, Cluster: { location: "header", sentAs: "location-clustergroup-id", withPrefix: !0 }, AllowOrigin: { location: "header", sentAs: "access-control-allow-origin" }, MaxAgeSeconds: { location: "header", sentAs: "access-control-max-age" }, ExposeHeader: { location: "header", sentAs: "access-control-expose-headers" }, AllowMethod: { location: "header", sentAs: "access-control-allow-methods" }, AllowHeader: { location: "header", sentAs: "access-control-allow-headers" } } }, DeleteBucket: { httpMethod: "DELETE", parameters: { Bucket: { required: !0, location: "uri" } } }, ListBuckets: { httpMethod: "GET", parameters: { Type: { sentAs: "x-obs-bucket-type", location: "header" }, Location: { sentAs: "location", location: "header", withPrefix: !0 } } }, ListBucketsOutput: { data: { type: "xml", xmlRoot: "ListAllMyBucketsResult" }, parameters: { Buckets: { location: "xml", sentAs: "Bucket", type: "array", wrapper: "Buckets", items: { type: "object", location: "xml", sentAs: "Bucket", parameters: { Name: { sentAs: "Name" }, CreationDate: { sentAs: "CreationDate" }, Location: { sentAs: "Location" }, ClusterType: { sentAs: "ClusterType" } } } }, Owner: { type: "object", location: "xml", sentAs: "Owner", parameters: { ID: { sentAs: "ID" }, DisplayName: { sentAs: "DisplayName" } } } } }, ListObjects: { httpMethod: "GET", parameters: { Bucket: { required: !0, location: "uri" }, Prefix: { location: "urlPath", sentAs: "prefix" }, Marker: { location: "urlPath", sentAs: "marker" }, MaxKeys: { type: "number", location: "urlPath", sentAs: "max-keys" }, Delimiter: { location: "urlPath", sentAs: "delimiter" }, EncodingType: { location: "urlPath", sentAs: "encoding-type" } } }, ListObjectsOutput: { data: { type: "xml", xmlRoot: "ListBucketResult" }, parameters: { Location: { location: "header", sentAs: "bucket-region", withPrefix: !0 }, Bucket: { location: "xml", sentAs: "Name" }, Delimiter: { decode: !0, location: "xml", sentAs: "Delimiter" }, IsTruncated: { location: "xml", sentAs: "IsTruncated" }, Prefix: { decode: !0, location: "xml", sentAs: "Prefix" }, Marker: { decode: !0, location: "xml", sentAs: "Marker" }, NextMarker: { decode: !0, location: "xml", sentAs: "NextMarker" }, MaxKeys: { location: "xml", sentAs: "MaxKeys" }, EncodingType: { location: "xml", sentAs: "EncodingType" }, Contents: { type: "array", location: "xml", sentAs: "Contents", items: { type: "object", parameters: { Key: { decode: !0, sentAs: "Key" }, LastModified: { sentAs: "LastModified" }, ETag: { sentAs: "ETag" }, Size: { sentAs: "Size" }, Type: { sentAs: "Type" }, StorageClass: { sentAs: "StorageClass" }, Owner: uo } } }, CommonPrefixes: dr } }, ListVersions: { httpMethod: "GET", urlPath: "versions", parameters: { Bucket: { required: !0, location: "uri" }, Prefix: { location: "urlPath", sentAs: "prefix" }, KeyMarker: { location: "urlPath", sentAs: "key-marker" }, MaxKeys: { type: "number", location: "urlPath", sentAs: "max-keys" }, Delimiter: { location: "urlPath", sentAs: "delimiter" }, VersionIdMarker: { location: "urlPath", sentAs: "version-id-marker" }, EncodingType: { location: "urlPath", sentAs: "encoding-type" } } }, ListVersionsOutput: { data: { type: "xml", xmlRoot: "ListVersionsResult" }, parameters: { EncodingType: { location: "xml", sentAs: "EncodingType" }, Location: { location: "header", sentAs: "bucket-region", withPrefix: !0 }, Bucket: { location: "xml", sentAs: "Name" }, Prefix: { decode: !0, location: "xml", sentAs: "Prefix" }, Delimiter: { decode: !0, location: "xml", sentAs: "Delimiter" }, KeyMarker: { decode: !0, location: "xml", sentAs: "KeyMarker" }, VersionIdMarker: { location: "xml", sentAs: "VersionIdMarker" }, NextKeyMarker: { decode: !0, location: "xml", sentAs: "NextKeyMarker" }, NextVersionIdMarker: { location: "xml", sentAs: "NextVersionIdMarker" }, MaxKeys: { location: "xml", sentAs: "MaxKeys" }, IsTruncated: { location: "xml", sentAs: "IsTruncated" }, Versions: { type: "array", location: "xml", sentAs: "Version", items: { type: "object", parameters: { Key: { decode: !0, sentAs: "Key" }, VersionId: { sentAs: "VersionId" }, IsLatest: { sentAs: "IsLatest" }, LastModified: { sentAs: "LastModified" }, ETag: { sentAs: "ETag" }, Size: { sentAs: "Size" }, Type: { sentAs: "Type" }, Owner: uo, StorageClass: { sentAs: "StorageClass" } } } }, DeleteMarkers: { type: "array", location: "xml", sentAs: "DeleteMarker", items: { type: "object", parameters: { Key: { decode: !0, sentAs: "Key" }, VersionId: { sentAs: "VersionId" }, IsLatest: { sentAs: "IsLatest" }, LastModified: { sentAs: "LastModified" }, Owner: uo } } }, CommonPrefixes: dr } }, PutBackToSource: { httpMethod: "PUT", data: { xmlRoot: "BackToSourceConfiguration" }, urlPath: "backtosource", parameters: { Bucket: { required: !0, location: "uri" }, BackToSourceRules: ur, ContentMD5: { location: "header", sentAs: "Content-MD5" } } }, DeleteBackToSource: { httpMethod: "DELETE", urlPath: "backtosource", parameters: { Bucket: { required: !0, location: "uri" } } }, GetBackToSource: { httpMethod: "GET", urlPath: "backtosource", parameters: { Bucket: { required: !0, location: "uri" } } }, GetBackToSourceOutput: { data: { type: "xml", xmlRoot: "BackToSourceConfiguration" }, parameters: { BackToSourceRules: ur } }, GetBucketLocation: { httpMethod: "GET", urlPath: "location", parameters: { Bucket: { required: !0, location: "uri" } } }, GetBucketLocationOutput: { data: { type: "xml", xmlRoot: "CreateBucketConfiguration" }, parameters: { Location: { location: "xml", sentAs: "LocationConstraint" } } }, GetBucketStorageInfo: { httpMethod: "GET", urlPath: "storageinfo", parameters: { Bucket: { required: !0, location: "uri" } } }, GetBucketStorageInfoOutput: { data: { type: "xml", xmlRoot: "GetBucketStorageInfoResult" }, parameters: { Size: { location: "xml", sentAs: "Size" }, ObjectNumber: { location: "xml", sentAs: "ObjectNumber" } } }, SetBucketQuota: { httpMethod: "PUT", urlPath: "quota", data: { xmlRoot: "Quota" }, parameters: { Bucket: { required: !0, location: "uri" }, StorageQuota: { required: !0, location: "xml", sentAs: "StorageQuota" } } }, GetBucketQuota: { httpMethod: "GET", urlPath: "quota", parameters: { Bucket: { required: !0, location: "uri" } } }, GetBucketQuotaOutput: { data: { type: "xml", xmlRoot: "Quota" }, parameters: { StorageQuota: { location: "xml", sentAs: "StorageQuota" } } }, SetBucketAcl: { httpMethod: "PUT", urlPath: "acl", data: { xmlRoot: "AccessControlPolicy" }, parameters: { Bucket: { required: !0, location: "uri" }, ACL: { location: "header", sentAs: "acl", withPrefix: !0, type: "adapter" }, Owner: uo, Grants: Dn } }, GetBucketAcl: { httpMethod: "GET", urlPath: "acl", parameters: { Bucket: { required: !0, location: "uri" } } }, GetBucketAclOutput: { data: { type: "xml", xmlRoot: "AccessControlPolicy" }, parameters: { Owner: uo, Grants: Dn } }, SetBucketLoggingConfiguration: { httpMethod: "PUT", urlPath: "logging", data: { xmlRoot: "BucketLoggingStatus", xmlAllowEmpty: !0 }, parameters: { Bucket: { required: !0, location: "uri" }, LoggingEnabled: pi } }, GetBucketLoggingConfiguration: { httpMethod: "GET", urlPath: "logging", parameters: { Bucket: { required: !0, location: "uri" } } }, GetBucketLoggingConfigurationOutput: { data: { type: "xml", xmlRoot: "BucketLoggingStatus" }, parameters: { LoggingEnabled: pi } }, SetBucketPolicy: { httpMethod: "PUT", urlPath: "policy", parameters: { Bucket: { required: !0, location: "uri" }, Policy: { required: !0, location: "body" } } }, SetSFSAcl: { httpMethod: "PUT", urlPath: "sfsacl", parameters: { Bucket: { required: !0, location: "uri" }, Policy: { required: !0, location: "body" } } }, GetSFSAcl: { httpMethod: "GET", urlPath: "sfsacl", parameters: { Bucket: { required: !0, location: "uri" } } }, GetSFSAclOutput: { data: { type: "body" }, parameters: { Policy: { location: "body" } } }, DeleteSFSAcl: { httpMethod: "DELETE", urlPath: "sfsacl", parameters: { Bucket: { required: !0, location: "uri" } } }, GetBucketPolicy: { httpMethod: "GET", urlPath: "policy", parameters: { Bucket: { required: !0, location: "uri" } } }, GetBucketPolicyOutput: { data: { type: "body" }, parameters: { Policy: { location: "body" } } }, DeleteBucketPolicy: { httpMethod: "DELETE", urlPath: "policy", parameters: { Bucket: { required: !0, location: "uri" } } }, SetBucketDisPolicy: { httpMethod: "PUT", urlPath: "disPolicy", parameters: { Bucket: { required: !0, location: "uri" }, ApiPath: { location: "uri" }, Rules: { required: !0, location: "body" } } }, GetBucketDisPolicy: { httpMethod: "GET", urlPath: "disPolicy", parameters: { Bucket: { required: !0, location: "uri" }, ApiPath: { location: "uri" }, ContentType: { location: "header", sentAs: "Content-Type" } } }, GetBucketDisPolicyOutput: { data: { type: "body" }, parameters: { Rules: { location: "body" } } }, DeleteBucketDisPolicy: { httpMethod: "DELETE", urlPath: "disPolicy", parameters: { Bucket: { required: !0, location: "uri" }, ApiPath: { location: "uri" } } }, SetBucketLifecycleConfiguration: { httpMethod: "PUT", urlPath: "lifecycle", data: { xmlRoot: "LifecycleConfiguration", md5: !0 }, parameters: { Bucket: { required: !0, location: "uri" }, Rules: Vr } }, GetBucketLifecycleConfiguration: { httpMethod: "GET", urlPath: "lifecycle", parameters: { Bucket: { required: !0, location: "uri" } } }, GetBucketLifecycleConfigurationOutput: { data: { type: "xml", xmlRoot: "LifecycleConfiguration" }, parameters: { Rules: Vr } }, DeleteBucketLifecycleConfiguration: { httpMethod: "DELETE", urlPath: "lifecycle", parameters: { Bucket: { required: !0, location: "uri" } } }, SetBucketWebsiteConfiguration: { httpMethod: "PUT", urlPath: "website", data: { xmlRoot: "WebsiteConfiguration" }, parameters: { Bucket: { required: !0, location: "uri" }, RedirectAllRequestsTo: Br, IndexDocument: Vo, ErrorDocument: Xn, RoutingRules: rr } }, GetBucketWebsiteConfiguration: { httpMethod: "GET", urlPath: "website", parameters: { Bucket: { required: !0, location: "uri" } } }, GetBucketWebsiteConfigurationOutput: { data: { type: "xml", xmlRoot: "WebsiteConfiguration" }, parameters: { RedirectAllRequestsTo: Br, IndexDocument: Vo, ErrorDocument: Xn, RoutingRules: rr } }, DeleteBucketWebsiteConfiguration: { httpMethod: "DELETE", urlPath: "website", parameters: { Bucket: { required: !0, location: "uri" } } }, SetBucketVersioningConfiguration: { httpMethod: "PUT", urlPath: "versioning", data: { xmlRoot: "VersioningConfiguration" }, parameters: { Bucket: { required: !0, location: "uri" }, VersionStatus: { required: !0, location: "xml", sentAs: "Status" } } }, GetBucketVersioningConfiguration: { httpMethod: "GET", urlPath: "versioning", parameters: { Bucket: { required: !0, location: "uri" } } }, GetBucketVersioningConfigurationOutput: { data: { type: "xml", xmlRoot: "VersioningConfiguration" }, parameters: { VersionStatus: { location: "xml", sentAs: "Status" } } }, SetBucketCors: { httpMethod: "PUT", urlPath: "cors", data: { xmlRoot: "CORSConfiguration", md5: !0 }, parameters: { Bucket: { required: !0, location: "uri" }, CorsRules: pr } }, GetBucketCors: { httpMethod: "GET", urlPath: "cors", parameters: { Bucket: { required: !0, location: "uri" } } }, GetBucketCorsOutput: { data: { type: "xml", xmlRoot: "CORSConfiguration" }, parameters: { CorsRules: pr } }, DeleteBucketCors: { httpMethod: "DELETE", urlPath: "cors", parameters: { Bucket: { required: !0, location: "uri" } } }, SetBucketNotification: { httpMethod: "PUT", urlPath: "notification", data: { xmlRoot: "NotificationConfiguration", xmlAllowEmpty: !0 }, parameters: { Bucket: { required: !0, location: "uri" }, TopicConfigurations: q, FunctionGraphConfigurations: Jr, FunctionStageConfigurations: Ao } }, GetBucketNotification: { httpMethod: "GET", urlPath: "notification", parameters: { Bucket: { required: !0, location: "uri" } } }, GetBucketNotificationOutput: { data: { type: "xml", xmlRoot: "NotificationConfiguration" }, parameters: { TopicConfigurations: q, FunctionGraphConfigurations: Jr, FunctionStageConfigurations: Ao } }, SetBucketTagging: { httpMethod: "PUT", urlPath: "tagging", data: { xmlRoot: "Tagging", md5: !0 }, parameters: { Bucket: { required: !0, location: "uri" }, Tags: ie } }, DeleteBucketTagging: { httpMethod: "DELETE", urlPath: "tagging", parameters: { Bucket: { required: !0, location: "uri" } } }, GetBucketTagging: { httpMethod: "GET", urlPath: "tagging", parameters: { Bucket: { required: !0, location: "uri" } } }, GetBucketTaggingOutput: { data: { type: "xml", xmlRoot: "Tagging" }, parameters: { Tags: ie } }, SetBucketStoragePolicy: { httpMethod: "PUT", urlPath: "storagePolicy", data: { xmlRoot: "StoragePolicy" }, parameters: { Bucket: { required: !0, location: "uri" }, StorageClass: { required: !0, location: "xml", type: "adapter", sentAs: "DefaultStorageClass" } } }, GetBucketStoragePolicy: { httpMethod: "GET", urlPath: "storagePolicy", parameters: { Bucket: { required: !0, location: "uri" } } }, GetBucketStoragePolicyOutput: { data: { type: "xml", xmlRoot: "StoragePolicy" }, parameters: { StorageClass: { location: "xml", type: "string", sentAs: "DefaultStorageClass" } } }, SetBucketReplication: { httpMethod: "PUT", urlPath: "replication", data: { xmlRoot: "ReplicationConfiguration", md5: !0 }, parameters: { Bucket: { required: !0, location: "uri" }, Agency: { location: "xml", sentAs: "Agency" }, Rules: Re } }, GetBucketReplication: { httpMethod: "GET", urlPath: "replication", parameters: { Bucket: { required: !0, location: "uri" } } }, GetBucketReplicationOutput: { data: { type: "xml", xmlRoot: "ReplicationConfiguration" }, parameters: { Agency: { location: "xml", sentAs: "Agency" }, Rules: Re } }, DeleteBucketReplication: { httpMethod: "DELETE", urlPath: "replication", parameters: { Bucket: { required: !0, location: "uri" } } }, PutObject: { httpMethod: "PUT", parameters: { Bucket: { required: !0, location: "uri" }, Key: { required: !0, location: "uri" }, ContentMD5: { location: "header", sentAs: "Content-MD5" }, ContentType: { location: "header", sentAs: "Content-Type" }, Offset: { type: "plain" }, ContentLength: { location: "header", sentAs: "Content-Length", type: "plain" }, ACL: { location: "header", sentAs: "acl", withPrefix: !0, type: "adapter" }, GrantRead: { location: "header", sentAs: "grant-read", withPrefix: !0 }, GrantReadAcp: { location: "header", sentAs: "grant-read-acp", withPrefix: !0 }, GrantWriteAcp: { location: "header", sentAs: "grant-write-acp", withPrefix: !0 }, GrantFullControl: { location: "header", sentAs: "grant-full-control", withPrefix: !0 }, StorageClass: { location: "header", sentAs: "storage-class", withPrefix: !0, type: "adapter" }, Metadata: { type: "object", location: "header", sentAs: "meta-", withPrefix: !0 }, CacheControl: { location: "header", sentAs: "Cache-Control" }, ContentDisposition: { location: "header", sentAs: "Content-Disposition", encodingSafe: ' ;/?:@&=+$,"' }, ContentLanguage: { location: "header", sentAs: "Content-Language" }, ContentEncoding: { location: "header", sentAs: "Content-Encoding" }, WebsiteRedirectLocation: { location: "header", sentAs: "website-redirect-location", withPrefix: !0 }, Expires: { location: "header", sentAs: "x-obs-expires", type: "number" }, SseKms: { location: "header", sentAs: "server-side-encryption", withPrefix: !0, type: "adapter" }, SseKmsKey: { location: "header", sentAs: "server-side-encryption-aws-kms-key-id", withPrefix: !0 }, SseKmsProjectId: { location: "header", sentAs: "sse-kms-key-project-id", withPrefix: !0 }, SseC: { location: "header", sentAs: "server-side-encryption-customer-algorithm", withPrefix: !0 }, SseCKey: { location: "header", sentAs: "server-side-encryption-customer-key", type: "password", withPrefix: !0 }, Body: { location: "body" }, SourceFile: { type: "srcFile" }, ProgressCallback: { type: "plain" } } }, PutObjectOutput: { parameters: { ETag: { location: "header", sentAs: "etag" }, VersionId: { location: "header", sentAs: "version-id", withPrefix: !0 }, StorageClass: { location: "header", sentAs: "storage-class", withPrefix: !0 }, SseKms: { location: "header", sentAs: "server-side-encryption", withPrefix: !0 }, SseKmsKey: { location: "header", sentAs: "server-side-encryption-aws-kms-key-id", withPrefix: !0 }, SseKmsProjectId: { location: "header", sentAs: "sse-kms-key-project-id", withPrefix: !0 }, SseC: { location: "header", sentAs: "server-side-encryption-customer-algorithm", withPrefix: !0 }, SseCKeyMd5: { location: "header", sentAs: "server-side-encryption-customer-key-MD5", withPrefix: !0 } } }, AppendObject: { httpMethod: "POST", urlPath: "append", parameters: { Bucket: { required: !0, location: "uri" }, Key: { required: !0, location: "uri" }, Position: { location: "urlPath", sentAs: "position", type: "number" }, ContentMD5: { location: "header", sentAs: "Content-MD5" }, Offset: { type: "plain" }, ContentType: { location: "header", sentAs: "Content-Type" }, ContentLength: { location: "header", sentAs: "Content-Length", type: "plain" }, ACL: { location: "header", sentAs: "acl", withPrefix: !0, type: "adapter" }, GrantRead: { location: "header", sentAs: "grant-read", withPrefix: !0 }, GrantReadAcp: { location: "header", sentAs: "grant-read-acp", withPrefix: !0 }, GrantWriteAcp: { location: "header", sentAs: "grant-write-acp", withPrefix: !0 }, GrantFullControl: { location: "header", sentAs: "grant-full-control", withPrefix: !0 }, StorageClass: { location: "header", sentAs: "storage-class", withPrefix: !0, type: "adapter" }, Metadata: { type: "object", location: "header", sentAs: "meta-", withPrefix: !0 }, WebsiteRedirectLocation: { location: "header", sentAs: "website-redirect-location", withPrefix: !0 }, Expires: { location: "header", sentAs: "x-obs-expires", type: "number" }, SseKms: { location: "header", sentAs: "server-side-encryption", withPrefix: !0, type: "adapter" }, SseKmsKey: { location: "header", sentAs: "server-side-encryption-kms-key-id", withPrefix: !0 }, SseC: { location: "header", sentAs: "server-side-encryption-customer-algorithm", withPrefix: !0 }, SseCKey: { location: "header", sentAs: "server-side-encryption-customer-key", type: "password", withPrefix: !0 }, Body: { location: "body" }, SourceFile: { type: "srcFile" }, ProgressCallback: { type: "plain" } } }, AppendObjectOutput: { parameters: { ETag: { location: "header", sentAs: "etag" }, NextPosition: { location: "header", sentAs: "x-obs-next-append-position" }, StorageClass: { location: "header", sentAs: "storage-class", withPrefix: !0 }, SseKms: { location: "header", sentAs: "server-side-encryption", withPrefix: !0 }, SseKmsKey: { location: "header", sentAs: "server-side-encryption-kms-key-id", withPrefix: !0 }, SseC: { location: "header", sentAs: "server-side-encryption-customer-algorithm", withPrefix: !0 }, SseCKeyMd5: { location: "header", sentAs: "server-side-encryption-customer-key-MD5", withPrefix: !0 } } }, GetObject: { httpMethod: "GET", parameters: { Bucket: { required: !0, location: "uri" }, Key: { required: !0, location: "uri" }, ResponseCacheControl: { location: "urlPath", sentAs: "response-cache-control" }, ResponseContentDisposition: { location: "urlPath", sentAs: "response-content-disposition" }, ResponseContentEncoding: { location: "urlPath", sentAs: "response-content-encoding" }, ResponseContentLanguage: { location: "urlPath", sentAs: "response-content-language" }, ResponseContentType: { location: "urlPath", sentAs: "response-content-type" }, ResponseExpires: { location: "urlPath", sentAs: "response-expires" }, VersionId: { location: "urlPath", sentAs: "versionId" }, ImageProcess: { location: "urlPath", sentAs: "x-image-process" }, IfMatch: { location: "header", sentAs: "If-Match" }, IfModifiedSince: { location: "header", sentAs: "If-Modified-Since" }, IfNoneMatch: { location: "header", sentAs: "If-None-Match" }, IfUnmodifiedSince: { location: "header", sentAs: "If-Unmodified-Since" }, Range: { location: "header", sentAs: "Range" }, Origin: { location: "header", sentAs: "Origin" }, RequestHeader: { location: "header", sentAs: "Access-Control-Request-Headers" }, SaveByType: { type: "dstFile" }, SseC: { location: "header", sentAs: "server-side-encryption-customer-algorithm", withPrefix: !0 }, SseCKey: { location: "header", sentAs: "server-side-encryption-customer-key", type: "password", withPrefix: !0 }, ProgressCallback: { type: "plain" } } }, GetObjectOutput: { data: { type: "body" }, parameters: { Content: { location: "body" }, Expiration: { location: "header", sentAs: "expiration", withPrefix: !0 }, ETag: { location: "header", sentAs: "etag" }, CacheControl: { location: "header", sentAs: "Cache-Control" }, ContentDisposition: { location: "header", sentAs: "Content-Disposition" }, ContentEncoding: { location: "header", sentAs: "Content-Encoding" }, ContentLanguage: { location: "header", sentAs: "Content-Language" }, ContentType: { location: "header", sentAs: "Content-Type" }, Expires: { location: "header", sentAs: "Expires" }, VersionId: { location: "header", sentAs: "version-id", withPrefix: !0 }, ContentLength: { location: "header", sentAs: "Content-Length" }, DeleteMarker: { location: "header", sentAs: "delete-marker", withPrefix: !0 }, LastModified: { location: "header", sentAs: "Last-Modified" }, WebsiteRedirectLocation: { location: "header", sentAs: "website-redirect-location", withPrefix: !0 }, StorageClass: { location: "header", sentAs: "storage-class", withPrefix: !0 }, Restore: { location: "header", sentAs: "restore", withPrefix: !0 }, AllowOrigin: { location: "header", sentAs: "access-control-allow-origin" }, MaxAgeSeconds: { location: "header", sentAs: "access-control-max-age" }, ExposeHeader: { location: "header", sentAs: "access-control-expose-headers" }, AllowMethod: { location: "header", sentAs: "access-control-allow-methods" }, AllowHeader: { location: "header", sentAs: "access-control-allow-headers" }, SseKms: { location: "header", sentAs: "server-side-encryption", withPrefix: !0 }, SseKmsKey: { location: "header", sentAs: "server-side-encryption-aws-kms-key-id", withPrefix: !0 }, SseC: { location: "header", sentAs: "server-side-encryption-customer-algorithm", withPrefix: !0 }, SseCKeyMd5: { location: "header", sentAs: "server-side-encryption-customer-key-MD5", withPrefix: !0 }, Metadata: { location: "header", type: "object", sentAs: "meta-", withPrefix: !0 } } }, CopyObject: { httpMethod: "PUT", parameters: { Bucket: { required: !0, location: "uri" }, Key: { required: !0, location: "uri" }, ACL: { location: "header", sentAs: "acl", withPrefix: !0, type: "adapter" }, GrantRead: { location: "header", sentAs: "grant-read", withPrefix: !0 }, GrantReadAcp: { location: "header", sentAs: "grant-read-acp", withPrefix: !0 }, GrantWriteAcp: { location: "header", sentAs: "grant-write-acp", withPrefix: !0 }, GrantFullControl: { location: "header", sentAs: "grant-full-control", withPrefix: !0 }, StorageClass: { location: "header", sentAs: "storage-class", withPrefix: !0, type: "adapter" }, CopySource: { required: !0, location: "header", sentAs: "copy-source", withPrefix: !0, skipEncoding: !0 }, CopySourceIfMatch: { location: "header", sentAs: "copy-source-if-match", withPrefix: !0 }, CopySourceIfModifiedSince: { location: "header", sentAs: "copy-source-if-modified-since", withPrefix: !0 }, CopySourceIfNoneMatch: { location: "header", sentAs: "copy-source-if-none-match", withPrefix: !0 }, CopySourceIfUnmodifiedSince: { location: "header", sentAs: "copy-source-if-unmodified-since", withPrefix: !0 }, ContentType: { location: "header", sentAs: "Content-Type" }, ContentEncoding: { location: "header", sentAs: "content-encoding" }, ContentLanguage: { location: "header", sentAs: "content-language" }, ContentDisposition: { location: "header", sentAs: "content-disposition" }, CacheControl: { location: "header", sentAs: "cache-control" }, Expires: { location: "header", sentAs: "expires" }, Metadata: { type: "object", location: "header", sentAs: "meta-", withPrefix: !0 }, MetadataDirective: { location: "header", sentAs: "metadata-directive", withPrefix: !0 }, WebsiteRedirectLocation: { location: "header", sentAs: "website-redirect-location", withPrefix: !0 }, SseKms: { location: "header", sentAs: "server-side-encryption", withPrefix: !0, type: "adapter" }, SseKmsKey: { location: "header", sentAs: "server-side-encryption-aws-kms-key-id", withPrefix: !0 }, SseC: { location: "header", sentAs: "server-side-encryption-customer-algorithm", withPrefix: !0 }, SseCKey: { location: "header", sentAs: "server-side-encryption-customer-key", type: "password", withPrefix: !0 }, CopySourceSseC: { location: "header", sentAs: "copy-source-server-side-encryption-customer-algorithm", withPrefix: !0 }, CopySourceSseCKey: { location: "header", sentAs: "copy-source-server-side-encryption-customer-key", type: "password", withPrefix: !0 } } }, CopyObjectOutput: { data: { type: "xml", xmlRoot: "CopyObjectResult" }, parameters: { VersionId: { location: "header", sentAs: "version-id", withPrefix: !0 }, CopySourceVersionId: { location: "header", sentAs: "copy-source-version-id", withPrefix: !0 }, ETag: { location: "xml", sentAs: "ETag" }, LastModified: { location: "xml", sentAs: "LastModified" }, SseKms: { location: "header", sentAs: "server-side-encryption", withPrefix: !0 }, SseKmsKey: { location: "header", sentAs: "server-side-encryption-aws-kms-key-id", withPrefix: !0 }, SseC: { location: "header", sentAs: "server-side-encryption-customer-algorithm", withPrefix: !0 }, SseCKeyMd5: { location: "header", sentAs: "server-side-encryption-customer-key-MD5", withPrefix: !0 } } }, RestoreObject: { httpMethod: "POST", urlPath: "restore", data: { xmlRoot: "RestoreRequest", md5: !0 }, parameters: { Bucket: { required: !0, location: "uri" }, Key: { required: !0, location: "uri" }, VersionId: { location: "urlPath", sentAs: "versionId" }, Days: { location: "xml", sentAs: "Days" }, Tier: { wrapper: "GlacierJobParameters", location: "xml", sentAs: "Tier" } } }, GetObjectMetadata: { httpMethod: "HEAD", parameters: { Bucket: { required: !0, location: "uri" }, Key: { required: !0, location: "uri" }, VersionId: { location: "urlPath", sentAs: "versionId" }, Origin: { location: "header", sentAs: "Origin" }, RequestHeader: { location: "header", sentAs: "Access-Control-Request-Headers" }, SseC: { location: "header", sentAs: "server-side-encryption-customer-algorithm", withPrefix: !0 }, SseCKey: { location: "header", sentAs: "server-side-encryption-customer-key", type: "password", withPrefix: !0 } } }, GetObjectMetadataOutput: { parameters: { Expiration: { location: "header", sentAs: "expiration", withPrefix: !0 }, LastModified: { location: "header", sentAs: "Last-Modified" }, ContentLength: { location: "header", sentAs: "Content-Length" }, ContentType: { location: "header", sentAs: "Content-Type" }, ETag: { location: "header", sentAs: "etag" }, VersionId: { location: "header", sentAs: "version-id", withPrefix: !0 }, WebsiteRedirectLocation: { location: "header", sentAs: "website-redirect-location", withPrefix: !0 }, StorageClass: { location: "header", sentAs: "storage-class", withPrefix: !0 }, Restore: { location: "header", sentAs: "restore", withPrefix: !0 }, ObjectType: { location: "header", sentAs: "x-obs-object-type" }, NextPosition: { location: "header", sentAs: "x-obs-next-append-position" }, AllowOrigin: { location: "header", sentAs: "access-control-allow-origin" }, MaxAgeSeconds: { location: "header", sentAs: "access-control-max-age" }, ExposeHeader: { location: "header", sentAs: "access-control-expose-headers" }, AllowMethod: { location: "header", sentAs: "access-control-allow-methods" }, AllowHeader: { location: "header", sentAs: "access-control-allow-headers" }, SseKms: { location: "header", sentAs: "server-side-encryption", withPrefix: !0 }, SseKmsKey: { location: "header", sentAs: "server-side-encryption-aws-kms-key-id", withPrefix: !0 }, SseC: { location: "header", sentAs: "server-side-encryption-customer-algorithm", withPrefix: !0 }, SseCKeyMd5: { location: "header", sentAs: "server-side-encryption-customer-key-MD5", withPrefix: !0 }, Metadata: { location: "header", type: "object", sentAs: "meta-", withPrefix: !0 }, ContentLanguage: { location: "header", sentAs: "Content-Language" }, ContentEncoding: { location: "header", sentAs: "Content-Encoding" }, CacheControl: { location: "header", sentAs: "Cache-Control" }, ContentDisposition: { location: "header", sentAs: "Content-Disposition" }, Expires: { location: "header", sentAs: "Expires" }, ReplicationStatus: { location: "header", sentAs: "replication-status", withPrefix: !0 } } }, SetObjectMetadata: { httpMethod: "PUT", urlPath: "metadata", parameters: { Bucket: { required: !0, location: "uri" }, Key: { required: !0, location: "uri" }, VersionId: { location: "urlPath", sentAs: "versionId" }, Origin: { location: "header", sentAs: "Origin" }, RequestHeader: { location: "header", sentAs: "Access-Control-Request-Headers" }, CacheControl: { location: "header", sentAs: "Cache-Control" }, ContentDisposition: { location: "header", sentAs: "Content-Disposition", encodingSafe: ' ;/?:@&=+$,"' }, ContentLanguage: { location: "header", sentAs: "Content-Language" }, ContentEncoding: { location: "header", sentAs: "Content-Encoding" }, ContentType: { location: "header", sentAs: "Content-Type" }, Expires: { location: "header", sentAs: "Expires" }, Metadata: { shape: "Sy", location: "header", type: "object", sentAs: "meta-", withPrefix: !0 }, MetadataDirective: { location: "header", sentAs: "metadata-directive", withPrefix: !0 }, StorageClass: { location: "header", sentAs: "storage-class", withPrefix: !0 }, WebsiteRedirectLocation: { location: "header", sentAs: "website-redirect-location", withPrefix: !0 } } }, SetObjectMetadataOutput: { parameters: { Expires: { location: "header", sentAs: "Expires" }, ContentLength: { location: "header", sentAs: "Content-Length" }, ContentType: { location: "header", sentAs: "Content-Type" }, ContentLanguage: { location: "header", sentAs: "Content-Language" }, CacheControl: { location: "header", sentAs: "Cache-Control" }, ContentDisposition: { location: "header", sentAs: "Content-Disposition" }, WebsiteRedirectLocation: { location: "header", sentAs: "website-redirect-location", withPrefix: !0 }, StorageClass: { location: "header", sentAs: "storage-class", withPrefix: !0, type: "adapter" }, Metadata: { location: "header", type: "object", sentAs: "meta-", withPrefix: !0 } } }, SetObjectAcl: { httpMethod: "PUT", urlPath: "acl", data: { xmlRoot: "AccessControlPolicy" }, parameters: { Bucket: { required: !0, location: "uri" }, Key: { required: !0, location: "uri" }, VersionId: { location: "urlPath", sentAs: "versionId" }, ACL: { location: "header", sentAs: "acl", withPrefix: !0, type: "adapter" }, Owner: uo, Grants: Dn } }, SetObjectAclOutput: { parameters: { VersionId: { location: "header", sentAs: "version-id", withPrefix: !0 } } }, GetObjectAcl: { httpMethod: "GET", urlPath: "acl", parameters: { Bucket: { required: !0, location: "uri" }, Key: { required: !0, location: "uri" }, VersionId: { location: "urlPath", sentAs: "versionId" } } }, GetObjectAclOutput: { data: { type: "xml", xmlRoot: "AccessControlPolicy" }, parameters: { VersionId: { location: "header", sentAs: "version-id", withPrefix: !0 }, Owner: uo, Grants: Dn } }, DeleteObject: { httpMethod: "DELETE", parameters: { Bucket: { required: !0, location: "uri" }, Key: { required: !0, location: "uri" }, VersionId: { location: "urlPath", sentAs: "versionId" } } }, DeleteObjectOutput: { parameters: { VersionId: { location: "header", sentAs: "version-id", withPrefix: !0 }, DeleteMarker: { location: "header", sentAs: "delete-marker", withPrefix: !0 } } }, DeleteObjects: { httpMethod: "POST", urlPath: "delete", data: { xmlRoot: "Delete", md5: !0 }, parameters: { Bucket: { required: !0, location: "uri" }, Quiet: { location: "xml", sentAs: "Quiet" }, EncodingType: { location: "xml", sentAs: "EncodingType" }, Objects: { required: !0, type: "array", location: "xml", sentAs: "Object", items: { type: "object", parameters: { Key: { sentAs: "Key" }, VersionId: { sentAs: "VersionId" } } } } } }, DeleteObjectsOutput: { data: { type: "xml", xmlRoot: "DeleteResult" }, parameters: { EncodingType: { location: "xml", sentAs: "EncodingType" }, Deleteds: { type: "array", location: "xml", sentAs: "Deleted", items: { type: "object", parameters: { Key: { decode: !0, sentAs: "Key" }, VersionId: { sentAs: "VersionId" }, DeleteMarker: { sentAs: "DeleteMarker" }, DeleteMarkerVersionId: { sentAs: "DeleteMarkerVersionId" } } } }, Errors: { type: "array", location: "xml", sentAs: "Error", items: { type: "object", parameters: { Key: { decode: !0, sentAs: "Key" }, VersionId: { sentAs: "VersionId" }, Code: { sentAs: "Code" }, Message: { sentAs: "Message" } } } } } }, InitiateMultipartUpload: { httpMethod: "POST", urlPath: "uploads", parameters: { EncodingType: { location: "urlPath", sentAs: "encoding-type" }, Bucket: { required: !0, location: "uri" }, Key: { required: !0, location: "uri" }, ACL: { location: "header", sentAs: "acl", withPrefix: !0, type: "adapter" }, GrantRead: { location: "header", sentAs: "grant-read", withPrefix: !0 }, GrantReadAcp: { location: "header", sentAs: "grant-read-acp", withPrefix: !0 }, GrantWriteAcp: { location: "header", sentAs: "grant-write-acp", withPrefix: !0 }, GrantFullControl: { location: "header", sentAs: "grant-full-control", withPrefix: !0 }, StorageClass: { location: "header", sentAs: "storage-class", withPrefix: !0, type: "adapter" }, Metadata: { type: "object", location: "header", sentAs: "meta-", withPrefix: !0 }, WebsiteRedirectLocation: { location: "header", sentAs: "website-redirect-location", withPrefix: !0 }, Expires: { location: "header", sentAs: "x-obs-expires", type: "number" }, ContentType: { location: "header", sentAs: "Content-Type" }, SseKms: { location: "header", sentAs: "server-side-encryption", withPrefix: !0, type: "adapter" }, SseKmsKey: { location: "header", sentAs: "server-side-encryption-aws-kms-key-id", withPrefix: !0 }, SseC: { location: "header", sentAs: "server-side-encryption-customer-algorithm", withPrefix: !0 }, SseCKey: { location: "header", sentAs: "server-side-encryption-customer-key", type: "password", withPrefix: !0 } } }, InitiateMultipartUploadOutput: { data: { type: "xml", xmlRoot: "InitiateMultipartUploadResult" }, parameters: { EncodingType: { location: "xml", sentAs: "EncodingType" }, Bucket: { location: "xml", sentAs: "Bucket" }, Key: { decode: !0, location: "xml", sentAs: "Key" }, UploadId: { location: "xml", sentAs: "UploadId" }, SseKms: { location: "header", sentAs: "server-side-encryption", withPrefix: !0 }, SseKmsKey: { location: "header", sentAs: "server-side-encryption-aws-kms-key-id", withPrefix: !0 }, SseC: { location: "header", sentAs: "server-side-encryption-customer-algorithm", withPrefix: !0 }, SseCKeyMd5: { location: "header", sentAs: "server-side-encryption-customer-key-MD5", withPrefix: !0 } } }, ListMultipartUploads: { httpMethod: "GET", urlPath: "uploads", parameters: { Bucket: { required: !0, location: "uri" }, Delimiter: { location: "urlPath", sentAs: "delimiter" }, KeyMarker: { location: "urlPath", sentAs: "key-marker" }, MaxUploads: { type: "number", location: "urlPath", sentAs: "max-uploads" }, Prefix: { location: "urlPath", sentAs: "prefix" }, UploadIdMarker: { location: "urlPath", sentAs: "upload-id-marker" }, EncodingType: { location: "urlPath", sentAs: "encoding-type" } } }, ListMultipartUploadsOutput: { data: { type: "xml", xmlRoot: "ListMultipartUploadsResult" }, parameters: { Bucket: { location: "xml", sentAs: "Bucket" }, KeyMarker: { decode: !0, location: "xml", sentAs: "KeyMarker" }, UploadIdMarker: { location: "xml", sentAs: "UploadIdMarker" }, NextKeyMarker: { decode: !0, location: "xml", sentAs: "NextKeyMarker" }, Prefix: { decode: !0, location: "xml", sentAs: "Prefix" }, Delimiter: { decode: !0, location: "xml", sentAs: "Delimiter" }, NextUploadIdMarker: { location: "xml", sentAs: "NextUploadIdMarker" }, MaxUploads: { location: "xml", sentAs: "MaxUploads" }, IsTruncated: { location: "xml", sentAs: "IsTruncated" }, EncodingType: { location: "xml", sentAs: "EncodingType" }, Uploads: { type: "array", location: "xml", sentAs: "Upload", items: { type: "object", parameters: { UploadId: { sentAs: "UploadId" }, Key: { decode: !0, sentAs: "Key" }, Initiated: { sentAs: "Initiated" }, StorageClass: { sentAs: "StorageClass" }, Owner: uo, Initiator: zr } } }, CommonPrefixes: dr } }, UploadPart: { httpMethod: "PUT", parameters: { Bucket: { required: !0, location: "uri" }, Key: { required: !0, location: "uri" }, PartNumber: { required: !0, type: "number", location: "urlPath", sentAs: "partNumber" }, UploadId: { required: !0, location: "urlPath", sentAs: "uploadId" }, ContentMD5: { location: "header", sentAs: "Content-MD5" }, Body: { location: "body" }, SourceFile: { type: "srcFile" }, Offset: { type: "plain" }, PartSize: { type: "plain" }, SseC: { location: "header", sentAs: "server-side-encryption-customer-algorithm", withPrefix: !0 }, SseCKey: { location: "header", sentAs: "server-side-encryption-customer-key", type: "password", withPrefix: !0 }, ProgressCallback: { type: "plain" } } }, UploadPartOutput: { parameters: { ETag: { location: "header", sentAs: "etag" }, SseKms: { location: "header", sentAs: "server-side-encryption", withPrefix: !0 }, SseKmsKey: { location: "header", sentAs: "server-side-encryption-aws-kms-key-id", withPrefix: !0 }, SseC: { location: "header", sentAs: "server-side-encryption-customer-algorithm", withPrefix: !0 }, SseCKeyMd5: { location: "header", sentAs: "server-side-encryption-customer-key-MD5", withPrefix: !0 } } }, ListParts: { httpMethod: "GET", parameters: { Bucket: { required: !0, location: "uri" }, Key: { required: !0, location: "uri" }, UploadId: { required: !0, location: "urlPath", sentAs: "uploadId" }, MaxParts: { type: "number", location: "urlPath", sentAs: "max-parts" }, PartNumberMarker: { type: "number", location: "urlPath", sentAs: "part-number-marker" }, EncodingType: { location: "urlPath", sentAs: "encoding-type" } } }, ListPartsOutput: { data: { type: "xml", xmlRoot: "ListPartsResult" }, parameters: { Bucket: { location: "xml", sentAs: "Bucket" }, Key: { decode: !0, location: "xml", sentAs: "Key" }, UploadId: { location: "xml", sentAs: "UploadId" }, PartNumberMarker: { location: "xml", sentAs: "PartNumberMarker" }, NextPartNumberMarker: { location: "xml", sentAs: "NextPartNumberMarker" }, MaxParts: { location: "xml", sentAs: "MaxParts" }, IsTruncated: { location: "xml", sentAs: "IsTruncated" }, StorageClass: { location: "xml", sentAs: "StorageClass" }, EncodingType: { location: "urlPath", sentAs: "EncodingType" }, Initiator: zr, Owner: uo, Parts: { type: "array", location: "xml", sentAs: "Part", items: { type: "object", parameters: { PartNumber: { sentAs: "PartNumber" }, LastModified: { sentAs: "LastModified" }, ETag: { sentAs: "ETag" }, Size: { sentAs: "Size" } } } } } }, CopyPart: { httpMethod: "PUT", parameters: { Bucket: { required: !0, location: "uri" }, Key: { required: !0, location: "uri" }, PartNumber: { required: !0, location: "urlPath", sentAs: "partNumber", type: "number" }, UploadId: { required: !0, location: "urlPath", sentAs: "uploadId" }, CopySource: { required: !0, location: "header", sentAs: "copy-source", skipEncoding: !0, withPrefix: !0 }, CopySourceRange: { location: "header", sentAs: "copy-source-range", withPrefix: !0 }, SseC: { location: "header", sentAs: "server-side-encryption-customer-algorithm", withPrefix: !0 }, SseCKey: { location: "header", sentAs: "server-side-encryption-customer-key", type: "password", withPrefix: !0 }, CopySourceSseC: { location: "header", sentAs: "copy-source-server-side-encryption-customer-algorithm", withPrefix: !0 }, CopySourceSseCKey: { location: "header", sentAs: "copy-source-server-side-encryption-customer-key", type: "password", withPrefix: !0 } } }, CopyPartOutput: { data: { type: "xml", xmlRoot: "CopyPartResult" }, parameters: { LastModified: { location: "xml", sentAs: "LastModified" }, ETag: { location: "xml", sentAs: "ETag" }, SseKms: { location: "header", sentAs: "server-side-encryption", withPrefix: !0 }, SseKmsKey: { location: "header", sentAs: "server-side-encryption-aws-kms-key-id", withPrefix: !0 }, SseC: { location: "header", sentAs: "server-side-encryption-customer-algorithm", withPrefix: !0 }, SseCKeyMd5: { location: "header", sentAs: "server-side-encryption-customer-key-MD5", withPrefix: !0 } } }, AbortMultipartUpload: { httpMethod: "DELETE", parameters: { Bucket: { required: !0, location: "uri" }, Key: { required: !0, location: "uri" }, UploadId: { required: !0, location: "urlPath", sentAs: "uploadId" } } }, CompleteMultipartUpload: { httpMethod: "POST", data: { xmlRoot: "CompleteMultipartUpload" }, parameters: { Bucket: { required: !0, location: "uri" }, Key: { required: !0, location: "uri" }, UploadId: { required: !0, location: "urlPath", sentAs: "uploadId" }, EncodingType: { location: "urlPath", sentAs: "encoding-type" }, Parts: { required: !0, type: "array", location: "xml", sentAs: "Part", items: { type: "object", parameters: { PartNumber: { sentAs: "PartNumber" }, ETag: { sentAs: "ETag" } } } }, Callback: { location: "header", sentAs: "callback", withPrefix: !0, type: "callback", parameters: { CallbackUrl: { required: !0 }, CallbackBody: { required: !0 }, CallbackHost: {}, CallbackBodyType: {} } } } }, CompleteMultipartUploadOutput: { data: { type: "xml", xmlRoot: "CompleteMultipartUploadResult" }, parameters: { VersionId: { location: "header", sentAs: "version-id", withPrefix: !0 }, Location: { location: "xml", sentAs: "Location" }, EncodingType: { location: "xml", sentAs: "EncodingType" }, Bucket: { location: "xml", sentAs: "Bucket" }, Key: { decode: !0, location: "xml", sentAs: "Key" }, ETag: { location: "xml", sentAs: "ETag" }, SseKms: { location: "header", sentAs: "server-side-encryption", withPrefix: !0 }, SseKmsKey: { location: "header", sentAs: "server-side-encryption-aws-kms-key-id", withPrefix: !0 }, SseC: { location: "header", sentAs: "server-side-encryption-customer-algorithm", withPrefix: !0 }, SseCKeyMd5: { location: "header", sentAs: "server-side-encryption-customer-key-MD5", withPrefix: !0 } }, CallbackResponse: { location: "body", sentAs: "CallbackResponseBody" } }, GetBucketInventory: { httpMethod: "GET", urlPath: "inventory", parameters: { Bucket: { required: !0, location: "uri" } } }, GetBucketInventoryOutput: { data: { type: "xml", xmlRoot: "ListInventoryConfiguration" }, parameters: { Rules: { type: "array", location: "xml", sentAs: "InventoryConfiguration", items: { type: "object", parameters: { Id: { sentAs: "Id" }, IsEnabled: { sentAs: "IsEnabled" }, Filter: { type: "object", sentAs: "Filter", parameters: { Prefix: { sentAs: "Prefix" } } }, Destination: { type: "object", sentAs: "Destination", parameters: { Format: { sentAs: "Format" }, Bucket: { sentAs: "Bucket" }, Prefix: { sentAs: "Prefix" } } }, Schedule: { type: "object", sentAs: "Schedule", parameters: { Frequency: { sentAs: "Frequency" } } }, IncludedObjectVersions: { sentAs: "IncludedObjectVersions" }, OptionalFields: { type: "object", location: "xml", sentAs: "OptionalFields", parameters: { Field: { type: "array", sentAs: "Field", items: { type: "string" } } } }, LastExportTime: { sentAs: "LastExportTime" } } } } } }, SetBucketInventory: { httpMethod: "PUT", urlPath: "inventory", parameters: { Bucket: { required: !0, location: "uri" }, Id: { location: "urlPath", sentAs: "id" }, InventoryConfiguration: xr } }, SetBucketInventoryOutput: { data: { type: "xml", xmlRoot: "InventoryConfiguration" }, parameters: { InventoryConfiguration: xr } }, DeleteInventory: { httpMethod: "DELETE", urlPath: "inventory", parameters: { Bucket: { required: !0, location: "uri" }, Id: { location: "urlPath", sentAs: "id" } } }, DeleteInventoryOutput: { data: { type: "xml", xmlRoot: "InventoryConfiguration" }, parameters: { InventoryConfiguration: xr } }, GetBucketEncryption: { httpMethod: "GET", urlPath: "encryption", parameters: { Bucket: { required: !0, location: "uri" } } }, GetBucketEncryptionOutput: { data: { type: "xml", xmlRoot: "ServerSideEncryptionConfiguration" }, parameters: { Rule: { type: "object", location: "xml", sentAs: "Rule", parameters: { ApplyServerSideEncryptionByDefault: { type: "object", sentAs: "ApplyServerSideEncryptionByDefault", parameters: { SSEAlgorithm: { sentAs: "SSEAlgorithm" }, KMSMasterKeyID: { sentAs: "KMSMasterKeyID" }, ProjectID: { sentAs: "ProjectID" } } } } } } }, SetBucketEncryption: { httpMethod: "PUT", urlPath: "encryption", data: { xmlRoot: "ServerSideEncryptionConfiguration" }, parameters: { Bucket: { required: !0, location: "uri" }, Rule: po } }, SetBucketEncryptionOutput: { data: { type: "xml", xmlRoot: "ServerSideEncryptionConfiguration" }, parameters: { Rule: po } }, DeleteBucketEncryption: { httpMethod: "DELETE", urlPath: "encryption", parameters: { Bucket: { required: !0, location: "uri" } } }, DeleteBucketEncryptionOutput: { data: { type: "xml", xmlRoot: "ServerSideEncryptionConfiguration" }, parameters: { Rule: po } }, GetBucketRequesterPay: { httpMethod: "GET", urlPath: "requestPayment", parameters: { Bucket: { required: !0, location: "uri" } } }, GetBucketRequesterPayOutput: { data: { type: "xml", xmlRoot: "RequestPaymentConfiguration" }, parameters: { Payer: { location: "xml", sentAs: "Payer" } } }, SetBucketRequesterPay: { httpMethod: "PUT", urlPath: "requestPayment", data: { xmlRoot: "RequestPaymentConfiguration" }, parameters: { Bucket: { required: !0, location: "uri" }, Payer: { location: "xml", sentAs: "Payer" } } }, SetBucketRequesterPayOutput: { data: { type: "xml", xmlRoot: "RequestPaymentConfiguration" }, parameters: { Payer: { location: "xml", sentAs: "Payer" } } }, OptionsBucket: { httpMethod: "OPTIONS", parameters: { Bucket: { required: !0, location: "uri" }, Origin: { required: !0, location: "header", sentAs: "Origin" }, AccessControlRequestMethods: { required: !0, type: "array", location: "header", sentAs: "Access-Control-Request-Method", items: { type: "string" } }, AccessControlRequestHeaders: { type: "array", location: "header", sentAs: "Access-Control-Request-Headers", items: { type: "string" } } } }, OptionsBucketOutput: { parameters: { AllowOrigin: { location: "header", sentAs: "access-control-allow-origin" }, AllowHeader: { location: "header", sentAs: "access-control-allow-headers" }, AllowMethod: { location: "header", sentAs: "access-control-allow-methods" }, ExposeHeader: { location: "header", sentAs: "access-control-expose-headers" }, MaxAgeSeconds: { location: "header", sentAs: "access-control-max-age" } } }, OptionsObject: { httpMethod: "OPTIONS", parameters: { Bucket: { required: !0, location: "uri" }, Key: { required: !0, location: "uri" }, Origin: { required: !0, location: "header", sentAs: "Origin" }, AccessControlRequestMethods: { required: !0, type: "array", location: "header", sentAs: "Access-Control-Request-Method", items: { type: "string" } }, AccessControlRequestHeaders: { type: "array", location: "header", sentAs: "Access-Control-Request-Headers", items: { type: "string" } } } }, OptionsObjectOutput: { parameters: { AllowOrigin: { location: "header", sentAs: "access-control-allow-origin" }, AllowHeader: { location: "header", sentAs: "access-control-allow-headers" }, AllowMethod: { location: "header", sentAs: "access-control-allow-methods" }, ExposeHeader: { location: "header", sentAs: "access-control-expose-headers" }, MaxAgeSeconds: { location: "header", sentAs: "access-control-max-age" } } }, SetMirrorBackToSource: { httpMethod: "PUT", urlPath: "mirrorBackToSource", parameters: { Bucket: { required: !0, location: "uri" }, ApiPath: { location: "uri" }, Rules: { required: !0, location: "body" } } }, SetMirrorBackToSourceOutput: { data: { type: "body" }, parameters: { Rules: { location: "body" } } }, GetMirrorBackToSource: { httpMethod: "GET", urlPath: "mirrorBackToSource", parameters: { Bucket: { required: !0, location: "uri" }, ApiPath: { location: "uri" } } }, GetMirrorBackToSourceOutput: { data: { type: "body" }, parameters: { Rules: { location: "body" } } }, deleteMirrorBackToSource: { httpMethod: "DELETE", urlPath: "mirrorBackToSource", parameters: { Bucket: { required: !0, location: "uri" }, ApiPath: { location: "uri" } } }, GetBucketDirectColdAccess: { httpMethod: "GET", urlPath: "directcoldaccess", parameters: { Bucket: { required: !0, location: "uri" } } }, GetBucketDirectColdAccessOutput: { data: { type: "xml", xmlRoot: "DirectColdAccessConfiguration" }, parameters: { Status: { location: "xml", sentAs: "Status" } } }, SetBucketDirectColdAccess: { httpMethod: "PUT", urlPath: "directcoldaccess", data: { xmlRoot: "DirectColdAccessConfiguration", md5: !0 }, parameters: { Bucket: { required: !0, location: "uri" }, Status: { required: !0, location: "xml", sentAs: "Status" } } }, SetBucketDirectColdAccessOutput: { data: { type: "xml", xmlRoot: "DirectColdAccessConfiguration" }, parameters: { Status: { location: "xml", sentAs: "Status" } } }, DeleteBucketDirectColdAccess: { httpMethod: "DELETE", urlPath: "directcoldaccess", parameters: { Bucket: { required: !0, location: "uri" } } }, DeleteBucketDirectColdAccessOutput: { data: { type: "xml", xmlRoot: "DirectColdAccessConfiguration" }, parameters: { Status: { location: "xml", sentAs: "Status" } } }, GetBucketCustomDomain: { httpMethod: "GET", urlPath: "customdomain", parameters: { Bucket: { required: !0, location: "uri" } } }, GetBucketCustomDomainOutput: { data: { type: "xml", xmlRoot: "ListBucketCustomDomainsResult" }, parameters: { Domains: { location: "xml", type: "array", sentAs: "Domains", items: { type: "object", parameters: { DomainName: { sentAs: "DomainName" }, Value: { sentAs: "CreateTime" } } } } } }, SetBucketCustomDomain: { httpMethod: "PUT", parameters: { Bucket: { required: !0, location: "uri" }, DomainName: { location: "urlPath", sentAs: "customdomain" } } }, DeleteBucketCustomDomain: { httpMethod: "DELETE", parameters: { Bucket: { required: !0, location: "uri" }, DomainName: { location: "urlPath", sentAs: "customdomain" } } }, GetCDNNotifyConfiguration: { httpMethod: "GET", urlPath: "CDNNotifyConfiguration", parameters: { Bucket: { required: !0, location: "uri" } } }, GetCDNNotifyConfigurationOutput: { data: { type: "xml", xmlRoot: "CDNNotifyConfiguration" }, parameters: { Domain: { location: "xml", type: "array", sentAs: "Domain", items: { type: "object", parameters: { Name: { sentAs: "Name" }, Events: { type: "array", items: { type: "adapter" }, sentAs: "Event" } } } } } }, SetCdnNotifyConfiguration: { httpMethod: "PUT", urlPath: "CDNNotifyConfiguration", data: { xmlRoot: "CDNNotifyConfiguration", xmlAllowEmpty: !0 }, parameters: { Bucket: { required: !0, location: "uri" }, Domain: { location: "xml", sentAs: "Domain", type: "array", items: { type: "object", parameters: { Name: { type: "string", sentAs: "Name" }, Event: { type: "array", items: { type: "adapter" }, sentAs: "Event" } } } } } }, GetQuota: { httpMethod: "GET", urlPath: "quota" }, GetQuotaOutput: { data: { type: "xml", xmlRoot: "MaxBucketNumber" }, parameters: { Size: { location: "xml", sentAs: "Number" } } }, GetWorkflowTrigger: { httpMethod: "GET", urlPath: "triggerpolicy", parameters: { Bucket: { required: !0, location: "uri" }, ApiPath: { location: "uri" } } }, GetWorkflowTriggerOutput: { data: { type: "body" }, parameters: { rules: { location: "body" } } }, DeleteWorkflowTrigger: { httpMethod: "DELETE", urlPath: "triggerpolicy", parameters: { Bucket: { required: !0, location: "uri" }, ApiPath: { location: "uri" } } }, CreateWorkflowTrigger: { httpMethod: "PUT", urlPath: "triggerpolicy", parameters: { Bucket: { required: !0, location: "uri" }, ApiPath: { location: "uri" }, Rule: { required: !0, location: "body" } } }, RestoreFailedWorkflowExecution: { httpMethod: "PUT", parameters: { ApiPath: { location: "uri" }, Other_parameter: { required: !0, location: "uri", sentAs: "execution_name" }, GraphName: { required: !0, location: "urlPath", sentAs: "x-workflow-graph-name" } } }, CreateTemplate: { httpMethod: "POST", parameters: { ApiPath: { location: "uri" }, Template: { required: !0, location: "body" } } }, CreateWorkflow: { httpMethod: "POST", parameters: { ApiPath: { location: "uri" }, Other_parameter: { required: !0, location: "uri", sentAs: "graph_name" }, Workflow_create: { location: "urlPath", sentAs: "x-workflow-create" }, Workflow: { required: !0, location: "body" } } }, DeleteWorkflow: { httpMethod: "DELETE", parameters: { ApiPath: { location: "uri" }, Other_parameter: { location: "uri", sentAs: "graph_name" } } }, UpdateWorkflow: { httpMethod: "PUT", parameters: { ApiPath: { location: "uri" }, Other_parameter: { location: "uri", sentAs: "graph_name" }, Graph_name: { required: !0, location: "body" } } }, GetWorkflowList: { httpMethod: "GET", parameters: { ApiPath: { location: "uri" }, Other_parameter: { location: "uri", sentAs: "graph_name_prefix" }, XObsLimit: { type: "number", location: "urlPath", sentAs: "x-workflow-limit" }, XObsPrefix: { location: "urlPath", sentAs: "x-workflow-prefix" }, XObsStart: { type: "number", location: "urlPath", sentAs: "x-workflow-start" } } }, GetWorkflowListOutput: { data: { type: "body" }, parameters: { workflows: { location: "body" } } }, GetWorkflowTemplateList: { httpMethod: "GET", parameters: { ApiPath: { location: "uri" }, Other_parameter: { location: "uri", sentAs: "template_name_prefix" }, Start: { type: "number", location: "urlPath", sentAs: "x-workflow-start" }, Limit: { type: "number", location: "urlPath", sentAs: "x-workflow-limit" }, "X-workflow-prefix": { location: "urlPath", sentAs: "x-workflow-prefix" } } }, GetWorkflowTemplateListOutput: { data: { type: "body" }, parameters: { templates: { location: "body" } } }, GetWorkflowInstanceList: { httpMethod: "GET", parameters: { ApiPath: { location: "uri" }, Other_parameter: { location: "uri", sentAs: "execution_name_prefix" }, Start: { type: "number", location: "urlPath", sentAs: "x-workflow-start" }, Limit: { type: "number", location: "urlPath", sentAs: "x-workflow-limit" }, Graph_name: { location: "urlPath", sentAs: "x-workflow-graph-name" }, State: { location: "urlPath", sentAs: "x-workflow-execution-state" }, "X-workflow-prefix": { location: "urlPath", sentAs: "x-workflow-prefix" } } }, GetWorkflowInstanceListOutput: { data: { type: "body" }, parameters: { instances: { location: "body" } } }, DeleteTemplate: { httpMethod: "DELETE", parameters: { ApiPath: { location: "uri" }, Other_parameter: { location: "uri", sentAs: "template_name" } } }, GetActionTemplates: { httpMethod: "GET", parameters: { ApiPath: { location: "uri" }, Other_parameter: { location: "uri", sentAs: "template_name_prefix" }, XObsPrefix: { location: "urlPath", sentAs: "x-workflow-prefix" }, XObsCategory: { type: "String", location: "urlPath", sentAs: "x-workflow-category" } } }, GetActionTemplatesOutput: { data: { type: "body" }, parameters: { templates: { location: "body" } } }, GetWorkflowAuthorization: { httpMethod: "GET", parameters: { ApiPath: { location: "uri" } } }, GetWorkflowAuthorizationOutput: { data: { type: "body" }, parameters: { authorization: { location: "body" } } }, OpenWorkflowAuthorization: { httpMethod: "POST", parameters: { ApiPath: { location: "uri" } } }, CreateOnlineDecom: { httpMethod: "PUT", urlPath: "obscompresspolicy", parameters: { Bucket: { required: !0, location: "uri" }, Decom: { required: !0, location: "body" } } }, GetOnlineDecom: { httpMethod: "GET", urlPath: "obscompresspolicy", parameters: { Bucket: { required: !0, location: "uri" } } }, GetOnlineDecomOutput: { data: { type: "body" }, parameters: { Decom: { location: "body" } } }, DeleteOnlineDecom: { httpMethod: "DELETE", urlPath: "obscompresspolicy", parameters: { Bucket: { required: !0, location: "uri" } } }, GetPublicationTemplates: { httpMethod: "GET", parameters: { ApiPath: { location: "uri" }, OtherParameter: { location: "uri", sentAs: "template_name_prefix" }, XObsCategory: { location: "urlPath", sentAs: "x-workflow-category" }, XObsOtatus: { location: "urlPath", sentAs: "x-workflow-status" }, XObsPrefix: { location: "urlPath", sentAs: "x-workflow-prefix" } } }, GetPublicationTemplatesOutput: { data: { type: "body" }, parameters: { PublishedTemplates: { location: "body" } } }, GetPublicationTemplateDetail: { httpMethod: "GET", parameters: { ApiPath: { location: "uri" }, OtherParameter: { location: "uri", sentAs: "template_name" } } }, GetPublicationTemplateDetailOutput: { data: { type: "body" }, parameters: { PublishTemplate: { location: "body" } } }, GetWorkflowAgreements: { httpMethod: "GET", parameters: { ApiPath: { location: "uri" }, XWorkflowType: { required: !0, location: "urlPath", sentAs: "x-workflow-type" } } }, GetWorkflowAgreementsOutput: { data: { type: "body" }, parameters: { authorization: { location: "body" } } }, OpenWorkflowAgreements: { httpMethod: "POST", parameters: { ApiPath: { location: "uri" }, XWorkflowType: { required: !0, location: "urlPath", sentAs: "x-workflow-type" } } }, CreateMyActionTemplate: { httpMethod: "POST", parameters: { ApiPath: { location: "uri" }, OtherParameter: { location: "uri", sentAs: "template_name" }, ActionTemplate: { required: !0, location: "body" } } }, CreateMyActionTemplateOutput: { data: { type: "body" }, parameters: { ActionTemplate: { location: "body" } } }, GetMyActionTemplates: { httpMethod: "GET", parameters: { ApiPath: { location: "uri" }, OtherParameter: { location: "uri", sentAs: "template_name_prefix" }, XObsCategory: { location: "urlPath", sentAs: "x-workflow-category" }, XObsOtatus: { location: "urlPath", sentAs: "x-workflow-status" }, XObsPrefix: { location: "urlPath", sentAs: "x-workflow-prefix" } } }, GetMyActionTemplatesOutput: { data: { type: "body" }, parameters: { ActionTemplates: { location: "body" } } }, GetMyactiontemplateDetail: { httpMethod: "GET", parameters: { ApiPath: { location: "uri" }, OtherParameter: { location: "uri", sentAs: "template_name" } } }, GetMyactiontemplateDetailOutput: { data: { type: "body" }, parameters: { ActionTemplate: { location: "body" } } }, UpdateMyActionTemplate: { httpMethod: "PUT", parameters: { ApiPath: { location: "uri" }, OtherParameter: { location: "uri", sentAs: "template_name" }, ActionTemplate: { required: !0, location: "body" } } }, UpdateMyActionTemplateOutput: { data: { type: "body" }, parameters: { ActionTemplate: { location: "body" } } }, DeleteMyActionTemplate: { httpMethod: "DELETE", parameters: { ApiPath: { location: "uri" }, OtherParameter: { location: "uri", sentAs: "template_name" } } }, ForbidMyActionTemplate: { httpMethod: "DELETE", parameters: { ApiPath: { location: "uri" }, OtherParameter: { location: "uri", sentAs: "template_name" }, XObsForbid: { location: "urlPath", sentAs: "x-workflow-forbid" } } }, UpdatePublicActionTemplate: { httpMethod: "PUT", parameters: { ApiPath: { location: "uri" }, OtherParameter: { location: "uri", sentAs: "template_name" }, PublicAction: { required: !0, location: "body" } } }, GetOmPublicActionTemplates: { httpMethod: "GET", parameters: { ApiPath: { location: "uri" }, OtherParameter: { location: "uri", sentAs: "template_name_prefix" }, XObsCategory: { location: "urlPath", sentAs: "x-workflow-category" }, XObsOtatus: { location: "urlPath", sentAs: "x-workflow-status" }, XObsPrefix: { location: "urlPath", sentAs: "x-workflow-prefix" } } }, GetOmPublicActionTemplatesOutput: { data: { type: "body" }, parameters: { Templates: { location: "body" } } }, SetBucketAlias: { httpMethod: "PUT", urlPath: "obsbucketalias", data: { xmlRoot: "CreateBucketAlias" }, parameters: { Bucket: { required: !0, location: "uri" }, BucketList: { location: "xml", type: "object", sentAs: "BucketList", parameters: { Bucket: { location: "xml", type: "array", items: { parameters: { sentAs: "Bucket" } } } } } } }, GetBucketAlias: { httpMethod: "GET", urlPath: "obsalias", parameters: { Bucket: { required: !0, location: "uri" } } }, GetBucketAliasOutput: { data: { type: "xml", xmlRoot: "AliasList" }, parameters: { BucketAlias: { location: "xml", type: "object", sentAs: "BucketAlias", parameters: { Alias: { sentAs: "Alias" }, BucketList: { sentAs: "Bucket", location: "xml", type: "array", wrapper: "BucketList", items: { type: "string" } } } } } }, DeleteBucketAlias: { httpMethod: "DELETE", urlPath: "obsbucketalias", parameters: { Bucket: { required: !0, location: "uri" } } }, BindBucketAlias: { httpMethod: "PUT", urlPath: "obsalias", data: { xmlRoot: "AliasList" }, parameters: { Bucket: { required: !0, location: "uri" }, Alias: { location: "xml", type: "string", sentAs: "Alias" } } }, BindBucketAliasOutput: { data: { xmlRoot: "AliasList" }, parameters: { Bucket: { required: !0, location: "uri" }, Alias: { location: "xml", type: "string", sentAs: "Alias" } } }, UnbindBucketAlias: { httpMethod: "DELETE", urlPath: "obsalias", parameters: { Bucket: { required: !0, location: "uri" } } }, ListBucketsAlias: { httpMethod: "GET", urlPath: "obsbucketalias" }, ListBucketsAliasOutput: { data: { type: "xml", xmlRoot: "ListBucketAliasResult" }, parameters: { BucketAliasList: { location: "xml", sentAs: "BucketAliasList", type: "object", parameters: { BucketAlias: { location: "xml", type: "array", sentAs: "BucketAlias", items: { type: "object", parameters: { Alias: { sentAs: "Alias" }, CreationDate: { sentAs: "CreationDate" }, BucketList: { location: "xml", type: "object", sentAs: "BucketList", parameters: { Bucket: { location: "xml", type: "array", items: { parameters: { sentAs: "Bucket" } } } } } } } } } }, Owner: { location: "xml", sentAs: "Owner", type: "object", parameters: { ID: { sentAs: "ID" } } } } } };
@@ -58755,15 +58755,15 @@ function Xin() {
               }
               function zt(A, S) {
                 (S == null || S > A.length) && (S = A.length);
-                for (var W = 0, Z = new Array(S); W < S; W++) Z[W] = A[W];
-                return Z;
+                for (var W = 0, X = new Array(S); W < S; W++) X[W] = A[W];
+                return X;
               }
               var wn = function(A, S) {
                 var W = new et(A === "sha1" ? "SHA-1" : A === "sha512" ? "SHA-512" : "SHA-256", "TEXT");
-                return W.setHMACKey(S, S instanceof ArrayBuffer ? "ARRAYBUFFER" : "TEXT"), { update: function(Z) {
-                  return W.update(Z), this;
-                }, digest: function(Z) {
-                  return Z === "hex" ? W.getHMAC("HEX") : Z === "base64" ? W.getHMAC("B64") : W.getHMAC("ARRAYBUFFER");
+                return W.setHMACKey(S, S instanceof ArrayBuffer ? "ARRAYBUFFER" : "TEXT"), { update: function(X) {
+                  return W.update(X), this;
+                }, digest: function(X) {
+                  return X === "hex" ? W.getHMAC("HEX") : X === "base64" ? W.getHMAC("B64") : W.getHMAC("ARRAYBUFFER");
                 } };
               }, Sn = function(A) {
                 if (A === "md5") return { update: function(W) {
@@ -58781,20 +58781,20 @@ function Xin() {
               function Co(A, S, W) {
                 if ((A = String(A)).length === 0) return "";
                 if (W) return A;
-                var Z;
+                var X;
                 if (S) {
-                  Z = [];
+                  X = [];
                   var Ae, he = (function(Be, Pe) {
-                    var Qe = typeof Symbol < "u" && Be[Symbol.iterator] || Be["@@iterator"];
-                    if (!Qe) {
-                      if (Array.isArray(Be) || (Qe = (function(nt, kt) {
+                    var qe = typeof Symbol < "u" && Be[Symbol.iterator] || Be["@@iterator"];
+                    if (!qe) {
+                      if (Array.isArray(Be) || (qe = (function(nt, kt) {
                         if (nt) {
                           if (typeof nt == "string") return zt(nt, kt);
                           var Bt = Object.prototype.toString.call(nt).slice(8, -1);
                           return Bt === "Object" && nt.constructor && (Bt = nt.constructor.name), Bt === "Map" || Bt === "Set" ? Array.from(nt) : Bt === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(Bt) ? zt(nt, kt) : void 0;
                         }
                       })(Be))) {
-                        Qe && (Be = Qe);
+                        qe && (Be = qe);
                         var ht = 0, Je = function() {
                         };
                         return { s: Je, n: function() {
@@ -58808,15 +58808,15 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     }
                     var $e, ct = !0, yt = !1;
                     return { s: function() {
-                      Qe = Qe.call(Be);
+                      qe = qe.call(Be);
                     }, n: function() {
-                      var nt = Qe.next();
+                      var nt = qe.next();
                       return ct = nt.done, nt;
                     }, e: function(nt) {
                       yt = !0, $e = nt;
                     }, f: function() {
                       try {
-                        ct || Qe.return == null || Qe.return();
+                        ct || qe.return == null || qe.return();
                       } finally {
                         if (yt) throw $e;
                       }
@@ -58825,25 +58825,25 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   try {
                     for (he.s(); !(Ae = he.n()).done; ) {
                       var te = Ae.value;
-                      Z.push(S.indexOf(te) >= 0 ? te : encodeURIComponent(te));
+                      X.push(S.indexOf(te) >= 0 ? te : encodeURIComponent(te));
                     }
                   } catch (Be) {
                     he.e(Be);
                   } finally {
                     he.f();
                   }
-                  Z = Z.join("");
-                } else Z = encodeURIComponent(A);
-                return Z.replace(/!/g, "%21").replace(/\*/g, "%2A").replace(/'/g, "%27").replace(/\(/g, "%28").replace(/\)/g, "%29");
+                  X = X.join("");
+                } else X = encodeURIComponent(A);
+                return X.replace(/!/g, "%21").replace(/\*/g, "%2A").replace(/'/g, "%27").replace(/\(/g, "%28").replace(/\)/g, "%29");
               }
               function zs(A) {
                 return JSON ? JSON.stringify(A) : "";
               }
               function r4(A, S) {
                 var W = {};
-                for (var Z in S) if ({}.hasOwnProperty.call(S, Z)) {
-                  var Ae = String(Z).toLowerCase();
-                  Ae.indexOf(A) === 0 && (W[Ae.slice(A.length)] = S[Z]);
+                for (var X in S) if ({}.hasOwnProperty.call(S, X)) {
+                  var Ae = String(X).toLowerCase();
+                  Ae.indexOf(A) === 0 && (W[Ae.slice(A.length)] = S[X]);
                 }
                 return W;
               }
@@ -58862,42 +58862,42 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 }
               }
               function jm(A) {
-                var S = new Date(Date.parse(A)), W = S.getUTCHours(), Z = S.getUTCMinutes(), Ae = S.getUTCSeconds(), he = S.getUTCDate(), te = S.getUTCMonth() + 1, Be = "";
-                return Be += S.getUTCFullYear() + "-", te < 10 && (Be += "0"), Be += te + "-", he < 10 && (Be += "0"), Be += he + "T", W < 10 && (Be += "0"), Be += W + ":", Z < 10 && (Be += "0"), Be += Z + ":", Ae < 10 && (Be += "0"), Be + (Ae + "Z");
+                var S = new Date(Date.parse(A)), W = S.getUTCHours(), X = S.getUTCMinutes(), Ae = S.getUTCSeconds(), he = S.getUTCDate(), te = S.getUTCMonth() + 1, Be = "";
+                return Be += S.getUTCFullYear() + "-", te < 10 && (Be += "0"), Be += te + "-", he < 10 && (Be += "0"), Be += he + "T", W < 10 && (Be += "0"), Be += W + ":", X < 10 && (Be += "0"), Be += X + ":", Ae < 10 && (Be += "0"), Be + (Ae + "Z");
               }
               function Xl(A) {
-                var S = new Date(Date.parse(A)), W = S.getUTCHours(), Z = S.getUTCMinutes(), Ae = S.getUTCSeconds(), he = S.getUTCDate(), te = S.getUTCMonth() + 1, Be = "", Pe = "";
-                return Be += S.getUTCFullYear(), te < 10 && (Be += "0"), Be += te, he < 10 && (Be += "0"), Pe += (Be += he) + "T", W < 10 && (Pe += "0"), Pe += W, Z < 10 && (Pe += "0"), Pe += Z, Ae < 10 && (Pe += "0"), [Be, Pe += Ae + "Z"];
+                var S = new Date(Date.parse(A)), W = S.getUTCHours(), X = S.getUTCMinutes(), Ae = S.getUTCSeconds(), he = S.getUTCDate(), te = S.getUTCMonth() + 1, Be = "", Pe = "";
+                return Be += S.getUTCFullYear(), te < 10 && (Be += "0"), Be += te, he < 10 && (Be += "0"), Pe += (Be += he) + "T", W < 10 && (Pe += "0"), Pe += W, X < 10 && (Pe += "0"), Pe += X, Ae < 10 && (Pe += "0"), [Be, Pe += Ae + "Z"];
               }
               function Ym(A) {
                 var S = [], W = {};
-                for (var Z in A) ({}).hasOwnProperty.call(A, Z) && (S.push(Z.toLowerCase()), W[Z.toLowerCase()] = A[Z]);
+                for (var X in A) ({}).hasOwnProperty.call(A, X) && (S.push(X.toLowerCase()), W[X.toLowerCase()] = A[X]);
                 S = S.sort();
                 for (var Ae = "", he = "", te = 0; te < S.length; te++) te !== 0 && (Ae += ";"), Ae += S[te], he += S[te] + ":" + W[S[te]] + `
 `;
                 return [Ae, he];
               }
-              function Km(A, S, W, Z) {
+              function Km(A, S, W, X) {
                 var Ae = wn("sha256", "AWS4" + S).update(A).digest(), he = wn("sha256", Ae).update(W).digest(), te = wn("sha256", he).update("s3").digest(), Be = wn("sha256", te).update("aws4_request").digest();
-                return wn("sha256", Be).update(Z).digest("hex");
+                return wn("sha256", Be).update(X).digest("hex");
               }
-              function zm(A, S, W, Z, Ae) {
+              function zm(A, S, W, X, Ae) {
                 var he = `AWS4-HMAC-SHA256
 `;
                 return he += S + `
-`, he += A + "/" + Z + `/s3/aws4_request
-`, Km(A, W, Z, he += Sn("sha256").update(Ae).digest("hex"));
+`, he += A + "/" + X + `/s3/aws4_request
+`, Km(A, W, X, he += Sn("sha256").update(Ae).digest("hex"));
               }
               function Rn(A) {
                 this.log = A, this.ak = null, this.sk = null, this.securityToken = null, this.isSecure = !0, this.server = null, this.pathStyle = !1, this.signatureContext = null, this.isSignatureNegotiation = !0, this.bucketSignatureCache = {}, this.region = "region", this.port = null, this.timeout = 300, this.obsSdkVersion = "3.22.3", this.isCname = !1, this.bucketEventEmitters = {}, this.useRawXhr = !1;
               }
               Rn.prototype.encodeURIWithSafe = Co, Rn.prototype.mimeTypes = { "7z": "application/x-7z-compressed", aac: "audio/x-aac", ai: "application/postscript", aif: "audio/x-aiff", asc: "text/plain", asf: "video/x-ms-asf", atom: "application/atom+xml", avi: "video/x-msvideo", bmp: "image/bmp", bz2: "application/x-bzip2", cer: "application/pkix-cert", crl: "application/pkix-crl", crt: "application/x-x509-ca-cert", css: "text/css", csv: "text/csv", cu: "application/cu-seeme", deb: "application/x-debian-package", doc: "application/msword", docx: "application/vnd.openxmlformats-officedocument.wordprocessingml.document", dvi: "application/x-dvi", eot: "application/vnd.ms-fontobject", eps: "application/postscript", epub: "application/epub+zip", etx: "text/x-setext", flac: "audio/flac", flv: "video/x-flv", gif: "image/gif", gz: "application/gzip", htm: "text/html", html: "text/html", ico: "image/x-icon", ics: "text/calendar", ini: "text/plain", iso: "application/x-iso9660-image", jar: "application/java-archive", jpe: "image/jpeg", jpeg: "image/jpeg", jpg: "image/jpeg", js: "text/javascript", json: "application/json", latex: "application/x-latex", log: "text/plain", m4a: "audio/mp4", m4v: "video/mp4", mid: "audio/midi", midi: "audio/midi", mov: "video/quicktime", mp3: "audio/mpeg", mp4: "video/mp4", mp4a: "audio/mp4", mp4v: "video/mp4", mpe: "video/mpeg", mpeg: "video/mpeg", mpg: "video/mpeg", mpg4: "video/mp4", oga: "audio/ogg", ogg: "audio/ogg", ogv: "video/ogg", ogx: "application/ogg", pbm: "image/x-portable-bitmap", pdf: "application/pdf", pgm: "image/x-portable-graymap", png: "image/png", pnm: "image/x-portable-anymap", ppm: "image/x-portable-pixmap", ppt: "application/vnd.ms-powerpoint", pptx: "application/vnd.openxmlformats-officedocument.presentationml.presentation", ps: "application/postscript", qt: "video/quicktime", rar: "application/x-rar-compressed", ras: "image/x-cmu-raster", rss: "application/rss+xml", rtf: "application/rtf", sgm: "text/sgml", sgml: "text/sgml", svg: "image/svg+xml", swf: "application/x-shockwave-flash", tar: "application/x-tar", tif: "image/tiff", tiff: "image/tiff", torrent: "application/x-bittorrent", ttf: "application/x-font-ttf", txt: "text/plain", wav: "audio/x-wav", webm: "video/webm", wma: "audio/x-ms-wma", wmv: "video/x-ms-wmv", woff: "application/x-font-woff", wsdl: "application/wsdl+xml", xbm: "image/x-xbitmap", xls: "application/vnd.ms-excel", xlsx: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", xml: "application/xml", xpm: "image/x-xpixmap", xwd: "image/x-xwindowdump", yaml: "text/yaml", yml: "text/yaml", zip: "application/zip" }, Rn.prototype.refresh = function(A, S, W) {
                 this.ak = A ? String(A).trim() : null, this.sk = S ? String(S).trim() : null, this.securityToken = W ? String(W).trim() : null;
-              }, Rn.prototype.initFactory = function(A, S, W, Z, Ae, he, te, Be, Pe, Qe, ht, Je, $e, ct, yt, nt) {
-                if (this.refresh(A, S, Qe), this.urlPrefix = $e || "", this.regionDomains = ct || null, this.setRequestHeaderHook = yt || null, !Z) throw new Error("Server is not set");
-                (Z = String(Z).trim()).indexOf("https://") === 0 ? (Z = Z.slice(8), W = !0) : Z.indexOf("http://") === 0 && (Z = Z.slice(7), W = !1);
-                for (var kt = Z.lastIndexOf("/"); kt >= 0; ) kt = (Z = Z.slice(0, kt)).lastIndexOf("/");
-                (kt = Z.indexOf(":")) >= 0 && (Be = Z.slice(kt + 1), Z = Z.slice(0, kt)), this.server = Z, /^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$/.test(this.server) && (Ae = !0), W !== void 0 && (this.isSecure = W), Ae !== void 0 && (this.pathStyle = Ae), he = he !== void 0 ? String(he).trim().toLowerCase() : "obs", ht !== void 0 && (this.isSignatureNegotiation = ht), this.isCname = Je, (this.pathStyle || this.isCname) && (this.isSignatureNegotiation = !1, he === "obs" && (he = "v2")), this.signatureContext = he === "obs" ? Hm : rd, te !== void 0 && (this.region = String(te)), this.port = Be ? parseInt(Be, 10) : this.isSecure ? 443 : 80, Pe !== void 0 && (this.timeout = parseInt(Pe, 10)), nt !== void 0 && (this.useRawXhr = nt);
+              }, Rn.prototype.initFactory = function(A, S, W, X, Ae, he, te, Be, Pe, qe, ht, Je, $e, ct, yt, nt) {
+                if (this.refresh(A, S, qe), this.urlPrefix = $e || "", this.regionDomains = ct || null, this.setRequestHeaderHook = yt || null, !X) throw new Error("Server is not set");
+                (X = String(X).trim()).indexOf("https://") === 0 ? (X = X.slice(8), W = !0) : X.indexOf("http://") === 0 && (X = X.slice(7), W = !1);
+                for (var kt = X.lastIndexOf("/"); kt >= 0; ) kt = (X = X.slice(0, kt)).lastIndexOf("/");
+                (kt = X.indexOf(":")) >= 0 && (Be = X.slice(kt + 1), X = X.slice(0, kt)), this.server = X, /^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$/.test(this.server) && (Ae = !0), W !== void 0 && (this.isSecure = W), Ae !== void 0 && (this.pathStyle = Ae), he = he !== void 0 ? String(he).trim().toLowerCase() : "obs", ht !== void 0 && (this.isSignatureNegotiation = ht), this.isCname = Je, (this.pathStyle || this.isCname) && (this.isSignatureNegotiation = !1, he === "obs" && (he = "v2")), this.signatureContext = he === "obs" ? Hm : rd, te !== void 0 && (this.region = String(te)), this.port = Be ? parseInt(Be, 10) : this.isSecure ? 443 : 80, Pe !== void 0 && (this.timeout = parseInt(Pe, 10)), nt !== void 0 && (this.useRawXhr = nt);
               }, Rn.prototype.SseKmsAdapter = function(A, S) {
                 A = A || "";
                 var W = (A = String(A)).indexOf("aws:");
@@ -58915,28 +58915,28 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               }, Rn.prototype.ACLAdapter = function(A, S) {
                 return A = A || "", A = String(A).toLowerCase(), S.signature === "obs" ? So.indexOf(A) >= 0 ? A : "" : (A === "public-read-delivered" ? A = "public-read" : A === "public-read-write-delivered" && (A = "public-read-write"), Wr.indexOf(A) >= 0 ? A : "");
               }, Rn.prototype.doExec = function(A, S, W) {
-                var Z = this.makeParam(A, S);
-                if ("err" in Z) return W(Z.err, null);
-                this.sendRequest(A, Z, W);
-              }, Rn.prototype.doNegotiation = function(A, S, W, Z, Ae, he) {
+                var X = this.makeParam(A, S);
+                if ("err" in X) return W(X.err, null);
+                this.sendRequest(A, X, W);
+              }, Rn.prototype.doNegotiation = function(A, S, W, X, Ae, he) {
                 var te = null, Be = this;
                 if (Ae && S.Bucket) {
                   var Pe = this.bucketSignatureCache[S.Bucket];
                   if (Pe && Pe.signatureContext && Pe.expireTime > (/* @__PURE__ */ new Date()).getTime()) {
                     S.signatureContext = Pe.signatureContext;
-                    var Qe = this.makeParam(A, S);
-                    return "err" in Qe ? W(Qe.err, null) : (Qe.signatureContext = Pe.signatureContext, this.sendRequest(A, Qe, W));
+                    var qe = this.makeParam(A, S);
+                    return "err" in qe ? W(qe.err, null) : (qe.signatureContext = Pe.signatureContext, this.sendRequest(A, qe, W));
                   }
                   if ((te = this.bucketEventEmitters[S.Bucket]) || (te = { s: 0, n: function() {
                     for (; this.e && this.e.length > 0; ) this.e.shift()();
                   } }, this.bucketEventEmitters[S.Bucket] = te), te.s) return void te.e.push(function() {
-                    Be.doNegotiation(A, S, W, Z, Ae, he);
+                    Be.doNegotiation(A, S, W, X, Ae, he);
                   });
                   te.e = [], te.s = 1;
                 }
-                this.doExec(od, Z ? { Bucket: S.Bucket } : {}, function(ht, Je) {
+                this.doExec(od, X ? { Bucket: S.Bucket } : {}, function(ht, Je) {
                   if (ht) return W(ht, null), void (te && (te.s = 0, te.n()));
-                  if (Z && Je.CommonMsg.Status === 404 || Je.CommonMsg.Status >= 500) return W(ht, Je), void (te && (te.s = 0, te.n()));
+                  if (X && Je.CommonMsg.Status === 404 || Je.CommonMsg.Status >= 500) return W(ht, Je), void (te && (te.s = 0, te.n()));
                   var $e = rd;
                   Je.CommonMsg.Status < 300 && Je.InterfaceResult && Je.InterfaceResult.ApiVersion >= "3.0" && ($e = Hm), he && (Be.bucketSignatureCache[S.Bucket] = { signatureContext: $e, expireTime: (/* @__PURE__ */ new Date()).getTime() + 15 + 60 * Math.ceil(5 * Math.random()) * 1e3 }), te && (te.s = 0, te.n()), S.signatureContext = $e;
                   var ct = Be.makeParam(A, S);
@@ -58944,48 +58944,48 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   ct.signatureContext = $e, Be.sendRequest(A, ct, W);
                 });
               }, Rn.prototype.exec = function(A, S, W) {
-                var Z = this;
-                Z.isSignatureNegotiation && A !== od ? A === "ListBuckets" ? Z.doNegotiation(A, S, W, !1, !1, !1) : Ja.indexOf(A) > -1 ? Z.doNegotiation(A, S, function(Ae, he) {
+                var X = this;
+                X.isSignatureNegotiation && A !== od ? A === "ListBuckets" ? X.doNegotiation(A, S, W, !1, !1, !1) : Ja.indexOf(A) > -1 ? X.doNegotiation(A, S, function(Ae, he) {
                   if (!Ae && he.CommonMsg.Status === 400 && he.CommonMsg.Message === "Unsupported Authorization Type" && S.signatureContext && S.signatureContext.signature === "v2") {
                     S.signatureContext = rd;
-                    var te = Z.makeParam(A, S);
-                    return "err" in te ? W(te.err, null) : (te.signatureContext = S.signatureContext, void Z.sendRequest(A, te, W));
+                    var te = X.makeParam(A, S);
+                    return "err" in te ? W(te.err, null) : (te.signatureContext = S.signatureContext, void X.sendRequest(A, te, W));
                   }
                   W(Ae, he);
-                }, !1, !0, !1) : Z.doNegotiation(A, S, W, !0, !0, !0) : Z.doExec(A, S, W);
-              }, Rn.prototype.sliceBlob = function(A, S, W, Z) {
-                return Z = Z || A.type, A.mozSlice ? A.mozSlice(S, W, Z) : A.webkitSlice ? A.webkitSlice(S, W, Z) : A.slice(S, W, Z);
-              }, Rn.prototype.toXml = function(A, S, W, Z, Ae) {
+                }, !1, !0, !1) : X.doNegotiation(A, S, W, !0, !0, !0) : X.doExec(A, S, W);
+              }, Rn.prototype.sliceBlob = function(A, S, W, X) {
+                return X = X || A.type, A.mozSlice ? A.mozSlice(S, W, X) : A.webkitSlice ? A.webkitSlice(S, W, X) : A.slice(S, W, X);
+              }, Rn.prototype.toXml = function(A, S, W, X, Ae) {
                 var he = "";
-                if (W !== null) return he + this.buildXml(A, S, W, Z, Ae);
+                if (W !== null) return he + this.buildXml(A, S, W, X, Ae);
                 for (var te in S) if (te in A) {
                   var Be = S[te].sentAs || te;
                   he += this.buildXml(A, S[te], te, Be, Ae);
                 }
                 return he;
-              }, Rn.prototype.buildXml = function(A, S, W, Z, Ae) {
+              }, Rn.prototype.buildXml = function(A, S, W, X, Ae) {
                 var he = "", te = S.type;
                 if (te === "array") for (var Be = 0; Be < A[W].length; Be++) if (S.items.type === "object") {
                   if (!A[W][Be]) return he;
                   var Pe = this.toXml(A[W][Be], S.items.parameters, null, null, Ae);
-                  Pe !== "" && (he += "<" + Z + ">" + Pe + "</" + Z + ">");
-                } else S.items.type === "adapter" ? he += "<" + Z + ">" + String(this[W + "Adapter"](A[W][Be], Ae)).replace(/&/g, "&amp;").replace(/'/g, "&apos;").replace(/"/g, "&quot;") + "</" + Z + ">" : S.items.type !== "array" && (he += "<" + Z + ">" + String(A[W][Be]).replace(/&/g, "&amp;").replace(/'/g, "&apos;").replace(/"/g, "&quot;") + "</" + Z + ">");
+                  Pe !== "" && (he += "<" + X + ">" + Pe + "</" + X + ">");
+                } else S.items.type === "adapter" ? he += "<" + X + ">" + String(this[W + "Adapter"](A[W][Be], Ae)).replace(/&/g, "&amp;").replace(/'/g, "&apos;").replace(/"/g, "&quot;") + "</" + X + ">" : S.items.type !== "array" && (he += "<" + X + ">" + String(A[W][Be]).replace(/&/g, "&amp;").replace(/'/g, "&apos;").replace(/"/g, "&quot;") + "</" + X + ">");
                 else if (te === "object") {
                   if (!A[W]) return he;
-                  var Qe = this.toXml(A[W], S.parameters, null, null, Ae);
-                  Qe !== "" && (he += "<" + Z, "data" in S && ("xsiNamespace" in S.data && (he += ' xmlns:xsi="' + S.data.xsiNamespace + '"'), "xsiType" in S.data && (he += ' xsi:type="' + A[W][S.data.xsiType] + '"')), he += ">", he += Qe + "</" + Z + ">");
-                } else te === "adapter" ? he += "<" + Z + ">" + String(this[W + "Adapter"](A[W], Ae)).replace(/&/g, "&amp;").replace(/'/g, "&apos;").replace(/"/g, "&quot;") + "</" + Z + ">" : te !== "ignore" && (he += "<" + Z + ">" + String(A[W]).replace(/&/g, "&amp;").replace(/'/g, "&apos;").replace(/"/g, "&quot;") + "</" + Z + ">");
+                  var qe = this.toXml(A[W], S.parameters, null, null, Ae);
+                  qe !== "" && (he += "<" + X, "data" in S && ("xsiNamespace" in S.data && (he += ' xmlns:xsi="' + S.data.xsiNamespace + '"'), "xsiType" in S.data && (he += ' xsi:type="' + A[W][S.data.xsiType] + '"')), he += ">", he += qe + "</" + X + ">");
+                } else te === "adapter" ? he += "<" + X + ">" + String(this[W + "Adapter"](A[W], Ae)).replace(/&/g, "&amp;").replace(/'/g, "&apos;").replace(/"/g, "&quot;") + "</" + X + ">" : te !== "ignore" && (he += "<" + X + ">" + String(A[W]).replace(/&/g, "&amp;").replace(/'/g, "&apos;").replace(/"/g, "&quot;") + "</" + X + ">");
                 if (he && S.wrapper) {
                   var ht = S.wrapper;
                   he = "<" + ht + ">" + he + "</" + ht + ">";
                 }
                 return he;
-              }, Rn.prototype.jsonToObject = function(A, S, W, Z) {
+              }, Rn.prototype.jsonToObject = function(A, S, W, X) {
                 var Ae = {};
-                if (W !== null) this.buildObject(A, S, W, Ae, Z);
-                else for (var he in A) ({}).hasOwnProperty.call(A, he) && this.buildObject(A, S, he, Ae, Z);
+                if (W !== null) this.buildObject(A, S, W, Ae, X);
+                else for (var he in A) ({}).hasOwnProperty.call(A, he) && this.buildObject(A, S, he, Ae, X);
                 return Ae;
-              }, Rn.prototype.buildObject = function(A, S, W, Z, Ae) {
+              }, Rn.prototype.buildObject = function(A, S, W, X, Ae) {
                 var he = function(Je) {
                   return Je && A[W].decode && Ae ? decodeURIComponent(Je.replace(/\+/g, "%20")) : Je;
                 };
@@ -58993,39 +58993,39 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   var te = !0, Be = A[W].wrapper;
                   if (Be && Be in S && (te = id(S = S[Be])), te) {
                     var Pe = A[W].sentAs || W;
-                    if (Pe in S) if (A[W].type === "object") Z[W] = this.jsonToObject(A[W].parameters, S[Pe], null, Ae);
+                    if (Pe in S) if (A[W].type === "object") X[W] = this.jsonToObject(A[W].parameters, S[Pe], null, Ae);
                     else if (A[W].type === "array") {
-                      var Qe = [];
+                      var qe = [];
                       if ((function(Je) {
                         return Object.prototype.toString.call(Je) === "[object Array]";
-                      })(S[Pe])) for (var ht = 0; ht < S[Pe].length; ht++) Qe[ht] = A[W].items.type === "object" ? this.jsonToObject(A[W].items.parameters, S[Pe][ht], null, Ae) : he(S[Pe][ht]["#text"]);
-                      else Qe[0] = A[W].items.type === "object" ? this.jsonToObject(A[W].items.parameters, S[Pe], null, Ae) : he(S[Pe]["#text"] || "");
-                      Z[W] = Qe;
-                    } else Z[W] = he(S[Pe]["#text"]);
+                      })(S[Pe])) for (var ht = 0; ht < S[Pe].length; ht++) qe[ht] = A[W].items.type === "object" ? this.jsonToObject(A[W].items.parameters, S[Pe][ht], null, Ae) : he(S[Pe][ht]["#text"]);
+                      else qe[0] = A[W].items.type === "object" ? this.jsonToObject(A[W].items.parameters, S[Pe], null, Ae) : he(S[Pe]["#text"] || "");
+                      X[W] = qe;
+                    } else X[W] = he(S[Pe]["#text"]);
                   }
                 }
-                Z[W] === void 0 && (A[W].type === "object" ? Z[W] = A[W].parameters ? this.jsonToObject(A[W].parameters, null, null, Ae) : {} : A[W].type === "array" && (Z[W] = []));
+                X[W] === void 0 && (A[W].type === "object" ? X[W] = A[W].parameters ? this.jsonToObject(A[W].parameters, null, null, Ae) : {} : A[W].type === "array" && (X[W] = []));
               }, Rn.prototype.makeParam = function(A, S) {
-                var W = S.signatureContext || this.signatureContext, Z = W.signature === "obs" ? vo[A] : pt[A], Ae = Z.httpMethod, he = "/", te = "", Be = "", Pe = {}, Qe = {};
-                for (var ht in Qe.$requestParam = S, "urlPath" in Z && (te += "?", te += Z.urlPath), Z.parameters) if ({}.hasOwnProperty.call(Z.parameters, ht)) {
-                  var Je = Z.parameters[ht];
+                var W = S.signatureContext || this.signatureContext, X = W.signature === "obs" ? vo[A] : pt[A], Ae = X.httpMethod, he = "/", te = "", Be = "", Pe = {}, qe = {};
+                for (var ht in qe.$requestParam = S, "urlPath" in X && (te += "?", te += X.urlPath), X.parameters) if ({}.hasOwnProperty.call(X.parameters, ht)) {
+                  var Je = X.parameters[ht];
                   if (ht === "Bucket" && this.isCname) continue;
                   var $e = S[ht];
                   if (Je.type === "callback" && $e === void 0 && Je.parameters && (S.CallbackUrl !== void 0 || S.CallbackBody !== void 0)) {
                     $e = {};
                     for (var ct = 0, yt = Object.keys(Je.parameters); ct < yt.length; ct++) {
                       var nt = yt[ct], kt = Je.parameters[nt], Bt = S[nt];
-                      if (kt.required && (Bt == null || Object.prototype.toString.call(Bt) === "[object String]" && Bt === "")) return Qe.err = nt + " is a required element!", this.log.runLog("error", A, Qe.err), Qe;
+                      if (kt.required && (Bt == null || Object.prototype.toString.call(Bt) === "[object String]" && Bt === "")) return qe.err = nt + " is a required element!", this.log.runLog("error", A, qe.err), qe;
                       $e[nt.slice(0, 1).toLowerCase() + nt.slice(1)] = Bt;
                     }
                   }
-                  if (Je.required && ($e == null || Object.prototype.toString.call($e) === "[object String]" && $e === "")) return Qe.err = ht + " is a required element!", this.log.runLog("error", A, Qe.err), Qe;
+                  if (Je.required && ($e == null || Object.prototype.toString.call($e) === "[object String]" && $e === "")) return qe.err = ht + " is a required element!", this.log.runLog("error", A, qe.err), qe;
                   if ($e != null) {
                     if (Je.type === "srcFile" || Je.type === "dstFile") {
-                      Qe[Je.type] = $e;
+                      qe[Je.type] = $e;
                       continue;
                     }
-                    Je.type === "plain" && (Qe[ht] = $e);
+                    Je.type === "plain" && (qe[ht] = $e);
                     var Gt = Je.sentAs || ht;
                     if (Je.withPrefix && (Gt = W.headerPrefix + Gt), Je.location === "uri") he !== "/" && (he += "/"), he += $e;
                     else if (Je.location === "header") {
@@ -59060,41 +59060,41 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     } else Je.location === "body" && (Be = $e);
                   }
                 }
-                var Gn = Qe.dstFile === "file";
-                if ("Content-Type" in Pe || Gn || (Pe["Content-Type"] = "binary/octet-stream"), "data" in Z && "xmlRoot" in Z.data && (Be || Z.data.xmlAllowEmpty)) {
-                  var yo = Z.data.xmlRoot;
+                var Gn = qe.dstFile === "file";
+                if ("Content-Type" in Pe || Gn || (Pe["Content-Type"] = "binary/octet-stream"), "data" in X && "xmlRoot" in X.data && (Be || X.data.xmlAllowEmpty)) {
+                  var yo = X.data.xmlRoot;
                   Be = "<" + yo + ">" + Be + "</" + yo + ">", Pe["Content-Type"] = "application/xml";
                 }
-                if (Gn && (Qe.rawUri = he), Pe.Host = this.server + (this.port === 80 || this.port === 443 ? "" : ":" + this.port), !this.pathStyle && !this.isCname) {
+                if (Gn && (qe.rawUri = he), Pe.Host = this.server + (this.port === 80 || this.port === 443 ? "" : ":" + this.port), !this.pathStyle && !this.isCname) {
                   var Vn = he.split("/");
                   if (Vn.length >= 2 && Vn[1]) {
                     Pe.Host = Vn[1] + "." + Pe.Host;
                     var Wo = he.replace(Vn[1], "");
-                    Wo.indexOf("//") === 0 && (Wo = Wo.slice(1)), W.signature === "v4" ? he = Wo : Wo === "/" && (he += "/"), Qe.requestUri = Co(Wo, "/");
+                    Wo.indexOf("//") === 0 && (Wo = Wo.slice(1)), W.signature === "v4" ? he = Wo : Wo === "/" && (he += "/"), qe.requestUri = Co(Wo, "/");
                   }
                 }
-                if (Qe.method = Ae, Qe.uri = Co(he, "/"), Qe.urlPath = te, Be && (Z.data && Z.data.md5 && (Pe["Content-MD5"] = this.bufMD5(Be), Pe["Content-Length"] = Be.length === 0 ? "0" : String(Be.length)), Qe.xml = Be, this.log.runLog("debug", A, "request content:" + Be)), Qe.headers = Pe, "srcFile" in Qe && (Qe.srcFile instanceof window.File || Qe.srcFile instanceof window.Blob)) {
-                  var hr = Qe.srcFile.size;
-                  if ("Content-Length" in Qe.headers || "PartSize" in Qe || "Offset" in Qe) {
-                    var In, Zo = Qe.Offset;
-                    Zo = Zo && Zo >= 0 && Zo < hr ? Zo : 0, In = (In = "PartSize" in Qe ? Qe.PartSize : "Content-Length" in Qe.headers ? parseInt(Qe.headers["Content-Length"], 10) : hr) && In > 0 && In <= hr - Zo ? In : hr - Zo, Qe.PartSize = In, Qe.Offset = Zo, Qe.headers["Content-Length"] = String(Qe.PartSize);
+                if (qe.method = Ae, qe.uri = Co(he, "/"), qe.urlPath = te, Be && (X.data && X.data.md5 && (Pe["Content-MD5"] = this.bufMD5(Be), Pe["Content-Length"] = Be.length === 0 ? "0" : String(Be.length)), qe.xml = Be, this.log.runLog("debug", A, "request content:" + Be)), qe.headers = Pe, "srcFile" in qe && (qe.srcFile instanceof window.File || qe.srcFile instanceof window.Blob)) {
+                  var hr = qe.srcFile.size;
+                  if ("Content-Length" in qe.headers || "PartSize" in qe || "Offset" in qe) {
+                    var In, Zo = qe.Offset;
+                    Zo = Zo && Zo >= 0 && Zo < hr ? Zo : 0, In = (In = "PartSize" in qe ? qe.PartSize : "Content-Length" in qe.headers ? parseInt(qe.headers["Content-Length"], 10) : hr) && In > 0 && In <= hr - Zo ? In : hr - Zo, qe.PartSize = In, qe.Offset = Zo, qe.headers["Content-Length"] = String(qe.PartSize);
                   }
                 }
-                return Qe;
+                return qe;
               }, Rn.prototype.parseCommonHeaders = function(A, S, W) {
-                for (var Z in Oo) ({}).hasOwnProperty.call(Oo, Z) && (A.InterfaceResult[Oo[Z]] = S[Z]);
+                for (var X in Oo) ({}).hasOwnProperty.call(Oo, X) && (A.InterfaceResult[Oo[X]] = S[X]);
                 A.InterfaceResult.RequestId = S[W.headerPrefix + "request-id"], A.InterfaceResult.Id2 = S[W.headerPrefix + "id-2"], A.CommonMsg.RequestId = A.InterfaceResult.RequestId, A.CommonMsg.Id2 = A.InterfaceResult.Id2;
-              }, Rn.prototype.contrustCommonMsg = function(A, S, W, Z) {
-                for (var Ae in A.InterfaceResult = {}, this.parseCommonHeaders(A, W, Z), S) if (S[Ae].location === "header") {
+              }, Rn.prototype.contrustCommonMsg = function(A, S, W, X) {
+                for (var Ae in A.InterfaceResult = {}, this.parseCommonHeaders(A, W, X), S) if (S[Ae].location === "header") {
                   var he = S[Ae].sentAs || Ae;
-                  if (S[Ae].withPrefix && (he = Z.headerPrefix + he), S[Ae].type === "object") A.InterfaceResult[Ae] = r4(he, W);
+                  if (S[Ae].withPrefix && (he = X.headerPrefix + he), S[Ae].type === "object") A.InterfaceResult[Ae] = r4(he, W);
                   else {
                     var te = null;
                     he in W ? te = W[he] : he.toLowerCase() in W && (te = W[he.toLowerCase()]), te !== null && (A.InterfaceResult[Ae] = te);
                   }
                 }
-              }, Rn.prototype.getRequest = function(A, S, W, Z, Ae, he) {
-                var te = this.regionDomains, Be = {}, Pe = this.log, Qe = W.signature === "obs" ? vo[A + "Output"] : pt[A + "Output"], ht = (Qe = Qe || {}).parameters || {};
+              }, Rn.prototype.getRequest = function(A, S, W, X, Ae, he) {
+                var te = this.regionDomains, Be = {}, Pe = this.log, qe = W.signature === "obs" ? vo[A + "Output"] : pt[A + "Output"], ht = (qe = qe || {}).parameters || {};
                 Be.CommonMsg = { Status: S.status, Code: "", Message: "", HostId: "", RequestId: "", InterfaceResult: null };
                 var Je = S.headers, $e = zs(Je);
                 Pe.runLog("info", A, "get response start, statusCode:" + S.status), Pe.runLog("debug", A, "response msg :statusCode:" + S.status + ", headers:" + $e);
@@ -59102,7 +59102,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   var eo = "Status:" + Be.CommonMsg.Status + ", Code:" + Be.CommonMsg.Code + ", Message:" + Be.CommonMsg.Message;
                   Pe.runLog("debug", A, "exec interface " + A + " finish, " + eo), he(null, Be);
                 };
-                if (S.status >= 300 && S.status < 400 && S.status !== 304 && Z <= 5) {
+                if (S.status >= 300 && S.status < 400 && S.status !== 304 && X <= 5) {
                   var yt = Je.location || Je.Location;
                   if (yt) {
                     var nt = "http code is 3xx, need to redirect to " + yt;
@@ -59125,20 +59125,20 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   var rn = S.data;
                   this.contrustCommonMsg(Be, ht, Je, W);
                   var Kt = "Status: " + Be.CommonMsg.Status + ", headers: " + $e;
-                  if (rn && (Kt += "body length: " + rn.length, Pe.runLog("debug", A, "response body length:" + rn.length)), Pe.runLog("debug", A, Kt), rn && "data" in Qe) {
-                    if (Ae.CallbackUrl && Qe.CallbackResponse) return Be.InterfaceResult[Qe.CallbackResponse.sentAs] = rn, void ct();
-                    if (Qe.data.type === "xml") {
+                  if (rn && (Kt += "body length: " + rn.length, Pe.runLog("debug", A, "response body length:" + rn.length)), Pe.runLog("debug", A, Kt), rn && "data" in qe) {
+                    if (Ae.CallbackUrl && qe.CallbackResponse) return Be.InterfaceResult[qe.CallbackResponse.sentAs] = rn, void ct();
+                    if (qe.data.type === "xml") {
                       var dn = this;
                       return $m(rn, function(eo, Jo) {
                         if (eo) return Pe.runLog("error", A, "change xml to json err [" + zs(eo) + "]"), he(eo, null);
                         var Gn = Jo;
-                        Qe.data.xmlRoot && Qe.data.xmlRoot in Gn && (Gn = Jo[Qe.data.xmlRoot]);
+                        qe.data.xmlRoot && qe.data.xmlRoot in Gn && (Gn = Jo[qe.data.xmlRoot]);
                         var yo = !!Gn.EncodingType;
                         if (id(Gn)) for (var Vn in ht) ht[Vn].location === "xml" && (Be.InterfaceResult[Vn] = dn.jsonToObject(ht, Gn, Vn, yo)[Vn]);
                         ct();
                       });
                     }
-                    if (Qe.data.type === "body") {
+                    if (qe.data.type === "body") {
                       for (var An in ht) if (ht[An].location === "body") {
                         Be.InterfaceResult[An] = rn;
                         break;
@@ -59162,13 +59162,13 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   }
                   ct();
                 }) : ct();
-              }, Rn.prototype.makeRequest = function(A, S, W, Z) {
+              }, Rn.prototype.makeRequest = function(A, S, W, X) {
                 var Ae = this.log, he = S.xml || null, te = S.signatureContext || this.signatureContext;
                 if (delete S.headers.Authorization, S.dstFile === "file") {
                   var Be = {};
-                  if (S.urlPath) for (var Pe = S.urlPath.slice(1).split("&"), Qe = 0; Qe < Pe.length; Qe++) if (Pe[Qe].indexOf("=") === -1) Be[Pe[Qe]] = "";
+                  if (S.urlPath) for (var Pe = S.urlPath.slice(1).split("&"), qe = 0; qe < Pe.length; qe++) if (Pe[qe].indexOf("=") === -1) Be[Pe[qe]] = "";
                   else {
-                    var ht = Pe[Qe].split("=");
+                    var ht = Pe[qe].split("=");
                     Be[ht[0]] = ht[1];
                   }
                   var Je = S.rawUri.split("/")[1], $e = S.rawUri.slice(("/" + Je + "/").length), ct = { CommonMsg: { Status: 0, Code: "", Message: "", HostId: "" }, InterfaceResult: {} }, yt = (te.signature === "obs" ? vo[A + "Output"] : pt[A + "Output"]).parameters;
@@ -59176,7 +59176,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     ct.InterfaceResult[nt] = this.createSignedUrlSync({ Method: S.method, Bucket: Je, Key: $e, Expires: 3600, Headers: S.headers, QueryParams: Be, signatureContext: te });
                     break;
                   }
-                  return Z(null, ct);
+                  return X(null, ct);
                 }
                 var kt, Bt = S.$requestParam.RequestDate, Gt = Object.prototype.toString.call(Bt);
                 if (Gt === "[object Date]") kt = Bt;
@@ -59207,7 +59207,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   } catch {
                     Pn.toString && Ae.runLog("error", A, "Send request to service error [" + Pn.toString() + "]");
                   }
-                  Ae.runLog("info", A, "http cost " + ((/* @__PURE__ */ new Date()).getTime() - Vn) + " ms"), Z(Pn, null);
+                  Ae.runLog("info", A, "http cost " + ((/* @__PURE__ */ new Date()).getTime() - Vn) + " ms"), X(Pn, null);
                 };
                 if (this.useRawXhr) {
                   var In = null;
@@ -59223,9 +59223,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                       }
                     }
                   }
-                  if (In === null) return Z(new Error("XHR is not available"), null);
+                  if (In === null) return X(new Error("XHR is not available"), null);
                   if (S.srcFile) {
-                    if (!(S.srcFile instanceof window.File || S.srcFile instanceof window.Blob)) return Z(new Error("source file must be an instance of window.File or window.Blob"), null);
+                    if (!(S.srcFile instanceof window.File || S.srcFile instanceof window.Blob)) return X(new Error("source file must be an instance of window.File or window.Blob"), null);
                     try {
                       var Zo = S.srcFile;
                       if (S.Offset >= 0 && S.PartSize > 0) Zo = this.sliceBlob(Zo, S.Offset, S.Offset + S.PartSize);
@@ -59235,7 +59235,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                       }
                       he = Zo;
                     } catch (Pn) {
-                      return Z(Pn);
+                      return X(Pn);
                     }
                   }
                   for (var md in In.open(An, (Jo ? "https://" + this.urlPrefix + dn : "http://" + this.urlPrefix + dn) + rn), In.withCredentials = !1, Kt) ({}).hasOwnProperty.call(Kt, md) && In.setRequestHeader(md, Kt[md]);
@@ -59251,7 +59251,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                       var fd = In.response;
                       fd || yo !== "" && yo !== "text" || (fd = In.responseText);
                       var A4 = { status: In.status, headers: Zs, data: fd };
-                      Wo.getRequest(A, A4, te, W, S.$requestParam, Z);
+                      Wo.getRequest(A, A4, te, W, S.$requestParam, X);
                     }
                   };
                   var nf = !1, Wa = function(Pn) {
@@ -59297,7 +59297,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     S.$requestParam.cancelHook = Pn;
                   }) };
                   if (S.srcFile) {
-                    if (!(S.srcFile instanceof window.File || S.srcFile instanceof window.Blob)) return Z(new Error("source file must be an instance of window.File or window.Blob"), null);
+                    if (!(S.srcFile instanceof window.File || S.srcFile instanceof window.Blob)) return X(new Error("source file must be an instance of window.File or window.Blob"), null);
                     var Ws = S.srcFile;
                     try {
                       if (S.Offset >= 0 && S.PartSize > 0) Ws = this.sliceBlob(Ws, S.Offset, S.Offset + S.PartSize);
@@ -59306,31 +59306,31 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                         uf > 0 && (Ws = this.sliceBlob(Ws, 0, uf));
                       }
                     } catch (Pn) {
-                      return Z(Pn);
+                      return X(Pn);
                     }
                     cf.data = Ws;
                   }
                   m().request(cf).then(function(Pn) {
-                    Ae.runLog("info", A, "http cost " + ((/* @__PURE__ */ new Date()).getTime() - Vn) + " ms"), Wo.getRequest(A, Pn, te, W, S.$requestParam, Z);
+                    Ae.runLog("info", A, "http cost " + ((/* @__PURE__ */ new Date()).getTime() - Vn) + " ms"), Wo.getRequest(A, Pn, te, W, S.$requestParam, X);
                   }).catch(function(Pn) {
                     hr(Pn);
                   });
                 }
-              }, Rn.prototype.sendRequest = function(A, S, W, Z) {
-                Z === void 0 && (Z = 1);
+              }, Rn.prototype.sendRequest = function(A, S, W, X) {
+                X === void 0 && (X = 1);
                 var Ae = this;
-                Ae.makeRequest(A, S, Z, function(he, te) {
+                Ae.makeRequest(A, S, X, function(he, te) {
                   if (he && he.message === "redirect") {
                     var Be = (function(Pe) {
-                      var Qe = p().parse(Pe);
-                      return { hostname: Qe.hostname, port: Qe.port, host: Qe.hostname, protocol: Qe.protocol ? Qe.protocol + ":" : "", query: Qe.query, path: Qe.path + (Qe.query ? "?" + Qe.query : ""), pathname: Qe.path, search: Qe.query ? "?" + Qe.query : "" };
+                      var qe = p().parse(Pe);
+                      return { hostname: qe.hostname, port: qe.port, host: qe.hostname, protocol: qe.protocol ? qe.protocol + ":" : "", query: qe.query, path: qe.path + (qe.query ? "?" + qe.query : ""), pathname: qe.path, search: qe.query ? "?" + qe.query : "" };
                     })(he.location);
-                    he.bucketLocation && Be.hostname.indexOf(S.$requestParam.Bucket) !== -1 && (S.$requestParam.redirectRegion = he.bucketLocation), S.headers.Host = Be.hostname, S.protocol = Be.protocol, S.port = Be.port || (S.protocol && S.protocol.toLowerCase().indexOf("https") === 0 ? 443 : 80), Ae.sendRequest(A, S, W, Z + 1);
+                    he.bucketLocation && Be.hostname.indexOf(S.$requestParam.Bucket) !== -1 && (S.$requestParam.redirectRegion = he.bucketLocation), S.headers.Host = Be.hostname, S.protocol = Be.protocol, S.port = Be.port || (S.protocol && S.protocol.toLowerCase().indexOf("https") === 0 ? 443 : 80), Ae.sendRequest(A, S, W, X + 1);
                   } else W(he, te);
                 });
               }, Rn.prototype.doAuth = function(A, S, W) {
-                for (var Z = ["Content-MD5", "Content-Type"], Ae = A.method + `
-`, he = 0; he < Z.length; he++) Z[he] in A.headers && (Ae += A.headers[Z[he]]), Ae += `
+                for (var X = ["Content-MD5", "Content-Type"], Ae = A.method + `
+`, he = 0; he < X.length; he++) X[he] in A.headers && (Ae += A.headers[X[he]]), Ae += `
 `;
                 W.headerPrefix + "date" in A.headers || (Ae += A.headers.Date), Ae += `
 `;
@@ -59342,8 +59342,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 te = te.sort(function(Gt, Qt) {
                   return Gt.key < Qt.key ? -1 : Gt.key > Qt.key ? 1 : 0;
                 });
-                for (var Qe = 0; Qe < te.length; Qe++) {
-                  var ht = te[Qe].key, Je = ht.indexOf(W.headerMetaPrefix) === 0 ? te[Qe].value.trim() : te[Qe].value;
+                for (var qe = 0; qe < te.length; qe++) {
+                  var ht = te[qe].key, Je = ht.indexOf(W.headerMetaPrefix) === 0 ? te[qe].value.trim() : te[qe].value;
                   Ae += ht + ":" + Je + `
 `;
                 }
@@ -59358,13 +59358,13 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 Ae += $e, this.log.runLog("debug", S, "stringToSign:" + Ae), A.headers.Authorization = W.authPrefix + " " + this.ak + ":" + wn("sha1", this.sk).update(Ae).digest("base64");
               }, Rn.prototype.v4Auth = function(A, S, W) {
                 A.headers[W.headerPrefix + "content-sha256"] = ho;
-                var Z = A.headers, Ae = this.log, he = null, te = null;
-                if (W.headerPrefix + "date" in Z) he = (te = Z[W.headerPrefix + "date"]).slice(0, te.indexOf("T"));
+                var X = A.headers, Ae = this.log, he = null, te = null;
+                if (W.headerPrefix + "date" in X) he = (te = X[W.headerPrefix + "date"]).slice(0, te.indexOf("T"));
                 else {
-                  var Be = Xl(Z.Date);
+                  var Be = Xl(X.Date);
                   he = Be[0], te = Be[1];
                 }
-                var Pe = this.ak + "/" + he + "/" + this.region + "/s3/aws4_request", Qe = Ym(Z), ht = Qe[0], Je = Qe[1], $e = "";
+                var Pe = this.ak + "/" + he + "/" + this.region + "/s3/aws4_request", qe = Ym(X), ht = qe[0], Je = qe[1], $e = "";
                 if (A.urlPath) {
                   var ct = A.urlPath.slice(1).split("&");
                   ct = ct.sort();
@@ -59386,19 +59386,19 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               }, Rn.prototype.createSignedUrlSync = function(A) {
                 return (A.signatureContext || this.signatureContext).signature.toLowerCase() === "v4" ? this.createV4SignedUrlSync(A) : this.createV2SignedUrlSync(A);
               }, Rn.prototype.createV2SignedUrlSync = function(A) {
-                var S = (A = A || {}).signatureContext || this.signatureContext, W = A.Method ? String(A.Method) : "GET", Z = A.Bucket ? String(A.Bucket) : null, Ae = A.Key ? String(A.Key) : null, he = A.SpecialParam ? String(A.SpecialParam) : null;
+                var S = (A = A || {}).signatureContext || this.signatureContext, W = A.Method ? String(A.Method) : "GET", X = A.Bucket ? String(A.Bucket) : null, Ae = A.Key ? String(A.Key) : null, he = A.SpecialParam ? String(A.SpecialParam) : null;
                 S.signature.toLowerCase() === "obs" && he === "storagePolicy" ? he = "storageClass" : S.signature.toLowerCase() === "v2" && he === "storageClass" && (he = "storagePolicy");
-                var te = A.Policy ? String(A.Policy) : null, Be = A.Prefix ? String(A.Prefix) : null, Pe = A.Expires ? parseInt(A.Expires, 10) : 300, Qe = {};
-                if (A.Headers && A.Headers instanceof Object && !(A.Headers instanceof Array)) for (var ht in A.Headers) ({}).hasOwnProperty.call(A.Headers, ht) && (Qe[ht] = A.Headers[ht]);
+                var te = A.Policy ? String(A.Policy) : null, Be = A.Prefix ? String(A.Prefix) : null, Pe = A.Expires ? parseInt(A.Expires, 10) : 300, qe = {};
+                if (A.Headers && A.Headers instanceof Object && !(A.Headers instanceof Array)) for (var ht in A.Headers) ({}).hasOwnProperty.call(A.Headers, ht) && (qe[ht] = A.Headers[ht]);
                 var Je = {};
                 if (A.QueryParams && A.QueryParams instanceof Object && !(A.QueryParams instanceof Array)) for (var $e in A.QueryParams) ({}).hasOwnProperty.call(A.QueryParams, $e) && (Je[$e] = A.QueryParams[$e]);
                 this.securityToken && !Je[S.headerPrefix + "security-token"] && (Je[S.headerPrefix + "security-token"] = this.securityToken);
                 var ct = "", yt = "", nt = this.server;
-                this.isCname ? yt += "/" + nt + "/" : Z && (yt += "/" + Z, this.pathStyle ? ct += "/" + Z : (nt = Z + "." + nt, yt += "/")), Ae && (ct += "/" + (Ae = Co(Ae, "/")), yt.lastIndexOf("/") !== yt.length - 1 && (yt += "/"), yt += Ae), yt === "" && (yt = "/"), ct += "?", he && (Je[he] = ""), S.signature.toLowerCase() === "v2" ? Je.AWSAccessKeyId = this.ak : Je.AccessKeyId = this.ak, Pe < 0 && (Pe = 300), Pe = parseInt((/* @__PURE__ */ new Date()).getTime() / 1e3, 10) + Pe, te && Be ? (Je.Policy = te, Je.prefix = Be) : Je.Expires = String(Pe);
+                this.isCname ? yt += "/" + nt + "/" : X && (yt += "/" + X, this.pathStyle ? ct += "/" + X : (nt = X + "." + nt, yt += "/")), Ae && (ct += "/" + (Ae = Co(Ae, "/")), yt.lastIndexOf("/") !== yt.length - 1 && (yt += "/"), yt += Ae), yt === "" && (yt = "/"), ct += "?", he && (Je[he] = ""), S.signature.toLowerCase() === "v2" ? Je.AWSAccessKeyId = this.ak : Je.AccessKeyId = this.ak, Pe < 0 && (Pe = 300), Pe = parseInt((/* @__PURE__ */ new Date()).getTime() / 1e3, 10) + Pe, te && Be ? (Je.Policy = te, Je.prefix = Be) : Je.Expires = String(Pe);
                 var kt = {};
-                for (var Bt in Qe) if ({}.hasOwnProperty.call(Qe, Bt)) {
+                for (var Bt in qe) if ({}.hasOwnProperty.call(qe, Bt)) {
                   var Gt = String(Bt).toLowerCase();
-                  (Gt === "content-type" || Gt === "content-md5" || Gt.length > S.headerPrefix.length && Gt.slice(0, S.headerPrefix.length) === S.headerPrefix) && (kt[Gt] = Qe[Bt]);
+                  (Gt === "content-type" || Gt === "content-md5" || Gt.length > S.headerPrefix.length && Gt.slice(0, S.headerPrefix.length) === S.headerPrefix) && (kt[Gt] = qe[Bt]);
                 }
                 var Qt = [];
                 for (var $t in Je) ({}).hasOwnProperty.call(Je, $t) && Qt.push($t);
@@ -59428,24 +59428,24 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   Gn.push(yt);
                 }
                 var In = wn("sha1", this.sk);
-                return In.update(Gn.join("")), ct += rn ? "Signature=" + Co(In.digest("base64")) : "Signature=" + Co(In.digest("base64"), "/"), { ActualSignedRequestHeaders: Qe, SignedUrl: (this.isSecure ? "https" : "http") + "://" + nt + ":" + this.port + ct };
+                return In.update(Gn.join("")), ct += rn ? "Signature=" + Co(In.digest("base64")) : "Signature=" + Co(In.digest("base64"), "/"), { ActualSignedRequestHeaders: qe, SignedUrl: (this.isSecure ? "https" : "http") + "://" + nt + ":" + this.port + ct };
               }, Rn.prototype.createV4SignedUrlSync = function(A) {
-                var S = (A = A || {}).signatureContext || this.signatureContext, W = A.Method ? String(A.Method) : "GET", Z = A.Bucket ? String(A.Bucket) : null, Ae = A.Key ? String(A.Key) : null, he = A.SpecialParam ? String(A.SpecialParam) : null;
+                var S = (A = A || {}).signatureContext || this.signatureContext, W = A.Method ? String(A.Method) : "GET", X = A.Bucket ? String(A.Bucket) : null, Ae = A.Key ? String(A.Key) : null, he = A.SpecialParam ? String(A.SpecialParam) : null;
                 he === "storageClass" && (he = "storagePolicy");
                 var te = A.Expires ? parseInt(A.Expires, 10) : 300, Be = {};
                 if (A.Headers && A.Headers instanceof Object && !(A.Headers instanceof Array)) for (var Pe in A.Headers) ({}).hasOwnProperty.call(A.Headers, Pe) && (Be[Pe] = A.Headers[Pe]);
-                var Qe = {};
-                if (A.QueryParams && A.QueryParams instanceof Object && !(A.QueryParams instanceof Array)) for (var ht in A.QueryParams) ({}).hasOwnProperty.call(A.QueryParams, ht) && (Qe[ht] = A.QueryParams[ht]);
-                this.securityToken && !Qe[S.headerPrefix + "security-token"] && (Qe[S.headerPrefix + "security-token"] = this.securityToken);
+                var qe = {};
+                if (A.QueryParams && A.QueryParams instanceof Object && !(A.QueryParams instanceof Array)) for (var ht in A.QueryParams) ({}).hasOwnProperty.call(A.QueryParams, ht) && (qe[ht] = A.QueryParams[ht]);
+                this.securityToken && !qe[S.headerPrefix + "security-token"] && (qe[S.headerPrefix + "security-token"] = this.securityToken);
                 var Je = "", $e = "", ct = this.server;
-                Z && (this.pathStyle ? (Je += "/" + Z, $e += "/" + Z) : ct = Z + "." + ct), Ae && (Je += "/" + (Ae = Co(Ae, "/")), $e += "/" + Ae), $e === "" && ($e = "/"), Je += "?", he && (Qe[he] = ""), te < 0 && (te = 300);
+                X && (this.pathStyle ? (Je += "/" + X, $e += "/" + X) : ct = X + "." + ct), Ae && (Je += "/" + (Ae = Co(Ae, "/")), $e += "/" + Ae), $e === "" && ($e = "/"), Je += "?", he && (qe[he] = ""), te < 0 && (te = 300);
                 var yt = Xl(Be.date || Be.Date || (/* @__PURE__ */ new Date()).toUTCString()), nt = yt[0], kt = yt[1];
-                Be.Host = ct + (this.port === 80 || this.port === 443 ? "" : ":" + this.port), Qe["X-Amz-Algorithm"] = "AWS4-HMAC-SHA256", Qe["X-Amz-Credential"] = this.ak + "/" + nt + "/" + this.region + "/s3/aws4_request", Qe["X-Amz-Date"] = kt, Qe["X-Amz-Expires"] = String(te);
+                Be.Host = ct + (this.port === 80 || this.port === 443 ? "" : ":" + this.port), qe["X-Amz-Algorithm"] = "AWS4-HMAC-SHA256", qe["X-Amz-Credential"] = this.ak + "/" + nt + "/" + this.region + "/s3/aws4_request", qe["X-Amz-Date"] = kt, qe["X-Amz-Expires"] = String(te);
                 var Bt = Ym(Be);
-                Qe["X-Amz-SignedHeaders"] = Bt[0];
+                qe["X-Amz-SignedHeaders"] = Bt[0];
                 var Gt = {}, Qt = [];
-                for (var $t in Qe) if ({}.hasOwnProperty.call(Qe, $t)) {
-                  var rn = Qe[$t];
+                for (var $t in qe) if ({}.hasOwnProperty.call(qe, $t)) {
+                  var rn = qe[$t];
                   $t = Co($t, "/"), rn = Co(rn), Gt[$t] = rn, Qt.push($t), Je += $t, rn && (Je += "=" + rn), Je += "&";
                 }
                 var Kt = "";
@@ -59461,29 +59461,29 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               }, Rn.prototype.createPostSignatureSync = function(A) {
                 var S = A.signatureContext || this.signatureContext;
                 if (S.signature === "v4") return this.createV4PostSignatureSync(A);
-                var W = (A = A || {}).Bucket ? String(A.Bucket) : null, Z = A.Key ? String(A.Key) : null, Ae = A.Expires ? parseInt(A.Expires, 10) : 300, he = {};
+                var W = (A = A || {}).Bucket ? String(A.Bucket) : null, X = A.Key ? String(A.Key) : null, Ae = A.Expires ? parseInt(A.Expires, 10) : 300, he = {};
                 if (A.FormParams && A.FormParams instanceof Object && !(A.FormParams instanceof Array)) for (var te in A.FormParams) ({}).hasOwnProperty.call(A.FormParams, te) && (he[te] = A.FormParams[te]);
                 this.securityToken && !he[S.headerPrefix + "security-token"] && (he[S.headerPrefix + "security-token"] = this.securityToken);
                 var Be = /* @__PURE__ */ new Date();
-                Be.setTime(parseInt((/* @__PURE__ */ new Date()).getTime(), 10) + 1e3 * Ae), Be = jm(Be.toUTCString()), W && (he.bucket = W), Z && (he.key = Z);
+                Be.setTime(parseInt((/* @__PURE__ */ new Date()).getTime(), 10) + 1e3 * Ae), Be = jm(Be.toUTCString()), W && (he.bucket = W), X && (he.key = X);
                 var Pe = [];
                 Pe.push('{"expiration":"'), Pe.push(Be), Pe.push('", "conditions":[');
-                var Qe = !0, ht = !0, Je = ["acl", "bucket", "key", "success_action_redirect", "redirect", "success_action_status"];
+                var qe = !0, ht = !0, Je = ["acl", "bucket", "key", "success_action_redirect", "redirect", "success_action_status"];
                 for (var $e in he) if ($e) {
                   var ct = he[$e];
-                  ($e = String($e).toLowerCase()) === "bucket" ? Qe = !1 : $e === "key" && (ht = !1), Eo.indexOf($e) < 0 && Je.indexOf($e) < 0 && $e.indexOf(S.headerPrefix) !== 0 || (Pe.push('{"'), Pe.push($e), Pe.push('":"'), Pe.push(ct !== null ? String(ct) : ""), Pe.push('"},'));
+                  ($e = String($e).toLowerCase()) === "bucket" ? qe = !1 : $e === "key" && (ht = !1), Eo.indexOf($e) < 0 && Je.indexOf($e) < 0 && $e.indexOf(S.headerPrefix) !== 0 || (Pe.push('{"'), Pe.push($e), Pe.push('":"'), Pe.push(ct !== null ? String(ct) : ""), Pe.push('"},'));
                 }
-                Qe && Pe.push('["starts-with", "$bucket", ""],'), ht && Pe.push('["starts-with", "$key", ""],'), Pe.push("]}");
+                qe && Pe.push('["starts-with", "$bucket", ""],'), ht && Pe.push('["starts-with", "$key", ""],'), Pe.push("]}");
                 var yt = Pe.join("");
                 Pe = window.btoa ? window.btoa(yt) : kn.encode(yt);
                 var nt = wn("sha1", this.sk).update(Pe).digest("base64");
                 return { OriginPolicy: yt, Policy: Pe, Signature: nt, Token: this.ak + ":" + nt + ":" + Pe };
               }, Rn.prototype.createV4PostSignatureSync = function(A) {
-                var S = (A = A || {}).signatureContext || this.signatureContext, W = A.Bucket ? String(A.Bucket) : null, Z = A.Key ? String(A.Key) : null, Ae = A.Expires ? parseInt(A.Expires, 10) : 300, he = {};
+                var S = (A = A || {}).signatureContext || this.signatureContext, W = A.Bucket ? String(A.Bucket) : null, X = A.Key ? String(A.Key) : null, Ae = A.Expires ? parseInt(A.Expires, 10) : 300, he = {};
                 if (A.FormParams && A.FormParams instanceof Object && !(A.FormParams instanceof Array)) for (var te in A.FormParams) ({}).hasOwnProperty.call(A.FormParams, te) && (he[te] = A.FormParams[te]);
                 this.securityToken && !he[S.headerPrefix + "security-token"] && (he[S.headerPrefix + "security-token"] = this.securityToken);
-                var Be = Xl((/* @__PURE__ */ new Date()).toUTCString()), Pe = Be[0], Qe = Be[1], ht = this.ak + "/" + Pe + "/" + this.region + "/s3/aws4_request", Je = /* @__PURE__ */ new Date();
-                Je.setTime(parseInt((/* @__PURE__ */ new Date()).getTime(), 10) + 1e3 * Ae), Je = jm(Je.toUTCString()), he["X-Amz-Algorithm"] = "AWS4-HMAC-SHA256", he["X-Amz-Date"] = Qe, he["X-Amz-Credential"] = ht, W && (he.bucket = W), Z && (he.key = Z);
+                var Be = Xl((/* @__PURE__ */ new Date()).toUTCString()), Pe = Be[0], qe = Be[1], ht = this.ak + "/" + Pe + "/" + this.region + "/s3/aws4_request", Je = /* @__PURE__ */ new Date();
+                Je.setTime(parseInt((/* @__PURE__ */ new Date()).getTime(), 10) + 1e3 * Ae), Je = jm(Je.toUTCString()), he["X-Amz-Algorithm"] = "AWS4-HMAC-SHA256", he["X-Amz-Date"] = qe, he["X-Amz-Credential"] = ht, W && (he.bucket = W), X && (he.key = X);
                 var $e = [];
                 $e.push('{"expiration":"'), $e.push(Je), $e.push('", "conditions":[');
                 var ct = !0, yt = !0, nt = ["acl", "bucket", "key", "success_action_redirect", "redirect", "success_action_status"];
@@ -59505,8 +59505,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 A && (A = (A = String(A).toLowerCase()) === "info" ? 20 : A === "warn" ? 30 : A === "error" ? 40 : A === "debug" ? 10 : Vm, this._level = A);
               }, ad.prototype.runLog = function(A, S, W) {
                 if (A) {
-                  var Z = [(/* @__PURE__ */ new Date()).toLocaleString(), A.toLowerCase(), S, W].join("|");
-                  A.toLowerCase() === "debug" && this._level <= 10 ? this.consoleLog.debug(Z) : A.toLowerCase() === "info" && this._level <= 20 ? this.consoleLog.info(Z) : A.toLowerCase() === "warn" && this._level <= 30 ? this.consoleLog.warn(Z) : A.toLowerCase() === "error" && this._level <= 40 && this.consoleLog.error(Z);
+                  var X = [(/* @__PURE__ */ new Date()).toLocaleString(), A.toLowerCase(), S, W].join("|");
+                  A.toLowerCase() === "debug" && this._level <= 10 ? this.consoleLog.debug(X) : A.toLowerCase() === "info" && this._level <= 20 ? this.consoleLog.info(X) : A.toLowerCase() === "warn" && this._level <= 30 ? this.consoleLog.warn(X) : A.toLowerCase() === "error" && this._level <= 40 && this.consoleLog.error(X);
                 }
               };
               var a4 = ad, s4 = c(1062), l4 = c.t(s4, 2), Jm = function(A) {
@@ -59515,7 +59515,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 A.prototype.dropFile = function(S, W) {
                   this.deleteObject(S, W);
                 }, A.prototype.dropFolder = function(S, W) {
-                  var Z = this;
+                  var X = this;
                   S = S || {};
                   var Ae = (function($e, ct, yt) {
                     $e = $e || function() {
@@ -59524,15 +59524,15 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     return function(kt, Bt) {
                       return ct.runLog("info", "dropFolder", "ObsClient cost " + ((/* @__PURE__ */ new Date()).getTime() - nt) + " ms"), Object.prototype.toString.call(kt) === "[object String]" ? $e(new Error(kt), Bt) : $e(kt, Bt);
                     };
-                  })(W, Z.log), he = (function($e) {
+                  })(W, X.log), he = (function($e) {
                     return $e = $e || function() {
                     }, function(ct, yt, nt) {
                       return Object.prototype.toString.call(nt) === "[object Error]" ? $e(ct, yt, nt) : Object.prototype.toString.call(nt) === "[object String]" ? $e(ct, yt, new Error(nt)) : nt ? nt.CommonMsg.Status > 300 ? $e(ct, yt, new Error("status:" + nt.CommonMsg.Status + ", code:" + nt.CommonMsg.Code + ", message:" + nt.CommonMsg.Message)) : void $e(ct, yt, nt) : void 0;
                     };
-                  })(S.EventCallback), te = S.TaskNum || 1, Be = 0, Pe = [], Qe = function($e, ct, yt, nt) {
+                  })(S.EventCallback), te = S.TaskNum || 1, Be = 0, Pe = [], qe = function($e, ct, yt, nt) {
                     if (nt) return ct.finished++, void yt(ct);
                     var kt = function() {
-                      Be++, Z.dropFile({ Bucket: ct.bucket, Key: $e }, function(Bt, Gt) {
+                      Be++, X.dropFile({ Bucket: ct.bucket, Key: $e }, function(Bt, Gt) {
                         Be--, ct.finished++, (function() {
                           for (; Be < te && Pe.length > 0; ) Pe.shift()();
                         })(), Bt ? (he("dropFileFailed", $e, Bt), ct.subDeleted = !1) : Gt.CommonMsg.Status >= 300 ? (he("dropFileFailed", $e, Gt), ct.subDeleted = !1) : he("dropFileSucceed", $e, Gt), yt(ct);
@@ -59541,11 +59541,11 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     Be < te ? kt() : Pe.push(kt);
                   }, ht = function($e, ct, yt) {
                     return function(nt) {
-                      !nt.isTruncated && nt.finished === nt.total && nt.subDeleted && Qe($e, ct, yt, !1);
+                      !nt.isTruncated && nt.finished === nt.total && nt.subDeleted && qe($e, ct, yt, !1);
                     };
                   }, Je = Jm(S.Prefix);
                   (function $e(ct, yt, nt, kt, Bt) {
-                    Be++, Z.listObjects({ Bucket: yt, Prefix: nt, Delimiter: "/", Marker: kt }, function(Gt, Qt) {
+                    Be++, X.listObjects({ Bucket: yt, Prefix: nt, Delimiter: "/", Marker: kt }, function(Gt, Qt) {
                       if (Be--, Gt) return Ae(Gt);
                       if (Qt.CommonMsg.Status >= 300) return Ae(null, Qt);
                       if (ct.total += Qt.InterfaceResult.Contents.length, ct.total += Qt.InterfaceResult.CommonPrefixes.length, ct.total !== 0) {
@@ -59560,7 +59560,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                         }
                         for (var dn = 0; dn < Qt.InterfaceResult.Contents.length; dn++) {
                           var An = Qt.InterfaceResult.Contents[dn].Key;
-                          Qe(An, ct, Bt, An.lastIndexOf("/") === An.length - 1);
+                          qe(An, ct, Bt, An.lastIndexOf("/") === An.length - 1);
                         }
                         ct.isTruncated && (Be < te ? $e(ct, yt, nt, Qt.InterfaceResult.NextMarker, Bt) : Pe.push(function() {
                           $e(ct, yt, nt, Qt.InterfaceResult.NextMarker, Bt);
@@ -59568,7 +59568,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                       } else Bt(ct);
                     });
                   })({ total: 0, finished: 0, isTruncated: !1, bucket: S.Bucket, subDeleted: !0 }, S.Bucket, Je, null, function($e) {
-                    if (!$e.isTruncated && $e.finished === $e.total) if ($e.subDeleted) Z.dropFile({ Bucket: $e.bucket, Key: Je }, function(yt, nt) {
+                    if (!$e.isTruncated && $e.finished === $e.total) if ($e.subDeleted) X.dropFile({ Bucket: $e.bucket, Key: Je }, function(yt, nt) {
                       return yt ? (he("dropFileFailed", Je, yt), Ae(yt)) : nt.CommonMsg.Status >= 300 ? (he("dropFileFailed", Je, nt), Ae(null, nt)) : (he("dropFileSucceed", Je, nt), Ae(null, nt));
                     });
                     else {
@@ -59580,13 +59580,13 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               } }, u4 = c4, sd = 5368709120, _l = function(A) {
                 var S = [];
                 if (S.push(A.bucket), S.push(A.key), S.push(A.sourceFile.name), S.push(String(A.partSize)), S.push(String(A.partCount)), S.push(String(A.fileStat.fileSize)), S.push(String(A.fileStat.lastModified)), A.uploadId && S.push(A.uploadId), A.sseC && S.push(A.sseC), A.sseCKey && S.push(A.sseCKey), A.parts) for (var W = 0; W < A.parts.length; W++) {
-                  var Z = A.parts[W];
-                  Z && (S.push(String(Z.partNumber)), S.push(String(Z.offset)), S.push(String(Z.partSize)), S.push(String(Z.isCompleted)), Z.etag && S.push(String(Z.etag)));
+                  var X = A.parts[W];
+                  X && (S.push(String(X.partNumber)), S.push(String(X.offset)), S.push(String(X.partSize)), S.push(String(X.isCompleted)), X.etag && S.push(String(X.etag)));
                 }
                 return window.btoa(un()(S.join(""), !1, !0));
               }, ld = function(A, S, W) {
-                A && A.uploadId && W.abortMultipartUpload({ Bucket: A.bucket, Key: A.key, RequestDate: A.requestDate, UploadId: A.uploadId }, function(Z, Ae) {
-                  Z ? W.log.runLog("warn", S, "abort multipart upload failed, bucket:" + A.bucket + ", key:" + A.key + ", uploadId:" + A.uploadId + ", err:" + Z) : Ae.CommonMsg.Status >= 300 ? W.log.runLog("warn", S, "abort multipart upload failed, bucket:" + A.bucket + ", key:" + A.key + ", uploadId:" + A.uploadId + ", status:" + Ae.CommonMsg.Status + ", code:" + Ae.CommonMsg.Code + ", message:" + Ae.CommonMsg.Message) : (delete A.uploadId, W.log.runLog("warn", S, "abort multipart upload succeed, bucket:" + A.bucket + ", key:" + A.key + ", uploadId:" + A.uploadId));
+                A && A.uploadId && W.abortMultipartUpload({ Bucket: A.bucket, Key: A.key, RequestDate: A.requestDate, UploadId: A.uploadId }, function(X, Ae) {
+                  X ? W.log.runLog("warn", S, "abort multipart upload failed, bucket:" + A.bucket + ", key:" + A.key + ", uploadId:" + A.uploadId + ", err:" + X) : Ae.CommonMsg.Status >= 300 ? W.log.runLog("warn", S, "abort multipart upload failed, bucket:" + A.bucket + ", key:" + A.key + ", uploadId:" + A.uploadId + ", status:" + Ae.CommonMsg.Status + ", code:" + Ae.CommonMsg.Code + ", message:" + Ae.CommonMsg.Message) : (delete A.uploadId, W.log.runLog("warn", S, "abort multipart upload succeed, bucket:" + A.bucket + ", key:" + A.key + ", uploadId:" + A.uploadId));
                 });
               }, Wm = function(A) {
                 if (!(A.finishedCount < A.uploadCheckpoint.partCount)) {
@@ -59594,8 +59594,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   if (A.isSuspend) return A.callback("the process of uploadFile is suspened, you can retry with the uploadCheckpoint");
                   if (A.hasError) return A.callback("uploadFile finished with error, you can retry with the uploadCheckpoint");
                   for (var S = [], W = 0; W < A.uploadCheckpoint.partCount; W++) {
-                    var Z = A.uploadCheckpoint.parts[W];
-                    S.push({ PartNumber: Z.partNumber, ETag: Z.etag });
+                    var X = A.uploadCheckpoint.parts[W];
+                    S.push({ PartNumber: X.partNumber, ETag: X.etag });
                   }
                   A.that.completeMultipartUpload({ Bucket: A.uploadCheckpoint.bucket, Key: A.uploadCheckpoint.key, RequestDate: A.uploadCheckpoint.requestDate, UploadId: A.uploadCheckpoint.uploadId, Parts: S, CallbackUrl: A.callbackUrl, CallbackHost: A.callbackHost, CallbackBody: A.callbackBody, CallbackBodyType: A.callbackBodyType }, function(Ae, he) {
                     var te = { bucket: A.uploadCheckpoint.bucket, key: A.uploadCheckpoint.key, uploadId: A.uploadCheckpoint.uploadId };
@@ -59607,17 +59607,17 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   A.isSuspend = !0;
                   for (var Be = 0; Be < A.uploadPartParams.length; Be++) {
                     var Pe = A.uploadPartParams[Be].cancelHook;
-                    Qe = Pe, Object.prototype.toString.call(Qe) === "[object Function]" && Pe();
+                    qe = Pe, Object.prototype.toString.call(qe) === "[object Function]" && Pe();
                   }
-                  var Qe;
+                  var qe;
                 } }, A.uploadCheckpoint);
                 var S = [], W = function() {
                   for (; A.runningTask < A.taskNum && S.length > 0; ) S.shift()();
                   S.length === 0 && Wm(A);
-                }, Z = window.btoa ? window.btoa : kn.encode, Ae = function(Be) {
+                }, X = window.btoa ? window.btoa : kn.encode, Ae = function(Be) {
                   return function() {
                     if (A.runningTask++, A.isSuspend || A.isAbort) return A.runningTask--, A.finishedCount++, A.finishedCount += S.length, S = [], W();
-                    var Pe, Qe, ht, Je, $e = 0, ct = function(kt) {
+                    var Pe, qe, ht, Je, $e = 0, ct = function(kt) {
                       if (!$e) {
                         $e = 1;
                         var Bt, Gt = { Bucket: A.uploadCheckpoint.bucket, Key: A.uploadCheckpoint.key, RequestDate: A.uploadCheckpoint.requestDate, PartNumber: Be.partNumber, UploadId: A.uploadCheckpoint.uploadId, SourceFile: A.uploadCheckpoint.sourceFile, Offset: Be.offset, PartSize: Be.partSize, SseC: A.uploadCheckpoint.sseC, SseCKey: A.uploadCheckpoint.sseCKey, ProgressCallback: (Bt = Be.partNumber, function(Qt, $t, rn) {
@@ -59631,7 +59631,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                       }
                     };
                     if (A.verifyMd5 && window.FileReader && (A.uploadCheckpoint.sourceFile instanceof window.File || A.uploadCheckpoint.sourceFile instanceof window.Blob)) {
-                      var yt = (Pe = A.uploadCheckpoint.sourceFile, Qe = Be.offset, ht = Be.offset + Be.partSize, Je = Je || Pe.type, Pe.mozSlice ? Pe.mozSlice(Qe, ht, Je) : Pe.webkitSlice ? Pe.webkitSlice(Qe, ht, Je) : Pe.slice(Qe, ht, Je)), nt = new window.FileReader();
+                      var yt = (Pe = A.uploadCheckpoint.sourceFile, qe = Be.offset, ht = Be.offset + Be.partSize, Je = Je || Pe.type, Pe.mozSlice ? Pe.mozSlice(qe, ht, Je) : Pe.webkitSlice ? Pe.webkitSlice(qe, ht, Je) : Pe.slice(qe, ht, Je)), nt = new window.FileReader();
                       return nt.onload = function(kt) {
                         var Bt = (function(Qt) {
                           Qt = new Uint8Array(Qt);
@@ -59640,7 +59640,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                             Kt = Kt <= Qt.length ? Kt : Qt.length, $t ? $t += String.fromCharCode.apply(null, Qt.slice(rn, Kt)) : $t = String.fromCharCode.apply(null, Qt.slice(rn, Kt)), rn = Kt;
                           }
                           return Qt = null, $t;
-                        })(kt.target.result), Gt = Z(un()(Bt, !1, !0));
+                        })(kt.target.result), Gt = X(un()(Bt, !1, !0));
                         Bt = null, ct(Gt);
                       }, nt.onerror = function(kt) {
                         A.that.log.runLog("error", A.funcName, "Caculate md5 for part " + String(Be.partNumber) + " failed"), ct();
@@ -59659,7 +59659,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 A.callback("the process of uploadFile is suspened, you can retry with the uploadCheckpoint");
               }, d4 = { extend: function(A) {
                 A.prototype.uploadFile = function(S, W) {
-                  var Z = this;
+                  var X = this;
                   S = S || {};
                   var Ae = "uploadFile", he = (function(Kt, dn, An) {
                     Kt = Kt || function() {
@@ -59668,17 +59668,17 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     return function(_n, eo) {
                       return dn.runLog("info", "uploadFile", "ObsClient cost " + ((/* @__PURE__ */ new Date()).getTime() - Tn) + " ms"), Object.prototype.toString.call(_n) === "[object String]" ? Kt(new Error(_n), eo) : Kt(_n, eo);
                     };
-                  })(W, Z.log), te = (function(Kt) {
+                  })(W, X.log), te = (function(Kt) {
                     return Kt = Kt || function() {
                     }, function(dn, An, Tn) {
                       return Object.prototype.toString.call(Tn) === "[object Error]" ? Kt(dn, An, Tn) : Object.prototype.toString.call(Tn) === "[object String]" ? Kt(dn, An, new Error(Tn)) : Tn ? Tn.CommonMsg.Status > 300 ? Kt(dn, An, new Error("status:" + Tn.CommonMsg.Status + ", code:" + Tn.CommonMsg.Code + ", message:" + Tn.CommonMsg.Message)) : void Kt(dn, An, Tn) : void 0;
                     };
                   })(S.EventCallback), Be = S.TaskNum || 1, Pe = S.ProgressCallback || function() {
-                  }, Qe = S.ResumeCallback || function() {
+                  }, qe = S.ResumeCallback || function() {
                   }, ht = S.VerifyMd5 || !1;
-                  Z.log.runLog("info", Ae, "enter uploadFile...");
+                  X.log.runLog("info", Ae, "enter uploadFile...");
                   var Je = null;
-                  if (S.UploadCheckpoint && S.UploadCheckpoint.sourceFile && S.UploadCheckpoint.fileStat && S.UploadCheckpoint.uploadId && S.UploadCheckpoint.md5 === _l(S.UploadCheckpoint) ? Je = S.UploadCheckpoint : ld(S.UploadCheckpoint, Ae, Z), Je) {
+                  if (S.UploadCheckpoint && S.UploadCheckpoint.sourceFile && S.UploadCheckpoint.fileStat && S.UploadCheckpoint.uploadId && S.UploadCheckpoint.md5 === _l(S.UploadCheckpoint) ? Je = S.UploadCheckpoint : ld(S.UploadCheckpoint, Ae, X), Je) {
                     var $e = Je.sourceFile;
                     if (!($e instanceof window.File || $e instanceof window.Blob)) return he("source file is not valid, must be an instanceof [File | Blob]");
                     if (!$e.mozSlice && !$e.webkitSlice && !$e.slice) return he("your browser cannot support the slice method for [File | Blob]");
@@ -59686,7 +59686,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     var ct = S.SourceFile;
                     if (!(ct instanceof window.File || ct instanceof window.Blob)) return he("source file is not valid, must be an instanceof [File | Blob]");
                     if (!ct.mozSlice && !ct.webkitSlice && !ct.slice) return he("your browser cannot support the slice method for [File | Blob]");
-                    Z.log.runLog("debug", Ae, "Begin to uploadFile to OBS from file:" + ct.name);
+                    X.log.runLog("debug", Ae, "Begin to uploadFile to OBS from file:" + ct.name);
                     var yt = ct.size, nt = parseInt(S.PartSize, 10), kt = 0, Bt = [];
                     if (yt === 0) nt = 0, kt = 1, Bt.push({ partNumber: 1, offset: 0, partSize: 0, isCompleted: !1 });
                     else {
@@ -59696,22 +59696,22 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                       for (var Qt = 0; Qt < kt; Qt++) Bt.push({ partNumber: Qt + 1, offset: Qt * nt, partSize: nt, isCompleted: !1 });
                       Gt !== 0 && (Bt[kt - 1].partSize = Gt);
                     }
-                    Z.log.runLog("debug", Ae, "Total parts count " + kt), (Je = { bucket: S.Bucket, key: S.Key, sourceFile: ct, partSize: nt, partCount: kt, parts: Bt }).fileStat = { fileSize: yt, lastModified: ct.lastModified }, S.SseC && S.SseCKey && (Je.sseC = S.SseC, Je.sseCKey = S.SseCKey), Je.md5 = _l(Je);
+                    X.log.runLog("debug", Ae, "Total parts count " + kt), (Je = { bucket: S.Bucket, key: S.Key, sourceFile: ct, partSize: nt, partCount: kt, parts: Bt }).fileStat = { fileSize: yt, lastModified: ct.lastModified }, S.SseC && S.SseCKey && (Je.sseC = S.SseC, Je.sseCKey = S.SseCKey), Je.md5 = _l(Je);
                   }
                   Je.requestDate = S.RequestDate;
-                  var $t = { start: (/* @__PURE__ */ new Date()).getTime(), uploadCheckpoint: Je, funcName: Ae, taskNum: Be, callback: he, that: Z, runningTask: 0, finishedCount: 0, hasError: !1, finishedBytes: 0, isAbort: !1, resumeCallback: Qe, isSuspend: !1, partsLoaded: {}, requestDate: S.RequestDate, uploadPartParams: [], verifyMd5: ht, callbackUrl: S.CallbackUrl, callbackHost: S.CallbackHost, callbackBody: S.CallbackBody, callbackBodyType: S.CallbackBodyType, eventCallback: function(Kt, dn, An) {
+                  var $t = { start: (/* @__PURE__ */ new Date()).getTime(), uploadCheckpoint: Je, funcName: Ae, taskNum: Be, callback: he, that: X, runningTask: 0, finishedCount: 0, hasError: !1, finishedBytes: 0, isAbort: !1, resumeCallback: qe, isSuspend: !1, partsLoaded: {}, requestDate: S.RequestDate, uploadPartParams: [], verifyMd5: ht, callbackUrl: S.CallbackUrl, callbackHost: S.CallbackHost, callbackBody: S.CallbackBody, callbackBodyType: S.CallbackBodyType, eventCallback: function(Kt, dn, An) {
                     $t.isSuspend || te(Kt, dn, An);
                   }, progressCallback: function(Kt, dn) {
                     $t.isSuspend || ($t.finishedBytes += dn, $t.partsLoaded[Kt] && ($t.finishedBytes -= $t.partsLoaded[Kt]), $t.partsLoaded[Kt] = dn, Pe($t.finishedBytes, $t.uploadCheckpoint.fileStat.fileSize, ((/* @__PURE__ */ new Date()).getTime() - $t.start) / 1e3));
                   } };
                   if (!Je.uploadId) {
                     var rn = S.ContentType;
-                    return !rn && Je.key && (rn = Z.util.mimeTypes[Je.key.substring(Je.key.lastIndexOf(".") + 1)]), !rn && Je.sourceFile.name && (rn = Z.util.mimeTypes[Je.sourceFile.name.substring(Je.sourceFile.name.lastIndexOf(".") + 1)]), void Z.initiateMultipartUpload({ Bucket: S.Bucket, Key: S.Key, RequestDate: S.RequestDate, ACL: S.ACL, Metadata: S.Metadata, WebsiteRedirectLocation: S.WebsiteRedirectLocation, StorageClass: S.StorageClass, ContentType: rn, Expires: S.Expires, SseKms: S.SseKms, SseKmsKey: S.SseKmsKey, SseC: S.SseC, SseCKey: S.SseCKey }, function(Kt, dn) {
+                    return !rn && Je.key && (rn = X.util.mimeTypes[Je.key.substring(Je.key.lastIndexOf(".") + 1)]), !rn && Je.sourceFile.name && (rn = X.util.mimeTypes[Je.sourceFile.name.substring(Je.sourceFile.name.lastIndexOf(".") + 1)]), void X.initiateMultipartUpload({ Bucket: S.Bucket, Key: S.Key, RequestDate: S.RequestDate, ACL: S.ACL, Metadata: S.Metadata, WebsiteRedirectLocation: S.WebsiteRedirectLocation, StorageClass: S.StorageClass, ContentType: rn, Expires: S.Expires, SseKms: S.SseKms, SseKmsKey: S.SseKmsKey, SseC: S.SseC, SseCKey: S.SseCKey }, function(Kt, dn) {
                       var An = { bucket: S.Bucket, key: S.Key };
                       if (Kt) return $t.eventCallback("initiateMultipartUploadFailed", An, Kt), he(Kt);
                       if (dn.CommonMsg.Status >= 300) return $t.eventCallback("initiateMultipartUploadFailed", An, dn), he(null, dn);
                       var Tn = dn.InterfaceResult.UploadId;
-                      Je.uploadId = Tn, Je.md5 = _l(Je), $t.uploadCheckpoint = Je, An.uploadId = Tn, Z.log.runLog("info", Ae, "Claim a new upload id " + Tn), $t.eventCallback("initiateMultipartUploadSucceed", An, dn), Zm($t);
+                      Je.uploadId = Tn, Je.md5 = _l(Je), $t.uploadCheckpoint = Je, An.uploadId = Tn, X.log.runLog("info", Ae, "Claim a new upload id " + Tn), $t.eventCallback("initiateMultipartUploadSucceed", An, dn), Zm($t);
                     });
                   }
                   Zm($t);
@@ -59741,9 +59741,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   if (ud(S)) A.call(this, null, S);
                   else {
                     if (!ud(W)) {
-                      var Z = this;
+                      var X = this;
                       return new Promise(function(Ae, he) {
-                        A.call(Z, S, function(te, Be) {
+                        A.call(X, S, function(te, Be) {
                           if (te) return he(te);
                           Ae(Be);
                         });
@@ -59807,8 +59807,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   return this.log.runLog("error", "PutObject", W), S(new Error(W), null);
                 }
                 if (!("ContentType" in A) && ("Key" in A && (A.ContentType = this.util.mimeTypes[A.Key.substring(A.Key.lastIndexOf(".") + 1)]), !A.ContentType && "SourceFile" in A)) {
-                  var Z = A.SourceFile.name;
-                  A.ContentType = this.util.mimeTypes[Z.substring(Z.lastIndexOf(".") + 1)];
+                  var X = A.SourceFile.name;
+                  A.ContentType = this.util.mimeTypes[X.substring(X.lastIndexOf(".") + 1)];
                 }
                 this.exec("PutObject", A, S);
               }, tn.prototype.appendObject = function(A, S) {
@@ -59820,20 +59820,20 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               }, tn.prototype.copyObject = function(A, S) {
                 var W = "CopySource";
                 if (W in A) {
-                  var Z = A[W], Ae = Z.lastIndexOf("?versionId=");
-                  A[W] = Ae > 0 ? this.util.encodeURIWithSafe(Z.slice(0, Ae)) + Z.slice(Ae) : this.util.encodeURIWithSafe(Z);
+                  var X = A[W], Ae = X.lastIndexOf("?versionId=");
+                  A[W] = Ae > 0 ? this.util.encodeURIWithSafe(X.slice(0, Ae)) + X.slice(Ae) : this.util.encodeURIWithSafe(X);
                 }
                 this.exec("CopyObject", A, S);
               }, tn.prototype.copyPart = function(A, S) {
                 var W = "CopySource";
                 if (W in A) {
-                  var Z = A[W], Ae = Z.lastIndexOf("?versionId=");
-                  A[W] = Ae > 0 ? this.util.encodeURIWithSafe(Z.slice(0, Ae)) + Z.slice(Ae) : this.util.encodeURIWithSafe(Z);
+                  var X = A[W], Ae = X.lastIndexOf("?versionId=");
+                  A[W] = Ae > 0 ? this.util.encodeURIWithSafe(X.slice(0, Ae)) + X.slice(Ae) : this.util.encodeURIWithSafe(X);
                 }
                 this.exec("CopyPart", A, S);
               }, tn.prototype.restoreObject = function(A, S) {
-                this.exec("RestoreObject", A, function(W, Z) {
-                  !W && Z.InterfaceResult && Z.CommonMsg.Status < 300 && (Z.InterfaceResult.RestoreStatus = Z.CommonMsg.Status === 200 ? "AVALIABLE" : "INPROGRESS"), S(W, Z);
+                this.exec("RestoreObject", A, function(W, X) {
+                  !W && X.InterfaceResult && X.CommonMsg.Status < 300 && (X.InterfaceResult.RestoreStatus = X.CommonMsg.Status === 200 ? "AVALIABLE" : "INPROGRESS"), S(W, X);
                 });
               }, tn.prototype.initiateMultipartUpload = function(A, S) {
                 "ContentType" in A || "Key" in A && (A.ContentType = this.util.mimeTypes[A.Key.substring(A.Key.lastIndexOf(".") + 1)]), this.exec("InitiateMultipartUpload", A, S);
@@ -59850,12 +59850,12 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 }
               }
               for (var pd in tn.prototype.exec = function(A, S, W) {
-                var Z = this.log;
-                Z.runLog("info", A, "enter " + A + "...");
+                var X = this.log;
+                X.runLog("info", A, "enter " + A + "...");
                 var Ae = (/* @__PURE__ */ new Date()).getTime();
                 S = S || {}, W = W || function() {
                 }, this.util.exec(A, S, function he(te, Be) {
-                  he.$called || (he.$called = !0, !te || te instanceof Error || (te = new Error(te)), Z.runLog("debug", A, "ObsClient cost " + ((/* @__PURE__ */ new Date()).getTime() - Ae) + " ms"), W(te, Be));
+                  he.$called || (he.$called = !0, !te || te instanceof Error || (te = new Error(te)), X.runLog("debug", A, "ObsClient cost " + ((/* @__PURE__ */ new Date()).getTime() - Ae) + " ms"), W(te, Be));
                 });
               }, tn.prototype.initLog = function(A) {
                 A = A || {}, this.log.setLevel(A.level);
@@ -60309,42 +60309,42 @@ function Dan(e, t, n, o, r, i) {
         key: d + u.fileUrl + u.fileKey
       }, [
         !e.isPreview || u.status === 1 || u.status === 3 ? (P(), K(Lt, { key: 0 }, [
-          V("div", oan, [
-            V("img", {
+          J("div", oan, [
+            J("img", {
               class: "svg-img",
               src: e.getFileSvg(u.fileUrl),
               alt: ""
             }, null, 8, ran)
           ]),
-          V("div", ian, [
-            V("div", aan, qe(u.fileName), 1),
-            V("div", san, [
-              V("span", lan, qe(e.formatSize(u.fileSize)), 1),
+          J("div", ian, [
+            J("div", aan, Qe(u.fileName), 1),
+            J("div", san, [
+              J("span", lan, Qe(e.formatSize(u.fileSize)), 1),
               e.mode === "edit" && u.progress >= 0 && u.progress < 100 && u.status !== 3 ? (P(), K("div", can, [
-                V("div", uan, [
-                  V("div", {
+                J("div", uan, [
+                  J("div", {
                     class: "bar",
                     style: fn({ width: u.progress + "%" })
                   }, null, 4)
                 ]),
-                V("span", dan, qe(u.progress) + "%", 1),
-                V("span", {
+                J("span", dan, Qe(u.progress) + "%", 1),
+                J("span", {
                   class: "cancel",
                   onClick: (c) => e.cancelUpload(u, d)
-                }, qe(e.t("cancel")), 9, pan)
+                }, Qe(e.t("cancel")), 9, pan)
               ])) : (P(), K("div", han, [
-                u.status === 3 ? (P(), K("span", man, qe(u.errMessage), 1)) : Ie("", !0),
+                u.status === 3 ? (P(), K("span", man, Qe(u.errMessage), 1)) : Ie("", !0),
                 e.mode === "edit" ? (P(), K("a", {
                   key: 1,
                   href: "javascript:;",
                   class: "ul-link",
                   onClick: Pt((c) => e.deleteFile(u, d), ["stop"])
-                }, qe(e.t("delete")), 9, fan)) : Ie("", !0)
+                }, Qe(e.t("delete")), 9, fan)) : Ie("", !0)
               ]))
             ])
           ])
         ], 64)) : e.isPreview && u.status !== 3 ? (P(), K("div", gan, [
-          V("div", {
+          J("div", {
             class: je(["preview-content", { "audio-preview": e.isAudio(u) }])
           }, [
             Ze(a, {
@@ -60358,57 +60358,57 @@ function Dan(e, t, n, o, r, i) {
               audioTime: e.audioTime
             }, null, 8, ["resource", "times", "is-question-bank", "showDownLoad", "customFullSreen", "audioMode", "isMobile", "audioTime"]),
             e.mode === "edit" ? (P(), K("div", yan, [
-              V("a", {
+              J("a", {
                 href: "javascript:;",
                 class: "ul-link",
                 onClick: Pt((c) => e.deleteFile(u, d), ["stop"])
-              }, qe(e.t("delete")), 9, van)
+              }, Qe(e.t("delete")), 9, van)
             ])) : Ie("", !0)
           ], 2)
         ])) : Ie("", !0)
       ]))), 128))
     ])) : Ie("", !0),
     e.list && e.list.length > 0 && e.type === "inline" ? (P(), K("div", Aan, [
-      V("ul", ban, [
+      J("ul", ban, [
         (P(!0), K(Lt, null, an(e.list, (u, d) => (P(), K("li", { key: d }, [
-          V("img", {
+          J("img", {
             class: "svg-img",
             src: e.getFileSvg(u.fileUrl),
             alt: ""
           }, null, 8, wan),
-          V("span", Can, qe(u.fileName), 1),
-          V("span", kan, qe(e.formatSize(u.fileSize)), 1),
+          J("span", Can, Qe(u.fileName), 1),
+          J("span", kan, Qe(e.formatSize(u.fileSize)), 1),
           e.mode === "edit" && u.progress >= 0 && u.progress < 100 ? (P(), K("div", Tan, [
-            V("div", Ean, [
-              V("div", {
+            J("div", Ean, [
+              J("div", {
                 class: "bar",
                 style: fn({ width: u.progress + "%" })
               }, null, 4)
             ]),
-            V("span", San, qe(u.progress) + "%", 1),
-            V("span", {
+            J("span", San, Qe(u.progress) + "%", 1),
+            J("span", {
               class: "cancel",
               onClick: (c) => e.cancelUpload(u, d)
-            }, qe(e.t("cancel")), 9, Ian)
+            }, Qe(e.t("cancel")), 9, Ian)
           ])) : Ie("", !0),
           e.canPreview && e.isFileCanPreview(u) && u.status !== 3 ? (P(), K("a", {
             key: 1,
             href: "javascript:;",
             class: "ul-link",
             onClick: (c) => e.showPreview(u)
-          }, qe(e.t("view")), 9, xan)) : Ie("", !0),
-          u.status === 3 ? (P(), K("span", Ban, qe(u.errMessage), 1)) : Ie("", !0),
+          }, Qe(e.t("view")), 9, xan)) : Ie("", !0),
+          u.status === 3 ? (P(), K("span", Ban, Qe(u.errMessage), 1)) : Ie("", !0),
           e.mode === "edit" ? (P(), K("a", {
             key: 3,
             href: "javascript:;",
             class: "ul-link",
             onClick: (c) => e.deleteFile(u, d)
-          }, qe(e.t("delete")), 9, Man)) : (P(), K("a", {
+          }, Qe(e.t("delete")), 9, Man)) : (P(), K("a", {
             key: 4,
             href: "javascript:;",
             class: "ul-link",
             onClick: (c) => e.download(u.fileUrl)
-          }, qe(e.t("download")), 9, Lan))
+          }, Qe(e.t("download")), 9, Lan))
         ]))), 128))
       ])
     ])) : Ie("", !0),
@@ -60424,7 +60424,7 @@ function Dan(e, t, n, o, r, i) {
           onClick: t[0] || (t[0] = (u) => e.boxVisibility = !1)
         }, {
           default: rt(() => [
-            Dt(qe(e.t("cancel")), 1)
+            Dt(Qe(e.t("cancel")), 1)
           ]),
           _: 1
         }),
@@ -60433,13 +60433,13 @@ function Dan(e, t, n, o, r, i) {
           onClick: e.deleteConfirm
         }, {
           default: rt(() => [
-            Dt(qe(e.t("confirm")), 1)
+            Dt(Qe(e.t("confirm")), 1)
           ]),
           _: 1
         }, 8, ["onClick"])
       ]),
       default: rt(() => [
-        V("span", null, qe(e.t("confirmDelete")), 1)
+        J("span", null, Qe(e.t("confirmDelete")), 1)
       ]),
       _: 1
     }, 8, ["visible", "title"])
@@ -60477,7 +60477,7 @@ function Oan() {
       }, i = function(z) {
         return JSON.stringify(z);
       }, a = function(z) {
-        return new J(z);
+        return new V(z);
       }, s = a.LM = "2025-01-11 09:28", l = "https://github.com/xiangyuecn/Recorder", u = "Recorder", d = "getUserMedia", c = "srcSampleRate", h = "sampleRate", f = "bitRate", p = "catch", v = t[u];
       if (v && v.LM == s) {
         v.CLog(v.i18n.$T("K8zP::重复导入{1}", 0, u), 3);
@@ -60834,18 +60834,18 @@ function Oan() {
           var D = /* @__PURE__ */ new Date(), ye = ("0" + D.getMinutes()).substr(-2) + ":" + ("0" + D.getSeconds()).substr(-2) + "." + ("00" + D.getMilliseconds()).substr(-3), B = this && this.envIn && this.envCheck && this.id, g = ["[" + ye + " " + u + (B ? ":" + B : "") + "]" + z], C = arguments, M = a.CLog, H = 2, _ = M.log || console.log;
           for (r(ue) ? _ = ue == 1 ? M.error || console.error : ue == 3 ? M.warn || console.warn : _ : H = 1; H < C.length; H++)
             g.push(C[H]);
-          X ? _ && _("[IsLoser]" + g[0], g.length > 1 ? g : "") : _.apply(console, g);
+          Z ? _ && _("[IsLoser]" + g[0], g.length > 1 ? g : "") : _.apply(console, g);
         }
       };
       var w = function() {
         a.CLog.apply(this, arguments);
-      }, X = !0;
+      }, Z = !0;
       try {
-        X = !console.log.apply;
+        Z = !console.log.apply;
       } catch {
       }
       var E = 0;
-      function J(z) {
+      function V(z) {
         var ue = this;
         ue.id = ++E, ge();
         var D = {
@@ -60881,7 +60881,7 @@ function Oan() {
         O: 9,
         /*close*/
         C: 9
-      }, a.prototype = J.prototype = {
+      }, a.prototype = V.prototype = {
         CLog: w,
         _streamStore: function() {
           return this.set.sourceStream ? this : a;
@@ -61447,13 +61447,13 @@ const Nan = /* @__PURE__ */ qu(Fan);
           N = 1;
           var Y = x.flush();
         }
-      } catch (J) {
-        if (console.error(J), !N) try {
+      } catch (V) {
+        if (console.error(V), !N) try {
           x.flush();
         } catch (G) {
           console.error(G);
         }
-        m("MP3 Encoder: " + J.message);
+        m("MP3 Encoder: " + V.message);
         return;
       }
       var O = Y.length;
@@ -61467,8 +61467,8 @@ const Nan = /* @__PURE__ */ qu(Fan);
       if (L < k)
         L += T, setTimeout(F);
       else {
-        var X = [U.buffer.slice(0, Q)], E = h.fn(X, Q, k, b.sampleRate);
-        f(E, b), v(X[0] || new ArrayBuffer(0), "audio/mp3");
+        var Z = [U.buffer.slice(0, Q)], E = h.fn(Z, Q, k, b.sampleRate);
+        f(E, b), v(Z[0] || new ArrayBuffer(0), "audio/mp3");
       }
     };
     F();
@@ -61484,7 +61484,7 @@ const Nan = /* @__PURE__ */ qu(Fan);
   };
   var d = { id: 0 }, c = function(p, v) {
     var m = function(N) {
-      var F = N.data, Y = k.wkScope.wk_ctxs, O = k.wkScope.wk_lame, w = k.wkScope.wk_mp3TrimFix, X = Y[F.id];
+      var F = N.data, Y = k.wkScope.wk_ctxs, O = k.wkScope.wk_lame, w = k.wkScope.wk_mp3TrimFix, Z = Y[F.id];
       if (F.action == "init")
         Y[F.id] = {
           sampleRate: F.sampleRate,
@@ -61495,51 +61495,51 @@ const Nan = /* @__PURE__ */ qu(Fan);
           mOffset: 0,
           encObj: new O.Mp3Encoder(1, F.sampleRate, F.bitRate)
         };
-      else if (!X)
+      else if (!Z)
         return;
       var E = function(le) {
         var ve = le.length;
-        if (X.mOffset + ve > X.memory.length) {
-          var we = new Int8Array(X.memory.length + Math.max(5e5, ve));
-          we.set(X.memory.subarray(0, X.mOffset)), X.memory = we;
+        if (Z.mOffset + ve > Z.memory.length) {
+          var we = new Int8Array(Z.memory.length + Math.max(5e5, ve));
+          we.set(Z.memory.subarray(0, Z.mOffset)), Z.memory = we;
         }
-        X.memory.set(le, X.mOffset), X.mOffset += ve;
+        Z.memory.set(le, Z.mOffset), Z.mOffset += ve;
       };
       switch (F.action) {
         case "stop":
-          if (!X.isCp) try {
-            X.encObj.flush();
+          if (!Z.isCp) try {
+            Z.encObj.flush();
           } catch (le) {
             console.error(le);
           }
-          X.encObj = null, delete Y[F.id];
+          Z.encObj = null, delete Y[F.id];
           break;
         case "encode":
-          if (X.isCp) break;
-          X.pcmSize += F.pcm.length;
+          if (Z.isCp) break;
+          Z.pcmSize += F.pcm.length;
           try {
-            var J = X.encObj.encodeBuffer(F.pcm);
+            var V = Z.encObj.encodeBuffer(F.pcm);
           } catch (le) {
-            X.err = le, console.error(le);
+            Z.err = le, console.error(le);
           }
-          J && J.length > 0 && (X.takeoff ? I.onmessage({ action: "takeoff", id: F.id, chunk: J }) : E(J));
+          V && V.length > 0 && (Z.takeoff ? I.onmessage({ action: "takeoff", id: F.id, chunk: V }) : E(V));
           break;
         case "complete":
-          X.isCp = 1;
+          Z.isCp = 1;
           try {
-            var J = X.encObj.flush();
+            var V = Z.encObj.flush();
           } catch (le) {
-            X.err = le, console.error(le);
+            Z.err = le, console.error(le);
           }
-          if (J && J.length > 0 && (X.takeoff ? I.onmessage({ action: "takeoff", id: F.id, chunk: J }) : E(J)), X.err) {
+          if (V && V.length > 0 && (Z.takeoff ? I.onmessage({ action: "takeoff", id: F.id, chunk: V }) : E(V)), Z.err) {
             I.onmessage({
               action: F.action,
               id: F.id,
-              err: "MP3 Encoder: " + X.err.message
+              err: "MP3 Encoder: " + Z.err.message
             });
             break;
           }
-          var G = [X.memory.buffer.slice(0, X.mOffset)], oe = w.fn(G, X.mOffset, X.pcmSize, X.sampleRate);
+          var G = [Z.memory.buffer.slice(0, Z.mOffset)], oe = w.fn(G, Z.mOffset, Z.pcmSize, Z.sampleRate);
           I.onmessage({
             action: F.action,
             id: F.id,
@@ -61644,10 +61644,10 @@ const Nan = /* @__PURE__ */ qu(Fan);
     ][x == 1 ? 1 : 0][m(I.substr(0, 4), 2)];
     if (!x || !T || !Q || !U)
       return null;
-    for (var L = Math.round(v * 8 / Q), N = T == 1 ? 384 : T == 2 || x == 1 ? 1152 : 576, F = N / U * 1e3, Y = Math.floor(N * Q / 8 / U * 1e3), O = 0, w = 0, X = 0; X < p.length; X++) {
-      var E = p[X];
+    for (var L = Math.round(v * 8 / Q), N = T == 1 ? 384 : T == 2 || x == 1 ? 1152 : 576, F = N / U * 1e3, Y = Math.floor(N * Q / 8 / U * 1e3), O = 0, w = 0, Z = 0; Z < p.length; Z++) {
+      var E = p[Z];
       if (w += E.byteLength, w >= Y + 3) {
-        var J = new Uint8Array(E), G = E.byteLength - (w - (Y + 3) + 1), oe = b(G, J);
+        var V = new Uint8Array(E), G = E.byteLength - (w - (Y + 3) + 1), oe = b(G, V);
         O = oe.charAt(6) == "1";
         break;
       }
@@ -66441,14 +66441,14 @@ function Ran() {
       function w() {
         this.over_noise = 0, this.tot_noise = 0, this.max_noise = 0, this.over_count = 0, this.over_SSD = 0, this.bits = 0;
       }
-      function X() {
+      function Z() {
         this.setModules = function(fe, He) {
         };
       }
       function E() {
         this.useAdjust = 0, this.aaSensitivityP = 0, this.adjust = 0, this.adjustLimit = 0, this.decay = 0, this.floor = 0, this.l = s(D.SBMAX_l), this.s = s(D.SBMAX_s), this.psfb21 = s(D.PSFB21), this.psfb12 = s(D.PSFB12), this.cb_l = s(D.CBANDS), this.cb_s = s(D.CBANDS), this.eql_w = s(D.BLKSIZE / 2);
       }
-      function J() {
+      function V() {
         this.class_id = 0, this.num_samples = 0, this.num_channels = 0, this.in_samplerate = 0, this.out_samplerate = 0, this.scale = 0, this.scale_left = 0, this.scale_right = 0, this.analysis = !1, this.bWriteVbrTag = !1, this.decode_only = !1, this.quality = 0, this.mode = k.STEREO, this.force_ms = !1, this.free_format = !1, this.findReplayGain = !1, this.decode_on_the_fly = !1, this.write_id3tag_automatic = !1, this.brate = 0, this.compression_ratio = 0, this.copyright = 0, this.original = 0, this.extension = 0, this.emphasis = 0, this.error_protection = 0, this.strict_ISO = !1, this.disable_reservoir = !1, this.quant_comp = 0, this.quant_comp_short = 0, this.experimentalY = !1, this.experimentalZ = 0, this.exp_nspsytune = 0, this.preset = 0, this.VBR = null, this.VBR_q_frac = 0, this.VBR_q = 0, this.VBR_mean_bitrate_kbps = 0, this.VBR_min_bitrate_kbps = 0, this.VBR_max_bitrate_kbps = 0, this.VBR_hard_min = 0, this.lowpassfreq = 0, this.highpassfreq = 0, this.lowpasswidth = 0, this.highpasswidth = 0, this.maskingadjust = 0, this.maskingadjust_short = 0, this.ATHonly = !1, this.ATHshort = !1, this.noATH = !1, this.ATHtype = 0, this.ATHcurve = 0, this.ATHlower = 0, this.athaa_type = 0, this.athaa_loudapprox = 0, this.athaa_sensitivity = 0, this.short_blocks = null, this.useTemporal = !1, this.interChRatio = 0, this.msfix = 0, this.tune = !1, this.tune_value_a = 0, this.version = 0, this.encoder_delay = 0, this.encoder_padding = 0, this.framesize = 0, this.frameNum = 0, this.lame_allocated_gfp = 0, this.internal_flags = null;
       }
       function G(fe) {
@@ -67082,7 +67082,7 @@ function Ran() {
         this.rv = null;
         var fe;
         this.qupvt = null;
-        var He, Xe = new X(), Se;
+        var He, Xe = new Z(), Se;
         this.setModules = function(Oe, ce, Ce, xe) {
           fe = ce, this.rv = ce, He = Ce, this.qupvt = Ce, Se = xe, Xe.setModules(He, Se);
         };
@@ -68921,7 +68921,7 @@ function Ran() {
           return $.class_id = Oe, ee = $.internal_flags = new M(), $.mode = k.NOT_SET, $.original = 1, $.in_samplerate = 44100, $.num_channels = 2, $.num_samples = -1, $.bWriteVbrTag = !0, $.quality = -1, $.short_blocks = null, ee.subblock_gain = -1, $.lowpassfreq = 0, $.highpassfreq = 0, $.lowpasswidth = -1, $.highpasswidth = -1, $.VBR = b.vbr_off, $.VBR_q = 4, $.ATHcurve = -1, $.VBR_mean_bitrate_kbps = 128, $.VBR_min_bitrate_kbps = 0, $.VBR_max_bitrate_kbps = 0, $.VBR_hard_min = 0, ee.VBR_min_bitrate = 1, ee.VBR_max_bitrate = 13, $.quant_comp = -1, $.quant_comp_short = -1, $.msfix = -1, ee.resample_ratio = 1, ee.OldValue[0] = 180, ee.OldValue[1] = 180, ee.CurrentStep[0] = 4, ee.CurrentStep[1] = 4, ee.masking_lower = 1, ee.nsPsy.attackthre = -1, ee.nsPsy.attackthre_s = -1, $.scale = -1, $.athaa_type = -1, $.ATHtype = -1, $.athaa_loudapprox = -1, $.athaa_sensitivity = 0, $.useTemporal = null, $.interChRatio = -1, ee.mf_samples_to_encode = D.ENCDELAY + D.POSTDELAY, $.encoder_padding = 0, ee.mf_size = D.ENCDELAY - D.MDCTDELAY, $.findReplayGain = !1, $.decode_on_the_fly = !1, ee.decode_on_the_fly = !1, ee.findReplayGain = !1, ee.findPeakSample = !1, ee.RadioGain = 0, ee.AudiophileGain = 0, ee.noclipGainChange = 0, ee.noclipScale = -1, $.preset = 0, $.write_id3tag_automatic = !0, 0;
         }
         this.lame_init = function() {
-          var $ = new J();
+          var $ = new V();
           return ce($), $.lame_allocated_gfp = 1, $;
         };
         function Ce($) {
@@ -69449,7 +69449,7 @@ const Qan = "data:image/svg+xml,%3c?xml%20version='1.0'%20standalone='no'?%3e%3c
           sampleRate: 16e3,
           bitRate: 16
         }), s.value.open(() => {
-          zi(() => {
+          wi(() => {
             s.value.start(), l.value = !0, c.value = 0, h.value = setInterval(() => {
               c.value++;
             }, 1e3);
@@ -69548,41 +69548,41 @@ function Jan(e, t, n, o, r, i) {
         controlsList: "nodownload",
         src: e.audioUrl
       }, [
-        V("source", {
+        J("source", {
           src: e.audioUrl,
           type: "audio/mpeg"
         }, null, 8, $an)
       ], 8, Han)) : Ie("", !0),
-      V("span", {
+      J("span", {
         class: je(["audioicon", { playingicon: e.isPlaying }])
       }, null, 2),
-      V("span", jan, qe(e.residueduration), 1)
+      J("span", jan, Qe(e.residueduration), 1)
     ])) : Ie("", !0),
-    e.isRecording ? (P(), K("div", Yan, qe(e.formatTime(e.recordingTime)), 1)) : Ie("", !0),
-    V("div", Kan, [
+    e.isRecording ? (P(), K("div", Yan, Qe(e.formatTime(e.recordingTime)), 1)) : Ie("", !0),
+    J("div", Kan, [
       !e.isRecording && !e.audioBlob ? (P(), K("div", {
         key: 0,
         class: "status-icon",
         onClick: t[1] || (t[1] = (...s) => e.startRecording && e.startRecording(...s))
       }, [...t[5] || (t[5] = [
-        V("img", { src: Qan }, null, -1)
+        J("img", { src: Qan }, null, -1)
       ])])) : e.isRecording ? (P(), K("img", {
         key: 1,
         src: qan,
         onClick: t[2] || (t[2] = (...s) => e.stopRecording && e.stopRecording(...s))
       })) : Ie("", !0),
-      e.audioBlob ? Ie("", !0) : (P(), K("div", zan, qe(e.recorderStatus), 1))
+      e.audioBlob ? Ie("", !0) : (P(), K("div", zan, Qe(e.recorderStatus), 1))
     ]),
-    V("div", Van, [
+    J("div", Van, [
       !e.isRecording && e.audioBlob ? (P(), K("span", {
         key: 0,
         onClick: t[3] || (t[3] = (...s) => e.reRecord && e.reRecord(...s))
-      }, qe(e.t("reRecord")), 1)) : Ie("", !0),
+      }, Qe(e.t("reRecord")), 1)) : Ie("", !0),
       !e.isRecording && e.audioBlob ? (P(), K("span", {
         key: 1,
         type: "primary",
         onClick: t[4] || (t[4] = (...s) => e.saveRecording && e.saveRecording(...s))
-      }, qe(e.t("save")), 1)) : Ie("", !0)
+      }, Qe(e.t("save")), 1)) : Ie("", !0)
     ]),
     e.alertInfo.text ? (P(), st(a, {
       key: 2,
@@ -69590,7 +69590,7 @@ function Jan(e, t, n, o, r, i) {
       type: e.alertInfo.type
     }, {
       description: rt(() => [
-        Dt(qe(e.alertInfo.text), 1)
+        Dt(Qe(e.alertInfo.text), 1)
       ]),
       _: 1
     }, 8, ["type"])) : Ie("", !0)
@@ -69603,8 +69603,8 @@ const Wan = /* @__PURE__ */ or(Uan, [["render", Jan], ["__scopeId", "data-v-af5e
     FileList: Wl,
     TinyDialogBox: Ji,
     TinyButton: lo,
-    TinyInput: Ti,
-    TinyDrawer: ki,
+    TinyInput: Ei,
+    TinyDrawer: Ti,
     AudioRecorder: Wan
   },
   model: {
@@ -69657,18 +69657,18 @@ const Wan = /* @__PURE__ */ or(Uan, [["render", Jan], ["__scopeId", "data-v-af5e
       const F = N.toString().length;
       s.value = U.target.innerHTML, setTimeout(() => {
         const Y = document.createRange(), O = window.getSelection();
-        let w = 0, X = !1;
-        function E(J) {
-          if (!X) {
-            if (J.nodeType === Node.TEXT_NODE) {
-              const G = w + J.length;
-              F <= G ? (Y.setStart(J, F - w), Y.setEnd(J, F - w), X = !0) : w = G;
+        let w = 0, Z = !1;
+        function E(V) {
+          if (!Z) {
+            if (V.nodeType === Node.TEXT_NODE) {
+              const G = w + V.length;
+              F <= G ? (Y.setStart(V, F - w), Y.setEnd(V, F - w), Z = !0) : w = G;
             } else
-              for (let G = 0; G < J.childNodes.length; G++)
-                if (E(J.childNodes[G]), X) return;
+              for (let G = 0; G < V.childNodes.length; G++)
+                if (E(V.childNodes[G]), Z) return;
           }
         }
-        E(U.target), X || (Y.selectNodeContents(U.target), Y.collapse(!1)), O.removeAllRanges(), O.addRange(Y);
+        E(U.target), Z || (Y.selectNodeContents(U.target), Y.collapse(!1)), O.removeAllRanges(), O.addRange(Y);
       }, 0);
     }, i = Va(), a = hn(null), s = hn(e.modelValue || ""), l = hn(null), u = hn(Cu()), d = hn(!1), c = _i(() => "formula/index.html"), h = hn(null), f = () => {
       a.value.$el.accept = Bc(["image"]), h.value.click();
@@ -69853,14 +69853,14 @@ const Wan = /* @__PURE__ */ or(Uan, [["render", Jan], ["__scopeId", "data-v-af5e
         Y.image1 = Q, Y.audio = L, Y.video1 = N, Y.math = F;
         const O = U.import("parchment"), w = new O.StyleAttributor("image1", "color", {
           scope: O.Scope.INLINE
-        }), X = new O.StyleAttributor("video1", "color", {
+        }), Z = new O.StyleAttributor("video1", "color", {
           scope: O.Scope.INLINE
         }), E = new O.StyleAttributor("audio", "color", {
           scope: O.Scope.INLINE
-        }), J = new O.StyleAttributor("math", "color", {
+        }), V = new O.StyleAttributor("math", "color", {
           scope: O.Scope.INLINE
         });
-        U.register("formats/image1", w), U.register("formats/video1", X), U.register("formats/audio", E), U.register("formats/math", J);
+        U.register("formats/image1", w), U.register("formats/video1", Z), U.register("formats/audio", E), U.register("formats/math", V);
       },
       containerId: u,
       boxVisibility: d,
@@ -69897,17 +69897,17 @@ function rsn(e, t, n, o, r, i) {
       "before-editor-init": e.beforeEditorInit
     }, null, 8, ["class", "modelValue", "options", "before-editor-init"]),
     e.isMobile && e.isBase ? (P(), K("div", tsn, [
-      V("img", {
+      J("img", {
         src: e4,
         alt: "",
         onClick: t[1] || (t[1] = (...h) => e.uploadImg && e.uploadImg(...h))
       }),
-      V("img", {
+      J("img", {
         src: Zan,
         alt: "",
         onClick: t[2] || (t[2] = (...h) => e.uploadFile && e.uploadFile(...h))
       }),
-      V("img", {
+      J("img", {
         src: Xan,
         alt: "",
         onClick: t[3] || (t[3] = (h) => e.drawerVisible = !0)
@@ -69918,7 +69918,7 @@ function rsn(e, t, n, o, r, i) {
         onClick: t[4] || (t[4] = (h) => e.insertContent("( )"))
       }, {
         default: rt(() => [
-          Dt(qe(e.t("insertQue")), 1)
+          Dt(Qe(e.t("insertQue")), 1)
         ]),
         _: 1
       })) : Ie("", !0)
@@ -69933,7 +69933,7 @@ function rsn(e, t, n, o, r, i) {
       "is-question-bank": e.isQuestionBank,
       onDeleteFile: e.deleteFile
     }, null, 8, ["list", "isShowLimitTimes", "is-question-bank", "onDeleteFile"]),
-    V("button", {
+    J("button", {
       id: `upload-${e.containerId}`,
       style: { display: "none" }
     }, null, 8, nsn),
@@ -69966,7 +69966,7 @@ function rsn(e, t, n, o, r, i) {
         }, 8, ["onClick"])
       ]),
       default: rt(() => [
-        V("iframe", {
+        J("iframe", {
           src: e.iframeUrl,
           frameborder: "0"
         }, null, 8, osn)
@@ -70042,7 +70042,7 @@ const t4 = /* @__PURE__ */ or(_an, [["render", rsn]]), isn = Gr({
         content: b.slice(m)
       }), v;
     }), s = _i(() => a.value.filter((p) => p.type === "blank").length);
-    e.question.record || (e.question.record = {}), e.mode != 1 && zi(() => {
+    e.question.record || (e.question.record = {}), e.mode != 1 && wi(() => {
       Ql();
     }), Mo(a, () => {
       const p = a.value.filter((v) => v.type === "blank").length;
@@ -70059,7 +70059,7 @@ const t4 = /* @__PURE__ */ or(_an, [["render", rsn]]), isn = Gr({
             const y = (m = e.question.record) == null ? void 0 : m.answer;
             Array.isArray(y) ? i.value = [...y] : i.value = y.split(";");
           } else p == 2 && (i.value = []);
-        p != 1 && zi(() => {
+        p != 1 && wi(() => {
           Ql();
         });
       } catch (y) {
@@ -70067,7 +70067,7 @@ const t4 = /* @__PURE__ */ or(_an, [["render", rsn]]), isn = Gr({
       }
     });
     const l = (p) => a.value.slice(0, p).filter((v) => v.type === "blank").length, u = (p) => {
-      zi(() => {
+      wi(() => {
         uae(p.target, p.target.value);
       });
     }, d = (p) => {
@@ -70133,8 +70133,8 @@ function bsn(e, t, n, o, r, i) {
               key: 0,
               innerHTML: u.content
             }, null, 8, csn)) : (P(), K("div", usn, [
-              V("span", dsn, "[" + qe(e.blankIndex(d) + 1) + "]", 1),
-              Xt(V("input", {
+              J("span", dsn, "[" + Qe(e.blankIndex(d) + 1) + "]", 1),
+              Xt(J("input", {
                 type: "text",
                 class: je(["completion-input", {
                   "answer-correct": e.mode === 3 && e.isSubmitted && e.checkAnswerCorrect(d),
@@ -70156,8 +70156,8 @@ function bsn(e, t, n, o, r, i) {
               key: 0,
               innerHTML: u.content
             }, null, 8, msn)) : (P(), K("div", fsn, [
-              V("span", gsn, "[" + qe(e.blankIndex(d) + 1) + "]", 1),
-              Xt(V("input", {
+              J("span", gsn, "[" + Qe(e.blankIndex(d) + 1) + "]", 1),
+              Xt(J("input", {
                 type: "text",
                 class: je(["completion-input", {
                   "answer-correct": e.mode === 3 && e.isSubmitted && e.checkAnswerCorrect(d),
@@ -70173,7 +70173,7 @@ function bsn(e, t, n, o, r, i) {
             ]))
           ], 64))), 256))
         ])) : Ie("", !0),
-        e.question.allowExchange ? (P(), K("div", vsn, "*" + qe(e.t("answerCanChangeTip")), 1)) : Ie("", !0)
+        e.question.allowExchange ? (P(), K("div", vsn, "*" + Qe(e.t("answerCanChangeTip")), 1)) : Ie("", !0)
       ])) : (P(), K("div", {
         key: 1,
         class: "ql-editor preview-title",
@@ -70207,7 +70207,7 @@ function bsn(e, t, n, o, r, i) {
       onClick: e.insert
     }, {
       default: rt(() => [
-        Dt(qe(e.t("insertQue")), 1)
+        Dt(Qe(e.t("insertQue")), 1)
       ]),
       _: 1
     }, 8, ["onClick"])) : Ie("", !0),
@@ -70732,7 +70732,7 @@ const n4 = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAYAAACtWK6eAA
     TinyRadioGroup: Pa,
     TinyRadio: ti,
     TinyCheckboxGroup: vs,
-    TinyCheckbox: Ei,
+    TinyCheckbox: Si,
     TinyAlert: Vi,
     FileList: Wl,
     Base: Um,
@@ -70776,27 +70776,27 @@ const n4 = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAYAAACtWK6eAA
     const n = Jl().isMobile, o = Va(), r = hn({
       type: "warning",
       text: ""
-    }), i = hn([]), a = (w, X) => {
-      w && (i.value[X] = w);
+    }), i = hn([]), a = (w, Z) => {
+      w && (i.value[Z] = w);
     };
     S4(() => {
       i.value = [];
     });
     const s = (w) => {
-      n && (d.value.type === 1 ? c.value = v(w) : h.value.includes(v(w)) ? h.value = h.value.filter((X) => X !== v(w)) : h.value.push(v(w)));
-    }, l = (w, X) => {
+      n && (d.value.type === 1 ? c.value = v(w) : h.value.includes(v(w)) ? h.value = h.value.filter((Z) => Z !== v(w)) : h.value.push(v(w)));
+    }, l = (w, Z) => {
       r.value = {
         type: w,
-        text: X
+        text: Z
       }, setTimeout(() => {
         r.value.text = "";
       }, 2e3);
     }, u = hn(null), d = hn({}), c = hn(""), h = hn([]), f = hn(), p = () => {
-      var w, X, E, J;
-      e.mode === 3 ? (w = d.value.record) != null && w.answer ? d.value.type === 1 ? (c.value = d.value.record.answer, f.value = d.value.record.answer) : (h.value = Array.isArray(d.value.record.answer) ? d.value.record.answer : ((X = d.value.record.answer) == null ? void 0 : X.split(",")) || [], f.value = Array.isArray(d.value.record.answer) ? d.value.record.answer : ((E = d.value.record.answer) == null ? void 0 : E.split(",")) || []) : (c.value = "", h.value = []) : d.value.correctAnswer ? d.value.type === 1 ? c.value = d.value.correctAnswer[0] : h.value = Array.isArray(d.value.correctAnswer) ? d.value.correctAnswer : ((J = d.value.correctAnswer) == null ? void 0 : J.split(",")) || [] : (c.value = "", h.value = []);
+      var w, Z, E, V;
+      e.mode === 3 ? (w = d.value.record) != null && w.answer ? d.value.type === 1 ? (c.value = d.value.record.answer, f.value = d.value.record.answer) : (h.value = Array.isArray(d.value.record.answer) ? d.value.record.answer : ((Z = d.value.record.answer) == null ? void 0 : Z.split(",")) || [], f.value = Array.isArray(d.value.record.answer) ? d.value.record.answer : ((E = d.value.record.answer) == null ? void 0 : E.split(",")) || []) : (c.value = "", h.value = []) : d.value.correctAnswer ? d.value.type === 1 ? c.value = d.value.correctAnswer[0] : h.value = Array.isArray(d.value.correctAnswer) ? d.value.correctAnswer : ((V = d.value.correctAnswer) == null ? void 0 : V.split(",")) || [] : (c.value = "", h.value = []);
     };
     Mo(() => e.oriQuestion, (w) => {
-      d.value = Zl(w), p(), zi(() => {
+      d.value = Zl(w), p(), wi(() => {
         Ql();
       }), console.log(d.value, "--------Choice--------", w);
     }, { immediate: !0 }), Mo([() => e.mode, () => e.isSubmitted], () => {
@@ -70805,7 +70805,7 @@ const n4 = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAYAAACtWK6eAA
     const v = (w) => String.fromCharCode(65 + w), m = (w) => w ? Array.isArray(w) ? w.join(",") : w : "-", y = (w) => {
       var we;
       if (e.mode !== 3 || !e.isSubmitted) return "";
-      const X = v(w), E = ((we = d.value.record) == null ? void 0 : we.answer) || "", J = d.value.correctAnswer || "", G = Array.isArray(E) ? E : (E == null ? void 0 : E.split(",")) || [], oe = Array.isArray(J) ? J : (J == null ? void 0 : J.split(",")) || [], le = G.includes(X), ve = oe.includes(X);
+      const Z = v(w), E = ((we = d.value.record) == null ? void 0 : we.answer) || "", V = d.value.correctAnswer || "", G = Array.isArray(E) ? E : (E == null ? void 0 : E.split(",")) || [], oe = Array.isArray(V) ? V : (V == null ? void 0 : V.split(",")) || [], le = G.includes(Z), ve = oe.includes(Z);
       return ve && le ? "correct" : !ve && le ? "wrong" : ve && !le ? "missed" : "";
     }, b = () => {
       e.mode === 1 && (d.value.choices.length < 20 ? k() : console.warn(o("optionLimit") || "选项数量已达上限(20个)"));
@@ -70816,25 +70816,29 @@ const n4 = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAYAAACtWK6eAA
         attachments: []
       });
     }, I = (w) => {
-      e.mode === 1 && e.needRichText && (u.value = w);
-    }, x = (w, X) => {
-      e.mode === 1 && d.value.choices[X].attachments.splice(w, 1);
-    }, T = (w, X) => {
-      console.log(w, X, d.value, "question.valuequestion.value"), e.mode === 1 && d.value.choices[X].attachments.push(w);
-    }, U = (w) => {
-      e.mode === 1 && (I(w), zi(() => {
-        var X;
-        (X = i.value[w]) == null || X.uploadImg();
+      e.mode === 1 && (e.needRichText && (u.value = w), n && wi(() => {
+        var E, V, G;
+        const Z = i.value[w];
+        console.log(Z.fluentEditorRef.state.quill, "richTextarea"), (G = (V = (E = Z == null ? void 0 : Z.fluentEditorRef) == null ? void 0 : E.state.quill) == null ? void 0 : V.focus) == null || G.call(V);
       }));
-    }, Q = (w, X) => {
+    }, x = (w, Z) => {
+      e.mode === 1 && d.value.choices[Z].attachments.splice(w, 1);
+    }, T = (w, Z) => {
+      console.log(w, Z, d.value, "question.valuequestion.value"), e.mode === 1 && d.value.choices[Z].attachments.push(w);
+    }, U = (w) => {
+      e.mode === 1 && (I(w), wi(() => {
+        var Z;
+        (Z = i.value[w]) == null || Z.uploadImg();
+      }));
+    }, Q = (w, Z) => {
       if (e.mode === 1)
         if (d.value.choices && Array.isArray(d.value.choices) && d.value.choices.length > 2) {
-          if (d.value.choices.splice(X, 1), d.value.correctAnswer) {
-            const J = (Array.isArray(d.value.correctAnswer) ? d.value.correctAnswer : d.value.correctAnswer.split(",")).filter((G) => {
+          if (d.value.choices.splice(Z, 1), d.value.correctAnswer) {
+            const V = (Array.isArray(d.value.correctAnswer) ? d.value.correctAnswer : d.value.correctAnswer.split(",")).filter((G) => {
               const oe = G.charCodeAt(0) - 65;
-              return oe !== X && oe < d.value.choices.length;
+              return oe !== Z && oe < d.value.choices.length;
             });
-            d.value.correctAnswer = d.value.type === 1 ? J[0] || "" : J;
+            d.value.correctAnswer = d.value.type === 1 ? V[0] || "" : V;
           }
         } else
           console.warn(o("atLeastTwo") || "至少需要两个选项");
@@ -70843,10 +70847,10 @@ const n4 = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAYAAACtWK6eAA
       t("updateQuestion", w);
     }, N = () => {
       let w = !0;
-      return d.value.title || (l("warning", o("questionTitleTip1")), w = !1), d.value.choices.some((X) => !X.text) && (l("warning", o("optionContentTip1")), w = !1), (!d.value.correctAnswer || d.value.correctAnswer.length === 0) && (l("warning", o("inputAnswerTip4")), w = !1), w;
+      return d.value.title || (l("warning", o("questionTitleTip1")), w = !1), d.value.choices.some((Z) => !Z.text) && (l("warning", o("optionContentTip1")), w = !1), (!d.value.correctAnswer || d.value.correctAnswer.length === 0) && (l("warning", o("inputAnswerTip4")), w = !1), w;
     };
     n && (() => {
-      Mo(() => d.value, (w, X) => {
+      Mo(() => d.value, (w, Z) => {
         w && e.mode === 1 && L();
       }, { deep: !0 });
     })();
@@ -70935,16 +70939,16 @@ function Fln(e, t, n, o, r, i) {
           class: je(["edit-mode", { mobile: e.isMobile }])
         }, [
           e.isMobile ? (P(), K(Lt, { key: 1 }, [
-            V("div", Jsn, qe(e.t("choiceTip")), 1),
-            V("div", Wsn, [
+            J("div", Jsn, Qe(e.t("choiceTip")), 1),
+            J("div", Wsn, [
               (P(!0), K(Lt, null, an(e.question.choices, (m, y) => (P(), K("div", {
                 key: m.id
               }, [
-                V("div", Zsn, [
-                  V("span", {
+                J("div", Zsn, [
+                  J("span", {
                     class: je(["choice-option", { active: e.question.type === 1 ? e.radioAnswer === e.getOption(y) : e.checkboxAnswer.includes(e.getOption(y)) }]),
                     onClick: (b) => e.selectOption(y)
-                  }, qe(e.getOption(y)), 11, Xsn),
+                  }, Qe(e.getOption(y)), 11, Xsn),
                   e.activeIndex === y ? (P(), st(a, {
                     key: 0,
                     class: "choice-input-wrap",
@@ -70965,7 +70969,7 @@ function Fln(e, t, n, o, r, i) {
                       class: "choice-input",
                       onClick: (b) => e.activeRichText(y)
                     }, [
-                      m.text || m.attachments && m.attachments.length > 0 ? Ie("", !0) : (P(), K("span", nln, qe(e.t("optionContent")), 1)),
+                      m.text || m.attachments && m.attachments.length > 0 ? Ie("", !0) : (P(), K("span", nln, Qe(e.t("optionContent")), 1)),
                       m.text ? (P(), K("div", {
                         key: 1,
                         class: "rich-text",
@@ -70992,11 +70996,11 @@ function Fln(e, t, n, o, r, i) {
                       [ii, m.text]
                     ])
                   ])),
-                  V("div", {
+                  J("div", {
                     class: "btn-list",
                     onClick: (b) => e.activeRichText(y)
                   }, [
-                    V("img", {
+                    J("img", {
                       src: e4,
                       alt: "",
                       onClick: (b) => e.uploadImg(y)
@@ -71011,24 +71015,24 @@ function Fln(e, t, n, o, r, i) {
                   ], 8, rln)
                 ])
               ]))), 128)),
-              V("div", {
+              J("div", {
                 class: "btn-add",
                 onClick: t[3] || (t[3] = (...m) => e.addChoice && e.addChoice(...m))
               }, [
-                t[11] || (t[11] = V("img", {
+                t[11] || (t[11] = J("img", {
                   src: Lv,
                   alt: ""
                 }, null, -1)),
-                Dt(qe(e.t("addOption")), 1)
+                Dt(Qe(e.t("addOption")), 1)
               ])
             ])
           ], 64)) : (P(), K(Lt, { key: 0 }, [
-            V("div", Fsn, [
+            J("div", Fsn, [
               (P(!0), K(Lt, null, an(e.question.choices, (m, y) => (P(), K("div", {
                 key: m.id
               }, [
-                V("div", Nsn, [
-                  V("span", Rsn, qe(e.getOption(y)), 1),
+                J("div", Nsn, [
+                  J("span", Rsn, Qe(e.getOption(y)), 1),
                   e.activeIndex === y ? (P(), st(a, {
                     key: 0,
                     class: "choice-input-wrap",
@@ -71047,7 +71051,7 @@ function Fln(e, t, n, o, r, i) {
                       class: "choice-input",
                       onClick: (b) => e.activeRichText(y)
                     }, [
-                      m.text || m.attachments && m.attachments.length > 0 ? Ie("", !0) : (P(), K("span", Gsn, qe(e.t("optionContent")), 1)),
+                      m.text || m.attachments && m.attachments.length > 0 ? Ie("", !0) : (P(), K("span", Gsn, Qe(e.t("optionContent")), 1)),
                       m.text ? (P(), K("div", {
                         key: 1,
                         class: "rich-text",
@@ -71083,21 +71087,21 @@ function Fln(e, t, n, o, r, i) {
                   }, null, 8, $sn)) : Ie("", !0)
                 ])
               ]))), 128)),
-              V("div", {
+              J("div", {
                 class: "btn-add",
                 onClick: t[0] || (t[0] = (...m) => e.addChoice && e.addChoice(...m))
               }, [
-                t[10] || (t[10] = V("img", {
+                t[10] || (t[10] = J("img", {
                   src: Lv,
                   alt: ""
                 }, null, -1)),
-                Dt(qe(e.t("addOption")), 1)
+                Dt(Qe(e.t("addOption")), 1)
               ])
             ]),
-            V("div", jsn, [
-              V("div", Ysn, [
-                V("span", null, qe(e.t("answer")) + "：", 1),
-                V("span", null, qe(e.formatAnswer(e.question.correctAnswer)), 1)
+            J("div", jsn, [
+              J("div", Ysn, [
+                J("span", null, Qe(e.t("answer")) + "：", 1),
+                J("span", null, Qe(e.formatAnswer(e.question.correctAnswer)), 1)
               ]),
               e.question.type === 1 ? (P(), st(u, {
                 key: 0,
@@ -71112,7 +71116,7 @@ function Fln(e, t, n, o, r, i) {
                     label: e.getOption(y)
                   }, {
                     default: rt(() => [
-                      V("span", Ksn, qe(e.getOption(y)), 1)
+                      J("span", Ksn, Qe(e.getOption(y)), 1)
                     ]),
                     _: 2
                   }, 1032, ["label"]))), 128))
@@ -71132,7 +71136,7 @@ function Fln(e, t, n, o, r, i) {
                     label: e.getOption(y)
                   }, {
                     default: rt(() => [
-                      V("span", zsn, qe(e.getOption(y)), 1)
+                      J("span", zsn, Qe(e.getOption(y)), 1)
                     ]),
                     _: 2
                   }, 1032, ["label"]))), 128))
@@ -71140,19 +71144,19 @@ function Fln(e, t, n, o, r, i) {
                 _: 1
               }, 8, ["modelValue"])) : Ie("", !0)
             ]),
-            V("div", Vsn, [
+            J("div", Vsn, [
               Ze(h, {
                 type: "primary",
                 onClick: e.saveQuestion
               }, {
                 default: rt(() => [
-                  Dt(qe(e.t("save")), 1)
+                  Dt(Qe(e.t("save")), 1)
                 ]),
                 _: 1
               }, 8, ["onClick"]),
               Ze(h, { onClick: e.cancel }, {
                 default: rt(() => [
-                  Dt(qe(e.t("cancel")), 1)
+                  Dt(Qe(e.t("cancel")), 1)
                 ]),
                 _: 1
               }, 8, ["onClick"])
@@ -71160,7 +71164,7 @@ function Fln(e, t, n, o, r, i) {
           ], 64))
         ], 2)) : Ie("", !0),
         e.mode === 2 ? (P(), K("div", lln, [
-          V("div", cln, [
+          J("div", cln, [
             e.question.type === 1 ? (P(), st(u, {
               key: 0,
               class: "choices",
@@ -71177,9 +71181,9 @@ function Fln(e, t, n, o, r, i) {
                   default: rt(() => {
                     var b;
                     return [
-                      V("span", uln, qe(e.getOption(y)) + ". ", 1),
-                      V("div", dln, [
-                        V("span", {
+                      J("span", uln, Qe(e.getOption(y)) + ". ", 1),
+                      J("div", dln, [
+                        J("span", {
                           class: "rich-text ql-editor not-edit",
                           innerHTML: m.text
                         }, null, 8, pln),
@@ -71216,9 +71220,9 @@ function Fln(e, t, n, o, r, i) {
                   default: rt(() => {
                     var b;
                     return [
-                      V("span", hln, qe(e.getOption(y)) + ". ", 1),
-                      V("div", mln, [
-                        V("span", {
+                      J("span", hln, Qe(e.getOption(y)) + ". ", 1),
+                      J("div", mln, [
+                        J("span", {
                           class: "rich-text ql-editor not-edit",
                           innerHTML: m.text
                         }, null, 8, fln),
@@ -71240,9 +71244,9 @@ function Fln(e, t, n, o, r, i) {
               _: 1
             }, 8, ["modelValue"])) : Ie("", !0)
           ]),
-          V("div", gln, [
-            V("span", null, qe(e.t("answer")) + "：", 1),
-            V("span", null, qe(e.formatAnswer(e.question.correctAnswer)), 1)
+          J("div", gln, [
+            J("span", null, Qe(e.t("answer")) + "：", 1),
+            J("span", null, Qe(e.formatAnswer(e.question.correctAnswer)), 1)
           ])
         ])) : Ie("", !0),
         e.mode === 3 ? (P(), K("div", yln, [
@@ -71263,9 +71267,9 @@ function Fln(e, t, n, o, r, i) {
                   default: rt(() => {
                     var b;
                     return [
-                      V("span", Sln, qe(e.getOption(y)) + ". ", 1),
-                      V("div", Iln, [
-                        V("span", {
+                      J("span", Sln, Qe(e.getOption(y)) + ". ", 1),
+                      J("div", Iln, [
+                        J("span", {
                           class: "rich-text ql-editor not-edit",
                           innerHTML: m.text
                         }, null, 8, xln),
@@ -71303,9 +71307,9 @@ function Fln(e, t, n, o, r, i) {
                   default: rt(() => {
                     var b;
                     return [
-                      V("span", Bln, qe(e.getOption(y)) + ". ", 1),
-                      V("div", Mln, [
-                        V("span", {
+                      J("span", Bln, Qe(e.getOption(y)) + ". ", 1),
+                      J("div", Mln, [
+                        J("span", {
                           class: "rich-text ql-editor",
                           innerHTML: m.text
                         }, null, 8, Lln),
@@ -71343,9 +71347,9 @@ function Fln(e, t, n, o, r, i) {
                   default: rt(() => {
                     var b;
                     return [
-                      V("span", Aln, qe(e.getOption(y)) + ". ", 1),
-                      V("div", bln, [
-                        V("span", {
+                      J("span", Aln, Qe(e.getOption(y)) + ". ", 1),
+                      J("div", bln, [
+                        J("span", {
                           class: "rich-text ql-editor not-edit",
                           innerHTML: m.text
                         }, null, 8, wln),
@@ -71382,9 +71386,9 @@ function Fln(e, t, n, o, r, i) {
                   default: rt(() => {
                     var b;
                     return [
-                      V("span", Cln, qe(e.getOption(y)) + ". ", 1),
-                      V("div", kln, [
-                        V("span", {
+                      J("span", Cln, Qe(e.getOption(y)) + ". ", 1),
+                      J("div", kln, [
+                        J("span", {
                           class: "rich-text ql-editor not-edit",
                           innerHTML: m.text
                         }, null, 8, Tln),
@@ -71408,13 +71412,13 @@ function Fln(e, t, n, o, r, i) {
             }, 8, ["modelValue"])) : Ie("", !0)
           ])),
           e.isSubmitted && e.showAnswer ? (P(), K("div", Dln, [
-            V("div", Pln, [
-              V("span", null, qe(e.t("stuAnswer")) + "：", 1),
-              V("span", null, qe(e.formatAnswer((v = e.question.record) == null ? void 0 : v.answer)), 1)
+            J("div", Pln, [
+              J("span", null, Qe(e.t("stuAnswer")) + "：", 1),
+              J("span", null, Qe(e.formatAnswer((v = e.question.record) == null ? void 0 : v.answer)), 1)
             ]),
-            V("div", Oln, [
-              V("span", null, qe(e.t("correctAnswer")) + "：", 1),
-              V("span", null, qe(e.formatAnswer(e.question.correctAnswer)), 1)
+            J("div", Oln, [
+              J("span", null, Qe(e.t("correctAnswer")) + "：", 1),
+              J("span", null, Qe(e.formatAnswer(e.question.correctAnswer)), 1)
             ])
           ])) : Ie("", !0)
         ])) : Ie("", !0),
@@ -71424,7 +71428,7 @@ function Fln(e, t, n, o, r, i) {
           type: e.alertInfo.type
         }, {
           description: rt(() => [
-            Dt(qe(e.alertInfo.text), 1)
+            Dt(Qe(e.alertInfo.text), 1)
           ]),
           _: 1
         }, 8, ["type"])) : Ie("", !0)
@@ -71433,7 +71437,7 @@ function Fln(e, t, n, o, r, i) {
     _: 1
   }, 8, ["question", "mode"]);
 }
-const zc = /* @__PURE__ */ or(Osn, [["render", Fln], ["__scopeId", "data-v-d31656c0"]]);
+const zc = /* @__PURE__ */ or(Osn, [["render", Fln], ["__scopeId", "data-v-28db5e23"]]);
 zc.install = (e) => e.component(zc.name, zc);
 const Nln = Gr({
   name: "Completion",
@@ -71441,7 +71445,7 @@ const Nln = Gr({
     Base: Um,
     FileList: Wl,
     TinyButton: lo,
-    TinyCheckbox: Ei,
+    TinyCheckbox: Si,
     TinyAlert: Vi
   },
   props: {
@@ -71486,7 +71490,7 @@ const Nln = Gr({
       }, 2e3);
     };
     Mo(() => n.value.title, (m) => {
-      var X, E, J, G;
+      var Z, E, V, G;
       if (e.mode !== 1) return;
       const y = /\(&nbsp;\)/g;
       let b;
@@ -71495,8 +71499,8 @@ const Nln = Gr({
       for (; (b = y.exec(m)) !== null; )
         k.push(b.index - 5 * I - x.length), I++;
       let T = 0;
-      if ((X = p.value) != null && X.richTextareaRef) {
-        const oe = (J = (E = p.value.richTextareaRef.$refs.fluentEditorRef.state.quill) == null ? void 0 : E.getSelection) == null ? void 0 : J.call(E);
+      if ((Z = p.value) != null && Z.richTextareaRef) {
+        const oe = (V = (E = p.value.richTextareaRef.$refs.fluentEditorRef.state.quill) == null ? void 0 : E.getSelection) == null ? void 0 : V.call(E);
         T = (oe == null ? void 0 : oe.index) ?? ((G = n.value.title) == null ? void 0 : G.length) ?? 0;
       }
       let U = 0;
@@ -71530,7 +71534,7 @@ const Nln = Gr({
         }), F++;
       n.value.blanks = N, a.value = n.value.blanks.map(() => ""), d();
     }), Mo(() => e.oriQuestion, (m) => {
-      n.value = Zl(m), zi(() => {
+      n.value = Zl(m), wi(() => {
         Ql();
       });
     }, { immediate: !0 });
@@ -71639,14 +71643,14 @@ function lcn(e, t, n, o, r, i) {
     default: rt(() => [
       e.mode === 1 ? (P(), K(Lt, { key: 0 }, [
         e.isMobile ? (P(), K("div", Vln, [
-          V("div", Jln, [
-            V("div", Wln, qe(e.t("setAnswerTip")), 1),
+          J("div", Jln, [
+            J("div", Wln, Qe(e.t("setAnswerTip")), 1),
             (P(!0), K(Lt, null, an(e.question.blanks, (c, h) => (P(), K("div", {
               key: c.id || h
             }, [
-              V("div", Zln, [
-                V("span", Xln, "[" + qe(h + 1) + "]", 1),
-                Xt(V("input", {
+              J("div", Zln, [
+                J("span", Xln, "[" + Qe(h + 1) + "]", 1),
+                Xt(J("input", {
                   class: "m-answer-input",
                   placeholder: e.t("inputAnswer"),
                   "onUpdate:modelValue": (f) => c.correctAnswer = f,
@@ -71655,8 +71659,8 @@ function lcn(e, t, n, o, r, i) {
                 }, null, 40, _ln), [
                   [ii, c.correctAnswer]
                 ]),
-                V("div", ecn, [
-                  V("img", {
+                J("div", ecn, [
+                  J("img", {
                     src: o4,
                     alt: "",
                     onClick: (f) => e.deleteBlank(c, h)
@@ -71664,7 +71668,7 @@ function lcn(e, t, n, o, r, i) {
                 ])
               ])
             ]))), 128)),
-            V("div", ncn, [
+            J("div", ncn, [
               Ze(a, {
                 modelValue: e.question.allowExchange,
                 "onUpdate:modelValue": t[3] || (t[3] = (c) => e.question.allowExchange = c),
@@ -71672,7 +71676,7 @@ function lcn(e, t, n, o, r, i) {
                 "true-label": 1
               }, {
                 default: rt(() => [
-                  Dt(qe(e.t("allowExchange")), 1)
+                  Dt(Qe(e.t("allowExchange")), 1)
                 ]),
                 _: 1
               }, 8, ["modelValue"])
@@ -71683,28 +71687,28 @@ function lcn(e, t, n, o, r, i) {
                 onClick: e.saveQuestion
               }, {
                 default: rt(() => [
-                  Dt(qe(e.t("save")), 1)
+                  Dt(Qe(e.t("save")), 1)
                 ]),
                 _: 1
               }, 8, ["onClick"]),
               Ze(s, { onClick: e.cancel }, {
                 default: rt(() => [
-                  Dt(qe(e.t("cancel")), 1)
+                  Dt(Qe(e.t("cancel")), 1)
                 ]),
                 _: 1
               }, 8, ["onClick"])
             ]))
           ])
         ])) : (P(), K("div", Rln, [
-          V("div", Qln, [
-            V("span", qln, qe(e.t("answer")) + "：", 1),
-            V("span", Uln, "( " + qe(e.t("inputAnswerTip2")) + " )", 1),
+          J("div", Qln, [
+            J("span", qln, Qe(e.t("answer")) + "：", 1),
+            J("span", Uln, "( " + Qe(e.t("inputAnswerTip2")) + " )", 1),
             (P(!0), K(Lt, null, an(e.question.blanks, (c, h) => (P(), K("div", {
               key: c.id || h
             }, [
-              V("div", Gln, [
-                V("span", Hln, "[" + qe(h + 1) + "]", 1),
-                Xt(V("input", {
+              J("div", Gln, [
+                J("span", Hln, "[" + Qe(h + 1) + "]", 1),
+                Xt(J("input", {
                   class: "answer-input",
                   placeholder: e.t("inputAnswer"),
                   "onUpdate:modelValue": (f) => c.correctAnswer = f,
@@ -71713,8 +71717,8 @@ function lcn(e, t, n, o, r, i) {
                 }, null, 40, $ln), [
                   [ii, c.correctAnswer]
                 ]),
-                V("div", jln, [
-                  V("img", {
+                J("div", jln, [
+                  J("img", {
                     src: n4,
                     alt: "",
                     onClick: (f) => e.deleteBlank(c, h)
@@ -71722,7 +71726,7 @@ function lcn(e, t, n, o, r, i) {
                 ])
               ])
             ]))), 128)),
-            V("div", Kln, [
+            J("div", Kln, [
               Ze(a, {
                 modelValue: e.question.allowExchange,
                 "onUpdate:modelValue": t[1] || (t[1] = (c) => e.question.allowExchange = c),
@@ -71730,24 +71734,24 @@ function lcn(e, t, n, o, r, i) {
                 "true-label": 1
               }, {
                 default: rt(() => [
-                  Dt(qe(e.t("allowExchange")), 1)
+                  Dt(Qe(e.t("allowExchange")), 1)
                 ]),
                 _: 1
               }, 8, ["modelValue"])
             ]),
-            V("div", zln, [
+            J("div", zln, [
               Ze(s, {
                 type: "primary",
                 onClick: e.saveQuestion
               }, {
                 default: rt(() => [
-                  Dt(qe(e.t("save")), 1)
+                  Dt(Qe(e.t("save")), 1)
                 ]),
                 _: 1
               }, 8, ["onClick"]),
               Ze(s, { onClick: e.cancel }, {
                 default: rt(() => [
-                  Dt(qe(e.t("cancel")), 1)
+                  Dt(Qe(e.t("cancel")), 1)
                 ]),
                 _: 1
               }, 8, ["onClick"])
@@ -71758,16 +71762,16 @@ function lcn(e, t, n, o, r, i) {
         Ze(l, {
           list: e.question.link
         }, null, 8, ["list"]),
-        V("div", icn, [
-          V("div", {
+        J("div", icn, [
+          J("div", {
             class: je({ title: e.mode === 3 })
-          }, qe(e.t("correctAnswer")) + "：", 3),
+          }, Qe(e.t("correctAnswer")) + "：", 3),
           (P(!0), K(Lt, null, an(e.question.blanks, (c, h) => (P(), K("span", {
             class: "answer-item",
             key: c.id || h
           }, [
-            V("span", acn, "[" + qe(h + 1) + "]", 1),
-            V("span", scn, qe(`${c.correctAnswer}${h !== e.question.blanks.length - 1 ? "、" : ""}` || "-"), 1)
+            J("span", acn, "[" + Qe(h + 1) + "]", 1),
+            J("span", scn, Qe(`${c.correctAnswer}${h !== e.question.blanks.length - 1 ? "、" : ""}` || "-"), 1)
           ]))), 128))
         ])
       ])) : Ie("", !0),
@@ -71777,7 +71781,7 @@ function lcn(e, t, n, o, r, i) {
         type: e.alertInfo.type
       }, {
         description: rt(() => [
-          Dt(qe(e.alertInfo.text), 1)
+          Dt(Qe(e.alertInfo.text), 1)
         ]),
         _: 1
       }, 8, ["type"])) : Ie("", !0)
@@ -71840,7 +71844,7 @@ const va = "data:image/svg+xml,%3csvg%20width='18'%20height='18'%20viewBox='0%20
     const u = hn(""), d = hn(""), c = _i(() => e.isSubmitted && u.value === d.value);
     Mo(() => e.oriQuestion, (m) => {
       var y;
-      a.value = Zl(m), a.value.correctAnswer && a.value.correctAnswer.length > 0 && (d.value = a.value.correctAnswer[0]), e.mode === 3 && ((y = a.value.record) != null && y.answer ? u.value = a.value.record.answer : u.value = ""), zi(() => {
+      a.value = Zl(m), a.value.correctAnswer && a.value.correctAnswer.length > 0 && (d.value = a.value.correctAnswer[0]), e.mode === 3 && ((y = a.value.record) != null && y.answer ? u.value = a.value.record.answer : u.value = ""), wi(() => {
         Ql();
       }), console.log(a.value, "--------Judge--------");
     }, { immediate: !0 }), Mo(() => e.mode, (m) => {
@@ -71888,23 +71892,20 @@ const va = "data:image/svg+xml,%3csvg%20width='18'%20height='18'%20viewBox='0%20
       isMobile: n
     };
   }
-}), ucn = { class: "correct-answer" }, dcn = { class: "action-buttons" }, pcn = {
-  key: 1,
-  class: "correct-answer mobile"
-}, hcn = {
+}), ucn = { class: "correct-answer" }, dcn = { class: "action-buttons" }, pcn = { class: "base-tip" }, hcn = { class: "correct-answer mobile" }, mcn = {
   key: 1,
   class: "preview-mode"
-}, mcn = { class: "correct-answer-preview" }, fcn = {
+}, fcn = { class: "correct-answer-preview" }, gcn = {
   key: 2,
   class: "answer-mode"
-}, gcn = { class: "user-answer" }, ycn = { key: 0 }, vcn = {
+}, ycn = { class: "user-answer" }, vcn = { key: 0 }, Acn = {
   key: 1,
   class: "submit-result"
-}, Acn = { class: "user-answer-display" }, bcn = {
+}, bcn = { class: "user-answer-display" }, wcn = {
   key: 0,
   class: "correct-answer-hint"
 };
-function wcn(e, t, n, o, r, i) {
+function Ccn(e, t, n, o, r, i) {
   const a = tt("TinyRadio"), s = tt("TinyRadioGroup"), l = tt("TinyButton"), u = tt("TinyAlert"), d = tt("Base");
   return P(), st(d, {
     class: "true-or-false-question",
@@ -71913,38 +71914,41 @@ function wcn(e, t, n, o, r, i) {
   }, {
     default: rt(() => [
       e.mode === 1 ? (P(), K(Lt, { key: 0 }, [
-        e.isMobile ? (P(), K("div", pcn, [
-          Ze(s, {
-            modelValue: e.correctAnswer,
-            "onUpdate:modelValue": t[1] || (t[1] = (c) => e.correctAnswer = c)
-          }, {
-            default: rt(() => [
-              Ze(a, { label: "true" }, {
-                default: rt(() => [...t[10] || (t[10] = [
-                  V("img", {
-                    class: "correct-img",
-                    src: va,
-                    alt: ""
-                  }, null, -1)
-                ])]),
-                _: 1
-              }),
-              Ze(a, { label: "false" }, {
-                default: rt(() => [...t[11] || (t[11] = [
-                  V("img", {
-                    class: "error-img",
-                    src: Aa,
-                    alt: ""
-                  }, null, -1)
-                ])]),
-                _: 1
-              })
-            ]),
-            _: 1
-          }, 8, ["modelValue"])
-        ])) : (P(), K(Lt, { key: 0 }, [
-          V("div", ucn, [
-            V("span", null, qe(e.t("correctAnswer")) + "：", 1),
+        e.isMobile ? (P(), K(Lt, { key: 1 }, [
+          J("div", pcn, Qe(e.t("setAnswer")), 1),
+          J("div", hcn, [
+            Ze(s, {
+              modelValue: e.correctAnswer,
+              "onUpdate:modelValue": t[1] || (t[1] = (c) => e.correctAnswer = c)
+            }, {
+              default: rt(() => [
+                Ze(a, { label: "true" }, {
+                  default: rt(() => [...t[10] || (t[10] = [
+                    J("img", {
+                      class: "correct-img",
+                      src: va,
+                      alt: ""
+                    }, null, -1)
+                  ])]),
+                  _: 1
+                }),
+                Ze(a, { label: "false" }, {
+                  default: rt(() => [...t[11] || (t[11] = [
+                    J("img", {
+                      class: "error-img",
+                      src: Aa,
+                      alt: ""
+                    }, null, -1)
+                  ])]),
+                  _: 1
+                })
+              ]),
+              _: 1
+            }, 8, ["modelValue"])
+          ])
+        ], 64)) : (P(), K(Lt, { key: 0 }, [
+          J("div", ucn, [
+            J("span", null, Qe(e.t("correctAnswer")) + "：", 1),
             Ze(s, {
               modelValue: e.correctAnswer,
               "onUpdate:modelValue": t[0] || (t[0] = (c) => e.correctAnswer = c)
@@ -71952,7 +71956,7 @@ function wcn(e, t, n, o, r, i) {
               default: rt(() => [
                 Ze(a, { label: "true" }, {
                   default: rt(() => [...t[8] || (t[8] = [
-                    V("img", {
+                    J("img", {
                       class: "correct-img",
                       src: va,
                       alt: ""
@@ -71962,7 +71966,7 @@ function wcn(e, t, n, o, r, i) {
                 }),
                 Ze(a, { label: "false" }, {
                   default: rt(() => [...t[9] || (t[9] = [
-                    V("img", {
+                    J("img", {
                       class: "error-img",
                       src: Aa,
                       alt: ""
@@ -71974,27 +71978,27 @@ function wcn(e, t, n, o, r, i) {
               _: 1
             }, 8, ["modelValue"])
           ]),
-          V("div", dcn, [
+          J("div", dcn, [
             Ze(l, {
               type: "primary",
               onClick: e.saveQuestion
             }, {
               default: rt(() => [
-                Dt(qe(e.t("save")), 1)
+                Dt(Qe(e.t("save")), 1)
               ]),
               _: 1
             }, 8, ["onClick"]),
             Ze(l, { onClick: e.cancel }, {
               default: rt(() => [
-                Dt(qe(e.t("cancel")), 1)
+                Dt(Qe(e.t("cancel")), 1)
               ]),
               _: 1
             }, 8, ["onClick"])
           ])
         ], 64))
-      ], 64)) : e.mode === 2 ? (P(), K("div", hcn, [
-        V("div", mcn, [
-          V("span", null, qe(e.t("answer")) + "：", 1),
+      ], 64)) : e.mode === 2 ? (P(), K("div", mcn, [
+        J("div", fcn, [
+          J("span", null, Qe(e.t("answer")) + "：", 1),
           Ze(s, {
             modelValue: e.correctAnswer,
             "onUpdate:modelValue": t[2] || (t[2] = (c) => e.correctAnswer = c),
@@ -72003,7 +72007,7 @@ function wcn(e, t, n, o, r, i) {
             default: rt(() => [
               Ze(a, { label: "true" }, {
                 default: rt(() => [...t[12] || (t[12] = [
-                  V("img", {
+                  J("img", {
                     class: "correct-img",
                     src: va,
                     alt: ""
@@ -72013,7 +72017,7 @@ function wcn(e, t, n, o, r, i) {
               }),
               Ze(a, { label: "false" }, {
                 default: rt(() => [...t[13] || (t[13] = [
-                  V("img", {
+                  J("img", {
                     class: "error-img",
                     src: Aa,
                     alt: ""
@@ -72025,11 +72029,11 @@ function wcn(e, t, n, o, r, i) {
             _: 1
           }, 8, ["modelValue"])
         ])
-      ])) : e.mode === 3 ? (P(), K("div", fcn, [
-        V("div", gcn, [
-          e.isSubmitted ? (P(), K("div", vcn, [
-            V("div", Acn, [
-              V("span", null, qe(e.t("yourAnswer")) + "：", 1),
+      ])) : e.mode === 3 ? (P(), K("div", gcn, [
+        J("div", ycn, [
+          e.isSubmitted ? (P(), K("div", Acn, [
+            J("div", bcn, [
+              J("span", null, Qe(e.t("yourAnswer")) + "：", 1),
               Ze(s, {
                 modelValue: e.userAnswer,
                 "onUpdate:modelValue": t[6] || (t[6] = (c) => e.userAnswer = c),
@@ -72041,7 +72045,7 @@ function wcn(e, t, n, o, r, i) {
                     class: je(e.handleAnswerClass(!0))
                   }, {
                     default: rt(() => [...t[18] || (t[18] = [
-                      V("img", {
+                      J("img", {
                         class: "correct-img",
                         src: va,
                         alt: ""
@@ -72054,7 +72058,7 @@ function wcn(e, t, n, o, r, i) {
                     class: je(e.handleAnswerClass(!1))
                   }, {
                     default: rt(() => [...t[19] || (t[19] = [
-                      V("img", {
+                      J("img", {
                         class: "error-img",
                         src: Aa,
                         alt: ""
@@ -72066,8 +72070,8 @@ function wcn(e, t, n, o, r, i) {
                 _: 1
               }, 8, ["modelValue"])
             ]),
-            e.showAnswer ? (P(), K("div", bcn, [
-              V("span", null, qe(e.t("correctAnswer")) + "：", 1),
+            e.showAnswer ? (P(), K("div", wcn, [
+              J("span", null, Qe(e.t("correctAnswer")) + "：", 1),
               Ze(s, {
                 modelValue: e.correctAnswer,
                 "onUpdate:modelValue": t[7] || (t[7] = (c) => e.correctAnswer = c),
@@ -72079,7 +72083,7 @@ function wcn(e, t, n, o, r, i) {
                     class: je(e.handleCorrectAnswerClass(!0))
                   }, {
                     default: rt(() => [...t[20] || (t[20] = [
-                      V("img", {
+                      J("img", {
                         class: "correct-img",
                         src: va,
                         alt: ""
@@ -72092,7 +72096,7 @@ function wcn(e, t, n, o, r, i) {
                     class: je(e.handleCorrectAnswerClass(!1))
                   }, {
                     default: rt(() => [...t[21] || (t[21] = [
-                      V("img", {
+                      J("img", {
                         class: "error-img",
                         src: Aa,
                         alt: ""
@@ -72104,23 +72108,23 @@ function wcn(e, t, n, o, r, i) {
                 _: 1
               }, 8, ["modelValue"])
             ])) : Ie("", !0)
-          ])) : (P(), K("div", ycn, [
+          ])) : (P(), K("div", vcn, [
             e.isMobile ? (P(), K(Lt, { key: 1 }, [
-              V("div", {
+              J("div", {
                 class: je(["mobile-answer", { active: e.userAnswer === "true" }]),
                 onClick: t[4] || (t[4] = (c) => e.userAnswer = "true")
               }, [...t[16] || (t[16] = [
-                V("img", {
+                J("img", {
                   class: "correct-img",
                   src: va,
                   alt: ""
                 }, null, -1)
               ])], 2),
-              V("div", {
+              J("div", {
                 class: je(["mobile-answer", { active: e.userAnswer === "false" }]),
                 onClick: t[5] || (t[5] = (c) => e.userAnswer = "false")
               }, [...t[17] || (t[17] = [
-                V("img", {
+                J("img", {
                   class: "error-img",
                   src: Aa,
                   alt: ""
@@ -72134,7 +72138,7 @@ function wcn(e, t, n, o, r, i) {
               default: rt(() => [
                 Ze(a, { label: "true" }, {
                   default: rt(() => [...t[14] || (t[14] = [
-                    V("img", {
+                    J("img", {
                       class: "correct-img",
                       src: va,
                       alt: ""
@@ -72144,7 +72148,7 @@ function wcn(e, t, n, o, r, i) {
                 }),
                 Ze(a, { label: "false" }, {
                   default: rt(() => [...t[15] || (t[15] = [
-                    V("img", {
+                    J("img", {
                       class: "error-img",
                       src: Aa,
                       alt: ""
@@ -72164,7 +72168,7 @@ function wcn(e, t, n, o, r, i) {
         type: e.alertInfo.type
       }, {
         description: rt(() => [
-          Dt(qe(e.alertInfo.text), 1)
+          Dt(Qe(e.alertInfo.text), 1)
         ]),
         _: 1
       }, 8, ["type"])) : Ie("", !0)
@@ -72172,19 +72176,19 @@ function wcn(e, t, n, o, r, i) {
     _: 1
   }, 8, ["question", "mode"]);
 }
-const Jc = /* @__PURE__ */ or(ccn, [["render", wcn], ["__scopeId", "data-v-5c6a20c5"]]);
+const Jc = /* @__PURE__ */ or(ccn, [["render", Ccn], ["__scopeId", "data-v-fcef87fa"]]);
 Jc.install = (e) => e.component(Jc.name, Jc);
 qrn();
-const Ccn = [
+const kcn = [
   Nc,
   Yc,
   Kc,
   zc,
   Vc,
   Jc
-], kcn = (e) => {
-  Ccn.forEach((t) => e.use(t));
-}, Iun = { install: kcn };
+], Tcn = (e) => {
+  kcn.forEach((t) => e.use(t));
+}, xun = { install: Tcn };
 export {
   zc as Choice,
   Vc as Completion,
@@ -72192,5 +72196,5 @@ export {
   Nc as MyButton,
   Yc as MyTinyButton,
   Kc as MyTinyRadio,
-  Iun as default
+  xun as default
 };
