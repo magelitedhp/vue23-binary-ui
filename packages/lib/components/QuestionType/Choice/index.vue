@@ -416,12 +416,15 @@ export default defineComponent({
       if (props.needRichText) {
         activeIndex.value = index
       }
-      // 激活富文本后自动聚焦
-      nextTick(() => {
-        const richTextarea = uploadRefs.value[index]
-        console.log(richTextarea, 'richTextarea');
-        richTextarea?.focus?.()
-      })
+      if(isMobile) {
+        // 激活富文本后自动聚焦
+        nextTick(() => {
+          const richTextarea = uploadRefs.value[index]
+          console.log(richTextarea.fluentEditorRef.state.quill, 'richTextarea');
+          // $refs.fluentEditorRef.state.quill
+          richTextarea?.fluentEditorRef?.state.quill?.focus?.()
+        })
+      }
     }
 
     // 删除文件
