@@ -72061,9 +72061,6 @@ const Kc = /* @__PURE__ */ Hr(Xln, [["render", dcn], ["__scopeId", "data-v-fcef8
 Kc.install = (e) => e.component(Kc.name, Kc);
 gCt();
 const pcn = [
-  MyButton,
-  MyTinyButton,
-  MyTinyRadio,
   jc,
   Yc,
   Kc
