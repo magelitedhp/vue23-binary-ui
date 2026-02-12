@@ -15,9 +15,6 @@ export {
 }
 
 const components = [
-  MyButton, 
-  MyTinyButton,
-  MyTinyRadio,
   Choice,
   Completion,
   Judge
