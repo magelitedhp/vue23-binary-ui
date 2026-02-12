@@ -1,6 +1,3 @@
-import MyButton from './button'
-import MyTinyButton from './tiny-button'
-import MyTinyRadio from './tiny-radio'
 import Choice from './components/QuestionType/Choice'
 import Completion from './components/QuestionType/Completion'
 import Judge from './components/QuestionType/Judge'
@@ -12,9 +9,6 @@ import "@/styles/fluent-editor.scss"
 import { initMathJax } from './utils/mathjax'
 initMathJax()
 export { 
-  MyButton, 
-  MyTinyButton,
-  MyTinyRadio,
   Choice,
   Completion,
   Judge
