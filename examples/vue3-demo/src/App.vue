@@ -1,30 +1,31 @@
 <template>
     <div>
         <h1>当前模式: {{ modeObj[mode] }}</h1>
-        <MyTinyButton @click="changeMode(1)">切换到编辑模式</MyTinyButton>
-        <MyTinyButton @click="changeMode(2)">切换到预览模式</MyTinyButton>
-        <MyTinyButton @click="changeMode(3)">切换到答题模式</MyTinyButton>
+        <div @click="changeMode(1)">切换到编辑模式</div>
+        <div @click="changeMode(2)">切换到预览模式</div>
+        <div @click="changeMode(3)">切换到答题模式</div>
         <h1 @click="saveQuestion">移动端直接保存</h1>
         <br>
         <br>
         <div>
-            <MyTinyButton type="primary" @click="clearQuestion">清空题目</MyTinyButton>
+            <div @click="clearQuestion">清空题目</div>
         </div>
         <div v-for="item in 4" :key="item" style="margin: 10px 0; cursor: pointer;">
           <div @click="addQuestion(item)">{{ '添加' + getQuestionTypeName(item) + '题型' }}</div>
         </div>
-        <component v-if="Object.keys(question).length > 0" :is="currentComponent" :mode="mode" :oriQuestion="question" @updateQuestion="updateQuestion"></component>
+        <component v-if="Object.keys(question).length > 0" :key="question.type" :is="currentComponent" :mode="mode" :oriQuestion="question" @updateQuestion="updateQuestion"></component>
     </div>
 </template>
 
 <script setup>
-// import { Choice, Judge, Completion } from 'ul-question-test-ui/vue3';
-import { Choice, Judge, Completion } from 'my-vue3-ui'
+import { Choice, Judge, Completion } from 'ul-question-test-ui/vue3';
+// import { Choice, Judge, Completion } from 'my-vue3-ui'
 import { ref, computed } from "vue"
-import { Button as MyTinyButton } from '@opentiny/vue'
-
 // 状态定义
-const question = ref({})
+const question = ref({
+  type: 1,
+  mode: 1
+})
 const mode = ref(1)
 const questionType = ref(1) // 1: 单选, 2: 多选, 3: 填空, 4: 判断
 const updateQuestion = (val) => {
@@ -126,12 +127,51 @@ const addQuestion = (type) => {
     }
   ],
             }
-            question.value = {
-              type: 1
-            }
             break;
         case 2:
-            getQuestion2();
+            // getQuestion2();
+            question.value = {
+    "id": 1098,
+    "type": 1,
+    "title": "<p>asdsadsadsda<img src=\"https://tobs.ulearning.cn/resources/web/17707173996018403.jpg\" data-image-id=\"img0\" style></p>",
+    "score": 1,
+    "link": [],
+    "choices": [
+        {
+            "choiceItemId": 3147,
+            "choiceId": 3147,
+            "questionId": 1098,
+            "link": "",
+            "title": "<p>1111</p>"
+        },
+        {
+            "choiceItemId": 3148,
+            "choiceId": 3148,
+            "questionId": 1098,
+            "link": "",
+            "title": "<p>222</p>"
+        }
+    ],
+    "item": [
+        {
+            "choiceItemId": 3147,
+            "choiceId": 3147,
+            "questionId": 1098,
+            "link": "",
+            "title": "<p>1111</p>"
+        },
+        {
+            "choiceItemId": 3148,
+            "choiceId": 3148,
+            "questionId": 1098,
+            "link": "",
+            "title": "<p>222</p>"
+        }
+    ],
+    "correctAnswer": [
+        "B"
+    ]
+}
             break;
         case 3:
             getQuestion3();

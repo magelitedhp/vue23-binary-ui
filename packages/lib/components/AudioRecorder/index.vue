@@ -167,10 +167,10 @@ export default defineComponent({
             }, 1000)
           })
         }, (msg) => {
-          showAlertHandler('warning', msg)
+          showAlertHandler('warning', t('recordingInitFailed'))
         })
       } catch (error) {
-        showAlertHandler('warning', msg)
+        showAlertHandler('warning', t('recordingInitFailed'))
       }
     }
     

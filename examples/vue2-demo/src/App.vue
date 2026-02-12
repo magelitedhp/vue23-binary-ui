@@ -1,29 +1,14 @@
 <template>
   <div class="container">
     <h1>mode: {{ modeObj[mode] }}</h1>
-    <MyTinyButton @handleClick1="changeMode(1)">change to edit mode</MyTinyButton>
-    <MyTinyButton @handleClick1="changeMode(2)">change to preview mode</MyTinyButton>
-    <MyTinyButton @handleClick1="changeMode(3)">change to answer mode</MyTinyButton>
-    <MyTinyButton @handleClick1="isSubmitted = !isSubmitted">change isSubmitted {{ isSubmitted }}</MyTinyButton>
-    <!-- <h1>Vue3 沙盒</h1> -->
-    <!-- <MyButton @click="say">点我</MyButton> -->
-    <!-- <MyTinyButton type="primary" @handleClick1="say">点我</MyTinyButton> -->
+    <div @click="changeMode(1)">change to edit mode</div>
+    <div @click="changeMode(2)">change to preview mode</div>
+    <div @click="changeMode(3)">change to answer mode</div>
+    <div @click="isSubmitted = !isSubmitted">change isSubmitted {{ isSubmitted }}</div>
     <br>
     <br>
-    <!-- <div>
-      <MyTinyButton type="primary" @handleClick1="getQuestion1">编辑单选题</MyTinyButton>
-     </div>
     <div>
-      <MyTinyButton type="primary" @handleClick1="getQuestion2">编辑多选</MyTinyButton>
-     </div>
-    <div>
-      <MyTinyButton type="primary" @handleClick1="getQuestion3">编辑判断</MyTinyButton>
-     </div>
-    <div>
-      <MyTinyButton type="primary" @handleClick1="getQuestion4">编辑填空</MyTinyButton>
-     </div> -->
-    <div>
-      <MyTinyButton type="primary" @handleClick1="question = {}">清空题目</MyTinyButton>
+      <div @click="question = {}">清空题目</div>
      </div>
      <div v-for="item in 4">
       <div @click="addQuestion(item)">{{ '添加' + item + '题型'}}</div>

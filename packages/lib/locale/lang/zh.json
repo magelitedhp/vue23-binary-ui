@@ -999,5 +999,5 @@
   "recording": "录音中，点击波纹停止",
   "recorded": "已录制",
   "readyToRecord": "点击开始录音",
-  "recordingInitFailed": "录音初始化失败"
+  "recordingInitFailed": "录音初始化失败，请检查手机录音权限"
 }
