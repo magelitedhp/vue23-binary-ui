@@ -161,14 +161,20 @@ export default defineComponent({
     })
     const uploadBtn = ref(null)
     const uploadImg = () => {
+      // 重置上传处理
+      obs.value.onBeforeUpload = defaultBeforeUpload
       obs.value.$el.accept = formatTypeLimit(["image"]);
       uploadBtn.value.click();
     }
     const uploadFile = () => {
+      // 重置上传处理
+      obs.value.onBeforeUpload = defaultBeforeUpload
       obs.value.$el.accept = formatTypeLimit(["file"]);
       uploadBtn.value.click();
     }
     const uploadVideo = () => {
+      // 重置上传处理
+      obs.value.onBeforeUpload = defaultBeforeUpload
       obs.value.$el.accept = formatTypeLimit(["video"]);
       uploadBtn.value.click();
     }
@@ -176,46 +182,53 @@ export default defineComponent({
       obs.value.$el.accept = formatTypeLimit(["audio"]);
       uploadBtn.value.click();
     }
+
+    // 默认上传处理
+    const defaultBeforeUpload = (file) => {
+      // if (checkAddFile && !checkAddFile(file)) {
+      //   return 
+      // }
+      let myFile = reactive(new Attach({
+        fileName: file.name,
+        fileSize: file.size,
+        fileUrl: file.name,
+        status: 1,
+        lisCount: -1
+      }))
+      let fileType = formatFileType(myFile.fileUrl);
+      
+        console.log('fileType', fileType)
+      file.onProgress = (progress) => {
+        myFile.progress = handleNum(progress, 2, "floor")
+      }
+      file.onSuccess = () => {
+        myFile.fileUrl = file.obsHost + '/' + file.key
+        myFile.status = 2
+        console.log('onSuccess----fileType', fileType)
+        if (fileType == 'image') {
+          insertContent(`<img src="${myFile.fileUrl}" devui-editorx-image="true"data-image-id=${myFile.key} />`)
+        }
+      }
+      file.onError = (err) => {
+        myFile.errMessage = handlerErrCode(err.code)
+        myFile.status = 3
+      }
+      myFile.cancel = () => {
+        obs.value.cancelUpload(file)
+      }
+      // 避免上传相同文件时key值重复
+      myFile.key = getUniqueValue();
+      if (fileType != 'image') {
+        emit('addFile', myFile, props.actionIndex)
+      }
+    }
+
     onMounted(() => {
       // 创建隐藏的上传按钮
       obs.value = new Obs({ ...uploadOptions });
       uploadBtn.value = document.getElementById(`upload-${containerId.value}`);
       obs.value.initUpBtn(uploadBtn);
-      obs.value.onBeforeUpload = (file) => {
-        // if (checkAddFile && !checkAddFile(file)) {
-        //   return 
-        // }
-        let myFile = reactive(new Attach({
-          fileName: file.name,
-          fileSize: file.size,
-          fileUrl: file.name,
-          status: 1,
-          lisCount: -1
-        }))
-        let fileType = formatFileType(myFile.fileUrl);
-        file.onProgress = (progress) => {
-          myFile.progress = handleNum(progress, 2, "floor")
-        }
-        file.onSuccess = () => {
-          myFile.fileUrl = file.obsHost + '/' + file.key
-          myFile.status = 2
-          if (fileType == 'image') {
-            insertContent(`<img src="${myFile.fileUrl}" devui-editorx-image="true" data-image-id=${myFile.key} />`)
-          }
-        }
-        file.onError = (err) => {
-          myFile.errMessage = handlerErrCode(err.code)
-          myFile.status = 3
-        }
-        myFile.cancel = () => {
-          obs.value.cancelUpload(file)
-        }
-        // 避免上传相同文件时key值重复
-        myFile.key = getUniqueValue();
-        if (fileType != 'image') {
-          emit('addFile', myFile, props.actionIndex)
-        }
-      }
+      obs.value.onBeforeUpload = defaultBeforeUpload
       if(isMobile) return 
       // 初始化编辑器内容
       const fluentEditor = fluentEditorRef.value?.state.quill
