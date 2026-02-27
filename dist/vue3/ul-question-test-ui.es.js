@@ -71493,7 +71493,7 @@ function _ln(e, t, n, o, r, i) {
     _: 1
   }, 8, ["question", "mode"]);
 }
-const Kc = /* @__PURE__ */ Hr(Xsn, [["render", _ln], ["__scopeId", "data-v-28db5e23"]]);
+const Kc = /* @__PURE__ */ Hr(Xsn, [["render", _ln], ["__scopeId", "data-v-6bfb31f9"]]);
 Kc.install = (e) => e.component(Kc.name, Kc);
 const ecn = sa({
   name: "Completion",
