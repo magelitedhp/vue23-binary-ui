@@ -715,9 +715,11 @@ export default defineComponent({
 
       :deep(.tiny-radio__inner) {
         border-color: #69d184;
-
+        background-color:#fff;
         &:after {
           background-color: #69d184;
+          
+        transform: translate(-50%, -50%) scale(1);
         }
       }
 
