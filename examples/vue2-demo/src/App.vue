@@ -80,7 +80,7 @@ export default {
       this.question = {
   "questionid": 19673995,
   "oldQuestionId": null,
-  "title": "<p>\\(= = \\div \\times \\times \\times \\)</p>优学院是一个集( )、( )、( )、( )的平台<p><img src=\"https://obscloud.ulearning.cn/resources/web/17653341516826949.png\" /></p>",
+  "title": "<p>大全</p>\n<ol>\n<li>四级考试计算机技术计算机三级</li>\n</ol>\n<ul>\n<li>设计师计算机视觉是是是经济上</li>\n</ul>\n<p><span style=\"font-family: 'times new roman', times; font-size: 28px;\">nxnnxxnnxxksksksks</span></p>",
   "type": 1,
   "iscontent": 1,
   "hardlevel": 3,
@@ -242,7 +242,7 @@ export default {
       this.question = {
         "questionid": 12496524,
         "oldQuestionId": null,
-        "title": "13",
+        "title": "132312",
         // "title": `<span class="q-space" contenteditable="false">(&nbsp;)</span><p>123131有附件的多选题呵呵呵呵呵呵呵<img src=\"https://leicloud.ulearning.cn/resources/7449024/202509281042424985.jpg\" /></p>`,
         "type": 2,
         "iscontent": 1,

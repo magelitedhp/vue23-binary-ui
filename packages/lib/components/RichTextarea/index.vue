@@ -152,7 +152,7 @@ export default defineComponent({
     }
     const t = useT()
     const obs = ref(null)
-    const content = ref(props.modelValue || '')
+    const content = ref(props.modelValue || props.value || '')
     const fluentEditorRef = ref(null)
     const containerId = ref(getUniqueValue())
     const boxVisibility = ref(false)
