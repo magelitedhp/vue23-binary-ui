@@ -435,7 +435,10 @@ export default defineComponent({
       const MathStyle = new Parchment.StyleAttributor('math', 'color', {
         scope: Parchment.Scope.INLINE
       })
-
+      const FontFamilyStyle = new Parchment.StyleAttributor('font-family',    'font-family', {
+        scope: Parchment.Scope.INLINE
+      })
+      FluentEditor.register('formats/font-family', FontFamilyStyle)
       FluentEditor.register('formats/image1', ImageStyle)
       FluentEditor.register('formats/video1', VideoStyle)
       FluentEditor.register('formats/audio', AudioStyle)

@@ -610,7 +610,7 @@ export default defineComponent({
 
     .choice-input-wrap {
       flex: 1;
-
+      width: calc(100% - calc(28 * var(--question-font-size)));
       .choice-input {
         width: 100%;
         min-height: $height;

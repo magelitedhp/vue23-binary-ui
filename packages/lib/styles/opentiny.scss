@@ -96,6 +96,11 @@
             width: calc(60 * var(--question-font-size)) !important;
           }
         }
+        .ql-lineheight, .ql-size, .ql-font {
+          .ql-picker-options {
+            min-width: calc(140 * var(--question-font-size)) !important;
+          }
+        }
         .tiny-svg, svg {
           width: calc(16 * var(--question-font-size)) !important;
           font-size: calc(16 * var(--question-font-size)) !important;

@@ -18,8 +18,8 @@
 </template>
 
 <script setup>
-import { Choice, Judge, Completion } from 'ul-question-test-ui/vue3';
-// import { Choice, Judge, Completion } from 'my-vue3-ui'
+// import { Choice, Judge, Completion } from 'ul-question-test-ui/vue3';
+import { Choice, Judge, Completion } from 'my-vue3-ui'
 import { ref, computed } from "vue"
 // 状态定义
 const question = ref({
@@ -80,7 +80,7 @@ const addQuestion = (type) => {
             // 简单单选题
             question.value = {
                 type,
-                title: "<p>\\(= = \\div \\times \\times \\times \\)</p>优学院是一个集( )、( )、( )、( )的平台<p><img src=\"https://obscloud.ulearning.cn/resources/web/17653341516826949.png\" /></p>",
+                title: "<p>大全</p>\n<ol>\n<li>四级考试计算机技术计算机三级</li>\n</ol>\n<ul>\n<li>设计师计算机视觉是是是经济上</li>\n</ul>\n<p><span style=\"font-family: 'times new roman', times; font-size: 28px;\">nxnnxxnnxxksksksks</span></p>",
                 questionId: Math.floor(Math.random() * 1e9),
                 "item": [
                   {
