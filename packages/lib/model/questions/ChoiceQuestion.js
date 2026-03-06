@@ -31,7 +31,9 @@ export default class ChoiceQuestion extends Question {
           id: Math.random(),
           choiceId: c.choiceId || 0,
           text: c.title,
-          attachments: c.link ? [{
+          attachments: c.link ? Array.isArray(c.link) ? c.link.map(item => ({
+            fileUrl: item
+          })) : [{
             fileUrl: c.link
           }] : []
         })
