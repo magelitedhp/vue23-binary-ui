@@ -69351,7 +69351,7 @@ const Zen = Jen.exports, Ex = "data:image/svg+xml,%3csvg%20width='20'%20height='
         h();
       }), D.addHandler("video1", (P) => {
         y();
-      }), D.addHandler("audio1", (P) => {
+      }), D.addHandler("audio", (P) => {
         f();
       }), D.addHandler("math", function(P) {
         d.value = !0;
