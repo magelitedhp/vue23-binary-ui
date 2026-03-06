@@ -69763,7 +69763,9 @@ class utn extends pr {
           id: Math.random(),
           choiceId: o.choiceId || 0,
           text: o.title,
-          attachments: o.link ? [{
+          attachments: o.link ? Array.isArray(o.link) ? o.link.map((r) => ({
+            fileUrl: r
+          })) : [{
             fileUrl: o.link
           }] : []
         })
