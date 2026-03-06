@@ -251,7 +251,7 @@ export default defineComponent({
       toolbar.addHandler('video1',  (value) => {
         uploadVideo()
       })
-      toolbar.addHandler('audio1',  (value) => {
+      toolbar.addHandler('audio',  (value) => {
         uploadAudio()
         // let jsx = `<img src="https://tobs.ulearning.cn/resources/web/17548922973825322.png" devui-editorx-image="true" data-image-id=${getUniqueValue()} />`
         // jsx = `&nbsp;<span class="q-space" contenteditable="false" data-index="${getUniqueValue()}">(&nbsp;)</span>&nbsp;`
