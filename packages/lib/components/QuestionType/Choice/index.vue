@@ -164,7 +164,7 @@
       <!-- 单选题 -->
       <TinyRadioGroup class="choices" v-if="question.type === 1" v-model="userAnswer" :disabled="true">
         <TinyRadio class="choice-item" :class="handleAnswerClass(index)" v-for="(choice, index) in question.choices"
-          :key="choice.id" :label="getOption(index)">
+           :key="choice.choiceId || choice.id" :label="getOption(index)">
           <span class="index">{{ getOption(index) }}. </span>
           <div class="choice-content">
             <span class="rich-text ql-editor not-edit" v-html="choice.text"></span>
@@ -176,7 +176,7 @@
       <!-- 多选题 -->
       <TinyCheckboxGroup class="choices" v-if="question.type === 2" v-model="userAnswer" :disabled="true">
         <TinyCheckbox class="choice-item" :class="handleAnswerClass(index)" v-for="(choice, index) in question.choices"
-          :key="choice.id" :label="getOption(index)">
+           :key="choice.choiceId || choice.id" :label="getOption(index)">
           <span class="index">{{ getOption(index) }}. </span>
           <div class="choice-content">
             <span class="rich-text ql-editor" v-html="choice.text"></span>
