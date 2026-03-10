@@ -20,7 +20,7 @@
                   }}</span>
                 <div class="rich-text" v-html="choice.text" v-if="choice.text"></div>
                 <FileList ref="fileList" mode="edit" type="block" :isPreview="true" :list="choice.attachments || []"
-                  :isShowLimitTimes="false" :actionIndex="index" @deleteFile="deleteFile"></FileList>
+                  :isShowLimitTimes="false" :actionIndex="index" @deleteFile="(_item, fileIndex) => deleteFile(fileIndex, index )"></FileList>
               </div>
             </div>
             <img v-if="index > 1" class="btn-delete" src="@/assets/close.png" alt=""
@@ -75,8 +75,9 @@
                 <span class="no-content-tip" v-if="!(choice.text || (choice.attachments && choice.attachments.length > 0))">{{ t("optionContent")
                   }}</span>
                 <div class="rich-text" v-html="choice.text" v-if="choice.text"></div>
+                
                 <FileList ref="fileList" mode="edit" type="block" :isPreview="true" :list="choice.attachments || []"
-                  :isShowLimitTimes="false" :actionIndex="index" @deleteFile="deleteFile"></FileList>
+                  :isShowLimitTimes="false" :actionIndex="index" @deleteFile="(_item, fileIndex) => deleteFile(fileIndex, index )"></FileList>
               </div>
             </div>
             <div class="btn-list" @click="activeRichText(index)">
@@ -98,7 +99,7 @@
     <div class="choice-list">
       <!-- 单选题 -->
       <TinyRadioGroup class="choices" v-if="question.type === 1" v-model="radioAnswer" disabled>
-        <TinyRadio class="choice-item" v-for="(choice, index) in question.choices" :key="choice.id"
+        <TinyRadio class="choice-item" v-for="(choice, index) in question.choices" :key="choice.choiceId || choice.id"
           :label="getOption(index)">
           <span class="index">{{ getOption(index) }}. </span>
           <div class="choice-content">
@@ -111,7 +112,7 @@
 
       <!-- 多选题 -->
       <TinyCheckboxGroup class="choices" v-if="question.type === 2" v-model="checkboxAnswer" disabled>
-        <TinyCheckbox class="choice-item" v-for="(choice, index) in question.choices" :key="choice.id"
+        <TinyCheckbox class="choice-item" v-for="(choice, index) in question.choices" :key="choice.choiceId || choice.id"
           :label="getOption(index)">
           <span class="index">{{ getOption(index) }}. </span>
           <div class="choice-content">
@@ -135,7 +136,7 @@
     <div class="choice-list" v-if="!isSubmitted">
       <!-- 单选题 -->
       <TinyRadioGroup class="choices" v-if="question.type === 1" v-model="radioAnswer">
-        <TinyRadio class="choice-item" v-for="(choice, index) in question.choices" :key="choice.id"
+        <TinyRadio class="choice-item" v-for="(choice, index) in question.choices" :key="choice.choiceId || choice.id"
           :label="getOption(index)">
           <span class="index">{{ getOption(index) }}. </span>
           <div class="choice-content">
@@ -147,7 +148,7 @@
       </TinyRadioGroup>
       <!-- 多选题 -->
       <TinyCheckboxGroup class="choices" v-if="question.type === 2" v-model="checkboxAnswer">
-        <TinyCheckbox class="choice-item" v-for="(choice, index) in question.choices" :key="choice.id"
+        <TinyCheckbox class="choice-item" v-for="(choice, index) in question.choices" :key="choice.choiceId || choice.id"
           :label="getOption(index)">
           <span class="index">{{ getOption(index) }}. </span>
           <div class="choice-content">
@@ -801,6 +802,7 @@ export default defineComponent({
         margin: 0 calc(12 * var(--question-font-size));
         border-bottom: calc(1 * var(--question-font-size)) solid #E3E3E9;
         padding-bottom: calc(8 * var(--question-font-size));
+        width: calc(100% - 96 * var(--question-font-size));
         .choice-input {
           min-height: unset;
           border: unset;
