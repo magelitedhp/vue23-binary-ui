@@ -70428,12 +70428,12 @@ var xtn = function() {
     e.userAnswer = r;
   }, expression: "userAnswer" } }, e._l(e.question.choices, function(r, i) {
     var a;
-    return n("TinyRadio", { key: r.id, staticClass: "choice-item", class: e.handleAnswerClass(i), attrs: { label: e.getOption(i) } }, [n("span", { staticClass: "index" }, [e._v(e._s(e.getOption(i)) + ". ")]), n("div", { staticClass: "choice-content" }, [n("span", { staticClass: "rich-text ql-editor not-edit", domProps: { innerHTML: e._s(r.text) } }), (a = r.attachments) != null && a.length ? n("FileList", { staticClass: "choice-file-list", attrs: { mode: "preview", type: "block", isPreview: !0, list: r.attachments, isShowLimitTimes: !1, showDownLoad: e.mode !== 3 } }) : e._e()], 1)]);
+    return n("TinyRadio", { key: r.choiceId || r.id, staticClass: "choice-item", class: e.handleAnswerClass(i), attrs: { label: e.getOption(i) } }, [n("span", { staticClass: "index" }, [e._v(e._s(e.getOption(i)) + ". ")]), n("div", { staticClass: "choice-content" }, [n("span", { staticClass: "rich-text ql-editor not-edit", domProps: { innerHTML: e._s(r.text) } }), (a = r.attachments) != null && a.length ? n("FileList", { staticClass: "choice-file-list", attrs: { mode: "preview", type: "block", isPreview: !0, list: r.attachments, isShowLimitTimes: !1, showDownLoad: e.mode !== 3 } }) : e._e()], 1)]);
   }), 1) : e._e(), e.question.type === 2 ? n("TinyCheckboxGroup", { staticClass: "choices", attrs: { disabled: !0 }, model: { value: e.userAnswer, callback: function(r) {
     e.userAnswer = r;
   }, expression: "userAnswer" } }, e._l(e.question.choices, function(r, i) {
     var a;
-    return n("TinyCheckbox", { key: r.id, staticClass: "choice-item", class: e.handleAnswerClass(i), attrs: { label: e.getOption(i) } }, [n("span", { staticClass: "index" }, [e._v(e._s(e.getOption(i)) + ". ")]), n("div", { staticClass: "choice-content" }, [n("span", { staticClass: "rich-text ql-editor", domProps: { innerHTML: e._s(r.text) } }), (a = r.attachments) != null && a.length ? n("FileList", { staticClass: "choice-file-list", attrs: { mode: "preview", type: "block", isPreview: !0, list: r.attachments, isShowLimitTimes: !1, showDownLoad: e.mode !== 3 } }) : e._e()], 1)]);
+    return n("TinyCheckbox", { key: r.choiceId || r.id, staticClass: "choice-item", class: e.handleAnswerClass(i), attrs: { label: e.getOption(i) } }, [n("span", { staticClass: "index" }, [e._v(e._s(e.getOption(i)) + ". ")]), n("div", { staticClass: "choice-content" }, [n("span", { staticClass: "rich-text ql-editor", domProps: { innerHTML: e._s(r.text) } }), (a = r.attachments) != null && a.length ? n("FileList", { staticClass: "choice-file-list", attrs: { mode: "preview", type: "block", isPreview: !0, list: r.attachments, isShowLimitTimes: !1, showDownLoad: e.mode !== 3 } }) : e._e()], 1)]);
   }), 1) : e._e()], 1) : n("div", { staticClass: "choice-list" }, [e.question.type === 1 ? n("TinyRadioGroup", { staticClass: "choices", model: { value: e.radioAnswer, callback: function(r) {
     e.radioAnswer = r;
   }, expression: "radioAnswer" } }, e._l(e.question.choices, function(r, i) {
@@ -70453,7 +70453,7 @@ var xtn = function() {
   Etn,
   !1,
   null,
-  "03475b5a"
+  "204ba7ab"
 );
 const Xc = Ttn.exports;
 Xc.install = (t) => t.component(Xc.name, Xc);
