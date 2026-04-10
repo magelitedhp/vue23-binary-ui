@@ -179,7 +179,7 @@
            :key="choice.choiceId || choice.id" :label="getOption(index)">
           <span class="index">{{ getOption(index) }}. </span>
           <div class="choice-content">
-            <span class="rich-text ql-editor" v-html="choice.text"></span>
+            <span class="rich-text ql-editor not-edit" v-html="choice.text"></span>
             <FileList class="choice-file-list" mode="preview" type="block" :isPreview="true" :list="choice.attachments"
               :isShowLimitTimes="false" :showDownLoad="mode !== 3" v-if="choice.attachments?.length"></FileList>
           </div>

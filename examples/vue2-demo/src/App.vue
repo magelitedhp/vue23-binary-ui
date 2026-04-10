@@ -19,7 +19,6 @@
       :is="componentId"
       :mode="question.mode || mode"
       :oriQuestion="question"
-      :isSubmitted="isSubmitted"
       @save="save"
       @change="answerChange"
     ></component>
