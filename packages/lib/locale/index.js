@@ -22,7 +22,10 @@ const langMap = {
   es: ['es'],
   ar: ['ar'],
   id: ['id'],
-  zh: ['zh']
+  zh: ['zh'],
+  fr: ['fr'],
+  pt: ['pt'],
+  ru: ['ru']
 }
 let langKey = DEFAULT_LANG
 for (let key in langMap) {
@@ -51,6 +54,9 @@ import thLang from './lang/th.json'
 import esLang from './lang/es.json'
 import arLang from './lang/ar.json'
 import idLang from './lang/id.json'
+import frLang from './lang/fr.json'
+import ptLang from './lang/pt.json'
+import ruLang from './lang/ru.json'
 
 // 语言文件映射
 const langFiles = {
@@ -60,7 +66,10 @@ const langFiles = {
   th: thLang,
   es: esLang,
   ar: arLang,
-  id: idLang
+  id: idLang,
+  fr: frLang,
+  pt: ptLang,
+  ru: ruLang
 }
 
 /**

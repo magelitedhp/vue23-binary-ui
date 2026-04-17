@@ -1,10 +1,31 @@
 import { loadScript } from "@/utils"
-export function renderMath(el = document.body) {
+
+// 渲染所有预览区域的公式（标题 + 选项内容）
+export function renderMath() {
   try {
     if (!window.MathJax) return
-    window.MathJax.typesetPromise && window.MathJax.typesetPromise([el]).catch(() => { })
+
+    setTimeout(() => {
+      
+      const selectors = [
+        '.preview-title',
+        '.math-render-target',
+        '.completion-preview',
+        '.choice-content',
+        '.rich-text'
+      ]
+      const elements = document.querySelectorAll(selectors.join(', '))
+
+      console.log(elements)
+
+      elements.forEach((el) => {
+        if (el && el.textContent.trim() && window.MathJax && window.MathJax.typesetPromise) {
+          window.MathJax.typesetPromise([el]).catch(() => {})
+        }
+      })
+    }, 100)
   } catch (error) {
-    console.log(error, 'error')
+    console.error('renderMath error:', error)
   }
 }
 export function initMathJax() {
@@ -20,7 +41,8 @@ export function initMathJax() {
           displayMath: [
             ['$$', '$$'],
             ['\\[', '\\]'],
-          ]
+          ],
+          extensions: ['mhchem.js', 'extpfeil.js'],
         },
         // 配置MathML输入
         mathml: {
@@ -42,7 +64,11 @@ export function initMathJax() {
         },
       }
     }
-    loadScript('3rdlib/mathjax-3.2.2/tex-mml-svg.js')
+    loadScript('3rdlib/mathjax-3.2.2/tex-mml-chtml.js', () => {
+      loadScript('3rdlib/mathjax-3.2.2/input/tex/extensions/extpfeil.js')
+      loadScript('3rdlib/mathjax-3.2.2/input/tex/extensions/mhchem.js')
+      loadScript('3rdlib/mathjax-3.2.2/input/tex/extensions/autoload.js')
+    });
   } catch (err) {
     console.log(err)
   }

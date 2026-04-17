@@ -7,9 +7,9 @@ const host = location.host
 const isDev =
   host.indexOf('192.168') === 0 || host === '127.0.0.1' || host.indexOf('localhost') === 0 
 const protocol = isDev ? 'https://' : location.protocol + '//'
-const hostDomain = baseHost || (isDev ? '.tongshike.cn' : host.substring(host.indexOf('.')))
+const hostDomain = baseHost || (isDev ? '.ulearning.app' : host.substring(host.indexOf('.')))
 // 是否是测试环境
-const isTest = hostDomain === '.tongshike.cn'
+const isTest = hostDomain === '.ulearning.app'
 // cookie写入的域名
 const hostname = location.hostname
 const UMOOC_COOKIE_DOMAIN = isDev
@@ -25,7 +25,7 @@ const EXAM_PC_WEB_HOST = 'yxy://macapp'
 // 静态资源地址
 let UMOOC_STATIC_HOST = protocol + 'static' + hostDomain + "/static"
 // 文档预览
-const DOCS_API_HOST = protocol + 'docs' + productionHost
+const DOCS_API_HOST = protocol + 'docs' + hostDomain
 const DOCS_SSL_VALUE = protocol.indexOf("https") === 0 ? 1 : 0;
 // 手机考试
 let UTEST_MOBILE_WEB_HOST = protocol + 'mexam' + hostDomain
@@ -35,10 +35,10 @@ const COURSE_WEB_HOST = protocol + 'courseweb' + hostDomain
 // 上传base64编码图片接口
 const QINIU_BASE64_URL = 'https://up.qbox.me/putb64/-1'
 // 资源上传和访问
-const UPLOAD_API_HOST = protocol + 'uobs' + productionHost
-const UPLOAD_SERVER_HOST =  'uobs' + productionHost
+const UPLOAD_API_HOST = protocol + 'uobs' + hostDomain
+const UPLOAD_SERVER_HOST =  'uobs' + hostDomain
 const UPLOAD_SERVER_PROTOCOL = protocol.indexOf("https") === 0 ? 'https' : 'http';
-const RESOURCE_SERVER_HOST = protocol + 'leicloud' + productionHost
+const RESOURCE_SERVER_HOST = protocol + 'leicloud' + hostDomain
 // UA课件
 const UA_API_HOST = protocol + 'api' + hostDomain
 // 1.0页面及接口地址

@@ -184,6 +184,10 @@ export default defineComponent({
     actionIndex: {
       type: Number,
       default: 0
+    },
+    obsType: {
+      type: String,
+      default: 'huawei'
     }
   },
   setup(props, { emit }) {

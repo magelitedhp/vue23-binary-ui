@@ -12,7 +12,7 @@
             <!-- 空白部分替换为输入框 -->
             <div v-else>
               <span class="blank-index">[{{ blankIndex(index) + 1 }}]</span>
-              <input 
+              <input
                 type="text"
                 class="completion-input"
                 :disabled="true"
@@ -34,7 +34,7 @@
             <!-- 空白部分替换为输入框 -->
             <div v-else>
               <span class="blank-index">[{{ blankIndex(index) + 1 }}]</span>
-              <input 
+              <input
                 type="text"
                 class="completion-input"
                 :disabled="mode == 3 && isSubmitted"
@@ -47,13 +47,13 @@
                 style="margin: 0 2px"
               />
             </div>
-            
+
           </template>
         </div>
         <div v-if="question.allowExchange" class="can-exchange">*{{ t('answerCanChangeTip') }}</div>
       </div>
       <!-- 其他题型正常显示 -->
-      <div v-else class="ql-editor preview-title" v-html="question.title || ''"></div>
+      <div v-else class="ql-editor preview-title math-render-target" v-html="question.title || ''"></div>
       <FileList mode="view" type="block" :isPreview="true" :list="question.link" @deleteFile=""></FileList>
     </template>
     <RichTextarea
@@ -65,6 +65,7 @@
       :maxNum="5"
       :is-question-bank="isQuestionBank"
       :type="question.type"
+      :obsType="obsType"
       @addFile="addTitleFile"
       @deleteFile="deleteTitleFile"
       :isBase="true"
@@ -108,11 +109,15 @@ export default defineComponent({
     isSubmitted: {
       type: Boolean,
       default: false
+    },
+    obsType: {
+      type: String,
+      default: 'huawei'
     }
   },
   emits: ['blankAnswerChange'],
   setup(props, { emit }) {
-    const t = useT()    
+    const t = useT()
     const isMobile = getPlatform().isMobile
     const richTextareaRef = ref(null)
     const userAnswers = ref([])
@@ -167,6 +172,7 @@ export default defineComponent({
     }
     if(props.mode != 1) {
       nextTick(() => {
+        console.log('触发了renderMath4');
         renderMath()
       })
     }
@@ -203,6 +209,7 @@ export default defineComponent({
         }
         if(val != 1) {
           nextTick(() => {
+            console.log('触发了renderMath5');
             renderMath()
           })
         }
