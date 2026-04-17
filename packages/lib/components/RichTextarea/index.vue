@@ -45,7 +45,7 @@ import { defineComponent, ref, watch, onMounted, onUnmounted, computed, version,
 import { TinyFluentEditor, TinyDialogBox, TinyButton, TinyInput, TinyDrawer } from '@opentiny/vue'
 import FileList from "../FileList/index.vue";
 import { handlerErrCode, formatTypeLimit } from "../../utils/file.js";
-import Obs from "@/plugins/ulearning-obs.js";
+import { getObs } from "@/plugins/ulearning-obs.js";
 import { uploadOptions } from "@/plugins/upload.js";
 import Attach from "@/model/attach";
 import { getUniqueValue, handleNum, getPlatform } from "@/utils"
@@ -103,6 +103,10 @@ export default defineComponent({
     isBase: {
       type: Boolean,
       default: false,
+    },
+    obsType: {
+      type: String,
+      default: 'huawei',
     },
   },
   emits: ['change', 'addFile', 'deleteFile', 'update:modelValue'],
@@ -223,9 +227,11 @@ export default defineComponent({
       }
     }
 
-    onMounted(() => {
+    onMounted(async () => {
       // 创建隐藏的上传按钮
-      obs.value = new Obs({ ...uploadOptions });
+      console.log('props.obsType',props.obsType)
+      const ObsClass = await getObs(props.obsType)
+      obs.value = new ObsClass({ ...uploadOptions });
       uploadBtn.value = document.getElementById(`upload-${containerId.value}`);
       obs.value.initUpBtn(uploadBtn);
       obs.value.onBeforeUpload = defaultBeforeUpload
@@ -435,6 +441,9 @@ export default defineComponent({
       const MathStyle = new Parchment.StyleAttributor('math', 'color', {
         scope: Parchment.Scope.INLINE
       })
+      const LineHeightStyle = new Parchment.StyleAttributor('lineheight', 'line-height', {
+        scope: Parchment.Scope.BLOCK
+      })
       const FontFamilyStyle = new Parchment.StyleAttributor('font-family',    'font-family', {
         scope: Parchment.Scope.INLINE
       })
@@ -443,6 +452,7 @@ export default defineComponent({
       FluentEditor.register('formats/video1', VideoStyle)
       FluentEditor.register('formats/audio', AudioStyle)
       FluentEditor.register('formats/math', MathStyle)
+      FluentEditor.register('formats/lineheight', LineHeightStyle)
     }
     return {
       t,

@@ -1,5 +1,5 @@
 <template>
-  <Base class="true-or-false-question" :question="question" :mode="mode">
+  <Base class="true-or-false-question" :question="question" :mode="mode" :obsType="obsType">
   <!-- 编辑模式 -->
   <template v-if="mode === 1">
     <template v-if="!isMobile">
@@ -145,6 +145,10 @@ export default defineComponent({
     isSubmitted: {
       type: Boolean,
       default: false
+    },
+    obsType: {
+      type: String,
+      default: 'huawei'
     }
   },
   emits: ['save', 'cancel', 'change', 'updateQuestion'],
@@ -206,9 +210,13 @@ export default defineComponent({
           userAnswer.value = '';
         }
       }
-      nextTick(() => {
-        renderMath()
-      })
+
+      if(props.mode != 1) {
+        nextTick(() => {
+          console.log('触发了renderMath3');
+          renderMath()
+        })
+      }
       console.log(question.value, '--------Judge--------');
     }, { immediate: true });
 

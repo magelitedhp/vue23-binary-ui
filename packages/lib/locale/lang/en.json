@@ -982,5 +982,6 @@
   "recording": "Recording",
   "recorded": "Recorded",
   "readyToRecord": "Ready to Record",
-  "recordingInitFailed": "Recording initialization failed"
+  "recordingInitFailed": "Recording initialization failed",
+  "allowExchange": "The order of the answers can be interchanged."
 }

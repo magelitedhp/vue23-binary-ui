@@ -1,6 +1,6 @@
 <template>
   <Base ref="baseComponent" class="completion-question" :question="question" :mode="mode"
-    @blankAnswerChange="blankAnswerChange" :isSubmitted="isSubmitted">
+    @blankAnswerChange="blankAnswerChange" :isSubmitted="isSubmitted" :obsType="obsType">
   <!-- 编辑模式 -->
   <template v-if="mode === 1">
     <template v-if="!isMobile">
@@ -108,6 +108,10 @@ export default defineComponent({
     showAnswer: {
       type: Boolean,
       default: false
+    },
+    obsType: {
+      type: String,
+      default: 'huawei'
     }
   },
   emits: ['save', 'cancel', 'submit', 'updateQuestion'],
@@ -344,9 +348,12 @@ export default defineComponent({
     // 监听原始题目变化
     watch(() => props.oriQuestion, (newVal) => {
       question.value = getQuestion(newVal);
-      nextTick(() => {
-        renderMath()
-      })
+      if(props.mode != 1) {
+        nextTick(() => {
+          console.log('触发了renderMath2');
+          renderMath()
+        })
+      }
     }, { immediate: true });
     // 答案变化处理
     const answerChange = () => {

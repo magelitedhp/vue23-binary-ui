@@ -7,6 +7,22 @@ export function getSearchParam(name) {
   return null;
 }
 
+//获取hash的值
+export function getURLHash(name) {
+  try {
+    const hash = window.location.hash;
+    if (!hash || !hash.includes('?')) {
+      return null;
+    }
+    const hashQuery = hash.split('?')[1];
+    const hashParams = new URLSearchParams(hashQuery);
+    return hashParams.get(name);
+  } catch (error) {
+    console.error('Error parsing token from URL:', error);
+    return null;
+  }
+}
+
 //深拷贝
 export function deepCopy(list) {
   return JSON.parse(JSON.stringify(list))

@@ -1,5 +1,5 @@
 <template>
-  <Base class="choice-container" :question="question" :mode="mode">
+  <Base class="choice-container" :question="question" :mode="mode" :obsType="obsType">
   <!-- 编辑模式 -->
   <div v-if="mode === 1" class="edit-mode" :class="{ 'mobile': isMobile }">
     <template v-if="!isMobile">
@@ -9,7 +9,7 @@
             <span class="choice-option">{{ getOption(index) }}</span>
             <RichTextarea class="choice-input-wrap" v-if="activeIndex === index" v-model="choice.text"
               :placeholder="t('optionContent')" :list="choice.attachments" :isShowLimitTimes="false"
-              :actionIndex="index" :placeholderText="t('optionContent')" @addFile="addFile" @deleteFile="deleteFile">
+              :actionIndex="index" :placeholderText="t('optionContent')" :obsType="obsType" @addFile="addFile" @deleteFile="deleteFile">
             </RichTextarea>
             <div class="choice-input-wrap" v-else>
               <input v-if="!needRichText" class="choice-input" v-model="choice.text" type="text"
@@ -66,7 +66,7 @@
             <span class="choice-option" :class="{ 'active': question.type === 1 ? radioAnswer === getOption(index) : checkboxAnswer.includes(getOption(index)) }" @click="selectOption(index)">{{ getOption(index) }}</span>
             <RichTextarea class="choice-input-wrap" v-if="activeIndex === index" v-model="choice.text" :ref="(el) => setItemRef(el, index)"
               :placeholder="t('optionContent')" :list="choice.attachments" :isShowLimitTimes="false"
-              :actionIndex="index" :placeholderText="t('optionContent')" @addFile="addFile" @deleteFile="deleteFile">
+              :actionIndex="index" :placeholderText="t('optionContent')" :obsType="obsType" @addFile="addFile" @deleteFile="deleteFile">
             </RichTextarea>
             <div class="choice-input-wrap" v-else>
               <input v-if="!needRichText" class="choice-input" v-model="choice.text" type="text"
@@ -257,6 +257,10 @@ export default defineComponent({
     showAnswer: {
       type: Boolean,
       default: false
+    },
+    obsType: {
+      type: String,
+      default: 'huawei'
     }
   },
   emits: ['save', 'cancel', 'change', 'updateQuestion'],
@@ -346,7 +350,10 @@ export default defineComponent({
       // 根据不同模式初始化答案
       updateSelectAnswer()
       nextTick(() => {
-        renderMath()
+        if(props.mode != 1) {
+          console.log('触发了renderMath1');
+          renderMath()
+        }
       })
       console.log(question.value, '--------Choice--------', newVal);
     }, { immediate: true })
@@ -485,8 +492,8 @@ export default defineComponent({
         showAlertHandler('warning', t('questionTitleTip1'))
         isValid = false
       }
-      // 验证选项是否为空
-      if (question.value.choices.some(choice => !choice.text)) {
+      // 验证选项是否为空（附件MP3，MP4如果存在可以不写文字）
+      if (question.value.choices.some(choice => !choice.text && choice.attachments.length === 0)) {
         showAlertHandler('warning', t('optionContentTip1'))
         isValid = false
       }
@@ -511,6 +518,7 @@ export default defineComponent({
     // 保存问题数据（编辑模式）
     const saveQuestion = () => {
       if (props.mode !== 1) return
+      console.log('数据：',question.value.choices)
       // 校验题目
       if (!validateQuestion()) {
         return
