@@ -1,10 +1,13 @@
 // 使用相对路径导入，避免别名路径在开发环境中的解析问题
 import cookies from '../utils/cookie'
 import { DEFAULT_LANG } from '../config'
-import { getUrlParam } from '../utils/index.js'
+import { getUrlParam,getURLHash} from '../utils/index.js'
+
+console.log('window.location',window.location)
+console.log('getURLHash',getURLHash('lang'))
 
 // 获取当前语言 - 支持多持久化源
-let lang = getUrlParam('lang') ||
+let lang = getURLHash('lang') || getUrlParam('lang') ||
   // 优先从 cookie 获取
   cookies.get('lang') ||
   cookies.get('language') ||
