@@ -45,7 +45,7 @@ import { defineComponent, ref, watch, onMounted, onUnmounted, computed, version,
 import { TinyFluentEditor, TinyDialogBox, TinyButton, TinyInput, TinyDrawer } from '@opentiny/vue'
 import FileList from "../FileList/index.vue";
 import { handlerErrCode, formatTypeLimit } from "../../utils/file.js";
-import { getObs } from "@/plugins/ulearning-obs.js";
+import Obs from "@/plugins/ulearning-obs.js";
 import { uploadOptions } from "@/plugins/upload.js";
 import Attach from "@/model/attach";
 import { getUniqueValue, handleNum, getPlatform } from "@/utils"
@@ -103,11 +103,7 @@ export default defineComponent({
     isBase: {
       type: Boolean,
       default: false,
-    },
-    obsType: {
-      type: String,
-      default: 'huawei',
-    },
+    }
   },
   emits: ['change', 'addFile', 'deleteFile', 'update:modelValue'],
   setup(props, { emit }) {
@@ -229,9 +225,7 @@ export default defineComponent({
 
     onMounted(async () => {
       // 创建隐藏的上传按钮
-      console.log('props.obsType',props.obsType)
-      const ObsClass = await getObs(props.obsType)
-      obs.value = new ObsClass({ ...uploadOptions });
+      obs.value = new Obs({ ...uploadOptions });
       uploadBtn.value = document.getElementById(`upload-${containerId.value}`);
       obs.value.initUpBtn(uploadBtn);
       obs.value.onBeforeUpload = defaultBeforeUpload

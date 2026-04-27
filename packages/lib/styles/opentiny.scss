@@ -43,6 +43,12 @@
     }
   }
 
+  html[dir="rtl"] .tiny-radio {
+    --tv-Radio-margin-right: calc(24 * var(--question-font-size));
+    margin-right: 0px;
+    margin-left: var(--tv-Radio-margin-right);
+  }
+
   .tiny-checkbox {
     --tv-Checkbox-icon-size: calc(16 * var(--question-font-size));
     --tv-Checkbox-bg-color-active: var(--tiny-primary-bg);
