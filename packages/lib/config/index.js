@@ -32,5 +32,6 @@ export const {
   EXAM_PC_WEB_HOST,
   AI_API_HOST,
   AI_ASSISTANT_WEB_HOST,
-  DEFAULT_LANG
+  DEFAULT_LANG,
+  isCN
 } = baseVars
