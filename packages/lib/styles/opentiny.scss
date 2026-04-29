@@ -43,12 +43,6 @@
     }
   }
 
-  html[dir="rtl"] .tiny-radio {
-    --tv-Radio-margin-right: calc(24 * var(--question-font-size));
-    margin-right: 0px;
-    margin-left: var(--tv-Radio-margin-right);
-  }
-
   .tiny-checkbox {
     --tv-Checkbox-icon-size: calc(16 * var(--question-font-size));
     --tv-Checkbox-bg-color-active: var(--tiny-primary-bg);
@@ -203,4 +197,13 @@
 }
 .tiny-alert .is-custom, .tiny-alert .tiny-alert__close {
   top: calc(10 * var(--question-font-size)); 
+}
+
+html[lang="ar"] .tiny-radio{
+  margin-right: 0px !important;
+  margin-left: calc(24 * var(--question-font-size)) !important;
+  .tiny-radio__label {
+    padding-left: 0;
+    padding-right: calc(8 * var(--question-font-size));
+  }
 }
