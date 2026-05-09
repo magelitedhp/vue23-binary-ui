@@ -17,6 +17,26 @@ let lang = getURLHash('lang') || getUrlParam('lang') ||
   navigator.language ||
   navigator.browserLanguage
 
+//移动端语言添加
+if (navigator.userAgent.indexOf("umoocApp") !== -1) {
+  var ua =
+    window.navigator.userAgent.indexOf("-language-") != -1 ?
+    window.navigator.userAgent :
+    "";
+  var start = ua.indexOf("-language-") + "-language-".length;
+  var end = ua.indexOf(" ", start);
+  end = end == -1 ? ua.length : end;
+
+  try {
+    lang =
+      ua.substring(start, end) ||
+      navigator.language ||
+      navigator.browserLanguage;
+  } catch (e) {
+    lang = navigator.language || navigator.browserLanguage;
+  }
+}
+
 lang = lang.toLowerCase()
 const langMap = {
   tw: ['tw', 'hk'],

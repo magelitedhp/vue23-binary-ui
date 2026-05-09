@@ -12,11 +12,12 @@ export function renderMath() {
         '.math-render-target',
         '.completion-preview',
         '.choice-content',
-        '.rich-text'
+        '.rich-text',
+        '.answer-item'
       ]
       const elements = document.querySelectorAll(selectors.join(', '))
 
-      console.log(elements)
+      // console.log(elements)
 
       elements.forEach((el) => {
         if (el && el.textContent.trim() && window.MathJax && window.MathJax.typesetPromise) {
