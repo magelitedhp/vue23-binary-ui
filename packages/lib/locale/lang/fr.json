@@ -998,5 +998,6 @@
   "writeBankName": "Cliquez pour entrer le nom du dossier",
   "writeSearch": "Rechercher une question/un dossier",
   "wx": "WeChat",
-  "yourAnswer": "Votre Réponse"
+  "yourAnswer": "Votre Réponse",
+  "informationTitle":"messages"
 }

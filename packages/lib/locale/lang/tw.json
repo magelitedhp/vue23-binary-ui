@@ -997,5 +997,6 @@
   "writeBankName": "請輸入資料夾名稱",
   "writeSearch": "搜尋題目/資料夾",
   "wx": "WeChat",
-  "yourAnswer": "你的答案"
+  "yourAnswer": "你的答案",
+  "informationTitle":"訊息" 
 }

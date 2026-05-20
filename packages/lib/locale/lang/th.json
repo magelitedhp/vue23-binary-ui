@@ -997,5 +997,6 @@
   "writeBankName": "กรุณาใส่ชื่อโฟลเดอร์",
   "writeSearch": "ค้นหาหัวข้อ/โฟลเดอร์",
   "wx": "วีแชท",
-  "yourAnswer": "คําตอบของคุณ"
+  "yourAnswer": "คําตอบของคุณ",
+  "informationTitle":"ข้อมูล" 
 }

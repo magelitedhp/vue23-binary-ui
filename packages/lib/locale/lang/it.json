@@ -998,5 +998,6 @@
   "writeBankName": "Inserisci il nome di una cartella",
   "writeSearch": "Cerca argomento/cartella",
   "wx": "WeChat",
-  "yourAnswer": "La tua risposta"
+  "yourAnswer": "La tua risposta",
+  "informationTitle":"messaggi" 
 }

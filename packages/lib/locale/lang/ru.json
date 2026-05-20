@@ -998,5 +998,6 @@
   "writeBankName": "Введите название папки",
   "writeSearch": "поиск вопросы/папка",
   "wx": "Вичат",
-  "yourAnswer": "Твой Ответ"
+  "yourAnswer": "Твой Ответ",
+  "informationTitle":"сообщения" 
 }

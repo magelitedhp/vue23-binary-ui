@@ -998,5 +998,6 @@
   "writeBankName": "请输入文件夹名称",
   "writeSearch": "搜索题目/文件夹",
   "wx": "微信",
-  "yourAnswer": "你的答案"
+  "yourAnswer": "你的答案",
+  "informationTitle":"消息" 
 }

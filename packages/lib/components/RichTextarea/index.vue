@@ -13,12 +13,12 @@
       :isShowLimitTimes="isShowLimitTimes" :is-question-bank="isQuestionBank" @deleteFile="deleteFile">
     </FileList>
     <button :id="`upload-${containerId}`" style="display: none"></button>
-    <TinyDialogBox dialog-class="math-dialog" v-model:visible="boxVisibility" title="消息" width="60%" 	
+    <TinyDialogBox dialog-class="math-dialog" v-model:visible="boxVisibility" :title="t('informationTitle')" width="60%" 	
     :append-to-body="true" destroy-on-close>
       <iframe :src="iframeUrl" frameborder="0"></iframe>
       <template #footer>
-        <TinyButton @click="boxVisibility = false">取 消</TinyButton>
-        <TinyButton type="primary" @click="mathConfirm">确 定</TinyButton>
+        <TinyButton @click="boxVisibility = false">{{ t('confirm') }}</TinyButton>
+        <TinyButton type="primary" @click="mathConfirm">{{ t('cancel') }}</TinyButton>
       </template>
     </TinyDialogBox>
     <TinyDrawer
