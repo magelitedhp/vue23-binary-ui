@@ -52,6 +52,7 @@ import { getUniqueValue, handleNum, getPlatform } from "@/utils"
 import { formatFileType } from '@/utils/file.js'
 import { useT } from "../../locale/index.js"
 import AudioRecorder from '../AudioRecorder/index.vue'
+import Cookies from 'js-cookie'
 export default defineComponent({
   name: 'RichTextarea',
   components: {
@@ -301,6 +302,24 @@ export default defineComponent({
         emit('change', val)
       }
     })
+    const allFonts = [
+      "yahei",
+      "songti",
+      "kaiti",
+      "heiti",
+      "lishu",
+      "mono",
+      "arial",
+      "arialblack",
+      "comic",
+      "impact",
+      "times"
+    ]
+    const chineseFonts = ["yahei", "songti", "kaiti", "heiti", "lishu"]
+    const lang = Cookies.get('lang').toLowerCase()
+    const fontList = ['zh', 'zh-cn', 'zh-tw'].includes(lang)
+      ? allFonts
+      : allFonts.filter((font) => !chineseFonts.includes(font))
     const options = ref({
       placeholder: props.placeholderText,
       modules: {
@@ -308,19 +327,7 @@ export default defineComponent({
         toolbar: [
           [
             {
-              "font": [
-                "yahei",
-                "songti",
-                "kaiti",
-                "heiti",
-                "lishu",
-                "mono",
-                "arial",
-                "arialblack",
-                "comic",
-                "impact",
-                "times"
-              ]
+              "font": fontList
             },
             {
               "size": [
